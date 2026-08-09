@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Declaring HTML5 so the browser doesn't fall back into quirks mode -->
+<html lang="en"> <!-- Setting the language attribute for accessibility tools and search indexing -->
+<head>
+  <meta charset="UTF-8"> <!-- Using UTF-8 so special characters like the ampersand later on don't break -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Locking the page to the device width so mobile users don't get the desktop layout zoomed out -->
+  <title>Campus-Cart | Home</title> <!-- Page title shown in the browser tab, also what shows up first in search results -->
+  <link rel="stylesheet" href="assets/css/styles.css"> <!-- Pulling in the stylesheet from the css folder sitting next to this file -->
+</head>
+<body>
+
+  <header> <!-- Wrapping the site's top-level branding and navigation in one landmark -->
+    <nav> <!-- The nav element groups the navigation links so screen readers can jump straight to them -->
+      <a href="index.html" class="logo">Campus-Cart</a> <!-- Logo doubles as a "back to home" link, which is standard practice -->
+      <ul class="nav-links"> <!-- Using an unordered list for the nav items since they are, semantically, a list of links -->
+        <li><a href="pages/products.html#shop">Shop</a></li> <!-- Jumps to the shop section on the products page -->
+        <li><a href="pages/products.html#deals-gallery">Deals &amp; Gallery</a></li> <!-- Same page, different anchor for the deals section -->
+        <li><a href="pages/products.html#parent-hub">Parent Hub</a></li> <!-- Anchor link to the parent hub section further down products.html -->
+        <li><a href="pages/products.html#sell-with-us">Sell With Us</a></li> <!-- Anchor for the sell-with-us section on the same page -->
+        <li><a href="pages/about.html">About</a></li> <!-- Regular page link, no anchor needed since about.html is its own file -->
+        <li><a href="pages/contact.html">Contact</a></li> <!-- Straightforward link to the contact page -->
+        <li><a href="pages/enquiry.html">Enquiry</a></li> <!-- Link to the separate enquiry form page -->
+        <li><a href="pages/account.html">Account</a></li> <!-- Final nav item, links to the account/order summary page -->
+      </ul>
+    </nav>
+  </header>
+
+  <main> <!-- Everything unique to this page goes inside main, as opposed to the shared header/footer -->
+
+    <section id="hero"> <!-- First thing a visitor sees, so this is where the two audiences get split -->
+      <h1>Campus-Cart</h1> <!-- Only one h1 per page, reserved for the main heading -->
+      <p>Affordable student essentials, new and pre-loved, across South Africa.</p> <!-- Short tagline explaining what the site actually does -->
+      <div class="entry-points"> <!-- Grouping the two buttons together for styling purposes -->
+        <a href="pages/account.html#student" class="btn">I am a Student</a> <!-- Sends the student down their own path on the account page -->
+        <a href="pages/account.html#parent" class="btn">I am a Parent/Guardian</a> <!-- Same idea but for the parent/guardian audience -->
+      </div>
+    </section>
+
+    <section id="mission"> <!-- Giving the mission its own section so it's easy to locate and update later -->
+      <h2>Our Mission</h2> <!-- h2 used here since it's a subsection of the page, not the main heading -->
+      <p><!-- Mission statement text goes here --></p> <!-- Left as a placeholder until the final copy is written -->
+    </section>
+
+    <section id="featured"> <!-- Preview area meant to tempt visitors into the full products page -->
+      <h2>Featured Bundles</h2>
+      <div class="card-grid"> <!-- Empty grid container that will hold the bundle cards once content is added -->
+        <!-- Bundle preview cards go here -->
+      </div>
+    </section>
+
+    <section id="about-teaser"> <!-- Short version of the about content, with a link out to the full page -->
+      <h2>About Campus-Cart</h2>
+      <p><!-- Short teaser text goes here --></p>
+      <a href="pages/about.html">Learn More</a> <!-- This is the link that actually takes the visitor to about.html -->
+    </section>
+
+    <section id="get-in-touch"> <!-- Closing section that funnels visitors toward contact or enquiry -->
+      <h2>Get in Touch</h2>
+      <p>Questions about a bundle, delivery, or your order?</p> <!-- Framing the question the way a visitor might actually be thinking it -->
+      <a href="pages/contact.html" class="btn">Contact Us</a> <!-- General contact, for anything not tied to a specific product -->
+      <a href="pages/enquiry.html" class="btn">Send an Enquiry</a> <!-- Separate button for product-specific questions, keeps the two forms apart -->
+    </section>
+
+  </main>
+
+  <footer> <!-- Standard footer, kept minimal since there's not much to put here yet -->
+    <p>&copy; 2026 Campus-Cart. All rights reserved.</p> <!-- Using the HTML entity for the copyright symbol instead of typing it directly -->
+  </footer>
+
+  <script src="/campus-cart/assets/js/script.js"></script> <!-- Script tag placed at the very end so the page loads before the JavaScript runs -->
+</body>
+</html>
