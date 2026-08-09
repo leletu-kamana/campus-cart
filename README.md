@@ -31,9 +31,9 @@ This build is intentionally **front-end only** — HTML5, CSS3, and vanilla Java
 
 ## Key Features and Functionality
 - **Homepage** (`index.html`): hero with Student/Parent entry points, mission teaser, featured bundles, and links out to About, Contact, and Enquiry.
-- **Products** (`pages/marketplace.html`): merges five related sections behind in-page anchors — Shop (New + Second-Hand tabs), Deals & Gallery, Parent Hub (checklist + starter bundles), a reusable Product Detail template, and Sell With Us + FAQ.
+- **Products** (`pages/products.html`): merges five related sections behind in-page anchors — Shop (New + Second-Hand tabs), Deals & Gallery, Parent Hub (checklist + starter bundles), a reusable Product Detail template, and Sell With Us + FAQ.
 - **About** (`pages/about.html`): organisation history, mission, vision, and target audience.
-- **Enquiry** (`pages/enquire.html`): pre-purchase enquiry form for bundle/product questions, submitted via `mailto:`.
+- **Enquiry** (`pages/enquiry.html`): pre-purchase enquiry form for bundle/product questions, submitted via `mailto:`.
 - **Contact** (`pages/contact.html`): general contact form and alternate contact details, including multiple collection/office locations.
 - **Account** (`pages/account.html`) — *additional page beyond the required five, documented here as instructed in Section 5.1 of the brief*: static Student/Parent informational paths plus an in-browser Order Summary (add-to-cart, "Skip to Address", and WhatsApp/email/EFT checkout hand-off — no real payment gateway).
 
