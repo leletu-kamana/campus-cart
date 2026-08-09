@@ -31,9 +31,9 @@ This build is intentionally **front-end only** — HTML5, CSS3, and vanilla Java
 
 ## Key Features and Functionality
 - **Homepage** (`index.html`): hero with Student/Parent entry points, mission teaser, featured bundles, and links out to About, Contact, and Enquiry.
-- **Products** (`pages/marketplace.html`): merges five related sections behind in-page anchors — Shop (New + Second-Hand tabs), Deals & Gallery, Parent Hub (checklist + starter bundles), a reusable Product Detail template, and Sell With Us + FAQ.
+- **Products** (`pages/products.html`): merges five related sections behind in-page anchors — Shop (New + Second-Hand tabs), Deals & Gallery, Parent Hub (checklist + starter bundles), a reusable Product Detail template, and Sell With Us + FAQ.
 - **About** (`pages/about.html`): organisation history, mission, vision, and target audience.
-- **Enquiry** (`pages/enquire.html`): pre-purchase enquiry form for bundle/product questions, submitted via `mailto:`.
+- **Enquiry** (`pages/enquiry.html`): pre-purchase enquiry form for bundle/product questions, submitted via `mailto:`.
 - **Contact** (`pages/contact.html`): general contact form and alternate contact details, including multiple collection/office locations.
 - **Account** (`pages/account.html`) — *additional page beyond the required five, documented here as instructed in Section 5.1 of the brief*: static Student/Parent informational paths plus an in-browser Order Summary (add-to-cart, "Skip to Address", and WhatsApp/email/EFT checkout hand-off — no real payment gateway).
 
@@ -100,11 +100,11 @@ Home (index.html)
 ```
 
 ## Changelog
-- **v0.1** — Initial flat HTML/CSS/JS project structure created per assignment Section 4.2 (`index.html`, `about.html`, `products.html`, `enquiry.html`, `contact.html`, plus `css/`, `js/`, `images/`, `fonts/`).
+- **v0.1** — Initial flat HTML/CSS/JS project structure created per assignment Section 4.2 (`index.html`, `about.html`, `products.html`, `enquiry.html`, `contact.html`, plus `css/`, `js/`, `images/`).
 - **v0.2** — Added `account.html` as a documented additional page (Student/Parent paths, Order Summary).
 - **v0.3** — Consolidated Shop, Deals & Gallery, Parent Hub, Product Detail, and Sell With Us into a single `products.html` using in-page anchors, reducing total file count while keeping all planned content.
 - **v0.4** — Added sitemap diagram and this README.
-- **v0.5** — Reverted to a nested `assets/`(`css/`, `images/`, `js/`) and `pages/` structure (`about.html`, `account.html`, `contact.html`, `enquire.html`, `marketplace.html`), plus `.gitattributes`, to match the actual repository layout — noted as a divergence from the flat structure in Section 4.2 of the brief.
+- **v0.5** — Reverted to a nested `assets/`(`css/`, `images/`, `js/`) and `pages/` structure (`about.html`, `account.html`, `contact.html`, `enquiry.html`, `products.html`), plus `.gitattributes`, to match the actual repository layout — noted as a divergence from the flat structure in Section 4.2 of the brief.
 
 ## References
 Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
