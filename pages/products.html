@@ -1,0 +1,211 @@
+<!DOCTYPE html> <!-- HTML5 declaration, unchanged from the other pages -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus-Cart | Products: Shop, Deals, Parent Hub &amp; Sell With Us</title> <!-- Longer title since this file carries five combined sections -->
+  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css"> <!-- Stylesheet path updated to match the new folder structure -->
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
+      <ul class="nav-links">
+        <li><a href="products.html#shop">Shop</a></li> <!-- Points to an anchor on this same file, so clicking it while already here just scrolls up -->
+        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+        <li><a href="products.html#parent-hub">Parent Hub</a></li>
+        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================= -->
+    <!-- SHOP: Shop New + Second-Hand Marketplace                      -->
+    <!-- ============================================================= -->
+    <section id="shop"> <!-- This id is what the nav link products.html#shop actually jumps to -->
+      <h1>Shop</h1>
+
+      <div class="tabs"> <!-- Container for the two tab buttons below -->
+        <button class="tab-btn" data-tab="shop-new">Shop New</button> <!-- data-tab is a custom attribute JS will read to know which panel to show -->
+        <button class="tab-btn" data-tab="second-hand">Second-Hand Marketplace</button> <!-- Same pattern, different target panel -->
+      </div>
+
+      <div id="shop-new" class="tab-panel"> <!-- id has to match the data-tab value above exactly, or the JS lookup will fail -->
+        <h2>Shop New</h2>
+        <div class="card-grid"> <!-- Grid wrapper that will eventually hold multiple product cards -->
+          <article class="product-card"> <!-- Article used here since a product card is a self-contained, repeatable unit of content -->
+            <img src="/campus-cart/assets/images/products/placeholder.jpg" alt=""> <!-- Placeholder image path, alt left blank until real product photos are added -->
+            <h3><!-- Product name --></h3>
+            <p class="price"><!-- Price --></p>
+            <a href="#product-detail">View Details</a> <!-- Jumps down to the product detail template section on this same page -->
+          </article>
+        </div>
+      </div>
+
+      <div id="second-hand" class="tab-panel"> <!-- Second tab panel, hidden by default until the JS toggles it -->
+        <h2>Second-Hand Marketplace</h2>
+        <p class="note">All listings are manually reviewed before being published.</p> <!-- Important disclaimer since there's no backend approval system -->
+        <div class="card-grid">
+          <article class="product-card">
+            <img src="/campus-cart/assets/images/second-hand/placeholder.jpg" alt="">
+            <h3><!-- Item name --></h3>
+            <p class="price"><!-- Price --></p>
+            <a href="#product-detail">View Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- DEALS & GALLERY                                                -->
+    <!-- ============================================================= -->
+    <section id="deals-gallery"> <!-- Second combined section, matched by the deals-gallery anchor in the nav -->
+      <h1>Bundles, Deals &amp; Gallery</h1>
+
+      <div class="filter-bar"> <!-- Groups the filter and sort controls so they can sit side by side -->
+        <label for="filter-category">Filter by category</label> <!-- for attribute links this label to the select below by id -->
+        <select id="filter-category"> <!-- Dropdown for narrowing results down by category -->
+          <option value="all">All</option> <!-- Default option, shows everything when no filter is applied -->
+          <!-- Category options go here -->
+        </select>
+
+        <label for="sort-deals">Sort by</label>
+        <select id="sort-deals">
+          <option value="price-asc">Price: Low to High</option> <!-- value attribute is what the JS reads to run the sort logic -->
+          <option value="price-desc">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="card-grid" id="deals-grid"> <!-- Left empty deliberately, script.js will populate it from a hardcoded array -->
+        <!-- Bundle/deal cards go here -->
+      </div>
+
+      <h2>Gallery</h2> <!-- Gallery kept in the same section since it shares the filtering logic with the deals above -->
+      <div class="filter-bar">
+        <label for="filter-gallery">Filter by bundle/category</label>
+        <select id="filter-gallery">
+          <option value="all">All</option>
+          <!-- Category options go here -->
+        </select>
+      </div>
+
+      <div class="card-grid" id="gallery-grid"> <!-- Separate grid from deals-grid so the two can be filtered independently -->
+        <!-- Gallery image cards go here -->
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PARENT HUB: Checklist + Starter Bundles                       -->
+    <!-- ============================================================= -->
+    <section id="parent-hub"> <!-- Third combined section, aimed specifically at the parent/guardian audience -->
+      <h1>Parent Hub</h1>
+      <p><!-- Parent Hub intro text goes here --></p>
+
+      <h2>First Year Checklist</h2>
+      <ul class="checklist"> <!-- Unordered list feels right here since checklist items don't need a specific order -->
+        <li><input type="checkbox" id="item-1"><label for="item-1"><!-- Item --></label></li> <!-- Checkbox and label share an id/for pair so clicking the text also ticks the box -->
+      </ul>
+      <button class="btn" onclick="window.print()">Print Checklist</button> <!-- Inline JS event here, since it's a single built-in browser action rather than custom logic -->
+
+      <h2>Student Starter Bundles</h2>
+      <div class="card-grid">
+        <article class="bundle-card"> <!-- Same article pattern as the product cards earlier, kept consistent across the page -->
+          <h3>Basic Bundle</h3>
+          <p class="price"><!-- Price --></p>
+          <ul><!-- Bundle contents go here --></ul> <!-- List tag used because bundle contents are, by nature, a list of items -->
+        </article>
+
+        <article class="bundle-card"> <!-- Repeating the same structure for the Standard tier -->
+          <h3>Standard Bundle</h3>
+          <p class="price"><!-- Price --></p>
+          <ul><!-- Bundle contents go here --></ul>
+        </article>
+
+        <article class="bundle-card"> <!-- And again for Premium, keeping all three tiers visually and structurally identical -->
+          <h3>Premium Bundle</h3>
+          <p class="price"><!-- Price --></p>
+          <ul><!-- Bundle contents go here --></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- PRODUCT DETAIL TEMPLATE                                       -->
+    <!-- ============================================================= -->
+    <section id="product-detail" data-product-id=""> <!-- This section is reused as a template, data-product-id is filled in by JS depending on which item was clicked -->
+      <div class="product-images">
+        <img src="/campus-cart/assets/images/products/placeholder.jpg" alt="" id="product-main-image"> <!-- id lets script.js swap the image source dynamically -->
+      </div>
+
+      <div class="product-info">
+        <h1 id="product-name"><!-- Product name --></h1> <!-- Given an id since JS needs a hook to fill this in per product -->
+        <p class="price" id="product-price"><!-- Price --></p>
+        <p id="product-description"><!-- Product description --></p>
+        <span class="badge" id="verified-badge"><!-- Verified Seller badge --></span> <!-- span chosen since it's an inline label, not a block-level element -->
+        <button class="btn" id="add-to-order">Add to Order Summary</button> <!-- This button is what feeds into the cart logic on account.html -->
+      </div>
+
+      <h2>Collection Points</h2>
+      <ul>
+        <li><!-- Residence collection point --></li>
+        <li><!-- Campus collection point --></li>
+        <li><!-- Locker collection point --></li>
+      </ul>
+      <div id="map-embed"> <!-- Reserved space for a static map, deliberately not a live GPS-based map since there's no backend -->
+        <!-- Static map embed goes here -->
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SELL WITH US + FAQ                                             -->
+    <!-- ============================================================= -->
+    <section id="sell-with-us"> <!-- Final combined section on this page -->
+      <h1>Sell With Us</h1>
+      <p><!-- Explanation of the second-hand selling process goes here --></p>
+      <a href="#" class="btn" target="_blank" rel="noopener">Submit an Item (Google Form)</a> <!-- rel="noopener" added as a safety measure whenever target="_blank" is used -->
+
+      <h2>FAQ</h2>
+      <div class="tabs"> <!-- Reusing the same tab pattern from the Shop section above -->
+        <button class="tab-btn" data-tab="faq-student">Student FAQ</button>
+        <button class="tab-btn" data-tab="faq-parent">Parent FAQ</button>
+      </div>
+
+      <div id="faq-student" class="tab-panel">
+        <h3>Student FAQ</h3>
+        <dl> <!-- Description list, the correct tag for a set of question/answer pairs -->
+          <dt><!-- Question --></dt> <!-- dt holds the question -->
+          <dd><!-- Answer --></dd> <!-- dd holds the matching answer -->
+        </dl>
+      </div>
+
+      <div id="faq-parent" class="tab-panel">
+        <h3>Parent FAQ</h3>
+        <dl>
+          <dt>Do you offer payment plans?</dt> <!-- Real question filled in already, since payment plans came up directly in the brief -->
+          <dd><!-- Payment plan info text goes here --></dd>
+
+          <dt>What is your returns policy?</dt>
+          <dd><!-- Returns policy text goes here --></dd>
+
+          <dt>How does delivery/collection work?</dt>
+          <dd><!-- Delivery to res, campus, or collection point info goes here --></dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
+  </footer>
+
+  <script src="/campus-cart/assets/js/script.js"></script> <!-- Single shared script handles every interactive piece across all five sections above -->
+</body>
+</html>

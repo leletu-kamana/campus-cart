@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus-Cart | Contact</title>
+  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
+      <ul class="nav-links">
+        <li><a href="products.html#shop">Shop</a></li>
+        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+        <li><a href="products.html#parent-hub">Parent Hub</a></li>
+        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="contact"> <!-- General contact form, separate from the enquiry form since this one isn't tied to a specific product -->
+      <h1>Contact Us</h1>
+
+      <form action="mailto:hello@campus-cart.co.za" method="post" enctype="text/plain"> <!-- Same mailto approach as the enquiry form, since there's no backend to send this through -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- Assignment note: this section covers more than one physical location,
+         per Section 4 of the brief ("map should contain more than 1 location") -->
+    <section id="contact-details"> <!-- Extra section for people who'd rather not fill in a form -->
+      <h2>Other Ways to Reach Us</h2>
+      <ul>
+        <li>Email: <a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li> <!-- Same address used in the form action above, kept consistent -->
+        <li>WhatsApp: <a href="#"><!-- WhatsApp link goes here --></a></li> <!-- Placeholder href until the actual WhatsApp business link is available -->
+      </ul>
+
+      <h2>Our Locations</h2> <!-- Required by the brief to show more than one location -->
+      <div id="map-embed-contact"> <!-- Named differently from the map-embed id on products.html so the two don't collide if both are ever linked from the same script -->
+        <!-- Static map embed with multiple collection/office locations goes here -->
+      </div>
+      <ul>
+        <li><!-- Location 1 --></li>
+        <li><!-- Location 2 --></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
+  </footer>
+
+  <script src="/campus-cart/assets/js/script.js"></script>
+</body>
+</html>

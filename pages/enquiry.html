@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus-Cart | Enquiry</title>
+  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
+      <ul class="nav-links">
+        <li><a href="products.html#shop">Shop</a></li>
+        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+        <li><a href="products.html#parent-hub">Parent Hub</a></li>
+        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="account.html">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="enquiry"> <!-- Kept separate from contact.html on purpose, since this form is meant for pre-purchase questions specifically -->
+      <h1>Enquire About a Bundle or Product</h1>
+      <p>Have a question about a bundle, a listing, or delivery before you order? Send us an enquiry below.</p> <!-- Explains to the visitor why this form is different from the general contact one -->
+
+      <form action="mailto:enquiries@campus-cart.co.za" method="post" enctype="text/plain"> <!-- enctype set to text/plain so the fields arrive as readable plain text rather than URL-encoded gibberish -->
+        <label for="enquirer-type">I am a</label>
+        <select id="enquirer-type" name="enquirer-type"> <!-- Lets the team know straight away whether they're replying to a student or a parent -->
+          <option value="student">Student</option>
+          <option value="parent">Parent/Guardian</option>
+        </select>
+
+        <label for="enquirer-name">Name</label> <!-- Named enquirer-name rather than just name, so it doesn't clash with enquirer-type when the email is generated -->
+        <input type="text" id="enquirer-name" name="enquirer-name" required> <!-- required stops the form from submitting with this field left blank -->
+
+        <label for="enquirer-email">Email</label>
+        <input type="email" id="enquirer-email" name="enquirer-email" required> <!-- type="email" gives some basic built-in format checking for free -->
+
+        <label for="item-reference">Bundle or Product (if applicable)</label>
+        <input type="text" id="item-reference" name="item-reference" placeholder="e.g. Standard Starter Bundle"> <!-- Not required, since some enquiries won't be tied to a specific item -->
+
+        <label for="enquiry-message">Your Question</label>
+        <textarea id="enquiry-message" name="enquiry-message" required></textarea> <!-- textarea used instead of input since the message could run to a few sentences -->
+
+        <button type="submit">Send Enquiry</button> <!-- type="submit" triggers the mailto action set on the form tag above -->
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
+  </footer>
+
+  <script src="/campus-cart/assets/js/script.js"></script>
+</body>
+</html>
