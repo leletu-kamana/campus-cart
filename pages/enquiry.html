@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus-Cart | Enquiry</title>
-  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bundle Enquiry | Campus-Cart Student Essentials</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
-      <ul class="nav-links">
-        <li><a href="products.html#shop">Shop</a></li>
-        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-        <li><a href="products.html#parent-hub">Parent Hub</a></li>
-        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="account.html">Account</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html#shop">Shop</a>
+      <a href="products.html#parent-hub">Parent Hub</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Before you buy</span>
+      <h1>Pre-purchase enquiry</h1>
+      <p class="lead">Ask about a bundle, a single product or a second-hand listing. Your message opens in your own email app — nothing is stored on this site.</p>
+    </div>
+  </section>
 
-    <section id="enquiry"> <!-- Kept separate from contact.html on purpose, since this form is meant for pre-purchase questions specifically -->
-      <h1>Enquire About a Bundle or Product</h1>
-      <p>Have a question about a bundle, a listing, or delivery before you order? Send us an enquiry below.</p> <!-- Explains to the visitor why this form is different from the general contact one -->
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="form-card">
+        <h2>Send your enquiry</h2>
+        <form data-mailto="enquiries@campus-cart.co.za" data-subject="Campus-Cart pre-purchase enquiry">
+          <div class="form-group">
+            <label for="enq-type">I am a *</label>
+            <select id="enq-type" name="enquirerType" required>
+              <option value="Student">Student</option>
+              <option value="Parent/Guardian">Parent/Guardian</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="enq-name">Full name *</label>
+              <input id="enq-name" name="name" type="text" required placeholder="e.g. Thandi Mokoena">
+            </div>
+            <div class="form-group">
+              <label for="enq-email">Email address *</label>
+              <input id="enq-email" name="email" type="email" required placeholder="you@example.co.za">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="enq-ref">Bundle or product reference (optional)</label>
+            <input id="enq-ref" name="reference" type="text" placeholder="e.g. Standard Starter Bundle">
+            <span class="hint">Copy the name from the Shop, Deals or Parent Hub sections.</span>
+          </div>
+          <div class="form-group">
+            <label for="enq-message">Your message *</label>
+            <textarea id="enq-message" name="message" required placeholder="Tell us what you need, your campus, and when you need it."></textarea>
+          </div>
+          <button class="btn" type="submit">Send enquiry by email</button>
+          <p class="hint">This form has no backend. Submitting opens a pre-filled email in your mail app.</p>
+        </form>
+      </div>
+      <div>
+        <div class="info-box">
+          <h3>What to include</h3>
+          <ul>
+            <li>Your institution and campus</li>
+            <li>The bundle or item name</li>
+            <li>Preferred collection point or delivery suburb</li>
+            <li>When you need it by</li>
+          </ul>
+        </div>
+        <br>
+        <div class="card card-navy"><div class="card-body">
+          <h3>Need a faster reply?</h3>
+          <p>WhatsApp is usually quickest during registration season.</p>
+          <a class="btn" href="https://wa.me/27123456789">WhatsApp us</a>
+        </div></div>
+        <br>
+        <div class="card"><div class="card-body">
+          <h3>Already picked items?</h3>
+          <p>Your Order Summary lives in this browser session — review it before enquiring.</p>
+          <a class="btn btn-outline btn-sm" href="account.html#order">View Order Summary</a>
+        </div></div>
+      </div>
+    </div>
+  </section>
+</main>
 
-      <form action="mailto:enquiries@campus-cart.co.za" method="post" enctype="text/plain"> <!-- enctype set to text/plain so the fields arrive as readable plain text rather than URL-encoded gibberish -->
-        <label for="enquirer-type">I am a</label>
-        <select id="enquirer-type" name="enquirer-type"> <!-- Lets the team know straight away whether they're replying to a student or a parent -->
-          <option value="student">Student</option>
-          <option value="parent">Parent/Guardian</option>
-        </select>
+<footer>
+  <div class="wrap footer-grid">
+    <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+    <div><h4>Shop</h4><ul>
+      <li><a href="products.html#shop">Shop New</a></li>
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <li><a href="products.html#product-detail">Product Detail</a></li>
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html#parent-hub">Parent Hub</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Reach us</h4><ul>
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+      <li>Mon–Fri, 09:00–17:00 SAST</li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
+</footer>
 
-        <label for="enquirer-name">Name</label> <!-- Named enquirer-name rather than just name, so it doesn't clash with enquirer-type when the email is generated -->
-        <input type="text" id="enquirer-name" name="enquirer-name" required> <!-- required stops the form from submitting with this field left blank -->
-
-        <label for="enquirer-email">Email</label>
-        <input type="email" id="enquirer-email" name="enquirer-email" required> <!-- type="email" gives some basic built-in format checking for free -->
-
-        <label for="item-reference">Bundle or Product (if applicable)</label>
-        <input type="text" id="item-reference" name="item-reference" placeholder="e.g. Standard Starter Bundle"> <!-- Not required, since some enquiries won't be tied to a specific item -->
-
-        <label for="enquiry-message">Your Question</label>
-        <textarea id="enquiry-message" name="enquiry-message" required></textarea> <!-- textarea used instead of input since the message could run to a few sentences -->
-
-        <button type="submit">Send Enquiry</button> <!-- type="submit" triggers the mailto action set on the form tag above -->
-      </form>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
-  </footer>
-
-  <script src="/campus-cart/assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
