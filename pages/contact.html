@@ -1,73 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus-Cart | Contact</title>
-  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Campus-Cart | Locations &amp; Collection Points</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
-      <ul class="nav-links">
-        <li><a href="products.html#shop">Shop</a></li>
-        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-        <li><a href="products.html#parent-hub">Parent Hub</a></li>
-        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="account.html">Account</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html#shop">Shop</a>
+      <a href="products.html#parent-hub">Parent Hub</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h1>Talk to a real person</h1>
+      <p class="lead">Weekdays 09:00–17:00 SAST. During registration week we answer WhatsApp until 19:00.</p>
+    </div>
+  </section>
 
-    <section id="contact"> <!-- General contact form, separate from the enquiry form since this one isn't tied to a specific product -->
-      <h1>Contact Us</h1>
-
-      <form action="mailto:hello@campus-cart.co.za" method="post" enctype="text/plain"> <!-- Same mailto approach as the enquiry form, since there's no backend to send this through -->
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-
-    <!-- Assignment note: this section covers more than one physical location,
-         per Section 4 of the brief ("map should contain more than 1 location") -->
-    <section id="contact-details"> <!-- Extra section for people who'd rather not fill in a form -->
-      <h2>Other Ways to Reach Us</h2>
-      <ul>
-        <li>Email: <a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li> <!-- Same address used in the form action above, kept consistent -->
-        <li>WhatsApp: <a href="#"><!-- WhatsApp link goes here --></a></li> <!-- Placeholder href until the actual WhatsApp business link is available -->
-      </ul>
-
-      <h2>Our Locations</h2> <!-- Required by the brief to show more than one location -->
-      <div id="map-embed-contact"> <!-- Named differently from the map-embed id on products.html so the two don't collide if both are ever linked from the same script -->
-        <!-- Static map embed with multiple collection/office locations goes here -->
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div class="form-card">
+        <h2>General contact form</h2>
+        <form data-mailto="hello@campus-cart.co.za" data-subject="Campus-Cart website contact">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-name">Full name *</label>
+              <input id="c-name" name="name" type="text" required>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email address *</label>
+              <input id="c-email" name="email" type="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="c-phone">Phone / WhatsApp (optional)</label>
+              <input id="c-phone" name="phone" type="tel" placeholder="082 000 0000">
+            </div>
+            <div class="form-group">
+              <label for="c-topic">Topic *</label>
+              <select id="c-topic" name="topic" required>
+                <option>Order or collection question</option>
+                <option>Selling second-hand items</option>
+                <option>Parent Hub &amp; bundles</option>
+                <option>Something else</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message *</label>
+            <textarea id="c-message" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send message by email</button>
+          <p class="hint">No backend: this opens a pre-filled email in your own mail app.</p>
+        </form>
       </div>
-      <ul>
-        <li><!-- Location 1 --></li>
-        <li><!-- Location 2 --></li>
-      </ul>
-    </section>
+      <div>
+        <div class="info-box">
+          <h3>Other ways to reach us</h3>
+          <p><strong>Email:</strong> <a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></p>
+          <p><strong>Orders:</strong> <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/27123456789">012 345 6789</a></p>
+        </div>
+        <br>
+        <div class="card card-navy"><div class="card-body">
+          <h3>Buying a specific bundle?</h3>
+          <p>Use the enquiry form so we can quote availability and collection.</p>
+          <a class="btn" href="enquiry.html">Pre-purchase enquiry</a>
+        </div></div>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <section class="section alt" id="locations">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Find us</span>
+        <h2>Our locations</h2>
+        <p>Offices and staffed collection points. All pins are fixed addresses on a static map image — the site does not use live GPS or tracking.</p>
+      </div>
+      <div class="map-frame">
+        <img src="../assets/images/icons/static-map.jpg" alt="Static illustrated map of Campus-Cart office and collection locations in South Africa" loading="lazy" width="1400" height="700">
+      </div>
+      <p class="map-note">Static map image for illustration only.</p>
+      <div class="grid grid-4" style="margin-top:28px">
+        <article class="card"><div class="card-body">
+          <span class="badge badge-new">Head office</span>
+          <h3>Pretoria CBD</h3>
+          <p>128 Lynnwood Road, Hatfield, Pretoria, 0083<br>Mon–Fri 09:00–17:00</p>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <span class="badge">Collection point</span>
+          <h3>Johannesburg Braamfontein</h3>
+          <p>7 Jorissen Street, Braamfontein, 2001<br>Mon–Sat 10:00–16:00</p>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <span class="badge">Collection point</span>
+          <h3>Cape Town Rondebosch</h3>
+          <p>45 Main Road, Rondebosch, 7700<br>Tue–Sat 10:00–15:00</p>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <span class="badge">Locker point</span>
+          <h3>Durban Westville</h3>
+          <p>Shop 12, University Drive, Westville, 3629<br>Daily 08:00–20:00 lockers</p>
+        </div></article>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
-  </footer>
+<footer>
+  <div class="wrap footer-grid">
+    <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+    <div><h4>Shop</h4><ul>
+      <li><a href="products.html#shop">Shop New</a></li>
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <li><a href="products.html#product-detail">Product Detail</a></li>
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html#parent-hub">Parent Hub</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Reach us</h4><ul>
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+      <li>Mon–Fri, 09:00–17:00 SAST</li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
+</footer>
 
-  <script src="/campus-cart/assets/js/script.js"></script>
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
