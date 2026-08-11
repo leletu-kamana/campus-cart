@@ -1,70 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus-Cart | Account &amp; Order Summary</title>
-  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student &amp; Parent Paths + Order Summary | Campus-Cart</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
-      <ul class="nav-links">
-        <li><a href="products.html#shop">Shop</a></li>
-        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-        <li><a href="products.html#parent-hub">Parent Hub</a></li>
-        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="account.html">Account</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html#shop">Shop</a>
+      <a href="products.html#parent-hub">Parent Hub</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
+<nav class="subnav" aria-label="Section navigation">
+  <ul>
+    <li><a href="#student">Student path</a></li>
+    <li><a href="#parent">Parent path</a></li>
+    <li><a href="#order">Order Summary</a></li>
+  </ul>
+</nav>
 
-    <section id="student"> <!-- This id is where index.html's "I am a Student" button lands -->
-      <h1>Student</h1>
-      <p><!-- Static Student path info goes here --></p>
-    </section>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Your path</span>
+      <h1>No logins, no passwords</h1>
+      <p class="lead">These are informational paths, not accounts. Campus-Cart stores no personal details and there is nothing to sign in to.</p>
+    </div>
+  </section>
 
-    <section id="parent"> <!-- Matching section for the "I am a Parent/Guardian" button -->
-      <h1>Parent/Guardian</h1>
-      <p><!-- Static Parent path info goes here --></p>
-    </section>
+  <section class="section" id="student">
+    <div class="wrap grid grid-2">
+      <div>
+        <span class="badge badge-new">Student path</span>
+        <h2>If you are the student</h2>
+        <ol>
+          <li>Browse <a href="products.html#shop">Shop New</a> for basics you need immediately.</li>
+          <li>Check the <a href="products.html#shop">Second-Hand Marketplace</a> before buying new — desks, fridges and textbooks are often half price.</li>
+          <li>Use <a href="products.html#deals-gallery">Deals</a> filters to sort by price.</li>
+          <li>Add items to your Order Summary below and pick a collection point.</li>
+          <li>Hand off by WhatsApp or email; we confirm availability and payment plan.</li>
+          <li>Selling at year end? See <a href="products.html#sell-with-us">Sell With Us</a>.</li>
+        </ol>
+      </div>
+      <div class="info-box">
+        <h3>Good to know</h3>
+        <p>Collection is free at listed residence, campus and locker points. Bring your student card for handover.</p>
+        <p>Payment plans are arranged by email — nothing is charged on this website.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="order-summary"> <!-- Acts as the site's cart, even though there's no real backend behind it -->
-      <h2>Order Summary</h2>
+  <section class="section alt" id="parent">
+    <div class="wrap grid grid-2">
+      <div>
+        <span class="badge badge-used">Parent / Guardian path</span>
+        <h2>If you are the parent or guardian</h2>
+        <ol>
+          <li>Print the <a href="products.html#parent-hub">First Year Checklist</a> and tick off what you already own.</li>
+          <li>Compare the Basic, Standard and Premium bundles — contents and prices are fixed.</li>
+          <li>Send a <a href="enquiry.html">pre-purchase enquiry</a> to confirm availability and a payment plan.</li>
+          <li>Add the bundle to the Order Summary below and choose collection or delivery.</li>
+          <li>Pay by EFT using our static banking details, or arrange over WhatsApp.</li>
+        </ol>
+      </div>
+      <div class="info-box">
+        <h3>Budget guidance</h3>
+        <p>Most first-year families spend between R1 500 and R4 500 on res essentials. Choosing second-hand for furniture and textbooks typically saves 30–50%.</p>
+        <a class="btn btn-outline btn-sm" href="products.html#parent-hub">Open Parent Hub</a>
+      </div>
+    </div>
+  </section>
 
-      <ul id="order-items"> <!-- Left empty here, script.js appends list items whenever "Add to Order Summary" is clicked on products.html -->
-        <!-- Items added from products.html go here (session-only) -->
-      </ul>
-
-      <p id="order-total"><!-- Order total --></p> <!-- Given an id so the running total can be updated by JS as items are added -->
-
-      <div id="skip-to-address"> <!-- Named after the "Skip to Address" step mentioned in the original project brief -->
-        <h3>Delivery / Collection Details</h3>
-        <label for="address">Address or Collection Point</label>
-        <input type="text" id="address" name="address"> <!-- Plain text field, since there's no backend to validate this against anyway -->
+  <section class="section" id="order">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Checkout hand-off</span>
+        <h2>Order Summary</h2>
+        <p>Items you added while browsing. This list lives in the current browser session only and clears when you close the tab — no payment gateway is involved.</p>
       </div>
 
-      <div id="checkout"> <!-- Final step, but it hands off rather than actually processing payment -->
-        <h3>Complete Your Order</h3>
-        <a href="#" class="btn" id="whatsapp-checkout">Order via WhatsApp</a> <!-- Href left as a placeholder until the actual WhatsApp link is generated by JS -->
-        <a href="mailto:orders@campus-cart.co.za" class="btn">Order via Email</a> <!-- This one works immediately, no JS required, since mailto is native to the browser -->
-        <p><!-- EFT / manual payment instructions go here --></p>
+      <div class="step">
+        <h3><span>1</span>Your items</h3>
+        <div id="order-empty" class="empty-state">
+          <h3>Nothing added yet</h3>
+          <p>Add bundles or products from the Shop, Deals or Parent Hub sections.</p>
+          <a class="btn btn-sm" href="products.html#shop">Start shopping</a>
+        </div>
+        <div id="order-table-wrap" hidden>
+          <table class="order-table">
+            <thead>
+              <tr><th>Item</th><th>Price</th><th>Qty</th><th>Subtotal</th><th>Action</th></tr>
+            </thead>
+            <tbody id="order-body"></tbody>
+          </table>
+          <p style="margin-top:18px">Total: <span class="order-total" id="order-total">R0.00</span></p>
+          <button class="btn btn-outline btn-sm" id="order-clear">Clear summary</button>
+          <button class="btn btn-sm" id="skip-to-address">Skip to Address</button>
+        </div>
       </div>
-    </section>
 
-  </main>
+      <div class="step" id="step-address">
+        <h3><span>2</span>Delivery or collection</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="delivery-method">Method</label>
+            <select id="delivery-method">
+              <option value="collection">Collect at a Campus-Cart point</option>
+              <option value="delivery">Courier delivery (quoted)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="delivery-address">Address or collection point</label>
+            <input id="delivery-address" type="text" placeholder="e.g. Hatfield res reception, Pretoria">
+          </div>
+        </div>
+        <p class="hint" id="delivery-hint">Collection is free at any listed campus, residence or locker point.</p>
+      </div>
 
-  <footer>
-    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
-  </footer>
+      <div class="step">
+        <h3><span>3</span>Hand off your order</h3>
+        <p>Pick how you want to finish. Each option passes your summary to a human — no card details are ever entered here.</p>
+        <a class="btn" id="checkout-whatsapp" href="https://wa.me/27123456789">Send via WhatsApp</a>
+        <a class="btn btn-navy" id="checkout-email" href="mailto:orders@campus-cart.co.za">Send by email</a>
+        <button class="btn btn-outline" id="checkout-eft">Show EFT instructions</button>
+        <div class="info-box" id="eft-details" hidden style="margin-top:20px">
+          <h3>Static EFT instructions</h3>
+          <p><strong>Account name:</strong> Campus-Cart Student Essentials<br>
+             <strong>Bank:</strong> Example Bank South Africa<br>
+             <strong>Account number:</strong> 1234 5678 90<br>
+             <strong>Branch code:</strong> 250655<br>
+             <strong>Reference:</strong> your surname + campus</p>
+          <p>Email your proof of payment to <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a>. We confirm stock and a collection slot within one working day. These details are illustrative for this demo site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-  <script src="/campus-cart/assets/js/script.js"></script>
+<footer>
+  <div class="wrap footer-grid">
+    <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+    <div><h4>Shop</h4><ul>
+      <li><a href="products.html#shop">Shop New</a></li>
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <li><a href="products.html#product-detail">Product Detail</a></li>
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html#parent-hub">Parent Hub</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Reach us</h4><ul>
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+      <li>Mon–Fri, 09:00–17:00 SAST</li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
+</footer>
+
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
