@@ -1,57 +1,132 @@
-<!DOCTYPE html> <!-- Same HTML5 declaration used across every page for consistency -->
-<html lang="en"> <!-- Keeping the language attribute consistent site-wide -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8"> <!-- Standard character encoding, copied from index.html -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Same responsive meta tag as every other page -->
-  <title>Campus-Cart | About</title> <!-- Title changed per page so the browser tab makes sense when several tabs are open -->
-  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css"> <!-- Same stylesheet as the rest of the site, since this file also sits at the root -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Campus-Cart | Our History, Mission &amp; Vision</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-  <header> <!-- Reusing the exact same header markup as index.html to keep navigation consistent -->
-    <nav>
-      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a> <!-- Logo link brings the visitor back to the homepage from any page -->
-      <ul class="nav-links">
-        <li><a href="products.html#shop">Shop</a></li> <!-- Nav is identical across pages on purpose, so users don't get lost -->
-        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-        <li><a href="products.html#parent-hub">Parent Hub</a></li>
-        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-        <li><a href="about.html">About</a></li> <!-- Points to itself, which is normal, some designs highlight this as the active page -->
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="account.html">Account</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html#shop">Shop</a>
+      <a href="products.html#parent-hub">Parent Hub</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">About us</span>
+      <h1>Built by students, for students and their families</h1>
+      <p class="lead">Campus-Cart is a South African student essentials marketplace that pairs affordable new stock with a manually reviewed second-hand range.</p>
+    </div>
+  </section>
 
-    <section id="about"> <!-- Main content block for the page, matches the file's purpose -->
-      <h1>About Campus-Cart</h1> <!-- h1 reserved for the page's core heading, same rule as index.html -->
-      <p><!-- Brief history text goes here --></p> <!-- Placeholder for the founding story once it's written up -->
-    </section>
+  <section class="section">
+    <div class="wrap grid grid-2">
+      <div>
+        <h2>Our history</h2>
+        <p>In 2021 a handful of final-year students in Pretoria noticed the same thing every November: perfectly good kettles, fridges, desks and textbooks were being dumped in res corridors, while first-years arriving in January were paying full retail for the same items.</p>
+        <p>What began as a WhatsApp group with a spreadsheet grew into an organised handover service across three campuses. By 2023 we had added new stock so that families could buy a complete bundle in one go, and by 2025 we formalised collection points at residences, campus desks and secure lockers.</p>
+        <p>Today Campus-Cart operates as a small, student-run team with reviewers who physically check every second-hand listing before it goes live.</p>
+      </div>
+      <div>
+        <img class="map-frame" src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair" loading="lazy" width="1200" height="900">
+      </div>
+    </div>
+  </section>
 
-    <section id="mission-vision"> <!-- Grouping mission and vision together since they're closely related -->
-      <h2>Our Mission</h2>
-      <p><!-- Mission statement text goes here --></p>
+  <section class="section alt">
+    <div class="wrap grid grid-2">
+      <div class="info-box">
+        <h3>Our mission</h3>
+        <p>To make the cost of starting tertiary education fairer, by giving students and their families access to affordable, quality-checked essentials and a safe way to resell what they outgrow.</p>
+      </div>
+      <div class="info-box">
+        <h3>Our vision</h3>
+        <p>A South Africa where no student delays or drops out of study because they cannot afford a bed, a desk or a prescribed textbook — and where student kit circulates instead of ending up in a skip.</p>
+      </div>
+    </div>
+  </section>
 
-      <h2>Our Vision</h2> <!-- Second h2 in the same section, both subordinate to the About heading above -->
-      <p><!-- Vision statement text goes here --></p>
-    </section>
+  <section class="section" id="who-we-serve">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Audience</span>
+        <h2>Who we serve</h2>
+      </div>
+      <div class="grid grid-2">
+        <article class="card"><div class="card-body">
+          <span class="badge badge-new">Primary audience</span>
+          <h3>Tertiary students, ages 19–30</h3>
+          <p>Undergraduates, postgraduates and TVET students living in residence, private digs or commuting from home. They are price-sensitive, mobile-first, and often buying for the first time without family nearby.</p>
+          <ul>
+            <li>Need affordable basics fast, usually in registration week</li>
+            <li>Want to resell items at the end of the year</li>
+            <li>Prefer collection on or near campus</li>
+          </ul>
+          <a class="btn btn-sm" href="account.html#student">Student path</a>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <span class="badge badge-used">Secondary audience</span>
+          <h3>Parents and guardians</h3>
+          <p>Adults funding a student's first year who need clear, fixed pricing, a checklist they can print, and reassurance that a second-hand item has been checked by a person.</p>
+          <ul>
+            <li>Budget in advance with fixed-price bundles</li>
+            <li>Larger type, plain language, printable checklist</li>
+            <li>Direct contact by email or WhatsApp</li>
+          </ul>
+          <a class="btn btn-sm" href="products.html#parent-hub">Parent Hub</a>
+        </div></article>
+      </div>
+    </div>
+  </section>
 
-    <section id="who-we-serve"> <!-- Explains the target audience, which the assignment brief expects to be documented -->
-      <h2>Who We Serve</h2>
-      <address> <!-- Chose address over a plain paragraph since it's the semantically correct tag for this kind of contact/audience info -->
-        <!-- Primary/secondary target audience summary goes here -->
-      </address>
-    </section>
+  <section class="section navy">
+    <div class="wrap">
+      <h2>Want to talk to us?</h2>
+      <p>Send a pre-purchase enquiry about a specific bundle, or use the general contact form.</p>
+      <a class="btn" href="enquiry.html">Send an enquiry</a>
+      <a class="btn btn-ghost-light" href="contact.html">Contact us</a>
+    </div>
+  </section>
+</main>
 
-  </main>
+<footer>
+  <div class="wrap footer-grid">
+    <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+    <div><h4>Shop</h4><ul>
+      <li><a href="products.html#shop">Shop New</a></li>
+      <li><a href="products.html#shop">Second-Hand</a></li>
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html#parent-hub">Parent Hub</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Reach us</h4><ul>
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+      <li>Mon–Fri, 09:00–17:00 SAST</li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
+</footer>
 
-  <footer> <!-- Identical footer to index.html so the site feels consistent from page to page -->
-    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
-  </footer>
-
-  <script src="/campus-cart/assets/js/script.js"></script> <!-- Same shared script file, loaded last so it doesn't block the page from rendering -->
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
