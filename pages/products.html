@@ -1,211 +1,382 @@
-<!DOCTYPE html> <!-- HTML5 declaration, unchanged from the other pages -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campus-Cart | Products: Shop, Deals, Parent Hub &amp; Sell With Us</title> <!-- Longer title since this file carries five combined sections -->
-  <link rel="stylesheet" href="/campus-cart/assets/css/styles.css"> <!-- Stylesheet path updated to match the new folder structure -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop Student Essentials &amp; Bundles | Campus-Cart</title>
+<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="/campus-cart/index.html" class="logo">Campus-Cart</a>
-      <ul class="nav-links">
-        <li><a href="products.html#shop">Shop</a></li> <!-- Points to an anchor on this same file, so clicking it while already here just scrolls up -->
-        <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-        <li><a href="products.html#parent-hub">Parent Hub</a></li>
-        <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="enquiry.html">Enquiry</a></li>
-        <li><a href="account.html">Account</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="topbar">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html#shop">Shop</a>
+      <a href="products.html#parent-hub">Parent Hub</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+    </div>
+  </nav>
+</header>
 
-  <main>
+<nav class="subnav" aria-label="Section navigation">
+  <ul>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#deals-gallery">Deals &amp; Gallery</a></li>
+    <li><a href="#parent-hub">Parent Hub</a></li>
+    <li><a href="#product-detail">Product Detail</a></li>
+    <li><a href="#sell-with-us">Sell With Us &amp; FAQ</a></li>
+  </ul>
+</nav>
 
-    <!-- ============================================================= -->
-    <!-- SHOP: Shop New + Second-Hand Marketplace                      -->
-    <!-- ============================================================= -->
-    <section id="shop"> <!-- This id is what the nav link products.html#shop actually jumps to -->
-      <h1>Shop</h1>
-
-      <div class="tabs"> <!-- Container for the two tab buttons below -->
-        <button class="tab-btn" data-tab="shop-new">Shop New</button> <!-- data-tab is a custom attribute JS will read to know which panel to show -->
-        <button class="tab-btn" data-tab="second-hand">Second-Hand Marketplace</button> <!-- Same pattern, different target panel -->
+<main>
+  <!-- ================= 1. SHOP ================= -->
+  <section class="section" id="shop">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Section 1</span>
+        <h2>Shop</h2>
+        <p>Switch between brand-new stock and our manually reviewed second-hand marketplace.</p>
       </div>
 
-      <div id="shop-new" class="tab-panel"> <!-- id has to match the data-tab value above exactly, or the JS lookup will fail -->
-        <h2>Shop New</h2>
-        <div class="card-grid"> <!-- Grid wrapper that will eventually hold multiple product cards -->
-          <article class="product-card"> <!-- Article used here since a product card is a self-contained, repeatable unit of content -->
-            <img src="/campus-cart/assets/images/products/placeholder.jpg" alt=""> <!-- Placeholder image path, alt left blank until real product photos are added -->
-            <h3><!-- Product name --></h3>
-            <p class="price"><!-- Price --></p>
-            <a href="#product-detail">View Details</a> <!-- Jumps down to the product detail template section on this same page -->
-          </article>
+      <div data-tabs>
+        <div class="tabs" role="tablist" aria-label="Shop tabs">
+          <button class="tab-btn" role="tab" aria-selected="true" data-panel="panel-new">Shop New</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-panel="panel-used">Second-Hand Marketplace</button>
+        </div>
+
+        <div class="tab-panel" id="panel-new" role="tabpanel">
+          <div class="grid grid-4">
+            <article class="card">
+              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
+              <div class="card-body">
+                <span class="badge badge-new">New</span>
+                <h3>Duvet &amp; Linen Set (Double)</h3>
+                <p class="price">R749.00</p>
+                <p>Winter duvet, fitted sheet, pillow and two covers.</p>
+                <button class="btn btn-sm" data-add="Duvet &amp; Linen Set (Double)" data-price="749">Add to Order Summary</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
+              <div class="card-body">
+                <span class="badge badge-new">New</span>
+                <h3>Electric Kettle 1.7L</h3>
+                <p class="price">R289.00</p>
+                <p>Fast-boil, res-friendly and load-shedding ready.</p>
+                <button class="btn btn-sm" data-add="Electric Kettle 1.7L" data-price="289">Add to Order Summary</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
+              <div class="card-body">
+                <span class="badge badge-new">New</span>
+                <h3>Stationery Mega Pack</h3>
+                <p class="price">R249.00</p>
+                <p>Files, pads, pens, highlighters and a calculator.</p>
+                <button class="btn btn-sm" data-add="Stationery Mega Pack" data-price="249">Add to Order Summary</button>
+              </div>
+            </article>
+            <article class="card">
+              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
+              <div class="card-body">
+                <span class="badge badge-new">New</span>
+                <h3>Load-Shedding Light Kit</h3>
+                <p class="price">R329.00</p>
+                <p>Rechargeable lamp, power bank and extension lead.</p>
+                <button class="btn btn-sm" data-add="Load-Shedding Light Kit" data-price="329">Add to Order Summary</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-used" role="tabpanel" hidden>
+          <div class="info-box" style="margin-bottom:24px">
+            <h3>How the marketplace works</h3>
+            <p>Every listing is submitted through a form, then <strong>manually reviewed</strong> by our team at a collection point before it appears here. There is no automatic upload and no live seller dashboard on this site.</p>
+          </div>
+          <div class="gallery">
+            <figure>
+              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
+              <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used mini bar fridge" loading="lazy" width="1200" height="900">
+              <figcaption><strong>Mini Bar Fridge</strong> — R1 150 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
+              <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
+              <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used bookshelf" loading="lazy" width="1200" height="900">
+              <figcaption><strong>Two-Tier Bookshelf</strong> — R380 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study chair" loading="lazy" width="1200" height="900">
+              <figcaption><strong>Study Chair</strong> — R450 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
+            </figure>
+          </div>
+          <p style="margin-top:20px"><a class="btn btn-outline" href="#sell-with-us">How to list your own items</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2. DEALS & GALLERY ================= -->
+  <section class="section alt" id="deals-gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Section 2</span>
+        <h2>Deals &amp; Gallery</h2>
+        <p>Filter and sort in your browser — the list comes from a fixed data set in the site's script, not a database.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="field">
+          <label for="filter-category">Category</label>
+          <select id="filter-category">
+            <option value="all">All categories</option>
+            <option value="bundles">Bundles</option>
+            <option value="appliances">Appliances</option>
+            <option value="furniture">Furniture</option>
+            <option value="bedding">Bedding</option>
+            <option value="textbooks">Textbooks</option>
+            <option value="stationery">Stationery</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="filter-condition">Condition</label>
+          <select id="filter-condition">
+            <option value="all">New &amp; second-hand</option>
+            <option value="new">New only</option>
+            <option value="used">Second-hand only</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="sort-by">Sort by</label>
+          <select id="sort-by">
+            <option value="default">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">Name A–Z</option>
+          </select>
+        </div>
+        <p id="deals-count" class="hint" style="margin:0 0 6px auto"></p>
+      </div>
+
+      <div class="grid grid-3" id="deals-results"></div>
+
+      <h3 style="margin-top:48px">Visual gallery</h3>
+      <div class="tabs" role="tablist" aria-label="Gallery filters">
+        <button class="tab-btn" role="tab" aria-selected="true" data-gallery-filter="all">All</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="bundles">Bundles</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="res-life">Res life</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="second-hand">Second-hand</button>
+      </div>
+      <div class="gallery">
+        <figure data-gallery-item="bundles">
+          <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
+          <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
+        </figure>
+        <figure data-gallery-item="second-hand">
+          <img src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand items" loading="lazy" width="1200" height="900">
+          <figcaption>Reviewed second-hand stock at our Braamfontein point.</figcaption>
+        </figure>
+        <figure data-gallery-item="res-life">
+          <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
+          <figcaption>Registration week collections on campus.</figcaption>
+        </figure>
+        <figure data-gallery-item="bundles">
+          <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
+          <figcaption>Bedding and linen included in every bundle tier.</figcaption>
+        </figure>
+        <figure data-gallery-item="second-hand">
+          <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
+          <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
+        </figure>
+        <figure data-gallery-item="res-life">
+          <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
+          <figcaption>Move-in day at a partner residence.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. PARENT HUB ================= -->
+  <section class="section" id="parent-hub">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Section 3</span>
+        <h2>Parent Hub</h2>
+        <p>Plan the whole first year with a printable checklist and three fixed-price bundles.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="info-box">
+          <h3>First Year Checklist</h3>
+          <ul class="checklist">
+            <li>Single/double bedding set, pillow and mattress protector</li>
+            <li>Towels and a laundry bag or basket</li>
+            <li>Kettle, two mugs, plate, bowl and cutlery set</li>
+            <li>Desk lamp and extension lead with surge protection</li>
+            <li>Rechargeable light or power bank for load shedding</li>
+            <li>Lockable trunk or storage crate</li>
+            <li>Stationery: files, pads, pens, calculator</li>
+            <li>Prescribed textbooks (check second-hand first)</li>
+            <li>Basic toolkit: scissors, tape, plasters, spare globes</li>
+            <li>Copies of ID, registration and residence letters</li>
+          </ul>
+          <p style="margin-top:16px">
+            <button class="btn" id="print-checklist">Print this checklist</button>
+          </p>
+        </div>
+        <div>
+          <div class="card"><div class="card-body">
+            <span class="badge">Tier 1</span>
+            <h3>Basic Starter Bundle</h3>
+            <p class="price">R1 499.00</p>
+            <p>Bedding set, kettle, two-mug set, plate/bowl/cutlery, stationery starter.</p>
+            <button class="btn btn-sm" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
+          </div></div>
+          <br>
+          <div class="card"><div class="card-body">
+            <span class="badge badge-used">Tier 2 · most chosen</span>
+            <h3>Standard Starter Bundle</h3>
+            <p class="price">R2 799.00</p>
+            <p>Everything in Basic, plus desk lamp, laundry basket, towel set, kitchen starter pack and extension lead.</p>
+            <button class="btn btn-sm" data-add="Standard Starter Bundle" data-price="2799">Add to Order Summary</button>
+          </div></div>
+          <br>
+          <div class="card"><div class="card-body">
+            <span class="badge badge-verified">Tier 3</span>
+            <h3>Premium Starter Bundle</h3>
+            <p class="price">R4 499.00</p>
+            <p>Everything in Standard, plus lockable trunk, study chair, rechargeable light kit, mini kettle-and-fridge combo option and full stationery pack.</p>
+            <button class="btn btn-sm" data-add="Premium Starter Bundle" data-price="4499">Add to Order Summary</button>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. PRODUCT DETAIL TEMPLATE ================= -->
+  <section class="section alt" id="product-detail">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Section 4</span>
+        <h2>Product detail template</h2>
+        <p>This is the reusable layout every product uses. Choose an item to preview it.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="field">
+          <label for="detail-select">Preview product</label>
+          <select id="detail-select"></select>
         </div>
       </div>
 
-      <div id="second-hand" class="tab-panel"> <!-- Second tab panel, hidden by default until the JS toggles it -->
-        <h2>Second-Hand Marketplace</h2>
-        <p class="note">All listings are manually reviewed before being published.</p> <!-- Important disclaimer since there's no backend approval system -->
-        <div class="card-grid">
-          <article class="product-card">
-            <img src="/campus-cart/assets/images/second-hand/placeholder.jpg" alt="">
-            <h3><!-- Item name --></h3>
-            <p class="price"><!-- Price --></p>
-            <a href="#product-detail">View Details</a>
-          </article>
+      <div class="grid grid-2">
+        <div class="map-frame">
+          <img id="detail-img" src="../assets/images/bundles/starter-bundle.jpg" alt="Selected product" loading="lazy" width="1200" height="900">
+        </div>
+        <div>
+          <span class="badge badge-verified">Verified Seller</span>
+          <span class="badge" id="detail-condition">Brand new</span>
+          <h3 id="detail-name">Product name</h3>
+          <p class="price order-total" id="detail-price">R0.00</p>
+          <p id="detail-desc">Product description.</p>
+          <button class="btn" id="detail-add" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
+          <h3 style="margin-top:28px">Collection points</h3>
+          <ul>
+            <li><strong>Residence desk</strong> — Hatfield res reception, Mon–Fri 09:00–17:00</li>
+            <li><strong>Campus point</strong> — Braamfontein student centre, Mon–Sat 10:00–16:00</li>
+            <li><strong>Secure locker</strong> — Westville locker bank, daily 08:00–20:00</li>
+          </ul>
+          <div class="map-frame">
+            <img src="../assets/images/icons/static-map.jpg" alt="Static map showing fixed collection points" loading="lazy" width="1400" height="700">
+          </div>
+          <p class="map-note">Static map image only — no live GPS, tracking or location permissions.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ============================================================= -->
-    <!-- DEALS & GALLERY                                                -->
-    <!-- ============================================================= -->
-    <section id="deals-gallery"> <!-- Second combined section, matched by the deals-gallery anchor in the nav -->
-      <h1>Bundles, Deals &amp; Gallery</h1>
-
-      <div class="filter-bar"> <!-- Groups the filter and sort controls so they can sit side by side -->
-        <label for="filter-category">Filter by category</label> <!-- for attribute links this label to the select below by id -->
-        <select id="filter-category"> <!-- Dropdown for narrowing results down by category -->
-          <option value="all">All</option> <!-- Default option, shows everything when no filter is applied -->
-          <!-- Category options go here -->
-        </select>
-
-        <label for="sort-deals">Sort by</label>
-        <select id="sort-deals">
-          <option value="price-asc">Price: Low to High</option> <!-- value attribute is what the JS reads to run the sort logic -->
-          <option value="price-desc">Price: High to Low</option>
-        </select>
+  <!-- ================= 5. SELL WITH US + FAQ ================= -->
+  <section class="section" id="sell-with-us">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Section 5</span>
+        <h2>Sell With Us</h2>
+        <p>Turn last year's kit into cash. Listings are reviewed by a person before they go live.</p>
       </div>
 
-      <div class="card-grid" id="deals-grid"> <!-- Left empty deliberately, script.js will populate it from a hardcoded array -->
-        <!-- Bundle/deal cards go here -->
+      <div class="grid grid-4">
+        <div class="card card-navy"><div class="card-body"><h3>1. Submit</h3><p>Complete the external listing form with photos, condition notes and your asking price.</p></div></div>
+        <div class="card card-navy"><div class="card-body"><h3>2. Review</h3><p>Our team checks the item at a collection point and confirms it is complete and working.</p></div></div>
+        <div class="card card-navy"><div class="card-body"><h3>3. List</h3><p>Approved items are published to the Second-Hand Marketplace with a Verified Seller badge.</p></div></div>
+        <div class="card card-navy"><div class="card-body"><h3>4. Hand over</h3><p>Buyer collects at the agreed point; we confirm the handover with both parties.</p></div></div>
       </div>
+      <p style="margin-top:24px">
+        <a class="btn" href="https://docs.google.com/forms/" target="_blank" rel="noopener">Open the listing form (Google Form)</a>
+      </p>
 
-      <h2>Gallery</h2> <!-- Gallery kept in the same section since it shares the filtering logic with the deals above -->
-      <div class="filter-bar">
-        <label for="filter-gallery">Filter by bundle/category</label>
-        <select id="filter-gallery">
-          <option value="all">All</option>
-          <!-- Category options go here -->
-        </select>
+      <h3 style="margin-top:48px">Frequently asked questions</h3>
+      <div data-tabs>
+        <div class="tabs" role="tablist" aria-label="FAQ tabs">
+          <button class="tab-btn" role="tab" aria-selected="true" data-panel="faq-student">Student FAQ</button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-panel="faq-parent">Parent FAQ</button>
+        </div>
+        <div class="tab-panel" id="faq-student" role="tabpanel">
+          <div class="info-box" style="margin-bottom:16px"><h3>Can I pay in instalments?</h3><p>Payment plans are arranged manually over email before collection. Typically a 50% holding amount and the balance on collection. Nothing is charged on this website.</p></div>
+          <div class="info-box" style="margin-bottom:16px"><h3>What if a second-hand item is faulty?</h3><p>Report it within 48 hours of collection and we arrange a swap or refund with the seller. Items are tested at review, so faults are rare.</p></div>
+          <div class="info-box" style="margin-bottom:16px"><h3>How does delivery work?</h3><p>Collection at any listed residence, campus or locker point is free. Courier delivery is quoted per order and confirmed before you pay.</p></div>
+          <div class="info-box"><h3>How much do I earn when selling?</h3><p>You set the asking price. Campus-Cart keeps a small handling fee that is confirmed in writing before your listing goes live.</p></div>
+        </div>
+        <div class="tab-panel" id="faq-parent" role="tabpanel" hidden>
+          <div class="info-box" style="margin-bottom:16px"><h3>Are bundle prices fixed?</h3><p>Yes. Each bundle lists its contents and one price. Substitutions on request never increase the price without written confirmation.</p></div>
+          <div class="info-box" style="margin-bottom:16px"><h3>Can I pay off a bundle before registration?</h3><p>Yes — arrange a staged payment plan by email. We hold stock once the first payment reflects.</p></div>
+          <div class="info-box" style="margin-bottom:16px"><h3>What is the returns policy?</h3><p>Unused new items may be returned within 7 days of collection in their original packaging. Second-hand items follow the 48-hour fault window.</p></div>
+          <div class="info-box"><h3>How do I know a seller is legitimate?</h3><p>Every second-hand listing is inspected in person by our team before publication. The Verified Seller badge means a staff member handled the item.</p></div>
+        </div>
       </div>
+    </div>
+  </section>
+</main>
 
-      <div class="card-grid" id="gallery-grid"> <!-- Separate grid from deals-grid so the two can be filtered independently -->
-        <!-- Gallery image cards go here -->
-      </div>
-    </section>
+<footer>
+  <div class="wrap footer-grid">
+    <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+    <div><h4>Shop</h4><ul>
+      <li><a href="products.html#shop">Shop New</a></li>
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <li><a href="products.html#product-detail">Product Detail</a></li>
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html#parent-hub">Parent Hub</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Reach us</h4><ul>
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+      <li>Mon–Fri, 09:00–17:00 SAST</li>
+    </ul></div>
+  </div>
+  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
+</footer>
 
-    <!-- ============================================================= -->
-    <!-- PARENT HUB: Checklist + Starter Bundles                       -->
-    <!-- ============================================================= -->
-    <section id="parent-hub"> <!-- Third combined section, aimed specifically at the parent/guardian audience -->
-      <h1>Parent Hub</h1>
-      <p><!-- Parent Hub intro text goes here --></p>
-
-      <h2>First Year Checklist</h2>
-      <ul class="checklist"> <!-- Unordered list feels right here since checklist items don't need a specific order -->
-        <li><input type="checkbox" id="item-1"><label for="item-1"><!-- Item --></label></li> <!-- Checkbox and label share an id/for pair so clicking the text also ticks the box -->
-      </ul>
-      <button class="btn" onclick="window.print()">Print Checklist</button> <!-- Inline JS event here, since it's a single built-in browser action rather than custom logic -->
-
-      <h2>Student Starter Bundles</h2>
-      <div class="card-grid">
-        <article class="bundle-card"> <!-- Same article pattern as the product cards earlier, kept consistent across the page -->
-          <h3>Basic Bundle</h3>
-          <p class="price"><!-- Price --></p>
-          <ul><!-- Bundle contents go here --></ul> <!-- List tag used because bundle contents are, by nature, a list of items -->
-        </article>
-
-        <article class="bundle-card"> <!-- Repeating the same structure for the Standard tier -->
-          <h3>Standard Bundle</h3>
-          <p class="price"><!-- Price --></p>
-          <ul><!-- Bundle contents go here --></ul>
-        </article>
-
-        <article class="bundle-card"> <!-- And again for Premium, keeping all three tiers visually and structurally identical -->
-          <h3>Premium Bundle</h3>
-          <p class="price"><!-- Price --></p>
-          <ul><!-- Bundle contents go here --></ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- PRODUCT DETAIL TEMPLATE                                       -->
-    <!-- ============================================================= -->
-    <section id="product-detail" data-product-id=""> <!-- This section is reused as a template, data-product-id is filled in by JS depending on which item was clicked -->
-      <div class="product-images">
-        <img src="/campus-cart/assets/images/products/placeholder.jpg" alt="" id="product-main-image"> <!-- id lets script.js swap the image source dynamically -->
-      </div>
-
-      <div class="product-info">
-        <h1 id="product-name"><!-- Product name --></h1> <!-- Given an id since JS needs a hook to fill this in per product -->
-        <p class="price" id="product-price"><!-- Price --></p>
-        <p id="product-description"><!-- Product description --></p>
-        <span class="badge" id="verified-badge"><!-- Verified Seller badge --></span> <!-- span chosen since it's an inline label, not a block-level element -->
-        <button class="btn" id="add-to-order">Add to Order Summary</button> <!-- This button is what feeds into the cart logic on account.html -->
-      </div>
-
-      <h2>Collection Points</h2>
-      <ul>
-        <li><!-- Residence collection point --></li>
-        <li><!-- Campus collection point --></li>
-        <li><!-- Locker collection point --></li>
-      </ul>
-      <div id="map-embed"> <!-- Reserved space for a static map, deliberately not a live GPS-based map since there's no backend -->
-        <!-- Static map embed goes here -->
-      </div>
-    </section>
-
-    <!-- ============================================================= -->
-    <!-- SELL WITH US + FAQ                                             -->
-    <!-- ============================================================= -->
-    <section id="sell-with-us"> <!-- Final combined section on this page -->
-      <h1>Sell With Us</h1>
-      <p><!-- Explanation of the second-hand selling process goes here --></p>
-      <a href="#" class="btn" target="_blank" rel="noopener">Submit an Item (Google Form)</a> <!-- rel="noopener" added as a safety measure whenever target="_blank" is used -->
-
-      <h2>FAQ</h2>
-      <div class="tabs"> <!-- Reusing the same tab pattern from the Shop section above -->
-        <button class="tab-btn" data-tab="faq-student">Student FAQ</button>
-        <button class="tab-btn" data-tab="faq-parent">Parent FAQ</button>
-      </div>
-
-      <div id="faq-student" class="tab-panel">
-        <h3>Student FAQ</h3>
-        <dl> <!-- Description list, the correct tag for a set of question/answer pairs -->
-          <dt><!-- Question --></dt> <!-- dt holds the question -->
-          <dd><!-- Answer --></dd> <!-- dd holds the matching answer -->
-        </dl>
-      </div>
-
-      <div id="faq-parent" class="tab-panel">
-        <h3>Parent FAQ</h3>
-        <dl>
-          <dt>Do you offer payment plans?</dt> <!-- Real question filled in already, since payment plans came up directly in the brief -->
-          <dd><!-- Payment plan info text goes here --></dd>
-
-          <dt>What is your returns policy?</dt>
-          <dd><!-- Returns policy text goes here --></dd>
-
-          <dt>How does delivery/collection work?</dt>
-          <dd><!-- Delivery to res, campus, or collection point info goes here --></dd>
-        </dl>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Campus-Cart. All rights reserved.</p>
-  </footer>
-
-  <script src="/campus-cart/assets/js/script.js"></script> <!-- Single shared script handles every interactive piece across all five sections above -->
+<script src="../assets/js/script.js"></script>
 </body>
 </html>
