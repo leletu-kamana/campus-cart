@@ -3,121 +3,372 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <title> sets the text displayed on the browser tab.
+     It also describes the purpose of this webpage. -->
 <title>Contact Campus-Cart | Locations &amp; Collection Points</title>
+
+<!-- <link> connects this HTML document to an external CSS stylesheet.
+     href specifies the relative location of the CSS file. -->
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
+<!-- <header> contains the introductory content of the webpage.
+     The topbar class allows CSS to style the header. -->
 <header class="topbar">
+
+  <!-- <nav> contains the main navigation links for the website.
+       aria-label gives the navigation a meaningful name for accessibility. -->
   <nav class="nav" aria-label="Main navigation">
+
+    <!-- <a> creates a hyperlink and href specifies where it goes.
+         <span> separates part of the logo so it can be styled separately. -->
     <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+
+    <!-- <button> creates an interactive button for the navigation menu.
+         aria-expanded tells assistive technology whether the menu is expanded. -->
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+
+    <!-- This div groups the website's navigation links together.
+         The nav-links class allows CSS and JavaScript to control this group. -->
     <div class="nav-links">
+
+      <!-- ../ moves up from the pages folder to reach index.html.
+           The href attribute stores the destination of the hyperlink. -->
       <a href="../index.html">Home</a>
+
+      <!-- This link opens about.html from the current pages folder.
+           Relative paths avoid needing the full website URL. -->
       <a href="about.html">About</a>
+
+      <!-- #shop is a URL fragment that targets an element with id="shop".
+           This allows the browser to open a specific section of products.html. -->
       <a href="products.html#shop">Shop</a>
+
+      <!-- The #parent-hub fragment targets the Parent Hub section.
+           The target element must have a matching id attribute. -->
       <a href="products.html#parent-hub">Parent Hub</a>
+
+      <!-- This link opens the enquiry page from the current directory.
+           The href attribute tells the browser which document to load. -->
       <a href="enquiry.html">Enquiry</a>
+
+      <!-- This link opens the current contact page.
+           It is useful for keeping Contact available in the main navigation. -->
       <a href="contact.html">Contact</a>
+
+      <!-- data-cart-count is a custom data attribute used by JavaScript.
+           The span separates the cart number so JavaScript can update it. -->
       <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
     </div>
   </nav>
 </header>
 
+<!-- <main> contains the primary content of the webpage.
+     A webpage normally uses one main element for its central content. -->
 <main>
+
+  <!-- <section> groups related content into a meaningful webpage section.
+       The hero class is used by CSS to style the introductory area. -->
   <section class="hero">
+
+    <!-- The wrap class controls the width and alignment of the content.
+         <div> is a general container used to group related HTML elements. -->
     <div class="wrap">
+
+      <!-- <span> is an inline element used for a short piece of text.
+           The eyebrow class provides specific styling through CSS. -->
       <span class="eyebrow">Contact</span>
+
+      <!-- <h1> is the main heading of the webpage.
+           It describes the main purpose of this contact page. -->
       <h1>Talk to a real person</h1>
+
+      <!-- <p> creates a paragraph containing supporting information.
+           The lead class allows CSS to style it as introductory text. -->
       <p class="lead">Weekdays 09:00–17:00 SAST. During registration week we answer WhatsApp until 19:00.</p>
     </div>
   </section>
 
+  <!-- This section contains the contact form and additional contact information.
+       The section class provides general spacing and styling through CSS. -->
   <section class="section">
+
+    <!-- grid grid-2 applies two CSS classes to the same element.
+         These classes create a two-column layout for the page content. -->
     <div class="wrap grid grid-2">
+
+      <!-- form-card groups the contact form inside a styled container.
+           The class is used by CSS to control the card's appearance. -->
       <div class="form-card">
+
+        <!-- <h2> creates a second-level heading under the main h1.
+             Heading levels organise content into a logical hierarchy. -->
         <h2>General contact form</h2>
+
+        <!-- <form> groups controls used to collect information from the user.
+             data-mailto and data-subject provide values that JavaScript can use. -->
         <form data-mailto="hello@campus-cart.co.za" data-subject="Campus-Cart website contact">
+
+          <!-- form-row groups multiple form fields into one layout row.
+               CSS can use this class to position the fields next to each other. -->
           <div class="form-row">
+
+            <!-- form-group keeps the label and input together.
+                 This makes each form field easier to organise and style. -->
             <div class="form-group">
+
+              <!-- for connects this label to the input with id="c-name".
+                   This also improves accessibility and makes the field easier to use. -->
               <label for="c-name">Full name *</label>
+
+              <!-- type="text" creates a standard single-line text field.
+                   required means the browser will not submit the form if it is empty. -->
               <input id="c-name" name="name" type="text" required>
             </div>
+
+            <!-- This form-group contains the email address field.
+                 It follows the same label-and-input structure as the name field. -->
             <div class="form-group">
+
+              <!-- The for attribute must match the input's id attribute.
+                   This connects the label with the correct form control. -->
               <label for="c-email">Email address *</label>
+
+              <!-- type="email" identifies the field as an email input.
+                   required makes entering an email address compulsory. -->
               <input id="c-email" name="email" type="email" required>
             </div>
           </div>
+
+          <!-- This row contains the optional phone field and topic dropdown.
+               form-row allows CSS to arrange both controls in the same row. -->
           <div class="form-row">
+
+            <!-- This form-group contains the user's phone or WhatsApp number.
+                 The field is optional because required is not included. -->
             <div class="form-group">
+
+              <!-- The label describes what information should be entered.
+                   for connects this label to the input with id="c-phone". -->
               <label for="c-phone">Phone / WhatsApp (optional)</label>
+
+              <!-- type="tel" is designed for telephone numbers.
+                   placeholder displays an example before the user enters a number. -->
               <input id="c-phone" name="phone" type="tel" placeholder="082 000 0000">
             </div>
+
+            <!-- This form-group contains a dropdown for selecting a topic.
+                 The dropdown allows the user to choose from predefined options. -->
             <div class="form-group">
+
+              <!-- The label identifies the purpose of the select element.
+                   for connects it to the select using the matching ID. -->
               <label for="c-topic">Topic *</label>
+
+              <!-- <select> creates a dropdown list of choices.
+                   required means the user must select a valid topic. -->
               <select id="c-topic" name="topic" required>
+
+                <!-- <option> represents one selectable item in the dropdown.
+                     The visible text becomes the option shown to the user. -->
                 <option>Order or collection question</option>
+
+                <!-- Each option provides another possible contact topic.
+                     The browser allows the user to select one of these choices. -->
                 <option>Selling second-hand items</option>
+
+                <!-- &amp; is an HTML entity that displays the ampersand symbol.
+                     HTML entities are used to safely represent certain characters. -->
                 <option>Parent Hub &amp; bundles</option>
+
+                <!-- This option allows the user to select a general enquiry topic.
+                     It is another selectable value within the dropdown list. -->
                 <option>Something else</option>
               </select>
             </div>
           </div>
+
+          <!-- form-group groups the message label and textarea together.
+               This keeps the larger text input organised with its description. -->
           <div class="form-group">
+
+            <!-- The for attribute connects the label to id="c-message".
+                 The asterisk indicates that entering a message is required. -->
             <label for="c-message">Message *</label>
+
+            <!-- <textarea> creates a multi-line text input for longer messages.
+                 required prevents submission when the message is empty. -->
             <textarea id="c-message" name="message" required></textarea>
           </div>
+
+          <!-- type="submit" makes the button submit the form.
+               The btn class applies the website's button styling through CSS. -->
           <button class="btn" type="submit">Send message by email</button>
+
+          <!-- This paragraph gives the user information about form processing.
+               The hint class allows CSS to display it as secondary information. -->
           <p class="hint">No backend: this opens a pre-filled email in your own mail app.</p>
         </form>
       </div>
+
+      <!-- This div contains additional contact information beside the form.
+           The grid layout places it in the second column. -->
       <div>
+
+        <!-- info-box creates a styled information container.
+             It contains alternative ways for users to contact Campus-Cart. -->
         <div class="info-box">
+
+          <!-- h3 creates a subsection heading within the information box.
+               It describes the contact methods listed below. -->
           <h3>Other ways to reach us</h3>
+
+          <!-- <strong> gives the word Email stronger importance visually and semantically.
+               The mailto link opens the user's default email application. -->
           <p><strong>Email:</strong> <a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></p>
+
+          <!-- This paragraph provides a separate email address for orders.
+               mailto: tells the browser to open an email application. -->
           <p><strong>Orders:</strong> <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a></p>
+
+          <!-- The WhatsApp hyperlink uses an external URL to open a conversation.
+               The number in the URL uses South Africa's international country code. -->
           <p><strong>WhatsApp:</strong> <a href="https://wa.me/27123456789">012 345 6789</a></p>
         </div>
+
+        <!-- <br> creates a line break between the information box and card.
+             This original element provides visual spacing between the containers. -->
         <br>
+
+        <!-- card and card-navy are CSS classes used to style this content container.
+             card-body groups the heading, paragraph and button inside the card. -->
         <div class="card card-navy"><div class="card-body">
+
+          <!-- h3 identifies the main topic of this information card.
+               It is a subsection heading below the page's h2. -->
           <h3>Buying a specific bundle?</h3>
+
+          <!-- This paragraph provides instructions for users interested in a bundle.
+               It explains which form should be used for the enquiry. -->
           <p>Use the enquiry form so we can quote availability and collection.</p>
+
+          <!-- This hyperlink sends the user to the enquiry page.
+               The btn class provides the button appearance using CSS. -->
           <a class="btn" href="enquiry.html">Pre-purchase enquiry</a>
         </div></div>
       </div>
     </div>
   </section>
 
+  <!-- This section contains the physical locations and collection points.
+       id="locations" allows links to jump directly to this section. -->
   <section class="section alt" id="locations">
+
+    <!-- wrap controls the content width while section-head groups heading content.
+         These classes are defined in the external stylesheet. -->
     <div class="wrap">
+
+      <!-- section-head groups the introductory heading and paragraph.
+           It creates a consistent heading layout used throughout the website. -->
       <div class="section-head">
+
+        <!-- The eyebrow provides a small label above the main section heading.
+             The class controls its visual styling through CSS. -->
         <span class="eyebrow">Find us</span>
+
+        <!-- h2 identifies the main heading for the locations section.
+             It follows the h1 and maintains the document's heading hierarchy. -->
         <h2>Our locations</h2>
+
+        <!-- This paragraph explains how the displayed map works.
+             It provides context about the locations shown on the page. -->
         <p>Offices and staffed collection points. All pins are fixed addresses on a static map image — the site does not use live GPS or tracking.</p>
       </div>
+
+      <!-- <iframe> embeds external content inside the webpage.
+           Here it is used to display a Google Maps map inside the contact page. -->
       <div class="map-frame">
+
+        <!-- src contains the external map URL that the iframe loads.
+             width and height define the initial dimensions of the embedded map. -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27499065.0909108!2d5.934866550426572!3d-32.71742456649879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sza!4v1786441685311!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" alt="Static illustrated map of Campus-Cart office and collection locations in South Africa" loading="lazy" width="1400" height="700"></iframe> 
       </div>
+
+      <!-- map-note provides additional information below the embedded map.
+           The class allows CSS to style this note separately. -->
       <p class="map-note">Static map image for illustration only.</p>
+
+      <!-- grid-4 creates a four-column layout for the location cards.
+           The inline style adds 28 pixels of top margin to this container. -->
       <div class="grid grid-4" style="margin-top:28px">
+
+        <!-- <article> represents a self-contained piece of content.
+             Here it is used for an individual location card. -->
         <article class="card"><div class="card-body">
+
+          <!-- badge-new is a CSS class used to identify the head office visually.
+               The span acts as a small label above the location name. -->
           <span class="badge badge-new">Head office</span>
+
+          <!-- h3 identifies the name of the first location.
+               It acts as the heading for this individual article. -->
           <h3>Pretoria CBD</h3>
+
+          <!-- <br> forces the opening hours onto a new line.
+               This keeps the address and operating hours visually separated. -->
           <p>128 Lynnwood Road, Hatfield, Pretoria, 0083<br>Mon–Fri 09:00–17:00</p>
         </div></article>
+
+        <!-- This article contains the Johannesburg collection point.
+             The card classes control its appearance through CSS. -->
         <article class="card"><div class="card-body">
+
+          <!-- badge identifies this location as a collection point.
+               CSS controls the visual appearance of the badge. -->
           <span class="badge">Collection point</span>
+
+          <!-- h3 provides the heading for this location card.
+               It identifies the city and area of the collection point. -->
           <h3>Johannesburg Braamfontein</h3>
+
+          <!-- The address and opening hours are contained inside a paragraph.
+               <br> separates the address from the operating hours. -->
           <p>7 Jorissen Street, Braamfontein, 2001<br>Mon–Sat 10:00–16:00</p>
         </div></article>
+
+        <!-- This article contains the Cape Town collection point.
+             article is suitable because this is a self-contained location item. -->
         <article class="card"><div class="card-body">
+
+          <!-- The badge identifies the type of location.
+               Its class allows the same styling to be reused across cards. -->
           <span class="badge">Collection point</span>
+
+          <!-- h3 provides the name of the Cape Town location.
+               It acts as the heading for this article. -->
           <h3>Cape Town Rondebosch</h3>
+
+          <!-- The paragraph contains both the physical address and operating hours.
+               <br> moves the opening hours onto a separate line. -->
           <p>45 Main Road, Rondebosch, 7700<br>Tue–Sat 10:00–15:00</p>
         </div></article>
+
+        <!-- This article contains information about the Durban locker point.
+             Each location is kept as a separate article for clear structure. -->
         <article class="card"><div class="card-body">
+
+          <!-- The badge identifies this location as a locker point.
+               The badge class provides consistent styling across location cards. -->
           <span class="badge">Locker point</span>
+
+          <!-- h3 provides the heading for the Durban location.
+               It identifies the area where the locker point is available. -->
           <h3>Durban Westville</h3>
+
+          <!-- This paragraph contains the location and locker operating hours.
+               <br> separates the physical address from the opening information. -->
           <p>Shop 12, University Drive, Westville, 3629<br>Daily 08:00–20:00 lockers</p>
         </div></article>
       </div>
@@ -125,30 +376,91 @@
   </section>
 </main>
 
+<!-- <footer> contains information displayed at the bottom of the webpage.
+     It commonly contains company details, navigation links and contact information. -->
 <footer>
+
+  <!-- wrap controls the footer content width while footer-grid controls its layout.
+       Both classes are defined in the external CSS stylesheet. -->
   <div class="wrap footer-grid">
+
+    <!-- This is the first footer column containing company information.
+         h4 provides a heading for this group of footer content. -->
     <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+
+    <!-- This footer column contains links related to shopping.
+         The unordered list groups the related navigation items. -->
     <div><h4>Shop</h4><ul>
+
+      <!-- Each list item contains one navigation hyperlink.
+           The #shop fragment opens the matching section on products.html. -->
       <li><a href="products.html#shop">Shop New</a></li>
+
+      <!-- &amp; is an HTML entity that displays the ampersand character.
+           The fragment targets the Deals & Gallery section. -->
       <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+
+      <!-- This hyperlink targets the Product Detail section.
+           The destination depends on an element with the matching ID. -->
       <li><a href="products.html#product-detail">Product Detail</a></li>
+
+      <!-- This link targets the Sell With Us section of products.html.
+           URL fragments allow users to jump directly to specific content. -->
       <li><a href="products.html#sell-with-us">Sell With Us</a></li>
     </ul></div>
+
+    <!-- This footer column contains general company navigation.
+         The list provides quick access to important website pages. -->
     <div><h4>Company</h4><ul>
+
+      <!-- This hyperlink opens the About page.
+           Because both files are inside the pages folder, only the filename is needed. -->
       <li><a href="about.html">About</a></li>
+
+      <!-- This link jumps to the Parent Hub section of products.html.
+           The #parent-hub fragment identifies the target section. -->
       <li><a href="products.html#parent-hub">Parent Hub</a></li>
+
+      <!-- This hyperlink opens the enquiry page.
+           href stores the relative path used by the browser. -->
       <li><a href="enquiry.html">Enquiry</a></li>
+
+      <!-- This hyperlink opens the contact page.
+           It allows users to return to the current contact section. -->
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
-    <div><h4>Reach us</h4><ul>
-      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
-      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
-      <li>Mon–Fri, 09:00–17:00 SAST</li>
-    </ul></div>
-  </div>
-  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
-</footer>
 
-<script src="../assets/js/script.js"></script>
-</body>
+    <!-- This footer column contains the business contact information.
+         The unordered list groups the contact methods and opening hours. -->
+    <div><h4>Reach us</h4><ul>
+
+      <!-- mailto: creates a link that opens the user's default email application.
+           The email address after mailto: becomes the email recipient. -->
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+
+      <!-- This external link opens a WhatsApp conversation.
+           The number uses South Africa's international country code in the URL. -->
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li> 
+      
+      <!-- This list item displays the normal business operating hours.
+           It is plain text because the hours do not need to be clickable. -->
+      <li>Mon–Fri, 09:00–17:00 SAST</li> 
+    </ul></div> 
+  </div> 
+
+  <!-- footer-bottom creates a separate bottom area for copyright information.
+       The wrap class keeps the content aligned with the rest of the footer. -->
+  <div class="wrap footer-bottom">
+
+    <!-- &copy; is an HTML entity that displays the copyright symbol.
+         This paragraph also explains the limitations of the static demonstration site. -->
+    <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+  </div> 
+</footer> 
+
+<!-- <script> connects an external JavaScript file to this webpage.
+     src specifies the relative location of the JavaScript file. -->
+<script src="../assets/js/script.js"></script> 
+
+</body> 
 </html>
