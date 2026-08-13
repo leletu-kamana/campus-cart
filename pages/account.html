@@ -1,525 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <title> sets the text shown on the browser tab.
-     &amp; is an HTML entity used to display the & symbol. -->
-<title>Student &amp; Parent Paths + Order Summary | Campus-Cart</title>
+  <!-- <title> sets the text shown on the browser tab.
+       &amp; is an HTML entity used to display the & symbol. -->
+  <title>Student &amp; Parent Paths + Order Summary | Campus-Cart</title>
 
-<!-- <link> connects this HTML page to an external CSS file.
-     ../ moves one folder up before accessing the assets folder. -->
-<link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- <link> connects this HTML page to an external CSS file.
+       ../ moves one folder up before accessing the assets folder. -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
-<!-- <header> contains the main introductory navigation area.
-     The class allows the external CSS to style the header. -->
-<header class="topbar">
+  <!-- <header> contains the main introductory navigation area.
+       The class allows the external CSS to style the header. -->
+  <header class="topbar">
 
-  <!-- <nav> contains navigation links used to move around the website.
-       aria-label provides an accessible name for screen readers. -->
-  <nav class="nav" aria-label="Main navigation">
+    <!-- <nav> contains navigation links used to move around the website.
+         aria-label provides an accessible name for screen readers. -->
+    <nav class="nav" aria-label="Main navigation">
 
-    <!-- <a> creates a hyperlink and href specifies its destination.
-         <span> separates "-Cart" so it can be styled independently. -->
-    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+      <!-- <a> creates a hyperlink and href specifies its destination.
+           <span> separates "-Cart" so it can be styled independently. -->
+      <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
 
-    <!-- <button> creates a clickable navigation control.
-         aria-expanded indicates whether the navigation menu is expanded. -->
-    <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+      <!-- <button> creates a clickable navigation control.
+           aria-expanded indicates whether the navigation menu is expanded. -->
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
 
-    <!-- This div groups the main navigation links together.
-         The nav-links class allows CSS and JavaScript to control the links. -->
-    <div class="nav-links">
+      <!-- This div groups the main navigation links together.
+           The nav-links class allows CSS and JavaScript to control the links. -->
+      <div class="nav-links">
 
-      <!-- ../ moves from the pages folder to the main website folder.
-           index.html is therefore used to return to the homepage. -->
-      <a href="../index.html">Home</a>
+        <!-- ../ moves from the pages folder to the main website folder.
+             index.html is therefore used to return to the homepage. -->
+        <a href="../index.html">Home</a>
 
-      <!-- This relative link opens about.html in the current folder.
-           Relative paths avoid using the complete website URL. -->
-      <a href="about.html">About</a>
+        <!-- This relative link opens about.html in the current folder.
+             Relative paths avoid using the complete website URL. -->
+        <a href="about.html">About</a>
 
-      <!-- #shop is a URL fragment that targets an element with id="shop".
-           It opens the Shop section instead of only opening the page. -->
-      <a href="products.html#shop">Shop</a>
+        <!-- #shop is a URL fragment that targets an element with id="shop".
+             It opens the Shop section instead of only opening the page. -->
+        <a href="products.html#shop">Shop</a>
 
-      <!-- The fragment #parent-hub targets the Parent Hub section.
-           The target section must have a matching id attribute. -->
-      <a href="products.html#parent-hub">Parent Hub</a>
+        <!-- The fragment #parent-hub targets the Parent Hub section.
+             The target section must have a matching id attribute. -->
+        <a href="products.html#parent-hub">Parent Hub</a>
 
-      <!-- This link opens the enquiry page from the current pages folder.
-           The href attribute stores the destination of the hyperlink. -->
-      <a href="enquiry.html">Enquiry</a>
+        <!-- This link opens the enquiry page from the current pages folder.
+             The href attribute stores the destination of the hyperlink. -->
+        <a href="enquiry.html">Enquiry</a>
 
-      <!-- This hyperlink opens the contact page.
-           Anchor elements are commonly used for webpage navigation. -->
-      <a href="contact.html">Contact</a>
+        <!-- This hyperlink opens the contact page.
+             Anchor elements are commonly used for webpage navigation. -->
+        <a href="contact.html">Contact</a>
 
-      <!-- data-cart-count is a custom data attribute for JavaScript.
-           The <span> allows JavaScript to update only the cart number. -->
-      <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
-    </div>
+        <!-- data-cart-count is a custom data attribute for JavaScript.
+             The <span> allows JavaScript to update only the cart number. -->
+        <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- This secondary navigation provides links to sections on this page.
+       Each # fragment points to a matching id attribute below. -->
+  <nav class="subnav" aria-label="Section navigation">
+
+    <!-- <ul> creates an unordered list for navigation items.
+         Each <li> represents one item inside the navigation list. -->
+    <ul>
+
+      <!-- #student targets the section whose id is "student".
+           Clicking the link moves the browser directly to that section. -->
+      <li><a href="#student">Student path</a></li>
+
+      <!-- #parent targets the Parent/Guardian section.
+           URL fragments are useful for navigating within the same page. -->
+      <li><a href="#parent">Parent path</a></li>
+
+      <!-- #order targets the Order Summary section.
+           The browser scrolls to the element with id="order". -->
+      <li><a href="#order">Order Summary</a></li>
+    </ul>
   </nav>
-</header>
 
-<!-- This secondary navigation provides links to sections on this page.
-     Each # fragment points to a matching id attribute below. -->
-<nav class="subnav" aria-label="Section navigation">
+  <!-- <main> contains the primary content of the webpage.
+       A page should normally have one main element for its central content. -->
+  <main>
 
-  <!-- <ul> creates an unordered list for navigation items.
-       Each <li> represents one item inside the navigation list. -->
-  <ul>
+    <!-- The hero section introduces the purpose of the account page.
+         The hero class provides styling through the external CSS file. -->
+    <section class="hero">
 
-    <!-- #student targets the section whose id is "student".
-         Clicking the link moves the browser directly to that section. -->
-    <li><a href="#student">Student path</a></li>
+      <!-- wrap is a layout container used to control content width.
+           It helps keep the page content aligned consistently. -->
+      <div class="wrap">
 
-    <!-- #parent targets the Parent/Guardian section.
-         URL fragments are useful for navigating within the same page. -->
-    <li><a href="#parent">Parent path</a></li>
+        <!-- <span> is an inline element used for short text.
+             The eyebrow class controls its appearance through CSS. -->
+        <span class="eyebrow">Your path</span>
 
-    <!-- #order targets the Order Summary section.
-         The browser scrolls to the element with id="order". -->
-    <li><a href="#order">Order Summary</a></li>
-  </ul>
-</nav>
+        <!-- <h1> is the main heading of this webpage.
+             It should normally be the highest-level page heading. -->
+        <h1>No logins, no passwords</h1>
 
-<!-- <main> contains the primary content of the webpage.
-     A page should normally have one main element for its central content. -->
-<main>
-
-  <!-- The hero section introduces the purpose of the account page.
-       The hero class provides styling through the external CSS file. -->
-  <section class="hero">
-
-    <!-- wrap is a layout container used to control content width.
-         It helps keep the page content aligned consistently. -->
-    <div class="wrap">
-
-      <!-- <span> is an inline element used for short text.
-           The eyebrow class controls its appearance through CSS. -->
-      <span class="eyebrow">Your path</span>
-
-      <!-- <h1> is the main heading of this webpage.
-           It should normally be the highest-level page heading. -->
-      <h1>No logins, no passwords</h1>
-
-      <!-- <p> creates a paragraph containing supporting information.
-           The lead class gives this introductory paragraph special styling. -->
-      <p class="lead">These are informational paths, not accounts. Campus-Cart stores no personal details and there is nothing to sign in to.</p>
-    </div>
-  </section>
-
-  <!-- This section contains information specifically for students.
-       id="student" allows internal links to jump directly here. -->
-  <section class="section" id="student">
-
-    <!-- grid grid-2 applies two CSS classes to create a two-column layout.
-         The wrap class also controls the maximum width of the content. -->
-    <div class="wrap grid grid-2">
-
-      <!-- This div contains the student instructions.
-           It forms the first column of the grid layout. -->
-      <div>
-
-        <!-- badge-new creates a labelled badge for the Student path.
-             CSS controls the visual appearance of the badge. -->
-        <span class="badge badge-new">Student path</span>
-
-        <!-- h2 is a second-level heading below the page's h1.
-             Heading levels help organise the document structure. -->
-        <h2>If you are the student</h2>
-
-        <!-- <ol> creates an ordered list with numbered items.
-             It is suitable here because the student steps follow an order. -->
-        <ol>
-
-          <!-- <li> creates one numbered item in the ordered list.
-               The embedded <a> creates a link to the Shop section. -->
-          <li>Browse <a href="products.html#shop">Shop New</a> for basics you need immediately.</li>
-
-          <!-- This list item contains a link to the second-hand marketplace.
-               The text explains why students may consider second-hand items. -->
-          <li>Check the <a href="products.html#shop">Second-Hand Marketplace</a> before buying new — desks, fridges and textbooks are often half price.</li>
-
-          <!-- The link targets the Deals section using a URL fragment.
-               URL fragments allow specific content to be targeted on another page. -->
-          <li>Use <a href="products.html#deals-gallery">Deals</a> filters to sort by price.</li>
-
-          <!-- This item explains adding products to the Order Summary.
-               The text also gives the next action involving collection. -->
-          <li>Add items to your Order Summary below and pick a collection point.</li>
-
-          <!-- This item explains how the customer can continue the transaction.
-               It is plain text because no hyperlink is required here. -->
-          <li>Hand off by WhatsApp or email; we confirm availability and payment plan.</li>
-
-          <!-- This hyperlink sends the student to the selling section.
-               The #sell-with-us fragment targets the matching section ID. -->
-          <li>Selling at year end? See <a href="products.html#sell-with-us">Sell With Us</a>.</li>
-        </ol>
+        <!-- <p> creates a paragraph containing supporting information.
+             The lead class gives this introductory paragraph special styling. -->
+        <p class="lead">These are informational paths, not accounts. Campus-Cart stores no personal details and there is nothing to sign in to.</p>
       </div>
+    </section>
 
-      <!-- info-box creates a separate styled information area.
-           It forms the second column beside the student instructions. -->
-      <div class="info-box">
+    <!-- This section contains information specifically for students.
+         id="student" allows internal links to jump directly here. -->
+    <section class="section" id="student">
 
-        <!-- h3 creates a subsection heading inside the information box.
-             It is lower in hierarchy than the section's h2 heading. -->
-        <h3>Good to know</h3>
+      <!-- grid grid-2 applies two CSS classes to create a two-column layout.
+           The wrap class also controls the maximum width of the content. -->
+      <div class="wrap grid grid-2">
 
-        <!-- This paragraph provides information about collection.
-             The <p> element is used for normal blocks of text. -->
-        <p>Collection is free at listed residence, campus and locker points. Bring your student card for handover.</p>
+        <!-- This div contains the student instructions.
+             It forms the first column of the grid layout. -->
+        <div>
 
-        <!-- This paragraph provides information about payment plans.
-             It explains that payment is not processed directly by this website. -->
-        <p>Payment plans are arranged by email — nothing is charged on this website.</p>
-      </div>
-    </div>
-  </section>
+          <!-- badge-new creates a labelled badge for the Student path.
+               CSS controls the visual appearance of the badge. -->
+          <span class="badge badge-new">Student path</span>
 
-  <!-- This section contains the Parent/Guardian information.
-       id="parent" allows the sub-navigation to jump to this section. -->
-  <section class="section alt" id="parent">
+          <!-- h2 is a second-level heading below the page's h1.
+               Heading levels help organise the document structure. -->
+          <h2>If you are the student</h2>
 
-    <!-- grid-2 creates two columns for the parent content.
-         wrap controls the width of the overall content area. -->
-    <div class="wrap grid grid-2">
+          <!-- <ol> creates an ordered list with numbered items.
+               It is suitable here because the student steps follow an order. -->
+          <ol>
 
-      <!-- This div contains the numbered instructions for parents.
-           It becomes the first column of the grid. -->
-      <div>
+            <!-- <li> creates one numbered item in the ordered list.
+                 The embedded <a> creates a link to the Shop section. -->
+            <li>Browse <a href="products.html#shop">Shop New</a> for basics you need immediately.</li>
 
-        <!-- badge-used identifies this as the Parent/Guardian path.
-             The class allows CSS to style this badge consistently. -->
-        <span class="badge badge-used">Parent / Guardian path</span>
+            <!-- This list item contains a link to the second-hand marketplace.
+                 The text explains why students may consider second-hand items. -->
+            <li>Check the <a href="products.html#shop">Second-Hand Marketplace</a> before buying new — desks, fridges and textbooks are often half price.</li>
 
-        <!-- h2 identifies the main heading for this section.
-             It is a child heading under the page's h1. -->
-        <h2>If you are the parent or guardian</h2>
+            <!-- The link targets the Deals section using a URL fragment.
+                 URL fragments allow specific content to be targeted on another page. -->
+            <li>Use <a href="products.html#deals-gallery">Deals</a> filters to sort by price.</li>
 
-        <!-- <ol> creates a numbered list of steps.
-             Numbering is useful because these instructions follow a sequence. -->
-        <ol>
+            <!-- This item explains adding products to the Order Summary.
+                 The text also gives the next action involving collection. -->
+            <li>Add items to your Order Summary below and pick a collection point.</li>
 
-          <!-- The hyperlink targets the First Year Checklist.
-               The #parent-hub fragment identifies the destination section. -->
-          <li>Print the <a href="products.html#parent-hub">First Year Checklist</a> and tick off what you already own.</li>
+            <!-- This item explains how the customer can continue the transaction.
+                 It is plain text because no hyperlink is required here. -->
+            <li>Hand off by WhatsApp or email; we confirm availability and payment plan.</li>
 
-          <!-- This item explains comparing different product bundles.
-               The text is displayed as one numbered instruction. -->
-          <li>Compare the Basic, Standard and Premium bundles — contents and prices are fixed.</li>
-
-          <!-- This hyperlink opens the enquiry page.
-               It allows availability and payment details to be confirmed. -->
-          <li>Send a <a href="enquiry.html">pre-purchase enquiry</a> to confirm availability and a payment plan.</li>
-
-          <!-- This item explains adding the chosen bundle to the summary.
-               The summary is displayed later on this same webpage. -->
-          <li>Add the bundle to the Order Summary below and choose collection or delivery.</li>
-
-          <!-- This item explains the available payment arrangement.
-               It remains plain text because no direct link is required. -->
-          <li>Pay by EFT using our static banking details, or arrange over WhatsApp.</li>
-        </ol>
-      </div>
-
-      <!-- info-box provides a separate area for budgeting information.
-           It becomes the second column of the grid layout. -->
-      <div class="info-box">
-
-        <!-- h3 identifies the purpose of this information box.
-             It is a lower-level heading within the Parent section. -->
-        <h3>Budget guidance</h3>
-
-        <!-- This paragraph gives the budgeting information displayed by the page.
-             The content is plain text contained inside a paragraph element. -->
-        <p>Most first-year families spend between R1 500 and R4 500 on res essentials. Choosing second-hand for furniture and textbooks typically saves 30–50%.</p>
-
-        <!-- This anchor uses multiple CSS classes for its appearance.
-             btn-outline and btn-sm provide additional button styling. -->
-        <a class="btn btn-outline btn-sm" href="products.html#parent-hub">Open Parent Hub</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- This section contains the customer's Order Summary.
-       id="order" allows the navigation to jump directly to this section. -->
-  <section class="section" id="order">
-
-    <!-- wrap keeps the Order Summary content aligned with the website layout.
-         The class is controlled by the external stylesheet. -->
-    <div class="wrap">
-
-      <!-- section-head groups the heading and introductory paragraph.
-           This creates a consistent heading layout across the website. -->
-      <div class="section-head">
-
-        <!-- The eyebrow provides a smaller label above the main heading.
-             The class controls its visual appearance through CSS. -->
-        <span class="eyebrow">Checkout hand-off</span>
-
-        <!-- h2 identifies the main heading for this section.
-             It appears below the main h1 in the document hierarchy. -->
-        <h2>Order Summary</h2>
-
-        <!-- This paragraph explains how the order summary works.
-             It also explains that no payment gateway is used. -->
-        <p>Items you added while browsing. This list lives in the current browser session only and clears when you close the tab — no payment gateway is involved.</p>
-      </div>
-
-      <!-- step groups the first stage of the order process.
-           It gives the order workflow a clear visual structure. -->
-      <div class="step">
-
-        <!-- span displays the step number inside the heading.
-             The span allows the number to be styled separately with CSS. -->
-        <h3><span>1</span>Your items</h3>
-
-        <!-- This div displays when there are no products in the order.
-             id allows JavaScript to find and control this element. -->
-        <div id="order-empty" class="empty-state">
-
-          <!-- h3 explains that the order summary currently contains no products.
-               It is displayed as a heading inside the empty state. -->
-          <h3>Nothing added yet</h3>
-
-          <!-- This paragraph tells the user how to add products.
-               It provides guidance when the order list is empty. -->
-          <p>Add bundles or products from the Shop, Deals or Parent Hub sections.</p>
-
-          <!-- This link sends the user back to the Shop section.
-               btn and btn-sm apply the website's button styles. -->
-          <a class="btn btn-sm" href="products.html#shop">Start shopping</a>
+            <!-- This hyperlink sends the student to the selling section.
+                 The #sell-with-us fragment targets the matching section ID. -->
+            <li>Selling at year end? See <a href="products.html#sell-with-us">Sell With Us</a>.</li>
+          </ol>
         </div>
 
-        <!-- hidden prevents this container from being displayed initially.
-             JavaScript can remove the hidden state when products are added. -->
-        <div id="order-table-wrap" hidden>
+        <!-- info-box creates a separate styled information area.
+             It forms the second column beside the student instructions. -->
+        <div class="info-box">
 
-          <!-- <table> represents structured tabular data.
-               It is suitable for displaying products, prices and quantities. -->
-          <table class="order-table">
+          <!-- h3 creates a subsection heading inside the information box.
+               It is lower in hierarchy than the section's h2 heading. -->
+          <h3>Good to know</h3>
 
-            <!-- <thead> contains the headings that describe each table column.
-                 Browsers and assistive technologies recognise it as the header area. -->
-            <thead>
+          <!-- This paragraph provides information about collection.
+               The <p> element is used for normal blocks of text. -->
+          <p>Collection is free at listed residence, campus and locker points. Bring your student card for handover.</p>
 
-              <!-- <tr> creates one table row.
-                   Each <th> below represents a heading cell in that row. -->
-              <tr><th>Item</th><th>Price</th><th>Qty</th><th>Subtotal</th><th>Action</th></tr>
-            </thead>
-
-            <!-- <tbody> contains the main table data.
-                 JavaScript can insert order rows into this element dynamically. -->
-            <tbody id="order-body"></tbody>
-          </table>
-
-          <!-- The inline style adds 18 pixels of space above this paragraph.
-               The span has an ID so JavaScript can update the total price. -->
-          <p style="margin-top:18px">Total: <span class="order-total" id="order-total">R0.00</span></p>
-
-          <!-- This button does not submit a form because it is not inside one.
-               JavaScript can use the ID to remove all order items. -->
-          <button class="btn btn-outline btn-sm" id="order-clear">Clear summary</button>
-
-          <!-- This button allows JavaScript to move the user to the address step.
-               The ID provides a way for JavaScript to identify this button. -->
-          <button class="btn btn-sm" id="skip-to-address">Skip to Address</button>
+          <!-- This paragraph provides information about payment plans.
+               It explains that payment is not processed directly by this website. -->
+          <p>Payment plans are arranged by email — nothing is charged on this website.</p>
         </div>
       </div>
+    </section>
 
-      <!-- This step contains the delivery or collection information.
-           The ID allows other page controls to target this specific step. -->
-      <div class="step" id="step-address">
+    <!-- This section contains the Parent/Guardian information.
+         id="parent" allows the sub-navigation to jump to this section. -->
+    <section class="section alt" id="parent">
 
-        <!-- The span contains the step number for the order process.
-             The h3 identifies the purpose of this stage. -->
-        <h3><span>2</span>Delivery or collection</h3>
+      <!-- grid-2 creates two columns for the parent content.
+           wrap controls the width of the overall content area. -->
+      <div class="wrap grid grid-2">
 
-        <!-- form-row groups the delivery controls into one layout row.
-             CSS can position these form groups beside one another. -->
-        <div class="form-row">
+        <!-- This div contains the numbered instructions for parents.
+             It becomes the first column of the grid. -->
+        <div>
 
-          <!-- form-group keeps the label and select element together.
-               It allows CSS to apply consistent spacing and formatting. -->
-          <div class="form-group">
+          <!-- badge-used identifies this as the Parent/Guardian path.
+               The class allows CSS to style this badge consistently. -->
+          <span class="badge badge-used">Parent / Guardian path</span>
 
-            <!-- The for attribute connects the label to the select element.
-                 This improves usability and accessibility. -->
-            <label for="delivery-method">Method</label>
+          <!-- h2 identifies the main heading for this section.
+               It is a child heading under the page's h1. -->
+          <h2>If you are the parent or guardian</h2>
 
-            <!-- <select> creates a dropdown list for choosing a delivery method.
-                 The selected option can be read and processed by JavaScript. -->
-            <select id="delivery-method">
+          <!-- <ol> creates a numbered list of steps.
+               Numbering is useful because these instructions follow a sequence. -->
+          <ol>
 
-              <!-- value stores the internal value associated with this option.
-                   The visible text is what the user sees in the dropdown. -->
-              <option value="collection">Collect at a Campus-Cart point</option>
+            <!-- The hyperlink targets the First Year Checklist.
+                 The #parent-hub fragment identifies the destination section. -->
+            <li>Print the <a href="products.html#parent-hub">First Year Checklist</a> and tick off what you already own.</li>
 
-              <!-- This option represents courier delivery.
-                   JavaScript can use the value "delivery" to identify the choice. -->
-              <option value="delivery">Courier delivery (quoted)</option>
-            </select>
+            <!-- This item explains comparing different product bundles.
+                 The text is displayed as one numbered instruction. -->
+            <li>Compare the Basic, Standard and Premium bundles — contents and prices are fixed.</li>
+
+            <!-- This hyperlink opens the enquiry page.
+                 It allows availability and payment details to be confirmed. -->
+            <li>Send a <a href="enquiry.html">pre-purchase enquiry</a> to confirm availability and a payment plan.</li>
+
+            <!-- This item explains adding the chosen bundle to the summary.
+                 The summary is displayed later on this same webpage. -->
+            <li>Add the bundle to the Order Summary below and choose collection or delivery.</li>
+
+            <!-- This item explains the available payment arrangement.
+                 It remains plain text because no direct link is required. -->
+            <li>Pay by EFT using our static banking details, or arrange over WhatsApp.</li>
+          </ol>
+        </div>
+
+        <!-- info-box provides a separate area for budgeting information.
+             It becomes the second column of the grid layout. -->
+        <div class="info-box">
+
+          <!-- h3 identifies the purpose of this information box.
+               It is a lower-level heading within the Parent section. -->
+          <h3>Budget guidance</h3>
+
+          <!-- This paragraph gives the budgeting information displayed by the page.
+               The content is plain text contained inside a paragraph element. -->
+          <p>Most first-year families spend between R1 500 and R4 500 on res essentials. Choosing second-hand for furniture and textbooks typically saves 30–50%.</p>
+
+          <!-- This anchor uses multiple CSS classes for its appearance.
+               btn-outline and btn-sm provide additional button styling. -->
+          <a class="btn btn-outline btn-sm" href="products.html#parent-hub">Open Parent Hub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- This section contains the customer's Order Summary.
+         id="order" allows the navigation to jump directly to this section. -->
+    <section class="section" id="order">
+
+      <!-- wrap keeps the Order Summary content aligned with the website layout.
+           The class is controlled by the external stylesheet. -->
+      <div class="wrap">
+
+        <!-- section-head groups the heading and introductory paragraph.
+             This creates a consistent heading layout across the website. -->
+        <div class="section-head">
+
+          <!-- The eyebrow provides a smaller label above the main heading.
+               The class controls its visual appearance through CSS. -->
+          <span class="eyebrow">Checkout hand-off</span>
+
+          <!-- h2 identifies the main heading for this section.
+               It appears below the main h1 in the document hierarchy. -->
+          <h2>Order Summary</h2>
+
+          <!-- This paragraph explains how the order summary works.
+               It also explains that no payment gateway is used. -->
+          <p>Items you added while browsing. This list lives in the current browser session only and clears when you close the tab — no payment gateway is involved.</p>
+        </div>
+
+        <!-- step groups the first stage of the order process.
+             It gives the order workflow a clear visual structure. -->
+        <div class="step">
+
+          <!-- span displays the step number inside the heading.
+               The span allows the number to be styled separately with CSS. -->
+          <h3><span>1</span>Your items</h3>
+
+          <!-- This div displays when there are no products in the order.
+               id allows JavaScript to find and control this element. -->
+          <div id="order-empty" class="empty-state">
+
+            <!-- h3 explains that the order summary currently contains no products.
+                 It is displayed as a heading inside the empty state. -->
+            <h3>Nothing added yet</h3>
+
+            <!-- This paragraph tells the user how to add products.
+                 It provides guidance when the order list is empty. -->
+            <p>Add bundles or products from the Shop, Deals or Parent Hub sections.</p>
+
+            <!-- This link sends the user back to the Shop section.
+                 btn and btn-sm apply the website's button styles. -->
+            <a class="btn btn-sm" href="products.html#shop">Start shopping</a>
           </div>
 
-          <!-- This form group contains the address or collection point field.
-               The input allows the user to enter a single line of text. -->
-          <div class="form-group">
+          <!-- hidden prevents this container from being displayed initially.
+               JavaScript can remove the hidden state when products are added. -->
+          <div id="order-table-wrap" hidden>
 
-            <!-- The label describes what information should be entered.
-                 for connects it to the input using the matching ID. -->
-            <label for="delivery-address">Address or collection point</label>
+            <!-- <table> represents structured tabular data.
+                 It is suitable for displaying products, prices and quantities. -->
+            <table class="order-table">
 
-            <!-- type="text" creates a single-line text input.
-                 placeholder provides an example before the user enters information. -->
-            <input id="delivery-address" type="text" placeholder="e.g. Hatfield res reception, Pretoria">
+              <!-- <thead> contains the headings that describe each table column.
+                   Browsers and assistive technologies recognise it as the header area. -->
+              <thead>
+
+                <!-- <tr> creates one table row.
+                     Each <th> below represents a heading cell in that row. -->
+                <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th>Subtotal</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <!-- <tbody> contains the main table data.
+                   JavaScript can insert order rows into this element dynamically. -->
+              <tbody id="order-body"></tbody>
+            </table>
+
+            <!-- The inline style adds 18 pixels of space above this paragraph.
+                 The span has an ID so JavaScript can update the total price. -->
+            <p style="margin-top:18px">Total: <span class="order-total" id="order-total">R0.00</span></p>
+
+            <!-- This button does not submit a form because it is not inside one.
+                 JavaScript can use the ID to remove all order items. -->
+            <button class="btn btn-outline btn-sm" id="order-clear">Clear summary</button>
+
+            <!-- This button allows JavaScript to move the user to the address step.
+                 The ID provides a way for JavaScript to identify this button. -->
+            <button class="btn btn-sm" id="skip-to-address">Skip to Address</button>
           </div>
         </div>
 
-        <!-- This hint provides additional information about collection.
-             JavaScript can identify it using the delivery-hint ID. -->
-        <p class="hint" id="delivery-hint">Collection is free at any listed campus, residence or locker point.</p>
-      </div>
+        <!-- This step contains the delivery or collection information.
+             The ID allows other page controls to target this specific step. -->
+        <div class="step" id="step-address">
 
-      <!-- This step contains the final hand-off options.
-           It provides ways to send the order summary to the business. -->
-      <div class="step">
+          <!-- The span contains the step number for the order process.
+               The h3 identifies the purpose of this stage. -->
+          <h3><span>2</span>Delivery or collection</h3>
 
-        <!-- The span displays the third step number.
-             h3 describes the final stage of the order process. -->
-        <h3><span>3</span>Hand off your order</h3>
+          <!-- form-row groups the delivery controls into one layout row.
+               CSS can position these form groups beside one another. -->
+          <div class="form-row">
 
-        <!-- This paragraph explains how the available hand-off options work.
-             It also states that card details are not entered into this page. -->
-        <p>Pick how you want to finish. Each option passes your summary to a human — no card details are ever entered here.</p>
+            <!-- form-group keeps the label and select element together.
+                 It allows CSS to apply consistent spacing and formatting. -->
+            <div class="form-group">
 
-        <!-- This link opens WhatsApp using the external wa.me service.
-             The id allows JavaScript to update the link with order information. -->
-        <a class="btn" id="checkout-whatsapp" href="https://wa.me/27123456789">Send via WhatsApp</a>
+              <!-- The for attribute connects the label to the select element.
+                   This improves usability and accessibility. -->
+              <label for="delivery-method">Method</label>
 
-        <!-- mailto: opens the user's default email application.
-             The ID allows JavaScript to add order details to the email. -->
-        <a class="btn btn-navy" id="checkout-email" href="mailto:orders@campus-cart.co.za">Send by email</a>
+              <!-- <select> creates a dropdown list for choosing a delivery method.
+                   The selected option can be read and processed by JavaScript. -->
+              <select id="delivery-method">
 
-        <!-- This button can be controlled by JavaScript to show or hide EFT details.
-             It does not submit a form because it has no form context here. -->
-        <button class="btn btn-outline" id="checkout-eft">Show EFT instructions</button>
+                <!-- value stores the internal value associated with this option.
+                     The visible text is what the user sees in the dropdown. -->
+                <option value="collection">Collect at a Campus-Cart point</option>
 
-        <!-- hidden initially hides the EFT information from the user.
-             JavaScript can remove this attribute when the button is clicked. -->
-        <div class="info-box" id="eft-details" hidden style="margin-top:20px">
+                <!-- This option represents courier delivery.
+                     JavaScript can use the value "delivery" to identify the choice. -->
+                <option value="delivery">Courier delivery (quoted)</option>
+              </select>
+            </div>
 
-          <!-- h3 identifies the purpose of the hidden information box.
-               It becomes visible when the EFT instructions are requested. -->
-          <h3>Static EFT instructions</h3>
+            <!-- This form group contains the address or collection point field.
+                 The input allows the user to enter a single line of text. -->
+            <div class="form-group">
 
-          <!-- strong gives important labels stronger semantic emphasis.
-               br creates line breaks between the different banking details. -->
-          <p><strong>Account name:</strong> Campus-Cart Student Essentials<br>
-             <strong>Bank:</strong> Example Bank South Africa<br>
-             <strong>Account number:</strong> 1234 5678 90<br>
-             <strong>Branch code:</strong> 250655<br>
-             <strong>Reference:</strong> your surname + campus</p>
+              <!-- The label describes what information should be entered.
+                   for connects it to the input using the matching ID. -->
+              <label for="delivery-address">Address or collection point</label>
 
-          <!-- mailto creates an email link for sending proof of payment.
-               The paragraph also explains that the banking details are only examples. -->
-          <p>Email your proof of payment to <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a>. We confirm stock and a collection slot within one working day. These details are illustrative for this demo site.</p>
+              <!-- type="text" creates a single-line text input.
+                   placeholder provides an example before the user enters information. -->
+              <input id="delivery-address" type="text" placeholder="e.g. Hatfield res reception, Pretoria">
+            </div>
+          </div>
+
+          <!-- This hint provides additional information about collection.
+               JavaScript can identify it using the delivery-hint ID. -->
+          <p class="hint" id="delivery-hint">Collection is free at any listed campus, residence or locker point.</p>
+        </div>
+
+        <!-- This step contains the final hand-off options.
+             It provides ways to send the order summary to the business. -->
+        <div class="step">
+
+          <!-- The span displays the third step number.
+               h3 describes the final stage of the order process. -->
+          <h3><span>3</span>Hand off your order</h3>
+
+          <!-- This paragraph explains how the available hand-off options work.
+               It also states that card details are not entered into this page. -->
+          <p>Pick how you want to finish. Each option passes your summary to a human — no card details are ever entered here.</p>
+
+          <!-- This link opens WhatsApp using the external wa.me service.
+               The id allows JavaScript to update the link with order information. -->
+          <a class="btn" id="checkout-whatsapp" href="https://wa.me/27123456789">Send via WhatsApp</a>
+
+          <!-- mailto: opens the user's default email application.
+               The ID allows JavaScript to add order details to the email. -->
+          <a class="btn btn-navy" id="checkout-email" href="mailto:orders@campus-cart.co.za">Send by email</a>
+
+          <!-- This button can be controlled by JavaScript to show or hide EFT details.
+               It does not submit a form because it has no form context here. -->
+          <button class="btn btn-outline" id="checkout-eft">Show EFT instructions</button>
+
+          <!-- hidden initially hides the EFT information from the user.
+               JavaScript can remove this attribute when the button is clicked. -->
+          <div class="info-box" id="eft-details" hidden style="margin-top:20px">
+
+            <!-- h3 identifies the purpose of the hidden information box.
+                 It becomes visible when the EFT instructions are requested. -->
+            <h3>Static EFT instructions</h3>
+
+            <!-- strong gives important labels stronger semantic emphasis.
+                 br creates line breaks between the different banking details. -->
+            <p>
+              <strong>Account name:</strong> Campus-Cart Student Essentials<br>
+              <strong>Bank:</strong> Example Bank South Africa<br>
+              <strong>Account number:</strong> 1234 5678 90<br>
+              <strong>Branch code:</strong> 250655<br>
+              <strong>Reference:</strong> your surname + campus
+            </p>
+
+            <!-- mailto creates an email link for sending proof of payment.
+                 The paragraph also explains that the banking details are only examples. -->
+            <p>Email your proof of payment to <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a>. We confirm stock and a collection slot within one working day. These details are illustrative for this demo site.</p>
+          </div>
         </div>
       </div>
+    </section>
+  </main>
+
+  <!-- <footer> contains information displayed at the bottom of the webpage.
+       It commonly contains company information and useful navigation links. -->
+  <footer>
+
+    <!-- wrap controls the footer width while footer-grid controls its layout.
+         These classes are defined in the external CSS stylesheet. -->
+    <div class="wrap footer-grid">
+
+      <!-- This footer column contains the Campus-Cart description.
+           h4 provides a heading for this group of footer information. -->
+      <div>
+        <h4>Campus-Cart</h4>
+        <p>Affordable new and second-hand student essentials for South African campuses.</p>
+      </div>
+
+      <!-- This footer column contains shopping-related navigation.
+           <ul> groups the related links into an unordered list. -->
+      <div>
+        <h4>Shop</h4>
+        <ul>
+
+          <!-- Each li represents one item in the navigation list.
+               The href contains the destination of the hyperlink. -->
+          <li><a href="products.html#shop">Shop New</a></li>
+
+          <!-- &amp; displays the ampersand character correctly in HTML.
+               The fragment targets the Deals & Gallery section. -->
+          <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+
+          <!-- This link targets the Product Detail section.
+               The destination requires a matching product-detail ID. -->
+          <li><a href="products.html#product-detail">Product Detail</a></li>
+
+          <!-- This link jumps to the Sell With Us section.
+               URL fragments allow direct navigation to a page section. -->
+          <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+        </ul>
+      </div>
+
+      <!-- This footer column contains general company navigation.
+           Each link provides access to another section or page. -->
+      <div>
+        <h4>Company</h4>
+        <ul>
+
+          <!-- This relative link opens the About page.
+               The browser looks for about.html in the current directory. -->
+          <li><a href="about.html">About</a></li>
+
+          <!-- This link targets the Parent Hub section of products.html.
+               The #parent-hub fragment identifies the target element. -->
+          <li><a href="products.html#parent-hub">Parent Hub</a></li>
+
+          <!-- This link opens the enquiry page.
+               It uses a relative path because the pages share the same folder. -->
+          <li><a href="enquiry.html">Enquiry</a></li>
+
+          <!-- This link opens the Contact page.
+               Anchor elements are used for navigation between HTML documents. -->
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- This footer column contains contact information.
+           The unordered list groups the different contact methods. -->
+      <div>
+        <h4>Reach us</h4>
+        <ul>
+
+          <!-- mailto: tells the browser to open an email application.
+               The address after mailto: becomes the recipient. -->
+          <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+
+          <!-- This external hyperlink opens a WhatsApp conversation.
+               The number in the URL uses South Africa's international country code. -->
+          <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+
+          <!-- This list item displays the normal business operating hours.
+               It is plain text because the opening hours are not interactive. -->
+          <li>Mon–Fri, 09:00–17:00 SAST</li>
+        </ul>
+      </div>
     </div>
-  </section>
-</main>
 
-<!-- <footer> contains information displayed at the bottom of the webpage.
-     It commonly contains company information and useful navigation links. -->
-<footer>
+    <!-- footer-bottom creates the bottom part of the footer.
+         The wrap class keeps the copyright information aligned with the page. -->
+    <div class="wrap footer-bottom">
 
-  <!-- wrap controls the footer width while footer-grid controls its layout.
-       These classes are defined in the external CSS stylesheet. -->
-  <div class="wrap footer-grid">
+      <!-- &copy; is an HTML entity that displays the copyright symbol.
+           The paragraph also describes this website as a static demonstration. -->
+      <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+    </div>
+  </footer>
 
-    <!-- This footer column contains the Campus-Cart description.
-         h4 provides a heading for this group of footer information. -->
-    <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+  <!-- <script> loads the external JavaScript file used by the webpage.
+       src specifies the location of script.js relative to this pages folder. -->
+  <script src="../assets/js/script.js"></script>
 
-    <!-- This footer column contains shopping-related navigation.
-         <ul> groups the related links into an unordered list. -->
-    <div><h4>Shop</h4><ul>
-
-      <!-- Each li represents one item in the navigation list.
-           The href contains the destination of the hyperlink. -->
-      <li><a href="products.html#shop">Shop New</a></li>
-
-      <!-- &amp; displays the ampersand character correctly in HTML.
-           The fragment targets the Deals & Gallery section. -->
-      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-
-      <!-- This link targets the Product Detail section.
-           The destination requires a matching product-detail ID. -->
-      <li><a href="products.html#product-detail">Product Detail</a></li>
-
-      <!-- This link jumps to the Sell With Us section.
-           URL fragments allow direct navigation to a page section. -->
-      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-    </ul></div>
-
-    <!-- This footer column contains general company navigation.
-         Each link provides access to another section or page. -->
-    <div><h4>Company</h4><ul>
-
-      <!-- This relative link opens the About page.
-           The browser looks for about.html in the current directory. -->
-      <li><a href="about.html">About</a></li>
-
-      <!-- This link targets the Parent Hub section of products.html.
-           The #parent-hub fragment identifies the target element. -->
-      <li><a href="products.html#parent-hub">Parent Hub</a></li>
-
-      <!-- This link opens the enquiry page.
-           It uses a relative path because the pages share the same folder. -->
-      <li><a href="enquiry.html">Enquiry</a></li>
-
-      <!-- This link opens the Contact page.
-           Anchor elements are used for navigation between HTML documents. -->
-      <li><a href="contact.html">Contact</a></li>
-    </ul></div>
-
-    <!-- This footer column contains contact information.
-         The unordered list groups the different contact methods. -->
-    <div><h4>Reach us</h4><ul>
-
-      <!-- mailto: tells the browser to open an email application.
-           The address after mailto: becomes the recipient. -->
-      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
-
-      <!-- This external hyperlink opens a WhatsApp conversation.
-           The number in the URL uses South Africa's international country code. -->
-      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li> 
-
-      <!-- This list item displays the normal business operating hours.
-           It is plain text because the opening hours are not interactive. -->
-      <li>Mon–Fri, 09:00–17:00 SAST</li> 
-    </ul></div> 
-  </div> 
-
-  <!-- footer-bottom creates the bottom part of the footer.
-       The wrap class keeps the copyright information aligned with the page. -->
-  <div class="wrap footer-bottom">
-
-    <!-- &copy; is an HTML entity that displays the copyright symbol.
-         The paragraph also describes this website as a static demonstration. -->
-    <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
-  </div> 
-</footer> 
- 
-<!-- <script> loads the external JavaScript file used by the webpage.
-     src specifies the location of script.js relative to this pages folder. -->
-<script src="../assets/js/script.js"></script> 
-
-</body> 
+</body>
 </html>
