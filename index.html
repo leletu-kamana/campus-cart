@@ -4,68 +4,134 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Campus-Cart | Affordable Student Essentials in South Africa</title>
+<!-- Connects this HTML page to the external CSS stylesheet.
+     The href points to the location of the CSS file. -->
 <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 <body>
 
+<!-- Header contains the website logo and main navigation menu. -->
 <header class="topbar">
+
+  <!-- Navigation contains links to the main pages of the website.
+       aria-label helps screen readers identify the navigation. -->
   <nav class="nav" aria-label="Main navigation">
+
+    <!-- The logo is a link that takes the user back to the home page. -->
     <a class="logo" href="index.html">Campus<span>-Cart</span></a>
+
+    <!-- Button used to open or close the navigation menu. -->
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+
+    <!-- Contains all the navigation links displayed in the menu. -->
     <div class="nav-links">
+
+      <!-- Links the user to the website home page. -->
       <a href="index.html">Home</a>
+
+      <!-- Links the user to the About page. -->
       <a href="pages/about.html">About</a>
+
+      <!-- Opens the products page and jumps to the shop section. -->
       <a href="pages/products.html#shop">Shop</a>
+
+      <!-- Opens the products page and jumps to the Parent Hub section. -->
       <a href="pages/products.html#parent-hub">Parent Hub</a>
+
+      <!-- Links the user to the enquiry page. -->
       <a href="pages/enquiry.html">Enquiry</a>
+
+      <!-- Links the user to the contact page. -->
       <a href="pages/contact.html">Contact</a>
+
+      <!-- Opens the order section and shows the current cart item count.
+           JavaScript can update the value inside the span. -->
       <a class="nav-cart" href="pages/account.html#order">Order (<span data-cart-count>0</span>)</a>
     </div>
   </nav>
 </header>
 
+<!-- Main contains the primary content of the webpage. -->
 <main>
+
+  <!-- Hero section introduces the website and its main purpose. -->
   <section class="hero">
+
+    <!-- Wrap controls the page width and hero-grid controls the layout. -->
     <div class="wrap hero-grid">
+
+      <!-- Contains the main text and buttons in the hero section. -->
       <div>
+
+        <!-- Small introductory label displayed above the main heading. -->
         <span class="eyebrow">Proudly South African</span>
+
+        <!-- Main heading of the webpage.
+             The em element gives emphasis to part of the heading. -->
         <h1>Kit out res without <em>breaking the budget</em></h1>
+
+        <!-- Introductory paragraph explaining what Campus-Cart offers. -->
         <p class="lead">Campus-Cart brings new and carefully reviewed second-hand student essentials together in one place — bedding, appliances, textbooks and full starter bundles, collected on campus or at a locker near you.</p>
+
+        <!-- Groups the student and parent options together. -->
         <div class="split">
+
+          <!-- Card containing information for students. -->
           <div class="split-card">
             <h3>I am a Student</h3>
             <p>Shop deals, browse the second-hand marketplace and sell what you no longer need.</p>
+
+            <!-- Link styled as a button that opens the student section. -->
             <a class="btn" href="pages/account.html#student">Student path</a>
           </div>
+
+          <!-- Card containing information for parents or guardians. -->
           <div class="split-card">
             <h3>I am a Parent/Guardian</h3>
             <p>Use the First Year Checklist and fixed-price starter bundles to plan spend with confidence.</p>
+
+            <!-- Link styled as a button that opens the parent section. -->
             <a class="btn btn-ghost-light" href="pages/account.html#parent">Parent path</a>
           </div>
         </div>
       </div>
+
+      <!-- Contains the main image displayed in the hero section. -->
       <div class="hero-img">
+        <!-- src specifies the image location and alt describes the image. -->
         <img src="assets/images/bundles/hero-campus.jpg" alt="South African students walking on campus with laptops and a storage crate" width="1600" height="900">
       </div>
     </div>
   </section>
 
+  <!-- Mission section explains the purpose of Campus-Cart. -->
   <section class="section" id="mission">
     <div class="wrap">
+
+      <!-- Contains the heading and introduction for the mission section. -->
       <div class="section-head">
         <span class="eyebrow">Our mission</span>
         <h2>Affordable essentials, dignified student living</h2>
         <p>Too many students arrive at university with a bag and a bed frame. We exist to close that gap: fair prices, a trusted second-hand marketplace, and pricing that parents can plan around before registration week.</p>
       </div>
+
+      <!-- Creates a three-column layout for the feature cards. -->
       <div class="grid grid-3">
+
+        <!-- First card explains the website's pricing approach. -->
         <div class="card card-navy"><div class="card-body">
           <h3>Fair, visible prices</h3>
           <p>Every bundle lists its contents and a fixed price. No surprises at the till.</p>
         </div></div>
+
+        <!-- Second card explains how second-hand products are reviewed. -->
         <div class="card card-navy"><div class="card-body">
           <h3>Reviewed listings</h3>
           <p>Second-hand items are manually reviewed by our team before they appear on the site.</p>
         </div></div>
+
+        <!-- Third card explains the available collection options. -->
         <div class="card card-navy"><div class="card-body">
           <h3>Safe collection</h3>
           <p>Collect at residence desks, campus points or secure lockers — never a random street corner.</p>
@@ -74,41 +140,72 @@
     </div>
   </section>
 
+  <!-- Featured section displays selected Campus-Cart products. -->
   <section class="section alt" id="featured">
     <div class="wrap">
+
+      <!-- Contains the heading for the featured products. -->
       <div class="section-head">
         <span class="eyebrow">Featured</span>
         <h2>Starter bundles students actually use</h2>
       </div>
+
+      <!-- Creates a three-column grid for the product cards. -->
       <div class="grid grid-3">
+
+        <!-- Article represents one self-contained product item. -->
         <article class="card">
+
+          <!-- Product image with alternative text for accessibility.
+               loading="lazy" helps improve page loading performance. -->
           <img src="assets/images/bundles/starter-bundle.jpg" alt="Basic starter bundle contents laid out" loading="lazy" width="1200" height="900">
+
+          <!-- Contains the name, price, description and link for the product. -->
           <div class="card-body">
             <span class="badge badge-new">New</span>
             <h3>Basic Starter Bundle</h3>
             <p class="price">R1 499.00</p>
             <p>Bedding set, kettle, mug set and study basics for a first-year res room.</p>
+
+            <!-- Link takes the user to more information about the bundle. -->
             <a class="btn btn-sm" href="pages/products.html#parent-hub">See contents</a>
           </div>
         </article>
+
+        <!-- Article containing the Standard Starter Bundle information. -->
         <article class="card">
+
+          <!-- Image representing the Standard Starter Bundle. -->
           <img src="assets/images/bundles/starter-bundle.jpg" alt="Standard starter bundle contents laid out" loading="lazy" width="1200" height="900">
+
           <div class="card-body">
             <span class="badge badge-new">New</span>
             <h3>Standard Starter Bundle</h3>
             <p class="price">R2 799.00</p>
             <p>Basic plus desk lamp, laundry set and a kitchen starter pack.</p>
+
+            <!-- Link takes the user to more information about the bundle. -->
             <a class="btn btn-sm" href="pages/products.html#parent-hub">See contents</a>
           </div>
         </article>
+
+        <!-- Article containing a selection of second-hand products. -->
         <article class="card">
+
+          <!-- Image representing items available in the marketplace. -->
           <img src="assets/images/second-hand/marketplace.jpg" alt="Second-hand student items on display" loading="lazy" width="1200" height="900">
+
           <div class="card-body">
+
+            <!-- Badges identify the product as second-hand and verified. -->
             <span class="badge badge-used">Second-hand</span>
             <span class="badge badge-verified">Verified Seller</span>
+
             <h3>Marketplace Picks</h3>
             <p class="price">From R180.00</p>
             <p>Reviewed fridges, desks, chairs and textbooks from graduating students.</p>
+
+            <!-- Link takes the user to the second-hand marketplace. -->
             <a class="btn btn-sm" href="pages/products.html#shop">Browse marketplace</a>
           </div>
         </article>
@@ -116,14 +213,21 @@
     </div>
   </section>
 
+  <!-- About section gives a short introduction to Campus-Cart. -->
   <section class="section" id="about-teaser">
     <div class="wrap grid grid-2">
+
+      <!-- Contains the main About Us information. -->
       <div>
         <span class="eyebrow">About us</span>
         <h2>Started in a res corridor in 2021</h2>
         <p>Campus-Cart began when a group of students resold their res kit instead of throwing it away. Today we serve students aged 19–30 and the parents and guardians who fund them, across major South African campuses.</p>
+
+        <!-- Link takes the user to the full About page. -->
         <a class="btn btn-outline" href="pages/about.html">Read our story</a>
       </div>
+
+      <!-- Information box identifies the main target users. -->
       <div class="info-box">
         <h3>Who we serve</h3>
         <p><strong>Primary:</strong> tertiary students aged 19–30 living in residence, digs or at home.</p>
@@ -132,22 +236,35 @@
     </div>
   </section>
 
+  <!-- Contact section provides different ways for users to contact Campus-Cart. -->
   <section class="section navy" id="get-in-touch">
     <div class="wrap">
+
+      <!-- Contains the heading and description for the contact section. -->
       <div class="section-head">
         <span class="eyebrow">Get in touch</span>
         <h2>Questions before you buy?</h2>
         <p>Ask about a specific bundle, or reach the team about collection points, payment plans and second-hand listings.</p>
       </div>
+
+      <!-- Creates two columns for the different contact options. -->
       <div class="grid grid-2">
+
+        <!-- Card for users who have questions before purchasing. -->
         <div class="split-card">
           <h3>Pre-purchase enquiry</h3>
           <p>Reference a bundle or product and we will confirm availability and collection options.</p>
+
+          <!-- Link takes the user to the enquiry page. -->
           <a class="btn" href="pages/enquiry.html">Send an enquiry</a>
         </div>
+
+        <!-- Card containing general contact information. -->
         <div class="split-card">
           <h3>General contact</h3>
           <p>Email or WhatsApp us, or find your nearest collection and office location.</p>
+
+          <!-- Link takes the user to the contact page. -->
           <a class="btn btn-ghost-light" href="pages/contact.html">Contact us</a>
         </div>
       </div>
@@ -155,23 +272,45 @@
   </section>
 </main>
 
+<!-- Footer contains additional navigation, contact details and copyright information. -->
 <footer>
+
+  <!-- Main footer container that holds the different footer columns. -->
   <div class="wrap footer-grid">
+
+    <!-- First footer column containing the website description. -->
     <div>
       <h4>Campus-Cart</h4>
       <p>Affordable new and second-hand student essentials for South African campuses.</p>
     </div>
+
+    <!-- Second footer column containing shopping links. -->
     <div>
       <h4>Shop</h4>
+
+      <!-- Unordered list containing links related to shopping. -->
       <ul>
+
+        <!-- Each li represents one item in the unordered list. -->
         <li><a href="pages/products.html#shop">Shop New</a></li>
+
+        <!-- Link to second-hand products. -->
         <li><a href="pages/products.html#shop">Second-Hand</a></li>
+
+        <!-- Link to the deals and gallery section.
+             &amp; displays the ampersand (&) character in HTML. -->
         <li><a href="pages/products.html#deals-gallery">Deals &amp; Gallery</a></li>
+
+        <!-- Link for users who want to sell their products. -->
         <li><a href="pages/products.html#sell-with-us">Sell With Us</a></li>
       </ul>
     </div>
+
+    <!-- Third footer column containing company-related links. -->
     <div>
       <h4>Company</h4>
+
+      <!-- Unordered list containing company navigation links. -->
       <ul>
         <li><a href="pages/about.html">About</a></li>
         <li><a href="pages/products.html#parent-hub">Parent Hub</a></li>
@@ -179,20 +318,36 @@
         <li><a href="pages/contact.html">Contact</a></li>
       </ul>
     </div>
+
+    <!-- Fourth footer column containing contact information. -->
     <div>
       <h4>Reach us</h4>
+
+      <!-- Unordered list containing the available contact details. -->
       <ul>
+
+        <!-- mailto: opens the user's default email application. -->
         <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+
+        <!-- WhatsApp link opens the specified WhatsApp contact. -->
         <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+
+        <!-- Displays the business operating hours as normal text. -->
         <li>Mon–Fri, 09:00–17:00 SAST</li>
       </ul>
     </div>
   </div>
+
+  <!-- Bottom part of the footer containing copyright information. -->
   <div class="wrap footer-bottom">
+
+    <!-- &copy; is an HTML entity that displays the copyright symbol ©. -->
     <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
   </div>
-</footer>
+</footer> 
 
+<!-- Connects this HTML page to the external JS script.
+     The src points to the location of the JS file. -->
 <script src="assets/js/script.js"></script>
 </body>
 </html>
