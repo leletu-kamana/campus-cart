@@ -575,12 +575,25 @@
               <!-- This div uses the map-frame class to style the map container. -->
               <div class="map-frame">
 
-                <!-- src provides the image path while alt describes what the image represents. -->
-                <img src="../assets/images/icons/static-map.jpg" alt="Static map showing fixed collection points" loading="lazy" width="1400" height="700">
+                <!-- src contains the external map URL that the iframe loads.
+                     width and height define the initial dimensions of the embedded map. -->
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27499065.0909108!2d5.934866550426572!3d-32.71742456649879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sza!4v1786441685311!5m2!1sen!2sza"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    alt="Static illustrated map of Campus-Cart office and collection locations in South Africa"
+                    loading="lazy"
+                    width="1400"
+                    height="700">
+                  </iframe>
               </div>
 
               <!-- class="map-note" allows CSS to style this explanatory paragraph. -->
-              <p class="map-note">Static map image only — no live GPS, tracking or location permissions.</p>
+              <p class="map-note"> This the live GPS, tracking or location permissions.</p>
             </div>
           </div>
         </div>
