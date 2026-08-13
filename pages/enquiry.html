@@ -3,74 +3,221 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <title> sets the name shown on the browser tab and helps identify the webpage.
+     It also provides useful information for search engines and accessibility. -->
 <title>Bundle Enquiry | Campus-Cart Student Essentials</title>
+
+<!-- <link> connects this HTML page to an external CSS stylesheet.
+     rel identifies the file as CSS, while href specifies the stylesheet location. -->
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
+<!-- <header> contains introductory content and usually includes website navigation.
+     The topbar class allows CSS to control the appearance of this header. -->
 <header class="topbar">
+
+  <!-- <nav> identifies a group of navigation links used to move around the website.
+       aria-label gives screen-reader users a meaningful name for this navigation. -->
   <nav class="nav" aria-label="Main navigation">
+
+    <!-- <a> creates a hyperlink and href specifies its destination.
+         The <span> allows the "-Cart" part of the logo to be styled separately. -->
     <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+
+    <!-- <button> creates an interactive control for opening the navigation menu.
+         aria-expanded communicates whether the navigation menu is currently expanded. -->
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+
+    <!-- <div> groups all navigation links into one container.
+         The nav-links class allows CSS and JavaScript to control the navigation. -->
     <div class="nav-links">
+
+      <!-- This hyperlink uses ../ to move up one folder before opening index.html.
+           Relative paths are used because the webpage is inside the pages folder. -->
       <a href="../index.html">Home</a>
+
+      <!-- This link opens about.html from the current pages folder.
+           The href attribute tells the browser which document to open. -->
       <a href="about.html">About</a>
+
+      <!-- The #shop fragment tells the browser to jump to the element with id="shop".
+           This allows the user to open the Shop section directly. -->
       <a href="products.html#shop">Shop</a>
+
+      <!-- The #parent-hub fragment targets the Parent Hub section.
+           The destination works when an element has a matching id attribute. -->
       <a href="products.html#parent-hub">Parent Hub</a>
+
+      <!-- This hyperlink opens the enquiry page.
+           An <a> element is used because the user is navigating to another page. -->
       <a href="enquiry.html">Enquiry</a>
+
+      <!-- This hyperlink opens the Contact page.
+           The href attribute contains the relative path to that HTML document. -->
       <a href="contact.html">Contact</a>
+
+      <!-- data-cart-count is a custom data attribute that JavaScript can find.
+           The <span> separates the cart number so JavaScript can update only the number. -->
       <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
     </div>
   </nav>
 </header>
 
+<!-- <main> contains the primary content of the webpage.
+     A page normally uses one main element for its central content. -->
 <main>
+
+  <!-- <section> groups related content into one meaningful area of the webpage.
+       The hero class allows CSS to style this section as the page introduction. -->
   <section class="hero">
+
+    <!-- The wrap class controls the width and alignment of the section content.
+         A <div> is used here as a general container for grouping elements. -->
     <div class="wrap">
+
+      <!-- <span> is an inline element used for short pieces of text.
+           The eyebrow class gives this small heading its specific CSS styling. -->
       <span class="eyebrow">Before you buy</span>
+
+      <!-- <h1> is the main heading of this webpage.
+           A page should normally have one main h1 describing its primary purpose. -->
       <h1>Pre-purchase enquiry</h1>
+
+      <!-- <p> creates a paragraph containing supporting information.
+           The lead class allows CSS to display this paragraph as introductory text. -->
       <p class="lead">Ask about a bundle, a single product or a second-hand listing. Your message opens in your own email app — nothing is stored on this site.</p>
     </div>
   </section>
 
+  <!-- This section contains the enquiry form and additional information.
+       The section class provides the general spacing and styling for the area. -->
   <section class="section">
+
+    <!-- grid grid-2 applies two CSS classes to create a two-column layout.
+         The columns contain the enquiry form and supporting information. -->
     <div class="wrap grid grid-2">
+
+      <!-- form-card groups the enquiry form inside a styled container.
+           The class is used by CSS to control the card's appearance. -->
       <div class="form-card">
+
+        <!-- h2 creates a second-level heading below the page's h1.
+             Heading levels help organise the page into a logical structure. -->
         <h2>Send your enquiry</h2>
+
+        <!-- <form> groups input controls that collect information from the user.
+             data-mailto and data-subject provide JavaScript with email information. -->
         <form data-mailto="enquiries@campus-cart.co.za" data-subject="Campus-Cart pre-purchase enquiry">
+
+          <!-- form-group groups a label and its related form control.
+               This keeps each individual form field organised and easier to style. -->
           <div class="form-group">
+
+            <!-- for connects this label to the select element with id="enq-type".
+                 The asterisk indicates that the field is required for the user. -->
             <label for="enq-type">I am a *</label>
+
+            <!-- <select> creates a dropdown list containing predefined choices.
+                 required prevents the form from being submitted without a selection. -->
             <select id="enq-type" name="enquirerType" required>
+
+              <!-- <option> creates one selectable item inside the dropdown.
+                   value is the data that can be read when the option is selected. -->
               <option value="Student">Student</option>
+
+              <!-- This option provides an alternative value for the user.
+                   The value is submitted/read separately from the visible option text. -->
               <option value="Parent/Guardian">Parent/Guardian</option>
             </select>
           </div>
+
+          <!-- form-row groups multiple form fields into the same horizontal row.
+               CSS can use this class to control the layout of the two fields. -->
           <div class="form-row">
+
+            <!-- This form-group contains the user's full name input.
+                 Grouping the label and input improves organisation and accessibility. -->
             <div class="form-group">
+
+              <!-- The for attribute connects the label to id="enq-name".
+                   Clicking the label can therefore focus the associated input. -->
               <label for="enq-name">Full name *</label>
+
+              <!-- type="text" creates a normal text input field.
+                   required prevents submission when the field has been left empty. -->
               <input id="enq-name" name="name" type="text" required placeholder="e.g. Thandi Mokoena">
             </div>
+
+            <!-- This form-group contains the email address input.
+                 It follows the same structure as the name field. -->
             <div class="form-group">
+
+              <!-- The label is connected to the email input using the matching ID.
+                   This improves usability because the field has a clear description. -->
               <label for="enq-email">Email address *</label>
+
+              <!-- type="email" allows the browser to recognise this as an email field.
+                   The browser can perform basic email-format validation automatically. -->
               <input id="enq-email" name="email" type="email" required placeholder="you@example.co.za">
             </div>
           </div>
+
+          <!-- This form-group contains an optional product or bundle reference.
+               Optional means the user can submit the form without completing this field. -->
           <div class="form-group">
+
+            <!-- The label describes what information should be entered in the input.
+                 for connects the label to the input with id="enq-ref". -->
             <label for="enq-ref">Bundle or product reference (optional)</label>
+
+            <!-- type="text" allows the user to enter normal text.
+                 placeholder displays an example until the user enters their own value. -->
             <input id="enq-ref" name="reference" type="text" placeholder="e.g. Standard Starter Bundle">
+
+            <!-- hint provides additional instructions below the input field.
+                 The class allows CSS to style this supporting information differently. -->
             <span class="hint">Copy the name from the Shop, Deals or Parent Hub sections.</span>
           </div>
+
+          <!-- This form-group contains the main message that the user wants to send.
+               Grouping it keeps the label, textarea and related information together. -->
           <div class="form-group">
+
+            <!-- The label describes the purpose of the textarea.
+                 for connects the label to the textarea using its matching ID. -->
             <label for="enq-message">Your message *</label>
+
+            <!-- <textarea> creates a multi-line text input for longer messages.
+                 required means the user must enter a message before submitting. -->
             <textarea id="enq-message" name="message" required placeholder="Tell us what you need, your campus, and when you need it."></textarea>
           </div>
+
+          <!-- type="submit" makes this button submit the form.
+               JavaScript can intercept the submission and create the email message. -->
           <button class="btn" type="submit">Send enquiry by email</button>
+
+          <!-- This paragraph explains what happens when the form is submitted.
+               The hint class allows CSS to display this as secondary information. -->
           <p class="hint">This form has no backend. Submitting opens a pre-filled email in your mail app.</p>
         </form>
       </div>
+
+      <!-- This div contains information displayed beside the enquiry form.
+           The grid layout places this content in the second column. -->
       <div>
+
+        <!-- info-box creates a styled container for supporting information.
+             The box explains what information should be included in an enquiry. -->
         <div class="info-box">
+
+          <!-- h3 creates a subsection heading inside the information box.
+               It is below the section's h2 in the heading hierarchy. -->
           <h3>What to include</h3>
+
+          <!-- <ul> creates an unordered list because these items have no required order.
+               Each <li> represents one separate piece of information. -->
           <ul>
             <li>Your institution and campus</li>
             <li>The bundle or item name</li>
@@ -78,16 +225,46 @@
             <li>When you need it by</li>
           </ul>
         </div>
+
+        <!-- <br> creates a line break between the information box and the next card.
+             It is part of the original structure and provides visual separation. -->
         <br>
+
+        <!-- card creates a reusable content container while card-navy changes its styling.
+             The nested card-body groups the heading, paragraph and button together. -->
         <div class="card card-navy"><div class="card-body">
+
+          <!-- h3 identifies this card's main topic.
+               It is a subsection heading under the main enquiry section. -->
           <h3>Need a faster reply?</h3>
+
+          <!-- This paragraph provides additional information about contacting the business.
+               It is normal text content displayed below the heading. -->
           <p>WhatsApp is usually quickest during registration season.</p>
+
+          <!-- This anchor uses an external WhatsApp URL to start a conversation.
+               href contains the destination address that the browser will open. -->
           <a class="btn" href="https://wa.me/27123456789">WhatsApp us</a>
         </div></div>
+
+        <!-- <br> creates a line break between the two cards.
+             This keeps the original visual spacing without changing the structure. -->
         <br>
+
+        <!-- This card provides access to the user's current order summary.
+             The card class gives it the standard product-card appearance. -->
         <div class="card"><div class="card-body">
+
+          <!-- h3 identifies the purpose of this card.
+               It provides a clear heading for the order-summary information. -->
           <h3>Already picked items?</h3>
+
+          <!-- This paragraph explains where the user's selected products are stored.
+               It informs the user that the order summary exists in the browser session. -->
           <p>Your Order Summary lives in this browser session — review it before enquiring.</p>
+
+          <!-- btn, btn-outline and btn-sm are CSS classes used together for styling.
+               The href points to the order section of account.html using a fragment. -->
           <a class="btn btn-outline btn-sm" href="account.html#order">View Order Summary</a>
         </div></div>
       </div>
@@ -95,30 +272,91 @@
   </section>
 </main>
 
+<!-- <footer> contains information normally displayed at the bottom of the webpage.
+     It commonly contains company details, navigation links and contact information. -->
 <footer>
+
+  <!-- footer-grid controls the layout while wrap controls the content width.
+       These classes are defined in the external CSS stylesheet. -->
   <div class="wrap footer-grid">
+
+    <!-- This div creates the first footer column containing company information.
+         The h4 heading identifies the purpose of this footer column. -->
     <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+
+    <!-- This footer column contains links related to shopping.
+         <ul> groups the related navigation links together. -->
     <div><h4>Shop</h4><ul>
+
+      <!-- Each <li> represents one item in the Shop footer navigation.
+           The href uses a fragment to open a specific section of products.html. -->
       <li><a href="products.html#shop">Shop New</a></li>
+
+      <!-- This link jumps directly to the Deals & Gallery section.
+           &amp; is the HTML entity used to display the & character safely. -->
       <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+
+      <!-- This link jumps to the Product Detail section.
+           The # fragment identifies the target using its unique ID. -->
       <li><a href="products.html#product-detail">Product Detail</a></li>
+
+      <!-- This link jumps to the Sell With Us section.
+           It uses the section's id value as a fragment identifier. -->
       <li><a href="products.html#sell-with-us">Sell With Us</a></li>
     </ul></div>
+
+    <!-- This footer column contains general company navigation.
+         The links allow users to access important pages from the footer. -->
     <div><h4>Company</h4><ul>
+
+      <!-- This hyperlink opens the About page.
+           Because both pages are inside the pages folder, only the filename is needed. -->
       <li><a href="about.html">About</a></li>
+
+      <!-- This link opens the Parent Hub section on products.html.
+           The fragment allows the browser to jump directly to that section. -->
       <li><a href="products.html#parent-hub">Parent Hub</a></li>
+
+      <!-- This hyperlink opens the enquiry page.
+           href contains the relative path to the current page location. -->
       <li><a href="enquiry.html">Enquiry</a></li>
+
+      <!-- This hyperlink opens the Contact page.
+           The browser follows the relative URL stored in the href attribute. -->
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
+
+    <!-- This footer column contains the available contact methods.
+         The unordered list groups the contact details together. -->
     <div><h4>Reach us</h4><ul>
+
+      <!-- mailto: creates a link that opens the user's default email application.
+           The address after mailto: becomes the recipient of the email. -->
       <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+
+      <!-- wa.me opens a WhatsApp conversation using the supplied international number.
+           The number in the URL uses the country code instead of the leading zero. -->
       <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+
+      <!-- This list item contains normal text instead of a hyperlink.
+           It displays the business operating hours to the user. -->
       <li>Mon–Fri, 09:00–17:00 SAST</li>
     </ul></div>
   </div>
-  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
+
+  <!-- footer-bottom creates a separate area for copyright information.
+       The wrap class keeps this content aligned with the main footer content. -->
+  <div class="wrap footer-bottom">
+
+    <!-- &copy; is an HTML entity that displays the copyright symbol.
+         The paragraph also explains that this website is only a static demonstration. -->
+    <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+  </div>
 </footer>
 
+<!-- <script> connects an external JavaScript file to this HTML page.
+     src specifies the JavaScript file location used for the website's functionality. -->
 <script src="../assets/js/script.js"></script>
+
 </body>
 </html>
