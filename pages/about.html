@@ -3,130 +3,386 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <title> sets the text displayed on the browser tab.
+     &amp; is an HTML entity used to display the & character. -->
 <title>About Campus-Cart | Our History, Mission &amp; Vision</title>
+
+<!-- <link> connects this HTML document to an external CSS stylesheet.
+     ../ moves one folder up before accessing the assets folder. -->
 <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
 
+<!-- <header> contains the main introductory content of the webpage.
+     The topbar class allows CSS to style this header area. -->
 <header class="topbar">
+
+  <!-- <nav> groups the main navigation links for the website.
+       aria-label provides an accessible name for screen readers. -->
   <nav class="nav" aria-label="Main navigation">
+
+    <!-- <a> creates a hyperlink and href specifies its destination.
+         <span> separates "-Cart" so it can receive different styling. -->
     <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+
+    <!-- <button> creates a clickable control for the navigation menu.
+         aria-expanded indicates whether the navigation is currently expanded. -->
     <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+
+    <!-- This div groups all the main navigation links together.
+         The nav-links class allows CSS and JavaScript to control the group. -->
     <div class="nav-links">
+
+      <!-- ../ moves from the pages folder to the main website folder.
+           index.html is therefore used as the destination of this link. -->
       <a href="../index.html">Home</a>
+
+      <!-- This relative link opens about.html from the current directory.
+           Relative paths do not require the complete website URL. -->
       <a href="about.html">About</a>
+
+      <!-- #shop is a URL fragment targeting an element with id="shop".
+           It allows the user to jump directly to the Shop section. -->
       <a href="products.html#shop">Shop</a>
+
+      <!-- The #parent-hub fragment targets the Parent Hub section.
+           The destination must contain an element with the matching ID. -->
       <a href="products.html#parent-hub">Parent Hub</a>
+
+      <!-- This hyperlink opens the enquiry page in the same directory.
+           The href attribute contains the relative path to the page. -->
       <a href="enquiry.html">Enquiry</a>
+
+      <!-- This hyperlink opens the contact page.
+           Anchor elements are commonly used for navigation between pages. -->
       <a href="contact.html">Contact</a>
+
+      <!-- data-cart-count is a custom data attribute used by JavaScript.
+           The <span> allows JavaScript to update only the cart number. -->
       <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
     </div>
   </nav>
 </header>
 
+<!-- <main> contains the primary content of the webpage.
+     A document normally uses one main element for its central content. -->
 <main>
+
+  <!-- <section> groups related content into a meaningful webpage section.
+       The hero class allows CSS to style this introductory section. -->
   <section class="hero">
+
+    <!-- wrap is a layout container used to control content width.
+         It helps keep the page content aligned consistently. -->
     <div class="wrap">
+
+      <!-- <span> is an inline element used for a short piece of text.
+           The eyebrow class controls its appearance using CSS. -->
       <span class="eyebrow">About us</span>
+
+      <!-- <h1> is the main heading of the webpage.
+           It normally represents the highest-level heading on the page. -->
       <h1>Built by students, for students and their families</h1>
+
+      <!-- <p> creates a paragraph containing supporting information.
+           The lead class gives this introductory paragraph special styling. -->
       <p class="lead">Campus-Cart is a South African student essentials marketplace that pairs affordable new stock with a manually reviewed second-hand range.</p>
     </div>
   </section>
 
+  <!-- This section contains the history of Campus-Cart.
+       The section class provides the general spacing and styling. -->
   <section class="section">
+
+    <!-- grid grid-2 applies two CSS classes to create a two-column layout.
+         wrap controls the width of the content inside the section. -->
     <div class="wrap grid grid-2">
+
+      <!-- This div contains the written history of the company.
+           It forms the first column of the two-column grid. -->
       <div>
+
+        <!-- h2 creates a second-level heading below the page's h1.
+             Heading levels help organise the document logically. -->
         <h2>Our history</h2>
+
+        <!-- <p> creates a block of paragraph text.
+             Each paragraph separates a different part of the company history. -->
         <p>In 2021 a handful of final-year students in Pretoria noticed the same thing every November: perfectly good kettles, fridges, desks and textbooks were being dumped in res corridors, while first-years arriving in January were paying full retail for the same items.</p>
+
+        <!-- This paragraph explains how the original idea developed.
+             Multiple <p> elements make the information easier to read. -->
         <p>What began as a WhatsApp group with a spreadsheet grew into an organised handover service across three campuses. By 2023 we had added new stock so that families could buy a complete bundle in one go, and by 2025 we formalised collection points at residences, campus desks and secure lockers.</p>
+
+        <!-- This paragraph describes the current operation of the business.
+             It remains inside the same content column as the history. -->
         <p>Today Campus-Cart operates as a small, student-run team with reviewers who physically check every second-hand listing before it goes live.</p>
       </div>
+
+      <!-- This div forms the second column of the grid.
+           It contains an image related to the second-hand marketplace. -->
       <div>
+
+        <!-- <img> displays an image on the webpage.
+             src specifies the image path while alt provides alternative text. -->
         <img class="map-frame" src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair" loading="lazy" width="1200" height="900">
       </div>
     </div>
   </section>
 
+  <!-- This section contains the company's mission and vision.
+       The alt class provides an alternative visual background style. -->
   <section class="section alt">
+
+    <!-- grid-2 creates two columns for the mission and vision.
+         wrap keeps the content within the website's normal width. -->
     <div class="wrap grid grid-2">
+
+      <!-- info-box creates a styled container for the mission.
+           It forms the first column of this section. -->
       <div class="info-box">
+
+        <!-- h3 creates a subsection heading for the mission.
+             It is lower in hierarchy than the section's main heading. -->
         <h3>Our mission</h3>
+
+        <!-- This paragraph explains the purpose of Campus-Cart.
+             Paragraph elements are used for blocks of descriptive text. -->
         <p>To make the cost of starting tertiary education fairer, by giving students and their families access to affordable, quality-checked essentials and a safe way to resell what they outgrow.</p>
       </div>
+
+      <!-- This info-box contains the company's long-term vision.
+           It forms the second column beside the mission. -->
       <div class="info-box">
+
+        <!-- h3 provides the heading for the vision content.
+             It identifies the purpose of the information box. -->
         <h3>Our vision</h3>
+
+        <!-- This paragraph explains the desired future outcome.
+             The text remains inside the second information box. -->
         <p>A South Africa where no student delays or drops out of study because they cannot afford a bed, a desk or a prescribed textbook — and where student kit circulates instead of ending up in a skip.</p>
       </div>
     </div>
   </section>
 
+  <!-- This section explains the target audience of the website.
+       id="who-we-serve" allows the section to be targeted by a URL fragment. -->
   <section class="section" id="who-we-serve">
+
+    <!-- wrap controls the content width within the section.
+         It keeps the content aligned with other sections on the page. -->
     <div class="wrap">
+
+      <!-- section-head groups the introductory heading content.
+           This class provides consistent styling across the website. -->
       <div class="section-head">
+
+        <!-- The eyebrow provides a small label above the section heading.
+             CSS controls its visual appearance. -->
         <span class="eyebrow">Audience</span>
+
+        <!-- h2 identifies the main heading for this webpage section.
+             It is correctly placed below the page's h1 in the hierarchy. -->
         <h2>Who we serve</h2>
       </div>
+
+      <!-- grid-2 creates two columns for the audience cards.
+           Each article below represents one target audience. -->
       <div class="grid grid-2">
+
+        <!-- <article> represents a self-contained piece of content.
+             Here it is used to represent the primary audience card. -->
         <article class="card"><div class="card-body">
+
+          <!-- badge-new displays a labelled badge for the primary audience.
+               The CSS class controls its appearance. -->
           <span class="badge badge-new">Primary audience</span>
+
+          <!-- h3 identifies the main heading inside this article.
+               It describes who the primary audience is. -->
           <h3>Tertiary students, ages 19–30</h3>
+
+          <!-- This paragraph describes the characteristics of the audience.
+               It provides supporting information below the article heading. -->
           <p>Undergraduates, postgraduates and TVET students living in residence, private digs or commuting from home. They are price-sensitive, mobile-first, and often buying for the first time without family nearby.</p>
+
+          <!-- <ul> creates an unordered list.
+               It is used here because these points do not require a specific order. -->
           <ul>
+
+            <!-- <li> represents one item inside the unordered list.
+                 Each item describes one student requirement. -->
             <li>Need affordable basics fast, usually in registration week</li>
+
+            <!-- This list item identifies another student requirement.
+                 List items are automatically grouped under the parent <ul>. -->
             <li>Want to resell items at the end of the year</li>
+
+            <!-- This list item describes the preferred collection method.
+                 No numbering is used because the order is not important. -->
             <li>Prefer collection on or near campus</li>
           </ul>
+
+          <!-- This anchor links to the Student path on account.html.
+               The btn classes make the hyperlink look like a button. -->
           <a class="btn btn-sm" href="account.html#student">Student path</a>
         </div></article>
+
+        <!-- This article represents the secondary target audience.
+             article is suitable because the content is self-contained. -->
         <article class="card"><div class="card-body">
+
+          <!-- badge-used identifies the secondary audience visually.
+               The class allows CSS to control the badge appearance. -->
           <span class="badge badge-used">Secondary audience</span>
+
+          <!-- h3 provides the heading for the secondary audience card.
+               It identifies parents and guardians as the audience. -->
           <h3>Parents and guardians</h3>
+
+          <!-- This paragraph explains the needs of parents and guardians.
+               It provides descriptive information about this audience. -->
           <p>Adults funding a student's first year who need clear, fixed pricing, a checklist they can print, and reassurance that a second-hand item has been checked by a person.</p>
+
+          <!-- This unordered list contains important audience requirements.
+               The order of these requirements is not important. -->
           <ul>
+
+            <!-- This list item describes the budgeting requirement.
+                 It appears as a bullet point in the browser. -->
             <li>Budget in advance with fixed-price bundles</li>
+
+            <!-- This item describes accessibility and presentation preferences.
+                 It is grouped with the other parent requirements. -->
             <li>Larger type, plain language, printable checklist</li>
+
+            <!-- This item describes preferred contact methods.
+                 It is another bullet point within the unordered list. -->
             <li>Direct contact by email or WhatsApp</li>
           </ul>
+
+          <!-- This hyperlink opens the Parent Hub section of products.html.
+               btn and btn-sm apply the site's button styling. -->
           <a class="btn btn-sm" href="products.html#parent-hub">Parent Hub</a>
         </div></article>
       </div>
     </div>
   </section>
 
+  <!-- This section provides a final call-to-action for visitors.
+       The navy class applies the darker section styling through CSS. -->
   <section class="section navy">
+
+    <!-- wrap keeps the call-to-action content aligned with the website.
+         It also controls the maximum width of the content. -->
     <div class="wrap">
+
+      <!-- h2 creates the main heading for this final section.
+           It asks the visitor whether they want to contact the business. -->
       <h2>Want to talk to us?</h2>
+
+      <!-- This paragraph explains the two available contact options.
+           It gives the user context before the action buttons. -->
       <p>Send a pre-purchase enquiry about a specific bundle, or use the general contact form.</p>
+
+      <!-- This link opens the enquiry page.
+           The btn class makes the hyperlink visually appear as a button. -->
       <a class="btn" href="enquiry.html">Send an enquiry</a>
+
+      <!-- This link opens the general contact page.
+           btn-ghost-light provides an alternative button appearance. -->
       <a class="btn btn-ghost-light" href="contact.html">Contact us</a>
     </div>
   </section>
 </main>
 
+<!-- <footer> contains information displayed at the bottom of the webpage.
+     It commonly contains company details, navigation and contact information. -->
 <footer>
+
+  <!-- wrap controls the footer width while footer-grid controls its layout.
+       Both classes are defined in the external CSS stylesheet. -->
   <div class="wrap footer-grid">
+
+    <!-- This footer column contains the Campus-Cart description.
+         h4 provides a heading for this group of footer content. -->
     <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+
+    <!-- This footer column contains shopping-related navigation.
+         The unordered list groups related navigation links together. -->
     <div><h4>Shop</h4><ul>
+
+      <!-- Each <li> represents one item in the navigation list.
+           The <a> element makes the item clickable. -->
       <li><a href="products.html#shop">Shop New</a></li>
+
+      <!-- This link targets the Shop section containing second-hand products.
+           The URL fragment identifies the target section. -->
       <li><a href="products.html#shop">Second-Hand</a></li>
+
+      <!-- &amp; displays the ampersand symbol in HTML.
+           The fragment targets the Deals & Gallery section. -->
       <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+
+      <!-- This link targets the Sell With Us section.
+           URL fragments allow users to jump directly to specific content. -->
       <li><a href="products.html#sell-with-us">Sell With Us</a></li>
     </ul></div>
+
+    <!-- This footer column contains general company navigation.
+         The links provide access to important website pages and sections. -->
     <div><h4>Company</h4><ul>
+
+      <!-- This hyperlink opens the About page.
+           The relative path works because both files are in the pages folder. -->
       <li><a href="about.html">About</a></li>
+
+      <!-- This link targets the Parent Hub section of products.html.
+           The #parent-hub fragment identifies the destination. -->
       <li><a href="products.html#parent-hub">Parent Hub</a></li>
+
+      <!-- This hyperlink opens the enquiry page.
+           href stores the relative destination of the link. -->
       <li><a href="enquiry.html">Enquiry</a></li>
+
+      <!-- This hyperlink opens the contact page.
+           It allows visitors to reach the general contact section. -->
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
-    <div><h4>Reach us</h4><ul>
-      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
-      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
-      <li>Mon–Fri, 09:00–17:00 SAST</li>
-    </ul></div>
-  </div>
-  <div class="wrap footer-bottom"><p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p></div>
-</footer>
 
-<script src="../assets/js/script.js"></script>
-</body>
+    <!-- This footer column contains the available contact methods.
+         The unordered list groups the contact information together. -->
+    <div><h4>Reach us</h4><ul>
+
+      <!-- mailto: opens the user's default email application.
+           The email address after mailto: becomes the recipient. -->
+      <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+
+      <!-- This external hyperlink opens a WhatsApp conversation.
+           The URL uses South Africa's international country code. -->
+      <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li> 
+
+      <!-- This list item displays the normal business operating hours.
+           It is plain text because the opening hours are not interactive. -->
+      <li>Mon–Fri, 09:00–17:00 SAST</li> 
+    </ul></div> 
+  </div> 
+
+  <!-- footer-bottom creates the lower part of the footer.
+       The wrap class keeps the content aligned with the rest of the page. -->
+  <div class="wrap footer-bottom">
+
+    <!-- &copy; is an HTML entity that displays the copyright symbol.
+         The paragraph also identifies this as a static demonstration website. -->
+    <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+  </div> 
+</footer> 
+ 
+<!-- <script> connects an external JavaScript file to this HTML page.
+     src specifies the location of script.js relative to the pages folder. -->
+<script src="../assets/js/script.js"></script> 
+
+</body> 
 </html>
