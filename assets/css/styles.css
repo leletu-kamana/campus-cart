@@ -1,0 +1,744 @@
+/* =========================================================
+   CAMPUS-CART | MAIN STYLESHEET
+   Responsive + adaptive CSS
+
+   Easy editing:
+   1. Change the colours in :root.
+   2. Change spacing/radius/shadows in :root.
+   3. Reuse .btn, .card, .grid and .wrap across pages.
+   4. Add page-specific styles near the relevant section.
+   ========================================================= */
+
+/* =========================
+   1. DESIGN VARIABLES
+   ========================= */
+:root {
+  /* Brand colours */
+  --navy: #102a43;
+  --navy-dark: #071a2b;
+  --blue: #1f6feb;
+  --blue-dark: #1558bd;
+  --gold: #f2b84b;
+  --gold-dark: #c98d20;
+
+  /* Neutral colours */
+  --white: #ffffff;
+  --off-white: #f7f9fc;
+  --light: #eef3f8;
+  --border: #d9e2ec;
+  --text: #243b53;
+  --muted: #627d98;
+
+  /* Layout */
+  --container: 1200px;
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+
+  /* Components */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.85rem;
+  --radius-lg: 1.25rem;
+  --shadow-sm: 0 4px 14px rgba(16, 42, 67, 0.08);
+  --shadow-md: 0 10px 30px rgba(16, 42, 67, 0.12);
+  --transition: 180ms ease;
+}
+
+/* =========================
+   2. RESET / BASE
+   ========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: var(--white);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* =========================
+   3. TYPOGRAPHY
+   ========================= */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 760px;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--space-3);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.lead {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: var(--space-2);
+  color: var(--gold-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* =========================
+   4. REUSABLE LAYOUT
+   ========================= */
+.wrap {
+  width: min(calc(100% - 2rem), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+.section.alt {
+  background: var(--off-white);
+}
+
+.section.navy {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.section.navy h2,
+.section.navy h3,
+.section.navy h4 {
+  color: var(--white);
+}
+
+.section-head {
+  max-width: 800px;
+  margin-bottom: var(--space-6);
+}
+
+.section-head p {
+  color: var(--muted);
+}
+
+.section.navy .section-head p {
+  color: #d9e2ec;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* =========================
+   5. HEADER / NAVIGATION
+   ========================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(16, 42, 67, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  width: min(calc(100% - 2rem), var(--container));
+  min-height: 72px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.logo {
+  flex: 0 0 auto;
+  color: var(--navy);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-links a {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.nav-links a:hover {
+  background: var(--light);
+  color: var(--blue);
+  transform: translateY(-1px);
+}
+
+.nav-links .nav-cart {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.nav-links .nav-cart:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  color: var(--navy);
+  font-weight: 800;
+}
+
+/* =========================
+   6. HERO
+   ========================= */
+.hero {
+  padding-block: clamp(3rem, 7vw, 6rem);
+  background: linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-4);
+}
+
+.hero h1 em {
+  color: var(--blue);
+  font-style: normal;
+}
+
+.hero-img {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-img img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* =========================
+   7. BUTTONS
+   ========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1.15rem;
+  border: 2px solid var(--blue);
+  border-radius: var(--radius-sm);
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 800;
+  text-align: center;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.btn:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-sm {
+  min-height: 40px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+}
+
+.btn-outline:hover {
+  color: var(--white);
+}
+
+.btn-ghost-light {
+  border-color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  color: var(--white);
+}
+
+.btn-ghost-light:hover {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--navy);
+}
+
+/* =========================
+   8. SPLIT CARDS
+   ========================= */
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.split-card {
+  padding: var(--space-5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.split-card h3 {
+  margin-bottom: var(--space-2);
+  color: var(--white);
+}
+
+.split-card p {
+  color: #d9e2ec;
+}
+
+.hero .split-card:first-child {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* =========================
+   9. CARDS
+   ========================= */
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #b8c7d8;
+  box-shadow: var(--shadow-md);
+}
+
+.card > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--space-5);
+}
+
+.card-body h3 {
+  margin-block: 0.55rem 0.35rem;
+}
+
+.card-body .btn {
+  margin-top: auto;
+}
+
+.card-navy {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+.card-navy h3 {
+  color: var(--white);
+}
+
+.card-navy p {
+  color: #d9e2ec;
+}
+
+.price {
+  margin-bottom: var(--space-3);
+  color: var(--blue);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+/* =========================
+   10. BADGES
+   ========================= */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin: 0 0.25rem 0.25rem 0;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.badge-new {
+  background: #e7f0ff;
+  color: var(--blue-dark);
+}
+
+.badge-used {
+  background: #fff3d8;
+  color: #8a5b00;
+}
+
+.badge-verified {
+  background: #e5f6ed;
+  color: #16794c;
+}
+
+/* =========================
+   11. INFO BOX
+   ========================= */
+.info-box {
+  padding: var(--space-6);
+  border-left: 5px solid var(--gold);
+  border-radius: var(--radius-md);
+  background: var(--off-white);
+}
+
+.info-box h3 {
+  margin-bottom: var(--space-3);
+}
+
+/* =========================
+   12. FOOTER
+   ========================= */
+footer {
+  background: var(--navy-dark);
+  color: #d9e2ec;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: var(--space-6);
+  padding-block: var(--space-7);
+}
+
+footer h4 {
+  margin-bottom: var(--space-3);
+  color: var(--white);
+}
+
+footer p,
+footer li {
+  color: #b9c8d6;
+  font-size: 0.95rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li + li {
+  margin-top: 0.45rem;
+}
+
+footer a {
+  transition: color var(--transition);
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  padding-block: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+}
+
+/* =========================
+   13. RESPONSIVE TABLET
+   ========================= */
+@media (max-width: 1000px) {
+  .nav-links a {
+    padding-inline: 0.55rem;
+    font-size: 0.88rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-img {
+    max-width: 760px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   14. RESPONSIVE MOBILE NAV
+   ========================= */
+@media (max-width: 760px) {
+  .nav {
+    position: relative;
+    min-height: 64px;
+    flex-wrap: wrap;
+    padding-block: 0.65rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  /*
+     JavaScript can add the .is-open class to .nav-links.
+     The menu also works without JS by remaining hidden on small screens.
+  */
+  .nav-links {
+    display: none;
+    width: 100%;
+    margin-left: 0;
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .split,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-block: 3.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+}
+
+/* =========================
+   15. SMALL PHONES
+   ========================= */
+@media (max-width: 480px) {
+  .wrap,
+  .nav {
+    width: min(calc(100% - 1.25rem), var(--container));
+  }
+
+  .hero {
+    padding-block: 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .split-card,
+  .card-body,
+  .info-box {
+    padding: var(--space-4);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* =========================
+   16. ACCESSIBILITY / ADAPTIVE UX
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Avoid hover effects on devices that do not support hover. */
+@media (hover: none) {
+  .card:hover,
+  .btn:hover,
+  .nav-links a:hover {
+    transform: none;
+  }
+}
+
+/* =========================
+   17. PRINT
+   ========================= */
+@media print {
+  .topbar,
+  .nav-toggle,
+  .btn {
+    display: none !important;
+  }
+
+  body {
+    background: var(--white);
+    color: #000;
+  }
+
+  .section,
+  .hero,
+  footer {
+    padding-block: 1rem;
+    background: var(--white);
+    color: #000;
+  }
+
+  .card,
+  .split-card,
+  .info-box {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
