@@ -52,24 +52,62 @@
         0 10px 25px rgba(13, 27, 62, 0.15);
 }
 
+
+/* ==========================================================
+   2. RESET
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  background: var(--white);
-  color: var(--text);
-  font-family: var(--body-font);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+    min-width: 320px;
+
+    /*
+       IMPORTANT:
+       Use a normal readable system font.
+       Do NOT use Impact for body text.
+    */
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 17px;
+
+    /*
+       Gives text more breathing room.
+    */
+    line-height: 1.65;
+
+    /*
+       Prevents artificial spacing between letters.
+    */
+    letter-spacing: normal;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    /*
+       Improves font rendering on supported browsers.
+    */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* Images */
 
