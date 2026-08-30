@@ -1,77 +1,55 @@
+/* ==========================================================
+   CAMPUS-CART
+   GLOBAL RESPONSIVE CSS
+   Plain CSS3 - No Frameworks
+   ========================================================== */
+
+
+/* ==========================================================
+   1. DESIGN VARIABLES
+   ========================================================== */
+
 :root {
+    /* Brand */
+    --navy: #0d1b3e;
+    --navy-light: #17295c;
+    --navy-dark: #08142f;
 
-  /* Main Campus-Cart colours */
-  --navy: #0d1b3e;
-  --navy-light: #17295c;
-  --navy-dark: #07152f;
+    --yellow: #ffd23f;
+    --yellow-light: #ffe477;
 
-  --yellow: #ffd23f;
-  --yellow-light: #ffe477;
-  --yellow-dark: #e6b900;
+    --gold: #b8860b;
+    --gold-light: #d9a41a;
 
-  --gold: #b8860b;
-  --gold-light: #d9a41a;
-  --gold-dark: #c98d20;
+    /* Neutral */
+    --white: #ffffff;
+    --grey: #f2f3f5;
+    --grey-light: #f8f9fb;
+    --grey-mid: #d9dce1;
+    --grey-dark: #5a5f6a;
 
-  /* Additional brand blues (incoming) */
-  --blue: #1f6feb;
-  --blue-dark: #1558bd;
+    --text: #1a1a1a;
+    --text-light: #444444;
 
-  /* Neutral colours */
-  --white: #ffffff;
-  --off-white: #f7f9fc;
-  --light: #eef3f8;
-  --grey: #f2f3f5;
-  --grey-light: #f8f9fb;
-  --grey-mid: #d9dce1;
-  --grey-dark: #5a5f6a;
-  --border: #d9e2ec;
+    /* Status */
+    --success: #2e7d32;
+    --warning: #f59e0b;
+    --danger: #c62828;
 
-  --text: #1a1a1a;
-  --muted: #627d98;
+    /* Layout */
+    --max-width: 1180px;
 
-  /* Status colours */
-  --success: #2e7d32;
-  --warning: #f59e0b;
-  --danger: #c62828;
+    /* Radius */
+    --radius: 14px;
+    --radius-small: 8px;
+    --radius-pill: 999px;
 
-  /* Layout */
-  --maxw: 1180px;
-  --container: 1200px;
+    /* Shadows */
+    --shadow:
+        0 4px 16px rgba(13, 27, 62, 0.10);
 
-  /* Spacing (incoming) */
-  --space-1: 0.5rem;
-  --space-2: 0.75rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
-  --space-7: 4rem;
-  --space-8: 6rem;
-
-  /* Existing spacing used in stylesheet */
-  --section-space: 72px;
-  --card-gap: 24px;
-
-  /* Border radius */
-  --radius: 14px;
-  --radius-small: 8px;
-  --radius-pill: 999px;
-  --radius-sm: 0.5rem;
-  --radius-md: 0.85rem;
-  --radius-lg: 1.25rem;
-
-  /* Shadows */
-  --shadow: 0 6px 20px rgba(13, 27, 62, 0.12);
-  --shadow-hover: 0 12px 28px rgba(13, 27, 62, 0.16);
-  --shadow-sm: 0 4px 14px rgba(16, 42, 67, 0.08);
-  --shadow-md: 0 10px 30px rgba(16, 42, 67, 0.12);
-
-  --transition: 180ms ease;
-
-  /* Fonts */
-  --body-font: Inter, "Segoe UI", Helvetica, Arial, sans-serif;
-  --heading-font: "Archivo Black", Impact, "Arial Black", sans-serif;
+    --shadow-hover:
+        0 10px 25px rgba(13, 27, 62, 0.15);
 }
 
 }
