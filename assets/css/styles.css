@@ -839,13 +839,13 @@ strong {
    ========================================================== */
 
 .info-box {
-  padding: 22px 24px;
+    padding: 22px 24px;
 
-  background: var(--grey);
+    background: var(--grey);
 
-  border-left: 8px solid var(--gold);
+    border-left: 7px solid var(--gold);
 
-  border-radius: var(--radius);
+    border-radius: var(--radius);
 }
 
 
@@ -854,48 +854,49 @@ strong {
    ========================================================== */
 
 .tabs {
-  display: flex;
+    display: flex;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  gap: 10px;
+    gap: 10px;
 
-  margin-bottom: 26px;
+    margin-bottom: 26px;
 
-  padding-bottom: 12px;
+    padding-bottom: 12px;
 
-  border-bottom: 3px solid var(--grey-mid);
+    border-bottom: 3px solid var(--grey-mid);
 }
 
 .tab-btn {
-  padding: 11px 22px;
+    padding: 10px 20px;
 
-  color: var(--navy);
+    color: var(--navy);
 
-  background: var(--grey);
+    background: var(--grey);
 
-  border: 2px solid transparent;
+    border: 2px solid transparent;
 
-  border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill);
 
-  font-size: 1rem;
-  font-weight: 800;
+    font-size: 0.95rem;
 
-  cursor: pointer;
+    font-weight: 800;
+
+    cursor: pointer;
 }
 
 .tab-btn:hover {
-  background: var(--grey-mid);
+    background: var(--grey-mid);
 }
 
 .tab-btn[aria-selected="true"] {
-  color: var(--yellow);
+    color: var(--yellow);
 
-  background: var(--navy);
+    background: var(--navy);
 }
 
 .tab-panel[hidden] {
-  display: none;
+    display: none;
 }
 
 
@@ -904,100 +905,326 @@ strong {
    ========================================================== */
 
 .toolbar {
-  display: flex;
+    display: flex;
 
-  align-items: flex-end;
+    align-items: flex-end;
 
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 
-  gap: 14px;
+    gap: 14px;
 
-  margin-bottom: 28px;
+    margin-bottom: 28px;
 
-  padding: 18px;
+    padding: 18px;
 
-  background: var(--grey);
+    background: var(--grey);
 
-  border-radius: var(--radius);
+    border-radius: var(--radius);
+}
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.field label {
+    color: var(--navy);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
 }
 
 
-  .nav-toggle {
-    display: block;
-  }
+/* ==========================================================
+   15. FORM ELEMENTS
+   ========================================================== */
 
-  .nav {
-    flex-wrap: wrap;
-  }
-
-  /* Mobile nav: hidden by default; JS can set .open or .is-open */
-  .nav-links {
-    display: none;
+input,
+select,
+textarea {
     width: 100%;
-    margin-left: 0;
-    padding: 0.5rem;
-    flex-direction: column;
-    align-items: stretch;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
+
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    color: var(--text);
+
     background: var(--white);
-    box-shadow: var(--shadow-md);
-  }
 
-  .nav-links.open,
-  .nav-links.is-open {
-    display: flex;
-  }
+    border: 2px solid var(--grey-mid);
 
-  .nav-links.is-open {
-    display: flex;
-  }
+    border-radius: 10px;
 
-  .nav-links a {
-    width: 100%;
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
 
-  .nav-links a {
-    width: 100%;
+    font-size: 1rem;
 
-    padding: 10px 12px;
-  }
+    line-height: 1.5;
 
-  .nav-cart {
-    text-align: center;
-  }
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
 
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
 
-  /* Hero */
+    border-color: var(--navy);
 
-  .hero-grid {
-    grid-template-columns: 1fr;
+    box-shadow:
+        0 0 0 3px
+        rgba(255, 210, 63, 0.45);
+}
 
-    gap: 32px;
-  }
+textarea {
+    min-height: 150px;
 
-  .hero-img {
-    order: -1;
-  }
-
-  .hero-img img {
-    min-height: 320px;
-
-    max-height: 450px;
-  }
+    resize: vertical;
+}
 
 
-  /* Main grids */
+/* ==========================================================
+   16. GALLERY
+   ========================================================== */
 
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
+.gallery {
+    display: grid;
 
-  .grid-3,
-  .grid-4,
-  .gallery {
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
+        repeat(3, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.gallery figure {
+    overflow: hidden;
+
+    margin: 0;
+
+    color: var(--white);
+
+    background: var(--navy);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.gallery img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.gallery figcaption {
+    padding: 12px 14px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   17. FORMS
+   ========================================================== */
+
+.form-card {
+    padding: 28px;
+
+    background: var(--white);
+
+    border: 1px solid var(--grey-mid);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: var(--navy);
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+}
+
+.hint {
+    color: var(--grey-dark);
+
+    font-size: 0.88rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   18. CHECKLIST
+   ========================================================== */
+
+.checklist {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.checklist li {
+    position: relative;
+
+    padding: 9px 0 9px 34px;
+
+    border-bottom: 1px dashed var(--grey-mid);
+}
+
+.checklist li::before {
+    content: "\2713";
+
+    position: absolute;
+
+    top: 9px;
+    left: 0;
+
+    width: 24px;
+    height: 24px;
+
+    color: var(--navy);
+
+    background: var(--yellow);
+
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    line-height: 24px;
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   19. ORDER TABLE
+   ========================================================== */
+
+.order-table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 14px 10px;
+
+    border-bottom: 1px solid var(--grey-mid);
+
+    text-align: left;
+}
+
+.order-table th {
+    color: var(--yellow);
+
+    background: var(--navy);
+
+    font-size: 0.95rem;
+}
+
+.order-total {
+    color: var(--gold);
+
+    font-size: 1.5rem;
+
+    font-weight: 800;
+}
+
+.empty-state {
+    padding: 30px;
+
+    color: var(--grey-dark);
+
+    background: var(--grey);
+
+    border-radius: var(--radius);
+
+    text-align: center;
+}
+
+
+/* ==========================================================
+   20. STEPS
+   ========================================================== */
+
+.step {
+    margin-bottom: 18px;
+
+    padding: 22px;
+
+    background: var(--white);
+
+    border: 2px solid var(--grey-mid);
+
+    border-radius: var(--radius);
+}
+
+.step h3 span {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    margin-right: 10px;
+
+    color: var(--yellow);
+
+    background: var(--navy);
+
+    border-radius: 50%;
+
+    font-size: 1rem;
+}
 
 
   /* Forms */
