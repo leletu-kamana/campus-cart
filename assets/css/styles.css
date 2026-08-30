@@ -112,229 +112,365 @@ body {
 /* Images */
 
 img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
 }
+
 
 /* Links */
 
 a {
-  color: var(--gold);
-  text-decoration: none;
+    color: var(--gold);
 }
 
-/* Forms */
+
+/* Buttons / form controls */
 
 button,
 input,
 select,
 textarea {
-  font: inherit;
+    font: inherit;
 }
 
-/* Text selection */
+
+/* Selection */
 
 ::selection {
-  background: var(--yellow);
-  color: var(--navy);
+    color: var(--navy);
+    background: var(--yellow);
 }
 
-:focus-visible {
-  outline: 3px solid var(--gold);
-  outline-offset: 3px;
-}
 
 /* ==========================================================
    3. TYPOGRAPHY
    ========================================================== */
 
+/*
+   IMPORTANT FIX:
+   Removed Impact / Archivo Black as the main fallback.
+
+   Impact is extremely condensed and can make letters look
+   cramped or unclear.
+
+   We use a strong system font instead.
+*/
+
 h1,
 h2,
 h3,
-h4,
-.logo,
-.btn {
-  font-family: var(--heading-font);
-  letter-spacing: 0.4px;
-  line-height: 1.15;
+h4 {
+    margin-top: 0;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-weight: 800;
+
+    /*
+       Prevents headings from looking squeezed together.
+    */
+    letter-spacing: -0.3px;
+
+    line-height: 1.2;
 }
+
+
+/* Main heading */
 
 h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+    margin-bottom: 18px;
+
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
 }
+
+
+/* Section heading */
 
 h2 {
-  margin: 0 0 1rem;
-  color: var(--navy);
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 16px;
+
+    color: var(--navy);
+
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
+
+
+/* Card heading */
 
 h3 {
-  margin: 0 0 .6rem;
-  color: var(--navy);
-  font-size: 1.35rem;
+    margin-bottom: 10px;
+
+    color: var(--navy);
+
+    font-size: 1.3rem;
 }
+
+
+/* Small heading */
 
 h4 {
-  margin: 0 0 .6rem;
-  color: var(--navy);
-  font-size: 1.05rem;
+    margin-bottom: 8px;
+
+    font-size: 1.05rem;
 }
+
+
+/* Paragraphs */
 
 p {
-  margin: 0 0 1rem;
+    margin-top: 0;
+
+    margin-bottom: 16px;
+
+    /*
+       Better readability.
+    */
+    line-height: 1.7;
+
+    letter-spacing: 0;
 }
 
-.lead {
-  max-width: 760px;
-  color: var(--muted);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+
+/* Strong text */
+
+strong {
+    font-weight: 700;
 }
+
+
+/* ==========================================================
+   4. MAIN CONTAINER
+   ========================================================== */
+
+.wrap {
+    width: calc(100% - 40px);
+
+    max-width: var(--max-width);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Sections */
+
+.section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.section.alt {
+    background: var(--grey);
+}
+
+.section.navy {
+    color: var(--white);
+
+    background: var(--navy);
+}
+
+.section.navy h2,
+.section.navy h3 {
+    color: var(--yellow);
+}
+
+.section.navy p {
+    color: #e7e9f0;
+}
+
+
+/* Section introduction */
+
+.section-head {
+    max-width: 720px;
+
+    margin-bottom: 38px;
+}
+
+
+/* Small label */
 
 .eyebrow {
-  display: inline-block;
-  margin-bottom: .5rem;
-  color: var(--gold);
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--gold);
+
+    font-size: 0.8rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
 }
+
+
+/* ==========================================================
+   5. NAVIGATION
+   ========================================================== */
 
 .topbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    position: sticky;
 
-  color: var(--white);
-  background: var(--navy);
+    top: 0;
 
-  box-shadow: var(--shadow);
+    z-index: 1000;
+
+    color: var(--white);
+
+    background: var(--navy);
+
+    box-shadow: var(--shadow);
 }
 
+
 .nav {
-  width: min(
-    calc(100% - 40px),
-    var(--maxw)
-  );
+    width: calc(100% - 40px);
 
-  min-height: 72px;
+    max-width: var(--max-width);
 
-  margin: 0 auto;
-  padding: 14px 0;
+    min-height: 72px;
 
-  display: flex;
+    margin: 0 auto;
 
-  align-items: center;
-  justify-content: space-between;
+    padding: 14px 0;
 
-  gap: 12px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
 }
 
 
 /* Logo */
 
 .logo {
-  color: var(--yellow);
+    flex-shrink: 0;
 
-  font-size: 1.4rem;
+    color: var(--yellow);
 
-  text-decoration: none;
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 900;
+
+    letter-spacing: -0.5px;
+
+    text-decoration: none;
 }
 
 .logo span {
-  color: var(--white);
+    color: var(--white);
 }
 
 
 /* Navigation links */
 
 .nav-links {
-  display: flex;
+    display: flex;
 
-  align-items: center;
+    align-items: center;
 
-  gap: 22px;
+    justify-content: flex-end;
 
-  flex-wrap: wrap;
+    gap: 20px;
+
+    flex-wrap: wrap;
 }
 
 .nav-links a {
-  padding: 6px 2px;
+    padding: 7px 3px;
 
-  color: var(--white);
+    color: var(--white);
 
-  font-size: 1rem;
-  font-weight: 600;
+    font-size: 0.95rem;
 
-  text-decoration: none;
+    font-weight: 700;
 
-  border-bottom: 3px solid transparent;
+    text-decoration: none;
 
-  transition:
-    color .2s ease,
-    border-color .2s ease;
+    border-bottom: 3px solid transparent;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: var(--yellow);
+    color: var(--yellow);
 }
 
 .nav-links a.active {
-  color: var(--yellow);
+    color: var(--yellow);
 
-  border-bottom-color: var(--yellow);
+    border-bottom-color: var(--yellow);
 }
 
 
 /* Cart */
 
 .nav-cart {
-  padding: 7px 16px !important;
+    padding: 8px 17px !important;
 
-  color: var(--navy) !important;
-  background: var(--yellow);
+    color: var(--navy) !important;
 
-  border-radius: var(--radius-pill);
+    background: var(--yellow);
 
-  font-weight: 800 !important;
+    border-radius: var(--radius-pill);
 
-  border-bottom: none !important;
+    font-weight: 800 !important;
+
+    border-bottom: none !important;
 }
 
 .nav-cart:hover {
-  background: var(--gold-light);
+    color: var(--navy) !important;
 
-  color: var(--navy) !important;
+    background: var(--yellow-light);
 }
 
 
-/* Mobile menu button */
+/* Mobile navigation button */
 
 .nav-toggle {
-  display: none;
+    display: none;
 
-  padding: 7px 14px;
+    padding: 7px 13px;
 
-  color: var(--yellow);
-  background: transparent;
+    color: var(--yellow);
 
-  border: 2px solid var(--yellow);
-  border-radius: var(--radius-small);
+    background: transparent;
 
-  font-size: 1rem;
-  font-weight: 700;
+    border: 2px solid var(--yellow);
 
-  cursor: pointer;
+    border-radius: var(--radius-small);
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .nav-toggle:hover {
-  color: var(--navy);
+    color: var(--navy);
 
-  background: var(--yellow);
+    background: var(--yellow);
 }
 
 
