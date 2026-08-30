@@ -479,83 +479,100 @@ strong {
    ========================================================== */
 
 .hero {
-  position: relative;
+    padding: 80px 0;
 
-  overflow: hidden;
+    color: var(--white);
 
-  padding: clamp(60px, 8vw, 90px) 0;
-
-  color: var(--white);
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--navy) 0%,
-      var(--navy-light) 100%
-    );
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
 }
-
-
-/* Decorative background */
-
-.hero::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle at 90% 10%,
-      rgba(255, 210, 63, .15),
-      transparent 35%
-    );
-}
-
-.hero > .wrap {
-  position: relative;
-
-  z-index: 1;
-}
-
-
-/* Hero heading */
 
 .hero h1 {
-  color: var(--white);
+    color: var(--white);
 }
 
 .hero h1 em {
-  color: var(--yellow);
+    color: var(--yellow);
+
+    font-style: normal;
 }
-
-
-/* Hero layout */
 
 .hero-grid {
-  display: grid;
+    display: grid;
 
-  grid-template-columns:
-    1.05fr
-    .95fr;
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
 
-  gap: 46px;
+    gap: 46px;
 
-  align-items: center;
+    align-items: center;
+}
+
+.hero p.lead {
+    color: #e7e9f0;
+
+    font-size: 1.1rem;
+
+    line-height: 1.75;
+}
+
+.hero-img {
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.hero-img img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius);
 }
 
 
-/* Hero paragraph */
+/* ==========================================================
+   7. SPLIT CARDS
+   ========================================================== */
 
-.hero p.lead {
-  color: #e7e9f0;
+.split {
+    display: grid;
 
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-  line-height: 1.75;
+    gap: 20px;
+
+    margin-top: 28px;
+}
+
+.split-card {
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 2px solid var(--yellow);
+
+    border-radius: var(--radius);
+}
+
+.split-card h3 {
+    color: var(--yellow);
+}
+
+.split-card p {
+    color: #e7e9f0;
+
+    font-size: 1rem;
 }
 
 
