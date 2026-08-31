@@ -1227,26 +1227,250 @@ textarea {
 }
 
 
-  /* Forms */
+/* ==========================================================
+   21. TOAST
+   ========================================================== */
 
-  .form-row {
-    grid-template-columns: 1fr;
-  }
+.toast {
+    position: fixed;
+
+    left: 50%;
+    bottom: 26px;
+
+    z-index: 2000;
+
+    max-width: calc(100% - 30px);
+
+    padding: 13px 22px;
+
+    color: var(--yellow);
+
+    background: var(--navy);
+
+    border-radius: var(--radius-pill);
+
+    box-shadow: var(--shadow);
+
+    font-weight: 700;
+
+    text-align: center;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform: translateX(-50%);
+
+    transition: opacity 0.25s ease;
+}
+
+.toast.show {
+    opacity: 1;
+}
 
 
-  /* Split cards */
+/* ==========================================================
+   22. MAP / LOCATIONS
+   ========================================================== */
 
-  .split {
-    grid-template-columns: 1fr;
-  }
+/*
+   IMPORTANT FIX FOR YOUR SCREENSHOT
+
+   The map container was larger than the actual map.
+
+   These rules force ALL map content to use the complete
+   available width.
+*/
+
+.map-frame, .product-map-frame {
+    position: relative;
+
+    width: 100%;
+
+    /*
+       Responsive map height.
+       The map gets smaller on smaller screens.
+    */
+    min-height: 420px;
+
+    overflow: hidden;
+
+    background: var(--grey);
+
+    border: 4px solid var(--navy);
+
+    border-radius: var(--radius);
+}
 
 
-  /* Footer */
+/*
+   Google Maps iframe
+*/
 
-  .footer-grid {
+.map-frame iframe {
+    display: block;
+
+    width: 100% !important;
+
+    min-width: 100% !important;
+
+    height: 420px !important;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+}
+
+
+/*
+   Some map embeds use a div instead of directly using
+   the iframe.
+*/
+
+.map-frame > div {
+    width: 100% !important;
+
+    max-width: none !important;
+}
+
+.map-frame > div iframe {
+    width: 100% !important;
+
+    max-width: none !important;
+}
+
+
+/* Map note */
+
+.map-note {
+    margin-top: 10px;
+
+    color: var(--grey-dark);
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   23. ANCHOR SUB-NAVIGATION
+   ========================================================== */
+
+.subnav {
+    background: var(--yellow);
+}
+
+.subnav ul {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 12px 20px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    list-style: none;
+}
+
+.subnav a {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    color: var(--navy);
+
+    background: rgba(255, 255, 255, 0.55);
+
+    border-radius: var(--radius-pill);
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+.subnav a:hover {
+    color: var(--yellow);
+
+    background: var(--navy);
+}
+
+
+/* ==========================================================
+   24. FOOTER
+   ========================================================== */
+
+footer {
+    padding: 52px 0 26px;
+
+    color: #cfd4e0;
+
+    background: var(--navy);
+
+    font-size: 0.95rem;
+}
+
+footer h4 {
+    color: var(--yellow);
+}
+
+footer p {
+    color: #cfd4e0;
+}
+
+footer a {
+    color: #cfd4e0;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--yellow);
+}
+
+footer ul {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+footer li {
+    padding: 4px 0;
+}
+
+.footer-grid {
+    display: grid;
+
     grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
+        1.4fr
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    font-size: 0.88rem;
+}
+
+
 }
 
 
