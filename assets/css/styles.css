@@ -1714,117 +1714,121 @@ footer li {
 }
 
 
-/* ----------------------------------------------------------
-   VERY SMALL PHONES
-   ---------------------------------------------------------- */
+/* ==========================================================
+   28. VERY SMALL PHONES
+   ========================================================== */
 
 @media (max-width: 380px) {
 
-  .logo {
-    font-size: 1.2rem;
-  }
+    .wrap {
+        width: calc(100% - 24px);
+    }
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+    h1 {
+        font-size: 2rem;
+    }
 
-  .hero-img img {
-    min-height: 200px;
-  }
+    h2 {
+        font-size: 1.7rem;
+    }
 
-  .card img {
-    height: 190px;
-  }
+    .hero-img img {
+        height: 220px;
+    }
 
-  .card-body {
-    padding: 15px;
-  }
+    .card img {
+        height: 190px;
+    }
 
-  .split-card {
-    padding: 16px;
-  }
+    .card-body {
+        padding: 16px;
+    }
 
-  .btn {
-    padding: 12px 18px;
-  }
+    .split-card {
+        padding: 17px;
+    }
 }
 
 
 /* ==========================================================
-   25. ACCESSIBILITY
+   29. ACCESSIBILITY
    ========================================================== */
 
 :focus-visible {
-  outline: 3px solid var(--yellow);
+    outline: 3px solid var(--yellow);
 
-  outline-offset: 3px;
+    outline-offset: 3px;
 }
 
 
-/* Respect reduced-motion preferences */
+/* ==========================================================
+   30. REDUCED MOTION
+   ========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
-  html {
-    scroll-behavior: auto;
-  }
+    html {
+        scroll-behavior: auto;
+    }
 
-  *,
-  *::before,
-  *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
 }
 
-/* Avoid hover effects on devices that do not support hover. */
+
+/* ==========================================================
+   31. TOUCH DEVICES
+   ========================================================== */
+
 @media (hover: none) {
-  .card:hover,
-  .btn:hover,
-  .nav-links a:hover,
-  .gallery figure:hover,
-  .hero-img:hover img,
-  .split-card:hover {
-    transform: none;
-  }
+
+    .card:hover {
+        transform: none;
+
+        box-shadow: var(--shadow);
+    }
+
+    .btn:hover {
+        transform: none;
+    }
 }
 
-    transform: none;
-  }
+
+/* ==========================================================
+   32. PRINT
+   ========================================================== */
+
+@media print {
+
+    .topbar,
+    .subnav,
+    footer,
+    .btn,
+    .toolbar,
+    .nav-toggle {
+        display: none !important;
+    }
+
+    body {
+        color: #000;
+
+        font-size: 13pt;
+    }
+
+    .section {
+        padding: 0;
+    }
+
+    .card {
+        box-shadow: none;
+
+        break-inside: avoid;
+    }
 }
-
-  .topbar,
-  .subnav,
-  footer,
-  .btn,
-  .toolbar,
-  .nav-toggle {
-    display: none !important;
-  }
-
-    display: none !important;
-  }
-
-  body {
-  body {
-    background: var(--white);
-    color: #000;
-    font-size: 13pt;
-  }
-
-  .section,
-  .hero,
-  footer {
-    padding-block: 1rem;
-    background: var(--white);
-    color: #000;
-  }
-
-  .card,
-  .split-card,
-  .info-box {
-    box-shadow: none;
-    break-inside: avoid;
-  }
-
