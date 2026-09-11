@@ -93,6 +93,32 @@ The intended client-side functionality includes:
 
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
+## Part 2 – CSS Development
+
+Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, cards, colours and responsive rules.
+
+### Design Variable 1 – Colour Scheme
+
+The first design variable used in the CSS is the **colour scheme**. The main colours are stored as CSS custom properties inside the `:root` selector. This makes it easier to reuse the same colours throughout the website instead of writing the colour codes repeatedly.
+
+The main colour choices are:
+
+| Colour variable | Value | Main use |
+|---|---|---|
+| `--navy` | `#0d1b3e` | Main navigation, dark sections and headings. |
+| `--navy-light` | `#17295c` | Lighter navy areas and gradients. |
+| `--navy-dark` | `#08142f` | Darker brand areas where required. |
+| `--yellow` | `#ffd23f` | Buttons, highlights and important navigation elements. |
+| `--yellow-light` | `#ffe477` | Lighter yellow hover states. |
+| `--gold` | `#b8860b` | Links, prices and smaller brand highlights. |
+| `--gold-light` | `#d9a41a` | Hover states and gold highlights. |
+| `--white` | `#ffffff` | Main backgrounds and light text. |
+| `--grey` | `#f2f3f5` | Alternate section backgrounds. |
+
+The navy, yellow and gold colours are used consistently to give Campus-Cart a recognisable visual identity. The lighter grey and white colours help separate content areas and keep the pages readable.
+
+Using CSS variables also means that a colour can be changed in one place and then update everywhere that variable is used. For example, changing `--navy` would update elements that use `var(--navy)` throughout the stylesheet.
+
 ## Design and Usability
 The website uses consistent navigation, clear headings, buttons and structured content sections. Responsive web design is important because users may access websites from different screen sizes (Marcotte, 2011).
 
