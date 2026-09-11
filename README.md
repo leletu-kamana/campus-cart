@@ -93,12 +93,15 @@ The intended client-side functionality includes:
 
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
-## Part 2 – CSS Development
+## Part 1 – Planning and Initial Development
+Part 1 covers the planning and initial development of the website project, including selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the initial file/folder structure and pushing the project to GitHub.
 
+Further development can be documented through the repository commits and `Changelog.md`.
+
+## Part 2 – CSS Development
 Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, cards, colours and responsive rules.
 
 ### Design Variable 1 – Colour Scheme
-
 The first design variable used in the CSS is the **colour scheme**. The main colours are stored as CSS custom properties inside the `:root` selector. This makes it easier to reuse the same colours throughout the website instead of writing the colour codes repeatedly.
 
 The main colour choices are:
@@ -196,11 +199,6 @@ Home (index.html)
 | 8 | Testing and Quality Assurance | Checked functionality, usability, compatibility and responsive behaviour. |
 | 9 | Final Improvements | Made layout, content and performance improvements. |
 | 10 | Deployment and Presentation | Final checks, deployment preparation and project presentation. |
-
-## Part 1 Details
-Part 1 covers the planning and initial development of the website project, including selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the initial file/folder structure and pushing the project to GitHub.
-
-Further development can be documented through the repository commits and `Changelog.md`.
 
 ## Testing and Quality Checks
 Before final submission, the project should be checked for:
