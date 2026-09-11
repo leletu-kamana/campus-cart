@@ -441,159 +441,227 @@ strong {
 /* ==========================================================
    5. NAVIGATION
    ========================================================== */
-
+/* .topbar is the outer wrapper for the whole site header, including its sticky behaviour. */
 .topbar {
+    /* Keeps the header fixed to the top of the viewport as the user scrolls down. */
     position: sticky;
 
+    /* Sticks the header exactly at the top edge (0px) of the viewport. */
     top: 0;
 
+    /* Places the header above other page content so it never gets covered while scrolling. */
     z-index: 1000;
 
+    /* Sets header text to white so it's readable against the dark background. */
     color: var(--white);
 
+    /* Applies the navy brand colour as the header background. */
     background: var(--navy);
 
+    /* Adds a soft shadow beneath the header to visually separate it from the page content. */
     box-shadow: var(--shadow);
 }
 
 
+/* .nav is the inner flex row that actually lays out the logo, links, and cart button. */
 .nav {
+    /* Matches the same responsive width rule as .wrap so nav content aligns with page content. */
     width: calc(100% - 40px);
 
+    /* Caps the nav row at the site's maximum content width. */
     max-width: var(--max-width);
 
+    /* Guarantees a minimum header height even if content is short. */
     min-height: 72px;
 
+    /* Centres the nav row horizontally within the full-width .topbar. */
     margin: 0 auto;
 
+    /* Adds vertical breathing room above and below the nav content. */
     padding: 14px 0;
 
+    /* Switches the nav into a horizontal flexbox layout. */
     display: flex;
 
+    /* Vertically centres the logo, links, and button within the nav row. */
     align-items: center;
 
+    /* Pushes the logo to the left and the links/cart to the right, with space between. */
     justify-content: space-between;
 
+    /* Adds consistent spacing between the nav's direct children if they wrap. */
     gap: 20px;
 }
 
 
 /* Logo */
-
 .logo {
+    /* Stops the logo from shrinking if the nav row runs out of space. */
     flex-shrink: 0;
 
+    /* Colours the main part of the logo text yellow, the brand accent. */
     color: var(--yellow);
 
+    /* Uses the same font stack as the rest of the site for consistency. */
     font-family:
         "Segoe UI",
         Arial,
         sans-serif;
 
+    /* Sets a moderately large size so the logo is prominent but not overpowering. */
     font-size: 1.35rem;
 
+    /* Makes the logo very bold (900 weight) so it reads clearly as a brand mark. */
     font-weight: 900;
 
+    /* Tightens the letters slightly for a more compact, wordmark-like look. */
     letter-spacing: -0.5px;
 
+    /* Removes the underline that links have by default. */
     text-decoration: none;
 }
 
+/* .logo span targets a secondary word/part inside the logo (e.g. "Cart" in "Campus Cart"). */
 .logo span {
+    /* Colours the secondary part of the logo white, contrasting with the yellow main part. */
     color: var(--white);
 }
 
 
 /* Navigation links */
-
+/* .nav-links is the flex container holding all of the individual nav <a> links. */
 .nav-links {
     display: flex;
 
+    /* Vertically aligns all links to the same baseline within the row. */
     align-items: center;
 
+    /* Groups the links toward the right edge of the nav row. */
     justify-content: flex-end;
 
+    /* Adds even spacing between each link. */
     gap: 20px;
 
+    /* Allows links to drop to a new line instead of overflowing on narrow screens. */
     flex-wrap: wrap;
 }
 
+/* Base styling shared by every individual nav link. */
 .nav-links a {
+    /* Adds a small clickable padding area around each link's text. */
     padding: 7px 3px;
 
+    /* Sets link text to white to match the header's dark background. */
     color: var(--white);
 
+    /* Keeps nav link text at a comfortable, slightly smaller-than-body size. */
     font-size: 0.95rem;
 
+    /* Makes nav links bold so they're easy to scan. */
     font-weight: 700;
 
+    /* Removes the default underline styling on links. */
     text-decoration: none;
 
+    /* Reserves space for a bottom border (used on hover/active) so layout doesn't shift when it appears. */
     border-bottom: 3px solid transparent;
 
+    /*
+       Animates colour and border changes smoothly rather
+       than switching instantly, giving a polished hover feel.
+    */
     transition:
         color 0.2s ease,
         border-color 0.2s ease;
 }
 
+/* Changes the link colour to yellow when the mouse hovers over it. */
 .nav-links a:hover {
     color: var(--yellow);
 }
 
+/* .active marks whichever nav link corresponds to the current page. */
 .nav-links a.active {
+    /* Highlights the current page's link in yellow. */
     color: var(--yellow);
 
+    /* Draws a solid yellow underline beneath the active link so it's clearly marked. */
     border-bottom-color: var(--yellow);
 }
 
 
 /* Cart */
-
+/* .nav-cart styles the "Cart" link as a standout pill-shaped button rather than a plain text link. */
 .nav-cart {
+    /*
+       !important overrides the more general .nav-links a
+       padding rule above, since this element needs different
+       spacing to look like a button instead of a plain link.
+    */
     padding: 8px 17px !important;
 
+    /* Forces the cart button's text to navy, overriding the white link colour rule. */
     color: var(--navy) !important;
 
+    /* Gives the cart button a solid yellow background so it pops visually. */
     background: var(--yellow);
 
+    /* Rounds the corners fully so the button reads as a pill shape. */
     border-radius: var(--radius-pill);
 
+    /* Forces extra-bold text weight for the cart button, overriding the standard link weight. */
     font-weight: 800 !important;
 
+    /* Removes the underline/border-bottom styling that other nav links use. */
     border-bottom: none !important;
 }
 
+/* Slightly lightens the cart button's colours on hover for interactive feedback. */
 .nav-cart:hover {
+    /* Keeps the text navy on hover as well. */
     color: var(--navy) !important;
 
+    /* Switches to the lighter yellow variable for a subtle hover effect. */
     background: var(--yellow-light);
 }
 
 
 /* Mobile navigation button */
-
+/* .nav-toggle is the hamburger-style button used to open/close the nav menu on small screens. */
 .nav-toggle {
+    /* Hidden by default; only shown on narrow screens via a media query further down. */
     display: none;
 
+    /* Sets a comfortable clickable padding area. */
     padding: 7px 13px;
 
+    /* Colours the icon/text yellow to match the brand accent. */
     color: var(--yellow);
 
+    /* No background by default, so it blends with the navy header. */
     background: transparent;
 
+    /* Draws a yellow outline so the button is still visible against the dark header. */
     border: 2px solid var(--yellow);
 
+    /* Rounds the corners slightly for a soft button shape. */
     border-radius: var(--radius-small);
 
+    /* Shows a pointer cursor to indicate the element is clickable. */
     cursor: pointer;
 
+    /* Sets a readable text size for the toggle label/icon. */
     font-size: 1rem;
+    /* Makes the toggle text bold to match other nav elements. */
     font-weight: 700;
 }
 
+/* Inverts the toggle button's colours on hover for clear interactive feedback. */
 .nav-toggle:hover {
+    /* Switches text colour to navy on hover. */
     color: var(--navy);
 
+    /* Fills the background with yellow on hover. */
     background: var(--yellow);
 }
 
