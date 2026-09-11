@@ -349,67 +349,91 @@ strong {
 /* ==========================================================
    4. MAIN CONTAINER
    ========================================================== */
-
+/*
+   .wrap is the reusable "content container" class. It keeps
+   page content centred and limited to a maximum width, while
+   leaving a small margin on very small screens.
+*/
 .wrap {
+    /* Fills the available width minus 40px total, so there's 20px breathing room on each side. */
     width: calc(100% - 40px);
 
+    /* Never grows wider than the site's maximum content width. */
     max-width: var(--max-width);
 
+    /* Centres the container horizontally. */
     margin-left: auto;
     margin-right: auto;
 }
 
 
 /* Sections */
-
+/* .section is the standard vertical spacing wrapper used between blocks of content on a page. */
 .section {
+    /* Adds space above the section's content. */
     padding-top: 72px;
+    /* Adds matching space below the section's content. */
     padding-bottom: 72px;
 }
 
+/* .section.alt gives a section a light grey background to visually separate it from white sections. */
 .section.alt {
     background: var(--grey);
 }
 
+/* .section.navy gives a section the dark navy "feature" background with light text. */
 .section.navy {
+    /* Default text colour becomes white on this dark background. */
     color: var(--white);
 
+    /* Applies the navy background colour. */
     background: var(--navy);
 }
 
+/* Inside a navy section, headings switch to yellow so they remain readable and on-brand. */
 .section.navy h2,
 .section.navy h3 {
     color: var(--yellow);
 }
 
+/* Inside a navy section, paragraph text switches to a soft off-white for readability. */
 .section.navy p {
     color: #e7e9f0;
 }
 
 
 /* Section introduction */
-
+/* .section-head wraps the intro text at the top of a section (eyebrow + heading + lead paragraph). */
 .section-head {
+    /* Keeps the intro text block narrow so lines don't stretch too wide to read comfortably. */
     max-width: 720px;
 
+    /* Adds space between the intro and whatever content follows it (e.g. a grid of cards). */
     margin-bottom: 38px;
 }
 
 
 /* Small label */
-
+/* .eyebrow is the small uppercase label shown above a section heading, e.g. "FEATURED". */
 .eyebrow {
+    /* Lets the label sit on its own line while only taking up as much width as its text needs. */
     display: inline-block;
 
+    /* Adds a small gap between the label and the heading below it. */
     margin-bottom: 8px;
 
+    /* Colours the label gold to make it a subtle accent. */
     color: var(--gold);
 
+    /* Keeps the label text small since it's a secondary detail, not a heading. */
     font-size: 0.8rem;
+    /* Makes the label extra bold so it still stands out despite being small. */
     font-weight: 800;
 
+    /* Spreads the letters out, a common styling trick for small uppercase labels. */
     letter-spacing: 2px;
 
+    /* Forces the text to render in uppercase regardless of how it's typed in the HTML. */
     text-transform: uppercase;
 }
 
