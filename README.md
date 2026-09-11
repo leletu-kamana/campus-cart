@@ -58,9 +58,10 @@ Parents and guardians who help students prepare for registration and the start o
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
 ## Part 1 – Planning and Initial Development
-Part 1 covers the **planning and initial HTML development** of the Campus-Cart website. The main focus in this stage is the HTML5 structure and content of the website. This includes selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the initial file/folder structure and developing the individual HTML pages.
+Part 1 covers the planning and initial development of the website project, with the development work focused on **HTML5 only**. This includes selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the HTML page structure and pushing the project to GitHub.
 
-At this stage, the pages are focused on **HTML structure and content**. Styling is documented separately under Part 2, while JavaScript-based interactive functionality is planned for Part 3.
+### HTML Development
+The main focus of Part 1 is creating the website structure using HTML5. The pages use semantic HTML elements to organise headings, navigation, sections, images, links, forms and other content. CSS styling and JavaScript interaction are not the focus of Part 1.
 
 ### Website Pages and Features
 
@@ -69,32 +70,19 @@ At this stage, the pages are focused on **HTML structure and content**. Styling 
 | Home | `index.html` | Introduces Campus-Cart, its mission, featured products and the two main user paths. |
 | About | `pages/about.html` | Explains the organisation, mission, vision and target audience. |
 | Products | `pages/products.html` | Contains Shop, Deals & Gallery, Parent Hub, Product Detail and Sell With Us sections. |
-| Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form using HTML form elements. |
+| Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
 | Contact | `pages/contact.html` | Provides general contact and collection/office information. |
-| Account | `pages/account.html` | Provides the HTML structure for Student/Parent paths and the Order Summary section. |
-
-### HTML Development
-The main HTML work in Part 1 includes:
-- Creating the main HTML pages and page structure.
-- Using semantic HTML5 elements such as `header`, `nav`, `main`, `section`, `article` and `footer`.
-- Creating navigation links between the pages.
-- Adding headings, paragraphs, lists, images and product information.
-- Creating HTML forms for the Enquiry, Contact and Account pages.
-- Using `alt` attributes for images.
-- Creating the Products page sections and in-page anchor links.
-- Creating the initial Account page structure without relying on JavaScript functionality.
+| Account | `pages/account.html` | Provides Student/Parent paths and the HTML structure for an Order Summary. |
 
 ### Products Page Sections
 - `#shop` — Shop New and Second-Hand Marketplace tabs/sections.
-- `#deals-gallery` — Deals and Gallery with category, condition and sorting controls planned for later interaction.
+- `#deals-gallery` — Deals and Gallery with product information.
 - `#parent-hub` — First Year Checklist and starter bundles.
 - `#product-detail` — Product detail information/template.
 - `#sell-with-us` — Sell With Us information and FAQ.
 
 ### Account Page
-The Account page is an additional page developed as part of the **HTML-focused Part 1 work**. The page provides the HTML structure and content for Student and Parent/Guardian paths and an Order Summary section. It includes the required headings, labels, form elements, product/order information and delivery or collection information.
-
-The Account page does **not** provide real user accounts, passwords, online payments or completed JavaScript functionality at this stage. The interactive Order Summary behaviour, including quantities, subtotals, totals and other client-side actions, is reserved for **Part 3 – Interactive Functionality**.
+The Account page is part of the **HTML-only development in Part 1**. It provides the HTML structure for Student and Parent/Guardian paths and an Order Summary section. The page does not provide real user accounts, passwords, payment processing or completed JavaScript functionality at this stage.
 
 Further development can be documented through the repository commits and `Changelog.md`.
 
