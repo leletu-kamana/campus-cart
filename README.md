@@ -129,6 +129,19 @@ Paragraphs use a line height of `1.7` and have spacing below them so that longer
 
 The typography update keeps the existing Campus-Cart design while making the CSS easier to read and maintain.
 
+### 4. Main Container
+The main container is used to keep the content on the Campus-Cart pages centred and within a readable width. The `.wrap` class gives the content a width of `calc(100% - 40px)` and uses the `--max-width` variable so the content does not become too wide on larger screens.
+
+The left and right margins are set to `auto`, which centres the container horizontally. This also leaves space around the content on smaller screens instead of making the text and other elements touch the edges of the screen.
+
+The `.section` class is used for the main content sections on the pages. It adds `72px` of space above and below each section to give the page a more open layout. The `.section.alt` class can be used for a light grey background to separate different content areas.
+
+The `.section.navy` class creates a dark navy feature section with light text. Its headings use the yellow colour, while paragraph text uses a softer off-white colour for better readability against the dark background.
+
+The `.section-head` class controls the introduction area at the top of a section. It limits the text width to `720px` and adds space below the introduction before the next content starts.
+
+The `.eyebrow` class is used for small uppercase labels above section headings. It uses the gold colour, smaller text, bold weight and letter spacing to make these labels stand out without taking attention away from the main heading.
+
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
 
