@@ -45,20 +45,7 @@ Students aged approximately 19–30 who may live in residence, digs or at home a
 ### Secondary Audience: Parents and Guardians
 Parents and guardians who help students prepare for registration and the start of the academic year and want clearer information about products, prices and collection options.
 
-## Interactive Functionality
-The intended client-side functionality includes:
-- Shop New / Second-Hand tab switching.
-- Product category and condition filtering.
-- Product sorting.
-- Adding products to the Order Summary.
-- Updating quantities and subtotals.
-- Calculating the order total.
-- Clearing the Order Summary.
-- Moving to the delivery/address step.
-- Navigation menu interaction on smaller screens.
-- Printing the Parent Hub checklist.
 
-> **Current repository note:** The HTML pages reference `assets/js/script.js`, but the current `main` branch directory listing does not contain that JavaScript file. These features should therefore be checked before final submission if the script is required.
 
 ## Technologies Used
 
@@ -128,6 +115,21 @@ The website uses consistent navigation, clear headings, buttons and structured c
 The project also follows basic usability ideas such as keeping navigation understandable and reducing unnecessary steps for users (Krug, 2014).
 
 The use of clear product information, visible prices and structured sections is intended to help users make decisions more easily. Responsive e-commerce design also requires usability principles to be adapted to different devices (Majid, Kamaruddin and Mansor, 2015).
+
+## Interactive Functionality
+The intended client-side functionality includes:
+- Shop New / Second-Hand tab switching.
+- Product category and condition filtering.
+- Product sorting.
+- Adding products to the Order Summary.
+- Updating quantities and subtotals.
+- Calculating the order total.
+- Clearing the Order Summary.
+- Moving to the delivery/address step.
+- Navigation menu interaction on smaller screens.
+- Printing the Parent Hub checklist.
+
+> **Current repository note:** The HTML pages reference `assets/js/script.js`, but the current `main` branch directory listing does not contain that JavaScript file. These features should therefore be checked before final submission if the script is required.
 
 ## File and Folder Structure
 
