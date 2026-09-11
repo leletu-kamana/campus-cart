@@ -158,38 +158,37 @@ campus-cart/
     └── products.html
 ```
 
-> **Note:** This nested `assets/`/`pages/` layout differs from the flat root structure (`css/`, `js/`, `images/` at root level, alongside `index.html`, `about.html`, `products.html`, `enquiry.html`, `contact.html`) described in Section 4.2 of the assignment brief. The nested structure above reflects the actual repository layout as of this update.
-
-## Timeline and Milestones
-| Week | Phase | Activity |
-|------|-------|----------|
-| 1 | Planning, research and analysis | Defined project scope, objectives, competitor research, identified website requirements, created user personas |
-| 2 | Front-End Development | Homepage, navigation, product catalogue with HTML5 only |
-| 3–4 | Upgrade Front-End Development | Responsive layouts with HTML5 + CSS3 only |
-| 5–6 | Upgrade Front-End Development | HTML5 + CSS3 + JS |
-| 7 | Additional features | Search and product condition system |
-| 8 | Testing and Quality Assurance | Functional, usability, compatibility, responsiveness testing; bug fixes |
-| 9 | Final improvements | Performance optimisation and user guide |
-| 10 | Deployment and presentation | Deploy, final checks, submit |
-
-## Part 1 Details
-Part 1 covers: choosing the target organisation, submitting and gaining approval for the Website Project Proposal, content research and sourcing, defining the site structure (sitemap, file/folder structure), and pushing the initial HTML file structure to this repository.
-
-*(Part 2 and Part 3 will follow in future submissions/edits.)*
+### Structure Note
+The repository currently uses a nested `assets/` and `pages/` structure. This differs from the original flat structure described in Section 4.2 of the assignment brief. This README documents the **actual repository structure**.
 
 ## Sitemap
-```
+
+```text
 Home (index.html)
+│
 ├── About (pages/about.html)
-├── Products (pages/marketplace.html)
-│     ├── #shop            – Shop New / Second-Hand Marketplace
-│     ├── #deals-gallery   – Bundles & Deals / Gallery
-│     ├── #parent-hub      – Checklist / Starter Bundles
-│     ├── #product-detail  – Reusable product template
-│     └── #sell-with-us    – Sell With Us / FAQ
-├── Enquiry (pages/enquire.html)
+│
+├── Products (pages/products.html)
+│   ├── #shop
+│   │   ├── Shop New
+│   │   └── Second-Hand Marketplace
+│   ├── #deals-gallery
+│   │   └── Deals & Gallery
+│   ├── #parent-hub
+│   │   ├── First Year Checklist
+│   │   └── Starter Bundles
+│   ├── #product-detail
+│   │   └── Product Detail
+│   └── #sell-with-us
+│       └── Sell With Us / FAQ
+│
+├── Enquiry (pages/enquiry.html)
 ├── Contact (pages/contact.html)
-└── Account (pages/account.html)   ← additional page, documented per Section 5.1
+│
+└── Account (pages/account.html)
+    ├── Student Path
+    ├── Parent / Guardian Path
+    └── Order Summary
 ```
 
 ## References
