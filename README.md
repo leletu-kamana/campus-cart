@@ -45,27 +45,6 @@ Students aged approximately 19–30 who may live in residence, digs or at home a
 ### Secondary Audience: Parents and Guardians
 Parents and guardians who help students prepare for registration and the start of the academic year and want clearer information about products, prices and collection options.
 
-## Website Pages and Features
-
-| Page | File | Main Purpose |
-|---|---|---|
-| Home | `index.html` | Introduces Campus-Cart, its mission, featured products and the two main user paths. |
-| About | `pages/about.html` | Explains the organisation, mission, vision and target audience. |
-| Products | `pages/products.html` | Contains Shop, Deals & Gallery, Parent Hub, Product Detail and Sell With Us sections. |
-| Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
-| Contact | `pages/contact.html` | Provides general contact and collection/office information. |
-| Account | `pages/account.html` | Provides Student/Parent paths and a client-side Order Summary. |
-
-### Products Page Sections
-- `#shop` — Shop New and Second-Hand Marketplace tabs.
-- `#deals-gallery` — Deals and Gallery with category, condition and sorting controls.
-- `#parent-hub` — First Year Checklist and starter bundles.
-- `#product-detail` — Product detail information/template.
-- `#sell-with-us` — Sell With Us information and FAQ.
-
-### Account Page
-The Account page is an additional page. It does **not** provide real user accounts or passwords. It provides Student and Parent/Guardian paths plus an Order Summary with quantities, subtotals, a total, delivery/collection information and checkout hand-off options. No real payment gateway is used.
-
 ## Interactive Functionality
 The intended client-side functionality includes:
 - Shop New / Second-Hand tab switching.
@@ -97,6 +76,27 @@ No frontend framework is used. The project is built with standard HTML, CSS and 
 Part 1 covers the planning and initial development of the website project, including selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the initial file/folder structure and pushing the project to GitHub.
 
 Further development can be documented through the repository commits and `Changelog.md`.
+
+### Website Pages and Features
+
+| Page | File | Main Purpose |
+|---|---|---|
+| Home | `index.html` | Introduces Campus-Cart, its mission, featured products and the two main user paths. |
+| About | `pages/about.html` | Explains the organisation, mission, vision and target audience. |
+| Products | `pages/products.html` | Contains Shop, Deals & Gallery, Parent Hub, Product Detail and Sell With Us sections. |
+| Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
+| Contact | `pages/contact.html` | Provides general contact and collection/office information. |
+| Account | `pages/account.html` | Provides Student/Parent paths and a client-side Order Summary. |
+
+### Products Page Sections
+- `#shop` — Shop New and Second-Hand Marketplace tabs.
+- `#deals-gallery` — Deals and Gallery with category, condition and sorting controls.
+- `#parent-hub` — First Year Checklist and starter bundles.
+- `#product-detail` — Product detail information/template.
+- `#sell-with-us` — Sell With Us information and FAQ.
+
+### Account Page
+The Account page is an additional page. It does **not** provide real user accounts or passwords. It provides Student and Parent/Guardian paths plus an Order Summary with quantities, subtotals, a total, delivery/collection information and checkout hand-off options. No real payment gateway is used.
 
 ## Part 2 – CSS Development
 Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, cards, colours and responsive rules.
