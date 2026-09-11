@@ -60,7 +60,6 @@ No frontend framework is used. The project is built with standard HTML, CSS and 
 ## Part 1 – Planning and Initial Development
 Part 1 covers the planning and initial development of the website project, with the development work focused on **HTML5 only**. This includes selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the HTML page structure and pushing the project to GitHub.
 
-### HTML Development
 The main focus of Part 1 is creating the website structure using HTML5. The pages use semantic HTML elements to organise headings, navigation, sections, images, links, forms and other content. CSS styling and JavaScript interaction are not the focus of Part 1.
 
 ### Website Pages and Features
@@ -84,12 +83,12 @@ The main focus of Part 1 is creating the website structure using HTML5. The page
 ### Account Page
 The Account page is part of the **HTML-only development in Part 1**. It provides the HTML structure for Student and Parent/Guardian paths and an Order Summary section. The page does not provide real user accounts, passwords, payment processing or completed JavaScript functionality at this stage.
 
-Further development can be documented through the repository commits and `Changelog.md`.
+The HTML structure was created first so that the content, navigation and page sections were in place before the styling and interactive functionality were developed.
 
 ## Part 2 – CSS Development
-Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, cards, colours and responsive rules.
+Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, colours and responsive rules.
 
-### Design Variable 1 – Colour Scheme
+### 1. Design Variable – Colour Scheme
 The first design variable used in the CSS is the **colour scheme**. The main colours are stored as CSS custom properties inside the `:root` selector. This makes it easier to reuse the same colours throughout the website instead of writing the colour codes repeatedly.
 
 The main colour choices are:
@@ -109,6 +108,15 @@ The main colour choices are:
 The navy, yellow and gold colours are used consistently to give Campus-Cart a recognisable visual identity. The lighter grey and white colours help separate content areas and keep the pages readable.
 
 Using CSS variables also means that a colour can be changed in one place and then update everywhere that variable is used. For example, changing `--navy` would update elements that use `var(--navy)` throughout the stylesheet.
+
+### 2. Reset
+The reset is used at the start of the CSS to remove some of the browser's default spacing and styling. This gives the Campus-Cart pages a more consistent starting point before the rest of the CSS is applied.
+
+The reset uses `box-sizing: border-box` so that an element's padding and border are included when working out its width and height. The `html` element also uses smooth scrolling and scroll padding to make navigation links easier to use when moving to sections on the page.
+
+For the `body`, the default margin and padding are removed. The reset also sets the minimum width, main font, text size, line height, text colour and background colour used across the website.
+
+The reset also includes common rules for images, links and form controls. Images are made responsive so they do not go outside their containers, while buttons and form controls can use the website's font instead of the browser's default font.
 
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
@@ -144,7 +152,6 @@ campus-cart/
 ├── Changelog.md
 ├── README.md
 ├── index.html
-│
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
@@ -152,7 +159,6 @@ campus-cart/
 │       ├── bundles/
 │       ├── second-hand/
 │       └── icons/
-│
 └── pages/
     ├── about.html
     ├── account.html
@@ -160,7 +166,6 @@ campus-cart/
     ├── enquiry.html
     └── products.html
 ```
-
 ### Structure Note
 The repository currently uses a nested `assets/` and `pages/` structure. This differs from the original flat structure described in Section 4.2 of the assignment brief. This README documents the **actual repository structure**.
 
@@ -222,13 +227,12 @@ Before final submission, the project should be checked for:
 3. The README and sitemap should be kept updated whenever the page structure changes.
 
 ## References
+- Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
-Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
+- Duckett, J. (2011) *HTML and CSS: Design and Build Websites*. Chichester: John Wiley & Sons.
 
-Duckett, J. (2011) *HTML and CSS: Design and Build Websites*. Chichester: John Wiley & Sons.
+- Krug, S. (2014) *Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability*. 3rd edn. San Francisco: New Riders.
 
-Krug, S. (2014) *Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability*. 3rd edn. San Francisco: New Riders.
+- Majid, E.S.A., Kamaruddin, N. and Mansor, Z. (2015) 'Adaptation of usability principles in responsive web design technique for e-commerce development', *2015 International Conference on Electrical Engineering and Informatics (ICEEI)*, Denpasar, Indonesia, pp. 726–729. doi: 10.1109/ICEEI.2015.7352593.
 
-Majid, E.S.A., Kamaruddin, N. and Mansor, Z. (2015) 'Adaptation of usability principles in responsive web design technique for e-commerce development', *2015 International Conference on Electrical Engineering and Informatics (ICEEI)*, Denpasar, Indonesia, pp. 726–729. doi: 10.1109/ICEEI.2015.7352593.
-
-Marcotte, E. (2011) *Responsive Web Design*. New York: A Book Apart.
+- Marcotte, E. (2011) *Responsive Web Design*. New York: A Book Apart.
