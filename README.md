@@ -191,7 +191,35 @@ Home (index.html)
     └── Order Summary
 ```
 
+## Development Timeline
+
+| Week | Phase | Activity |
+|---|---|---|
+| 1 | Planning, research and analysis | Defined the project idea, target audience, objectives, requirements and site structure. |
+| 2 | Front-End Development | Developed the initial homepage, navigation and product catalogue structure. |
+| 3–4 | Responsive Development | Improved layouts and styling using HTML5 and CSS3. |
+| 5–6 | Interactive Development | Planned JavaScript-based interaction and order-summary functionality for Part 3. |
+| 7 | Additional Features | Added product filtering-related functionality and marketplace content. |
+| 8 | Testing and Quality Assurance | Checked functionality, usability, compatibility and responsive behaviour. |
+| 9 | Final Improvements | Made layout, content and performance improvements. |
+| 10 | Deployment and Presentation | Final checks, deployment preparation and project presentation. |
+
+## Testing and Quality Checks
+Before final submission, the project should be checked for:
+- **Functional testing:** links, buttons, forms, tabs, filters and order-summary functions.
+- **Usability testing:** clear navigation, readable text and understandable content.
+- **Responsive testing:** desktop, tablet and mobile screen sizes.
+- **Compatibility testing:** common modern web browsers.
+- **Accessibility checks:** meaningful headings, alternative text, labels and keyboard-friendly controls.
+- **Path checking:** confirm that all relative links open the intended files.
+
+## Known Items to Check
+1. `index.html` currently contains links to `account.html` in the root directory, while the actual account page is `pages/account.html`. These links should be corrected before final submission.
+2. The HTML pages reference `assets/js/script.js`, but the current repository tree does not show `script.js`. This is an upcoming Part 3 feature and should be added when the JavaScript implementation is developed.
+3. The README and sitemap should be kept updated whenever the page structure changes.
+
 ## References
+
 Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
 Duckett, J. (2011) *HTML and CSS: Design and Build Websites*. Chichester: John Wiley & Sons.
