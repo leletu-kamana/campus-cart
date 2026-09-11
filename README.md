@@ -58,7 +58,10 @@ Parents and guardians who help students prepare for registration and the start o
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
 ## Part 1 – Planning and Initial Development
-Part 1 covers the planning and initial development of the website project, including selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the initial file/folder structure and pushing the project to GitHub.
+Part 1 covers the planning and initial development of the website project, with the development work focused on **HTML5 only**. This includes selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the HTML page structure and pushing the project to GitHub.
+
+### HTML Development
+The main focus of Part 1 is creating the website structure using HTML5. The pages use semantic HTML elements to organise headings, navigation, sections, images, links, forms and other content. CSS styling and JavaScript interaction are not the focus of Part 1.
 
 ### Website Pages and Features
 
@@ -69,17 +72,17 @@ Part 1 covers the planning and initial development of the website project, inclu
 | Products | `pages/products.html` | Contains Shop, Deals & Gallery, Parent Hub, Product Detail and Sell With Us sections. |
 | Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
 | Contact | `pages/contact.html` | Provides general contact and collection/office information. |
-| Account | `pages/account.html` | Provides Student/Parent paths and a client-side Order Summary. |
+| Account | `pages/account.html` | Provides Student/Parent paths and the HTML structure for an Order Summary. |
 
 ### Products Page Sections
-- `#shop` — Shop New and Second-Hand Marketplace tabs.
-- `#deals-gallery` — Deals and Gallery with category, condition and sorting controls.
+- `#shop` — Shop New and Second-Hand Marketplace tabs/sections.
+- `#deals-gallery` — Deals and Gallery with product information.
 - `#parent-hub` — First Year Checklist and starter bundles.
 - `#product-detail` — Product detail information/template.
 - `#sell-with-us` — Sell With Us information and FAQ.
 
 ### Account Page
-The Account page is an additional page. It does **not** provide real user accounts or passwords. It provides Student and Parent/Guardian paths plus an Order Summary with quantities, subtotals, a total, delivery/collection information and checkout hand-off options. No real payment gateway is used.
+The Account page is part of the **HTML-only development in Part 1**. It provides the HTML structure for Student and Parent/Guardian paths and an Order Summary section. The page does not provide real user accounts, passwords, payment processing or completed JavaScript functionality at this stage.
 
 Further development can be documented through the repository commits and `Changelog.md`.
 
