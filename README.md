@@ -110,13 +110,13 @@ The navy, yellow and gold colours are used consistently to give Campus-Cart a re
 Using CSS variables also means that a colour can be changed in one place and then update everywhere that variable is used. For example, changing `--navy` would update elements that use `var(--navy)` throughout the stylesheet.
 
 ### 2. Reset
-The second part of the CSS uses a **reset** to remove some of the default browser styling. This helps make the pages behave more consistently across different browsers.
+The reset is used to remove some of the browser's default spacing and styling so the website can have its own layout. This helps keep the pages more consistent when they are opened in different browsers.
 
-The reset uses `box-sizing: border-box` so that padding and borders are included in an element's width and height. The `html` element also uses smooth scrolling and scroll padding for the navigation links.
+The reset also sets `box-sizing` so that padding and borders are included when working out the size of elements. The `html` element is set up for smooth scrolling and scroll spacing when using navigation links.
 
-The `body` reset removes the default margin and padding, sets a minimum width, and applies the main font, text size, line height, text colour and background colour used by the website.
+For the `body`, the default margin and padding are removed. The reset also sets the minimum width, font, text size, line height, text colour and background colour used across the website.
 
-The reset also includes common rules for images, links and form controls. Images are made responsive with `max-width: 100%` and `height: auto`, while buttons and form controls inherit the site's font.
+Images are made responsive so they do not go outside their containers. Links, buttons and form controls also have some of their default browser behaviour adjusted so they can match the rest of the Campus-Cart design.
 
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
