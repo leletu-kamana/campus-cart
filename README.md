@@ -45,15 +45,13 @@ Students aged approximately 19–30 who may live in residence, digs or at home a
 ### Secondary Audience: Parents and Guardians
 Parents and guardians who help students prepare for registration and the start of the academic year and want clearer information about products, prices and collection options.
 
-
-
 ## Technologies Used
 
 | Technology | Use in the Project |
 |---|---|
 | HTML5 | Page structure, semantic elements, forms, navigation, tables and content. |
 | CSS3 | Layout, colours, typography, cards, buttons and responsive design. |
-| JavaScript | Client-side interaction such as tabs, filters and order-summary behaviour. |
+| JavaScript | Planned client-side interaction such as tabs, filters and order-summary behaviour. |
 | Git | Version control. |
 | GitHub | Repository and version management. |
 
@@ -61,8 +59,6 @@ No frontend framework is used. The project is built with standard HTML, CSS and 
 
 ## Part 1 – Planning and Initial Development
 Part 1 covers the planning and initial development of the website project, including selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the initial file/folder structure and pushing the project to GitHub.
-
-Further development can be documented through the repository commits and `Changelog.md`.
 
 ### Website Pages and Features
 
@@ -84,6 +80,8 @@ Further development can be documented through the repository commits and `Change
 
 ### Account Page
 The Account page is an additional page. It does **not** provide real user accounts or passwords. It provides Student and Parent/Guardian paths plus an Order Summary with quantities, subtotals, a total, delivery/collection information and checkout hand-off options. No real payment gateway is used.
+
+Further development can be documented through the repository commits and `Changelog.md`.
 
 ## Part 2 – CSS Development
 Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, cards, colours and responsive rules.
@@ -109,15 +107,10 @@ The navy, yellow and gold colours are used consistently to give Campus-Cart a re
 
 Using CSS variables also means that a colour can be changed in one place and then update everywhere that variable is used. For example, changing `--navy` would update elements that use `var(--navy)` throughout the stylesheet.
 
-## Design and Usability
-The website uses consistent navigation, clear headings, buttons and structured content sections. Responsive web design is important because users may access websites from different screen sizes (Marcotte, 2011).
+## Part 3 – Interactive Functionality (Upcoming Feature)
+Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
 
-The project also follows basic usability ideas such as keeping navigation understandable and reducing unnecessary steps for users (Krug, 2014).
-
-The use of clear product information, visible prices and structured sections is intended to help users make decisions more easily. Responsive e-commerce design also requires usability principles to be adapted to different devices (Majid, Kamaruddin and Mansor, 2015).
-
-## Interactive Functionality
-The intended client-side functionality includes:
+The planned JavaScript features include:
 - Shop New / Second-Hand tab switching.
 - Product category and condition filtering.
 - Product sorting.
@@ -129,7 +122,16 @@ The intended client-side functionality includes:
 - Navigation menu interaction on smaller screens.
 - Printing the Parent Hub checklist.
 
-> **Current repository note:** The HTML pages reference `assets/js/script.js`, but the current `main` branch directory listing does not contain that JavaScript file. These features should therefore be checked before final submission if the script is required.
+These features will be implemented and tested during Part 3. The README will be updated again once the functionality has actually been added and tested.
+
+> **Upcoming feature note:** The HTML pages currently reference `assets/js/script.js`, but the current `main` branch directory listing does not contain this JavaScript file. The interactive features therefore remain planned for Part 3 until the JavaScript implementation is added.
+
+## Design and Usability
+The website uses consistent navigation, clear headings, buttons and structured content sections. Responsive web design is important because users may access websites from different screen sizes (Marcotte, 2011).
+
+The project also follows basic usability ideas such as keeping navigation understandable and reducing unnecessary steps for users (Krug, 2014).
+
+The use of clear product information, visible prices and structured sections is intended to help users make decisions more easily. Responsive e-commerce design also requires usability principles to be adapted to different devices (Majid, Kamaruddin and Mansor, 2015).
 
 ## File and Folder Structure
 
@@ -196,7 +198,7 @@ Home (index.html)
 | 1 | Planning, research and analysis | Defined the project idea, target audience, objectives, requirements and site structure. |
 | 2 | Front-End Development | Developed the initial homepage, navigation and product catalogue structure. |
 | 3–4 | Responsive Development | Improved layouts and styling using HTML5 and CSS3. |
-| 5–6 | Interactive Development | Added planned JavaScript-based interaction and order-summary structure. |
+| 5–6 | Interactive Development | Planned JavaScript-based interaction and order-summary functionality for Part 3. |
 | 7 | Additional Features | Added product filtering-related functionality and marketplace content. |
 | 8 | Testing and Quality Assurance | Checked functionality, usability, compatibility and responsive behaviour. |
 | 9 | Final Improvements | Made layout, content and performance improvements. |
@@ -213,7 +215,7 @@ Before final submission, the project should be checked for:
 
 ## Known Items to Check
 1. `index.html` currently contains links to `account.html` in the root directory, while the actual account page is `pages/account.html`. These links should be corrected before final submission.
-2. The HTML pages reference `assets/js/script.js`, but the current repository tree does not show `script.js`. The JavaScript file should be added if the interactive functionality is required for the final version.
+2. The HTML pages reference `assets/js/script.js`, but the current repository tree does not show `script.js`. This is an upcoming Part 3 feature and should be added when the JavaScript implementation is developed.
 3. The README and sitemap should be kept updated whenever the page structure changes.
 
 ## References
