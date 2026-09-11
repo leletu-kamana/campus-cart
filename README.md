@@ -1,7 +1,7 @@
 # Campus-Cart
 
 ## Project Title
-Campus-Cart — a static, front-end-only e-commerce website connecting South African tertiary students and their parents/guardians with affordable new and second-hand student essentials.
+**Campus-Cart** — a static, front-end e-commerce website designed to connect South African tertiary students and their parents/guardians with affordable new and second-hand student essentials.
 
 ## Student Information
 - **Name:** Leletu Kamana
@@ -40,26 +40,25 @@ This build is intentionally **front-end only** — HTML5, CSS3, and vanilla Java
 All interactive behaviour (tab switching, filtering/sorting, the order summary, and print-to-checklist) is handled client-side by a single shared script; all styling lives in a single shared stylesheet.
 
 ## File and Folder Structure
-```
+
+```text
 campus-cart/
-├── index.html
 ├── .gitattributes
+├── Changelog.md
 ├── README.md
+├── index.html
 │
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
-│   ├── images/
-│   │   ├── products/
-│   │   ├── second-hand/
-│   │   ├── bundles/
-│   │   └── icons/
-│   └── js/
-│       └── script.js
+│   └── images/
+│       ├── bundles/
+│       ├── second-hand/
+│       └── icons/
 │
 └── pages/
     ├── about.html
-    ├── account.html      (additional page — see note above)
+    ├── account.html
     ├── contact.html
     ├── enquiry.html
     └── products.html
