@@ -8,46 +8,78 @@
 /* ==========================================================
    1. DESIGN VARIABLES
    ========================================================== */
-
+/*
+   The :root selector targets the very top of the document
+   (the <html> element). We attach "CSS custom properties"
+   (variables) here so every colour, spacing value, and
+   shadow can be reused across the whole file with var().
+   Changing a value here updates it everywhere it's used.
+*/
 :root {
     /* Brand */
+    /* Main dark navy used for the header, footer and buttons. */
     --navy: #0d1b3e;
+    /* A slightly lighter navy for hover states on navy elements. */
     --navy-light: #17295c;
+    /* An even darker navy for backgrounds needing extra contrast. */
     --navy-dark: #08142f;
 
+    /* The bright accent yellow used for highlights and calls to action. */
     --yellow: #ffd23f;
+    /* A softer yellow used on hover so it doesn't feel too harsh. */
     --yellow-light: #ffe477;
 
+    /* A muted gold used for prices and secondary accents. */
     --gold: #b8860b;
+    /* A lighter gold for hover states on gold elements. */
     --gold-light: #d9a41a;
 
     /* Neutral */
+    /* Pure white, used for cards and light backgrounds. */
     --white: #ffffff;
+    /* Light grey used for alternating section backgrounds. */
     --grey: #f2f3f5;
+    /* An even lighter grey for subtle backgrounds like toolbars. */
     --grey-light: #f8f9fb;
+    /* Mid-tone grey used mainly for borders and dividers. */
     --grey-mid: #d9dce1;
+    /* A darker grey used for muted, secondary text. */
     --grey-dark: #5a5f6a;
 
+    /* Near-black, the default colour for body text. */
     --text: #1a1a1a;
+    /* A softer dark grey for less important text. */
     --text-light: #444444;
 
     /* Status */
+    /* Green used to signal success (e.g. confirmations). */
     --success: #2e7d32;
+    /* Amber used to signal a warning. */
     --warning: #f59e0b;
+    /* Red used to signal an error or danger state. */
     --danger: #c62828;
 
     /* Layout */
+    /* The widest a page's content is allowed to stretch on large screens. */
     --max-width: 1180px;
 
     /* Radius */
+    /* Standard corner rounding for cards and larger boxes. */
     --radius: 14px;
+    /* Smaller rounding for compact elements like the nav toggle. */
     --radius-small: 8px;
+    /* A very large radius so pill-shaped buttons look fully rounded. */
     --radius-pill: 999px;
 
     /* Shadows */
+    /*
+       A reusable soft drop-shadow (offset, blur, and a
+       transparent navy colour) applied to cards and the navbar.
+    */
     --shadow:
         0 4px 16px rgba(13, 27, 62, 0.10);
 
+    /* A stronger shadow used on hover to lift elements visually. */
     --shadow-hover:
         0 10px 25px rgba(13, 27, 62, 0.15);
 }
