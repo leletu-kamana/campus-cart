@@ -228,7 +228,6 @@ textarea {
 /* ==========================================================
    3. TYPOGRAPHY
    ========================================================== */
-
 /*
    IMPORTANT FIX:
    Removed Impact / Archivo Black as the main fallback.
@@ -239,88 +238,110 @@ textarea {
    We use a strong system font instead.
 */
 
+/*
+   Shared heading styles for h1 through h4. Grouping the
+   selectors avoids repeating the same declarations four times.
+*/
 h1,
 h2,
 h3,
 h4 {
+    /* Removes the default space browsers add above headings. */
     margin-top: 0;
 
+    /* Uses the same readable font stack as the body text for consistency. */
     font-family:
         "Segoe UI",
         Arial,
         Helvetica,
         sans-serif;
 
+    /* Makes headings extra bold (800 weight) so they stand out from body text. */
     font-weight: 800;
 
     /*
        Prevents headings from looking squeezed together.
     */
+    /* Slightly loosens letter spacing so bold headings don't look cramped. */
     letter-spacing: -0.3px;
 
+    /* Tightens the line height for headings, which usually look better closer together. */
     line-height: 1.2;
 }
 
 
 /* Main heading */
-
 h1 {
+    /* Adds space below the main heading before the next element. */
     margin-bottom: 18px;
 
+    /*
+       clamp(min, preferred, max) lets the heading scale
+       fluidly with viewport width, but never shrink below
+       2.3rem or grow past 3.5rem.
+    */
     font-size: clamp(2.3rem, 5vw, 3.5rem);
 }
 
 
 /* Section heading */
-
 h2 {
+    /* Adds space below section headings. */
     margin-bottom: 16px;
 
+    /* Colours section headings navy so they read as structural, not accent, text. */
     color: var(--navy);
 
+    /* Fluidly scales the heading size between roughly 1.8rem and 2.5rem. */
     font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 
 /* Card heading */
-
 h3 {
+    /* Adds space below card headings. */
     margin-bottom: 10px;
 
+    /* Colours card headings navy to match the brand palette. */
     color: var(--navy);
 
+    /* Sets a fixed, moderate size suitable for card titles. */
     font-size: 1.3rem;
 }
 
 
 /* Small heading */
-
 h4 {
+    /* Adds a smaller gap below h4 elements, which are used for minor headings. */
     margin-bottom: 8px;
 
+    /* Sets a modest size, just slightly larger than body text. */
     font-size: 1.05rem;
 }
 
 
 /* Paragraphs */
-
 p {
+    /* Removes the default top margin so spacing is controlled only from below. */
     margin-top: 0;
 
+    /* Adds consistent space after each paragraph. */
     margin-bottom: 16px;
 
     /*
        Better readability.
     */
+    /* Slightly looser line height than the body default, for easier reading in longer text blocks. */
     line-height: 1.7;
 
+    /* Resets letter spacing to normal for paragraph text. */
     letter-spacing: 0;
 }
 
 
 /* Strong text */
-
 strong {
+    /* Sets bold (but not extra-bold) weight for emphasised text inside paragraphs. */
     font-weight: 700;
 }
 
