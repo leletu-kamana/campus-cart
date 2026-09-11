@@ -118,6 +118,17 @@ For the `body`, the default margin and padding are removed. The reset also sets 
 
 The reset also includes common rules for images, links and form controls. Images are made responsive so they do not go outside their containers, while buttons and form controls can use the website's font instead of the browser's default font.
 
+### 3. Typography
+Typography controls how the text looks across the Campus-Cart website. The CSS groups the main heading styles from `h1` to `h4` so that they can use a consistent font, weight and spacing. This helps keep the headings looking similar on the different pages.
+
+The headings use a readable font stack of `Segoe UI`, Arial and Helvetica. The heading weight is set to `800` to make the main headings stand out. The line height and letter spacing are also set so the text is easier to read and does not look too crowded.
+
+The `h1` and `h2` headings use responsive `clamp()` font sizes. This allows the heading size to adjust depending on the screen size instead of always using one fixed size. The smaller `h3` and `h4` headings use simpler fixed sizes for smaller sections.
+
+Paragraphs use a line height of `1.7` and have spacing below them so that longer blocks of text are easier to read. The `strong` element is also given a font weight of `700` so important text can stand out.
+
+The typography update keeps the existing Campus-Cart design while making the CSS easier to read and maintain.
+
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
 
