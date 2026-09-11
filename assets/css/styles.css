@@ -2,6 +2,11 @@
    CAMPUS-CART
    GLOBAL RESPONSIVE CSS
    Plain CSS3 - No Frameworks
+   ==========================================================
+   This stylesheet controls the look of every page on the
+   Campus-Cart site. It is organised into numbered sections
+   (design variables, reset, typography, layout, components,
+   and media queries) so that related rules stay together.
    ========================================================== */
 
 
@@ -88,7 +93,19 @@
 /* ==========================================================
    2. RESET
    ========================================================== */
+/*
+   Browsers apply their own default spacing and box-sizing
+   rules. This section removes inconsistencies so the layout
+   behaves the same way across different browsers.
+*/
 
+/*
+   box-sizing: border-box makes padding and border count
+   towards an element's declared width/height instead of
+   adding to it, which makes sizing far more predictable.
+   The * selector applies this to every element, including
+   ::before and ::after pseudo-elements.
+*/
 *,
 *::before,
 *::after {
@@ -96,14 +113,19 @@
 }
 
 html {
+    /* Makes clicking an in-page anchor link scroll smoothly instead of jumping instantly. */
     scroll-behavior: smooth;
+    /* Stops the sticky navbar from covering the target section when jumping to an anchor. */
     scroll-padding-top: 90px;
 }
 
 body {
+    /* Removes the browser's default outer spacing around the page. */
     margin: 0;
+    /* Removes the browser's default inner spacing on the page. */
     padding: 0;
 
+    /* Stops the page from shrinking below a usable width on very narrow screens. */
     min-width: 320px;
 
     /*
@@ -111,69 +133,94 @@ body {
        Use a normal readable system font.
        Do NOT use Impact for body text.
     */
+    /*
+       Sets the default font stack for all body text: Segoe UI
+       first, then Arial and Helvetica as fallbacks, and a
+       generic sans-serif as the final fallback.
+    */
     font-family:
         "Segoe UI",
         Arial,
         Helvetica,
         sans-serif;
 
+    /* Sets the base text size for the whole page in pixels. */
     font-size: 17px;
 
     /*
        Gives text more breathing room.
     */
+    /* Sets the space between lines of text relative to the font size, improving readability. */
     line-height: 1.65;
 
     /*
        Prevents artificial spacing between letters.
     */
+    /* Resets letter spacing to the font's natural default. */
     letter-spacing: normal;
 
+    /* Sets the default text colour using the --text variable. */
     color: var(--text);
 
+    /* Sets the default page background colour to white. */
     background: var(--white);
 
     /*
        Improves font rendering on supported browsers.
     */
+    /* Smooths font edges on WebKit browsers (Chrome, Safari). */
     -webkit-font-smoothing: antialiased;
+    /* Smooths font edges on older Firefox/macOS. */
     -moz-osx-font-smoothing: grayscale;
 }
 
 
 /* Images */
-
+/*
+   All <img> elements get a consistent, responsive baseline
+   so they scale with their container instead of overflowing.
+*/
 img {
+    /* Removes the small gap browsers leave under inline images by default. */
     display: block;
 
+    /* Makes the image fill the width of its parent container. */
     width: 100%;
+    /* Stops the image from ever growing wider than its container. */
     max-width: 100%;
 
+    /* Lets the height scale automatically to keep the image's proportions. */
     height: auto;
 }
 
 
 /* Links */
-
 a {
+    /* Sets the default link colour to the gold accent instead of the browser's default blue. */
     color: var(--gold);
 }
 
 
 /* Buttons / form controls */
-
+/*
+   By default, form elements don't inherit the page's font.
+   This line forces them to match the surrounding text.
+*/
 button,
 input,
 select,
 textarea {
+    /* Makes these elements use the same font settings as their surrounding text. */
     font: inherit;
 }
 
 
 /* Selection */
-
+/* Styles the highlight colour shown when a user selects (drags over) text. */
 ::selection {
+    /* Text colour while selected. */
     color: var(--navy);
+    /* Highlight background colour while selected. */
     background: var(--yellow);
 }
 
