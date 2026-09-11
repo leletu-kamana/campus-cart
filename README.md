@@ -20,7 +20,7 @@ The HTML structure was created first so that the content, navigation and page se
 ## Part 2 – CSS Development
 Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, colours and responsive rules.
 
-### Design Variable 1 – Colour Scheme
+### 1. Design Variable – Colour Scheme
 The first design variable used in the CSS is the **colour scheme**. The main colours are stored as CSS custom properties inside the `:root` selector. This makes it easier to reuse the same colours throughout the website instead of writing the colour codes repeatedly.
 
 The main colour choices are:
