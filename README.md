@@ -110,13 +110,13 @@ The navy, yellow and gold colours are used consistently to give Campus-Cart a re
 Using CSS variables also means that a colour can be changed in one place and then update everywhere that variable is used. For example, changing `--navy` would update elements that use `var(--navy)` throughout the stylesheet.
 
 ### 2. Reset
-The reset is used to remove some of the browser's default spacing and styling so the website can have its own layout. This helps keep the pages more consistent when they are opened in different browsers.
+The reset is used at the start of the CSS to remove some of the browser's default spacing and styling. This gives the Campus-Cart pages a more consistent starting point before the rest of the CSS is applied.
 
-The reset also sets `box-sizing` so that padding and borders are included when working out the size of elements. The `html` element is set up for smooth scrolling and scroll spacing when using navigation links.
+The reset uses `box-sizing: border-box` so that an element's padding and border are included when working out its width and height. The `html` element also uses smooth scrolling and scroll padding to make navigation links easier to use when moving to sections on the page.
 
-For the `body`, the default margin and padding are removed. The reset also sets the minimum width, font, text size, line height, text colour and background colour used across the website.
+For the `body`, the default margin and padding are removed. The reset also sets the minimum width, main font, text size, line height, text colour and background colour used across the website.
 
-Images are made responsive so they do not go outside their containers. Links, buttons and form controls also have some of their default browser behaviour adjusted so they can match the rest of the Campus-Cart design.
+The reset also includes common rules for images, links and form controls. Images are made responsive so they do not go outside their containers, while buttons and form controls can use the website's font instead of the browser's default font.
 
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
