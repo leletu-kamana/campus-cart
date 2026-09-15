@@ -531,6 +531,7 @@ strong {
 /* Navigation links */
 /* .nav-links is the flex container holding all of the individual nav <a> links. */
 .nav-links {
+    /* Lays the links out horizontally. */
     display: flex;
 
     /* Vertically aligns all links to the same baseline within the row. */
@@ -669,12 +670,19 @@ strong {
 /* ==========================================================
    6. HERO
    ========================================================== */
-
+/* .hero is the large introductory banner section shown at the top of the homepage. */
 .hero {
+    /* Adds generous vertical space above and below the hero content. */
     padding: 80px 0;
 
+    /* Sets default text colour to white for readability on the dark background. */
     color: var(--white);
 
+    /*
+       Creates a diagonal (135 degree) gradient background
+       fading from the main navy to the lighter navy shade,
+       giving the hero some visual depth.
+    */
     background:
         linear-gradient(
             135deg,
@@ -683,51 +691,77 @@ strong {
         );
 }
 
+/* Overrides the default h1 colour so it stays white inside the dark hero background. */
 .hero h1 {
     color: var(--white);
 }
 
+/* Targets any <em> (emphasis) text inside the hero heading, used to highlight a key word. */
 .hero h1 em {
+    /* Colours the emphasised word yellow so it stands out from the rest of the white heading. */
     color: var(--yellow);
 
+    /* Removes the italic styling browsers apply to <em> by default, keeping it upright. */
     font-style: normal;
 }
 
+/* .hero-grid lays out the hero's text column and image column side by side. */
 .hero-grid {
+    /* Switches to CSS grid for a clean two-column layout. */
     display: grid;
 
+    /*
+       Defines two flexible columns: the first slightly wider
+       (1.05fr) than the second (0.95fr), and minmax(0, ...)
+       stops either column from overflowing its content.
+    */
     grid-template-columns:
         minmax(0, 1.05fr)
         minmax(0, 0.95fr);
 
+    /* Adds space between the two columns. */
     gap: 46px;
 
+    /* Vertically centres both columns relative to each other. */
     align-items: center;
 }
 
+/* Styles the introductory paragraph text within the hero, marked with class "lead". */
 .hero p.lead {
+    /* Uses a soft off-white rather than pure white, easier on the eyes for longer text. */
     color: #e7e9f0;
 
+    /* Slightly larger than standard body text since it's the hero's key message. */
     font-size: 1.1rem;
 
+    /* Extra generous line spacing for a relaxed, easy-to-read introduction. */
     line-height: 1.75;
 }
 
+/* .hero-img is the container wrapping the hero's featured image. */
 .hero-img {
+    /* Clips anything (like the image's corners) that would poke outside the rounded box. */
     overflow: hidden;
 
+    /* Rounds the image container's corners to match the site's card style. */
     border-radius: var(--radius);
 
+    /* Adds a soft shadow so the image appears to lift off the page. */
     box-shadow: var(--shadow);
 }
 
+/* Styles the actual <img> element inside .hero-img. */
 .hero-img img {
+    /* Ensures the image fills the full width of its container. */
     width: 100%;
 
+    /* Fixes a consistent height so the hero layout doesn't jump between pages with different images. */
     height: 400px;
 
+    /* Crops the image to fill the box while preserving its aspect ratio (no stretching/distortion). */
     object-fit: cover;
 
+    /* Matches the rounding of the parent container so corners look consistent. */
     border-radius: var(--radius);
 }
 
