@@ -818,92 +818,132 @@ strong {
 /* ==========================================================
    8. BUTTONS
    ========================================================== */
-
+/* .btn is the base class shared by every button-style element (links or actual <button>s) on the site. */
 .btn {
+    /* Uses inline-flex so the button's content (e.g. text + icon) can be centred inside it. */
     display: inline-flex;
 
+    /* Centres content vertically within the button. */
     align-items: center;
+    /* Centres content horizontally within the button. */
     justify-content: center;
 
+    /* Guarantees a comfortably large, tappable minimum height. */
     min-height: 46px;
 
+    /* Sets generous horizontal padding so the button doesn't feel cramped around its text. */
     padding: 12px 24px;
 
+    /* Default text colour is navy, contrasting against the yellow background below. */
     color: var(--navy);
 
+    /* Default button background uses the bright yellow brand colour. */
     background: var(--yellow);
 
+    /* Reserves a transparent border so hover/variant states can add a coloured border without shifting size. */
     border: 2px solid transparent;
 
+    /* Fully rounds the corners for a pill-shaped button. */
     border-radius: var(--radius-pill);
 
+    /* Sets a standard, readable button text size. */
     font-size: 1rem;
 
+    /* Makes button text extra bold so it reads clearly as an action. */
     font-weight: 800;
 
+    /* Keeps text vertically compact within the button. */
     line-height: 1.2;
 
+    /* Removes the underline that would otherwise appear if the button is actually a link. */
     text-decoration: none;
 
+    /* Shows a pointer cursor to signal the button is clickable. */
     cursor: pointer;
 
+    /*
+       Smoothly animates the button's lift and colour change
+       on hover/press instead of snapping instantly.
+    */
     transition:
         transform 0.15s ease,
         background 0.15s ease,
         color 0.15s ease;
 }
 
+/* Lifts the button slightly and darkens its background when hovered, giving tactile feedback. */
 .btn:hover {
+    /* Moves the button up by 2px, creating a subtle "lift" effect. */
     transform: translateY(-2px);
 
+    /* Switches to the lighter gold shade on hover. */
     background: var(--gold-light);
 }
 
+/* Returns the button to its normal position while actively being clicked/pressed. */
 .btn:active {
     transform: translateY(0);
 }
 
+/* .btn-navy is a variant of .btn with a dark navy background instead of yellow, for less urgent actions. */
 .btn-navy {
+    /* White text so it's readable against the dark navy background. */
     color: var(--white);
 
+    /* Applies the navy background colour instead of the default yellow. */
     background: var(--navy);
 }
 
+/* Lightens the navy button slightly on hover. */
 .btn-navy:hover {
     background: var(--navy-light);
 }
 
+/* .btn-outline is a variant with no fill, just a navy border, for secondary actions. */
 .btn-outline {
+    /* Text colour matches the border for a clean outlined look. */
     color: var(--navy);
 
+    /* No background fill, letting the page background show through. */
     background: transparent;
 
+    /* Draws a solid navy border since there's no background to define the button's shape. */
     border: 2px solid var(--navy);
 }
 
+/* On hover, the outline button fills in solid to give clear feedback. */
 .btn-outline:hover {
+    /* Switches text to white once the background fills in. */
     color: var(--white);
 
+    /* Fills the button with navy on hover. */
     background: var(--navy);
 }
 
+/* .btn-ghost-light is an outlined button meant for use on dark backgrounds (e.g. the hero). */
 .btn-ghost-light {
+    /* Yellow text/border so it's visible against dark backgrounds. */
     color: var(--yellow);
 
+    /* No fill by default. */
     background: transparent;
 
+    /* Yellow border defines the button's shape without a solid background. */
     border: 2px solid var(--yellow);
 }
 
+/* On hover, the ghost button fills with yellow and swaps text to navy for contrast. */
 .btn-ghost-light:hover {
     color: var(--navy);
-
     background: var(--yellow);
 }
 
+/* .btn-sm is a smaller-footprint version of .btn for compact spaces like cards. */
 .btn-sm {
+    /* Reduces padding compared to the default button size. */
     padding: 9px 17px;
 
+    /* Slightly smaller text to match the reduced button size. */
     font-size: 0.9rem;
 }
 
@@ -911,47 +951,68 @@ strong {
 /* ==========================================================
    9. BADGES
    ========================================================== */
-
+/* .badge is a small pill label used to tag products, e.g. "NEW" or "VERIFIED". */
 .badge {
+    /* Uses inline-flex so multiple badges can sit next to each other and align their content. */
     display: inline-flex;
 
+    /* Aligns badge content vertically centred. */
     align-items: center;
 
+    /* Adds a small gap to the right so multiple badges don't touch each other. */
     margin-right: 6px;
+    /* Adds a small gap below, useful if badges wrap onto a new line. */
     margin-bottom: 6px;
 
+    /* Sets compact internal padding suitable for short label text. */
     padding: 5px 12px;
 
+    /* Default badge text colour is navy. */
     color: var(--navy);
 
+    /* Default badge background is a neutral light grey. */
     background: var(--grey);
 
+    /* Fully rounds the badge into a pill shape. */
     border-radius: var(--radius-pill);
 
+    /* Keeps badge text small since it's a secondary label, not primary content. */
     font-size: 0.75rem;
 
+    /* Makes badge text extra bold so it stays legible at a small size. */
     font-weight: 800;
 
+    /* Spaces out uppercase letters slightly for readability. */
     letter-spacing: 0.7px;
 
+    /* Forces badge text to render in uppercase. */
     text-transform: uppercase;
 }
 
+/* .badge-verified is a variant used to mark verified sellers/listings. */
 .badge-verified {
+    /* White text for contrast against the gold background. */
     color: var(--white);
 
+    /* Gold background signals a special, trusted status. */
     background: var(--gold);
 }
 
+/* .badge-new marks a brand-new listing with a bold navy/yellow combination. */
 .badge-new {
+    /* Yellow text stands out against the dark background. */
     color: var(--yellow);
 
+    /* Navy background makes this badge visually distinct from the default grey badge. */
     background: var(--navy);
 }
 
+/* .badge-used marks a second-hand listing. */
 .badge-used {
+    /* Navy text for contrast against the yellow background. */
     color: var(--navy);
 
+    /* Yellow background differentiates this badge from both the default and "new" badges. */
     background: var(--yellow);
 }
 
