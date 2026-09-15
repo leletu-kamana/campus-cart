@@ -1923,48 +1923,69 @@ textarea {
 /* ==========================================================
    23. ANCHOR SUB-NAVIGATION
    ========================================================== */
-
+/* .subnav is a secondary yellow navigation bar, e.g. for jumping between sections on a long page. */
 .subnav {
+    /* Yellow background clearly distinguishes this from the main navy header. */
     background: var(--yellow);
 }
 
+/* Styles the <ul> list that holds the sub-navigation links. */
 .subnav ul {
+    /* Caps the list's width to match the site's overall content width. */
     max-width: var(--max-width);
 
+    /* Centres the list horizontally within the full-width subnav bar. */
     margin: 0 auto;
 
+    /* Adds internal padding around the list. */
     padding: 12px 20px;
 
+    /* Lays the links out horizontally. */
     display: flex;
 
+    /* Allows links to wrap onto a new line on narrow screens. */
     flex-wrap: wrap;
 
+    /* Adds spacing between individual sub-nav links. */
     gap: 8px;
 
+    /* Removes the default bullet points from the list. */
     list-style: none;
 }
 
+/* Styles each individual sub-navigation link as a small pill button. */
 .subnav a {
+    /* Lets the link only take up as much width as its text needs, while still accepting padding. */
     display: inline-block;
 
+    /* Adds clickable padding around the link text. */
     padding: 7px 14px;
 
+    /* Navy text contrasts against the yellow subnav background. */
     color: var(--navy);
 
+    /* A semi-transparent white background gives each link a subtle pill shape distinct from the bar itself. */
     background: rgba(255, 255, 255, 0.55);
 
+    /* Fully rounds the link into a pill shape. */
     border-radius: var(--radius-pill);
 
+    /* Slightly smaller than body text, suitable for a compact nav link. */
     font-size: 0.9rem;
 
+    /* Bolds the link text for legibility. */
     font-weight: 800;
 
+    /* Removes the default underline styling. */
     text-decoration: none;
 }
 
+/* Inverts the sub-nav link's colours on hover for clear feedback. */
 .subnav a:hover {
+    /* Text switches to yellow on hover. */
     color: var(--yellow);
 
+    /* Background switches to solid navy on hover. */
     background: var(--navy);
 }
 
@@ -1972,66 +1993,94 @@ textarea {
 /* ==========================================================
    24. FOOTER
    ========================================================== */
-
+/* Styles the site-wide <footer> element shown at the bottom of every page. */
 footer {
+    /* Adds generous top padding and a smaller bottom padding, leaving room for the copyright line. */
     padding: 52px 0 26px;
 
+    /* Sets a muted light-grey/blue default text colour for the footer. */
     color: #cfd4e0;
 
+    /* Navy background matches the header for a consistent, bookended layout. */
     background: var(--navy);
 
+    /* Slightly smaller than the main body text, appropriate for footer content. */
     font-size: 0.95rem;
 }
 
+/* Colours footer column headings (e.g. "Company", "Support") yellow to stand out against the navy background. */
 footer h4 {
     color: var(--yellow);
 }
 
+/* Ensures footer paragraph text uses the same muted colour as the rest of the footer. */
 footer p {
     color: #cfd4e0;
 }
 
+/* Styles links within the footer. */
 footer a {
+    /* Matches the muted footer text colour rather than the site-wide gold link colour, for a subtler look. */
     color: #cfd4e0;
 
+    /* Removes the default underline from footer links. */
     text-decoration: none;
 }
 
+/* Highlights footer links in yellow when hovered. */
 footer a:hover {
     color: var(--yellow);
 }
 
+/* Removes default list styling from footer link lists (e.g. under each column heading). */
 footer ul {
+    /* Removes the browser's default list margin. */
     margin: 0;
 
+    /* Removes the browser's default list padding (and thus the bullet indent). */
     padding: 0;
 
+    /* Removes the bullet point markers. */
     list-style: none;
 }
 
+/* Adds small consistent vertical spacing between each footer list item. */
 footer li {
     padding: 4px 0;
 }
 
+/* .footer-grid arranges the footer's columns (e.g. brand info + three link columns). */
 .footer-grid {
+    /* Uses CSS grid to lay out the footer's columns. */
     display: grid;
 
+    /*
+       Gives the first column (likely brand/about info) extra
+       width (1.4fr) while the remaining three link columns
+       share equal space (1fr each).
+    */
     grid-template-columns:
         1.4fr
         repeat(3, 1fr);
 
+    /* Adds spacing between the footer's columns. */
     gap: 30px;
 }
 
+/* .footer-bottom is the thin strip at the very bottom of the footer, usually holding the copyright text. */
 .footer-bottom {
+    /* Adds space above the bottom strip, separating it from the columns above. */
     margin-top: 30px;
 
+    /* Adds space between the divider line and the copyright text. */
     padding-top: 18px;
 
+    /* A subtle semi-transparent white line divides the footer columns from the copyright strip. */
     border-top:
         1px solid
         rgba(255, 255, 255, 0.15);
 
+    /* Smaller text size appropriate for fine-print copyright/legal text. */
     font-size: 0.88rem;
 }
 
@@ -2039,43 +2088,56 @@ footer li {
 /* ==========================================================
    25. TABLET
    ========================================================== */
-
+/*
+   This media query applies its rules only when the browser
+   viewport is 1000px wide or narrower, adapting the layout
+   for tablets and small laptop windows.
+*/
 @media (max-width: 1000px) {
 
+    /* Reduces the gap between nav links slightly to help them fit on a narrower header. */
     .nav-links {
         gap: 14px;
     }
 
+    /* Stacks the hero's text and image into a single column instead of side by side. */
     .hero-grid {
         grid-template-columns: 1fr;
 
+        /* Uses a slightly smaller gap now that the columns stack vertically. */
         gap: 35px;
     }
 
+    /* Uses CSS order to visually move the hero image above the text column once they stack. */
     .hero-img {
         order: -1;
     }
 
+    /* Reduces the four-column grid down to two columns so cards don't become too narrow. */
     .grid-4 {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+    /* Reduces the three-column grid down to two columns for the same reason. */
     .grid-3 {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+    /* Reduces the gallery from three columns to two so images stay a reasonable size. */
     .gallery {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+    /* Reduces the four-column footer layout down to two columns. */
     .footer-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
+    /* Stacks the two split cards vertically instead of side by side. */
     .split {
         grid-template-columns: 1fr;
     }
