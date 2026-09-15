@@ -1480,55 +1480,77 @@ textarea {
 /* ==========================================================
    17. FORMS
    ========================================================== */
-
+/* .form-card is the white card wrapper used to contain an entire form (e.g. contact or checkout). */
 .form-card {
+    /* Generous internal padding around the whole form. */
     padding: 28px;
 
+    /* White background, consistent with other card components. */
     background: var(--white);
 
+    /* Light grey border outlines the form card. */
     border: 1px solid var(--grey-mid);
 
+    /* Rounds the corners to match the site's card style. */
     border-radius: var(--radius);
 
+    /* Adds the shared soft shadow so the form card lifts off the page. */
     box-shadow: var(--shadow);
 }
 
+/* .form-row arranges two related fields side by side (e.g. First Name / Last Name). */
 .form-row {
+    /* Uses grid to create equal-width side-by-side columns. */
     display: grid;
 
+    /* Creates two equal-width columns for paired fields. */
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
+    /* Adds spacing between the two fields in the row. */
     gap: 18px;
 }
 
+/* .form-group wraps a single label + input (or textarea) combination within a form. */
 .form-group {
+    /* Stacks the label above the input. */
     display: flex;
 
+    /* Sets a vertical flex direction. */
     flex-direction: column;
 
+    /* Adds a small gap between the label and its input. */
     gap: 6px;
 
+    /* Adds space below each field group, separating it from the next one. */
     margin-bottom: 18px;
 }
 
+/* Styles the label text within a form group. */
 .form-group label {
+    /* Navy label colour ties it to the site's heading colour. */
     color: var(--navy);
 
+    /* Bolds the label so it's clearly distinguished from the input below it. */
     font-weight: 700;
 }
 
+/* Ensures inputs, selects, and textareas inside a form group always take the full width available. */
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
 }
 
+/* .hint is small helper text shown beneath a field, e.g. "Must be at least 8 characters". */
 .hint {
+    /* Uses the muted dark grey colour since hints are secondary, non-critical information. */
     color: var(--grey-dark);
 
+    /* Smaller than body text, appropriate for a subtle helper note. */
     font-size: 0.88rem;
 
+    /* Comfortable line spacing in case the hint wraps onto multiple lines. */
     line-height: 1.5;
 }
 
@@ -1536,46 +1558,70 @@ textarea {
 /* ==========================================================
    18. CHECKLIST
    ========================================================== */
-
+/* .checklist is an unordered list styled with custom checkmark icons instead of bullet points. */
 .checklist {
+    /* Removes the default margin browsers apply to lists. */
     margin: 0;
 
+    /* Removes the default padding (which normally creates the bullet indent). */
     padding: 0;
 
+    /* Removes the default bullet-point markers since custom checkmarks are added instead. */
     list-style: none;
 }
 
+/* Styles each individual list item in the checklist. */
 .checklist li {
+    /* Establishes this element as the positioning context for the absolutely-positioned checkmark below. */
     position: relative;
 
+    /* Adds vertical padding between items and left padding to leave room for the checkmark icon. */
     padding: 9px 0 9px 34px;
 
+    /* Adds a dashed divider line beneath each list item. */
     border-bottom: 1px dashed var(--grey-mid);
 }
 
+/*
+   ::before inserts a generated checkmark icon before each
+   list item's content, positioned absolutely so it sits in
+   the left padding area reserved above.
+*/
 .checklist li::before {
+    /* Inserts a Unicode checkmark character (✓) as the icon's content. */
     content: "\2713";
 
+    /* Takes the icon out of normal flow so it can be placed precisely. */
     position: absolute;
 
+    /* Aligns the icon near the top of the list item. */
     top: 9px;
+    /* Positions the icon flush with the left edge of the list item. */
     left: 0;
 
+    /* Sets a fixed square size for the checkmark's background box. */
     width: 24px;
     height: 24px;
 
+    /* Navy checkmark colour for contrast against the yellow background box. */
     color: var(--navy);
 
+    /* Yellow background box behind the checkmark, matching the brand accent. */
     background: var(--yellow);
 
+    /* Slightly rounds the checkmark box's corners. */
     border-radius: 6px;
 
+    /* Sets the checkmark symbol's size. */
     font-size: 0.9rem;
 
+    /* Bolds the checkmark so it's clearly visible. */
     font-weight: 800;
 
+    /* Matches the line-height to the box height so the checkmark centres vertically. */
     line-height: 24px;
 
+    /* Centres the checkmark horizontally within its box. */
     text-align: center;
 }
 
@@ -1583,47 +1629,67 @@ textarea {
 /* ==========================================================
    19. ORDER TABLE
    ========================================================== */
-
+/* .order-table displays a shopping cart or order summary as a proper HTML table. */
 .order-table {
+    /* Makes the table stretch to fill its container's full width. */
     width: 100%;
 
+    /* Merges adjacent cell borders into single lines instead of doubled borders. */
     border-collapse: collapse;
 }
 
+/* Shared padding and divider styling for both header and data cells. */
 .order-table th,
 .order-table td {
+    /* Adds internal spacing so cell content isn't cramped against the borders. */
     padding: 14px 10px;
 
+    /* Draws a thin divider line beneath each row. */
     border-bottom: 1px solid var(--grey-mid);
 
+    /* Left-aligns cell content, overriding the browser's default centred alignment for header cells. */
     text-align: left;
 }
 
+/* Styles specific to the table's header row. */
 .order-table th {
+    /* Yellow header text stands out against the dark background below. */
     color: var(--yellow);
 
+    /* Navy background clearly distinguishes the header row from the data rows. */
     background: var(--navy);
 
+    /* Slightly smaller than body text, appropriate for column labels. */
     font-size: 0.95rem;
 }
 
+/* .order-total highlights the final total price at the bottom of the order summary. */
 .order-total {
+    /* Gold colour matches how prices are styled elsewhere on the site (e.g. card prices). */
     color: var(--gold);
 
+    /* Large size makes the total the most prominent figure in the table. */
     font-size: 1.5rem;
 
+    /* Bolds the total so it's unmistakable. */
     font-weight: 800;
 }
 
+/* .empty-state is shown in place of the table when the cart/order list has no items. */
 .empty-state {
+    /* Generous padding gives the empty message room to breathe within its box. */
     padding: 30px;
 
+    /* Muted grey text signals this is a placeholder/informational message, not primary content. */
     color: var(--grey-dark);
 
+    /* Light grey background distinguishes the empty state box from the surrounding page. */
     background: var(--grey);
 
+    /* Rounds the box's corners to match the site's card style. */
     border-radius: var(--radius);
 
+    /* Centres the message text within the box. */
     text-align: center;
 }
 
@@ -1631,37 +1697,55 @@ textarea {
 /* ==========================================================
    20. STEPS
    ========================================================== */
-
+/* .step is an individual numbered step box, e.g. for a "How it works" or checkout process section. */
 .step {
+    /* Adds space below each step, separating it from the next one in the list. */
     margin-bottom: 18px;
 
+    /* Generous internal padding around the step's content. */
     padding: 22px;
 
+    /* White background, consistent with other content boxes. */
     background: var(--white);
 
+    /* A grey border outlines the step box. */
     border: 2px solid var(--grey-mid);
 
+    /* Rounds the step box's corners to match the site's card style. */
     border-radius: var(--radius);
 }
 
+/*
+   .step h3 span targets the small numbered circle placed
+   inside a step's heading (e.g. the "1" in "Step 1").
+*/
 .step h3 span {
+    /* Uses inline-flex so the number can be centred within its circular badge. */
     display: inline-flex;
 
+    /* Vertically centres the number within the circle. */
     align-items: center;
 
+    /* Horizontally centres the number within the circle. */
     justify-content: center;
 
+    /* Sets a fixed circle size. */
     width: 34px;
     height: 34px;
 
+    /* Adds a small gap between the number circle and the step's heading text. */
     margin-right: 10px;
 
+    /* Yellow number text for contrast against the navy circle. */
     color: var(--yellow);
 
+    /* Navy circle background, echoing the site's brand colours. */
     background: var(--navy);
 
+    /* A border-radius of 50% turns the square box into a perfect circle. */
     border-radius: 50%;
 
+    /* Sets the number's font size to fit comfortably within the small circle. */
     font-size: 1rem;
 }
 
