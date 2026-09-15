@@ -1919,6 +1919,14 @@ textarea {
     line-height: 1.5;
 }
 
+/* Makes the selected product image fill its full container */
+#detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
 
 /* ==========================================================
    23. ANCHOR SUB-NAVIGATION
