@@ -1020,23 +1020,28 @@ strong {
 /* ==========================================================
    10. GRIDS
    ========================================================== */
-
+/* .grid is the base grid container; specific column-count classes below extend it. */
 .grid {
+    /* Enables CSS grid layout for whatever element this class is applied to. */
     display: grid;
 
+    /* Adds consistent spacing between every grid item, both rows and columns. */
     gap: 24px;
 }
 
+/* .grid-2 arranges grid items into two equal-width columns. */
 .grid-2 {
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 }
 
+/* .grid-3 arranges grid items into three equal-width columns. */
 .grid-3 {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 }
 
+/* .grid-4 arranges grid items into four equal-width columns. */
 .grid-4 {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
@@ -1046,89 +1051,131 @@ strong {
 /* ==========================================================
    11. CARDS
    ========================================================== */
-
+/* .card is the reusable product/listing card used throughout the site. */
 .card {
+    /* Allows the card to shrink below its content's natural width instead of overflowing its grid cell. */
     min-width: 0;
 
+    /* Stacks the card's image and body vertically using flexbox. */
     display: flex;
 
+    /* Sets the flex direction to a vertical column. */
     flex-direction: column;
 
+    /* Clips the image's corners so they follow the card's rounded border. */
     overflow: hidden;
 
+    /* White card background, standard for content cards. */
     background: var(--white);
 
+    /* A subtle light grey border outlines the card. */
     border: 1px solid var(--grey-mid);
 
+    /* Rounds the card's corners using the shared radius variable. */
     border-radius: var(--radius);
 
+    /* Applies the shared soft drop-shadow to lift the card off the page. */
     box-shadow: var(--shadow);
 
+    /*
+       Animates the hover lift and shadow change smoothly
+       instead of switching instantly.
+    */
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
+/* Lifts the card up slightly and deepens its shadow when hovered, suggesting interactivity. */
 .card:hover {
+    /* Moves the card up 4px on hover. */
     transform: translateY(-4px);
 
+    /* Swaps to the stronger hover shadow variable. */
     box-shadow: var(--shadow-hover);
 }
 
+/* Styles the product image at the top of each card. */
 .card img {
+    /* Fills the full width of the card. */
     width: 100%;
 
+    /* Fixes a consistent image height so cards line up evenly in a grid. */
     height: 210px;
 
+    /* Crops the image to fill the space without distorting its proportions. */
     object-fit: cover;
 }
 
+/* .card-body wraps the text content below the card image (title, price, button, etc.). */
 .card-body {
+    /* Allows the body to shrink if needed, avoiding overflow inside the card. */
     min-width: 0;
 
+    /* Lets the body grow to fill any remaining vertical space in the card. */
     flex: 1;
 
+    /* Stacks the body's children (heading, text, button) vertically. */
     display: flex;
 
+    /* Sets a vertical flex direction for the card body's contents. */
     flex-direction: column;
 
+    /* Adds internal spacing around the card's text content. */
     padding: 20px;
 }
 
+/* Styles descriptive paragraph text inside the card body. */
 .card-body p {
+    /* Uses the slightly muted text colour for secondary descriptive text. */
     color: var(--text-light);
 
+    /* Slightly smaller than standard body text, appropriate for a compact card. */
     font-size: 0.96rem;
 }
 
+/* .price highlights the product price within a card. */
 .card-body .price {
+    /* Adds a little breathing room above and below the price. */
     margin: 6px 0 12px;
 
+    /* Colours the price gold to draw attention as a key detail. */
     color: var(--gold);
 
+    /* Makes the price noticeably larger than surrounding text. */
     font-size: 1.3rem;
 
+    /* Bolds the price so it's easy to spot at a glance. */
     font-weight: 800;
 }
 
+/* Pushes the card's button to the bottom of the card and aligns it to the left. */
 .card-body .btn {
+    /* "auto" margin on top pushes this element down, filling any leftover flex space above it. */
     margin-top: auto;
 
+    /* Overrides the default block alignment so the button only takes up as much width as it needs. */
     align-self: flex-start;
 }
 
+/* .card-navy is a dark variant of the card, used for featured or highlighted listings. */
 .card-navy {
+    /* Off-white text for readability on the dark background. */
     color: #e7e9f0;
 
+    /* Navy background instead of the default white. */
     background: var(--navy);
 
+    /* Matches the border colour to the background so no light edge shows. */
     border-color: var(--navy);
 }
 
+/* Colours headings inside a navy card yellow so they remain legible. */
 .card-navy h3 {
     color: var(--yellow);
 }
 
+/* Colours paragraph text inside a navy card to the same soft off-white as other dark-background text. */
 .card-navy p {
     color: #e7e9f0;
 }
@@ -1137,14 +1184,18 @@ strong {
 /* ==========================================================
    12. INFORMATION BOX
    ========================================================== */
-
+/* .info-box is a callout box used to highlight tips or important notices within the page content. */
 .info-box {
+    /* Generous internal padding so the message doesn't feel cramped. */
     padding: 22px 24px;
 
+    /* Light grey background makes the box stand out from the surrounding white content. */
     background: var(--grey);
 
+    /* A thick gold left border acts as a visual "flag" marking this as a callout. */
     border-left: 7px solid var(--gold);
 
+    /* Rounds the box's corners to match the site's overall card style. */
     border-radius: var(--radius);
 }
 
