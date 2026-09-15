@@ -2147,50 +2147,70 @@ footer li {
 /* ==========================================================
    26. MOBILE NAVIGATION
    ========================================================== */
-
+/*
+   This media query targets phones and small tablets
+   (850px wide or narrower) and switches the navigation
+   into a collapsible mobile menu.
+*/
 @media (max-width: 850px) {
 
+    /* Allows the nav row's contents to wrap onto multiple lines once the mobile menu opens beneath it. */
     .nav {
         flex-wrap: wrap;
     }
 
+    /* Reveals the hamburger toggle button, which is hidden by default on larger screens. */
     .nav-toggle {
         display: block;
     }
 
+    /* Hides the nav links by default on mobile; they're revealed only when the menu is opened. */
     .nav-links {
         display: none;
 
+        /* Makes the menu take the full width of the header once it's open. */
         width: 100%;
 
+        /* Stacks the links vertically instead of horizontally. */
         flex-direction: column;
 
+        /* Stretches each link to the full width of the menu instead of centring them. */
         align-items: stretch;
 
+        /* Uses a tighter gap between stacked links compared to the horizontal desktop layout. */
         gap: 2px;
 
+        /* Adds space above the stacked links, separating them from the header row. */
         padding-top: 10px;
     }
 
     /*
        Supports the existing JavaScript functionality.
     */
-
+    /*
+       .open / .is-open are toggled by JavaScript when the
+       hamburger button is clicked, switching the menu from
+       hidden (display: none) to visible (display: flex).
+    */
     .nav-links.open,
     .nav-links.is-open {
         display: flex;
     }
 
+    /* Makes each stacked mobile link fill the full menu width. */
     .nav-links a {
         width: 100%;
 
+        /* Increases the clickable padding area for easier tapping on touch screens. */
         padding: 10px 12px;
     }
 
+    /* Adds a subtle highlight background when hovering/tapping a mobile menu link. */
     .nav-links a:hover {
         background: rgba(255, 255, 255, 0.06);
     }
 
+    /* Prevents the cart button from stretching to the full menu width like the other stacked links. */
     .nav-cart {
         width: fit-content !important;
     }
@@ -2200,17 +2220,23 @@ footer li {
 /* ==========================================================
    27. SMALL MOBILE
    ========================================================== */
-
+/*
+   This media query fine-tunes spacing and sizing further for
+   small phone screens (620px wide or narrower).
+*/
 @media (max-width: 620px) {
 
+    /* Slightly reduces the base body text size to fit more comfortably on small screens. */
     body {
         font-size: 16px;
     }
 
+    /* Reduces the side margin on the main container slightly for small screens. */
     .wrap {
         width: calc(100% - 30px);
     }
 
+    /* Reduces the vertical spacing between sections since screen space is limited. */
     .section {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -2219,12 +2245,15 @@ footer li {
 
     /* Typography */
 
+    /* Shrinks the main heading size so it doesn't overwhelm a small screen. */
     h1 {
         font-size: 2.2rem;
 
+        /* Slightly loosens letter spacing at the smaller size for readability. */
         letter-spacing: -0.5px;
     }
 
+    /* Shrinks section headings to fit better on small screens. */
     h2 {
         font-size: 1.85rem;
 
@@ -2234,10 +2263,12 @@ footer li {
 
     /* Hero */
 
+    /* Reduces the hero's vertical padding on small screens. */
     .hero {
         padding: 52px 0;
     }
 
+    /* Shortens the hero image's height so it doesn't dominate a small screen. */
     .hero-img img {
         height: 260px;
     }
@@ -2245,6 +2276,7 @@ footer li {
 
     /* Grids */
 
+    /* Collapses all multi-column grids and the gallery down to a single column on small phones. */
     .grid-2,
     .grid-3,
     .grid-4,
@@ -2255,6 +2287,7 @@ footer li {
 
     /* Cards */
 
+    /* Slightly increases the card image height for better visibility once cards are full-width. */
     .card img {
         height: 220px;
     }
@@ -2262,16 +2295,20 @@ footer li {
 
     /* Buttons */
 
+    /* Makes buttons stretch the full width of their container, which is easier to tap on mobile. */
     .btn {
         width: 100%;
 
+        /* Ensures button text stays centred even at full width. */
         text-align: center;
     }
 
+    /* Also stretches the card's button to full width once the card layout is narrower. */
     .card-body .btn {
         align-self: stretch;
     }
 
+    /* Keeps small buttons at their natural width rather than forcing them full-width like the main .btn. */
     .btn-sm {
         width: auto;
     }
@@ -2279,10 +2316,12 @@ footer li {
 
     /* Forms */
 
+    /* Stacks paired form fields (like first/last name) into a single column on small screens. */
     .form-row {
         grid-template-columns: 1fr;
     }
 
+    /* Reduces the form card's padding slightly to save space on small screens. */
     .form-card {
         padding: 20px;
     }
@@ -2290,12 +2329,15 @@ footer li {
 
     /* Toolbar */
 
+    /* Stacks the filter toolbar's fields vertically instead of in a row. */
     .toolbar {
         flex-direction: column;
 
+        /* Stretches each field to the toolbar's full width once stacked. */
         align-items: stretch;
     }
 
+    /* Ensures each field takes the full toolbar width once stacked vertically. */
     .field {
         width: 100%;
     }
@@ -2303,39 +2345,51 @@ footer li {
 
     /* Map */
 
+    /* Reduces the map's minimum height on small screens to save vertical space. */
     .map-frame {
         min-height: 300px;
     }
 
+    /* Matches the embedded iframe's height to the smaller map frame. */
     .map-frame iframe {
         height: 300px !important;
     }
 
     /* Footer */
 
+    /* Collapses the footer's columns into a single stacked column on small screens. */
     .footer-grid {
         grid-template-columns: 1fr;
 
+        /* Uses a slightly smaller gap between the stacked footer sections. */
         gap: 25px;
     }
 
 
     /* Order table */
 
+    /*
+       On very small screens a full table can overflow, so this
+       lets the table scroll horizontally rather than squashing
+       its columns unreadably.
+    */
     .order-table {
         display: block;
 
         overflow-x: auto;
 
+        /* Stops cell text from wrapping, which keeps columns readable while scrolling horizontally. */
         white-space: nowrap;
     }
 
 
     /* Toast */
 
+    /* Slightly narrows the toast so it doesn't touch the screen edges on small phones. */
     .toast {
         width: calc(100% - 30px);
 
+        /* Uses a slightly smaller radius than the pill shape used on larger screens. */
         border-radius: 12px;
     }
 }
@@ -2344,33 +2398,43 @@ footer li {
 /* ==========================================================
    28. VERY SMALL PHONES
    ========================================================== */
-
+/*
+   Final adjustments for very narrow phone screens
+   (380px wide or narrower), such as older/smaller devices.
+*/
 @media (max-width: 380px) {
 
+    /* Reduces the container's side margin even further on very small screens. */
     .wrap {
         width: calc(100% - 24px);
     }
 
+    /* Shrinks the main heading a bit more for very small screens. */
     h1 {
         font-size: 2rem;
     }
 
+    /* Shrinks section headings a bit more for very small screens. */
     h2 {
         font-size: 1.7rem;
     }
 
+    /* Further reduces the hero image's height for very small screens. */
     .hero-img img {
         height: 220px;
     }
 
+    /* Further reduces the card image height for very small screens. */
     .card img {
         height: 190px;
     }
 
+    /* Reduces the card body's internal padding to save space on very small screens. */
     .card-body {
         padding: 16px;
     }
 
+    /* Reduces the split card's internal padding to save space on very small screens. */
     .split-card {
         padding: 17px;
     }
@@ -2380,10 +2444,17 @@ footer li {
 /* ==========================================================
    29. ACCESSIBILITY
    ========================================================== */
-
+/*
+   :focus-visible only shows the focus outline when a user
+   is navigating with a keyboard (not with a mouse click),
+   giving keyboard users a clear indicator without adding
+   an outline to every mouse click.
+*/
 :focus-visible {
+    /* Draws a thick yellow outline around the focused element. */
     outline: 3px solid var(--yellow);
 
+    /* Adds a small gap between the element and its outline so the outline doesn't touch the element's edge. */
     outline-offset: 3px;
 }
 
@@ -2391,20 +2462,29 @@ footer li {
 /* ==========================================================
    30. REDUCED MOTION
    ========================================================== */
-
+/*
+   prefers-reduced-motion is an accessibility setting some
+   users enable in their OS to reduce animations, e.g. to
+   avoid motion sickness. This block respects that setting.
+*/
 @media (prefers-reduced-motion: reduce) {
 
+    /* Disables the smooth-scroll behaviour, making anchor jumps instant instead of animated. */
     html {
         scroll-behavior: auto;
     }
 
+    /* Forces nearly every animation and transition on the page to happen almost instantly instead of visibly. */
     *,
     *::before,
     *::after {
+        /* Shortens all animations to effectively zero duration. */
         animation-duration: 0.01ms !important;
 
+        /* Ensures animations only run once instead of repeating. */
         animation-iteration-count: 1 !important;
 
+        /* Shortens all transitions to effectively zero duration. */
         transition-duration: 0.01ms !important;
     }
 }
@@ -2413,15 +2493,22 @@ footer li {
 /* ==========================================================
    31. TOUCH DEVICES
    ========================================================== */
-
+/*
+   The (hover: none) media feature detects devices that
+   can't truly "hover" (like touchscreens), so hover-only
+   effects don't get stuck active after a tap.
+*/
 @media (hover: none) {
 
+    /* Disables the card's lift-on-hover effect on touch devices, since there's no real hover state. */
     .card:hover {
         transform: none;
 
+        /* Keeps the card's normal shadow instead of the hover shadow, which wouldn't make sense on touch. */
         box-shadow: var(--shadow);
     }
 
+    /* Disables the button's lift-on-hover animation on touch devices for the same reason. */
     .btn:hover {
         transform: none;
     }
@@ -2431,9 +2518,18 @@ footer li {
 /* ==========================================================
    32. PRINT
    ========================================================== */
-
+/*
+   This media query only applies when the page is being
+   printed, hiding interactive/navigation elements that
+   are meaningless on paper and adjusting text for print.
+*/
 @media print {
 
+    /*
+       Hides navigation, footer, buttons, and other
+       interactive/on-screen-only elements that don't
+       belong on a printed page.
+    */
     .topbar,
     .subnav,
     footer,
@@ -2443,19 +2539,23 @@ footer li {
         display: none !important;
     }
 
+    /* Switches text to pure black and a print-appropriate point size for readability on paper. */
     body {
         color: #000;
 
         font-size: 13pt;
     }
 
+    /* Removes the on-screen section spacing since printed pages don't need the same visual breathing room. */
     .section {
         padding: 0;
     }
 
+    /* Removes card shadows (which don't print well) and stops a card from being split awkwardly across a page break. */
     .card {
         box-shadow: none;
 
+        /* Tells the browser's print engine to avoid breaking a card across two pages if possible. */
         break-inside: avoid;
     }
 }
