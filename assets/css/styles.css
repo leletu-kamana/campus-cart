@@ -769,35 +769,48 @@ strong {
 /* ==========================================================
    7. SPLIT CARDS
    ========================================================== */
-
+/* .split arranges a small set of highlight cards (e.g. "Buy" vs "Sell") side by side within the hero. */
 .split {
+    /* Uses grid layout for equal-width columns. */
     display: grid;
 
+    /* Creates two equal-width flexible columns. */
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
+    /* Adds spacing between the two split cards. */
     gap: 20px;
 
+    /* Adds space above the split cards, separating them from the text above. */
     margin-top: 28px;
 }
 
+/* .split-card is an individual highlight box within the .split grid. */
 .split-card {
+    /* Adds internal spacing so the text doesn't touch the card's edges. */
     padding: 22px;
 
+    /* A very subtle semi-transparent white overlay, letting the navy hero background show through slightly. */
     background: rgba(255, 255, 255, 0.07);
 
+    /* Draws a yellow border to visually separate the card from the hero background. */
     border: 2px solid var(--yellow);
 
+    /* Rounds the card's corners to match the site's overall style. */
     border-radius: var(--radius);
 }
 
+/* Colours the heading inside a split card yellow so it's visible against the semi-transparent background. */
 .split-card h3 {
     color: var(--yellow);
 }
 
+/* Styles the paragraph text inside a split card. */
 .split-card p {
+    /* Uses the same soft off-white as other hero text for readability. */
     color: #e7e9f0;
 
+    /* Sets a standard body-text size for the card description. */
     font-size: 1rem;
 }
 
