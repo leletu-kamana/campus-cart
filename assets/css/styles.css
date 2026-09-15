@@ -1203,49 +1203,78 @@ strong {
 /* ==========================================================
    13. TABS
    ========================================================== */
-
+/* .tabs is the horizontal row of clickable tab buttons (e.g. for filtering categories). */
 .tabs {
+    /* Lays tab buttons out in a horizontal row. */
     display: flex;
 
+    /* Lets tabs wrap onto a new line if there isn't enough horizontal space. */
     flex-wrap: wrap;
 
+    /* Adds spacing between individual tab buttons. */
     gap: 10px;
 
+    /* Adds space below the tab row, separating it from the content panel underneath. */
     margin-bottom: 26px;
 
+    /* Adds space between the tabs and the divider line below them. */
     padding-bottom: 12px;
 
+    /* Draws a thick grey line beneath the tab row to visually separate tabs from content. */
     border-bottom: 3px solid var(--grey-mid);
 }
 
+/* .tab-btn is an individual clickable tab. */
 .tab-btn {
+    /* Comfortable padding so the tab is easy to click/tap. */
     padding: 10px 20px;
 
+    /* Default (inactive) tab text colour is navy. */
     color: var(--navy);
 
+    /* Default (inactive) tab background is light grey. */
     background: var(--grey);
 
+    /* Reserves border space so the layout doesn't shift when a border might be added later. */
     border: 2px solid transparent;
 
+    /* Fully rounds tab buttons into pill shapes. */
     border-radius: var(--radius-pill);
 
+    /* Sets a comfortable, slightly smaller-than-body tab text size. */
     font-size: 0.95rem;
 
+    /* Bolds the tab label so it's easy to read. */
     font-weight: 800;
 
+    /* Shows a pointer cursor since tabs are clickable. */
     cursor: pointer;
 }
 
+/* Darkens the tab's background slightly on hover for feedback. */
 .tab-btn:hover {
     background: var(--grey-mid);
 }
 
+/*
+   [aria-selected="true"] is an accessibility attribute set
+   by JavaScript to mark the currently active tab. Styling
+   based on it keeps the visual state in sync with what
+   screen readers announce as selected.
+*/
 .tab-btn[aria-selected="true"] {
+    /* The active tab's text turns yellow to stand out. */
     color: var(--yellow);
 
+    /* The active tab's background switches to navy, clearly marking it as selected. */
     background: var(--navy);
 }
 
+/*
+   [hidden] is a native HTML attribute. When JavaScript adds
+   it to a tab panel, this rule makes sure the panel is
+   actually hidden from view (not just semantically hidden).
+*/
 .tab-panel[hidden] {
     display: none;
 }
@@ -1254,38 +1283,54 @@ strong {
 /* ==========================================================
    14. FILTER TOOLBAR
    ========================================================== */
-
+/* .toolbar is the row of filter/search controls shown above a product listing grid. */
 .toolbar {
+    /* Lays the filter fields out in a horizontal row. */
     display: flex;
 
+    /* Aligns fields along their bottom edge, so labels of different lengths don't misalign the inputs. */
     align-items: flex-end;
 
+    /* Allows fields to wrap onto multiple lines on narrower screens. */
     flex-wrap: wrap;
 
+    /* Adds spacing between each filter field. */
     gap: 14px;
 
+    /* Adds space below the toolbar, separating it from the results grid. */
     margin-bottom: 28px;
 
+    /* Adds internal padding so the toolbar's background doesn't touch its content edges. */
     padding: 18px;
 
+    /* Light grey background distinguishes the toolbar as a distinct control panel. */
     background: var(--grey);
 
+    /* Rounds the toolbar's corners to match the site's card style. */
     border-radius: var(--radius);
 }
 
+/* .field wraps a single label + input pair within the toolbar or a form. */
 .field {
+    /* Stacks the label above its input. */
     display: flex;
 
+    /* Sets a vertical flex direction. */
     flex-direction: column;
 
+    /* Adds a small consistent gap between the label and its input. */
     gap: 6px;
 }
 
+/* Styles the text label above a form field. */
 .field label {
+    /* Navy label text ties it to the brand's heading colour. */
     color: var(--navy);
 
+    /* Slightly smaller than body text, appropriate for a label. */
     font-size: 0.9rem;
 
+    /* Bolds the label so it's easy to distinguish from the input value. */
     font-weight: 700;
 }
 
@@ -1293,54 +1338,79 @@ strong {
 /* ==========================================================
    15. FORM ELEMENTS
    ========================================================== */
-
+/* Shared base styling applied to every text input, dropdown, and textarea on the site. */
 input,
 select,
 textarea {
+    /* Makes form fields fill the full width of their container by default. */
     width: 100%;
 
+    /* Allows the field to shrink below its content's natural width inside flex/grid layouts. */
     min-width: 0;
 
+    /* Comfortable internal padding so typed text isn't cramped against the edges. */
     padding: 12px 14px;
 
+    /* Standard dark text colour for user input. */
     color: var(--text);
 
+    /* White background for a clean, readable input field. */
     background: var(--white);
 
+    /* A light grey border gives the field a visible outline before it's focused. */
     border: 2px solid var(--grey-mid);
 
+    /* Rounds the input's corners for a soft, modern look. */
     border-radius: 10px;
 
+    /* Uses the same font stack as the rest of the site so inputs feel consistent with body text. */
     font-family:
         "Segoe UI",
         Arial,
         Helvetica,
         sans-serif;
 
+    /* Sets a comfortable, readable text size for typed input. */
     font-size: 1rem;
 
+    /* Slightly loosens line spacing, useful for multi-line textareas. */
     line-height: 1.5;
 
+    /*
+       Smoothly animates the border and glow when a field
+       is focused, instead of the change appearing instantly.
+    */
     transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
 }
 
+/* Styles form fields while the user has clicked/tabbed into them (the "focus" state). */
 input:focus,
 select:focus,
 textarea:focus {
+    /* Removes the browser's default focus outline since we're providing a custom one below. */
     outline: none;
 
+    /* Switches the border to navy to clearly indicate which field is active. */
     border-color: var(--navy);
 
+    /*
+       Adds a soft yellow "glow" ring around the focused
+       field using a semi-transparent box-shadow, which is
+       an accessible way to show focus beyond just the border.
+    */
     box-shadow:
         0 0 0 3px
         rgba(255, 210, 63, 0.45);
 }
 
+/* Extra rules specific to multi-line text areas. */
 textarea {
+    /* Guarantees the textarea starts tall enough to be useful for longer messages. */
     min-height: 150px;
 
+    /* Lets the user manually resize the textarea vertically only, not horizontally. */
     resize: vertical;
 }
 
@@ -1348,43 +1418,61 @@ textarea {
 /* ==========================================================
    16. GALLERY
    ========================================================== */
-
+/* .gallery lays out a grid of images, e.g. for a product's photo gallery. */
 .gallery {
+    /* Uses CSS grid to arrange gallery items. */
     display: grid;
 
+    /* Creates three equal-width columns for the gallery images. */
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
+    /* Adds spacing between gallery images. */
     gap: 16px;
 }
 
+/* Styles each individual gallery item, which is a <figure> wrapping an image and caption. */
 .gallery figure {
+    /* Clips the image's corners to match the figure's rounded shape. */
     overflow: hidden;
 
+    /* Removes the default margin browsers apply to <figure> elements. */
     margin: 0;
 
+    /* Sets caption text to white to be readable against the dark background. */
     color: var(--white);
 
+    /* Navy background shows behind the caption text area. */
     background: var(--navy);
 
+    /* Rounds the figure's corners to match the site's card style. */
     border-radius: var(--radius);
 
+    /* Adds a soft shadow so gallery items lift slightly off the page. */
     box-shadow: var(--shadow);
 }
 
+/* Sets a consistent size and crop for every gallery image. */
 .gallery img {
+    /* Fills the full width of its figure. */
     width: 100%;
 
+    /* Fixes a shorter height than the main card images, suited to a dense gallery grid. */
     height: 180px;
 
+    /* Crops the image to fill the space while preserving its proportions. */
     object-fit: cover;
 }
 
+/* Styles the caption text shown below each gallery image. */
 .gallery figcaption {
+    /* Adds internal padding so the caption text doesn't touch the figure's edges. */
     padding: 12px 14px;
 
+    /* Slightly smaller than body text, appropriate for a caption. */
     font-size: 0.9rem;
 
+    /* Comfortable line spacing for potentially multi-line captions. */
     line-height: 1.5;
 }
 
