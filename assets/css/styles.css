@@ -1753,41 +1753,63 @@ textarea {
 /* ==========================================================
    21. TOAST
    ========================================================== */
-
+/* .toast is a temporary pop-up notification (e.g. "Added to cart") shown at the bottom of the screen. */
 .toast {
+    /* Positions the toast relative to the browser window rather than the page's normal flow. */
     position: fixed;
 
+    /* Places the toast horizontally centred using left: 50% together with the transform below. */
     left: 50%;
+    /* Places the toast near the bottom of the viewport. */
     bottom: 26px;
 
+    /* Ensures the toast appears above all other page content, including the sticky header. */
     z-index: 2000;
 
+    /* Prevents the toast from stretching edge-to-edge on very narrow screens. */
     max-width: calc(100% - 30px);
 
+    /* Comfortable internal padding around the toast's message text. */
     padding: 13px 22px;
 
+    /* Yellow text stands out against the dark background. */
     color: var(--yellow);
 
+    /* Navy background matches the header/footer for brand consistency. */
     background: var(--navy);
 
+    /* Fully rounds the toast into a pill shape. */
     border-radius: var(--radius-pill);
 
+    /* Adds a soft shadow so the toast appears to float above the page. */
     box-shadow: var(--shadow);
 
+    /* Bolds the toast message so it's easy to read at a glance. */
     font-weight: 700;
 
+    /* Centres the message text within the toast. */
     text-align: center;
 
+    /* Starts fully transparent (invisible) until the .show class is added by JavaScript. */
     opacity: 0;
 
+    /* Prevents the invisible toast from blocking clicks on elements beneath it. */
     pointer-events: none;
 
+    /*
+       Shifts the toast left by exactly half its own width,
+       which combined with left: 50% perfectly centres it
+       regardless of the toast's actual width.
+    */
     transform: translateX(-50%);
 
+    /* Smoothly fades the toast in/out instead of it appearing/disappearing instantly. */
     transition: opacity 0.25s ease;
 }
 
+/* .show is toggled on by JavaScript to reveal the toast when a notification needs to appear. */
 .toast.show {
+    /* Fades the toast fully into view. */
     opacity: 1;
 }
 
@@ -1805,23 +1827,31 @@ textarea {
    available width.
 */
 
+/* .map-frame / .product-map-frame wrap an embedded map (e.g. Google Maps) so it fits the page layout. */
 .map-frame, .product-map-frame {
+    /* Establishes this box as the positioning context for the map content inside it. */
     position: relative;
 
+    /* Makes the map frame fill the full width of its container. */
     width: 100%;
 
     /*
        Responsive map height.
        The map gets smaller on smaller screens.
     */
+    /* Guarantees the map has a reasonable minimum height even before the embed loads. */
     min-height: 420px;
 
+    /* Clips anything from the embedded map that would spill outside the rounded frame. */
     overflow: hidden;
 
+    /* Grey placeholder background shown while the map embed is loading. */
     background: var(--grey);
 
+    /* A thick navy border frames the map, matching the brand colour. */
     border: 4px solid var(--navy);
 
+    /* Rounds the frame's corners to match the site's card style. */
     border-radius: var(--radius);
 }
 
@@ -1829,20 +1859,26 @@ textarea {
 /*
    Google Maps iframe
 */
-
+/* Forces the actual embedded map iframe to always match its parent frame's size. */
 .map-frame iframe {
+    /* Removes the small inline-element gap iframes can have by default. */
     display: block;
 
+    /* !important is needed here because the map embed's own inline styles/attributes would otherwise win. */
     width: 100% !important;
 
+    /* Also forces the minimum width to 100%, preventing the embed from imposing its own fixed width. */
     min-width: 100% !important;
 
+    /* Forces a fixed pixel height so the map fills the frame consistently. */
     height: 420px !important;
 
+    /* Removes any default spacing around the iframe. */
     margin: 0;
 
     padding: 0;
 
+    /* Removes the default border browsers sometimes add to iframes. */
     border: 0;
 }
 
@@ -1851,13 +1887,15 @@ textarea {
    Some map embeds use a div instead of directly using
    the iframe.
 */
-
+/* Handles map embed scripts that wrap the iframe in an extra <div>, forcing that wrapper to full width too. */
 .map-frame > div {
     width: 100% !important;
 
+    /* Removes any max-width limit the embed script might have applied to its wrapper div. */
     max-width: none !important;
 }
 
+/* Also targets an iframe nested inside that extra wrapper div, applying the same full-width fix. */
 .map-frame > div iframe {
     width: 100% !important;
 
@@ -1866,14 +1904,18 @@ textarea {
 
 
 /* Map note */
-
+/* .map-note is small explanatory text placed beneath a map, e.g. directions or a disclaimer. */
 .map-note {
+    /* Adds space above the note, separating it from the map. */
     margin-top: 10px;
 
+    /* Muted grey colour marks this as secondary, non-critical text. */
     color: var(--grey-dark);
 
+    /* Smaller than body text, appropriate for a caption-style note. */
     font-size: 0.9rem;
 
+    /* Comfortable line spacing in case the note wraps onto multiple lines. */
     line-height: 1.5;
 }
 
