@@ -86,61 +86,24 @@ The Account page is part of the **HTML-only development in Part 1**. It provides
 The HTML structure was created first so that the content, navigation and page sections were in place before the styling and interactive functionality were developed.
 
 ## Part 2 – CSS Development
-Part 2 focuses on the **CSS development** of Campus-Cart. The CSS is kept in an external stylesheet so that the same design can be used across the different HTML pages. The stylesheet contains the main layout, navigation, typography, buttons, colours and responsive rules.
+Part 2 focuses on the **CSS development and visual design** of Campus-Cart. The website uses an external CSS stylesheet so the same styling can be applied across the different HTML pages. The CSS is used to control the appearance, layout, spacing, typography and responsive behaviour of the website.
 
-### 1. Design Variable – Colour Scheme
-The first design variable used in the CSS is the **colour scheme**. The main colours are stored as CSS custom properties inside the `:root` selector. This makes it easier to reuse the same colours throughout the website instead of writing the colour codes repeatedly.
+### CSS Features
+The main CSS features used in Campus-Cart include:
+- **CSS variables** for the main colours, making the design easier to keep consistent and update.
+- **CSS reset** rules to provide a consistent starting point across different browsers.
+- **Typography styling** for headings, paragraphs, labels and important text.
+- **Responsive layouts** using flexible widths, CSS Grid, Flexbox and media queries for desktop, tablet and mobile screens.
+- **Navigation styling** for the main navigation, links, buttons and mobile navigation controls.
+- **Hero and section layouts** for organising the main content areas of the pages.
+- **Cards and grids** for displaying products, information and other content in a structured way.
+- **Buttons, badges and form controls** with consistent spacing, borders, colours and states.
+- **Product and gallery layouts** for presenting product images, details and prices.
+- **Form styling** for enquiry, contact and other input areas.
+- **Responsive and accessibility-related styling**, including keyboard focus states and reduced-motion support.
+- **Print styling** for content that may need to be printed, such as checklist information.
 
-The main colour choices are:
-
-| Colour variable | Value | Main use |
-|---|---|---|
-| `--navy` | `#0d1b3e` | Main navigation, dark sections and headings. |
-| `--navy-light` | `#17295c` | Lighter navy areas and gradients. |
-| `--navy-dark` | `#08142f` | Darker brand areas where required. |
-| `--yellow` | `#ffd23f` | Buttons, highlights and important navigation elements. |
-| `--yellow-light` | `#ffe477` | Lighter yellow hover states. |
-| `--gold` | `#b8860b` | Links, prices and smaller brand highlights. |
-| `--gold-light` | `#d9a41a` | Hover states and gold highlights. |
-| `--white` | `#ffffff` | Main backgrounds and light text. |
-| `--grey` | `#f2f3f5` | Alternate section backgrounds. |
-
-The navy, yellow and gold colours are used consistently to give Campus-Cart a recognisable visual identity. The lighter grey and white colours help separate content areas and keep the pages readable.
-
-Using CSS variables also means that a colour can be changed in one place and then update everywhere that variable is used. For example, changing `--navy` would update elements that use `var(--navy)` throughout the stylesheet.
-
-### 2. Reset
-The reset is used at the start of the CSS to remove some of the browser's default spacing and styling. This gives the Campus-Cart pages a more consistent starting point before the rest of the CSS is applied.
-
-The reset uses `box-sizing: border-box` so that an element's padding and border are included when working out its width and height. The `html` element also uses smooth scrolling and scroll padding to make navigation links easier to use when moving to sections on the page.
-
-For the `body`, the default margin and padding are removed. The reset also sets the minimum width, main font, text size, line height, text colour and background colour used across the website.
-
-The reset also includes common rules for images, links and form controls. Images are made responsive so they do not go outside their containers, while buttons and form controls can use the website's font instead of the browser's default font.
-
-### 3. Typography
-Typography controls how the text looks across the Campus-Cart website. The CSS groups the main heading styles from `h1` to `h4` so that they can use a consistent font, weight and spacing. This helps keep the headings looking similar on the different pages.
-
-The headings use a readable font stack of `Segoe UI`, Arial and Helvetica. The heading weight is set to `800` to make the main headings stand out. The line height and letter spacing are also set so the text is easier to read and does not look too crowded.
-
-The `h1` and `h2` headings use responsive `clamp()` font sizes. This allows the heading size to adjust depending on the screen size instead of always using one fixed size. The smaller `h3` and `h4` headings use simpler fixed sizes for smaller sections.
-
-Paragraphs use a line height of `1.7` and have spacing below them so that longer blocks of text are easier to read. The `strong` element is also given a font weight of `700` so important text can stand out.
-
-The typography update keeps the existing Campus-Cart design while making the CSS easier to read and maintain.
-
-### 4. Main Container
-The main container is used to keep the content on the Campus-Cart pages centred and within a readable width. The `.wrap` class gives the content a width of `calc(100% - 40px)` and uses the `--max-width` variable so the content does not become too wide on larger screens.
-
-The left and right margins are set to `auto`, which centres the container horizontally. This also leaves space around the content on smaller screens instead of making the text and other elements touch the edges of the screen.
-
-The `.section` class is used for the main content sections on the pages. It adds `72px` of space above and below each section to give the page a more open layout. The `.section.alt` class can be used for a light grey background to separate different content areas.
-
-The `.section.navy` class creates a dark navy feature section with light text. Its headings use the yellow colour, while paragraph text uses a softer off-white colour for better readability against the dark background.
-
-The `.section-head` class controls the introduction area at the top of a section. It limits the text width to `720px` and adds space below the introduction before the next content starts.
-
-The `.eyebrow` class is used for small uppercase labels above section headings. It uses the gold colour, smaller text, bold weight and letter spacing to make these labels stand out without taking attention away from the main heading.
+The main aim of Part 2 is to turn the HTML structure from Part 1 into a consistent and responsive website design while keeping the CSS organised and reusable.
 
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
