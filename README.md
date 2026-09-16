@@ -117,7 +117,7 @@ The planned JavaScript features include:
 - Calculating the order total.
 - Clearing the Order Summary.
 - Moving to the delivery/address step.
-- Navigation menu interaction on smaller screens.
+- Navigation menu interaction on smaller screens. (Available Feature)
 - Printing the Parent Hub checklist.
 
 These features will be implemented and tested during Part 3. The README will be updated again once the functionality has actually been added and tested.
