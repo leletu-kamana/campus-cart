@@ -63,37 +63,23 @@ Parents and guardians who help students prepare for registration and the start o
 
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
-## Images and Visual Preview
+## Part 2 – Website Screenshot Evidence
 
-The project images below are stored in the repository under `assets/images/`. Markdown image syntax displays an image directly in this README. The text inside the square brackets is the alternative text, and the path inside parentheses points to the image file.
+This section is reserved for genuine screenshots of the rendered Campus-Cart website for **Part 2 visual evidence**. The screenshots should show the actual website in a browser rather than planning wireframes or individual project images.
 
-### Campus-Cart hero image
+### Desktop Website Screenshot
 
-![Campus-Cart hero image](assets/images/bundles/hero-campus.jpg)
+Add the genuine desktop screenshot here after uploading it to the repository:
 
-### Starter bundle
+![Campus-Cart desktop website screenshot](screenshots/part2-desktop.png)
 
-![Campus-Cart starter bundle](assets/images/bundles/starter-bundle.jpg)
+### Mobile Website Screenshot
 
-### Second-hand marketplace
+Add the genuine mobile screenshot here after uploading it to the repository:
 
-![Campus-Cart second-hand marketplace](assets/images/second-hand/marketplace.jpg)
+![Campus-Cart mobile website screenshot](screenshots/part2-mobile.png)
 
-### Image syntax example
-
-Use this format when adding another image stored in the repository:
-
-```markdown
-![Describe the image here](assets/images/folder/image-name.jpg)
-```
-
-For example, to add a real screenshot of the homepage, first save the screenshot in a folder such as `screenshots/`, then use:
-
-```markdown
-![Campus-Cart homepage screenshot](screenshots/homepage-desktop.png)
-```
-
-Only add screenshot links after the corresponding screenshot file has been uploaded to the repository. The product and hero images above are project images, not screenshots of the rendered website.
+> **Screenshot requirement:** The screenshot files must be captured from the actual rendered website and uploaded to the `screenshots/` folder before these image links can display correctly. The filenames above are placeholders until the genuine screenshots are added.
 
 ## Part 1 – Planning and Initial Development
 Part 1 covers the planning and initial development of Campus-Cart, with the initial website structure developed using **HTML5**. The planning identifies the organisation idea, target audience, page content, site structure and navigation before visual styling and interactive features are added. Semantic elements such as headings, navigation, sections, lists, images, links and forms help organise the information into a clear document structure (Duckett, 2011).
