@@ -10,6 +10,12 @@
 - **Student Email:** st10514888@rcconnect.edu.za
 - **GitHub:** [leletu-kamana](https://github.com/leletu-kamana)
 
+## Live Website
+
+**View Campus-Cart:** [https://leletu-kamana.github.io/campus-cart/](https://leletu-kamana.github.io/campus-cart/)
+
+The website is published using GitHub Pages. It is a front-end demonstration and does not process real payments or use real user accounts.
+
 ## Project Overview
 Campus-Cart is a fictional South African organisation created as a website project. The idea is to make it easier for students and families to find common tertiary-study essentials such as bedding, appliances, stationery, furniture, textbooks and starter bundles.
 
@@ -56,6 +62,38 @@ Parents and guardians who help students prepare for registration and the start o
 | GitHub | Repository and version management. |
 
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
+
+## Images and Visual Preview
+
+The project images below are stored in the repository under `assets/images/`. Markdown image syntax displays an image directly in this README. The text inside the square brackets is the alternative text, and the path inside parentheses points to the image file.
+
+### Campus-Cart hero image
+
+![Campus-Cart hero image](assets/images/bundles/hero-campus.jpg)
+
+### Starter bundle
+
+![Campus-Cart starter bundle](assets/images/bundles/starter-bundle.jpg)
+
+### Second-hand marketplace
+
+![Campus-Cart second-hand marketplace](assets/images/second-hand/marketplace.jpg)
+
+### Image syntax example
+
+Use this format when adding another image stored in the repository:
+
+```markdown
+![Describe the image here](assets/images/folder/image-name.jpg)
+```
+
+For example, to add a real screenshot of the homepage, first save the screenshot in a folder such as `screenshots/`, then use:
+
+```markdown
+![Campus-Cart homepage screenshot](screenshots/homepage-desktop.png)
+```
+
+Only add screenshot links after the corresponding screenshot file has been uploaded to the repository. The product and hero images above are project images, not screenshots of the rendered website.
 
 ## Part 1 – Planning and Initial Development
 Part 1 covers the planning and initial development of Campus-Cart, with the initial website structure developed using **HTML5**. The planning identifies the organisation idea, target audience, page content, site structure and navigation before visual styling and interactive features are added. Semantic elements such as headings, navigation, sections, lists, images, links and forms help organise the information into a clear document structure (Duckett, 2011).
