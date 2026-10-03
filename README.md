@@ -63,7 +63,7 @@ Parents and guardians who help students prepare for registration and the start o
 
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
-## Part 2 – Website Screenshot Evidence
+## Website Screenshots
 
 This section is reserved for genuine screenshots of the rendered Campus-Cart website for **Part 2 visual evidence**. The screenshots should show the actual website in a browser rather than planning wireframes or individual project images.
 
