@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+<!-- Defines the root HTML document and sets English as the page language. -->
 <html lang="en">
+<!-- Starts the document head, which contains metadata and linked resources. -->
 <head>
+     <!-- Sets UTF-8 character encoding so text and special characters display correctly. -->
      <meta charset="utf-8">
+     <!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <!-- <title> sets the name shown on the browser tab and helps identify the webpage.
           It also provides useful information for search engines and accessibility. -->
      <title>Bundle Enquiry | Campus-Cart Student Essentials</title>
+    <!-- Provides a description of the webpage for search engines. -->
     <meta name="description" content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.">
+    <!-- Provides keyword metadata describing the main subjects of the webpage. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
+     <!-- Provides the Google Search Console verification token used to verify website ownership. -->
      <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
      <!-- <link> connects this HTML page to an external CSS stylesheet.
           rel identifies the file as CSS, while href specifies the stylesheet location. -->
      <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+<!-- Starts the visible webpage body containing the content shown to visitors. -->
 <body>
 
      <!-- <header> contains introductory content and usually includes website navigation.
@@ -55,6 +63,7 @@
                     <!-- This hyperlink opens the enquiry page.
                          An <a> element is used because the user is navigating to another page. -->
                     <a href="enquiry.html">Enquiry</a>
+                <!-- Creates a hyperlink; href specifies its destination and class can control its appearance. -->
                 <a href="coverage.html">Coverage</a>
 
                     <!-- This hyperlink opens the Contact page.
@@ -121,23 +130,37 @@
                                    JavaScript (assets/js/forms.js) fills the span when the input is not valid.
                                    novalidate on the form turns off the browser's pop-up messages so the custom messages are used. -->
                               <div class="form-group">
+                                   <!-- Creates a label associated with a form control through the for attribute. -->
                                    <label for="enq-type">I am a *</label>
+                                   <!-- Creates a dropdown control that allows the user to choose an option. -->
                                    <select id="enq-type" name="enquirerType" required>
+                                        <!-- Creates one selectable option inside a dropdown or option group. -->
                                         <option value="Student">Student</option>
+                                        <!-- Creates one selectable option inside a dropdown or option group. -->
                                         <option value="Parent/Guardian">Parent/Guardian</option>
                                    </select>
+                                   <!-- Creates an inline element used to group and style a short piece of text. -->
                                    <span class="error-msg" id="enq-type-error" role="alert"></span>
                               </div>
 
+                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                               <div class="form-row">
+                                   <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                                    <div class="form-group">
+                                        <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-name">Full name *</label>
+                                        <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
                                         <input id="enq-name" name="name" type="text" required autocomplete="name" placeholder="e.g. Thandi Mokoena">
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-name-error" role="alert"></span>
                                    </div>
+                                   <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                                    <div class="form-group">
+                                        <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-email">Email address *</label>
+                                        <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
                                         <input id="enq-email" name="email" type="email" required autocomplete="email" placeholder="you@example.co.za">
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-email-error" role="alert"></span>
                                    </div>
                               </div>
@@ -145,74 +168,120 @@
                               <!-- The item list uses <optgroup> to separate bundles, new products and second-hand items.
                                    The option text must match the names stored in the STOCK table in forms.js. -->
                               <div class="form-group">
+                                   <!-- Creates a label associated with a form control through the for attribute. -->
                                    <label for="enq-item">Bundle or product *</label>
+                                   <!-- Creates a dropdown control that allows the user to choose an option. -->
                                    <select id="enq-item" name="item" required>
+                                        <!-- Creates one selectable option inside a dropdown or option group. -->
                                         <option value="">Choose an item...</option>
+                                        <!-- Groups related dropdown options under a labelled category. -->
                                         <optgroup label="Starter bundles">
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Basic Starter Bundle</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Standard Starter Bundle</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Premium Starter Bundle</option>
                                         </optgroup>
+                                        <!-- Groups related dropdown options under a labelled category. -->
                                         <optgroup label="New products">
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Duvet &amp; Linen Set (Double)</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Electric Kettle 1.7L</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Stationery Mega Pack</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Load-Shedding Light Kit</option>
                                         </optgroup>
+                                        <!-- Groups related dropdown options under a labelled category. -->
                                         <optgroup label="Second-hand marketplace">
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Study Desk</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Mini Bar Fridge</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Accounting Textbook Set</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Laptop Bag 15&quot;</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Two-Tier Bookshelf</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option>Study Chair</option>
                                         </optgroup>
                                    </select>
+                                   <!-- Creates an inline element used to group and style a short piece of text. -->
                                    <span class="error-msg" id="enq-item-error" role="alert"></span>
                               </div>
 
+                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                               <div class="form-row">
+                                   <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                                    <div class="form-group">
+                                        <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-qty">Quantity *</label>
+                                        <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
                                         <input id="enq-qty" name="quantity" type="number" min="1" max="10" step="1" value="1" required>
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-qty-error" role="alert"></span>
                                    </div>
+                                   <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                                    <div class="form-group">
+                                        <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-method">How do you want to get it? *</label>
+                                        <!-- Creates a dropdown control that allows the user to choose an option. -->
                                         <select id="enq-method" name="method" required>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option value="Delivery">Deliver to my institution</option>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option value="Collection">Collect from the provincial hub</option>
                                         </select>
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-method-error" role="alert"></span>
                                    </div>
                               </div>
 
                               <!-- The institution list is filled by forms.js from data.js after a province is chosen. -->
                               <div class="form-row">
+                                   <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                                    <div class="form-group">
+                                        <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-province">Province *</label>
+                                        <!-- Creates a dropdown control that allows the user to choose an option. -->
                                         <select id="enq-province" name="province" required>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option value="">Choose a province...</option>
                                         </select>
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-province-error" role="alert"></span>
                                    </div>
+                                   <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                                    <div class="form-group">
+                                        <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-institution">Institution *</label>
+                                        <!-- Creates a dropdown control that allows the user to choose an option. -->
                                         <select id="enq-institution" name="institution" required disabled>
+                                             <!-- Creates one selectable option inside a dropdown or option group. -->
                                              <option value="">Choose a province first...</option>
                                         </select>
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-institution-error" role="alert"></span>
                                    </div>
                               </div>
 
                               <!-- Shown by forms.js only when "My institution is not listed" is chosen. -->
                               <div class="form-group" id="enq-other-group" hidden>
+                                   <!-- Creates a label associated with a form control through the for attribute. -->
                                    <label for="enq-other">Name of your institution *</label>
+                                   <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
                                    <input id="enq-other" name="otherInstitution" type="text" placeholder="e.g. Your private college or campus name">
+                                   <!-- Creates an inline element used to group and style a short piece of text. -->
                                    <span class="error-msg" id="enq-other-error" role="alert"></span>
                               </div>
 
+                              <!-- Creates an interactive button; its attributes support navigation behaviour and accessibility. -->
                               <button class="btn" type="submit">Get availability and price</button>
+                              <!-- Creates a paragraph containing related text. -->
                               <p class="hint">We check the item and show the estimated total and availability on this page. You can then email the enquiry to us.</p>
                          </form>
 
@@ -236,9 +305,13 @@
                               <!-- <ul> creates an unordered list because these items have no required order.
                                    Each <li> represents one separate piece of information. -->
                               <ul>
+                                   <!-- Creates one item within an unordered list. -->
                                    <li>Your institution and campus</li>
+                                   <!-- Creates one item within an unordered list. -->
                                    <li>The bundle or item name</li>
+                                   <!-- Creates one item within an unordered list. -->
                                    <li>Preferred collection point or delivery suburb</li>
+                                   <!-- Creates one item within an unordered list. -->
                                    <li>When you need it by</li>
                               </ul>
                          </div>
@@ -250,6 +323,7 @@
                          <!-- card creates a reusable content container while card-navy changes its styling.
                               The nested card-body groups the heading, paragraph and button together. -->
                          <div class="card card-navy">
+                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                               <div class="card-body">
 
                                    <!-- h3 identifies this card's main topic.
@@ -273,6 +347,7 @@
                          <!-- This card provides access to the user's current order summary.
                               The card class gives it the standard product-card appearance. -->
                          <div class="card">
+                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                               <div class="card-body">
 
                                    <!-- h3 identifies the purpose of this card.
@@ -304,14 +379,19 @@
                <!-- This div creates the first footer column containing company information.
                     The h4 heading identifies the purpose of this footer column. -->
                <div>
+                    <!-- Creates a fourth-level heading for a footer subsection. -->
                     <h4>Campus-Cart</h4>
+                    <!-- Creates a paragraph containing related text. -->
                     <p>Affordable new and second-hand student essentials for South African campuses.</p>
                </div>
 
                <!-- This footer column contains links related to shopping.
+                    <!-- Creates an unordered list for related items. -->
                     <ul> groups the related navigation links together. -->
                <div>
+                    <!-- Creates a fourth-level heading for a footer subsection. -->
                     <h4>Shop</h4>
+                    <!-- Creates an unordered list for related items. -->
                     <ul>
 
                          <!-- Each <li> represents one item in the Shop footer navigation.
@@ -335,7 +415,9 @@
                <!-- This footer column contains general company navigation.
                     The links allow users to access important pages from the footer. -->
                <div>
+                    <!-- Creates a fourth-level heading for a footer subsection. -->
                     <h4>Company</h4>
+                    <!-- Creates an unordered list for related items. -->
                     <ul>
 
                          <!-- This hyperlink opens the About page.
@@ -349,6 +431,7 @@
                          <!-- This hyperlink opens the enquiry page.
                               href contains the relative path to the current page location. -->
                          <li><a href="enquiry.html">Enquiry</a></li>
+                    <!-- Creates one item within an unordered list. -->
                     <li><a href="coverage.html">Coverage</a></li>
 
                          <!-- This hyperlink opens the Contact page.
@@ -364,7 +447,9 @@
                <!-- This footer column contains the available contact methods.
                     The unordered list groups the contact details together. -->
                <div>
+                    <!-- Creates a fourth-level heading for a footer subsection. -->
                     <h4>Reach us</h4>
+                    <!-- Creates an unordered list for related items. -->
                     <ul>
 
                          <!-- mailto: creates a link that opens the user's default email application.
@@ -395,7 +480,9 @@
      <!-- <script> connects an external JavaScript file to this HTML page.
           src specifies the JavaScript file location used for the website's functionality. -->
      <script src="../assets/js/script.js"></script>
+    <!-- Loads an external JavaScript file that provides website functionality and form interactions. -->
     <script src="../assets/js/data.js"></script>
+    <!-- Loads an external JavaScript file that provides website functionality and form interactions. -->
     <script src="../assets/js/forms.js"></script>
 
 </body>
