@@ -661,6 +661,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.125** — Add animated Campus-Cart loading overlay. Introduces the shared animated Campus-Cart loading overlay with an orbital ring animation, smooth fade-out behaviour, background-scroll locking and responsive/reduced-motion support for a more polished loading experience.
 
+- **v3.126** — Simplify loader ring comments. Simplifies the loader markup comments in `index.html` by replacing repeated ring descriptions with one concise explanation of the animated rings surrounding the loader nucleus.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
