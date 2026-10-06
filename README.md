@@ -570,6 +570,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.89** — Move sitemap.xml to SEO directory. Moves the XML sitemap from the repository root into the new `seo/` directory, changing the sitemap's repository location while keeping the sitemap content available for search-engine configuration.
 
+- **v3.90** — Add detailed syntax comments to index.html. Adds detailed explanatory comments to `index.html`, documenting the purpose of the page's HTML syntax and making the homepage structure easier for a first-year developer to understand and maintain.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
