@@ -406,7 +406,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.22** — Remove redundant contact form comments. This cleans up unnecessary comments in `pages/contact.html`, keeping the form markup focused on useful documentation while reducing redundant code comments.
 
-- **v3.23** — Improve contact form accessibility.
+- **v3.23** — Improve contact form accessibility. This improves the contact form's accessibility in `pages/contact.html`, making the form structure and user interaction clearer for visitors using different input methods.
 
 - **v3.24** — Improve contact phone field.
 
