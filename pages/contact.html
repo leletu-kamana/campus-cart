@@ -120,18 +120,11 @@
                         <!-- novalidate turns off the browser's pop-up messages so forms.js can show its own.
                              data-mailto is the recipient of the compiled email. -->
                         <div class="form-row">
-
-                            <!-- form-group keeps the label and input together.
-                                 This makes each form field easier to organise and style. -->
                             <div class="form-group">
 
-                                <!-- for connects this label to the input with id="c-name".
-                                     This also improves accessibility and makes the field easier to use. -->
                                 <label for="c-name">Full name *</label>
-
-                                <!-- type="text" creates a standard single-line text field.
-                                     required means the browser will not submit the form if it is empty. -->
-                                <input id="c-name" name="name" type="text" required>
+                                <input id="c-name" name="name" type="text" required autocomplete="name">
+                                <span class="error-msg" id="c-name-error" role="alert"></span>
                             </div>
 
                             <!-- This form-group contains the email address field.
