@@ -466,7 +466,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.52** — Add private institutions to coverage page. This adds private institutions to the Gauteng coverage information, completing another institution category for the province.
 
-- **v3.53** — Add KwaZulu-Natal coverage.
+- **v3.53** — Add KwaZulu-Natal coverage. This adds KwaZulu-Natal coverage, extending the project's delivery and institution information into another major province.
 
 - **v3.54** — Add public universities to coverage list.
 
