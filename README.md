@@ -530,6 +530,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.84** — Add public TVET colleges to Western Cape coverage. This adds six public TVET colleges—Boland, College of Cape Town, False Bay, Northlink, South Cape and West Coast—to the Western Cape institution list. The update broadens the province's coverage from universities to vocational and technical education providers.
 
+- **v3.85** — Add private institutions to Western Cape coverage. This adds 14 private higher-education institutions, including their city locations, to the Western Cape coverage information. The larger private-provider list gives students additional institution choices and makes the provincial coverage more representative of different tertiary education options.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
