@@ -77,15 +77,15 @@ A minimum of **5 desktop screenshots and 5 mobile screenshots** can be added. Ad
 
 Add the genuine desktop browser screenshots to `assets/images/screenshots/` using these filenames:
 
-![Campus-Cart desktop screenshot 1](assets/images/screenshots/desktop-01.png)
+![Campus-Cart desktop screenshot 1](assets/images/screenshots/desktop/desktop-1.png)
 
-![Campus-Cart desktop screenshot 2](assets/images/screenshots/desktop-02.png)
+![Campus-Cart desktop screenshot 2](assets/images/screenshots/desktop/desktop-2.png)
 
-![Campus-Cart desktop screenshot 3](assets/images/screenshots/desktop-03.png)
+![Campus-Cart desktop screenshot 3](assets/images/screenshots/desktop/desktop-3.png)
 
-![Campus-Cart desktop screenshot 4](assets/images/screenshots/desktop-04.png)
+![Campus-Cart desktop screenshot 4](assets/images/screenshots/desktop/desktop-4.png)
 
-![Campus-Cart desktop screenshot 5](assets/images/screenshots/desktop-05.png)
+![Campus-Cart desktop screenshot 5](assets/images/screenshots/desktop/desktop-5.png)
 
 ### Mobile Website Screenshots
 
