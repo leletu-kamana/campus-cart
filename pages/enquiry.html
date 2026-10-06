@@ -171,13 +171,21 @@
                                    <span class="error-msg" id="enq-item-error" role="alert"></span>
                               </div>
 
-                              <!-- This form-group contains the main message that the user wants to send.
-                                   Grouping it keeps the label, textarea and related information together. -->
-                              <div class="form-group">
-
-                                   <!-- The label describes the purpose of the textarea.
-                                        for connects the label to the textarea using its matching ID. -->
-                                   <label for="enq-message">Your message *</label>
+                              <div class="form-row">
+                                   <div class="form-group">
+                                        <label for="enq-qty">Quantity *</label>
+                                        <input id="enq-qty" name="quantity" type="number" min="1" max="10" step="1" value="1" required>
+                                        <span class="error-msg" id="enq-qty-error" role="alert"></span>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="enq-method">How do you want to get it? *</label>
+                                        <select id="enq-method" name="method" required>
+                                             <option value="Delivery">Deliver to my institution</option>
+                                             <option value="Collection">Collect from the provincial hub</option>
+                                        </select>
+                                        <span class="error-msg" id="enq-method-error" role="alert"></span>
+                                   </div>
+                              </div>
 
                                    <!-- <textarea> creates a multi-line text input for longer messages.
                                         required means the user must enter a message before submitting. -->
