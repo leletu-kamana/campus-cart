@@ -448,7 +448,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.43** — Add public university coverage. This expands Eastern Cape coverage with public universities, making the Coverage page more useful for students attending public higher-education institutions.
 
-- **v3.44** — Add Eastern Cape TVET colleges.
+- **v3.44** — Add Eastern Cape TVET colleges. This adds Eastern Cape TVET colleges to the coverage information, extending the page beyond universities to include vocational and technical institutions.
 
 - **v3.45** — Add private institutions to coverage.
 
