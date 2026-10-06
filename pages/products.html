@@ -1,20 +1,28 @@
 <!DOCTYPE html>
+<!-- Defines the root HTML document and sets English as the page language. -->
 <html lang="en">
+  <!-- Starts the document head, which contains metadata and linked resources. -->
   <head>
+    <!-- Sets UTF-8 character encoding so text and special characters display correctly. -->
     <meta charset="utf-8">
+    <!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <title> sets the name shown on the browser tab and helps identify the webpage.
         It also provides useful information for search engines and accessibility. -->
     <title>Shop Student Essentials &amp; Bundles | Campus-Cart</title>
+    <!-- Provides a description of the webpage for search engines. -->
     <meta name="description" content="Shop new and second-hand student essentials, starter bundles and the Parent Hub with delivery across South Africa.">
+    <!-- Provides keyword metadata describing the main subjects of the webpage. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
+      <!-- Provides the Google Search Console verification token used to verify website ownership. -->
       <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
     <!-- Links this HTML document to an external CSS stylesheet.
         The href attribute specifies the location of the CSS file. -->
     <link rel="stylesheet" href="../assets/css/styles.css">
   </head>
 
+  <!-- Starts the visible webpage body containing the content shown to visitors. -->
   <body>
 
     <!-- <header> contains introductory content and website navigation.
@@ -52,6 +60,7 @@
 
           <!-- This anchor navigates to the enquiry page. -->
           <a href="enquiry.html">Enquiry</a>
+                <!-- Creates a hyperlink; href specifies its destination and class can control its appearance. -->
                 <a href="coverage.html">Coverage</a>
 
           <!-- This anchor navigates to the contact page. -->
@@ -70,6 +79,7 @@
     <!-- <nav> creates another navigation area for sections on this page.
         aria-label describes the purpose of this navigation to assistive technology. -->
     <nav class="subnav" aria-label="Section navigation">
+      <!-- Creates an unordered list for related items. -->
       <ul>
 
         <!-- <ul> creates an unordered list and <li> creates each list item.
@@ -97,6 +107,7 @@
       <!-- <section> groups related content into a semantic webpage section.
           id gives the section a unique identifier for internal links. -->
       <section class="section" id="shop">
+        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
         <div class="wrap">
 
           <!-- This div groups the heading and introductory paragraph together.
@@ -174,11 +185,17 @@
                 <!-- This <article> represents another independent product.
                     The card class allows it to share the same CSS styling. -->
                 <article class="card">
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
+                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                   <div class="card-body">
+                    <!-- Creates an inline element used to group and style a short piece of text. -->
                     <span class="badge badge-new">New</span>
+                    <!-- Creates a third-level heading for a subsection, product or information card. -->
                     <h3>Electric Kettle 1.7L</h3>
+                    <!-- Creates a paragraph containing related text. -->
                     <p class="price">R289.00</p>
+                    <!-- Creates a paragraph containing related text. -->
                     <p>Fast-boil, res-friendly and load-shedding ready.</p>
 
                     <!-- Custom data attributes allow JavaScript to access product information.
@@ -189,11 +206,17 @@
 
                 <!-- This article represents another product card in the grid. -->
                 <article class="card">
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
+                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                   <div class="card-body">
+                    <!-- Creates an inline element used to group and style a short piece of text. -->
                     <span class="badge badge-new">New</span>
+                    <!-- Creates a third-level heading for a subsection, product or information card. -->
                     <h3>Stationery Mega Pack</h3>
+                    <!-- Creates a paragraph containing related text. -->
                     <p class="price">R249.00</p>
+                    <!-- Creates a paragraph containing related text. -->
                     <p>Files, pads, pens, highlighters and a calculator.</p>
 
                     <!-- The JavaScript can read both values from these custom attributes. -->
@@ -203,11 +226,17 @@
 
                 <!-- This article represents the fourth product in the product grid. -->
                 <article class="card">
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
+                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                   <div class="card-body">
+                    <!-- Creates an inline element used to group and style a short piece of text. -->
                     <span class="badge badge-new">New</span>
+                    <!-- Creates a third-level heading for a subsection, product or information card. -->
                     <h3>Load-Shedding Light Kit</h3>
+                    <!-- Creates a paragraph containing related text. -->
                     <p class="price">R329.00</p>
+                    <!-- Creates a paragraph containing related text. -->
                     <p>Rechargeable lamp, power bank and extension lead.</p>
 
                     <!-- data-add and data-price provide values that JavaScript can use. -->
@@ -251,31 +280,41 @@
 
                 <!-- This figure groups the image and information for another item. -->
                 <figure>
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/second-hand/marketplace.jpg" alt="Used mini bar fridge" loading="lazy" width="1200" height="900">
+                  <!-- Provides a caption describing the content of the associated figure. -->
                   <figcaption><strong>Mini Bar Fridge</strong> — R1 150 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
 
                 <!-- This figure contains a second-hand textbook listing. -->
                 <figure>
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
+                  <!-- Provides a caption describing the content of the associated figure. -->
                   <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
 
                 <!-- This figure contains a second-hand laptop bag listing. -->
                 <figure>
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
+                  <!-- Provides a caption describing the content of the associated figure. -->
                   <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
 
                 <!-- This figure contains a second-hand bookshelf listing. -->
                 <figure>
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/second-hand/marketplace.jpg" alt="Used bookshelf" loading="lazy" width="1200" height="900">
+                  <!-- Provides a caption describing the content of the associated figure. -->
                   <figcaption><strong>Two-Tier Bookshelf</strong> — R380 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
 
                 <!-- This figure contains a second-hand study chair listing. -->
                 <figure>
+                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
                   <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study chair" loading="lazy" width="1200" height="900">
+                  <!-- Provides a caption describing the content of the associated figure. -->
                   <figcaption><strong>Study Chair</strong> — R450 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
               </div>
@@ -291,12 +330,16 @@
       <!-- Section 2 contains product filtering, sorting and the visual gallery.
           The id allows other elements to link directly to this section. -->
       <section class="section alt" id="deals-gallery">
+        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
         <div class="wrap">
 
           <!-- Groups the heading and introductory text for this section. -->
           <div class="section-head">
+            <!-- Creates an inline element used to group and style a short piece of text. -->
             <span class="eyebrow">Section 2</span>
+            <!-- Creates a second-level heading for a major webpage section. -->
             <h2>Deals &amp; Gallery</h2>
+            <!-- Creates a paragraph containing related text. -->
             <p>Filter and sort in your browser — the list comes from a fixed data set in the site's script, not a database.</p>
           </div>
 
@@ -317,32 +360,49 @@
                 <!-- <option> represents one selectable value inside a select element.
                     value is the data returned when this option is selected. -->
                 <option value="all">All categories</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="bundles">Bundles</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="appliances">Appliances</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="furniture">Furniture</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="bedding">Bedding</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="textbooks">Textbooks</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="stationery">Stationery</option>
               </select>
             </div>
 
             <!-- This field groups the condition label and dropdown together. -->
             <div class="field">
+              <!-- Creates a form label and associates it with a control using the for attribute. -->
               <label for="filter-condition">Condition</label>
+              <!-- Creates a dropdown control for selecting one available value. -->
               <select id="filter-condition">
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="all">New &amp; second-hand</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="new">New only</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="used">Second-hand only</option>
               </select>
             </div>
 
             <!-- This field groups the sorting label and dropdown together. -->
             <div class="field">
+              <!-- Creates a form label and associates it with a control using the for attribute. -->
               <label for="sort-by">Sort by</label>
+              <!-- Creates a dropdown control for selecting one available value. -->
               <select id="sort-by">
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="default">Featured</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="price-asc">Price: low to high</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="price-desc">Price: high to low</option>
+                <!-- Creates one selectable option inside a dropdown control. -->
                 <option value="name">Name A–Z</option>
               </select>
             </div>
@@ -357,6 +417,7 @@
           <div class="grid grid-3" id="deals-results"></div>
 
           <!-- Inline CSS adds spacing above this heading.
+              <!-- Creates a third-level heading for a subsection, product or information card. -->
               <h3> creates a third-level heading for the gallery. -->
           <h3 style="margin-top:48px">Visual gallery</h3>
 
@@ -384,37 +445,49 @@
             <!-- data-gallery-item identifies the category of this gallery item.
                 JavaScript can compare this value with the selected filter. -->
             <figure data-gallery-item="bundles">
+              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
               <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
+              <!-- Provides a caption describing the content of the associated figure. -->
               <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
             </figure>
 
             <!-- This figure is assigned to the second-hand gallery category. -->
             <figure data-gallery-item="second-hand">
+              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
               <img src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand items" loading="lazy" width="1200" height="900">
+              <!-- Provides a caption describing the content of the associated figure. -->
               <figcaption>Reviewed second-hand stock at our Braamfontein point.</figcaption>
             </figure>
 
             <!-- This figure is assigned to the res-life gallery category. -->
             <figure data-gallery-item="res-life">
+              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
               <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
+              <!-- Provides a caption describing the content of the associated figure. -->
               <figcaption>Registration week collections on campus.</figcaption>
             </figure>
 
             <!-- This figure is assigned to the bundles gallery category. -->
             <figure data-gallery-item="bundles">
+              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
               <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
+              <!-- Provides a caption describing the content of the associated figure. -->
               <figcaption>Bedding and linen included in every bundle tier.</figcaption>
             </figure>
 
             <!-- This figure is assigned to the second-hand gallery category. -->
             <figure data-gallery-item="second-hand">
+              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
               <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
+              <!-- Provides a caption describing the content of the associated figure. -->
               <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
             </figure>
 
             <!-- This figure is assigned to the res-life gallery category. -->
             <figure data-gallery-item="res-life">
+              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
               <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
+              <!-- Provides a caption describing the content of the associated figure. -->
               <figcaption>Move-in day at a partner residence.</figcaption>
             </figure>
           </div>
@@ -424,12 +497,16 @@
       <!-- Section 3 contains information intended for parents and guardians.
           The id allows navigation links to jump directly to this section. -->
       <section class="section" id="parent-hub">
+        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
         <div class="wrap">
 
           <!-- Groups the section heading and introductory paragraph. -->
           <div class="section-head">
+            <!-- Creates an inline element used to group and style a short piece of text. -->
             <span class="eyebrow">Section 3</span>
+            <!-- Creates a second-level heading for a major webpage section. -->
             <h2>Parent Hub</h2>
+            <!-- Creates a paragraph containing related text. -->
             <p>Plan the whole first year with a printable checklist and three fixed-price bundles.</p>
           </div>
 
@@ -438,26 +515,38 @@
 
             <!-- info-box groups the checklist content into one styled container. -->
             <div class="info-box">
+              <!-- Creates a third-level heading for a subsection, product or information card. -->
               <h3>First Year Checklist</h3>
 
               <!-- <ul> creates an unordered list of checklist requirements.
                   Each <li> represents one individual list item. -->
               <ul class="checklist">
+                <!-- Creates one item within an unordered list. -->
                 <li>Single/double bedding set, pillow and mattress protector</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Towels and a laundry bag or basket</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Kettle, two mugs, plate, bowl and cutlery set</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Desk lamp and extension lead with surge protection</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Rechargeable light or power bank for load shedding</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Lockable trunk or storage crate</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Stationery: files, pads, pens, calculator</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Prescribed textbooks (check second-hand first)</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Basic toolkit: scissors, tape, plasters, spare globes</li>
+                <!-- Creates one item within an unordered list. -->
                 <li>Copies of ID, registration and residence letters</li>
               </ul>
 
               <!-- Inline CSS adds spacing above the button.
                   The button can be targeted by JavaScript using its ID. -->
               <p style="margin-top:16px">
+                <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
                 <button class="btn" id="print-checklist">Print this checklist</button>
               </p>
             </div>
@@ -468,10 +557,15 @@
               <!-- Nested div elements create the card and its content container.
                   The classes allow CSS to style the card consistently. -->
               <div class="card">
+                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                 <div class="card-body">
+                  <!-- Creates an inline element used to group and style a short piece of text. -->
                   <span class="badge">Tier 1</span>
+                  <!-- Creates a third-level heading for a subsection, product or information card. -->
                   <h3>Basic Starter Bundle</h3>
+                  <!-- Creates a paragraph containing related text. -->
                   <p class="price">R1 499.00</p>
+                  <!-- Creates a paragraph containing related text. -->
                   <p>Bedding set, kettle, two-mug set, plate/bowl/cutlery, stationery starter.</p>
 
                   <!-- data-add and data-price store values that JavaScript can read. -->
@@ -484,11 +578,17 @@
 
               <!-- This card represents the second starter bundle. -->
               <div class="card">
+                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                 <div class="card-body">
+                  <!-- Creates an inline element used to group and style a short piece of text. -->
                   <span class="badge badge-used">Tier 2 · most chosen</span>
+                  <!-- Creates a third-level heading for a subsection, product or information card. -->
                   <h3>Standard Starter Bundle</h3>
+                  <!-- Creates a paragraph containing related text. -->
                   <p class="price">R2 799.00</p>
+                  <!-- Creates a paragraph containing related text. -->
                   <p>Everything in Basic, plus desk lamp, laundry basket, towel set, kitchen starter pack and extension lead.</p>
+                  <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
                   <button class="btn btn-sm" data-add="Standard Starter Bundle" data-price="2799">Add to Order Summary</button>
                 </div>
               </div>
@@ -498,11 +598,17 @@
 
               <!-- This card represents the third starter bundle. -->
               <div class="card">
+                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
                 <div class="card-body">
+                  <!-- Creates an inline element used to group and style a short piece of text. -->
                   <span class="badge badge-verified">Tier 3</span>
+                  <!-- Creates a third-level heading for a subsection, product or information card. -->
                   <h3>Premium Starter Bundle</h3>
+                  <!-- Creates a paragraph containing related text. -->
                   <p class="price">R4 499.00</p>
+                  <!-- Creates a paragraph containing related text. -->
                   <p>Everything in Standard, plus lockable trunk, study chair, rechargeable light kit, mini kettle-and-fridge combo option and full stationery pack.</p>
+                  <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
                   <button class="btn btn-sm" data-add="Premium Starter Bundle" data-price="4499">Add to Order Summary</button>
                 </div>
               </div>
@@ -514,17 +620,22 @@
       <!-- Section 4 provides a reusable layout for displaying product details.
           The ID allows navigation links to open this section directly. -->
       <section class="section alt" id="product-detail">
+        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
         <div class="wrap">
 
           <!-- Contains the product-detail heading and introductory information. -->
           <div class="section-head">
+            <!-- Creates an inline element used to group and style a short piece of text. -->
             <span class="eyebrow">Section 4</span>
+            <!-- Creates a second-level heading for a major webpage section. -->
             <h2>Product detail template</h2>
+            <!-- Creates a paragraph containing related text. -->
             <p>This is the reusable layout every product uses. Choose an item to preview it.</p>
           </div>
 
           <!-- toolbar groups the product selection control. -->
           <div class="toolbar">
+            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
             <div class="field">
 
               <!-- for connects the label to the select element with the matching ID. -->
@@ -573,8 +684,11 @@
 
               <!-- <ul> creates an unordered list of available collection locations. -->
               <ul>
+                <!-- Creates one item within an unordered list. -->
                 <li><strong>Residence desk</strong> — Hatfield res reception, Mon–Fri 09:00–17:00</li>
+                <!-- Creates one item within an unordered list. -->
                 <li><strong>Campus point</strong> — Braamfontein student centre, Mon–Sat 10:00–16:00</li>
+                <!-- Creates one item within an unordered list. -->
                 <li><strong>Secure locker</strong> — Westville locker bank, daily 08:00–20:00</li>
               </ul>
 
@@ -608,12 +722,16 @@
       <!-- Section 5 contains seller information and frequently asked questions.
           The ID allows other links to navigate directly to this section. -->
       <section class="section" id="sell-with-us">
+        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
         <div class="wrap">
 
           <!-- Contains the heading and introduction for the seller section. -->
           <div class="section-head">
+            <!-- Creates an inline element used to group and style a short piece of text. -->
             <span class="eyebrow">Section 5</span>
+            <!-- Creates a second-level heading for a major webpage section. -->
             <h2>Sell With Us</h2>
+            <!-- Creates a paragraph containing related text. -->
             <p>Turn last year's kit into cash. Listings are reviewed by a person before they go live.</p>
           </div>
 
@@ -623,32 +741,44 @@
             <!-- Each card represents one step of the selling process.
                 card-navy applies the darker card styling through CSS. -->
             <div class="card card-navy">
+              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
               <div class="card-body">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>1. Submit</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Complete the external listing form with photos, condition notes and your asking price.</p>
               </div>
             </div>
 
             <!-- This card represents the second step in the process. -->
             <div class="card card-navy">
+              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
               <div class="card-body">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>2. Review</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Our team checks the item at a collection point and confirms it is complete and working.</p>
               </div>
             </div>
 
             <!-- This card represents the third step in the process. -->
             <div class="card card-navy">
+              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
               <div class="card-body">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>3. List</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Approved items are published to the Second-Hand Marketplace with a Verified Seller badge.</p>
               </div>
             </div>
 
             <!-- This card represents the final step in the process. -->
             <div class="card card-navy">
+              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
               <div class="card-body">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>4. Hand over</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Buyer collects at the agreed point; we confirm the handover with both parties.</p>
               </div>
             </div>
@@ -690,25 +820,33 @@
               <!-- info-box groups each FAQ question and answer.
                   Inline CSS adds spacing below the information box. -->
               <div class="info-box" style="margin-bottom:16px">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>Can I pay in instalments?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Payment plans are arranged manually over email before collection. Typically a 50% holding amount and the balance on collection. Nothing is charged on this website.</p>
               </div>
 
               <!-- This information box contains another FAQ question and answer. -->
               <div class="info-box" style="margin-bottom:16px">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>What if a second-hand item is faulty?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Report it within 48 hours of collection and we arrange a swap or refund with the seller. Items are tested at review, so faults are rare.</p>
               </div>
 
               <!-- This information box contains the delivery FAQ. -->
               <div class="info-box" style="margin-bottom:16px">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>How does delivery work?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Collection at any listed residence, campus or locker point is free. Courier delivery is quoted per order and confirmed before you pay.</p>
               </div>
 
               <!-- This information box contains the seller earnings FAQ. -->
               <div class="info-box">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>How much do I earn when selling?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>You set the asking price. Campus-Cart keeps a small handling fee that is confirmed in writing before your listing goes live.</p>
               </div>
             </div>
@@ -719,25 +857,33 @@
 
               <!-- This information box contains the first parent FAQ. -->
               <div class="info-box" style="margin-bottom:16px">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>Are bundle prices fixed?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Yes. Each bundle lists its contents and one price. Substitutions on request never increase the price without written confirmation.</p>
               </div>
 
               <!-- This information box contains the staged-payment FAQ. -->
               <div class="info-box" style="margin-bottom:16px">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>Can I pay off a bundle before registration?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Yes — arrange a staged payment plan by email. We hold stock once the first payment reflects.</p>
               </div>
 
               <!-- This information box contains the returns-policy FAQ. -->
               <div class="info-box" style="margin-bottom:16px">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>What is the returns policy?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Unused new items may be returned within 7 days of collection in their original packaging. Second-hand items follow the 48-hour fault window.</p>
               </div>
 
               <!-- This information box contains the seller-verification FAQ. -->
               <div class="info-box">
+                <!-- Creates a third-level heading for a subsection, product or information card. -->
                 <h3>How do I know a seller is legitimate?</h3>
+                <!-- Creates a paragraph containing related text. -->
                 <p>Every second-hand listing is inspected in person by our team before publication. The Verified Seller badge means a staff member handled the item.</p>
               </div>
             </div>
@@ -756,38 +902,57 @@
 
         <!-- This div groups the website name and description. -->
         <div>
+          <!-- Creates a fourth-level heading for a footer subsection. -->
           <h4>Campus-Cart</h4>
+          <!-- Creates a paragraph containing related text. -->
           <p>Affordable new and second-hand student essentials for South African campuses.</p>
         </div>
 
         <!-- This div contains navigation links related to shopping.
+            <!-- Creates an unordered list for related items. -->
             <ul> creates the unordered list containing those links. -->
         <div>
+          <!-- Creates a fourth-level heading for a footer subsection. -->
           <h4>Shop</h4>
+          <!-- Creates an unordered list for related items. -->
           <ul>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="products.html">Shop New</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="products.html#product-detail">Product Detail</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="products.html#sell-with-us">Sell With Us</a></li>
           </ul>
         </div>
 
         <!-- This div contains navigation links related to the company. -->
         <div>
+          <!-- Creates a fourth-level heading for a footer subsection. -->
           <h4>Company</h4>
+          <!-- Creates an unordered list for related items. -->
           <ul>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="about.html">About</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="products.html#parent-hub">Parent Hub</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="enquiry.html">Enquiry</a></li>
+                    <!-- Creates one item within an unordered list. -->
                     <li><a href="coverage.html">Coverage</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="contact.html">Contact</a></li>
+            <!-- Creates one item within an unordered list. -->
             <li><a href="account.html">Account</a></li>
           </ul>
         </div>
 
         <!-- This div groups the website's contact information. -->
         <div>
+          <!-- Creates a fourth-level heading for a footer subsection. -->
           <h4>Reach us</h4>
+          <!-- Creates an unordered list for related items. -->
           <ul>
  
             <!-- mailto: creates a link that can open an email application.
@@ -807,6 +972,7 @@
       <!-- class="footer-bottom" identifies the bottom copyright area.
           &copy; is an HTML entity that displays the copyright symbol. -->
       <div class="wrap footer-bottom">
+        <!-- Creates a paragraph containing related text. -->
         <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
       </div>
     </footer>
