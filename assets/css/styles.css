@@ -481,9 +481,11 @@ strong {
     padding: 14px 0;
 
     /* Switches the nav into a horizontal flexbox layout. */
+    /* Uses flexbox to centre the loader contents. */
     display: flex;
 
     /* Vertically centres the logo, links, and button within the nav row. */
+    /* Centres the loader vertically. */
     align-items: center;
 
     /* Pushes the logo to the left and the links/cart to the right, with space between. */
@@ -741,6 +743,7 @@ strong {
 /* .hero-img is the container wrapping the hero's featured image. */
 .hero-img {
     /* Clips anything (like the image's corners) that would poke outside the rounded box. */
+    /* Prevents the loader graphics from creating page overflow. */
     overflow: hidden;
 
     /* Rounds the image container's corners to match the site's card style. */
@@ -826,6 +829,7 @@ strong {
     /* Centres content vertically within the button. */
     align-items: center;
     /* Centres content horizontally within the button. */
+    /* Centres the loader horizontally. */
     justify-content: center;
 
     /* Guarantees a comfortably large, tappable minimum height. */
@@ -1810,6 +1814,7 @@ textarea {
 /* .show is toggled on by JavaScript to reveal the toast when a notification needs to appear. */
 .toast.show {
     /* Fades the toast fully into view. */
+    /* Keeps the loader fully visible while active. */
     opacity: 1;
 }
 
@@ -2692,19 +2697,29 @@ body.page-loading {
 
 /* Full-screen fixed overlay covering the entire viewport. */
 #page-loader {
+    /* Positions the loader overlay relative to the viewport. */
     position: fixed;
+    /* Stretches the overlay to all four edges of the viewport. */
     inset: 0;
+    /* Makes the overlay span the full viewport width. */
     width: 100vw;
+    /* Provides the standard viewport-height fallback. */
     height: 100vh;
+    /* Uses the dynamic viewport height on supported mobile browsers. */
     height: 100dvh;
+    /* Places the loader above every other page element. */
     z-index: 999999;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Creates the dark radial background behind the loader animation. */
     background: radial-gradient(circle at center, #0e2448 0%, #071428 65%, #040c18 100%);
     opacity: 1;
+    /* Keeps the active loader available to the user. */
     visibility: visible;
+    /* Allows the active overlay to receive pointer input. */
     pointer-events: auto;
+    /* Smoothly animates the overlay when it is hidden. */
     transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 350ms ease;
     overflow: hidden;
 }
@@ -2718,6 +2733,7 @@ body.page-loading {
 
 /* Centers the loader animation and branding content. */
 .page-loader-content {
+    /* Lays out the loader animation and text in a vertical flex column. */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2731,6 +2747,7 @@ body.page-loading {
 
 /* Bounding box for the 3D rotating rings, preventing any viewport overflow. */
 .page-loader-visual {
+    /* Establishes a positioning context for the animated loader elements. */
     position: relative;
     width: 320px;
     height: 320px;
@@ -2744,6 +2761,7 @@ body.page-loading {
    Adaptive 3D orbital rings with central glowing nucleus.
    ---------------------------------------------------------- */
 .page-loader-visual .loader {
+    /* Centres the animated orbital loader elements. */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2754,6 +2772,7 @@ body.page-loading {
 }
 
 .page-loader-visual .ring {
+    /* Positions each orbital ring independently around the nucleus. */
     position: absolute;
     width: 190px;
     height: 190px;
@@ -2766,6 +2785,7 @@ body.page-loading {
 }
 
 @keyframes rotate1 {
+    /* Defines the first orbital rotation animation. */
     from {
         transform: rotateX(50deg) rotateZ(110deg);
     }
@@ -2781,6 +2801,7 @@ body.page-loading {
 }
 
 @keyframes rotate2 {
+    /* Defines the second orbital rotation animation. */
     from {
         transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
     }
@@ -2796,6 +2817,7 @@ body.page-loading {
 }
 
 @keyframes rotate3 {
+    /* Defines the third orbital rotation animation. */
     from {
         transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
     }
@@ -2815,6 +2837,7 @@ body.page-loading {
 }
 
 @keyframes rotate4 {
+    /* Defines the fourth orbital rotation animation. */
     from {
         transform: rotateX(50deg) rotateZ(470deg);
     }
@@ -2834,6 +2857,7 @@ body.page-loading {
 }
 
 @keyframes rotate5 {
+    /* Defines the fifth orbital rotation animation. */
     from {
         transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
     }
@@ -2853,6 +2877,7 @@ body.page-loading {
 }
 
 @keyframes rotate6 {
+    /* Defines the sixth orbital rotation animation. */
     from {
         transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
     }
@@ -2887,6 +2912,7 @@ body.page-loading {
 }
 
 .page-loader-visual .nucleus {
+    /* Sets the nucleus size at the centre of the loader. */
     width: 22px;
     height: 22px;
     background: radial-gradient(circle, var(--yellow), #fe53bb);
@@ -2903,6 +2929,7 @@ body.page-loading {
 
 /* Campus-Cart loader brand label */
 .page-loader-brand {
+    /* Arranges the loader title and message vertically. */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2911,6 +2938,7 @@ body.page-loading {
 }
 
 .page-loader-title {
+    /* Styles the main Campus-Cart loader title. */
     color: var(--yellow);
     font-size: clamp(1.4rem, 4vw, 1.85rem);
     font-weight: 800;
@@ -2918,10 +2946,12 @@ body.page-loading {
 }
 
 .page-loader-title span {
+    /* Styles the secondary span inside the loader title. */
     color: var(--white);
 }
 
 .page-loader-text {
+    /* Styles the loading message below the brand title. */
     margin: 0;
     color: rgba(255, 255, 255, 0.88);
     font-size: 0.95rem;
@@ -2931,6 +2961,7 @@ body.page-loading {
 
 /* Responsive scaling for mobile and smaller tablets */
 @media (max-width: 520px) {
+    /* Reduces loader dimensions on smaller screens. */
     .page-loader-visual {
         width: 250px;
         height: 250px;
@@ -2946,6 +2977,7 @@ body.page-loading {
 }
 
 @media (max-width: 360px) {
+    /* Further reduces loader dimensions on very small screens. */
     .page-loader-visual {
         width: 200px;
         height: 200px;
