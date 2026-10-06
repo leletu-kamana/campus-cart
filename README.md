@@ -528,6 +528,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.83** — Add public university coverage entries for Western Cape. This adds the University of Cape Town, Stellenbosch University, the University of the Western Cape and Cape Peninsula University of Technology to the Western Cape public-university list. Each entry includes campus or city information so institutions can be displayed and searched more accurately.
 
+- **v3.84** — Add public TVET colleges to Western Cape coverage. This adds six public TVET colleges—Boland, College of Cape Town, False Bay, Northlink, South Cape and West Coast—to the Western Cape institution list. The update broadens the province's coverage from universities to vocational and technical education providers.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
