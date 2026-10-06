@@ -496,7 +496,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.67** — Add private institutions to coverage list. This adds private institutions to the Northern Cape coverage list, broadening the province's institution coverage.
 
-- **v3.68** — Add North West coverage.
+- **v3.68** — Add North West coverage. This adds North West coverage, continuing the national expansion of the Campus-Cart delivery and institution information.
 
 - **v3.69** — Add public institutions to coverage list.
 
