@@ -430,7 +430,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.34** — Add SEO metadata to coverage page. This adds SEO metadata to the Coverage page, improving its page description and search-engine context around Campus-Cart's geographic coverage.
 
-- **v3.35** — Add province navigation to coverage page.
+- **v3.35** — Add province navigation to coverage page. This adds province navigation to the Coverage page, allowing visitors to move between provincial coverage sections more easily.
 
 - **v3.36** — Add coverage page hero section.
 
