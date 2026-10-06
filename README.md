@@ -438,7 +438,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.38** — Add footer copyright to coverage page. This adds footer copyright information to the Coverage page, bringing its footer structure in line with the wider Campus-Cart website.
 
-- **v3.39** — Load shared scripts on coverage page.
+- **v3.39** — Load shared scripts on coverage page. This loads the shared project scripts on the Coverage page so common JavaScript behaviour can be used consistently with the rest of the website.
 
 - **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart.
 
