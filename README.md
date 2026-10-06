@@ -689,6 +689,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.139** — Update product map location. Updates the embedded Google Map on the Products page to the University of Pretoria location, aligning the displayed map with the intended store/business location.
 
+- **v3.140** — Merge latest main branch history. Records the merge of the latest `main` branch history after the recent screenshot, colour-scheme and map-location updates, preserving the combined project state.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
