@@ -628,6 +628,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.117** — Update index.html. Makes another targeted update to `index.html`, continuing the homepage refinement after the recent HTML documentation and formatting work.
 
+- **v3.118** — Add Campus-Cart loading screen. Adds a full-screen loading screen to the Campus-Cart homepage with branded loading text and accessible status attributes, providing visual feedback before the main page content is ready.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
