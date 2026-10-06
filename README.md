@@ -432,7 +432,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.35** — Add province navigation to coverage page. This adds province navigation to the Coverage page, allowing visitors to move between provincial coverage sections more easily.
 
-- **v3.36** — Add coverage page hero section.
+- **v3.36** — Add coverage page hero section. This adds a dedicated hero section to the Coverage page, giving the page a clear introduction before visitors browse the detailed coverage information.
 
 - **v3.37** — Add WhatsApp contact to coverage page.
 
