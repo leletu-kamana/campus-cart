@@ -412,7 +412,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.25** — Remove redundant contact form comments. This removes further redundant contact-form comments from `pages/contact.html`, keeping the markup cleaner and easier to read without changing the form's core purpose.
 
-- **v3.26** — Improve contact form validation.
+- **v3.26** — Improve contact form validation. This improves the contact form validation behaviour so user input can be checked more consistently before the form data is handed to the custom JavaScript handling.
 
 - **v3.27** — Add contact form preview and hub updates.
 
