@@ -145,18 +145,30 @@
                               <!-- The item list uses <optgroup> to separate bundles, new products and second-hand items.
                                    The option text must match the names stored in the STOCK table in forms.js. -->
                               <div class="form-group">
-
-                                   <!-- The label describes what information should be entered in the input.
-                                        for connects the label to the input with id="enq-ref". -->
-                                   <label for="enq-ref">Bundle or product reference (optional)</label>
-
-                                   <!-- type="text" allows the user to enter normal text.
-                                        placeholder displays an example until the user enters their own value. -->
-                                   <input id="enq-ref" name="reference" type="text" placeholder="e.g. Standard Starter Bundle">
-
-                                   <!-- hint provides additional instructions below the input field.
-                                        The class allows CSS to style this supporting information differently. -->
-                                   <span class="hint">Copy the name from the Shop, Deals or Parent Hub sections.</span>
+                                   <label for="enq-item">Bundle or product *</label>
+                                   <select id="enq-item" name="item" required>
+                                        <option value="">Choose an item...</option>
+                                        <optgroup label="Starter bundles">
+                                             <option>Basic Starter Bundle</option>
+                                             <option>Standard Starter Bundle</option>
+                                             <option>Premium Starter Bundle</option>
+                                        </optgroup>
+                                        <optgroup label="New products">
+                                             <option>Duvet &amp; Linen Set (Double)</option>
+                                             <option>Electric Kettle 1.7L</option>
+                                             <option>Stationery Mega Pack</option>
+                                             <option>Load-Shedding Light Kit</option>
+                                        </optgroup>
+                                        <optgroup label="Second-hand marketplace">
+                                             <option>Study Desk</option>
+                                             <option>Mini Bar Fridge</option>
+                                             <option>Accounting Textbook Set</option>
+                                             <option>Laptop Bag 15&quot;</option>
+                                             <option>Two-Tier Bookshelf</option>
+                                             <option>Study Chair</option>
+                                        </optgroup>
+                                   </select>
+                                   <span class="error-msg" id="enq-item-error" role="alert"></span>
                               </div>
 
                               <!-- This form-group contains the main message that the user wants to send.
