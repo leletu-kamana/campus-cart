@@ -490,7 +490,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.64** — Add private institutions to coverage page. This adds private institutions to the Mpumalanga coverage information, representing another major institution category.
 
-- **v3.65** — Add Northern Cape coverage section.
+- **v3.65** — Add Northern Cape coverage section. This adds the Northern Cape coverage section, extending Campus-Cart's geographic coverage to another province.
 
 - **v3.66** — Add public institutions to coverage.
 
