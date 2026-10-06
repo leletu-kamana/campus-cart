@@ -506,7 +506,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.72** — Add public university coverage entries. This adds public university coverage entries for the Western Cape, giving students more specific institution information.
 
-- **v3.73** — Add public TVET colleges to coverage.
+- **v3.73** — Add public TVET colleges to coverage. This adds public TVET colleges to the Western Cape coverage, extending the province's information to vocational and technical institutions.
 
 - **v3.74** — Add private institutions to coverage list.
 
