@@ -669,6 +669,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.129** — Add detailed script.js comments. Adds detailed explanatory comments to `assets/js/script.js`, making the JavaScript logic easier to study, understand and maintain.
 
+- **v3.130** — Tune loader timing values. Adjusts loader exit-transition and minimum-display timing values to make navigation feel smoother and more consistent, particularly during fast page changes.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
