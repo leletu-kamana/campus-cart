@@ -25,10 +25,15 @@
   <body class="page-loading">
 
     <!-- Full-Screen Campus-Cart Page Loader (Uiverse.io by Chris-immanuel-matthew) -->
+    <!-- Creates the full-screen loading container; the id identifies it for JavaScript and the class connects it to CSS styling. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
+      <!-- Groups the loader animation and loading message into one layout container. -->
       <div class="page-loader-content">
+        <!-- Contains the visual animation used by the page loader. -->
         <div class="page-loader-visual">
+          <!-- Creates the animated loader; aria-hidden hides decorative animation from screen readers. -->
           <div class="loader" aria-hidden="true">
+            <!-- Creates the centre element of the animated loader. -->
             <div class="nucleus"></div>
             <div class="ring"></div>
             <div class="ring"></div>
@@ -38,8 +43,11 @@
             <div class="ring"></div>
           </div>
         </div>
+        <!-- Contains the Campus-Cart loading branding and hides decorative content from screen readers. -->
         <div class="page-loader-brand" aria-hidden="true">
+          <!-- Displays the Campus-Cart loader title; the nested span allows part of the name to be styled separately. -->
           <span class="page-loader-title">Campus<span>-Cart</span></span>
+          <!-- Displays the loading message shown while the page is being prepared. -->
           <span class="page-loader-text">Loading Campus-Cart...</span>
         </div>
       </div>
