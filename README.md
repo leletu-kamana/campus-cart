@@ -679,6 +679,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.134** — Align mobile screenshots side by side. Updates the README mobile screenshot layout so the mobile images are presented side by side for clearer visual comparison.
 
+- **v3.135** — Add mobile screenshots to README. Adds five mobile screenshot references to the README and connects them to the new mobile screenshot assets so the documentation shows current mobile views.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
