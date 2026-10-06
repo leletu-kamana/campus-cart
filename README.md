@@ -410,7 +410,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.24** — Improve contact phone field. This refines the contact form phone field in `pages/contact.html`, improving how telephone information is collected and presented to users.
 
-- **v3.25** — Remove redundant contact form comments.
+- **v3.25** — Remove redundant contact form comments. This removes further redundant contact-form comments from `pages/contact.html`, keeping the markup cleaner and easier to read without changing the form's core purpose.
 
 - **v3.26** — Improve contact form validation.
 
