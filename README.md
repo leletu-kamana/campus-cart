@@ -402,6 +402,116 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.19** — Added an explicit form ID to the contact form in `pages/contact.html` and disabled native browser validation so custom form handling can target the form reliably.
 - **v3.20** — Merged the recent main-branch development history after the new coverage, navigation, SEO, form and README changes. 
 
+- **v3.21** — Clarify contact form validation config. This documents the contact form configuration in `pages/contact.html`, explaining the purpose of `novalidate` and the `data-mailto` attribute so the custom `forms.js` handling is easier to understand and maintain.
+
+- **v3.22** — Remove redundant contact form comments. This cleans up unnecessary comments in `pages/contact.html`, keeping the form markup focused on useful documentation while reducing redundant code comments.
+
+- **v3.23** — Improve contact form accessibility. This improves the contact form's accessibility in `pages/contact.html`, making the form structure and user interaction clearer for visitors using different input methods.
+
+- **v3.24** — Improve contact phone field. This refines the contact form phone field in `pages/contact.html`, improving how telephone information is collected and presented to users.
+
+- **v3.25** — Remove redundant contact form comments. This removes further redundant contact-form comments from `pages/contact.html`, keeping the markup cleaner and easier to read without changing the form's core purpose.
+
+- **v3.26** — Improve contact form validation. This improves the contact form validation behaviour so user input can be checked more consistently before the form data is handed to the custom JavaScript handling.
+
+- **v3.27** — Add contact form preview and hub updates. This adds contact-form preview behaviour and updates the collection-hub information, giving users clearer feedback about the information they are preparing to submit and where collection is available.
+
+- **v3.28** — Refresh contact collection hubs. This refreshes the contact-page collection-hub information so the listed locations better support the project's student collection and delivery messaging.
+
+- **v3.29** — Add regional pickup locations to contact page. This expands the contact page with regional pickup locations, giving users more specific information about possible collection areas.
+
+- **v3.30** — Load contact form script. This loads the contact-form JavaScript on the contact page so the form can use the project's custom client-side handling instead of relying only on default browser behaviour.
+
+- **v3.31** — Add validation and coverage page styles. This adds CSS for form validation states and the Coverage page, giving validation feedback and coverage content a consistent visual treatment within the shared Campus-Cart design.
+
+- **v3.32** — Add Campus-Cart page loader. This introduces the Campus-Cart page loader, adding a consistent loading experience while pages and their shared resources are being prepared.
+
+- **v3.33** — Add coverage page. This adds the Coverage page as a dedicated location-information page for showing where Campus-Cart services and collection options are intended to be available.
+
+- **v3.34** — Add SEO metadata to coverage page. This adds SEO metadata to the Coverage page, improving its page description and search-engine context around Campus-Cart's geographic coverage.
+
+- **v3.35** — Add province navigation to coverage page. This adds province navigation to the Coverage page, allowing visitors to move between provincial coverage sections more easily.
+
+- **v3.36** — Add coverage page hero section. This adds a dedicated hero section to the Coverage page, giving the page a clear introduction before visitors browse the detailed coverage information.
+
+- **v3.37** — Add WhatsApp contact to coverage page. This adds a WhatsApp contact option to the Coverage page, providing visitors with a direct communication route for coverage and delivery-related enquiries.
+
+- **v3.38** — Add footer copyright to coverage page. This adds footer copyright information to the Coverage page, bringing its footer structure in line with the wider Campus-Cart website.
+
+- **v3.39** — Load shared scripts on coverage page. This loads the shared project scripts on the Coverage page so common JavaScript behaviour can be used consistently with the rest of the website.
+
+- **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart. This merge commit brings the current `main` branch history together after the coverage-page development work, preserving the combined project state.
+
+- **v3.41** — Add institution search to coverage page. This adds institution search functionality to the Coverage page, helping visitors locate relevant institutions instead of relying only on manually browsing the full list.
+
+- **v3.42** — Add Eastern Cape coverage section. This adds the Eastern Cape coverage section, establishing province-specific delivery and institution information for the project's home region.
+
+- **v3.43** — Add public university coverage. This expands Eastern Cape coverage with public universities, making the Coverage page more useful for students attending public higher-education institutions.
+
+- **v3.44** — Add Eastern Cape TVET colleges. This adds Eastern Cape TVET colleges to the coverage information, extending the page beyond universities to include vocational and technical institutions.
+
+- **v3.45** — Add private institutions to coverage. This adds private institutions to the Eastern Cape coverage information, giving students at private providers a dedicated place in the coverage list.
+
+- **v3.46** — Add Free State delivery coverage. This adds Free State delivery coverage, extending the geographic scope of Campus-Cart beyond the Eastern Cape.
+
+- **v3.47** — Add public universities to coverage page. This adds public universities to the Free State coverage information, providing institution-level detail within the provincial section.
+
+- **v3.48** — Add public TVET colleges to coverage. This adds public TVET colleges to the Free State coverage information, broadening the province's listed tertiary institutions.
+
+- **v3.49** — Add private institutions and Gauteng coverage. This adds private institutions and Gauteng coverage information, expanding the Coverage page into another major South African province and its private-education sector.
+
+- **v3.50** — Add public universities to coverage page. This adds public universities to the Gauteng coverage section, providing more detailed institution-level information for students in the province.
+
+- **v3.51** — Add Gauteng TVET colleges. This adds Gauteng TVET colleges to the Coverage page, extending the province's coverage beyond universities.
+
+- **v3.52** — Add private institutions to coverage page. This adds private institutions to the Gauteng coverage information, completing another institution category for the province.
+
+- **v3.53** — Add KwaZulu-Natal coverage. This adds KwaZulu-Natal coverage, extending the project's delivery and institution information into another major province.
+
+- **v3.54** — Add public universities to coverage list. This adds public universities to the KwaZulu-Natal coverage list, giving the province institution-specific information.
+
+- **v3.55** — Expand KZN institution coverage. This expands KwaZulu-Natal institution coverage, adding more tertiary institutions to the province's section.
+
+- **v3.56** — Add private institutions to coverage page. This adds private institutions to the KwaZulu-Natal coverage page, ensuring the province includes both public and private providers.
+
+- **v3.57** — Add Limpopo delivery coverage. This adds Limpopo delivery coverage, extending the national geographic scope of the Campus-Cart Coverage page.
+
+- **v3.58** — Add public university coverage entries. This adds public university coverage entries for Limpopo, providing institution-level detail for students at public universities.
+
+- **v3.59** — Add public TVET colleges to coverage. This adds public TVET colleges to Limpopo coverage, extending the province's listed institutions beyond universities.
+
+- **v3.60** — Add private institution to coverage. This adds a private institution to the Limpopo coverage information, improving the representation of different tertiary-provider types.
+
+- **v3.61** — Add Mpumalanga delivery coverage. This adds Mpumalanga delivery coverage, continuing the expansion of the Coverage page across South African provinces.
+
+- **v3.62** — Add Mpumalanga university listing. This adds a university listing for Mpumalanga, giving the province more specific institution-level coverage information.
+
+- **v3.63** — Add Mpumalanga TVET colleges. This adds Mpumalanga TVET colleges to the Coverage page, broadening the province's tertiary-education coverage.
+
+- **v3.64** — Add private institutions to coverage page. This adds private institutions to the Mpumalanga coverage information, representing another major institution category.
+
+- **v3.65** — Add Northern Cape coverage section. This adds the Northern Cape coverage section, extending Campus-Cart's geographic coverage to another province.
+
+- **v3.66** — Add public institutions to coverage. This adds public institutions to the Northern Cape coverage information, providing more specific options for students in the province.
+
+- **v3.67** — Add private institutions to coverage list. This adds private institutions to the Northern Cape coverage list, broadening the province's institution coverage.
+
+- **v3.68** — Add North West coverage. This adds North West coverage, continuing the national expansion of the Campus-Cart delivery and institution information.
+
+- **v3.69** — Add public institutions to coverage list. This adds public institutions to the North West coverage list, providing institution-level detail for public providers.
+
+- **v3.70** — Add private institutions to coverage. This adds private institutions to the North West coverage information, improving coverage for students at private providers.
+
+- **v3.71** — Add Western Cape delivery coverage. This adds Western Cape delivery coverage, extending the Coverage page to another major South African province.
+
+- **v3.72** — Add public university coverage entries. This adds public university coverage entries for the Western Cape, giving students more specific institution information.
+
+- **v3.73** — Add public TVET colleges to coverage. This adds public TVET colleges to the Western Cape coverage, extending the province's information to vocational and technical institutions.
+
+- **v3.74** — Add private institutions to coverage list. This adds private institutions to the Western Cape coverage list, completing another institution category for the province.
+
+- **v3.75** — Add national private providers section. This adds a national private-providers section, bringing the Coverage page together with broader information for private tertiary institutions across South Africa.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
