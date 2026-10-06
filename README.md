@@ -456,7 +456,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.47** — Add public universities to coverage page. This adds public universities to the Free State coverage information, providing institution-level detail within the provincial section.
 
-- **v3.48** — Add public TVET colleges to coverage.
+- **v3.48** — Add public TVET colleges to coverage. This adds public TVET colleges to the Free State coverage information, broadening the province's listed tertiary institutions.
 
 - **v3.49** — Add private institutions and Gauteng coverage.
 
