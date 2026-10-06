@@ -534,6 +534,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.86** — Add national private providers section. This adds a national private-providers section containing 20 institutions that operate across multiple provinces or provide distance-learning options. The section also explains that delivery times follow the typical timeframe for the relevant province, bringing the Coverage page together with a broader national option for students whose institutions are not limited to one province.
 
+- **v3.87** — Add Google site verification tags. This adds the Google Search Console site-verification meta tag to the homepage and the site's page templates, allowing Google to confirm ownership of the Campus-Cart website. The update also standardises the placement of the verification metadata within the HTML head sections, keeping the verification setup consistent across the website while preserving the existing SEO metadata.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
