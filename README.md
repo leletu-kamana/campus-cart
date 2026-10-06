@@ -500,7 +500,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.69** — Add public institutions to coverage list. This adds public institutions to the North West coverage list, providing institution-level detail for public providers.
 
-- **v3.70** — Add private institutions to coverage.
+- **v3.70** — Add private institutions to coverage. This adds private institutions to the North West coverage information, improving coverage for students at private providers.
 
 - **v3.71** — Add Western Cape delivery coverage.
 
