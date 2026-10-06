@@ -638,6 +638,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.122** — Add page loader to coverage page. Adds a full-screen Campus-Cart loading overlay to `pages/coverage.html`, including animated branding, accessibility attributes and a page-loading state for smoother initial rendering.
 
+- **v3.123** — Add enquiry page loading screen. Adds a full-screen branded loading overlay to `pages/enquiry.html`, providing visual feedback while the enquiry page initializes and exposing the required page-loading hooks.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
