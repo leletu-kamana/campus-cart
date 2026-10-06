@@ -632,6 +632,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.119** — Add page loader to about page. Adds a full-screen branded loading overlay to `pages/about.html`, including the page-loading state and accessible loader markup for a smoother initial page experience.
 
+- **v3.120** — Add page loader to account page. Adds a Campus-Cart loading overlay to `pages/account.html`, using a page-loading state, branded animation and accessibility attributes while the page initializes.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
