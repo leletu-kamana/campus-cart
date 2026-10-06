@@ -422,7 +422,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.30** — Load contact form script. This loads the contact-form JavaScript on the contact page so the form can use the project's custom client-side handling instead of relying only on default browser behaviour.
 
-- **v3.31** — Add validation and coverage page styles.
+- **v3.31** — Add validation and coverage page styles. This adds CSS for form validation states and the Coverage page, giving validation feedback and coverage content a consistent visual treatment within the shared Campus-Cart design.
 
 - **v3.32** — Add Campus-Cart page loader.
 
