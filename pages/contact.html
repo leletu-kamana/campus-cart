@@ -133,22 +133,11 @@
                         </div>
 
                         <div class="form-row">
-
-                            <!-- This form-group contains the user's phone or WhatsApp number.
-                                 The field is optional because required is not included. -->
                             <div class="form-group">
-
-                                <!-- The label describes what information should be entered.
-                                     for connects this label to the input with id="c-phone". -->
                                 <label for="c-phone">Phone / WhatsApp (optional)</label>
-
-                                <!-- type="tel" is designed for telephone numbers.
-                                     placeholder displays an example before the user enters a number. -->
-                                <input id="c-phone" name="phone" type="tel" placeholder="082 000 0000">
+                                <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="082 000 0000">
+                                <span class="error-msg" id="c-phone-error" role="alert"></span>
                             </div>
-
-                            <!-- This form-group contains a dropdown for selecting a topic.
-                                 The dropdown allows the user to choose from predefined options. -->
                             <div class="form-group">
 
                                 <!-- The label identifies the purpose of the select element.
