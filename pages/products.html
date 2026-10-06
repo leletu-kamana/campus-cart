@@ -9,977 +9,977 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <title> sets the name shown on the browser tab and helps identify the webpage.
-        It also provides useful information for search engines and accessibility. -->
+    It also provides useful information for search engines and accessibility. -->
     <title>Shop Student Essentials &amp; Bundles | Campus-Cart</title>
     <!-- Provides a description of the webpage for search engines. -->
     <meta name="description" content="Shop new and second-hand student essentials, starter bundles and the Parent Hub with delivery across South Africa.">
     <!-- Provides keyword metadata describing the main subjects of the webpage. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-      <!-- Provides the Google Search Console verification token used to verify website ownership. -->
-      <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
+    <!-- Provides the Google Search Console verification token used to verify website ownership. -->
+    <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
     <!-- Links this HTML document to an external CSS stylesheet.
-        The href attribute specifies the location of the CSS file. -->
+    The href attribute specifies the location of the CSS file. -->
     <link rel="stylesheet" href="../assets/css/styles.css">
   </head>
 
-  <!-- Starts the visible webpage body containing the content shown to visitors. -->
-  <body>
+    <!-- Starts the visible webpage body containing the content shown to visitors. -->
+    <body>
 
-    <!-- <header> contains introductory content and website navigation.
-        The class attribute connects this element to CSS styling. -->
-    <header class="topbar">
+      <!-- <header> contains introductory content and website navigation.
+      The class attribute connects this element to CSS styling. -->
+      <header class="topbar">
 
-      <!-- <nav> defines a section containing navigation links.
-          aria-label provides an accessible name for screen readers. -->
-      <nav class="nav" aria-label="Main navigation">
+        <!-- <nav> defines a section containing navigation links.
+        aria-label provides an accessible name for screen readers. -->
+        <nav class="nav" aria-label="Main navigation">
 
-        <!-- <a> creates a hyperlink and href specifies its destination.
-            <span> allows part of the logo text to be styled separately. -->
-        <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+          <!-- <a> creates a hyperlink and href specifies its destination.
+          <span> allows part of the logo text to be styled separately. -->
+          <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
 
-        <!-- <button> creates an interactive button for the navigation.
-            aria-expanded tells assistive technology whether the menu is open. -->
-        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+          <!-- <button> creates an interactive button for the navigation.
+          aria-expanded tells assistive technology whether the menu is open. -->
+          <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
 
-        <!-- <div> groups the navigation links into one container.
-            The class attribute allows CSS to control the links' layout. -->
-        <div class="nav-links">
+          <!-- <div> groups the navigation links into one container.
+          The class attribute allows CSS to control the links' layout. -->
+          <div class="nav-links">
 
-          <!-- href contains the relative path to the home page.
-              Clicking the anchor navigates the browser to that page. -->
-          <a href="../index.html">Home</a>
+            <!-- href contains the relative path to the home page.
+            Clicking the anchor navigates the browser to that page. -->
+            <a href="../index.html">Home</a>
 
-          <!-- This anchor uses a relative path to open the About page. -->
-          <a href="about.html">About</a>
+            <!-- This anchor uses a relative path to open the About page. -->
+            <a href="about.html">About</a>
 
-          <!-- #shop is a fragment identifier that targets an element with id="shop". -->
-          <a href="products.html">Shop</a>
+            <!-- #shop is a fragment identifier that targets an element with id="shop". -->
+            <a href="products.html">Shop</a>
 
-          <!-- #parent-hub targets the element whose id is "parent-hub". -->
-          <a href="products.html#parent-hub">Parent Hub</a>
+            <!-- #parent-hub targets the element whose id is "parent-hub". -->
+            <a href="products.html#parent-hub">Parent Hub</a>
 
-          <!-- This anchor navigates to the enquiry page. -->
-          <a href="enquiry.html">Enquiry</a>
-                <!-- Creates a hyperlink; href specifies its destination and class can control its appearance. -->
-                <a href="coverage.html">Coverage</a>
+            <!-- This anchor navigates to the enquiry page. -->
+            <a href="enquiry.html">Enquiry</a>
+            <!-- Creates a hyperlink; href specifies its destination and class can control its appearance. -->
+            <a href="coverage.html">Coverage</a>
 
-          <!-- This anchor navigates to the contact page. -->
-          <a href="contact.html">Contact</a>
+            <!-- This anchor navigates to the contact page. -->
+            <a href="contact.html">Contact</a>
 
-          <!-- This anchor navigates to the account page. -->
-          <a href="account.html">Account</a>
+            <!-- This anchor navigates to the account page. -->
+            <a href="account.html">Account</a>
 
-          <!-- <span> contains the cart number that JavaScript can update.
-              data-cart-count is a custom data attribute used by JavaScript. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
-        </div>
-      </nav>
-    </header>
-
-    <!-- <nav> creates another navigation area for sections on this page.
-        aria-label describes the purpose of this navigation to assistive technology. -->
-    <nav class="subnav" aria-label="Section navigation">
-      <!-- Creates an unordered list for related items. -->
-      <ul>
-
-        <!-- <ul> creates an unordered list and <li> creates each list item.
-            The anchor inside each item links to a section using its ID. -->
-        <li><a href="#shop">Shop</a></li>
-
-        <!-- &amp; is an HTML entity that displays the ampersand (&) character. -->
-        <li><a href="#deals-gallery">Deals &amp; Gallery</a></li>
-
-        <!-- This fragment links to the element with id="parent-hub". -->
-        <li><a href="#parent-hub">Parent Hub</a></li>
-
-        <!-- This fragment links to the product detail section on this page. -->
-        <li><a href="#product-detail">Product Detail</a></li>
-
-        <!-- This fragment links directly to the selling and FAQ section. -->
-        <li><a href="#sell-with-us">Sell With Us &amp; FAQ</a></li>
-      </ul>
-    </nav>
-
-    <!-- <main> identifies the primary content of the webpage.
-        It separates the main page content from navigation and footer content. -->
-    <main>
-
-      <!-- <section> groups related content into a semantic webpage section.
-          id gives the section a unique identifier for internal links. -->
-      <section class="section" id="shop">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- This div groups the heading and introductory paragraph together.
-              class="section-head" allows CSS to style this group. -->
-          <div class="section-head">
-
-            <!-- <span> is an inline element used for a short piece of text.
-                The class attribute allows this text to receive CSS styling. -->
-            <span class="eyebrow">Section 1</span>
-
-            <!-- <h2> creates a second-level heading for the section. -->
-            <h2>Shop</h2>
-
-            <!-- <p> creates a paragraph containing normal text content. -->
-            <p>Switch between brand-new stock and our manually reviewed second-hand marketplace.</p>
+            <!-- <span> contains the cart number that JavaScript can update.
+            data-cart-count is a custom data attribute used by JavaScript. -->
+            <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
           </div>
-
-          <!-- data-tabs is a custom attribute that JavaScript can use.
-              It identifies this container as a group of interactive tabs. -->
-          <div data-tabs>
-
-            <!-- role="tablist" identifies this element as a group of tabs.
-                aria-label provides an accessible description of the tab group. -->
-            <div class="tabs" role="tablist" aria-label="Shop tabs">
-
-              <!-- role="tab" identifies the button as a tab control.
-                  data-panel stores the ID of the content panel it controls. -->
-              <button class="tab-btn" role="tab" aria-selected="true" data-panel="panel-new">Shop New</button>
-
-              <!-- aria-selected="false" means this tab is not selected initially.
-                  data-panel connects this button to the second-hand content panel. -->
-              <button class="tab-btn" role="tab" aria-selected="false" data-panel="panel-used">Second-Hand Marketplace</button>
-            </div>
-
-            <!-- role="tabpanel" identifies this element as tab content.
-                id="panel-new" matches the data-panel value of the first tab. -->
-            <div class="tab-panel" id="panel-new" role="tabpanel">
-
-              <!-- class="grid grid-4" applies two CSS classes to this container.
-                  The classes control the layout and number of columns. -->
-              <div class="grid grid-4">
-
-                <!-- <article> represents a self-contained piece of content.
-                    Here it is used to represent one individual product. -->
-                <article class="card">
-
-                  <!-- src specifies the image location and alt provides alternative text.
-                      loading="lazy" allows the browser to delay loading the image. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
-
-                  <!-- This div groups the text and controls belonging to the product.
-                      class="card-body" allows CSS to style the card content. -->
-                  <div class="card-body">
-
-                    <!-- <span> displays short inline content.
-                        The badge classes allow CSS to style the product status. -->
-                    <span class="badge badge-new">New</span>
-
-                    <!-- <h3> creates a third-level heading for the product name. -->
-                    <h3>Duvet &amp; Linen Set (Double)</h3>
-
-                    <!-- class="price" identifies this paragraph as a product price.
-                        CSS can use the class to control its appearance. -->
-                    <p class="price">R749.00</p>
-
-                    <!-- This paragraph provides additional information about the product. -->
-                    <p>Winter duvet, fitted sheet, pillow and two covers.</p>
-
-                    <!-- data-add stores the product name for JavaScript to read.
-                        data-price stores the product price as a custom data value. -->
-                    <button class="btn btn-sm" data-add="Duvet &amp; Linen Set (Double)" data-price="749">Add to Order Summary</button>
-                  </div>
-                </article>
-
-                <!-- This <article> represents another independent product.
-                    The card class allows it to share the same CSS styling. -->
-                <article class="card">
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
-                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                  <div class="card-body">
-                    <!-- Creates an inline element used to group and style a short piece of text. -->
-                    <span class="badge badge-new">New</span>
-                    <!-- Creates a third-level heading for a subsection, product or information card. -->
-                    <h3>Electric Kettle 1.7L</h3>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p class="price">R289.00</p>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p>Fast-boil, res-friendly and load-shedding ready.</p>
-
-                    <!-- Custom data attributes allow JavaScript to access product information.
-                        data-add stores the name while data-price stores the numeric price. -->
-                    <button class="btn btn-sm" data-add="Electric Kettle 1.7L" data-price="289">Add to Order Summary</button>
-                  </div>
-                </article>
-
-                <!-- This article represents another product card in the grid. -->
-                <article class="card">
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
-                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                  <div class="card-body">
-                    <!-- Creates an inline element used to group and style a short piece of text. -->
-                    <span class="badge badge-new">New</span>
-                    <!-- Creates a third-level heading for a subsection, product or information card. -->
-                    <h3>Stationery Mega Pack</h3>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p class="price">R249.00</p>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p>Files, pads, pens, highlighters and a calculator.</p>
-
-                    <!-- The JavaScript can read both values from these custom attributes. -->
-                    <button class="btn btn-sm" data-add="Stationery Mega Pack" data-price="249">Add to Order Summary</button>
-                  </div>
-                </article>
-
-                <!-- This article represents the fourth product in the product grid. -->
-                <article class="card">
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
-                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                  <div class="card-body">
-                    <!-- Creates an inline element used to group and style a short piece of text. -->
-                    <span class="badge badge-new">New</span>
-                    <!-- Creates a third-level heading for a subsection, product or information card. -->
-                    <h3>Load-Shedding Light Kit</h3>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p class="price">R329.00</p>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p>Rechargeable lamp, power bank and extension lead.</p>
-
-                    <!-- data-add and data-price provide values that JavaScript can use. -->
-                    <button class="btn btn-sm" data-add="Load-Shedding Light Kit" data-price="329">Add to Order Summary</button>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <!-- hidden is a Boolean HTML attribute that hides the element.
-                JavaScript can remove it when the second tab is selected. -->
-            <div class="tab-panel" id="panel-used" role="tabpanel" hidden>
-
-              <!-- Inline style applies CSS directly to this element.
-                  margin-bottom creates space below the information box. -->
-              <div class="info-box" style="margin-bottom:24px">
-
-                <!-- <h3> creates a heading for the information box. -->
-                <h3>How the marketplace works</h3>
-
-                <!-- <strong> gives semantic importance to the enclosed text.
-                    Browsers normally display strong text in bold. -->
-                <p>Every listing is submitted through a form, then <strong>manually reviewed</strong> by our team at a collection point before it appears here. There is no automatic upload and no live seller dashboard on this site.</p>
-              </div>
-
-              <!-- class="gallery" groups multiple image figures together.
-                  CSS can use this class to control the gallery layout. -->
-              <div class="gallery">
-
-                <!-- <figure> groups media content with its related caption.
-                    It is useful when an image and description belong together. -->
-                <figure>
-
-                  <!-- src specifies the image path while alt provides alternative text.
-                      width and height provide the image dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
-
-                  <!-- <figcaption> provides a caption associated with the figure. -->
-                  <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure groups the image and information for another item. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used mini bar fridge" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Mini Bar Fridge</strong> — R1 150 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand textbook listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand laptop bag listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand bookshelf listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used bookshelf" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Two-Tier Bookshelf</strong> — R380 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand study chair listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study chair" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Study Chair</strong> — R450 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-              </div>
-
-              <!-- style adds spacing above the paragraph using inline CSS.
-                  The anchor inside it links to the selling section. -->
-              <p style="margin-top:20px"><a class="btn btn-outline" href="#sell-with-us">How to list your own items</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2 contains product filtering, sorting and the visual gallery.
-          The id allows other elements to link directly to this section. -->
-      <section class="section alt" id="deals-gallery">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Groups the heading and introductory text for this section. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 2</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Deals &amp; Gallery</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>Filter and sort in your browser — the list comes from a fixed data set in the site's script, not a database.</p>
-          </div>
-
-          <!-- toolbar groups the filtering and sorting form controls.
-              CSS uses this class to arrange the controls on the page. -->
-          <div class="toolbar">
-
-            <!-- field groups a label and its related form control. -->
-            <div class="field">
-
-              <!-- for connects the label to the select element with the same ID. -->
-              <label for="filter-category">Category</label>
-
-              <!-- <select> creates a dropdown list for selecting a value.
-                  id uniquely identifies this control for HTML, CSS and JavaScript. -->
-              <select id="filter-category">
-
-                <!-- <option> represents one selectable value inside a select element.
-                    value is the data returned when this option is selected. -->
-                <option value="all">All categories</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="bundles">Bundles</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="appliances">Appliances</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="furniture">Furniture</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="bedding">Bedding</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="textbooks">Textbooks</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="stationery">Stationery</option>
-              </select>
-            </div>
-
-            <!-- This field groups the condition label and dropdown together. -->
-            <div class="field">
-              <!-- Creates a form label and associates it with a control using the for attribute. -->
-              <label for="filter-condition">Condition</label>
-              <!-- Creates a dropdown control for selecting one available value. -->
-              <select id="filter-condition">
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="all">New &amp; second-hand</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="new">New only</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="used">Second-hand only</option>
-              </select>
-            </div>
-
-            <!-- This field groups the sorting label and dropdown together. -->
-            <div class="field">
-              <!-- Creates a form label and associates it with a control using the for attribute. -->
-              <label for="sort-by">Sort by</label>
-              <!-- Creates a dropdown control for selecting one available value. -->
-              <select id="sort-by">
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="default">Featured</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="price-asc">Price: low to high</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="price-desc">Price: high to low</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="name">Name A–Z</option>
-              </select>
-            </div>
-
-            <!-- id uniquely identifies this paragraph so JavaScript can update it.
-                It can display information such as the number of matching products. -->
-            <p id="deals-count" class="hint" style="margin:0 0 6px auto"></p>
-          </div>
-
-          <!-- This container starts empty and can be populated by JavaScript.
-              The id allows JavaScript to locate this element in the DOM. -->
-          <div class="grid grid-3" id="deals-results"></div>
-
-          <!-- Inline CSS adds spacing above this heading.
-              <!-- Creates a third-level heading for a subsection, product or information card. -->
-              <h3> creates a third-level heading for the gallery. -->
-          <h3 style="margin-top:48px">Visual gallery</h3>
-
-          <!-- role="tablist" identifies these buttons as a group of tabs.
-              aria-label describes the purpose of the controls to screen readers. -->
-          <div class="tabs" role="tablist" aria-label="Gallery filters">
-
-            <!-- data-gallery-filter stores the category JavaScript should display.
-                aria-selected shows that this filter is selected initially. -->
-            <button class="tab-btn" role="tab" aria-selected="true" data-gallery-filter="all">All</button>
-
-            <!-- This button filters the gallery to products in the bundles category. -->
-            <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="bundles">Bundles</button>
-
-            <!-- This button filters the gallery to residence-life images. -->
-            <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="res-life">Res life</button>
-
-            <!-- This button filters the gallery to second-hand images. -->
-            <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="second-hand">Second-hand</button>
-          </div>
-
-          <!-- gallery contains the figure elements used to display the images. -->
-          <div class="gallery">
-
-            <!-- data-gallery-item identifies the category of this gallery item.
-                JavaScript can compare this value with the selected filter. -->
-            <figure data-gallery-item="bundles">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the second-hand gallery category. -->
-            <figure data-gallery-item="second-hand">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand items" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Reviewed second-hand stock at our Braamfontein point.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the res-life gallery category. -->
-            <figure data-gallery-item="res-life">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Registration week collections on campus.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the bundles gallery category. -->
-            <figure data-gallery-item="bundles">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Bedding and linen included in every bundle tier.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the second-hand gallery category. -->
-            <figure data-gallery-item="second-hand">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the res-life gallery category. -->
-            <figure data-gallery-item="res-life">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Move-in day at a partner residence.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 3 contains information intended for parents and guardians.
-          The id allows navigation links to jump directly to this section. -->
-      <section class="section" id="parent-hub">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Groups the section heading and introductory paragraph. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 3</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Parent Hub</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>Plan the whole first year with a printable checklist and three fixed-price bundles.</p>
-          </div>
-
-          <!-- grid-2 applies a two-column CSS layout to the content. -->
-          <div class="grid grid-2">
-
-            <!-- info-box groups the checklist content into one styled container. -->
-            <div class="info-box">
-              <!-- Creates a third-level heading for a subsection, product or information card. -->
-              <h3>First Year Checklist</h3>
-
-              <!-- <ul> creates an unordered list of checklist requirements.
-                  Each <li> represents one individual list item. -->
-              <ul class="checklist">
-                <!-- Creates one item within an unordered list. -->
-                <li>Single/double bedding set, pillow and mattress protector</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Towels and a laundry bag or basket</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Kettle, two mugs, plate, bowl and cutlery set</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Desk lamp and extension lead with surge protection</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Rechargeable light or power bank for load shedding</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Lockable trunk or storage crate</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Stationery: files, pads, pens, calculator</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Prescribed textbooks (check second-hand first)</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Basic toolkit: scissors, tape, plasters, spare globes</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Copies of ID, registration and residence letters</li>
-              </ul>
-
-              <!-- Inline CSS adds spacing above the button.
-                  The button can be targeted by JavaScript using its ID. -->
-              <p style="margin-top:16px">
-                <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
-                <button class="btn" id="print-checklist">Print this checklist</button>
-              </p>
-            </div>
-
-            <!-- This div contains the three different starter bundle cards. -->
-            <div>
-
-              <!-- Nested div elements create the card and its content container.
-                  The classes allow CSS to style the card consistently. -->
-              <div class="card">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="card-body">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="badge">Tier 1</span>
-                  <!-- Creates a third-level heading for a subsection, product or information card. -->
-                  <h3>Basic Starter Bundle</h3>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p class="price">R1 499.00</p>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p>Bedding set, kettle, two-mug set, plate/bowl/cutlery, stationery starter.</p>
-
-                  <!-- data-add and data-price store values that JavaScript can read. -->
-                  <button class="btn btn-sm" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
-                </div>
-              </div>
-
-              <!-- <br> inserts a line break between the bundle cards. -->
-              <br>
-
-              <!-- This card represents the second starter bundle. -->
-              <div class="card">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="card-body">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="badge badge-used">Tier 2 · most chosen</span>
-                  <!-- Creates a third-level heading for a subsection, product or information card. -->
-                  <h3>Standard Starter Bundle</h3>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p class="price">R2 799.00</p>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p>Everything in Basic, plus desk lamp, laundry basket, towel set, kitchen starter pack and extension lead.</p>
-                  <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
-                  <button class="btn btn-sm" data-add="Standard Starter Bundle" data-price="2799">Add to Order Summary</button>
-                </div>
-              </div>
-
-              <!-- Another line break separates the second and third bundle. -->
-              <br>
-
-              <!-- This card represents the third starter bundle. -->
-              <div class="card">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="card-body">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="badge badge-verified">Tier 3</span>
-                  <!-- Creates a third-level heading for a subsection, product or information card. -->
-                  <h3>Premium Starter Bundle</h3>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p class="price">R4 499.00</p>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p>Everything in Standard, plus lockable trunk, study chair, rechargeable light kit, mini kettle-and-fridge combo option and full stationery pack.</p>
-                  <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
-                  <button class="btn btn-sm" data-add="Premium Starter Bundle" data-price="4499">Add to Order Summary</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4 provides a reusable layout for displaying product details.
-          The ID allows navigation links to open this section directly. -->
-      <section class="section alt" id="product-detail">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Contains the product-detail heading and introductory information. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 4</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Product detail template</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>This is the reusable layout every product uses. Choose an item to preview it.</p>
-          </div>
-
-          <!-- toolbar groups the product selection control. -->
-          <div class="toolbar">
-            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-            <div class="field">
-
-              <!-- for connects the label to the select element with the matching ID. -->
-              <label for="detail-select">Preview product</label>
-
-              <!-- JavaScript can add product options to this select element. -->
-              <select id="detail-select"></select>
-            </div>
-          </div>
-
-          <!-- grid-2 creates two columns for the product image and information. -->
-          <div class="grid grid-2">
-
-            <!-- map-frame is used as a styled container for the product image. -->
-            <div class="product-map-frame">
-
-              <!-- id allows JavaScript to change this image dynamically.
-                  alt provides alternative text if the image cannot be displayed. -->
-              <img id="detail-img" src="../assets/images/bundles/start-bundle-2.jpg" alt="Selected product" loading="lazy">
-            </div>
-
-            <!-- This div contains the selected product's information and controls. -->
-            <div>
-
-              <!-- span is used for short inline labels such as product badges. -->
-              <span class="badge badge-verified">Verified Seller</span>
-
-              <!-- id allows JavaScript to update this element with the product condition. -->
-              <span class="badge" id="detail-condition">Brand new</span>
-
-              <!-- id allows JavaScript to replace the product name dynamically. -->
-              <h3 id="detail-name">Product name</h3>
-
-              <!-- id allows JavaScript to update the displayed product price. -->
-              <p class="price order-total" id="detail-price">R0.00</p>
-
-              <!-- id allows JavaScript to replace this paragraph with the product description. -->
-              <p id="detail-desc">Product description.</p>
-
-              <!-- data-add and data-price store values for JavaScript to use.
-                  The ID allows JavaScript to locate this specific button. -->
-              <button class="btn" id="detail-add" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
-
-              <!-- Inline CSS adds spacing above the collection heading. -->
-              <h3 style="margin-top:28px">Collection points</h3>
-
-              <!-- <ul> creates an unordered list of available collection locations. -->
+          </nav>
+          </header>
+
+            <!-- <nav> creates another navigation area for sections on this page.
+            aria-label describes the purpose of this navigation to assistive technology. -->
+            <nav class="subnav" aria-label="Section navigation">
+              <!-- Creates an unordered list for related items. -->
               <ul>
-                <!-- Creates one item within an unordered list. -->
-                <li><strong>Residence desk</strong> — Hatfield res reception, Mon–Fri 09:00–17:00</li>
-                <!-- Creates one item within an unordered list. -->
-                <li><strong>Campus point</strong> — Braamfontein student centre, Mon–Sat 10:00–16:00</li>
-                <!-- Creates one item within an unordered list. -->
-                <li><strong>Secure locker</strong> — Westville locker bank, daily 08:00–20:00</li>
+
+                <!-- <ul> creates an unordered list and <li> creates each list item.
+                The anchor inside each item links to a section using its ID. -->
+                <li><a href="#shop">Shop</a></li>
+
+                <!-- &amp; is an HTML entity that displays the ampersand (&) character. -->
+                <li><a href="#deals-gallery">Deals &amp; Gallery</a></li>
+
+                <!-- This fragment links to the element with id="parent-hub". -->
+                <li><a href="#parent-hub">Parent Hub</a></li>
+
+                <!-- This fragment links to the product detail section on this page. -->
+                <li><a href="#product-detail">Product Detail</a></li>
+
+                <!-- This fragment links directly to the selling and FAQ section. -->
+                <li><a href="#sell-with-us">Sell With Us &amp; FAQ</a></li>
               </ul>
+              </nav>
 
-              <!-- This div uses the map-frame class to style the map container. -->
-              <div class="map-frame">
+                <!-- <main> identifies the primary content of the webpage.
+                It separates the main page content from navigation and footer content. -->
+                <main>
 
-                <!-- src contains the external map URL that the iframe loads.
-                     width and height define the initial dimensions of the embedded map. -->
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27499065.0909108!2d5.934866550426572!3d-32.71742456649879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sza!4v1786441685311!5m2!1sen!2sza"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    alt="Static illustrated map of Campus-Cart office and collection locations in South Africa"
-                    loading="lazy"
-                    width="1400"
-                    height="700">
-                  </iframe>
-              </div>
+                  <!-- <section> groups related content into a semantic webpage section.
+                  id gives the section a unique identifier for internal links. -->
+                  <section class="section" id="shop">
+                    <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                    <div class="wrap">
 
-              <!-- class="map-note" allows CSS to style this explanatory paragraph. -->
-              <p class="map-note">This is a static map. Live GPS tracking is not available.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+                      <!-- This div groups the heading and introductory paragraph together.
+                      class="section-head" allows CSS to style this group. -->
+                      <div class="section-head">
 
-      <!-- Section 5 contains seller information and frequently asked questions.
-          The ID allows other links to navigate directly to this section. -->
-      <section class="section" id="sell-with-us">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
+                        <!-- <span> is an inline element used for a short piece of text.
+                        The class attribute allows this text to receive CSS styling. -->
+                        <span class="eyebrow">Section 1</span>
 
-          <!-- Contains the heading and introduction for the seller section. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 5</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Sell With Us</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>Turn last year's kit into cash. Listings are reviewed by a person before they go live.</p>
-          </div>
+                        <!-- <h2> creates a second-level heading for the section. -->
+                        <h2>Shop</h2>
 
-          <!-- grid-4 creates a four-column layout for the four process cards. -->
-          <div class="grid grid-4">
+                        <!-- <p> creates a paragraph containing normal text content. -->
+                        <p>Switch between brand-new stock and our manually reviewed second-hand marketplace.</p>
+                      </div>
 
-            <!-- Each card represents one step of the selling process.
-                card-navy applies the darker card styling through CSS. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>1. Submit</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Complete the external listing form with photos, condition notes and your asking price.</p>
-              </div>
-            </div>
+                        <!-- data-tabs is a custom attribute that JavaScript can use.
+                        It identifies this container as a group of interactive tabs. -->
+                        <div data-tabs>
 
-            <!-- This card represents the second step in the process. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>2. Review</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Our team checks the item at a collection point and confirms it is complete and working.</p>
-              </div>
-            </div>
+                          <!-- role="tablist" identifies this element as a group of tabs.
+                          aria-label provides an accessible description of the tab group. -->
+                          <div class="tabs" role="tablist" aria-label="Shop tabs">
 
-            <!-- This card represents the third step in the process. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>3. List</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Approved items are published to the Second-Hand Marketplace with a Verified Seller badge.</p>
-              </div>
-            </div>
+                            <!-- role="tab" identifies the button as a tab control.
+                            data-panel stores the ID of the content panel it controls. -->
+                            <button class="tab-btn" role="tab" aria-selected="true" data-panel="panel-new">Shop New</button>
 
-            <!-- This card represents the final step in the process. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>4. Hand over</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Buyer collects at the agreed point; we confirm the handover with both parties.</p>
-              </div>
-            </div>
-          </div>
+                            <!-- aria-selected="false" means this tab is not selected initially.
+                            data-panel connects this button to the second-hand content panel. -->
+                            <button class="tab-btn" role="tab" aria-selected="false" data-panel="panel-used">Second-Hand Marketplace</button>
+                          </div>
 
-          <!-- Inline CSS adds space above the paragraph.
-              The anchor links to an external Google Forms page. -->
-          <p style="margin-top:24px">
+                            <!-- role="tabpanel" identifies this element as tab content.
+                            id="panel-new" matches the data-panel value of the first tab. -->
+                            <div class="tab-panel" id="panel-new" role="tabpanel">
 
-            <!-- target="_blank" opens the link in a new browser tab.
-                rel="noopener" prevents the new page from accessing the opener. -->
-            <a class="btn" href="https://docs.google.com/forms/" target="_blank" rel="noopener">Open the listing form (Google Form)</a>
-          </p>
+                              <!-- class="grid grid-4" applies two CSS classes to this container.
+                              The classes control the layout and number of columns. -->
+                              <div class="grid grid-4">
 
-          <!-- Inline CSS adds space above the FAQ heading. -->
-          <h3 style="margin-top:48px">Frequently asked questions</h3>
+                                <!-- <article> represents a self-contained piece of content.
+                                Here it is used to represent one individual product. -->
+                                <article class="card">
 
-          <!-- data-tabs identifies this container as an interactive tab group.
-              JavaScript can use this attribute to control the FAQ panels. -->
-          <div data-tabs>
+                                  <!-- src specifies the image location and alt provides alternative text.
+                                  loading="lazy" allows the browser to delay loading the image. -->
+                                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
 
-            <!-- role="tablist" identifies this as a group of tab controls.
-                aria-label provides an accessible name for the tab group. -->
-            <div class="tabs" role="tablist" aria-label="FAQ tabs">
+                                  <!-- This div groups the text and controls belonging to the product.
+                                  class="card-body" allows CSS to style the card content. -->
+                                  <div class="card-body">
 
-              <!-- data-panel identifies which FAQ panel this tab controls.
-                  aria-selected indicates that this tab is currently selected. -->
-              <button class="tab-btn" role="tab" aria-selected="true" data-panel="faq-student">Student FAQ</button>
+                                    <!-- <span> displays short inline content.
+                                    The badge classes allow CSS to style the product status. -->
+                                    <span class="badge badge-new">New</span>
 
-              <!-- This tab controls the parent FAQ panel.
-                  aria-selected="false" means it is not selected initially. -->
-              <button class="tab-btn" role="tab" aria-selected="false" data-panel="faq-parent">Parent FAQ</button>
-            </div>
+                                    <!-- <h3> creates a third-level heading for the product name. -->
+                                    <h3>Duvet &amp; Linen Set (Double)</h3>
 
-            <!-- This panel contains questions intended for students.
-                role="tabpanel" identifies it as content controlled by a tab. -->
-            <div class="tab-panel" id="faq-student" role="tabpanel">
+                                    <!-- class="price" identifies this paragraph as a product price.
+                                    CSS can use the class to control its appearance. -->
+                                    <p class="price">R749.00</p>
 
-              <!-- info-box groups each FAQ question and answer.
-                  Inline CSS adds spacing below the information box. -->
-              <div class="info-box" style="margin-bottom:16px">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>Can I pay in instalments?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Payment plans are arranged manually over email before collection. Typically a 50% holding amount and the balance on collection. Nothing is charged on this website.</p>
-              </div>
+                                    <!-- This paragraph provides additional information about the product. -->
+                                    <p>Winter duvet, fitted sheet, pillow and two covers.</p>
 
-              <!-- This information box contains another FAQ question and answer. -->
-              <div class="info-box" style="margin-bottom:16px">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>What if a second-hand item is faulty?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Report it within 48 hours of collection and we arrange a swap or refund with the seller. Items are tested at review, so faults are rare.</p>
-              </div>
+                                    <!-- data-add stores the product name for JavaScript to read.
+                                    data-price stores the product price as a custom data value. -->
+                                    <button class="btn btn-sm" data-add="Duvet &amp; Linen Set (Double)" data-price="749">Add to Order Summary</button>
+                                  </div>
+                                  </article>
 
-              <!-- This information box contains the delivery FAQ. -->
-              <div class="info-box" style="margin-bottom:16px">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>How does delivery work?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Collection at any listed residence, campus or locker point is free. Courier delivery is quoted per order and confirmed before you pay.</p>
-              </div>
+                                    <!-- This <article> represents another independent product.
+                                    The card class allows it to share the same CSS styling. -->
+                                    <article class="card">
+                                      <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                      <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
+                                      <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                      <div class="card-body">
+                                        <!-- Creates an inline element used to group and style a short piece of text. -->
+                                        <span class="badge badge-new">New</span>
+                                        <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                        <h3>Electric Kettle 1.7L</h3>
+                                        <!-- Creates a paragraph containing related text. -->
+                                        <p class="price">R289.00</p>
+                                        <!-- Creates a paragraph containing related text. -->
+                                        <p>Fast-boil, res-friendly and load-shedding ready.</p>
 
-              <!-- This information box contains the seller earnings FAQ. -->
-              <div class="info-box">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>How much do I earn when selling?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>You set the asking price. Campus-Cart keeps a small handling fee that is confirmed in writing before your listing goes live.</p>
-              </div>
-            </div>
+                                        <!-- Custom data attributes allow JavaScript to access product information.
+                                        data-add stores the name while data-price stores the numeric price. -->
+                                        <button class="btn btn-sm" data-add="Electric Kettle 1.7L" data-price="289">Add to Order Summary</button>
+                                      </div>
+                                      </article>
 
-            <!-- hidden prevents this panel from displaying initially.
-                JavaScript can show it when the Parent FAQ tab is selected. -->
-            <div class="tab-panel" id="faq-parent" role="tabpanel" hidden>
+                                        <!-- This article represents another product card in the grid. -->
+                                        <article class="card">
+                                          <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                          <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
+                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                          <div class="card-body">
+                                            <!-- Creates an inline element used to group and style a short piece of text. -->
+                                            <span class="badge badge-new">New</span>
+                                            <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                            <h3>Stationery Mega Pack</h3>
+                                            <!-- Creates a paragraph containing related text. -->
+                                            <p class="price">R249.00</p>
+                                            <!-- Creates a paragraph containing related text. -->
+                                            <p>Files, pads, pens, highlighters and a calculator.</p>
 
-              <!-- This information box contains the first parent FAQ. -->
-              <div class="info-box" style="margin-bottom:16px">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>Are bundle prices fixed?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Yes. Each bundle lists its contents and one price. Substitutions on request never increase the price without written confirmation.</p>
-              </div>
+                                            <!-- The JavaScript can read both values from these custom attributes. -->
+                                            <button class="btn btn-sm" data-add="Stationery Mega Pack" data-price="249">Add to Order Summary</button>
+                                          </div>
+                                          </article>
 
-              <!-- This information box contains the staged-payment FAQ. -->
-              <div class="info-box" style="margin-bottom:16px">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>Can I pay off a bundle before registration?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Yes — arrange a staged payment plan by email. We hold stock once the first payment reflects.</p>
-              </div>
+                                            <!-- This article represents the fourth product in the product grid. -->
+                                            <article class="card">
+                                              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
+                                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                              <div class="card-body">
+                                                <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                <span class="badge badge-new">New</span>
+                                                <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                <h3>Load-Shedding Light Kit</h3>
+                                                <!-- Creates a paragraph containing related text. -->
+                                                <p class="price">R329.00</p>
+                                                <!-- Creates a paragraph containing related text. -->
+                                                <p>Rechargeable lamp, power bank and extension lead.</p>
 
-              <!-- This information box contains the returns-policy FAQ. -->
-              <div class="info-box" style="margin-bottom:16px">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>What is the returns policy?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Unused new items may be returned within 7 days of collection in their original packaging. Second-hand items follow the 48-hour fault window.</p>
-              </div>
+                                                <!-- data-add and data-price provide values that JavaScript can use. -->
+                                                <button class="btn btn-sm" data-add="Load-Shedding Light Kit" data-price="329">Add to Order Summary</button>
+                                              </div>
+                                              </article>
+                                              </div>
+                                              </div>
 
-              <!-- This information box contains the seller-verification FAQ. -->
-              <div class="info-box">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>How do I know a seller is legitimate?</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Every second-hand listing is inspected in person by our team before publication. The Verified Seller badge means a staff member handled the item.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+                                                <!-- hidden is a Boolean HTML attribute that hides the element.
+                                                JavaScript can remove it when the second tab is selected. -->
+                                                <div class="tab-panel" id="panel-used" role="tabpanel" hidden>
 
-    <!-- <footer> contains information displayed at the bottom of the webpage.
-        It commonly contains navigation, contact details and copyright information. -->
-    <footer>
+                                                  <!-- Inline style applies CSS directly to this element.
+                                                  margin-bottom creates space below the information box. -->
+                                                  <div class="info-box" style="margin-bottom:24px">
 
-      <!-- wrap controls the content width while footer-grid controls its layout.
-          Both classes are defined in the external CSS file. -->
-      <div class="wrap footer-grid">
+                                                    <!-- <h3> creates a heading for the information box. -->
+                                                    <h3>How the marketplace works</h3>
 
-        <!-- This div groups the website name and description. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Campus-Cart</h4>
-          <!-- Creates a paragraph containing related text. -->
-          <p>Affordable new and second-hand student essentials for South African campuses.</p>
-        </div>
+                                                    <!-- <strong> gives semantic importance to the enclosed text.
+                                                    Browsers normally display strong text in bold. -->
+                                                    <p>Every listing is submitted through a form, then <strong>manually reviewed</strong> by our team at a collection point before it appears here. There is no automatic upload and no live seller dashboard on this site.</p>
+                                                  </div>
 
-        <!-- This div contains navigation links related to shopping.
-            <!-- Creates an unordered list for related items. -->
-            <ul> creates the unordered list containing those links. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Shop</h4>
-          <!-- Creates an unordered list for related items. -->
-          <ul>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html">Shop New</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#product-detail">Product Detail</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-          </ul>
-        </div>
+                                                    <!-- class="gallery" groups multiple image figures together.
+                                                    CSS can use this class to control the gallery layout. -->
+                                                    <div class="gallery">
 
-        <!-- This div contains navigation links related to the company. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Company</h4>
-          <!-- Creates an unordered list for related items. -->
-          <ul>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="about.html">About</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#parent-hub">Parent Hub</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="enquiry.html">Enquiry</a></li>
-                    <!-- Creates one item within an unordered list. -->
-                    <li><a href="coverage.html">Coverage</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="contact.html">Contact</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="account.html">Account</a></li>
-          </ul>
-        </div>
+                                                      <!-- <figure> groups media content with its related caption.
+                                                      It is useful when an image and description belong together. -->
+                                                      <figure>
 
-        <!-- This div groups the website's contact information. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Reach us</h4>
-          <!-- Creates an unordered list for related items. -->
-          <ul>
- 
-            <!-- mailto: creates a link that can open an email application.
-                The address after mailto: becomes the email recipient. -->
-            <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+                                                        <!-- src specifies the image path while alt provides alternative text.
+                                                        width and height provide the image dimensions. -->
+                                                        <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
 
-            <!-- This URL uses WhatsApp's web link format to open the contact.
-                The number is included as part of the URL. -->
-            <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+                                                        <!-- <figcaption> provides a caption associated with the figure. -->
+                                                        <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
+                                                      </figure>
 
-            <!-- This list item contains plain text rather than a hyperlink. -->
-            <li>Mon–Fri, 09:00–17:00 SAST</li>
-          </ul>
-        </div>
-      </div>
+                                                        <!-- This figure groups the image and information for another item. -->
+                                                        <figure>
+                                                          <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                          <img src="../assets/images/second-hand/marketplace.jpg" alt="Used mini bar fridge" loading="lazy" width="1200" height="900">
+                                                          <!-- Provides a caption describing the content of the associated figure. -->
+                                                          <figcaption><strong>Mini Bar Fridge</strong> — R1 150 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
+                                                        </figure>
 
-      <!-- class="footer-bottom" identifies the bottom copyright area.
-          &copy; is an HTML entity that displays the copyright symbol. -->
-      <div class="wrap footer-bottom">
-        <!-- Creates a paragraph containing related text. -->
-        <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
-      </div>
-    </footer>
+                                                          <!-- This figure contains a second-hand textbook listing. -->
+                                                          <figure>
+                                                            <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                            <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
+                                                            <!-- Provides a caption describing the content of the associated figure. -->
+                                                            <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
+                                                          </figure>
 
-    <!-- <script> connects an external JavaScript file to this webpage.
-        src specifies the path where the JavaScript file is located. -->
-    <script src="../assets/js/script.js"></script>
+                                                            <!-- This figure contains a second-hand laptop bag listing. -->
+                                                            <figure>
+                                                              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
+                                                              <!-- Provides a caption describing the content of the associated figure. -->
+                                                              <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
+                                                            </figure>
 
-  </body>
-</html>
+                                                              <!-- This figure contains a second-hand bookshelf listing. -->
+                                                              <figure>
+                                                                <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                <img src="../assets/images/second-hand/marketplace.jpg" alt="Used bookshelf" loading="lazy" width="1200" height="900">
+                                                                <!-- Provides a caption describing the content of the associated figure. -->
+                                                                <figcaption><strong>Two-Tier Bookshelf</strong> — R380 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
+                                                              </figure>
+
+                                                                <!-- This figure contains a second-hand study chair listing. -->
+                                                                <figure>
+                                                                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study chair" loading="lazy" width="1200" height="900">
+                                                                  <!-- Provides a caption describing the content of the associated figure. -->
+                                                                  <figcaption><strong>Study Chair</strong> — R450 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
+                                                                </figure>
+                                                                </div>
+
+                                                                  <!-- style adds spacing above the paragraph using inline CSS.
+                                                                  The anchor inside it links to the selling section. -->
+                                                                  <p style="margin-top:20px"><a class="btn btn-outline" href="#sell-with-us">How to list your own items</a></p>
+                                                                </div>
+                                                                </div>
+                                                                </div>
+                                                                </section>
+
+                                                                  <!-- Section 2 contains product filtering, sorting and the visual gallery.
+                                                                  The id allows other elements to link directly to this section. -->
+                                                                  <section class="section alt" id="deals-gallery">
+                                                                    <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                    <div class="wrap">
+
+                                                                      <!-- Groups the heading and introductory text for this section. -->
+                                                                      <div class="section-head">
+                                                                        <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                        <span class="eyebrow">Section 2</span>
+                                                                        <!-- Creates a second-level heading for a major webpage section. -->
+                                                                        <h2>Deals &amp; Gallery</h2>
+                                                                        <!-- Creates a paragraph containing related text. -->
+                                                                        <p>Filter and sort in your browser — the list comes from a fixed data set in the site's script, not a database.</p>
+                                                                      </div>
+
+                                                                        <!-- toolbar groups the filtering and sorting form controls.
+                                                                        CSS uses this class to arrange the controls on the page. -->
+                                                                        <div class="toolbar">
+
+                                                                          <!-- field groups a label and its related form control. -->
+                                                                          <div class="field">
+
+                                                                            <!-- for connects the label to the select element with the same ID. -->
+                                                                            <label for="filter-category">Category</label>
+
+                                                                            <!-- <select> creates a dropdown list for selecting a value.
+                                                                            id uniquely identifies this control for HTML, CSS and JavaScript. -->
+                                                                            <select id="filter-category">
+
+                                                                              <!-- <option> represents one selectable value inside a select element.
+                                                                              value is the data returned when this option is selected. -->
+                                                                              <option value="all">All categories</option>
+                                                                              <!-- Creates one selectable option inside a dropdown control. -->
+                                                                              <option value="bundles">Bundles</option>
+                                                                              <!-- Creates one selectable option inside a dropdown control. -->
+                                                                              <option value="appliances">Appliances</option>
+                                                                              <!-- Creates one selectable option inside a dropdown control. -->
+                                                                              <option value="furniture">Furniture</option>
+                                                                              <!-- Creates one selectable option inside a dropdown control. -->
+                                                                              <option value="bedding">Bedding</option>
+                                                                              <!-- Creates one selectable option inside a dropdown control. -->
+                                                                              <option value="textbooks">Textbooks</option>
+                                                                              <!-- Creates one selectable option inside a dropdown control. -->
+                                                                              <option value="stationery">Stationery</option>
+                                                                            </select>
+                                                                            </div>
+
+                                                                              <!-- This field groups the condition label and dropdown together. -->
+                                                                              <div class="field">
+                                                                                <!-- Creates a form label and associates it with a control using the for attribute. -->
+                                                                                <label for="filter-condition">Condition</label>
+                                                                                <!-- Creates a dropdown control for selecting one available value. -->
+                                                                                <select id="filter-condition">
+                                                                                  <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                  <option value="all">New &amp; second-hand</option>
+                                                                                  <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                  <option value="new">New only</option>
+                                                                                  <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                  <option value="used">Second-hand only</option>
+                                                                                </select>
+                                                                                </div>
+
+                                                                                  <!-- This field groups the sorting label and dropdown together. -->
+                                                                                  <div class="field">
+                                                                                    <!-- Creates a form label and associates it with a control using the for attribute. -->
+                                                                                    <label for="sort-by">Sort by</label>
+                                                                                    <!-- Creates a dropdown control for selecting one available value. -->
+                                                                                    <select id="sort-by">
+                                                                                      <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                      <option value="default">Featured</option>
+                                                                                      <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                      <option value="price-asc">Price: low to high</option>
+                                                                                      <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                      <option value="price-desc">Price: high to low</option>
+                                                                                      <!-- Creates one selectable option inside a dropdown control. -->
+                                                                                      <option value="name">Name A–Z</option>
+                                                                                    </select>
+                                                                                    </div>
+
+                                                                                      <!-- id uniquely identifies this paragraph so JavaScript can update it.
+                                                                                      It can display information such as the number of matching products. -->
+                                                                                      <p id="deals-count" class="hint" style="margin:0 0 6px auto"></p>
+                                                                                    </div>
+
+                                                                                      <!-- This container starts empty and can be populated by JavaScript.
+                                                                                      The id allows JavaScript to locate this element in the DOM. -->
+                                                                                      <div class="grid grid-3" id="deals-results"></div>
+
+                                                                                      <!-- Inline CSS adds spacing above this heading.
+                                                                                      <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                      <h3> creates a third-level heading for the gallery. -->
+                                                                                        <h3 style="margin-top:48px">Visual gallery</h3>
+
+                                                                                        <!-- role="tablist" identifies these buttons as a group of tabs.
+                                                                                        aria-label describes the purpose of the controls to screen readers. -->
+                                                                                        <div class="tabs" role="tablist" aria-label="Gallery filters">
+
+                                                                                          <!-- data-gallery-filter stores the category JavaScript should display.
+                                                                                          aria-selected shows that this filter is selected initially. -->
+                                                                                          <button class="tab-btn" role="tab" aria-selected="true" data-gallery-filter="all">All</button>
+
+                                                                                          <!-- This button filters the gallery to products in the bundles category. -->
+                                                                                          <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="bundles">Bundles</button>
+
+                                                                                          <!-- This button filters the gallery to residence-life images. -->
+                                                                                          <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="res-life">Res life</button>
+
+                                                                                          <!-- This button filters the gallery to second-hand images. -->
+                                                                                          <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="second-hand">Second-hand</button>
+                                                                                        </div>
+
+                                                                                          <!-- gallery contains the figure elements used to display the images. -->
+                                                                                          <div class="gallery">
+
+                                                                                            <!-- data-gallery-item identifies the category of this gallery item.
+                                                                                            JavaScript can compare this value with the selected filter. -->
+                                                                                            <figure data-gallery-item="bundles">
+                                                                                              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                                              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
+                                                                                              <!-- Provides a caption describing the content of the associated figure. -->
+                                                                                              <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
+                                                                                            </figure>
+
+                                                                                              <!-- This figure is assigned to the second-hand gallery category. -->
+                                                                                              <figure data-gallery-item="second-hand">
+                                                                                                <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                                                <img src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand items" loading="lazy" width="1200" height="900">
+                                                                                                <!-- Provides a caption describing the content of the associated figure. -->
+                                                                                                <figcaption>Reviewed second-hand stock at our Braamfontein point.</figcaption>
+                                                                                              </figure>
+
+                                                                                                <!-- This figure is assigned to the res-life gallery category. -->
+                                                                                                <figure data-gallery-item="res-life">
+                                                                                                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                                                  <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
+                                                                                                  <!-- Provides a caption describing the content of the associated figure. -->
+                                                                                                  <figcaption>Registration week collections on campus.</figcaption>
+                                                                                                </figure>
+
+                                                                                                  <!-- This figure is assigned to the bundles gallery category. -->
+                                                                                                  <figure data-gallery-item="bundles">
+                                                                                                    <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                                                    <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
+                                                                                                    <!-- Provides a caption describing the content of the associated figure. -->
+                                                                                                    <figcaption>Bedding and linen included in every bundle tier.</figcaption>
+                                                                                                  </figure>
+
+                                                                                                    <!-- This figure is assigned to the second-hand gallery category. -->
+                                                                                                    <figure data-gallery-item="second-hand">
+                                                                                                      <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                                                      <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
+                                                                                                      <!-- Provides a caption describing the content of the associated figure. -->
+                                                                                                      <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
+                                                                                                    </figure>
+
+                                                                                                      <!-- This figure is assigned to the res-life gallery category. -->
+                                                                                                      <figure data-gallery-item="res-life">
+                                                                                                        <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
+                                                                                                        <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
+                                                                                                        <!-- Provides a caption describing the content of the associated figure. -->
+                                                                                                        <figcaption>Move-in day at a partner residence.</figcaption>
+                                                                                                      </figure>
+                                                                                                      </div>
+                                                                                                      </div>
+                                                                                                      </section>
+
+                                                                                                        <!-- Section 3 contains information intended for parents and guardians.
+                                                                                                        The id allows navigation links to jump directly to this section. -->
+                                                                                                        <section class="section" id="parent-hub">
+                                                                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                          <div class="wrap">
+
+                                                                                                            <!-- Groups the section heading and introductory paragraph. -->
+                                                                                                            <div class="section-head">
+                                                                                                              <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                              <span class="eyebrow">Section 3</span>
+                                                                                                              <!-- Creates a second-level heading for a major webpage section. -->
+                                                                                                              <h2>Parent Hub</h2>
+                                                                                                              <!-- Creates a paragraph containing related text. -->
+                                                                                                              <p>Plan the whole first year with a printable checklist and three fixed-price bundles.</p>
+                                                                                                            </div>
+
+                                                                                                              <!-- grid-2 applies a two-column CSS layout to the content. -->
+                                                                                                              <div class="grid grid-2">
+
+                                                                                                                <!-- info-box groups the checklist content into one styled container. -->
+                                                                                                                <div class="info-box">
+                                                                                                                  <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                  <h3>First Year Checklist</h3>
+
+                                                                                                                  <!-- <ul> creates an unordered list of checklist requirements.
+                                                                                                                  Each <li> represents one individual list item. -->
+                                                                                                                  <ul class="checklist">
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Single/double bedding set, pillow and mattress protector</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Towels and a laundry bag or basket</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Kettle, two mugs, plate, bowl and cutlery set</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Desk lamp and extension lead with surge protection</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Rechargeable light or power bank for load shedding</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Lockable trunk or storage crate</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Stationery: files, pads, pens, calculator</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Prescribed textbooks (check second-hand first)</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Basic toolkit: scissors, tape, plasters, spare globes</li>
+                                                                                                                    <!-- Creates one item within an unordered list. -->
+                                                                                                                    <li>Copies of ID, registration and residence letters</li>
+                                                                                                                  </ul>
+
+                                                                                                                    <!-- Inline CSS adds spacing above the button.
+                                                                                                                    The button can be targeted by JavaScript using its ID. -->
+                                                                                                                    <p style="margin-top:16px">
+                                                                                                                      <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
+                                                                                                                      <button class="btn" id="print-checklist">Print this checklist</button>
+                                                                                                                    </p>
+                                                                                                                    </div>
+
+                                                                                                                      <!-- This div contains the three different starter bundle cards. -->
+                                                                                                                      <div>
+
+                                                                                                                        <!-- Nested div elements create the card and its content container.
+                                                                                                                        The classes allow CSS to style the card consistently. -->
+                                                                                                                        <div class="card">
+                                                                                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                          <div class="card-body">
+                                                                                                                            <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                            <span class="badge">Tier 1</span>
+                                                                                                                            <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                            <h3>Basic Starter Bundle</h3>
+                                                                                                                            <!-- Creates a paragraph containing related text. -->
+                                                                                                                            <p class="price">R1 499.00</p>
+                                                                                                                            <!-- Creates a paragraph containing related text. -->
+                                                                                                                            <p>Bedding set, kettle, two-mug set, plate/bowl/cutlery, stationery starter.</p>
+
+                                                                                                                            <!-- data-add and data-price store values that JavaScript can read. -->
+                                                                                                                            <button class="btn btn-sm" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
+                                                                                                                          </div>
+                                                                                                                          </div>
+
+                                                                                                                            <!-- <br> inserts a line break between the bundle cards. -->
+                                                                                                                            <br>
+
+                                                                                                                            <!-- This card represents the second starter bundle. -->
+                                                                                                                            <div class="card">
+                                                                                                                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                              <div class="card-body">
+                                                                                                                                <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                                <span class="badge badge-used">Tier 2 · most chosen</span>
+                                                                                                                                <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                <h3>Standard Starter Bundle</h3>
+                                                                                                                                <!-- Creates a paragraph containing related text. -->
+                                                                                                                                <p class="price">R2 799.00</p>
+                                                                                                                                <!-- Creates a paragraph containing related text. -->
+                                                                                                                                <p>Everything in Basic, plus desk lamp, laundry basket, towel set, kitchen starter pack and extension lead.</p>
+                                                                                                                                <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
+                                                                                                                                <button class="btn btn-sm" data-add="Standard Starter Bundle" data-price="2799">Add to Order Summary</button>
+                                                                                                                              </div>
+                                                                                                                              </div>
+
+                                                                                                                                <!-- Another line break separates the second and third bundle. -->
+                                                                                                                                <br>
+
+                                                                                                                                <!-- This card represents the third starter bundle. -->
+                                                                                                                                <div class="card">
+                                                                                                                                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                  <div class="card-body">
+                                                                                                                                    <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                                    <span class="badge badge-verified">Tier 3</span>
+                                                                                                                                    <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                    <h3>Premium Starter Bundle</h3>
+                                                                                                                                    <!-- Creates a paragraph containing related text. -->
+                                                                                                                                    <p class="price">R4 499.00</p>
+                                                                                                                                    <!-- Creates a paragraph containing related text. -->
+                                                                                                                                    <p>Everything in Standard, plus lockable trunk, study chair, rechargeable light kit, mini kettle-and-fridge combo option and full stationery pack.</p>
+                                                                                                                                    <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
+                                                                                                                                    <button class="btn btn-sm" data-add="Premium Starter Bundle" data-price="4499">Add to Order Summary</button>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                                  </div>
+                                                                                                                                  </section>
+
+                                                                                                                                    <!-- Section 4 provides a reusable layout for displaying product details.
+                                                                                                                                    The ID allows navigation links to open this section directly. -->
+                                                                                                                                    <section class="section alt" id="product-detail">
+                                                                                                                                      <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                      <div class="wrap">
+
+                                                                                                                                        <!-- Contains the product-detail heading and introductory information. -->
+                                                                                                                                        <div class="section-head">
+                                                                                                                                          <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                                          <span class="eyebrow">Section 4</span>
+                                                                                                                                          <!-- Creates a second-level heading for a major webpage section. -->
+                                                                                                                                          <h2>Product detail template</h2>
+                                                                                                                                          <!-- Creates a paragraph containing related text. -->
+                                                                                                                                          <p>This is the reusable layout every product uses. Choose an item to preview it.</p>
+                                                                                                                                        </div>
+
+                                                                                                                                          <!-- toolbar groups the product selection control. -->
+                                                                                                                                          <div class="toolbar">
+                                                                                                                                            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                            <div class="field">
+
+                                                                                                                                              <!-- for connects the label to the select element with the matching ID. -->
+                                                                                                                                              <label for="detail-select">Preview product</label>
+
+                                                                                                                                              <!-- JavaScript can add product options to this select element. -->
+                                                                                                                                              <select id="detail-select"></select>
+                                                                                                                                            </div>
+                                                                                                                                            </div>
+
+                                                                                                                                              <!-- grid-2 creates two columns for the product image and information. -->
+                                                                                                                                              <div class="grid grid-2">
+
+                                                                                                                                                <!-- map-frame is used as a styled container for the product image. -->
+                                                                                                                                                <div class="product-map-frame">
+
+                                                                                                                                                  <!-- id allows JavaScript to change this image dynamically.
+                                                                                                                                                  alt provides alternative text if the image cannot be displayed. -->
+                                                                                                                                                  <img id="detail-img" src="../assets/images/bundles/start-bundle-2.jpg" alt="Selected product" loading="lazy">
+                                                                                                                                                </div>
+
+                                                                                                                                                  <!-- This div contains the selected product's information and controls. -->
+                                                                                                                                                  <div>
+
+                                                                                                                                                    <!-- span is used for short inline labels such as product badges. -->
+                                                                                                                                                    <span class="badge badge-verified">Verified Seller</span>
+
+                                                                                                                                                    <!-- id allows JavaScript to update this element with the product condition. -->
+                                                                                                                                                    <span class="badge" id="detail-condition">Brand new</span>
+
+                                                                                                                                                    <!-- id allows JavaScript to replace the product name dynamically. -->
+                                                                                                                                                    <h3 id="detail-name">Product name</h3>
+
+                                                                                                                                                    <!-- id allows JavaScript to update the displayed product price. -->
+                                                                                                                                                    <p class="price order-total" id="detail-price">R0.00</p>
+
+                                                                                                                                                    <!-- id allows JavaScript to replace this paragraph with the product description. -->
+                                                                                                                                                    <p id="detail-desc">Product description.</p>
+
+                                                                                                                                                    <!-- data-add and data-price store values for JavaScript to use.
+                                                                                                                                                    The ID allows JavaScript to locate this specific button. -->
+                                                                                                                                                    <button class="btn" id="detail-add" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
+
+                                                                                                                                                    <!-- Inline CSS adds spacing above the collection heading. -->
+                                                                                                                                                    <h3 style="margin-top:28px">Collection points</h3>
+
+                                                                                                                                                    <!-- <ul> creates an unordered list of available collection locations. -->
+                                                                                                                                                    <ul>
+                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                      <li><strong>Residence desk</strong> — Hatfield res reception, Mon–Fri 09:00–17:00</li>
+                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                      <li><strong>Campus point</strong> — Braamfontein student centre, Mon–Sat 10:00–16:00</li>
+                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                      <li><strong>Secure locker</strong> — Westville locker bank, daily 08:00–20:00</li>
+                                                                                                                                                    </ul>
+
+                                                                                                                                                      <!-- This div uses the map-frame class to style the map container. -->
+                                                                                                                                                      <div class="map-frame">
+
+                                                                                                                                                        <!-- src contains the external map URL that the iframe loads.
+                                                                                                                                                        width and height define the initial dimensions of the embedded map. -->
+                                                                                                                                                        <iframe
+                                                                                                                                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27499065.0909108!2d5.934866550426572!3d-32.71742456649879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sza!4v1786441685311!5m2!1sen!2sza"
+                                                                                                                                                        width="600"
+                                                                                                                                                        height="450"
+                                                                                                                                                        style="border:0;"
+                                                                                                                                                        allowfullscreen=""
+                                                                                                                                                        loading="lazy"
+                                                                                                                                                        referrerpolicy="strict-origin-when-cross-origin"
+                                                                                                                                                        alt="Static illustrated map of Campus-Cart office and collection locations in South Africa"
+                                                                                                                                                        loading="lazy"
+                                                                                                                                                        width="1400"
+                                                                                                                                                        height="700">
+                                                                                                                                                      </iframe>
+                                                                                                                                                      </div>
+
+                                                                                                                                                        <!-- class="map-note" allows CSS to style this explanatory paragraph. -->
+                                                                                                                                                        <p class="map-note">This is a static map. Live GPS tracking is not available.</p>
+                                                                                                                                                      </div>
+                                                                                                                                                      </div>
+                                                                                                                                                      </div>
+                                                                                                                                                      </section>
+
+                                                                                                                                                        <!-- Section 5 contains seller information and frequently asked questions.
+                                                                                                                                                        The ID allows other links to navigate directly to this section. -->
+                                                                                                                                                        <section class="section" id="sell-with-us">
+                                                                                                                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                          <div class="wrap">
+
+                                                                                                                                                            <!-- Contains the heading and introduction for the seller section. -->
+                                                                                                                                                            <div class="section-head">
+                                                                                                                                                              <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                                                              <span class="eyebrow">Section 5</span>
+                                                                                                                                                              <!-- Creates a second-level heading for a major webpage section. -->
+                                                                                                                                                              <h2>Sell With Us</h2>
+                                                                                                                                                              <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                              <p>Turn last year's kit into cash. Listings are reviewed by a person before they go live.</p>
+                                                                                                                                                            </div>
+
+                                                                                                                                                              <!-- grid-4 creates a four-column layout for the four process cards. -->
+                                                                                                                                                              <div class="grid grid-4">
+
+                                                                                                                                                                <!-- Each card represents one step of the selling process.
+                                                                                                                                                                card-navy applies the darker card styling through CSS. -->
+                                                                                                                                                                <div class="card card-navy">
+                                                                                                                                                                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                                  <div class="card-body">
+                                                                                                                                                                    <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                    <h3>1. Submit</h3>
+                                                                                                                                                                    <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                    <p>Complete the external listing form with photos, condition notes and your asking price.</p>
+                                                                                                                                                                  </div>
+                                                                                                                                                                  </div>
+
+                                                                                                                                                                    <!-- This card represents the second step in the process. -->
+                                                                                                                                                                    <div class="card card-navy">
+                                                                                                                                                                      <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                                      <div class="card-body">
+                                                                                                                                                                        <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                        <h3>2. Review</h3>
+                                                                                                                                                                        <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                        <p>Our team checks the item at a collection point and confirms it is complete and working.</p>
+                                                                                                                                                                      </div>
+                                                                                                                                                                      </div>
+
+                                                                                                                                                                        <!-- This card represents the third step in the process. -->
+                                                                                                                                                                        <div class="card card-navy">
+                                                                                                                                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                                          <div class="card-body">
+                                                                                                                                                                            <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                            <h3>3. List</h3>
+                                                                                                                                                                            <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                            <p>Approved items are published to the Second-Hand Marketplace with a Verified Seller badge.</p>
+                                                                                                                                                                          </div>
+                                                                                                                                                                          </div>
+
+                                                                                                                                                                            <!-- This card represents the final step in the process. -->
+                                                                                                                                                                            <div class="card card-navy">
+                                                                                                                                                                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                                              <div class="card-body">
+                                                                                                                                                                                <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                <h3>4. Hand over</h3>
+                                                                                                                                                                                <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                <p>Buyer collects at the agreed point; we confirm the handover with both parties.</p>
+                                                                                                                                                                              </div>
+                                                                                                                                                                              </div>
+                                                                                                                                                                              </div>
+
+                                                                                                                                                                                <!-- Inline CSS adds space above the paragraph.
+                                                                                                                                                                                The anchor links to an external Google Forms page. -->
+                                                                                                                                                                                <p style="margin-top:24px">
+
+                                                                                                                                                                                  <!-- target="_blank" opens the link in a new browser tab.
+                                                                                                                                                                                  rel="noopener" prevents the new page from accessing the opener. -->
+                                                                                                                                                                                  <a class="btn" href="https://docs.google.com/forms/" target="_blank" rel="noopener">Open the listing form (Google Form)</a>
+                                                                                                                                                                                </p>
+
+                                                                                                                                                                                  <!-- Inline CSS adds space above the FAQ heading. -->
+                                                                                                                                                                                  <h3 style="margin-top:48px">Frequently asked questions</h3>
+
+                                                                                                                                                                                  <!-- data-tabs identifies this container as an interactive tab group.
+                                                                                                                                                                                  JavaScript can use this attribute to control the FAQ panels. -->
+                                                                                                                                                                                  <div data-tabs>
+
+                                                                                                                                                                                    <!-- role="tablist" identifies this as a group of tab controls.
+                                                                                                                                                                                    aria-label provides an accessible name for the tab group. -->
+                                                                                                                                                                                    <div class="tabs" role="tablist" aria-label="FAQ tabs">
+
+                                                                                                                                                                                      <!-- data-panel identifies which FAQ panel this tab controls.
+                                                                                                                                                                                      aria-selected indicates that this tab is currently selected. -->
+                                                                                                                                                                                      <button class="tab-btn" role="tab" aria-selected="true" data-panel="faq-student">Student FAQ</button>
+
+                                                                                                                                                                                      <!-- This tab controls the parent FAQ panel.
+                                                                                                                                                                                      aria-selected="false" means it is not selected initially. -->
+                                                                                                                                                                                      <button class="tab-btn" role="tab" aria-selected="false" data-panel="faq-parent">Parent FAQ</button>
+                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                      <!-- This panel contains questions intended for students.
+                                                                                                                                                                                      role="tabpanel" identifies it as content controlled by a tab. -->
+                                                                                                                                                                                      <div class="tab-panel" id="faq-student" role="tabpanel">
+
+                                                                                                                                                                                        <!-- info-box groups each FAQ question and answer.
+                                                                                                                                                                                        Inline CSS adds spacing below the information box. -->
+                                                                                                                                                                                        <div class="info-box" style="margin-bottom:16px">
+                                                                                                                                                                                          <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                          <h3>Can I pay in instalments?</h3>
+                                                                                                                                                                                          <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                          <p>Payment plans are arranged manually over email before collection. Typically a 50% holding amount and the balance on collection. Nothing is charged on this website.</p>
+                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                          <!-- This information box contains another FAQ question and answer. -->
+                                                                                                                                                                                          <div class="info-box" style="margin-bottom:16px">
+                                                                                                                                                                                            <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                            <h3>What if a second-hand item is faulty?</h3>
+                                                                                                                                                                                            <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                            <p>Report it within 48 hours of collection and we arrange a swap or refund with the seller. Items are tested at review, so faults are rare.</p>
+                                                                                                                                                                                          </div>
+
+                                                                                                                                                                                            <!-- This information box contains the delivery FAQ. -->
+                                                                                                                                                                                            <div class="info-box" style="margin-bottom:16px">
+                                                                                                                                                                                              <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                              <h3>How does delivery work?</h3>
+                                                                                                                                                                                              <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                              <p>Collection at any listed residence, campus or locker point is free. Courier delivery is quoted per order and confirmed before you pay.</p>
+                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                              <!-- This information box contains the seller earnings FAQ. -->
+                                                                                                                                                                                              <div class="info-box">
+                                                                                                                                                                                                <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                                <h3>How much do I earn when selling?</h3>
+                                                                                                                                                                                                <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                <p>You set the asking price. Campus-Cart keeps a small handling fee that is confirmed in writing before your listing goes live.</p>
+                                                                                                                                                                                              </div>
+                                                                                                                                                                                              </div>
+
+                                                                                                                                                                                                <!-- hidden prevents this panel from displaying initially.
+                                                                                                                                                                                                JavaScript can show it when the Parent FAQ tab is selected. -->
+                                                                                                                                                                                                <div class="tab-panel" id="faq-parent" role="tabpanel" hidden>
+
+                                                                                                                                                                                                  <!-- This information box contains the first parent FAQ. -->
+                                                                                                                                                                                                  <div class="info-box" style="margin-bottom:16px">
+                                                                                                                                                                                                    <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                                    <h3>Are bundle prices fixed?</h3>
+                                                                                                                                                                                                    <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                    <p>Yes. Each bundle lists its contents and one price. Substitutions on request never increase the price without written confirmation.</p>
+                                                                                                                                                                                                  </div>
+
+                                                                                                                                                                                                    <!-- This information box contains the staged-payment FAQ. -->
+                                                                                                                                                                                                    <div class="info-box" style="margin-bottom:16px">
+                                                                                                                                                                                                      <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                                      <h3>Can I pay off a bundle before registration?</h3>
+                                                                                                                                                                                                      <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                      <p>Yes — arrange a staged payment plan by email. We hold stock once the first payment reflects.</p>
+                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                      <!-- This information box contains the returns-policy FAQ. -->
+                                                                                                                                                                                                      <div class="info-box" style="margin-bottom:16px">
+                                                                                                                                                                                                        <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                                        <h3>What is the returns policy?</h3>
+                                                                                                                                                                                                        <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                        <p>Unused new items may be returned within 7 days of collection in their original packaging. Second-hand items follow the 48-hour fault window.</p>
+                                                                                                                                                                                                      </div>
+
+                                                                                                                                                                                                        <!-- This information box contains the seller-verification FAQ. -->
+                                                                                                                                                                                                        <div class="info-box">
+                                                                                                                                                                                                          <!-- Creates a third-level heading for a subsection, product or information card. -->
+                                                                                                                                                                                                          <h3>How do I know a seller is legitimate?</h3>
+                                                                                                                                                                                                          <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                          <p>Every second-hand listing is inspected in person by our team before publication. The Verified Seller badge means a staff member handled the item.</p>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        </section>
+                                                                                                                                                                                                        </main>
+
+                                                                                                                                                                                                          <!-- <footer> contains information displayed at the bottom of the webpage.
+                                                                                                                                                                                                          It commonly contains navigation, contact details and copyright information. -->
+                                                                                                                                                                                                          <footer>
+
+                                                                                                                                                                                                            <!-- wrap controls the content width while footer-grid controls its layout.
+                                                                                                                                                                                                            Both classes are defined in the external CSS file. -->
+                                                                                                                                                                                                            <div class="wrap footer-grid">
+
+                                                                                                                                                                                                              <!-- This div groups the website name and description. -->
+                                                                                                                                                                                                              <div>
+                                                                                                                                                                                                                <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                                                                <h4>Campus-Cart</h4>
+                                                                                                                                                                                                                <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                                <p>Affordable new and second-hand student essentials for South African campuses.</p>
+                                                                                                                                                                                                              </div>
+
+                                                                                                                                                                                                                <!-- This div contains navigation links related to shopping.
+                                                                                                                                                                                                                <!-- Creates an unordered list for related items. -->
+                                                                                                                                                                                                                <ul> creates the unordered list containing those links. -->
+                                                                                                                                                                                                                  <div>
+                                                                                                                                                                                                                    <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                                                                    <h4>Shop</h4>
+                                                                                                                                                                                                                    <!-- Creates an unordered list for related items. -->
+                                                                                                                                                                                                                    <ul>
+                                                                                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                      <li><a href="products.html">Shop New</a></li>
+                                                                                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+                                                                                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                      <li><a href="products.html#product-detail">Product Detail</a></li>
+                                                                                                                                                                                                                      <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+                                                                                                                                                                                                                    </ul>
+                                                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                                                      <!-- This div contains navigation links related to the company. -->
+                                                                                                                                                                                                                      <div>
+                                                                                                                                                                                                                        <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                                                                        <h4>Company</h4>
+                                                                                                                                                                                                                        <!-- Creates an unordered list for related items. -->
+                                                                                                                                                                                                                        <ul>
+                                                                                                                                                                                                                          <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                          <li><a href="about.html">About</a></li>
+                                                                                                                                                                                                                          <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                          <li><a href="products.html#parent-hub">Parent Hub</a></li>
+                                                                                                                                                                                                                          <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                          <li><a href="enquiry.html">Enquiry</a></li>
+                                                                                                                                                                                                                          <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                          <li><a href="coverage.html">Coverage</a></li>
+                                                                                                                                                                                                                          <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                          <li><a href="contact.html">Contact</a></li>
+                                                                                                                                                                                                                          <!-- Creates one item within an unordered list. -->
+                                                                                                                                                                                                                          <li><a href="account.html">Account</a></li>
+                                                                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                        </div>
+
+                                                                                                                                                                                                                          <!-- This div groups the website's contact information. -->
+                                                                                                                                                                                                                          <div>
+                                                                                                                                                                                                                            <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                                                                            <h4>Reach us</h4>
+                                                                                                                                                                                                                            <!-- Creates an unordered list for related items. -->
+                                                                                                                                                                                                                            <ul>
+
+                                                                                                                                                                                                                              <!-- mailto: creates a link that can open an email application.
+                                                                                                                                                                                                                              The address after mailto: becomes the email recipient. -->
+                                                                                                                                                                                                                              <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+
+                                                                                                                                                                                                                              <!-- This URL uses WhatsApp's web link format to open the contact.
+                                                                                                                                                                                                                              The number is included as part of the URL. -->
+                                                                                                                                                                                                                              <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+
+                                                                                                                                                                                                                              <!-- This list item contains plain text rather than a hyperlink. -->
+                                                                                                                                                                                                                              <li>Mon–Fri, 09:00–17:00 SAST</li>
+                                                                                                                                                                                                                            </ul>
+                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                              <!-- class="footer-bottom" identifies the bottom copyright area.
+                                                                                                                                                                                                                              &copy; is an HTML entity that displays the copyright symbol. -->
+                                                                                                                                                                                                                              <div class="wrap footer-bottom">
+                                                                                                                                                                                                                                <!-- Creates a paragraph containing related text. -->
+                                                                                                                                                                                                                                <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                              </footer>
+
+                                                                                                                                                                                                                                <!-- <script> connects an external JavaScript file to this webpage.
+                                                                                                                                                                                                                                src specifies the path where the JavaScript file is located. -->
+                                                                                                                                                                                                                                <script src="../assets/js/script.js"></script>
+
+                                                                                                                                                                                                                              </body>
+                                                                                                                                                                                                                              </html>

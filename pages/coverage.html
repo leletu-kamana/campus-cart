@@ -1,718 +1,718 @@
 <!DOCTYPE html>
 <!-- Defines the root HTML document and sets English as the page language. -->
 <html lang="en">
-<!-- Starts the document head, which contains metadata and linked resources. -->
-<head>
+  <!-- Starts the document head, which contains metadata and linked resources. -->
+  <head>
     <!-- Sets UTF-8 character encoding so text and special characters display correctly. -->
     <meta charset="utf-8">
     <!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <title> sets the text displayed on the browser tab.
-         It also describes the purpose of this webpage. -->
+    It also describes the purpose of this webpage. -->
     <title>Coverage | Campus-Cart</title>
     <!-- Provides a description of the webpage for search engines. -->
     <meta name="description" content="Campus-Cart delivers to all nine South African provinces, covering public universities, TVET colleges and private institutions.">
     <!-- Provides keyword metadata describing the main subjects of the webpage. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-     <!-- Provides the Google Search Console verification token used to verify website ownership. -->
-     <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
+    <!-- Provides the Google Search Console verification token used to verify website ownership. -->
+    <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
     <!-- <link> connects this HTML document to an external CSS stylesheet.
-         href specifies the relative location of the CSS file. -->
+    href specifies the relative location of the CSS file. -->
     <link rel="stylesheet" href="../assets/css/styles.css">
-</head>
-<!-- Starts the visible webpage body containing the content shown to visitors. -->
-<body>
+  </head>
+    <!-- Starts the visible webpage body containing the content shown to visitors. -->
+    <body>
 
-    <!-- <header> contains the introductory content of the webpage.
-         The topbar class allows CSS to style the header. -->
-    <header class="topbar">
+      <!-- <header> contains the introductory content of the webpage.
+      The topbar class allows CSS to style the header. -->
+      <header class="topbar">
 
         <!-- <nav> contains the main navigation links for the website.
-             aria-label gives the navigation a meaningful name for accessibility. -->
+        aria-label gives the navigation a meaningful name for accessibility. -->
         <nav class="nav" aria-label="Main navigation">
 
-            <!-- <a> creates a hyperlink and href specifies where it goes.
-                 <span> separates part of the logo so it can be styled separately. -->
-            <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+          <!-- <a> creates a hyperlink and href specifies where it goes.
+          <span> separates part of the logo so it can be styled separately. -->
+          <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
 
-            <!-- <button> creates an interactive button for the navigation menu.
-                 aria-expanded tells assistive technology whether the menu is expanded. -->
-            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+          <!-- <button> creates an interactive button for the navigation menu.
+          aria-expanded tells assistive technology whether the menu is expanded. -->
+          <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
 
-            <!-- This div groups the website's navigation links together.
-                 The nav-links class allows CSS and JavaScript to control this group. -->
-            <div class="nav-links">
+          <!-- This div groups the website's navigation links together.
+          The nav-links class allows CSS and JavaScript to control this group. -->
+          <div class="nav-links">
 
-                <!-- ../ moves up from the pages folder to reach index.html.
-                     The href attribute stores the destination of the hyperlink. -->
-                <a href="../index.html">Home</a>
+            <!-- ../ moves up from the pages folder to reach index.html.
+            The href attribute stores the destination of the hyperlink. -->
+            <a href="../index.html">Home</a>
 
-                <!-- This link opens about.html from the current pages folder.
-                     Relative paths avoid needing the full website URL. -->
-                <a href="about.html">About</a>
+            <!-- This link opens about.html from the current pages folder.
+            Relative paths avoid needing the full website URL. -->
+            <a href="about.html">About</a>
 
-                <!-- #shop is a URL fragment that targets an element with id="shop".
-                     This allows the browser to open a specific section of products.html. -->
-                <a href="products.html">Shop</a>
+            <!-- #shop is a URL fragment that targets an element with id="shop".
+            This allows the browser to open a specific section of products.html. -->
+            <a href="products.html">Shop</a>
 
-                <!-- The #parent-hub fragment targets the Parent Hub section.
-                     The target element must have a matching id attribute. -->
-                <a href="products.html#parent-hub">Parent Hub</a>
+            <!-- The #parent-hub fragment targets the Parent Hub section.
+            The target element must have a matching id attribute. -->
+            <a href="products.html#parent-hub">Parent Hub</a>
 
-                <!-- This link opens the enquiry page from the current directory.
-                     The href attribute tells the browser which document to load. -->
-                <a href="enquiry.html">Enquiry</a>
-                <!-- Creates a hyperlink; href specifies the destination of the link. -->
-                <a href="coverage.html">Coverage</a>
+            <!-- This link opens the enquiry page from the current directory.
+            The href attribute tells the browser which document to load. -->
+            <a href="enquiry.html">Enquiry</a>
+            <!-- Creates a hyperlink; href specifies the destination of the link. -->
+            <a href="coverage.html">Coverage</a>
 
-                <!-- This link opens the current contact page.
-                     It is useful for keeping Contact available in the main navigation. -->
-                <a href="contact.html">Contact</a>
+            <!-- This link opens the current contact page.
+            It is useful for keeping Contact available in the main navigation. -->
+            <a href="contact.html">Contact</a>
 
-                <!-- This anchor navigates to the account page. -->
-                <a href="account.html">Account</a>
+            <!-- This anchor navigates to the account page. -->
+            <a href="account.html">Account</a>
 
-                <!-- data-cart-count is a custom data attribute used by JavaScript.
-                     The span separates the cart number so JavaScript can update it. -->
-                <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
-            </div>
-        </nav>
-    </header>
+            <!-- data-cart-count is a custom data attribute used by JavaScript.
+            The span separates the cart number so JavaScript can update it. -->
+            <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+          </div>
+          </nav>
+          </header>
 
-<!-- Creates a navigation area; aria-label identifies the navigation purpose for accessibility. -->
-<nav class="subnav" aria-label="Section navigation">
-    <!-- Creates an unordered list for navigation or grouped information. -->
-    <ul>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#ec">Eastern Cape</a></li> 
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#fs">Free State</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#gp">Gauteng</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#kzn">KwaZulu-Natal</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#lp">Limpopo</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#mp">Mpumalanga</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#nc">Northern Cape</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#nw">North West</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#wc">Western Cape</a></li>
-        <!-- Creates one item inside an unordered list. -->
-        <li><a href="#national-private">National private providers</a></li>
-    </ul>
-</nav>
+            <!-- Creates a navigation area; aria-label identifies the navigation purpose for accessibility. -->
+            <nav class="subnav" aria-label="Section navigation">
+              <!-- Creates an unordered list for navigation or grouped information. -->
+              <ul>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#ec">Eastern Cape</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#fs">Free State</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#gp">Gauteng</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#kzn">KwaZulu-Natal</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#lp">Limpopo</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#mp">Mpumalanga</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#nc">Northern Cape</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#nw">North West</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#wc">Western Cape</a></li>
+                <!-- Creates one item inside an unordered list. -->
+                <li><a href="#national-private">National private providers</a></li>
+              </ul>
+              </nav>
 
-    <!-- <main> contains the primary content of the webpage.
-         A webpage normally uses one main element for its central content. -->
-<main>
-        <!-- Coverage page: generated from the same data as assets/js/data.js -->
-        <section class="hero">
-            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-            <div class="wrap">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="eyebrow">Coverage</span>
-                <!-- Creates the primary heading of the webpage. -->
-                <h1>Every province. Public and private campuses.</h1>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p class="lead">Campus-Cart serves all nine provinces: 26 public universities, 50 public TVET colleges and the major private institutions and colleges. Teacher education is included through the education faculties of the public universities and private teacher institutes such as Embury (STADIO).</p>
-            </div>
-        </section>
-        <!-- Creates a semantic section that groups related coverage content. -->
-        <section class="section">
-            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-            <div class="wrap">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="form-group">
-                    <!-- Creates a form label and associates it with the matching input using the for attribute. -->
-                    <label for="coverage-search">Find your institution</label>
-                    <!-- Creates a search input control; its attributes define the input type, identifier and placeholder text. -->
-                    <input id="coverage-search" type="search" placeholder="e.g. Lovedale, Varsity College, University of Venda">
-                    <!-- Creates a paragraph containing related explanatory text. -->
-                    <p class="hint" id="coverage-count" aria-live="polite"></p>
-                </div>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p class="hint">Hub addresses, times and delivery estimates are illustrative because Campus-Cart is a fictional business. Private institutions listed here are the major providers. If yours is missing, choose "My institution is not listed" on the enquiry form and we deliver there too. Check any private institution's registration on the DHET register before you enrol.</p>
-                
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="ec">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Eastern Cape</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>3 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Gqeberha</h3><p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (4)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of fort hare alice">University of Fort Hare <span class="inst-city">(Alice)</span></li>
-                    <li data-name="rhodes university makhanda">Rhodes University <span class="inst-city">(Makhanda)</span></li>
-                    <li data-name="nelson mandela university gqeberha">Nelson Mandela University <span class="inst-city">(Gqeberha)</span></li>
-                    <li data-name="walter sisulu university mthatha">Walter Sisulu University <span class="inst-city">(Mthatha)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (8)</h3>
-                <ul class="inst-list">
-                    <li data-name="buffalo city tvet college east london">Buffalo City TVET College <span class="inst-city">(East London)</span></li>
-                    <li data-name="eastcape midlands tvet college ">Eastcape Midlands TVET College <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="ikhala tvet college komani">Ikhala TVET College <span class="inst-city">(Komani)</span></li>
-                    <li data-name="ingwe tvet college ">Ingwe TVET College <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="king hintsa tvet college ">King Hintsa TVET College <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="king sabata dalindyebo tvet college mthatha">King Sabata Dalindyebo TVET College <span class="inst-city">(Mthatha)</span></li>
-                    <li data-name="lovedale tvet college alice">Lovedale TVET College <span class="inst-city">(Alice)</span></li>
-                    <li data-name="port elizabeth tvet college gqeberha">Port Elizabeth TVET College <span class="inst-city">(Gqeberha)</span></li>
-                </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (2)</h3>
-                <ul class="inst-list"><li data-name="ed-u city campus gqeberha">Ed-U City Campus <span class="inst-city">(Gqeberha)</span></li>
-                    <li data-name="stenden south africa port alfred">Stenden South Africa <span class="inst-city">(Port Alfred)</span></li>
-               </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="fs">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Free State</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Bloemfontein</h3>
+                <!-- <main> contains the primary content of the webpage.
+                A webpage normally uses one main element for its central content. -->
+                <main>
+                  <!-- Coverage page: generated from the same data as assets/js/data.js -->
+                  <section class="hero">
+                    <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                    <div class="wrap">
+                      <!-- Creates an inline element used to group and style a short piece of text. -->
+                      <span class="eyebrow">Coverage</span>
+                      <!-- Creates the primary heading of the webpage. -->
+                      <h1>Every province. Public and private campuses.</h1>
+                      <!-- Creates a paragraph containing related explanatory text. -->
+                      <p class="lead">Campus-Cart serves all nine provinces: 26 public universities, 50 public TVET colleges and the major private institutions and colleges. Teacher education is included through the education faculties of the public universities and private teacher institutes such as Embury (STADIO).</p>
+                    </div>
+                    </section>
+                      <!-- Creates a semantic section that groups related coverage content. -->
+                      <section class="section">
+                        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                        <div class="wrap">
+                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                          <div class="form-group">
+                            <!-- Creates a form label and associates it with the matching input using the for attribute. -->
+                            <label for="coverage-search">Find your institution</label>
+                            <!-- Creates a search input control; its attributes define the input type, identifier and placeholder text. -->
+                            <input id="coverage-search" type="search" placeholder="e.g. Lovedale, Varsity College, University of Venda">
+                            <!-- Creates a paragraph containing related explanatory text. -->
+                            <p class="hint" id="coverage-count" aria-live="polite"></p>
+                          </div>
+                            <!-- Creates a paragraph containing related explanatory text. -->
+                            <p class="hint">Hub addresses, times and delivery estimates are illustrative because Campus-Cart is a fictional business. Private institutions listed here are the major providers. If yours is missing, choose "My institution is not listed" on the enquiry form and we deliver there too. Check any private institution's registration on the DHET register before you enrol.</p>
+
+                            <!-- Creates a semantic section that groups related coverage content. -->
+                            <section class="province" id="ec">
+                              <!-- Creates a second-level heading for a major coverage section. -->
+                              <h2>Eastern Cape</h2>
                               <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>Brandwag collection desk<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (2)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of the free state bloemfontein">University of the Free State <span class="inst-city">(Bloemfontein)</span></li>
-                    <li data-name="central university of technology bloemfontein">Central University of Technology <span class="inst-city">(Bloemfontein)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (4)</h3>
-                <ul class="inst-list">
-                    <li data-name="flavius mareka tvet college sasolburg">Flavius Mareka TVET College <span class="inst-city">(Sasolburg)</span></li>
-                    <li data-name="goldfields tvet college welkom">Goldfields TVET College <span class="inst-city">(Welkom)</span></li>
-                    <li data-name="maluti tvet college phuthaditjhaba">Maluti TVET College <span class="inst-city">(Phuthaditjhaba)</span></li>
-                    <li data-name="motheo tvet college bloemfontein">Motheo TVET College <span class="inst-city">(Bloemfontein)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (1)</h3>
-                <ul class="inst-list">
-                    <li data-name="qualitas career academy bloemfontein">Qualitas Career Academy <span class="inst-city">(Bloemfontein)</span></li>
-               </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="gp">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Gauteng</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>1 working days</strong> (1 working day within a hub city). Collection is free at the hubs below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Johannesburg</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>7 Jorissen Street, Braamfontein, 2001<br>Mon-Sat 10:00-16:00</p>
-                         </div>
-                    </article>
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Pretoria</h3><p>128 Lynnwood Road, Hatfield, 0083 (head office)<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (7)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of the witwatersrand johannesburg">University of the Witwatersrand <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="university of johannesburg johannesburg">University of Johannesburg <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="university of pretoria pretoria">University of Pretoria <span class="inst-city">(Pretoria)</span></li>
-                    <li data-name="university of south africa (unisa) pretoria">University of South Africa (Unisa) <span class="inst-city">(Pretoria)</span></li>
-                    <li data-name="tshwane university of technology pretoria">Tshwane University of Technology <span class="inst-city">(Pretoria)</span></li>
-                    <li data-name="vaal university of technology vanderbijlpark">Vaal University of Technology <span class="inst-city">(Vanderbijlpark)</span></li>
-                    <li data-name="sefako makgatho health sciences university ga-rankuwa">Sefako Makgatho Health Sciences University <span class="inst-city">(Ga-Rankuwa)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (8)</h3>
-                <ul class="inst-list">
-                    <li data-name="central johannesburg tvet college johannesburg">Central Johannesburg TVET College <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="ekurhuleni east tvet college springs">Ekurhuleni East TVET College <span class="inst-city">(Springs)</span></li>
-                    <li data-name="ekurhuleni west tvet college germiston">Ekurhuleni West TVET College <span class="inst-city">(Germiston)</span></li>
-                    <li data-name="sedibeng tvet college vereeniging">Sedibeng TVET College <span class="inst-city">(Vereeniging)</span></li>
-                    <li data-name="south west gauteng tvet college soweto">South West Gauteng TVET College <span class="inst-city">(Soweto)</span></li>
-                    <li data-name="tshwane north tvet college pretoria">Tshwane North TVET College <span class="inst-city">(Pretoria)</span></li>
-                    <li data-name="tshwane south tvet college pretoria">Tshwane South TVET College <span class="inst-city">(Pretoria)</span></li>
-                    <li data-name="western tvet college randfontein">Western TVET College <span class="inst-city">(Randfontein)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (13)</h3>
-                <ul class="inst-list">
-                    <li data-name="aaa school of advertising johannesburg">AAA School of Advertising <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="academy for facilities management ">Academy for Facilities Management <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="academy of sound engineering johannesburg">Academy of Sound Engineering <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="afda johannesburg">AFDA <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="belgium campus itversity ">Belgium Campus ITversity <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="boston media house johannesburg">Boston Media House <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="da vinci institute modderfontein">Da Vinci Institute <span class="inst-city">(Modderfontein)</span></li>
-                    <li data-name="empilweni education ">Empilweni Education <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="foundation for professional development ">Foundation for Professional Development <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="greenside design center college of design johannesburg">Greenside Design Center College of Design <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="health and fitness professionals academy ">Health and Fitness Professionals Academy <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="henley business school south africa johannesburg">Henley Business School South Africa <span class="inst-city">(Johannesburg)</span></li>
-                    <li data-name="nosa college ">NOSA College <span class="inst-city">(all campuses)</span></li>
-                </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="kzn">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>KwaZulu-Natal</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Durban</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>Shop 12, University Drive, Westville, 3629 (lockers)<br>Lockers daily 08:00-20:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (4)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of kwazulu-natal durban">University of KwaZulu-Natal <span class="inst-city">(Durban)</span></li>
-                    <li data-name="durban university of technology durban">Durban University of Technology <span class="inst-city">(Durban)</span></li>
-                    <li data-name="mangosuthu university of technology durban">Mangosuthu University of Technology <span class="inst-city">(Durban)</span></li>
-                    <li data-name="university of zululand kwadlangezwa">University of Zululand <span class="inst-city">(KwaDlangezwa)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (9)</h3>
-                <ul class="inst-list">
-                    <li data-name="coastal tvet college durban">Coastal TVET College <span class="inst-city">(Durban)</span></li>
-                    <li data-name="elangeni tvet college pinetown">Elangeni TVET College <span class="inst-city">(Pinetown)</span></li>
-                    <li data-name="esayidi tvet college port shepstone">Esayidi TVET College <span class="inst-city">(Port Shepstone)</span></li>
-                    <li data-name="majuba tvet college newcastle">Majuba TVET College <span class="inst-city">(Newcastle)</span></li>
-                    <li data-name="mnambithi tvet college ladysmith">Mnambithi TVET College <span class="inst-city">(Ladysmith)</span></li>
-                    <li data-name="mthashana tvet college ">Mthashana TVET College <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="thekwini tvet college durban">Thekwini TVET College <span class="inst-city">(Durban)</span></li>
-                    <li data-name="umfolozi tvet college richards bay">Umfolozi TVET College <span class="inst-city">(Richards Bay)</span></li>
-                    <li data-name="umgungundlovu tvet college pietermaritzburg">Umgungundlovu TVET College <span class="inst-city">(Pietermaritzburg)</span></li>
-                </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (3)</h3>
-                <ul class="inst-list">
-                    <li data-name="berea college of technology durban">Berea College of Technology <span class="inst-city">(Durban)</span></li>
-                    <li data-name="commerce and computer college of south africa pietermaritzburg">Commerce and Computer College of South Africa <span class="inst-city">(Pietermaritzburg)</span></li>
-                    <li data-name="icesa education durban">ICESA Education <span class="inst-city">(Durban)</span></li>
-               </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="lp">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Limpopo</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>3 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Polokwane</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>Polokwane CBD collection desk<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (2)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of limpopo mankweng">University of Limpopo <span class="inst-city">(Mankweng)</span></li>
-                    <li data-name="university of venda thohoyandou">University of Venda <span class="inst-city">(Thohoyandou)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (7)</h3>
-                <ul class="inst-list">
-                    <li data-name="capricorn tvet college polokwane">Capricorn TVET College <span class="inst-city">(Polokwane)</span></li>
-                    <li data-name="lephalale tvet college lephalale">Lephalale TVET College <span class="inst-city">(Lephalale)</span></li>
-                    <li data-name="letaba tvet college tzaneen">Letaba TVET College <span class="inst-city">(Tzaneen)</span></li>
-                    <li data-name="mopani south east tvet college phalaborwa">Mopani South East TVET College <span class="inst-city">(Phalaborwa)</span></li>
-                    <li data-name="sekhukhune tvet college groblersdal">Sekhukhune TVET College <span class="inst-city">(Groblersdal)</span></li>
-                    <li data-name="vhembe tvet college thohoyandou">Vhembe TVET College <span class="inst-city">(Thohoyandou)</span></li>
-                    <li data-name="waterberg tvet college ">Waterberg TVET College <span class="inst-city">(all campuses)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (1)</h3>
-                <ul class="inst-list">
-                    <li data-name="southern african wildlife college hoedspruit">Southern African Wildlife College <span class="inst-city">(Hoedspruit)</span></li>
-               </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="mp">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Mpumalanga</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>3 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Mbombela</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>Mbombela CBD collection desk<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (1)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of mpumalanga mbombela">University of Mpumalanga <span class="inst-city">(Mbombela)</span></li>
-                </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (3)</h3>
-                <ul class="inst-list">
-                    <li data-name="ehlanzeni tvet college mbombela">Ehlanzeni TVET College <span class="inst-city">(Mbombela)</span></li>
-                    <li data-name="gert sibande tvet college standerton">Gert Sibande TVET College <span class="inst-city">(Standerton)</span></li>
-                    <li data-name="nkangala tvet college emalahleni">Nkangala TVET College <span class="inst-city">(eMalahleni)</span></li>
-                </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (2)</h3>
-                <ul class="inst-list">
-                    <li data-name="msc business college mbombela">MSC Business College <span class="inst-city">(Mbombela)</span></li>
-                    <li data-name="unigrad college mbombela">Unigrad College <span class="inst-city">(Mbombela)</span></li>
-                </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="nc">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Northern Cape</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>4 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Kimberley</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>Kimberley CBD collection desk<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (1)</h3>
-                <ul class="inst-list">
-                    <li data-name="sol plaatje university kimberley">Sol Plaatje University <span class="inst-city">(Kimberley)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (2)</h3>
-                <ul class="inst-list">
-                    <li data-name="northern cape rural tvet college upington">Northern Cape Rural TVET College <span class="inst-city">(Upington)</span></li>
-                    <li data-name="northern cape urban tvet college kimberley">Northern Cape Urban TVET College <span class="inst-city">(Kimberley)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (2)</h3>
-                <ul class="inst-list">
-                    <li data-name="atti kimberley kimberley">ATTI Kimberley <span class="inst-city">(Kimberley)</span></li>
-                    <li data-name="qualitas career academy kimberley">Qualitas Career Academy <span class="inst-city">(Kimberley)</span></li>
-               </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="nw">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>North West</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Potchefstroom</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>Potchefstroom town centre collection desk<br>Mon-Fri 09:00-17:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (1)</h3>
-                <ul class="inst-list">
-                    <li data-name="north-west university potchefstroom">North-West University <span class="inst-city">(Potchefstroom)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (3)</h3>
-                <ul class="inst-list">
-                    <li data-name="orbit tvet college ">Orbit TVET College <span class="inst-city">(all campuses)</span></li>
-                    <li data-name="taletso tvet college mahikeng">Taletso TVET College <span class="inst-city">(Mahikeng)</span></li>
-                    <li data-name="vuselela tvet college klerksdorp">Vuselela TVET College <span class="inst-city">(Klerksdorp)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (2)</h3>
-                <ul class="inst-list">
-                    <li data-name="normansville college rustenburg">Normansville College <span class="inst-city">(Rustenburg)</span></li>
-                    <li data-name="potchefstroom academy and saahst potchefstroom">Potchefstroom Academy and SAAHST <span class="inst-city">(Potchefstroom)</span></li>
-               </ul>
-            </section>
-            <!-- Creates a semantic section that groups related coverage content. -->
-            <section class="province" id="wc">
-                <!-- Creates a second-level heading for a major coverage section. -->
-                <h2>Western Cape</h2>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="grid grid-2">
-                    <!-- Creates a self-contained content block representing an individual collection hub. -->
-                    <article class="card">
-                         <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                         <div class="card-body">
-                              <!-- Creates an inline element used to group and style a short piece of text. -->
-                              <span class="badge">Collection hub</span>
-                              <!-- Creates a third-level heading for a subsection or collection category. -->
-                              <h3>Cape Town</h3>
-                              <!-- Creates a paragraph containing related explanatory text. -->
-                              <p>45 Main Road, Rondebosch, 7700<br>Tue-Sat 10:00-15:00</p>
-                         </div>
-                    </article>
-               </div>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public universities (4)</h3>
-                <ul class="inst-list">
-                    <li data-name="university of cape town cape town">University of Cape Town <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="stellenbosch university stellenbosch">Stellenbosch University <span class="inst-city">(Stellenbosch)</span></li>
-                    <li data-name="university of the western cape bellville">University of the Western Cape <span class="inst-city">(Bellville)</span></li>
-                    <li data-name="cape peninsula university of technology cape town">Cape Peninsula University of Technology <span class="inst-city">(Cape Town)</span></li>
-               </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Public TVET colleges (6)</h3>
-                <ul class="inst-list">
-                    <li data-name="boland tvet college stellenbosch">Boland TVET College <span class="inst-city">(Stellenbosch)</span></li>
-                    <li data-name="college of cape town for tvet cape town">College of Cape Town for TVET <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="false bay tvet college muizenberg">False Bay TVET College <span class="inst-city">(Muizenberg)</span></li>
-                    <li data-name="northlink tvet college bellville">Northlink TVET College <span class="inst-city">(Bellville)</span></li>
-                    <li data-name="south cape tvet college george">South Cape TVET College <span class="inst-city">(George)</span></li>
-                    <li data-name="west coast tvet college ">West Coast TVET College <span class="inst-city">(all campuses)</span></li>
-                </ul>
-                <!-- Creates a third-level heading for a subsection or collection category. -->
-                <h3>Private institutions (14)</h3>
-                <ul class="inst-list">
-                    <li data-name="act cape town cape town">ACT Cape Town <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="bhc school of design cape town">BHC School of Design <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="cape audio college cape town">Cape Audio College <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="cape town college of fashion design cape town">Cape Town College of Fashion Design <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="cornerstone institute cape town">Cornerstone Institute <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="friends of design academy of digital arts cape town">Friends of Design Academy of Digital Arts <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="george whitefield college muizenberg">George Whitefield College <span class="inst-city">(Muizenberg)</span></li>
-                    <li data-name="helderberg college of higher education somerset west">Helderberg College of Higher Education <span class="inst-city">(Somerset West)</span></li>
-                    <li data-name="inscape education group cape town">Inscape Education Group <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="international hotel school cape town">International Hotel School <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="isa carstens academy cape town">Isa Carstens Academy <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="red &amp; yellow creative school of business cape town">Red &amp; Yellow Creative School of Business <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="the animation school cape town">The Animation School <span class="inst-city">(Cape Town)</span></li>
-                    <li data-name="tsiba education cape town">TSIBA Education <span class="inst-city">(Cape Town)</span></li>
-                </ul>
-            </section>
-                <!-- Creates a semantic section that groups related coverage content. -->
-                <section class="province" id="national-private">
-                    <!-- Creates a second-level heading for a major coverage section. -->
-                    <h2>National private providers</h2>
-                    <!-- Creates a paragraph containing related explanatory text. -->
-                    <p>These providers have campuses in several provinces or teach by distance, so they are available in every province. Delivery uses the typical time for your province.</p>
-                    <ul class="inst-list">
-                         <li data-name="the iie (varsity college, rosebank college, vega, design school southern africa)">The IIE (Varsity College, Rosebank College, Vega, Design School Southern Africa)</li>
-                         <li data-name="stadio (including embury institute for teacher education)">STADIO (including Embury Institute for Teacher Education)</li>
-                         <li data-name="eduvos">Eduvos</li>
-                         <li data-name="boston city campus">Boston City Campus</li>
-                         <li data-name="mancosa">MANCOSA</li>
-                         <li data-name="regent business school">Regent Business School</li>
-                         <li data-name="richfield graduate institute of technology">Richfield Graduate Institute of Technology</li>
-                         <li data-name="ctu training solutions">CTU Training Solutions</li>
-                         <li data-name="regenesys">Regenesys</li>
-                         <li data-name="newbridge graduate institute">NewBridge Graduate Institute</li>
-                         <li data-name="sae institute">SAE Institute</li>
-                         <li data-name="netcare education (nursing and health)">Netcare Education (nursing and health)</li>
-                         <li data-name="central technical college">Central Technical College</li>
-                         <li data-name="open learning group">Open Learning Group</li>
-                         <li data-name="oxbridge academy (distance)">Oxbridge Academy (distance)</li>
-                         <li data-name="intec college (distance)">Intec College (distance)</li>
-                         <li data-name="lyceum college (distance)">Lyceum College (distance)</li>
-                         <li data-name="optimi college (distance)">Optimi College (distance)</li>
-                         <li data-name="trifocus fitness academy (distance)">Trifocus Fitness Academy (distance)</li>
-                         <li data-name="chefs training and innovation academy">Chefs Training and Innovation Academy</li>
-                     </ul>
-                </section>
-            </div>
-        </section>
-    </main>
+                              <p>Typical campus delivery: <strong>3 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                              <div class="grid grid-2">
+                                <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                <article class="card">
+                                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                  <div class="card-body">
+                                    <!-- Creates an inline element used to group and style a short piece of text. -->
+                                    <span class="badge">Collection hub</span>
+                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                    <h3>Gqeberha</h3><p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
+                                  </div>
+                                  </article>
+                                  </div>
+                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                    <h3>Public universities (4)</h3>
+                                    <ul class="inst-list">
+                                      <li data-name="university of fort hare alice">University of Fort Hare <span class="inst-city">(Alice)</span></li>
+                                      <li data-name="rhodes university makhanda">Rhodes University <span class="inst-city">(Makhanda)</span></li>
+                                      <li data-name="nelson mandela university gqeberha">Nelson Mandela University <span class="inst-city">(Gqeberha)</span></li>
+                                      <li data-name="walter sisulu university mthatha">Walter Sisulu University <span class="inst-city">(Mthatha)</span></li>
+                                    </ul>
+                                      <!-- Creates a third-level heading for a subsection or collection category. -->
+                                      <h3>Public TVET colleges (8)</h3>
+                                      <ul class="inst-list">
+                                        <li data-name="buffalo city tvet college east london">Buffalo City TVET College <span class="inst-city">(East London)</span></li>
+                                        <li data-name="eastcape midlands tvet college ">Eastcape Midlands TVET College <span class="inst-city">(all campuses)</span></li>
+                                        <li data-name="ikhala tvet college komani">Ikhala TVET College <span class="inst-city">(Komani)</span></li>
+                                        <li data-name="ingwe tvet college ">Ingwe TVET College <span class="inst-city">(all campuses)</span></li>
+                                        <li data-name="king hintsa tvet college ">King Hintsa TVET College <span class="inst-city">(all campuses)</span></li>
+                                        <li data-name="king sabata dalindyebo tvet college mthatha">King Sabata Dalindyebo TVET College <span class="inst-city">(Mthatha)</span></li>
+                                        <li data-name="lovedale tvet college alice">Lovedale TVET College <span class="inst-city">(Alice)</span></li>
+                                        <li data-name="port elizabeth tvet college gqeberha">Port Elizabeth TVET College <span class="inst-city">(Gqeberha)</span></li>
+                                      </ul>
+                                        <!-- Creates a third-level heading for a subsection or collection category. -->
+                                        <h3>Private institutions (2)</h3>
+                                        <ul class="inst-list"><li data-name="ed-u city campus gqeberha">Ed-U City Campus <span class="inst-city">(Gqeberha)</span></li>
+                                          <li data-name="stenden south africa port alfred">Stenden South Africa <span class="inst-city">(Port Alfred)</span></li>
+                                        </ul>
+                                        </section>
+                                          <!-- Creates a semantic section that groups related coverage content. -->
+                                          <section class="province" id="fs">
+                                            <!-- Creates a second-level heading for a major coverage section. -->
+                                            <h2>Free State</h2>
+                                            <!-- Creates a paragraph containing related explanatory text. -->
+                                            <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                            <div class="grid grid-2">
+                                              <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                              <article class="card">
+                                                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                <div class="card-body">
+                                                  <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                  <span class="badge">Collection hub</span>
+                                                  <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                  <h3>Bloemfontein</h3>
+                                                  <!-- Creates a paragraph containing related explanatory text. -->
+                                                  <p>Brandwag collection desk<br>Mon-Fri 09:00-17:00</p>
+                                                </div>
+                                                </article>
+                                                </div>
+                                                  <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                  <h3>Public universities (2)</h3>
+                                                  <ul class="inst-list">
+                                                    <li data-name="university of the free state bloemfontein">University of the Free State <span class="inst-city">(Bloemfontein)</span></li>
+                                                    <li data-name="central university of technology bloemfontein">Central University of Technology <span class="inst-city">(Bloemfontein)</span></li>
+                                                  </ul>
+                                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                    <h3>Public TVET colleges (4)</h3>
+                                                    <ul class="inst-list">
+                                                      <li data-name="flavius mareka tvet college sasolburg">Flavius Mareka TVET College <span class="inst-city">(Sasolburg)</span></li>
+                                                      <li data-name="goldfields tvet college welkom">Goldfields TVET College <span class="inst-city">(Welkom)</span></li>
+                                                      <li data-name="maluti tvet college phuthaditjhaba">Maluti TVET College <span class="inst-city">(Phuthaditjhaba)</span></li>
+                                                      <li data-name="motheo tvet college bloemfontein">Motheo TVET College <span class="inst-city">(Bloemfontein)</span></li>
+                                                    </ul>
+                                                      <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                      <h3>Private institutions (1)</h3>
+                                                      <ul class="inst-list">
+                                                        <li data-name="qualitas career academy bloemfontein">Qualitas Career Academy <span class="inst-city">(Bloemfontein)</span></li>
+                                                      </ul>
+                                                      </section>
+                                                        <!-- Creates a semantic section that groups related coverage content. -->
+                                                        <section class="province" id="gp">
+                                                          <!-- Creates a second-level heading for a major coverage section. -->
+                                                          <h2>Gauteng</h2>
+                                                          <!-- Creates a paragraph containing related explanatory text. -->
+                                                          <p>Typical campus delivery: <strong>1 working days</strong> (1 working day within a hub city). Collection is free at the hubs below.</p>
+                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                          <div class="grid grid-2">
+                                                            <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                            <article class="card">
+                                                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                              <div class="card-body">
+                                                                <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                <span class="badge">Collection hub</span>
+                                                                <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                <h3>Johannesburg</h3>
+                                                                <!-- Creates a paragraph containing related explanatory text. -->
+                                                                <p>7 Jorissen Street, Braamfontein, 2001<br>Mon-Sat 10:00-16:00</p>
+                                                              </div>
+                                                              </article>
+                                                                <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                <article class="card">
+                                                                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                  <div class="card-body">
+                                                                    <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                    <span class="badge">Collection hub</span>
+                                                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                    <h3>Pretoria</h3><p>128 Lynnwood Road, Hatfield, 0083 (head office)<br>Mon-Fri 09:00-17:00</p>
+                                                                  </div>
+                                                                  </article>
+                                                                  </div>
+                                                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                    <h3>Public universities (7)</h3>
+                                                                    <ul class="inst-list">
+                                                                      <li data-name="university of the witwatersrand johannesburg">University of the Witwatersrand <span class="inst-city">(Johannesburg)</span></li>
+                                                                      <li data-name="university of johannesburg johannesburg">University of Johannesburg <span class="inst-city">(Johannesburg)</span></li>
+                                                                      <li data-name="university of pretoria pretoria">University of Pretoria <span class="inst-city">(Pretoria)</span></li>
+                                                                      <li data-name="university of south africa (unisa) pretoria">University of South Africa (Unisa) <span class="inst-city">(Pretoria)</span></li>
+                                                                      <li data-name="tshwane university of technology pretoria">Tshwane University of Technology <span class="inst-city">(Pretoria)</span></li>
+                                                                      <li data-name="vaal university of technology vanderbijlpark">Vaal University of Technology <span class="inst-city">(Vanderbijlpark)</span></li>
+                                                                      <li data-name="sefako makgatho health sciences university ga-rankuwa">Sefako Makgatho Health Sciences University <span class="inst-city">(Ga-Rankuwa)</span></li>
+                                                                    </ul>
+                                                                      <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                      <h3>Public TVET colleges (8)</h3>
+                                                                      <ul class="inst-list">
+                                                                        <li data-name="central johannesburg tvet college johannesburg">Central Johannesburg TVET College <span class="inst-city">(Johannesburg)</span></li>
+                                                                        <li data-name="ekurhuleni east tvet college springs">Ekurhuleni East TVET College <span class="inst-city">(Springs)</span></li>
+                                                                        <li data-name="ekurhuleni west tvet college germiston">Ekurhuleni West TVET College <span class="inst-city">(Germiston)</span></li>
+                                                                        <li data-name="sedibeng tvet college vereeniging">Sedibeng TVET College <span class="inst-city">(Vereeniging)</span></li>
+                                                                        <li data-name="south west gauteng tvet college soweto">South West Gauteng TVET College <span class="inst-city">(Soweto)</span></li>
+                                                                        <li data-name="tshwane north tvet college pretoria">Tshwane North TVET College <span class="inst-city">(Pretoria)</span></li>
+                                                                        <li data-name="tshwane south tvet college pretoria">Tshwane South TVET College <span class="inst-city">(Pretoria)</span></li>
+                                                                        <li data-name="western tvet college randfontein">Western TVET College <span class="inst-city">(Randfontein)</span></li>
+                                                                      </ul>
+                                                                        <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                        <h3>Private institutions (13)</h3>
+                                                                        <ul class="inst-list">
+                                                                          <li data-name="aaa school of advertising johannesburg">AAA School of Advertising <span class="inst-city">(Johannesburg)</span></li>
+                                                                          <li data-name="academy for facilities management ">Academy for Facilities Management <span class="inst-city">(all campuses)</span></li>
+                                                                          <li data-name="academy of sound engineering johannesburg">Academy of Sound Engineering <span class="inst-city">(Johannesburg)</span></li>
+                                                                          <li data-name="afda johannesburg">AFDA <span class="inst-city">(Johannesburg)</span></li>
+                                                                          <li data-name="belgium campus itversity ">Belgium Campus ITversity <span class="inst-city">(all campuses)</span></li>
+                                                                          <li data-name="boston media house johannesburg">Boston Media House <span class="inst-city">(Johannesburg)</span></li>
+                                                                          <li data-name="da vinci institute modderfontein">Da Vinci Institute <span class="inst-city">(Modderfontein)</span></li>
+                                                                          <li data-name="empilweni education ">Empilweni Education <span class="inst-city">(all campuses)</span></li>
+                                                                          <li data-name="foundation for professional development ">Foundation for Professional Development <span class="inst-city">(all campuses)</span></li>
+                                                                          <li data-name="greenside design center college of design johannesburg">Greenside Design Center College of Design <span class="inst-city">(Johannesburg)</span></li>
+                                                                          <li data-name="health and fitness professionals academy ">Health and Fitness Professionals Academy <span class="inst-city">(all campuses)</span></li>
+                                                                          <li data-name="henley business school south africa johannesburg">Henley Business School South Africa <span class="inst-city">(Johannesburg)</span></li>
+                                                                          <li data-name="nosa college ">NOSA College <span class="inst-city">(all campuses)</span></li>
+                                                                        </ul>
+                                                                        </section>
+                                                                          <!-- Creates a semantic section that groups related coverage content. -->
+                                                                          <section class="province" id="kzn">
+                                                                            <!-- Creates a second-level heading for a major coverage section. -->
+                                                                            <h2>KwaZulu-Natal</h2>
+                                                                            <!-- Creates a paragraph containing related explanatory text. -->
+                                                                            <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                                                            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                            <div class="grid grid-2">
+                                                                              <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                              <article class="card">
+                                                                                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                <div class="card-body">
+                                                                                  <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                  <span class="badge">Collection hub</span>
+                                                                                  <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                  <h3>Durban</h3>
+                                                                                  <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                  <p>Shop 12, University Drive, Westville, 3629 (lockers)<br>Lockers daily 08:00-20:00</p>
+                                                                                </div>
+                                                                                </article>
+                                                                                </div>
+                                                                                  <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                  <h3>Public universities (4)</h3>
+                                                                                  <ul class="inst-list">
+                                                                                    <li data-name="university of kwazulu-natal durban">University of KwaZulu-Natal <span class="inst-city">(Durban)</span></li>
+                                                                                    <li data-name="durban university of technology durban">Durban University of Technology <span class="inst-city">(Durban)</span></li>
+                                                                                    <li data-name="mangosuthu university of technology durban">Mangosuthu University of Technology <span class="inst-city">(Durban)</span></li>
+                                                                                    <li data-name="university of zululand kwadlangezwa">University of Zululand <span class="inst-city">(KwaDlangezwa)</span></li>
+                                                                                  </ul>
+                                                                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                    <h3>Public TVET colleges (9)</h3>
+                                                                                    <ul class="inst-list">
+                                                                                      <li data-name="coastal tvet college durban">Coastal TVET College <span class="inst-city">(Durban)</span></li>
+                                                                                      <li data-name="elangeni tvet college pinetown">Elangeni TVET College <span class="inst-city">(Pinetown)</span></li>
+                                                                                      <li data-name="esayidi tvet college port shepstone">Esayidi TVET College <span class="inst-city">(Port Shepstone)</span></li>
+                                                                                      <li data-name="majuba tvet college newcastle">Majuba TVET College <span class="inst-city">(Newcastle)</span></li>
+                                                                                      <li data-name="mnambithi tvet college ladysmith">Mnambithi TVET College <span class="inst-city">(Ladysmith)</span></li>
+                                                                                      <li data-name="mthashana tvet college ">Mthashana TVET College <span class="inst-city">(all campuses)</span></li>
+                                                                                      <li data-name="thekwini tvet college durban">Thekwini TVET College <span class="inst-city">(Durban)</span></li>
+                                                                                      <li data-name="umfolozi tvet college richards bay">Umfolozi TVET College <span class="inst-city">(Richards Bay)</span></li>
+                                                                                      <li data-name="umgungundlovu tvet college pietermaritzburg">Umgungundlovu TVET College <span class="inst-city">(Pietermaritzburg)</span></li>
+                                                                                    </ul>
+                                                                                      <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                      <h3>Private institutions (3)</h3>
+                                                                                      <ul class="inst-list">
+                                                                                        <li data-name="berea college of technology durban">Berea College of Technology <span class="inst-city">(Durban)</span></li>
+                                                                                        <li data-name="commerce and computer college of south africa pietermaritzburg">Commerce and Computer College of South Africa <span class="inst-city">(Pietermaritzburg)</span></li>
+                                                                                        <li data-name="icesa education durban">ICESA Education <span class="inst-city">(Durban)</span></li>
+                                                                                      </ul>
+                                                                                      </section>
+                                                                                        <!-- Creates a semantic section that groups related coverage content. -->
+                                                                                        <section class="province" id="lp">
+                                                                                          <!-- Creates a second-level heading for a major coverage section. -->
+                                                                                          <h2>Limpopo</h2>
+                                                                                          <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                          <p>Typical campus delivery: <strong>3 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                          <div class="grid grid-2">
+                                                                                            <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                                            <article class="card">
+                                                                                              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                              <div class="card-body">
+                                                                                                <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                <span class="badge">Collection hub</span>
+                                                                                                <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                <h3>Polokwane</h3>
+                                                                                                <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                <p>Polokwane CBD collection desk<br>Mon-Fri 09:00-17:00</p>
+                                                                                              </div>
+                                                                                              </article>
+                                                                                              </div>
+                                                                                                <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                <h3>Public universities (2)</h3>
+                                                                                                <ul class="inst-list">
+                                                                                                  <li data-name="university of limpopo mankweng">University of Limpopo <span class="inst-city">(Mankweng)</span></li>
+                                                                                                  <li data-name="university of venda thohoyandou">University of Venda <span class="inst-city">(Thohoyandou)</span></li>
+                                                                                                </ul>
+                                                                                                  <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                  <h3>Public TVET colleges (7)</h3>
+                                                                                                  <ul class="inst-list">
+                                                                                                    <li data-name="capricorn tvet college polokwane">Capricorn TVET College <span class="inst-city">(Polokwane)</span></li>
+                                                                                                    <li data-name="lephalale tvet college lephalale">Lephalale TVET College <span class="inst-city">(Lephalale)</span></li>
+                                                                                                    <li data-name="letaba tvet college tzaneen">Letaba TVET College <span class="inst-city">(Tzaneen)</span></li>
+                                                                                                    <li data-name="mopani south east tvet college phalaborwa">Mopani South East TVET College <span class="inst-city">(Phalaborwa)</span></li>
+                                                                                                    <li data-name="sekhukhune tvet college groblersdal">Sekhukhune TVET College <span class="inst-city">(Groblersdal)</span></li>
+                                                                                                    <li data-name="vhembe tvet college thohoyandou">Vhembe TVET College <span class="inst-city">(Thohoyandou)</span></li>
+                                                                                                    <li data-name="waterberg tvet college ">Waterberg TVET College <span class="inst-city">(all campuses)</span></li>
+                                                                                                  </ul>
+                                                                                                    <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                    <h3>Private institutions (1)</h3>
+                                                                                                    <ul class="inst-list">
+                                                                                                      <li data-name="southern african wildlife college hoedspruit">Southern African Wildlife College <span class="inst-city">(Hoedspruit)</span></li>
+                                                                                                    </ul>
+                                                                                                    </section>
+                                                                                                      <!-- Creates a semantic section that groups related coverage content. -->
+                                                                                                      <section class="province" id="mp">
+                                                                                                        <!-- Creates a second-level heading for a major coverage section. -->
+                                                                                                        <h2>Mpumalanga</h2>
+                                                                                                        <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                        <p>Typical campus delivery: <strong>3 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                                                                                        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                        <div class="grid grid-2">
+                                                                                                          <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                                                          <article class="card">
+                                                                                                            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                            <div class="card-body">
+                                                                                                              <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                              <span class="badge">Collection hub</span>
+                                                                                                              <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                              <h3>Mbombela</h3>
+                                                                                                              <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                              <p>Mbombela CBD collection desk<br>Mon-Fri 09:00-17:00</p>
+                                                                                                            </div>
+                                                                                                            </article>
+                                                                                                            </div>
+                                                                                                              <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                              <h3>Public universities (1)</h3>
+                                                                                                              <ul class="inst-list">
+                                                                                                                <li data-name="university of mpumalanga mbombela">University of Mpumalanga <span class="inst-city">(Mbombela)</span></li>
+                                                                                                              </ul>
+                                                                                                                <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                <h3>Public TVET colleges (3)</h3>
+                                                                                                                <ul class="inst-list">
+                                                                                                                  <li data-name="ehlanzeni tvet college mbombela">Ehlanzeni TVET College <span class="inst-city">(Mbombela)</span></li>
+                                                                                                                  <li data-name="gert sibande tvet college standerton">Gert Sibande TVET College <span class="inst-city">(Standerton)</span></li>
+                                                                                                                  <li data-name="nkangala tvet college emalahleni">Nkangala TVET College <span class="inst-city">(eMalahleni)</span></li>
+                                                                                                                </ul>
+                                                                                                                  <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                  <h3>Private institutions (2)</h3>
+                                                                                                                  <ul class="inst-list">
+                                                                                                                    <li data-name="msc business college mbombela">MSC Business College <span class="inst-city">(Mbombela)</span></li>
+                                                                                                                    <li data-name="unigrad college mbombela">Unigrad College <span class="inst-city">(Mbombela)</span></li>
+                                                                                                                  </ul>
+                                                                                                                  </section>
+                                                                                                                    <!-- Creates a semantic section that groups related coverage content. -->
+                                                                                                                    <section class="province" id="nc">
+                                                                                                                      <!-- Creates a second-level heading for a major coverage section. -->
+                                                                                                                      <h2>Northern Cape</h2>
+                                                                                                                      <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                      <p>Typical campus delivery: <strong>4 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                                                                                                      <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                      <div class="grid grid-2">
+                                                                                                                        <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                                                                        <article class="card">
+                                                                                                                          <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                          <div class="card-body">
+                                                                                                                            <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                            <span class="badge">Collection hub</span>
+                                                                                                                            <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                            <h3>Kimberley</h3>
+                                                                                                                            <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                            <p>Kimberley CBD collection desk<br>Mon-Fri 09:00-17:00</p>
+                                                                                                                          </div>
+                                                                                                                          </article>
+                                                                                                                          </div>
+                                                                                                                            <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                            <h3>Public universities (1)</h3>
+                                                                                                                            <ul class="inst-list">
+                                                                                                                              <li data-name="sol plaatje university kimberley">Sol Plaatje University <span class="inst-city">(Kimberley)</span></li>
+                                                                                                                            </ul>
+                                                                                                                              <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                              <h3>Public TVET colleges (2)</h3>
+                                                                                                                              <ul class="inst-list">
+                                                                                                                                <li data-name="northern cape rural tvet college upington">Northern Cape Rural TVET College <span class="inst-city">(Upington)</span></li>
+                                                                                                                                <li data-name="northern cape urban tvet college kimberley">Northern Cape Urban TVET College <span class="inst-city">(Kimberley)</span></li>
+                                                                                                                              </ul>
+                                                                                                                                <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                <h3>Private institutions (2)</h3>
+                                                                                                                                <ul class="inst-list">
+                                                                                                                                  <li data-name="atti kimberley kimberley">ATTI Kimberley <span class="inst-city">(Kimberley)</span></li>
+                                                                                                                                  <li data-name="qualitas career academy kimberley">Qualitas Career Academy <span class="inst-city">(Kimberley)</span></li>
+                                                                                                                                </ul>
+                                                                                                                                </section>
+                                                                                                                                  <!-- Creates a semantic section that groups related coverage content. -->
+                                                                                                                                  <section class="province" id="nw">
+                                                                                                                                    <!-- Creates a second-level heading for a major coverage section. -->
+                                                                                                                                    <h2>North West</h2>
+                                                                                                                                    <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                                    <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                                                                                                                    <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                    <div class="grid grid-2">
+                                                                                                                                      <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                                                                                      <article class="card">
+                                                                                                                                        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                        <div class="card-body">
+                                                                                                                                          <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                                          <span class="badge">Collection hub</span>
+                                                                                                                                          <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                          <h3>Potchefstroom</h3>
+                                                                                                                                          <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                                          <p>Potchefstroom town centre collection desk<br>Mon-Fri 09:00-17:00</p>
+                                                                                                                                        </div>
+                                                                                                                                        </article>
+                                                                                                                                        </div>
+                                                                                                                                          <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                          <h3>Public universities (1)</h3>
+                                                                                                                                          <ul class="inst-list">
+                                                                                                                                            <li data-name="north-west university potchefstroom">North-West University <span class="inst-city">(Potchefstroom)</span></li>
+                                                                                                                                          </ul>
+                                                                                                                                            <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                            <h3>Public TVET colleges (3)</h3>
+                                                                                                                                            <ul class="inst-list">
+                                                                                                                                              <li data-name="orbit tvet college ">Orbit TVET College <span class="inst-city">(all campuses)</span></li>
+                                                                                                                                              <li data-name="taletso tvet college mahikeng">Taletso TVET College <span class="inst-city">(Mahikeng)</span></li>
+                                                                                                                                              <li data-name="vuselela tvet college klerksdorp">Vuselela TVET College <span class="inst-city">(Klerksdorp)</span></li>
+                                                                                                                                            </ul>
+                                                                                                                                              <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                              <h3>Private institutions (2)</h3>
+                                                                                                                                              <ul class="inst-list">
+                                                                                                                                                <li data-name="normansville college rustenburg">Normansville College <span class="inst-city">(Rustenburg)</span></li>
+                                                                                                                                                <li data-name="potchefstroom academy and saahst potchefstroom">Potchefstroom Academy and SAAHST <span class="inst-city">(Potchefstroom)</span></li>
+                                                                                                                                              </ul>
+                                                                                                                                              </section>
+                                                                                                                                                <!-- Creates a semantic section that groups related coverage content. -->
+                                                                                                                                                <section class="province" id="wc">
+                                                                                                                                                  <!-- Creates a second-level heading for a major coverage section. -->
+                                                                                                                                                  <h2>Western Cape</h2>
+                                                                                                                                                  <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                                                  <p>Typical campus delivery: <strong>2 working days</strong> (1 working day within a hub city). Collection is free at the hub below.</p>
+                                                                                                                                                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                  <div class="grid grid-2">
+                                                                                                                                                    <!-- Creates a self-contained content block representing an individual collection hub. -->
+                                                                                                                                                    <article class="card">
+                                                                                                                                                      <!-- Creates a general container used to group content and apply CSS layout or styling. -->
+                                                                                                                                                      <div class="card-body">
+                                                                                                                                                        <!-- Creates an inline element used to group and style a short piece of text. -->
+                                                                                                                                                        <span class="badge">Collection hub</span>
+                                                                                                                                                        <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                                        <h3>Cape Town</h3>
+                                                                                                                                                        <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                                                        <p>45 Main Road, Rondebosch, 7700<br>Tue-Sat 10:00-15:00</p>
+                                                                                                                                                      </div>
+                                                                                                                                                      </article>
+                                                                                                                                                      </div>
+                                                                                                                                                        <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                                        <h3>Public universities (4)</h3>
+                                                                                                                                                        <ul class="inst-list">
+                                                                                                                                                          <li data-name="university of cape town cape town">University of Cape Town <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                          <li data-name="stellenbosch university stellenbosch">Stellenbosch University <span class="inst-city">(Stellenbosch)</span></li>
+                                                                                                                                                          <li data-name="university of the western cape bellville">University of the Western Cape <span class="inst-city">(Bellville)</span></li>
+                                                                                                                                                          <li data-name="cape peninsula university of technology cape town">Cape Peninsula University of Technology <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                        </ul>
+                                                                                                                                                          <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                                          <h3>Public TVET colleges (6)</h3>
+                                                                                                                                                          <ul class="inst-list">
+                                                                                                                                                            <li data-name="boland tvet college stellenbosch">Boland TVET College <span class="inst-city">(Stellenbosch)</span></li>
+                                                                                                                                                            <li data-name="college of cape town for tvet cape town">College of Cape Town for TVET <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                            <li data-name="false bay tvet college muizenberg">False Bay TVET College <span class="inst-city">(Muizenberg)</span></li>
+                                                                                                                                                            <li data-name="northlink tvet college bellville">Northlink TVET College <span class="inst-city">(Bellville)</span></li>
+                                                                                                                                                            <li data-name="south cape tvet college george">South Cape TVET College <span class="inst-city">(George)</span></li>
+                                                                                                                                                            <li data-name="west coast tvet college ">West Coast TVET College <span class="inst-city">(all campuses)</span></li>
+                                                                                                                                                          </ul>
+                                                                                                                                                            <!-- Creates a third-level heading for a subsection or collection category. -->
+                                                                                                                                                            <h3>Private institutions (14)</h3>
+                                                                                                                                                            <ul class="inst-list">
+                                                                                                                                                              <li data-name="act cape town cape town">ACT Cape Town <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="bhc school of design cape town">BHC School of Design <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="cape audio college cape town">Cape Audio College <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="cape town college of fashion design cape town">Cape Town College of Fashion Design <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="cornerstone institute cape town">Cornerstone Institute <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="friends of design academy of digital arts cape town">Friends of Design Academy of Digital Arts <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="george whitefield college muizenberg">George Whitefield College <span class="inst-city">(Muizenberg)</span></li>
+                                                                                                                                                              <li data-name="helderberg college of higher education somerset west">Helderberg College of Higher Education <span class="inst-city">(Somerset West)</span></li>
+                                                                                                                                                              <li data-name="inscape education group cape town">Inscape Education Group <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="international hotel school cape town">International Hotel School <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="isa carstens academy cape town">Isa Carstens Academy <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="red &amp; yellow creative school of business cape town">Red &amp; Yellow Creative School of Business <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="the animation school cape town">The Animation School <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                              <li data-name="tsiba education cape town">TSIBA Education <span class="inst-city">(Cape Town)</span></li>
+                                                                                                                                                            </ul>
+                                                                                                                                                            </section>
+                                                                                                                                                              <!-- Creates a semantic section that groups related coverage content. -->
+                                                                                                                                                              <section class="province" id="national-private">
+                                                                                                                                                                <!-- Creates a second-level heading for a major coverage section. -->
+                                                                                                                                                                <h2>National private providers</h2>
+                                                                                                                                                                <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                                                                <p>These providers have campuses in several provinces or teach by distance, so they are available in every province. Delivery uses the typical time for your province.</p>
+                                                                                                                                                                <ul class="inst-list">
+                                                                                                                                                                  <li data-name="the iie (varsity college, rosebank college, vega, design school southern africa)">The IIE (Varsity College, Rosebank College, Vega, Design School Southern Africa)</li>
+                                                                                                                                                                  <li data-name="stadio (including embury institute for teacher education)">STADIO (including Embury Institute for Teacher Education)</li>
+                                                                                                                                                                  <li data-name="eduvos">Eduvos</li>
+                                                                                                                                                                  <li data-name="boston city campus">Boston City Campus</li>
+                                                                                                                                                                  <li data-name="mancosa">MANCOSA</li>
+                                                                                                                                                                  <li data-name="regent business school">Regent Business School</li>
+                                                                                                                                                                  <li data-name="richfield graduate institute of technology">Richfield Graduate Institute of Technology</li>
+                                                                                                                                                                  <li data-name="ctu training solutions">CTU Training Solutions</li>
+                                                                                                                                                                  <li data-name="regenesys">Regenesys</li>
+                                                                                                                                                                  <li data-name="newbridge graduate institute">NewBridge Graduate Institute</li>
+                                                                                                                                                                  <li data-name="sae institute">SAE Institute</li>
+                                                                                                                                                                  <li data-name="netcare education (nursing and health)">Netcare Education (nursing and health)</li>
+                                                                                                                                                                  <li data-name="central technical college">Central Technical College</li>
+                                                                                                                                                                  <li data-name="open learning group">Open Learning Group</li>
+                                                                                                                                                                  <li data-name="oxbridge academy (distance)">Oxbridge Academy (distance)</li>
+                                                                                                                                                                  <li data-name="intec college (distance)">Intec College (distance)</li>
+                                                                                                                                                                  <li data-name="lyceum college (distance)">Lyceum College (distance)</li>
+                                                                                                                                                                  <li data-name="optimi college (distance)">Optimi College (distance)</li>
+                                                                                                                                                                  <li data-name="trifocus fitness academy (distance)">Trifocus Fitness Academy (distance)</li>
+                                                                                                                                                                  <li data-name="chefs training and innovation academy">Chefs Training and Innovation Academy</li>
+                                                                                                                                                                </ul>
+                                                                                                                                                                </section>
+                                                                                                                                                                </div>
+                                                                                                                                                                </section>
+                                                                                                                                                                </main>
 
-    <!-- <footer> contains information displayed at the bottom of the webpage.
-         It commonly contains company details, navigation links and contact information. -->
-    <footer>
+                                                                                                                                                                  <!-- <footer> contains information displayed at the bottom of the webpage.
+                                                                                                                                                                  It commonly contains company details, navigation links and contact information. -->
+                                                                                                                                                                  <footer>
 
-        <!-- wrap controls the footer content width while footer-grid controls its layout.
-             Both classes are defined in the external CSS stylesheet. -->
-        <div class="wrap footer-grid">
+                                                                                                                                                                    <!-- wrap controls the footer content width while footer-grid controls its layout.
+                                                                                                                                                                    Both classes are defined in the external CSS stylesheet. -->
+                                                                                                                                                                    <div class="wrap footer-grid">
 
-            <!-- This is the first footer column containing company information.
-                 h4 provides a heading for this group of footer content. -->
-            <div>
-                <!-- Creates a fourth-level heading for a footer subsection. -->
-                <h4>Campus-Cart</h4>
-                <!-- Creates a paragraph containing related explanatory text. -->
-                <p>Affordable new and second-hand student essentials for South African campuses.</p>
-            </div>
+                                                                                                                                                                      <!-- This is the first footer column containing company information.
+                                                                                                                                                                      h4 provides a heading for this group of footer content. -->
+                                                                                                                                                                      <div>
+                                                                                                                                                                        <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                        <h4>Campus-Cart</h4>
+                                                                                                                                                                        <!-- Creates a paragraph containing related explanatory text. -->
+                                                                                                                                                                        <p>Affordable new and second-hand student essentials for South African campuses.</p>
+                                                                                                                                                                      </div>
 
-            <!-- This footer column contains links related to shopping.
-                 The unordered list groups the related navigation items. -->
-            <div>
-                <!-- Creates a fourth-level heading for a footer subsection. -->
-                <h4>Shop</h4>
-                <!-- Creates an unordered list for navigation or grouped information. -->
-                <ul>
+                                                                                                                                                                        <!-- This footer column contains links related to shopping.
+                                                                                                                                                                        The unordered list groups the related navigation items. -->
+                                                                                                                                                                        <div>
+                                                                                                                                                                          <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                          <h4>Shop</h4>
+                                                                                                                                                                          <!-- Creates an unordered list for navigation or grouped information. -->
+                                                                                                                                                                          <ul>
 
-                    <!-- Each list item contains one navigation hyperlink.
-                         The #shop fragment opens the matching section on products.html. -->
-                    <li><a href="products.html">Shop New</a></li>
+                                                                                                                                                                            <!-- Each list item contains one navigation hyperlink.
+                                                                                                                                                                            The #shop fragment opens the matching section on products.html. -->
+                                                                                                                                                                            <li><a href="products.html">Shop New</a></li>
 
-                    <!-- &amp; is an HTML entity that displays the ampersand character.
-                         The fragment targets the Deals & Gallery section. -->
-                    <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+                                                                                                                                                                            <!-- &amp; is an HTML entity that displays the ampersand character.
+                                                                                                                                                                            The fragment targets the Deals & Gallery section. -->
+                                                                                                                                                                            <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
 
-                    <!-- This hyperlink targets the Product Detail section.
-                         The destination depends on an element with the matching ID. -->
-                    <li><a href="products.html#product-detail">Product Detail</a></li>
+                                                                                                                                                                            <!-- This hyperlink targets the Product Detail section.
+                                                                                                                                                                            The destination depends on an element with the matching ID. -->
+                                                                                                                                                                            <li><a href="products.html#product-detail">Product Detail</a></li>
 
-                    <!-- This link targets the Sell With Us section of products.html.
-                         URL fragments allow users to jump directly to specific content. -->
-                    <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-                </ul>
-            </div>
+                                                                                                                                                                            <!-- This link targets the Sell With Us section of products.html.
+                                                                                                                                                                            URL fragments allow users to jump directly to specific content. -->
+                                                                                                                                                                            <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+                                                                                                                                                                          </ul>
+                                                                                                                                                                          </div>
 
-            <!-- This footer column contains general company navigation.
-                 The list provides quick access to important website pages. -->
-            <div>
-                <!-- Creates a fourth-level heading for a footer subsection. -->
-                <h4>Company</h4>
-                <!-- Creates an unordered list for navigation or grouped information. -->
-                <ul>
+                                                                                                                                                                            <!-- This footer column contains general company navigation.
+                                                                                                                                                                            The list provides quick access to important website pages. -->
+                                                                                                                                                                            <div>
+                                                                                                                                                                              <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                              <h4>Company</h4>
+                                                                                                                                                                              <!-- Creates an unordered list for navigation or grouped information. -->
+                                                                                                                                                                              <ul>
 
-                    <!-- This hyperlink opens the About page.
-                         Because both files are inside the pages folder, only the filename is needed. -->
-                    <li><a href="about.html">About</a></li>
+                                                                                                                                                                                <!-- This hyperlink opens the About page.
+                                                                                                                                                                                Because both files are inside the pages folder, only the filename is needed. -->
+                                                                                                                                                                                <li><a href="about.html">About</a></li>
 
-                    <!-- This link jumps to the Parent Hub section of products.html.
-                         The #parent-hub fragment identifies the target section. -->
-                    <li><a href="products.html#parent-hub">Parent Hub</a></li>
+                                                                                                                                                                                <!-- This link jumps to the Parent Hub section of products.html.
+                                                                                                                                                                                The #parent-hub fragment identifies the target section. -->
+                                                                                                                                                                                <li><a href="products.html#parent-hub">Parent Hub</a></li>
 
-                    <!-- This hyperlink opens the enquiry page.
-                         href stores the relative path used by the browser. -->
-                    <li><a href="enquiry.html">Enquiry</a></li>
-                    <!-- Creates one item inside an unordered list. -->
-                    <li><a href="coverage.html">Coverage</a></li>
+                                                                                                                                                                                <!-- This hyperlink opens the enquiry page.
+                                                                                                                                                                                href stores the relative path used by the browser. -->
+                                                                                                                                                                                <li><a href="enquiry.html">Enquiry</a></li>
+                                                                                                                                                                                <!-- Creates one item inside an unordered list. -->
+                                                                                                                                                                                <li><a href="coverage.html">Coverage</a></li>
 
-                    <!-- This hyperlink opens the contact page.
-                         It allows users to return to the current contact section. -->
-                    <li><a href="contact.html">Contact</a></li>
+                                                                                                                                                                                <!-- This hyperlink opens the contact page.
+                                                                                                                                                                                It allows users to return to the current contact section. -->
+                                                                                                                                                                                <li><a href="contact.html">Contact</a></li>
 
-                    <!-- This hyperlink opens the Account page.
-                         The browser follows the relative URL stored in the href attribute. -->
-                    <li><a href="account.html">Account</a></li>
-                </ul>
-            </div>
+                                                                                                                                                                                <!-- This hyperlink opens the Account page.
+                                                                                                                                                                                The browser follows the relative URL stored in the href attribute. -->
+                                                                                                                                                                                <li><a href="account.html">Account</a></li>
+                                                                                                                                                                              </ul>
+                                                                                                                                                                              </div>
 
-            <!-- This footer column contains the business contact information.
-                 The unordered list groups the contact methods and opening hours. -->
-            <div>
-                <!-- Creates a fourth-level heading for a footer subsection. -->
-                <h4>Reach us</h4>
-                <!-- Creates an unordered list for navigation or grouped information. -->
-                <ul>
+                                                                                                                                                                                <!-- This footer column contains the business contact information.
+                                                                                                                                                                                The unordered list groups the contact methods and opening hours. -->
+                                                                                                                                                                                <div>
+                                                                                                                                                                                  <!-- Creates a fourth-level heading for a footer subsection. -->
+                                                                                                                                                                                  <h4>Reach us</h4>
+                                                                                                                                                                                  <!-- Creates an unordered list for navigation or grouped information. -->
+                                                                                                                                                                                  <ul>
 
-                    <!-- mailto: creates a link that opens the user's default email application.
-                         The email address after mailto: becomes the email recipient. -->
-                    <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+                                                                                                                                                                                    <!-- mailto: creates a link that opens the user's default email application.
+                                                                                                                                                                                    The email address after mailto: becomes the email recipient. -->
+                                                                                                                                                                                    <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
 
-                    <!-- This external link opens a WhatsApp conversation.
-                         The number uses South Africa's international country code in the URL. -->
-                    <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+                                                                                                                                                                                    <!-- This external link opens a WhatsApp conversation.
+                                                                                                                                                                                    The number uses South Africa's international country code in the URL. -->
+                                                                                                                                                                                    <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
 
-                    <!-- This list item displays the normal business operating hours.
-                         It is plain text because the hours do not need to be clickable. -->
-                    <li>Mon–Fri, 09:00–17:00 SAST</li>
-                </ul>
-            </div>
-        </div>
+                                                                                                                                                                                    <!-- This list item displays the normal business operating hours.
+                                                                                                                                                                                    It is plain text because the hours do not need to be clickable. -->
+                                                                                                                                                                                    <li>Mon–Fri, 09:00–17:00 SAST</li>
+                                                                                                                                                                                  </ul>
+                                                                                                                                                                                  </div>
+                                                                                                                                                                                  </div>
 
-        <!-- footer-bottom creates a separate bottom area for copyright information.
-             The wrap class keeps the content aligned with the rest of the footer. -->
-        <div class="wrap footer-bottom">
+                                                                                                                                                                                    <!-- footer-bottom creates a separate bottom area for copyright information.
+                                                                                                                                                                                    The wrap class keeps the content aligned with the rest of the footer. -->
+                                                                                                                                                                                    <div class="wrap footer-bottom">
 
-            <!-- &copy; is an HTML entity that displays the copyright symbol.
-                 This paragraph also explains the limitations of the static demonstration site. -->
-            <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
-        </div>
-    </footer>
+                                                                                                                                                                                      <!-- &copy; is an HTML entity that displays the copyright symbol.
+                                                                                                                                                                                      This paragraph also explains the limitations of the static demonstration site. -->
+                                                                                                                                                                                      <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    </footer>
 
-    <!-- <script> connects an external JavaScript file to this webpage.
-         src specifies the relative location of the JavaScript file. -->
-    <script src="../assets/js/script.js"></script>
-    <!-- Loads an external JavaScript file that provides website functionality and interactions. -->
-    <script src="../assets/js/forms.js"></script>
+                                                                                                                                                                                      <!-- <script> connects an external JavaScript file to this webpage.
+                                                                                                                                                                                      src specifies the relative location of the JavaScript file. -->
+                                                                                                                                                                                      <script src="../assets/js/script.js"></script>
+                                                                                                                                                                                      <!-- Loads an external JavaScript file that provides website functionality and interactions. -->
+                                                                                                                                                                                      <script src="../assets/js/forms.js"></script>
 
-</body>
-</html>
+                                                                                                                                                                                    </body>
+                                                                                                                                                                                    </html>
