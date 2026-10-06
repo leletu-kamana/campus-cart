@@ -464,7 +464,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.51** — Add Gauteng TVET colleges. This adds Gauteng TVET colleges to the Coverage page, extending the province's coverage beyond universities.
 
-- **v3.52** — Add private institutions to coverage page.
+- **v3.52** — Add private institutions to coverage page. This adds private institutions to the Gauteng coverage information, completing another institution category for the province.
 
 - **v3.53** — Add KwaZulu-Natal coverage.
 
