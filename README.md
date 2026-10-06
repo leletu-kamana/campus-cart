@@ -488,7 +488,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.63** — Add Mpumalanga TVET colleges. This adds Mpumalanga TVET colleges to the Coverage page, broadening the province's tertiary-education coverage.
 
-- **v3.64** — Add private institutions to coverage page.
+- **v3.64** — Add private institutions to coverage page. This adds private institutions to the Mpumalanga coverage information, representing another major institution category.
 
 - **v3.65** — Add Northern Cape coverage section.
 
