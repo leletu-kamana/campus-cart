@@ -630,6 +630,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.118** — Add Campus-Cart loading screen. Adds a full-screen loading screen to the Campus-Cart homepage with branded loading text and accessible status attributes, providing visual feedback before the main page content is ready.
 
+- **v3.119** — Add page loader to about page. Adds a full-screen branded loading overlay to `pages/about.html`, including the page-loading state and accessible loader markup for a smoother initial page experience.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
