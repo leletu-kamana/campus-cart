@@ -568,6 +568,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.88** — Add XML sitemap documentation. This updates the README to document the new root-level `sitemap.xml`, distinguishes the website navigation sitemap from the XML sitemap used by search engines, lists all seven public page URLs included in the XML sitemap, and records the Google Search Console submission path. The file structure and review checklist are also updated so the sitemap is documented as part of the deployed Campus-Cart website.
 
+- **v3.89** — Move sitemap.xml to SEO directory. Moves the XML sitemap from the repository root into the new `seo/` directory, changing the sitemap's repository location while keeping the sitemap content available for search-engine configuration.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
