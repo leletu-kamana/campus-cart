@@ -524,6 +524,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.81** — Add private institutions to North West coverage. This adds Normansville College, Potchefstroom Academy and SAAHST to the North West private-institution section. The update improves representation of private tertiary providers alongside the existing public and TVET coverage.
 
+- **v3.82** — Add Western Cape delivery coverage. This adds the Western Cape delivery section, including a standard two-working-day delivery timeframe and a Cape Town collection hub with its address and operating hours. The change extends the Coverage page into another major South African student market while providing practical collection information.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
