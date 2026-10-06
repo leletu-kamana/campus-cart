@@ -512,6 +512,28 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.75** — Add national private providers section. This adds a national private-providers section, bringing the Coverage page together with broader information for private tertiary institutions across South Africa.
 
+- **v3.76** — Add Northern Cape coverage section. This adds a dedicated Northern Cape section to `pages/coverage.html`, documenting the typical campus delivery timeframe, the faster hub-city option, free collection at the hub, and the Kimberley CBD collection desk with its operating hours. The update gives students in the province clearer information about both delivery and collection arrangements.
+
+- **v3.77** — Add public institutions to Northern Cape coverage. This expands the Northern Cape section with public tertiary institutions, including Sol Plaatje University and the Northern Cape Rural and Urban TVET Colleges. Adding these institutions makes the coverage information more useful to students looking for their specific public university or TVET provider.
+
+- **v3.78** — Add private institutions to Northern Cape coverage. This adds ATTI Kimberley and Qualitas Career Academy to the Northern Cape private-institution section. The change broadens the province's coverage beyond public providers and TVET colleges, giving students at private institutions relevant institution-level information.
+
+- **v3.79** — Add North West coverage. This introduces a North West province section to the Coverage page, including the standard delivery timing and a Potchefstroom collection hub. The addition continues Campus-Cart's province-by-province expansion and provides a defined delivery and collection point for students in the region.
+
+- **v3.80** — Add public institutions to North West coverage. This expands the North West section with North-West University and three public TVET colleges. The institution listings give students more specific coverage information instead of only showing the province-level delivery details.
+
+- **v3.81** — Add private institutions to North West coverage. This adds Normansville College, Potchefstroom Academy and SAAHST to the North West private-institution section. The update improves representation of private tertiary providers alongside the existing public and TVET coverage.
+
+- **v3.82** — Add Western Cape delivery coverage. This adds the Western Cape delivery section, including a standard two-working-day delivery timeframe and a Cape Town collection hub with its address and operating hours. The change extends the Coverage page into another major South African student market while providing practical collection information.
+
+- **v3.83** — Add public university coverage entries for Western Cape. This adds the University of Cape Town, Stellenbosch University, the University of the Western Cape and Cape Peninsula University of Technology to the Western Cape public-university list. Each entry includes campus or city information so institutions can be displayed and searched more accurately.
+
+- **v3.84** — Add public TVET colleges to Western Cape coverage. This adds six public TVET colleges—Boland, College of Cape Town, False Bay, Northlink, South Cape and West Coast—to the Western Cape institution list. The update broadens the province's coverage from universities to vocational and technical education providers.
+
+- **v3.85** — Add private institutions to Western Cape coverage. This adds 14 private higher-education institutions, including their city locations, to the Western Cape coverage information. The larger private-provider list gives students additional institution choices and makes the provincial coverage more representative of different tertiary education options.
+
+- **v3.86** — Add national private providers section. This adds a national private-providers section containing 20 institutions that operate across multiple provinces or provide distance-learning options. The section also explains that delivery times follow the typical timeframe for the relevant province, bringing the Coverage page together with a broader national option for students whose institutions are not limited to one province.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
