@@ -482,7 +482,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.60** — Add private institution to coverage. This adds a private institution to the Limpopo coverage information, improving the representation of different tertiary-provider types.
 
-- **v3.61** — Add Mpumalanga delivery coverage.
+- **v3.61** — Add Mpumalanga delivery coverage. This adds Mpumalanga delivery coverage, continuing the expansion of the Coverage page across South African provinces.
 
 - **v3.62** — Add Mpumalanga university listing.
 
