@@ -146,29 +146,18 @@
                                     <option>Parent Hub &amp; bundles</option>
                                     <option>Something else</option>
                                 </select>
+                                <span class="error-msg" id="c-topic-error" role="alert"></span>
                             </div>
                         </div>
 
-                        <!-- form-group groups the message label and textarea together.
-                             This keeps the larger text input organised with its description. -->
                         <div class="form-group">
-
-                            <!-- The for attribute connects the label to id="c-message".
-                                 The asterisk indicates that entering a message is required. -->
                             <label for="c-message">Message *</label>
-
-                            <!-- <textarea> creates a multi-line text input for longer messages.
-                                 required prevents submission when the message is empty. -->
                             <textarea id="c-message" name="message" required></textarea>
+                            <span class="error-msg" id="c-message-error" role="alert"></span>
                         </div>
 
-                        <!-- type="submit" makes the button submit the form.
-                             The btn class applies the website's button styling through CSS. -->
-                        <button class="btn" type="submit">Send message by email</button>
-
-                        <!-- This paragraph gives the user information about form processing.
-                             The hint class allows CSS to display it as secondary information. -->
-                        <p class="hint">No backend: this opens a pre-filled email in your own mail app.</p>
+                        <button class="btn" type="submit">Create email</button>
+                        <p class="hint">We build the email from your answers. You then send it from your own email app.</p>
                     </form>
                 </div>
 
