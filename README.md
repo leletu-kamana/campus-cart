@@ -275,6 +275,7 @@ campus-cart/
     ├── about.html
     ├── account.html
     ├── contact.html
+    ├── coverage.html
     ├── enquiry.html
     └── products.html
 ```
@@ -305,6 +306,7 @@ Home (index.html)
 │
 ├── Enquiry (pages/enquiry.html)
 ├── Contact (pages/contact.html)
+├── Coverage (pages/coverage.html)
 │
 └── Account (pages/account.html)
     ├── Student Path
