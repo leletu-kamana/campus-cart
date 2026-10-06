@@ -1,372 +1,575 @@
+<!-- Line 1: Declares HTML5 so the browser uses the modern HTML document standard. -->
 <!DOCTYPE html>
+<!-- Line 2: Starts the root HTML element and declares English as the document language. -->
 <html lang="en">
+  <!-- Line 3: Starts the head section containing metadata and external resources. -->
   <head>
+    <!-- Line 4: Sets UTF-8 character encoding for correct text and symbol rendering. -->
     <meta charset="utf-8">
+    <!-- Line 5: Sets the viewport so the page scales correctly on mobile devices. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <title> sets the name shown on the browser tab and helps identify the webpage.
         It also provides useful information for search engines and accessibility. -->
+    <!-- Line 9: Sets the browser-tab title and document title. -->
     <title>Campus-Cart | Affordable Student Essentials in South Africa</title>
+    <!-- Line 10: Defines the page description used by search engines and other page consumers. -->
     <meta name="description" content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa.">
+    <!-- Line 11: Defines keyword metadata describing the page's main topics. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
+    <!-- Line 12: Provides the Google Search Console verification token for site ownership verification. -->
     <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
     <!-- Connects this HTML page to the external CSS stylesheet.
         The href points to the location of the CSS file. -->
+    <!-- Line 15: Links this HTML document to the external CSS stylesheet used for presentation. -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+  <!-- Line 17: Closes the head section before visible page content. -->
   </head>
+  <!-- Line 18: Starts the visible document body while preserving the existing bg attribute and value. -->
   <body bg="blue">
 
     <!-- Header contains the website logo and main navigation menu. -->
+    <!-- Line 21: Starts the header area containing the primary site navigation. -->
     <header class="topbar">
 
       <!-- Navigation contains links to the main pages of the website.
           aria-label helps screen readers identify the navigation. -->
+      <!-- Line 25: Starts the main navigation landmark and provides an accessible navigation label. -->
       <nav class="nav" aria-label="Main navigation">
 
         <!-- The logo is a link that takes the user back to the home page. -->
+        <!-- Line 28: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
         <a class="logo" href="index.html">Campus<span>-Cart</span></a>
 
         <!-- Button used to open or close the navigation menu. -->
+        <!-- Line 31: Creates the navigation toggle button and uses ARIA attributes to describe its purpose and state. -->
         <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
 
         <!-- Contains all the navigation links displayed in the menu. -->
+        <!-- Line 34: Starts a generic container used to group content and control layout or styling. -->
         <div class="nav-links">
 
           <!-- Links the user to the website home page. -->
+          <!-- Line 37: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="index.html">Home</a>
 
           <!-- Links the user to the About page. -->
+          <!-- Line 40: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="pages/about.html">About</a>
 
           <!-- Opens the products page and jumps to the shop section. -->
+          <!-- Line 43: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="pages/products.html">Shop</a>
 
           <!-- Opens the products page and jumps to the Parent Hub section. -->
+          <!-- Line 46: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="pages/products.html#parent-hub">Parent Hub</a>
 
           <!-- Links the user to the enquiry page. -->
+          <!-- Line 49: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="pages/enquiry.html">Enquiry</a>
+                <!-- Line 50: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
                 <a href="pages/coverage.html">Coverage</a>
 
           <!-- Links the user to the contact page. -->
+          <!-- Line 53: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="pages/contact.html">Contact</a>
 
           <!-- This anchor navigates to the account page. -->
+          <!-- Line 56: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a href="pages/account.html">Account</a>
 
           <!-- Opens the order section and shows the current cart item count.
               JavaScript can update the value inside the span. -->
+          <!-- Line 60: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
           <a class="nav-cart" href="pages/account.html#order">Order (<span data-cart-count>0</span>)</a>
+        <!-- Line 61: Closes the current div container. -->
         </div>
+      <!-- Line 62: Closes the main navigation container. -->
       </nav>
+    <!-- Line 63: Closes the header area. -->
     </header>
 
     <!-- Main contains the primary content of the webpage. -->
+    <!-- Line 66: Starts the main landmark containing the page's primary content. -->
     <main>
 
       <!-- Hero section introduces the website and its main purpose. -->
+      <!-- Line 69: Starts a semantic section grouping related content and, where present, an internal navigation id. -->
       <section class="hero">
 
         <!-- Wrap controls the page width and hero-grid controls the layout. -->
+        <!-- Line 72: Starts a generic container used to group content and control layout or styling. -->
         <div class="wrap hero-grid">
 
           <!-- Contains the main text and buttons in the hero section. -->
+          <!-- Line 75: Starts a generic container used to group content and control layout or styling. -->
           <div>
 
             <!-- Small introductory label displayed above the main heading. -->
+            <!-- Line 78: Creates an inline span used for labels, badges, or dynamic values. -->
             <span class="eyebrow">Proudly South African</span>
 
             <!-- Main heading of the webpage.
                 The em element gives emphasis to part of the heading. -->
+            <!-- Line 82: Creates the primary level-one page heading. -->
             <h1>Kit out res without <em>breaking the budget</em></h1>
 
             <!-- Introductory paragraph explaining what Campus-Cart offers. -->
+            <!-- Line 85: Creates a paragraph containing user-facing descriptive or informational text. -->
             <p class="lead">Campus-Cart brings new and carefully reviewed second-hand student essentials together in one place — bedding, appliances, textbooks and full starter bundles, delivered to every province and collected on campus or at a hub near you. We cover all 26 public universities, all 50 public TVET colleges and the major private institutions.</p>
 
             <!-- Groups the student and parent options together. -->
+            <!-- Line 88: Starts a generic container used to group content and control layout or styling. -->
             <div class="split">
 
               <!-- Card containing information for students. -->
+              <!-- Line 91: Starts a generic container used to group content and control layout or styling. -->
               <div class="split-card">
+                <!-- Line 92: Creates a level-three heading for a subsection or content card. -->
                 <h3>I am a Student</h3>
+                <!-- Line 93: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Shop deals, browse the second-hand marketplace and sell what you no longer need.</p>
 
                 <!-- Link styled as a button that opens the student section. -->
+                <!-- Line 96: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
                 <a class="btn" href="pages/account.html#student">Student path</a>
+              <!-- Line 97: Closes the current div container. -->
               </div>
 
               <!-- Card containing information for parents or guardians. -->
+              <!-- Line 100: Starts a generic container used to group content and control layout or styling. -->
               <div class="split-card">
+                <!-- Line 101: Creates a level-three heading for a subsection or content card. -->
                 <h3>I am a Parent/Guardian</h3>
+                <!-- Line 102: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Use the First Year Checklist and fixed-price starter bundles to plan spend with confidence.</p>
 
                 <!-- Link styled as a button that opens the parent section. -->
+                <!-- Line 105: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
                 <a class="btn btn-ghost-light" href="pages/account.html#parent">Parent path</a>
+              <!-- Line 106: Closes the current div container. -->
               </div>
+            <!-- Line 107: Closes the current div container. -->
             </div>
+          <!-- Line 108: Closes the current div container. -->
           </div>
 
           <!-- Contains the main image displayed in the hero section. -->
+          <!-- Line 111: Starts a generic container used to group content and control layout or styling. -->
           <div class="hero-img">
             <!-- src specifies the image location and alt describes the image. -->
+            <!-- Line 113: Embeds an image; src identifies the file, alt provides accessible text, and width and height define its dimensions. -->
             <img src="assets/images/bundles/hero-campus.jpg" alt="South African students walking on campus with laptops and a storage crate" width="1600" height="900">
+          <!-- Line 114: Closes the current div container. -->
           </div>
+        <!-- Line 115: Closes the current div container. -->
         </div>
+      <!-- Line 116: Closes the current semantic section. -->
       </section>
 
       <!-- Mission section explains the purpose of Campus-Cart. -->
+      <!-- Line 119: Starts a semantic section grouping related content and, where present, an internal navigation id. -->
       <section class="section" id="mission">
+        <!-- Line 120: Starts a generic container used to group content and control layout or styling. -->
         <div class="wrap">
 
           <!-- Contains the heading and introduction for the mission section. -->
+          <!-- Line 123: Starts a generic container used to group content and control layout or styling. -->
           <div class="section-head">
+            <!-- Line 124: Creates an inline span used for labels, badges, or dynamic values. -->
             <span class="eyebrow">Our mission</span>
+            <!-- Line 125: Creates a level-two heading for a major page section. -->
             <h2>Affordable essentials, dignified student living</h2>
+            <!-- Line 126: Creates a paragraph containing user-facing descriptive or informational text. -->
             <p>Too many students arrive at university with a bag and a bed frame. We exist to close that gap: fair prices, a trusted second-hand marketplace, and pricing that parents can plan around before registration week.</p>
+          <!-- Line 127: Closes the current div container. -->
           </div>
 
           <!-- Creates a three-column layout for the feature cards. -->
+          <!-- Line 130: Starts a generic container used to group content and control layout or styling. -->
           <div class="grid grid-3">
 
             <!-- First card explains the website's pricing approach. -->
+            <!-- Line 133: Starts a generic container used to group content and control layout or styling. -->
             <div class="card card-navy">
+              <!-- Line 134: Starts a generic container used to group content and control layout or styling. -->
               <div class="card-body">
+                <!-- Line 135: Creates a level-three heading for a subsection or content card. -->
                 <h3>Fair, visible prices</h3>
+                <!-- Line 136: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Every bundle lists its contents and a fixed price. No surprises at the till.</p>
+              <!-- Line 137: Closes the current div container. -->
               </div>
+            <!-- Line 138: Closes the current div container. -->
             </div>
 
             <!-- Second card explains how second-hand products are reviewed. -->
+            <!-- Line 141: Starts a generic container used to group content and control layout or styling. -->
             <div class="card card-navy">
+              <!-- Line 142: Starts a generic container used to group content and control layout or styling. -->
               <div class="card-body">
+                <!-- Line 143: Creates a level-three heading for a subsection or content card. -->
                 <h3>Reviewed listings</h3>
+                <!-- Line 144: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Second-hand items are manually reviewed by our team before they appear on the site.</p>
+              <!-- Line 145: Closes the current div container. -->
               </div>
+            <!-- Line 146: Closes the current div container. -->
             </div>
 
             <!-- Third card explains the available collection options. -->
+            <!-- Line 149: Starts a generic container used to group content and control layout or styling. -->
             <div class="card card-navy">
+              <!-- Line 150: Starts a generic container used to group content and control layout or styling. -->
               <div class="card-body">
+                <!-- Line 151: Creates a level-three heading for a subsection or content card. -->
                 <h3>Safe collection</h3>
+                <!-- Line 152: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Collect at residence desks, campus points or secure lockers — never a random street corner.</p>
+              <!-- Line 153: Closes the current div container. -->
               </div>
+            <!-- Line 154: Closes the current div container. -->
             </div>
+          <!-- Line 155: Closes the current div container. -->
           </div>
+        <!-- Line 156: Closes the current div container. -->
         </div>
+      <!-- Line 157: Closes the current semantic section. -->
       </section>
 
       <!-- Featured section displays selected Campus-Cart products. -->
+      <!-- Line 160: Starts a semantic section grouping related content and, where present, an internal navigation id. -->
       <section class="section alt" id="featured">
+        <!-- Line 161: Starts a generic container used to group content and control layout or styling. -->
         <div class="wrap">
 
           <!-- Contains the heading for the featured products. -->
+          <!-- Line 164: Starts a generic container used to group content and control layout or styling. -->
           <div class="section-head">
+            <!-- Line 165: Creates an inline span used for labels, badges, or dynamic values. -->
             <span class="eyebrow">Featured</span>
+            <!-- Line 166: Creates a level-two heading for a major page section. -->
             <h2>Starter bundles students actually use</h2>
+          <!-- Line 167: Closes the current div container. -->
           </div>
 
           <!-- Creates a three-column grid for the product cards. -->
+          <!-- Line 170: Starts a generic container used to group content and control layout or styling. -->
           <div class="grid grid-3">
 
             <!-- Article represents one self-contained product item. -->
+            <!-- Line 173: Starts a self-contained article representing one product or marketplace item. -->
             <article class="card">
 
               <!-- Product image with alternative text for accessibility.
                   loading="lazy" helps improve page loading performance. -->
+              <!-- Line 177: Embeds an image; src identifies the file, alt provides accessible text, and width and height define its dimensions. -->
               <img src="assets/images/bundles/starter-bundle.jpg" alt="Basic starter bundle contents laid out" loading="lazy" width="1200" height="900">
 
               <!-- Contains the name, price, description and link for the product. -->
+              <!-- Line 180: Starts a generic container used to group content and control layout or styling. -->
               <div class="card-body">
+                <!-- Line 181: Creates an inline span used for labels, badges, or dynamic values. -->
                 <span class="badge badge-new">New</span>
+                <!-- Line 182: Creates a level-three heading for a subsection or content card. -->
                 <h3>Basic Starter Bundle</h3>
+                <!-- Line 183: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p class="price">R1 499.00</p>
+                <!-- Line 184: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Bedding set, kettle, mug set and study basics for a first-year res room.</p>
 
                 <!-- Link takes the user to more information about the bundle. -->
+                <!-- Line 187: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
                 <a class="btn btn-sm" href="pages/products.html#parent-hub">See contents</a>
+              <!-- Line 188: Closes the current div container. -->
               </div>
+            <!-- Line 189: Closes the article element. -->
             </article>
 
             <!-- Article containing the Standard Starter Bundle information. -->
+            <!-- Line 192: Starts a self-contained article representing one product or marketplace item. -->
             <article class="card">
 
               <!-- Image representing the Standard Starter Bundle. -->
+              <!-- Line 195: Embeds an image; src identifies the file, alt provides accessible text, and width and height define its dimensions. -->
               <img src="assets/images/bundles/starter-bundle.jpg" alt="Standard starter bundle contents laid out" loading="lazy" width="1200" height="900">
 
+              <!-- Line 197: Starts a generic container used to group content and control layout or styling. -->
               <div class="card-body">
+                <!-- Line 198: Creates an inline span used for labels, badges, or dynamic values. -->
                 <span class="badge badge-new">New</span>
+                <!-- Line 199: Creates a level-three heading for a subsection or content card. -->
                 <h3>Standard Starter Bundle</h3>
+                <!-- Line 200: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p class="price">R2 799.00</p>
+                <!-- Line 201: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Basic plus desk lamp, laundry set and a kitchen starter pack.</p>
 
                 <!-- Link takes the user to more information about the bundle. -->
+                <!-- Line 204: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
                 <a class="btn btn-sm" href="pages/products.html#parent-hub">See contents</a>
+              <!-- Line 205: Closes the current div container. -->
               </div>
+            <!-- Line 206: Closes the article element. -->
             </article>
 
             <!-- Article containing a selection of second-hand products. -->
+            <!-- Line 209: Starts a self-contained article representing one product or marketplace item. -->
             <article class="card">
 
               <!-- Image representing items available in the marketplace. -->
+              <!-- Line 212: Embeds an image; src identifies the file, alt provides accessible text, and width and height define its dimensions. -->
               <img src="assets/images/second-hand/marketplace.jpg" alt="Second-hand student items on display" loading="lazy" width="1200" height="900">
 
+              <!-- Line 214: Starts a generic container used to group content and control layout or styling. -->
               <div class="card-body">
 
                 <!-- Badges identify the product as second-hand and verified. -->
+                <!-- Line 217: Creates an inline span used for labels, badges, or dynamic values. -->
                 <span class="badge badge-used">Second-hand</span>
+                <!-- Line 218: Creates an inline span used for labels, badges, or dynamic values. -->
                 <span class="badge badge-verified">Verified Seller</span>
 
+                <!-- Line 220: Creates a level-three heading for a subsection or content card. -->
                 <h3>Marketplace Picks</h3>
+                <!-- Line 221: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p class="price">From R180.00</p>
+                <!-- Line 222: Creates a paragraph containing user-facing descriptive or informational text. -->
                 <p>Reviewed fridges, desks, chairs and textbooks from graduating students.</p>
 
                 <!-- Link takes the user to the second-hand marketplace. -->
+                <!-- Line 225: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
                 <a class="btn btn-sm" href="pages/products.html#shop">Browse marketplace</a>
+              <!-- Line 226: Closes the current div container. -->
               </div>
+            <!-- Line 227: Closes the article element. -->
             </article>
+          <!-- Line 228: Closes the current div container. -->
           </div>
+        <!-- Line 229: Closes the current div container. -->
         </div>
+      <!-- Line 230: Closes the current semantic section. -->
       </section>
 
       <!-- About section gives a short introduction to Campus-Cart. -->
+      <!-- Line 233: Starts a semantic section grouping related content and, where present, an internal navigation id. -->
       <section class="section" id="about-teaser">
+        <!-- Line 234: Starts a generic container used to group content and control layout or styling. -->
         <div class="wrap grid grid-2">
 
           <!-- Contains the main About Us information. -->
+          <!-- Line 237: Starts a generic container used to group content and control layout or styling. -->
           <div>
+            <!-- Line 238: Creates an inline span used for labels, badges, or dynamic values. -->
             <span class="eyebrow">About us</span>
+            <!-- Line 239: Creates a level-two heading for a major page section. -->
             <h2>Started in a res corridor in 2021</h2>
+            <!-- Line 240: Creates a paragraph containing user-facing descriptive or informational text. -->
             <p>Campus-Cart began when a group of students resold their res kit instead of throwing it away. Today we serve students aged 19–30 and the parents and guardians who fund them, across major South African campuses.</p>
 
             <!-- Link takes the user to the full About page. -->
+            <!-- Line 243: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
             <a class="btn btn-outline" href="pages/about.html">Read our story</a>
+          <!-- Line 244: Closes the current div container. -->
           </div>
 
           <!-- Information box identifies the main target users. -->
+          <!-- Line 247: Starts a generic container used to group content and control layout or styling. -->
           <div class="info-box">
+            <!-- Line 248: Creates a level-three heading for a subsection or content card. -->
             <h3>Who we serve</h3>
+            <!-- Line 249: Creates a paragraph containing user-facing descriptive or informational text. -->
             <p><strong>Primary:</strong> tertiary students aged 19–30 living in residence, digs or at home.</p>
+            <!-- Line 250: Creates a paragraph containing user-facing descriptive or informational text. -->
             <p><strong>Secondary:</strong> parents and guardians budgeting for registration season.</p>
+          <!-- Line 251: Closes the current div container. -->
           </div>
+        <!-- Line 252: Closes the current div container. -->
         </div>
+      <!-- Line 253: Closes the current semantic section. -->
       </section>
 
       <!-- Contact section provides different ways for users to contact Campus-Cart. -->
+      <!-- Line 256: Starts a semantic section grouping related content and, where present, an internal navigation id. -->
       <section class="section navy" id="get-in-touch">
+        <!-- Line 257: Starts a generic container used to group content and control layout or styling. -->
         <div class="wrap">
 
           <!-- Contains the heading and description for the contact section. -->
+          <!-- Line 260: Starts a generic container used to group content and control layout or styling. -->
           <div class="section-head">
+            <!-- Line 261: Creates an inline span used for labels, badges, or dynamic values. -->
             <span class="eyebrow">Get in touch</span>
+            <!-- Line 262: Creates a level-two heading for a major page section. -->
             <h2>Questions before you buy?</h2>
+            <!-- Line 263: Creates a paragraph containing user-facing descriptive or informational text. -->
             <p>Ask about a specific bundle, or reach the team about collection points, payment plans and second-hand listings.</p>
+          <!-- Line 264: Closes the current div container. -->
           </div>
 
           <!-- Creates two columns for the different contact options. -->
+          <!-- Line 267: Starts a generic container used to group content and control layout or styling. -->
           <div class="grid grid-2">
 
             <!-- Card for users who have questions before purchasing. -->
+            <!-- Line 270: Starts a generic container used to group content and control layout or styling. -->
             <div class="split-card">
+              <!-- Line 271: Creates a level-three heading for a subsection or content card. -->
               <h3>Pre-purchase enquiry</h3>
+              <!-- Line 272: Creates a paragraph containing user-facing descriptive or informational text. -->
               <p>Reference a bundle or product and we will confirm availability and collection options.</p>
 
               <!-- Link takes the user to the enquiry page. -->
+              <!-- Line 275: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
               <a class="btn" href="pages/enquiry.html">Send an enquiry</a>
+            <!-- Line 276: Closes the current div container. -->
             </div>
 
             <!-- Card containing general contact information. -->
+            <!-- Line 279: Starts a generic container used to group content and control layout or styling. -->
             <div class="split-card">
+              <!-- Line 280: Creates a level-three heading for a subsection or content card. -->
               <h3>General contact</h3>
+              <!-- Line 281: Creates a paragraph containing user-facing descriptive or informational text. -->
               <p>Email or WhatsApp us, or find your nearest collection and office location.</p>
 
               <!-- Link takes the user to the contact page. -->
+              <!-- Line 284: Creates a hyperlink; href defines its destination and any class connects it to CSS styling. -->
               <a class="btn btn-ghost-light" href="pages/contact.html">Contact us</a>
+            <!-- Line 285: Closes the current div container. -->
             </div>
+          <!-- Line 286: Closes the current div container. -->
           </div>
+        <!-- Line 287: Closes the current div container. -->
         </div>
+      <!-- Line 288: Closes the current semantic section. -->
       </section>
+    <!-- Line 289: Closes the main content landmark. -->
     </main>
 
     <!-- Footer contains additional navigation, contact details and copyright information. -->
+    <!-- Line 292: Starts the footer containing secondary navigation, contact details, and site information. -->
     <footer>
 
       <!-- Main footer container that holds the different footer columns. -->
+      <!-- Line 295: Starts a generic container used to group content and control layout or styling. -->
       <div class="wrap footer-grid">
 
         <!-- First footer column containing the website description. -->
+        <!-- Line 298: Starts a generic container used to group content and control layout or styling. -->
         <div>
+          <!-- Line 299: Creates a level-four heading for a footer subsection. -->
           <h4>Campus-Cart</h4>
+          <!-- Line 300: Creates a paragraph containing user-facing descriptive or informational text. -->
           <p>Affordable new and second-hand student essentials for South African campuses.</p>
+        <!-- Line 301: Closes the current div container. -->
         </div>
 
         <!-- Second footer column containing shopping links. -->
+        <!-- Line 304: Starts a generic container used to group content and control layout or styling. -->
         <div>
+          <!-- Line 305: Creates a level-four heading for a footer subsection. -->
           <h4>Shop</h4>
 
           <!-- Unordered list containing links related to shopping. -->
+          <!-- Line 308: Starts an unordered list for grouped navigation or contact items. -->
           <ul>
 
             <!-- Each li represents one item in the unordered list. -->
+            <!-- Line 311: Starts one item in the unordered list. -->
             <li><a href="pages/products.html">Shop New</a></li>
 
             <!-- Link to second-hand products. -->
+            <!-- Line 314: Starts one item in the unordered list. -->
             <li><a href="pages/products.html#shop">Second-Hand</a></li>
 
             <!-- Link to the deals and gallery section.
                 &amp; displays the ampersand (&) character in HTML. -->
+            <!-- Line 318: Starts one item in the unordered list. -->
             <li><a href="pages/products.html#deals-gallery">Deals &amp; Gallery</a></li>
 
             <!-- Link for users who want to sell their products. -->
+            <!-- Line 321: Starts one item in the unordered list. -->
             <li><a href="pages/products.html#sell-with-us">Sell With Us</a></li>
+          <!-- Line 322: Closes the unordered list. -->
           </ul>
+        <!-- Line 323: Closes the current div container. -->
         </div>
 
         <!-- Third footer column containing company-related links. -->
+        <!-- Line 326: Starts a generic container used to group content and control layout or styling. -->
         <div>
+          <!-- Line 327: Creates a level-four heading for a footer subsection. -->
           <h4>Company</h4>
 
           <!-- Unordered list containing company navigation links. -->
+          <!-- Line 330: Starts an unordered list for grouped navigation or contact items. -->
           <ul>
+            <!-- Line 331: Starts one item in the unordered list. -->
             <li><a href="pages/about.html">About</a></li>
+            <!-- Line 332: Starts one item in the unordered list. -->
             <li><a href="pages/products.html#parent-hub">Parent Hub</a></li>
+            <!-- Line 333: Starts one item in the unordered list. -->
             <li><a href="pages/enquiry.html">Enquiry</a></li>
+                    <!-- Line 334: Starts one item in the unordered list. -->
                     <li><a href="pages/coverage.html">Coverage</a></li>
+            <!-- Line 335: Starts one item in the unordered list. -->
             <li><a href="pages/contact.html">Contact</a></li>
+            <!-- Line 336: Starts one item in the unordered list. -->
             <li><a href="pages/account.html">Account</a></li>
+          <!-- Line 337: Closes the unordered list. -->
           </ul>
+        <!-- Line 338: Closes the current div container. -->
         </div>
 
         <!-- Fourth footer column containing contact information. -->
+        <!-- Line 341: Starts a generic container used to group content and control layout or styling. -->
         <div>
+          <!-- Line 342: Creates a level-four heading for a footer subsection. -->
           <h4>Reach us</h4>
 
           <!-- Unordered list containing the available contact details. -->
+          <!-- Line 345: Starts an unordered list for grouped navigation or contact items. -->
           <ul>
 
             <!-- mailto: opens the user's default email application. -->
+            <!-- Line 348: Starts one item in the unordered list. -->
             <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
 
             <!-- WhatsApp link opens the specified WhatsApp contact. -->
+            <!-- Line 351: Starts one item in the unordered list. -->
             <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
 
             <!-- Displays the business operating hours as normal text. -->
+            <!-- Line 354: Starts one item in the unordered list. -->
             <li>Mon–Fri, 09:00–17:00 SAST</li>
+          <!-- Line 355: Closes the unordered list. -->
           </ul>
+        <!-- Line 356: Closes the current div container. -->
         </div>
+      <!-- Line 357: Closes the current div container. -->
       </div>
 
       <!-- Bottom part of the footer containing copyright information. -->
+      <!-- Line 360: Starts a generic container used to group content and control layout or styling. -->
       <div class="wrap footer-bottom">
 
         <!-- &copy; is an HTML entity that displays the copyright symbol ©. -->
+        <!-- Line 363: Creates a paragraph containing user-facing descriptive or informational text. -->
         <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+      <!-- Line 364: Closes the current div container. -->
       </div>
+    <!-- Line 365: Closes the footer element. -->
     </footer>
 
     <!-- Connects this HTML page to the external JS script.
         The src points to the location of the JS file. -->
+    <!-- Line 369: Loads the external JavaScript file that provides the page's interactive behaviour. -->
     <script src="assets/js/script.js"></script>
     
+  <!-- Line 371: Closes the body after the page content and scripts. -->
   </body>
+<!-- Line 372: Closes the root HTML element and ends the document. -->
 </html>
