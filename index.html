@@ -33,11 +33,22 @@
   <body bg="blue" class="page-loading">
 
     <!-- Full-Screen Campus-Cart Page Loader (Uiverse.io by Chris-immanuel-matthew) -->
+    <!-- Creates the full-screen loading container; id identifies it for JavaScript, class applies CSS styling, and ARIA attributes describe its loading status to assistive technology. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
+      <!-- Groups the loader elements into one content container for layout and styling. -->
       <div class="page-loader-content">
+        <!-- Contains the visual animation used by the page loader. -->
         <div class="page-loader-visual">
+          <!-- Creates the animated loader; aria-hidden keeps decorative animation from being announced by screen readers. -->
           <div class="loader" aria-hidden="true">
+            <!-- Creates the centre of the animated loader. -->
             <div class="nucleus"></div>
+            <!-- Creates one animated ring around the loader nucleus. -->
+            <!-- Creates another animated ring around the loader nucleus. -->
+            <!-- Creates another animated ring around the loader nucleus. -->
+            <!-- Creates another animated ring around the loader nucleus. -->
+            <!-- Creates another animated ring around the loader nucleus. -->
+            <!-- Creates the final animated ring around the loader nucleus. -->
             <div class="ring"></div>
             <div class="ring"></div>
             <div class="ring"></div>
@@ -46,8 +57,11 @@
             <div class="ring"></div>
           </div>
         </div>
+        <!-- Contains the Campus-Cart loading text; aria-hidden hides decorative branding from screen readers. -->
         <div class="page-loader-brand" aria-hidden="true">
+          <!-- Displays the Campus-Cart brand name, with the nested span allowing the "-Cart" text to be styled separately. -->
           <span class="page-loader-title">Campus<span>-Cart</span></span>
+          <!-- Displays the loading message while the page is being prepared. -->
           <span class="page-loader-text">Loading Campus-Cart...</span>
         </div>
       </div>
