@@ -444,7 +444,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.41** — Add institution search to coverage page. This adds institution search functionality to the Coverage page, helping visitors locate relevant institutions instead of relying only on manually browsing the full list.
 
-- **v3.42** — Add Eastern Cape coverage section.
+- **v3.42** — Add Eastern Cape coverage section. This adds the Eastern Cape coverage section, establishing province-specific delivery and institution information for the project's home region.
 
 - **v3.43** — Add public university coverage.
 
