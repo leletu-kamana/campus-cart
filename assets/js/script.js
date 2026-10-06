@@ -235,8 +235,8 @@
 // Mobile menu toggle
 // ==========================================================
 
-// Waits until the HTML page has finished loading before running the JavaScript.
-document.addEventListener("DOMContentLoaded", function () {
+// Sets up the mobile navigation menu after the page has loaded.
+function initNav() {
 
     // Finds the mobile navigation button using its class name.
     const navToggle = document.querySelector(".nav-toggle");
@@ -358,6 +358,371 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+}
 
-// Closes the DOMContentLoaded function.
-});
+    "use strict";
+
+    /* ---------- Hardcoded catalogue data (no database) ---------- */
+    var IMG = {
+        bundle: "images/bundles/starter-bundle.jpg",
+        hero: "images/bundles/hero-campus.jpg",
+        used: "images/second-hand/marketplace.jpg"
+    };
+
+    // Pages inside /pages/ are one level deeper than index.html.
+    var BASE = window.location.pathname.indexOf("/pages/") > -1 ? "../assets/" : "assets/";
+
+    var DEALS = [
+        { name: "Basic Starter Bundle", category: "bundles", condition: "new", price: 1499, desc: "Bedding, kettle, mug set and study basics for a first-year res room.", img: IMG.bundle },
+        { name: "Standard Starter Bundle", category: "bundles", condition: "new", price: 2799, desc: "Everything in Basic plus desk lamp, laundry set and kitchen starter pack.", img: IMG.bundle },
+        { name: "Premium Starter Bundle", category: "bundles", condition: "new", price: 4499, desc: "Full res setup: bedding, appliances, storage, stationery and lockable trunk.", img: IMG.bundle },
+        { name: "Second-Hand Study Desk", category: "furniture", condition: "used", price: 650, desc: "Reviewed listing from a graduating student in Pretoria. Light wear.", img: IMG.used },
+        { name: "Mini Bar Fridge (Used)", category: "appliances", condition: "used", price: 1150, desc: "Works perfectly, tested at our collection point. 12 months old.", img: IMG.used },
+        { name: "Electric Kettle 1.7L", category: "appliances", condition: "new", price: 289, desc: "Fast-boil kettle, res-friendly and load-shedding ready.", img: IMG.bundle },
+        { name: "Accounting Textbook Set", category: "textbooks", condition: "used", price: 420, desc: "Prescribed titles for first-year commerce, current edition.", img: IMG.used },
+        { name: "Study Chair (Ergonomic)", category: "furniture", condition: "new", price: 899, desc: "Adjustable chair built for long study sessions in a small room.", img: IMG.bundle },
+        { name: "Stationery Mega Pack", category: "stationery", condition: "new", price: 249, desc: "Files, pads, pens, highlighters and a scientific calculator.", img: IMG.bundle },
+        { name: "Duvet & Linen Set (Double)", category: "bedding", condition: "new", price: 749, desc: "Warm winter duvet, fitted sheet, pillow and two covers.", img: IMG.bundle },
+        { name: "Second-Hand Laptop Bag", category: "stationery", condition: "used", price: 180, desc: "Padded 15-inch bag, cleaned and checked by our team.", img: IMG.used },
+        { name: "Load-Shedding Light Kit", category: "appliances", condition: "new", price: 329, desc: "Rechargeable lamp, power bank and extension lead.", img: IMG.bundle }
+    ];
+
+    var currency = function (n) {
+        return "R" + Number(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    };
+
+    /* ---------- Toast helper ---------- */
+    function toast(msg) {
+        var el = document.getElementById("toast");
+        if (!el) {
+        el = document.createElement("div");
+        el.id = "toast";
+        el.className = "toast";
+        document.body.appendChild(el);
+        }
+        el.textContent = msg;
+        el.classList.add("show");
+        window.clearTimeout(el._t);
+        el._t = window.setTimeout(function () { el.classList.remove("show"); }, 2200);
+    }
+
+    /* ---------- Tabs (Shop New / Second-Hand, Student / Parent FAQ) ---------- */
+    function initTabs() {
+        Array.prototype.forEach.call(document.querySelectorAll("[data-tabs]"), function (group) {
+        var buttons = group.querySelectorAll(".tab-btn");
+        Array.prototype.forEach.call(buttons, function (btn) {
+            btn.addEventListener("click", function () {
+            Array.prototype.forEach.call(buttons, function (b) {
+                b.setAttribute("aria-selected", "false");
+                var p = document.getElementById(b.getAttribute("data-panel"));
+                if (p) { p.hidden = true; }
+            });
+            btn.setAttribute("aria-selected", "true");
+            var panel = document.getElementById(btn.getAttribute("data-panel"));
+            if (panel) { panel.hidden = false; }
+            });
+        });
+        });
+    }
+
+    /* ---------- Deals & Gallery: client-side filter + sort ---------- */
+    function dealCard(item) {
+        var badge = item.condition === "new"
+        ? '<span class="badge badge-new">New</span>'
+        : '<span class="badge badge-used">Second-hand</span>';
+        return '<article class="card">' +
+        '<img src="' + BASE + item.img + '" alt="' + item.name + '" loading="lazy" width="1200" height="900">' +
+        '<div class="card-body">' +
+        badge + '<span class="badge badge-verified">Verified Seller</span>' +
+        '<h3>' + item.name + '</h3>' +
+        '<p class="price">' + currency(item.price) + '</p>' +
+        '<p>' + item.desc + '</p>' +
+        '<button class="btn btn-sm" data-add="' + item.name + '" data-price="' + item.price + '">Add to Order Summary</button>' +
+        '</div></article>';
+    }
+
+    function initDeals() {
+        var out = document.getElementById("deals-results");
+        if (!out) { return; }
+        var cat = document.getElementById("filter-category");
+        var cond = document.getElementById("filter-condition");
+        var sort = document.getElementById("sort-by");
+        var count = document.getElementById("deals-count");
+
+        function render() {
+        var list = DEALS.filter(function (d) {
+            return (cat.value === "all" || d.category === cat.value) &&
+            (cond.value === "all" || d.condition === cond.value);
+        });
+        if (sort.value === "price-asc") { list.sort(function (a, b) { return a.price - b.price; }); }
+        if (sort.value === "price-desc") { list.sort(function (a, b) { return b.price - a.price; }); }
+        if (sort.value === "name") { list.sort(function (a, b) { return a.name.localeCompare(b.name); }); }
+        out.innerHTML = list.length
+            ? list.map(dealCard).join("")
+            : '<div class="empty-state"><h3>No matches</h3><p>Try a different category or condition.</p></div>';
+        if (count) {
+            count.textContent = list.length + " of " + DEALS.length + " deals shown";
+        }
+        }
+        [cat, cond, sort].forEach(function (el) { el.addEventListener("change", render); });
+        render();
+    }
+
+    /* ---------- Gallery category filter ---------- */
+    function initGalleryFilter() {
+        var buttons = document.querySelectorAll("[data-gallery-filter]");
+        if (!buttons.length) { return; }
+        Array.prototype.forEach.call(buttons, function (btn) {
+        btn.addEventListener("click", function () {
+            var val = btn.getAttribute("data-gallery-filter");
+            Array.prototype.forEach.call(buttons, function (b) {
+            b.setAttribute("aria-selected", b === btn ? "true" : "false");
+            });
+            Array.prototype.forEach.call(document.querySelectorAll("[data-gallery-item]"), function (fig) {
+            fig.hidden = !(val === "all" || fig.getAttribute("data-gallery-item") === val);
+            });
+        });
+        });
+    }
+
+    /* ---------- Order summary: session-only, cleared on refresh ---------- */
+    var order = [];   // in-memory only
+
+    function saveSession() {
+        try {
+        window.sessionStorage.setItem("cc_order", JSON.stringify(order));
+        } catch (e) { /* storage unavailable — memory only */ }
+    }
+    function loadSession() {
+        try {
+        var raw = window.sessionStorage.getItem("cc_order");
+        order = raw ? JSON.parse(raw) : [];
+        } catch (e) { order = []; }
+    }
+    function total() {
+        return order.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
+    }
+    function updateCartCount() {
+        var qty = order.reduce(function (s, i) { return s + i.qty; }, 0);
+        Array.prototype.forEach.call(document.querySelectorAll("[data-cart-count]"), function (el) {
+        el.textContent = qty;
+        });
+    }
+
+    function addItem(name, price) {
+        var found = null;
+        order.forEach(function (i) { if (i.name === name) { found = i; } });
+        if (found) { found.qty += 1; } else { order.push({ name: name, price: Number(price), qty: 1 }); }
+        saveSession();
+        updateCartCount();
+        renderOrder();
+        toast(name + " added to your Order Summary");
+    }
+
+    function initAddButtons() {
+        document.addEventListener("click", function (e) {
+        var btn = e.target.closest ? e.target.closest("[data-add]") : null;
+        if (!btn) { return; }
+        e.preventDefault();
+        addItem(btn.getAttribute("data-add"), btn.getAttribute("data-price"));
+        });
+    }
+
+    function renderOrder() {
+        var body = document.getElementById("order-body");
+        if (!body) { return; }
+        var wrap = document.getElementById("order-table-wrap");
+        var empty = document.getElementById("order-empty");
+        var totalEl = document.getElementById("order-total");
+
+        if (!order.length) {
+        if (wrap) { wrap.hidden = true; }
+        if (empty) { empty.hidden = false; }
+        if (totalEl) { totalEl.textContent = currency(0); }
+        return;
+        }
+        if (wrap) { wrap.hidden = false; }
+        if (empty) { empty.hidden = true; }
+
+        body.innerHTML = order.map(function (i, idx) {
+        return "<tr>" +
+            "<td>" + i.name + "</td>" +
+            "<td>" + currency(i.price) + "</td>" +
+            "<td>" + i.qty + "</td>" +
+            "<td>" + currency(i.price * i.qty) + "</td>" +
+            '<td><button class="btn btn-sm btn-outline" data-remove="' + idx + '">Remove</button></td>' +
+            "</tr>";
+        }).join("");
+        if (totalEl) { totalEl.textContent = currency(total()); }
+    }
+
+    function initOrderPage() {
+        var body = document.getElementById("order-body");
+        if (!body) { return; }
+
+        body.addEventListener("click", function (e) {
+        var btn = e.target.closest ? e.target.closest("[data-remove]") : null;
+        if (!btn) { return; }
+        order.splice(Number(btn.getAttribute("data-remove")), 1);
+        saveSession();
+        updateCartCount();
+        renderOrder();
+        toast("Item removed");
+        });
+
+        var clear = document.getElementById("order-clear");
+        if (clear) {
+        clear.addEventListener("click", function () {
+            order = [];
+            saveSession();
+            updateCartCount();
+            renderOrder();
+            toast("Order Summary cleared");
+        });
+        }
+
+        // "Skip to Address" step
+        var skip = document.getElementById("skip-to-address");
+        if (skip) {
+        skip.addEventListener("click", function () {
+            var step = document.getElementById("step-address");
+            if (step) {
+            step.scrollIntoView({ behavior: "smooth", block: "center" });
+            var input = document.getElementById("delivery-address");
+            if (input) { input.focus(); }
+            }
+        });
+        }
+
+        // Delivery vs collection toggle text
+        var method = document.getElementById("delivery-method");
+        var methodHint = document.getElementById("delivery-hint");
+        if (method && methodHint) {
+        method.addEventListener("change", function () {
+            methodHint.textContent = method.value === "collection"
+            ? "Collection is free at any listed campus, residence or locker point."
+            : "Courier delivery is quoted per order and confirmed by our team before payment.";
+        });
+        }
+
+        function orderText() {
+        if (!order.length) { return "My Campus-Cart order summary is empty."; }
+        var addr = (document.getElementById("delivery-address") || {}).value || "(not provided)";
+        var m = (document.getElementById("delivery-method") || {}).value || "collection";
+        var lines = order.map(function (i) {
+            return "- " + i.name + " x" + i.qty + " = " + currency(i.price * i.qty);
+        });
+        return "Campus-Cart order summary\n" + lines.join("\n") +
+            "\nTotal: " + currency(total()) +
+            "\nMethod: " + m + "\nAddress / collection point: " + addr;
+        }
+
+        var wa = document.getElementById("checkout-whatsapp");
+        if (wa) {
+        wa.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (!order.length) { return toast("Add an item first"); }
+            window.open("https://wa.me/27123456789?text=" + encodeURIComponent(orderText()), "_blank");
+        });
+        }
+        var mail = document.getElementById("checkout-email");
+        if (mail) {
+        mail.addEventListener("click", function (e) {
+            e.preventDefault();
+            if (!order.length) { return toast("Add an item first"); }
+            window.location.href = "mailto:orders@campus-cart.co.za?subject=" +
+            encodeURIComponent("Campus-Cart order request") +
+            "&body=" + encodeURIComponent(orderText());
+        });
+        }
+        var eft = document.getElementById("checkout-eft");
+        if (eft) {
+        eft.addEventListener("click", function () {
+            var box = document.getElementById("eft-details");
+            if (box) {
+            box.hidden = !box.hidden;
+            if (!box.hidden) { box.scrollIntoView({ behavior: "smooth", block: "center" }); }
+            }
+        });
+        }
+
+        renderOrder();
+    }
+
+    /* ---------- Account: reveal Student / Parent path from the hash ---------- */
+    function initAccountHash() {
+        if (!document.getElementById("student")) { return; }
+        var hash = window.location.hash;
+        if (hash === "#parent" || hash === "#student") {
+        var el = document.querySelector(hash);
+        if (el) { window.setTimeout(function () { el.scrollIntoView({ behavior: "smooth" }); }, 120); }
+        }
+    }
+
+    /* ---------- Printable checklist ---------- */
+    function initPrint() {
+        var btn = document.getElementById("print-checklist");
+        if (btn) { btn.addEventListener("click", function () { window.print(); }); }
+    }
+
+    /* ---------- Forms: mailto hand-off only, no backend ---------- */
+    function initMailForms() {
+        Array.prototype.forEach.call(document.querySelectorAll("form[data-mailto]"), function (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var to = form.getAttribute("data-mailto");
+            var subject = form.getAttribute("data-subject") || "Campus-Cart website message";
+            var lines = [];
+            Array.prototype.forEach.call(form.querySelectorAll("input, select, textarea"), function (f) {
+            if (!f.name) { return; }
+            var label = form.querySelector('label[for="' + f.id + '"]');
+            lines.push((label ? label.textContent.replace("*", "").trim() : f.name) + ": " + f.value);
+            });
+            window.location.href = "mailto:" + to +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(lines.join("\n"));
+            toast("Opening your email app…");
+        });
+        });
+    }
+
+    /* ---------- Product detail template: pick a product ---------- */
+    function initProductDetail() {
+        var select = document.getElementById("detail-select");
+        if (!select) { return; }
+        select.innerHTML = DEALS.map(function (d, i) {
+        return '<option value="' + i + '">' + d.name + " — " + currency(d.price) + "</option>";
+        }).join("");
+
+        function render() {
+        var d = DEALS[Number(select.value)] || DEALS[0];
+        document.getElementById("detail-img").src = BASE + d.img;
+        document.getElementById("detail-img").alt = d.name;
+        document.getElementById("detail-name").textContent = d.name;
+        document.getElementById("detail-price").textContent = currency(d.price);
+        document.getElementById("detail-desc").textContent = d.desc;
+        document.getElementById("detail-condition").textContent =
+            d.condition === "new" ? "Brand new" : "Second-hand (reviewed)";
+        var add = document.getElementById("detail-add");
+        add.setAttribute("data-add", d.name);
+        add.setAttribute("data-price", d.price);
+        }
+        select.addEventListener("change", render);
+        render();
+    }
+
+    /* ---------- Boot ---------- */
+    document.addEventListener("DOMContentLoaded", function () {
+        loadSession();
+        initNav();
+        initTabs();
+        initDeals();
+        initGalleryFilter();
+        initAddButtons();
+        initProductDetail();
+        initOrderPage();
+        initAccountHash();
+        initPrint();
+        initMailForms();
+        updateCartCount();
+    });
