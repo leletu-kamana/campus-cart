@@ -385,24 +385,22 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.2** — Added `forms.js` for the project's form-related JavaScript functionality.
 - **v3.3** — Added `data.js` for the project's data-related JavaScript functionality.
 - **v3.4** — Expanded the README **Website Screenshots** section to support at least five genuine desktop screenshots and five genuine mobile screenshots. Standardised the screenshot folder to `assets/images/screenshots/`, added numbered Markdown image references, documented the naming convention for additional screenshots, updated the file/folder structure, and updated the Part 2 review checklist to require five screenshots for each viewport category.
-
-
-- **v3.5** — Prepared the README for the required desktop and mobile screenshot evidence, documenting the screenshot evidence section and expected viewport categories. Commit: `d1bce120`.
-- **v3.6** — Created the `assets/images/screenshots/` folder to hold genuine rendered website screenshots. Commit: `5f4abb58`.
-- **v3.7** — Updated the README file/folder structure and sitemap to include the newly added `assets/js/data.js`, `assets/js/forms.js` and `pages/coverage.html` files. Commit: `8309e1c1`.
-- **v3.8** — Clarified the README project documentation, including the actual file structure, JavaScript notes, page-content-purpose-target-user table, low-fidelity wireframes and remaining screenshot evidence requirements. Commit: `3cd4ed8e`.
-- **v3.9** — Added SEO meta description and keyword tags to `index.html` to improve search visibility and describe the Campus-Cart student-essentials and delivery offering. Commit: `34e9dd48`.
-- **v3.10** — Updated `index.html` navigation so Shop links open the Products page directly and added Coverage links to the primary and mobile navigation menus. Commit: `ace71b2a`.
-- **v3.11** — Expanded the homepage coverage messaging to mention delivery across provinces, collection at hubs or campus sites, and coverage of South African universities, TVET colleges and major private institutions. Commit: `f46fa4aa`.
-- **v3.12** — Added SEO metadata to `pages/about.html`, including a meta description and keywords describing the Campus-Cart mission, coverage and student marketplace. Commit: `2825107a`.
-- **v3.13** — Updated `pages/about.html` navigation to link directly to the Products page and added Coverage links to the main and footer navigation. Commit: `d5cb998e`.
-- **v3.14** — Updated `pages/about.html` campus coverage wording to reflect wider South African university, TVET college and private-institution reach while retaining the historical narrative and handover model. Commit: `d2909be3`.
-- **v3.15** — Added SEO metadata to `pages/account.html`, including a meta description and keywords for improved search visibility and page summaries. Commit: `2ee8b6a3`.
-- **v3.16** — Updated `pages/account.html` navigation so Shop links open the Products page directly and added Coverage links to the main and mobile navigation. Commit: `d32d2510`.
-- **v3.17** — Added SEO metadata to `pages/contact.html`, including a meta description and keywords describing collection points and student essentials. Commit: `2cf92be3`.
-- **v3.18** — Updated `pages/contact.html` navigation by removing the `#shop` fragment from Shop links and adding Coverage links to the main and footer navigation. Commit: `5c699dbc`.
-- **v3.19** — Added an explicit form ID to the contact form in `pages/contact.html` and disabled native browser validation so custom form handling can target the form reliably. Commit: `a3957dee`.
-- **v3.20** — Merged the recent main-branch development history after the new coverage, navigation, SEO, form and README changes. Commit: `fa3a1aa1`.
+- **v3.5** — Prepared the README for the required desktop and mobile screenshot evidence, documenting the screenshot evidence section and expected viewport categories.
+- **v3.6** — Created the `assets/images/screenshots/` folder to hold genuine rendered website screenshots. 
+- **v3.7** — Updated the README file/folder structure and sitemap to include the newly added `assets/js/data.js`, `assets/js/forms.js` and `pages/coverage.html` files.
+- **v3.8** — Clarified the README project documentation, including the actual file structure, JavaScript notes, page-content-purpose-target-user table, low-fidelity wireframes and remaining screenshot evidence requirements. 
+- **v3.9** — Added SEO meta description and keyword tags to `index.html` to improve search visibility and describe the Campus-Cart student-essentials and delivery offering. 
+- **v3.10** — Updated `index.html` navigation so Shop links open the Products page directly and added Coverage links to the primary and mobile navigation menus.
+- **v3.11** — Expanded the homepage coverage messaging to mention delivery across provinces, collection at hubs or campus sites, and coverage of South African universities, TVET colleges and major private institutions. 
+- **v3.12** — Added SEO metadata to `pages/about.html`, including a meta description and keywords describing the Campus-Cart mission, coverage and student marketplace. 
+- **v3.13** — Updated `pages/about.html` navigation to link directly to the Products page and added Coverage links to the main and footer navigation. 
+- **v3.14** — Updated `pages/about.html` campus coverage wording to reflect wider South African university, TVET college and private-institution reach while retaining the historical narrative and handover model.
+- **v3.15** — Added SEO metadata to `pages/account.html`, including a meta description and keywords for improved search visibility and page summaries. 
+- **v3.16** — Updated `pages/account.html` navigation so Shop links open the Products page directly and added Coverage links to the main and mobile navigation. 
+- **v3.17** — Added SEO metadata to `pages/contact.html`, including a meta description and keywords describing collection points and student essentials. 
+- **v3.18** — Updated `pages/contact.html` navigation by removing the `#shop` fragment from Shop links and adding Coverage links to the main and footer navigation. 
+- **v3.19** — Added an explicit form ID to the contact form in `pages/contact.html` and disabled native browser validation so custom form handling can target the form reliably.
+- **v3.20** — Merged the recent main-branch development history after the new coverage, navigation, SEO, form and README changes. 
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
