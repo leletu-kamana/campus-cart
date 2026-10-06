@@ -416,7 +416,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.27** — Add contact form preview and hub updates. This adds contact-form preview behaviour and updates the collection-hub information, giving users clearer feedback about the information they are preparing to submit and where collection is available.
 
-- **v3.28** — Refresh contact collection hubs.
+- **v3.28** — Refresh contact collection hubs. This refreshes the contact-page collection-hub information so the listed locations better support the project's student collection and delivery messaging.
 
 - **v3.29** — Add regional pickup locations to contact page.
 
