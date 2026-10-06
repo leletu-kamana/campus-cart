@@ -580,6 +580,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.93** — Remove comments for closing HTML tags. Removes unnecessary comments associated with closing HTML tags across the project pages, reducing visual clutter while keeping useful explanatory comments for meaningful HTML structures.
 
+- **v3.94** — Add explanatory syntax comments to about.html. Adds explanatory comments throughout `pages/about.html`, documenting important HTML elements and sections so the About page is easier to read, study and maintain.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
