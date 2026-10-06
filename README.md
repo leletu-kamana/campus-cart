@@ -408,7 +408,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.23** — Improve contact form accessibility. This improves the contact form's accessibility in `pages/contact.html`, making the form structure and user interaction clearer for visitors using different input methods.
 
-- **v3.24** — Improve contact phone field.
+- **v3.24** — Improve contact phone field. This refines the contact form phone field in `pages/contact.html`, improving how telephone information is collected and presented to users.
 
 - **v3.25** — Remove redundant contact form comments.
 
