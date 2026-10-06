@@ -420,7 +420,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.29** — Add regional pickup locations to contact page. This expands the contact page with regional pickup locations, giving users more specific information about possible collection areas.
 
-- **v3.30** — Load contact form script.
+- **v3.30** — Load contact form script. This loads the contact-form JavaScript on the contact page so the form can use the project's custom client-side handling instead of relying only on default browser behaviour.
 
 - **v3.31** — Add validation and coverage page styles.
 
