@@ -486,7 +486,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.62** — Add Mpumalanga university listing. This adds a university listing for Mpumalanga, giving the province more specific institution-level coverage information.
 
-- **v3.63** — Add Mpumalanga TVET colleges.
+- **v3.63** — Add Mpumalanga TVET colleges. This adds Mpumalanga TVET colleges to the Coverage page, broadening the province's tertiary-education coverage.
 
 - **v3.64** — Add private institutions to coverage page.
 
