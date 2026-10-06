@@ -402,8 +402,6 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.19** — Added an explicit form ID to the contact form in `pages/contact.html` and disabled native browser validation so custom form handling can target the form reliably.
 - **v3.20** — Merged the recent main-branch development history after the new coverage, navigation, SEO, form and README changes. 
 
-- **v3.21** — Cleaned up the README changelog by removing duplicate version entries and unnecessary commit-reference text, keeping the version history clear and consistent. Source commit: `61cfd9553530bfe7ec77afe955bb26c5be7998d2`.
-
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
