@@ -404,7 +404,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.21** — Clarify contact form validation config. This documents the contact form configuration in `pages/contact.html`, explaining the purpose of `novalidate` and the `data-mailto` attribute so the custom `forms.js` handling is easier to understand and maintain.
 
-- **v3.22** — Remove redundant contact form comments.
+- **v3.22** — Remove redundant contact form comments. This cleans up unnecessary comments in `pages/contact.html`, keeping the form markup focused on useful documentation while reducing redundant code comments.
 
 - **v3.23** — Improve contact form accessibility.
 
