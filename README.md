@@ -446,7 +446,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.42** — Add Eastern Cape coverage section. This adds the Eastern Cape coverage section, establishing province-specific delivery and institution information for the project's home region.
 
-- **v3.43** — Add public university coverage.
+- **v3.43** — Add public university coverage. This expands Eastern Cape coverage with public universities, making the Coverage page more useful for students attending public higher-education institutions.
 
 - **v3.44** — Add Eastern Cape TVET colleges.
 
