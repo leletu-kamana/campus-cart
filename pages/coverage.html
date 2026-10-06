@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <title> sets the text displayed on the browser tab.
+         It also describes the purpose of this webpage. -->
+    <title>Coverage | Campus-Cart</title>
+    <!-- <link> connects this HTML document to an external CSS stylesheet.
+         href specifies the relative location of the CSS file. -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+    <!-- <header> contains the introductory content of the webpage.
+         The topbar class allows CSS to style the header. -->
+    <header class="topbar">
+
+        <!-- <nav> contains the main navigation links for the website.
+             aria-label gives the navigation a meaningful name for accessibility. -->
+        <nav class="nav" aria-label="Main navigation">
+
+            <!-- <a> creates a hyperlink and href specifies where it goes.
+                 <span> separates part of the logo so it can be styled separately. -->
+            <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+
+            <!-- <button> creates an interactive button for the navigation menu.
+                 aria-expanded tells assistive technology whether the menu is expanded. -->
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+
+            <!-- This div groups the website's navigation links together.
+                 The nav-links class allows CSS and JavaScript to control this group. -->
+            <div class="nav-links">
+
+                <!-- ../ moves up from the pages folder to reach index.html.
+                     The href attribute stores the destination of the hyperlink. -->
+                <a href="../index.html">Home</a>
+
+                <!-- This link opens about.html from the current pages folder.
+                     Relative paths avoid needing the full website URL. -->
+                <a href="about.html">About</a>
+
+                <!-- #shop is a URL fragment that targets an element with id="shop".
+                     This allows the browser to open a specific section of products.html. -->
+                <a href="products.html">Shop</a>
+
+                <!-- The #parent-hub fragment targets the Parent Hub section.
+                     The target element must have a matching id attribute. -->
+                <a href="products.html#parent-hub">Parent Hub</a>
+
+                <!-- This link opens the enquiry page from the current directory.
+                     The href attribute tells the browser which document to load. -->
+                <a href="enquiry.html">Enquiry</a>
+                <a href="coverage.html">Coverage</a>
+
+                <!-- This link opens the current contact page.
+                     It is useful for keeping Contact available in the main navigation. -->
+                <a href="contact.html">Contact</a>
+
+                <!-- This anchor navigates to the account page. -->
+                <a href="account.html">Account</a>
+
+                <!-- data-cart-count is a custom data attribute used by JavaScript.
+                     The span separates the cart number so JavaScript can update it. -->
+                <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+            </div>
+        </nav>
+    </header>
+    <!-- <footer> contains information displayed at the bottom of the webpage.
+         It commonly contains company details, navigation links and contact information. -->
+    <footer>
+
+        <!-- wrap controls the footer content width while footer-grid controls its layout.
+             Both classes are defined in the external CSS stylesheet. -->
+        <div class="wrap footer-grid">
+
+            <!-- This is the first footer column containing company information.
+                 h4 provides a heading for this group of footer content. -->
+            <div>
+                <h4>Campus-Cart</h4>
+                <p>Affordable new and second-hand student essentials for South African campuses.</p>
+            </div>
+
+            <!-- This footer column contains links related to shopping.
+                 The unordered list groups the related navigation items. -->
+            <div>
+                <h4>Shop</h4>
+                <ul>
+
+                    <!-- Each list item contains one navigation hyperlink.
+                         The #shop fragment opens the matching section on products.html. -->
+                    <li><a href="products.html">Shop New</a></li>
+
+                    <!-- &amp; is an HTML entity that displays the ampersand character.
+                         The fragment targets the Deals & Gallery section. -->
+                    <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+
+                    <!-- This hyperlink targets the Product Detail section.
+                         The destination depends on an element with the matching ID. -->
+                    <li><a href="products.html#product-detail">Product Detail</a></li>
+
+                    <!-- This link targets the Sell With Us section of products.html.
+                         URL fragments allow users to jump directly to specific content. -->
+                    <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+                </ul>
+            </div>
+
+            <!-- This footer column contains general company navigation.
+                 The list provides quick access to important website pages. -->
+            <div>
+                <h4>Company</h4>
+                <ul>
+
+                    <!-- This hyperlink opens the About page.
+                         Because both files are inside the pages folder, only the filename is needed. -->
+                    <li><a href="about.html">About</a></li>
+
+                    <!-- This link jumps to the Parent Hub section of products.html.
+                         The #parent-hub fragment identifies the target section. -->
+                    <li><a href="products.html#parent-hub">Parent Hub</a></li>
+
+                    <!-- This hyperlink opens the enquiry page.
+                         href stores the relative path used by the browser. -->
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="coverage.html">Coverage</a></li>
+
+                    <!-- This hyperlink opens the contact page.
+                         It allows users to return to the current contact section. -->
+                    <li><a href="contact.html">Contact</a></li>
+
+                    <!-- This hyperlink opens the Account page.
+                         The browser follows the relative URL stored in the href attribute. -->
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </div>
+
+            <!-- This footer column contains the business contact information.
+                 The unordered list groups the contact methods and opening hours. -->
+            <div>
+                <h4>Reach us</h4>
+                <ul>
+
+                    <!-- mailto: creates a link that opens the user's default email application.
+                         The email address after mailto: becomes the email recipient. -->
+                    <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+                         It is plain text because the hours do not need to be clickable. -->
+                    <li>Mon–Fri, 09:00–17:00 SAST</li>
