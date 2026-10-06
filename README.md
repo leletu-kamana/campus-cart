@@ -608,6 +608,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.107** — Correct HTML indentation. Continues the project's HTML formatting cleanup, correcting indentation while preserving the existing page structure and content.
 
+- **v3.108** — Correct HTML indentation. Further standardises HTML indentation to improve code readability, maintainability and consistency across the affected Campus-Cart pages.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
