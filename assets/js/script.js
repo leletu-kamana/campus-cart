@@ -6,32 +6,49 @@
 // ==========================================================
 
 (function () {
+    // Enables JavaScript strict mode so unsafe or undeclared code is caught instead of silently continuing.
     "use strict";
 
     // Transition timing constants (in milliseconds)
+    // Stores the duration of the loader exit transition before the browser navigates to another page.
     var TRANSITION_OUT_TIME = 2800; // Duration of smooth exit transition before navigating
+    // Stores the minimum time the loader remains visible so very fast loads still look smooth.
     var MIN_LOADER_TIME = 320;     // Minimum display time for visual smoothness on fast loads
+    // Stores the maximum loader time before the failsafe automatically hides it.
     var SAFETY_TIMEOUT = 6000;     // Failsafe timeout to prevent permanently stuck loader
 
     // State trackers
+    // Tracks whether an internal page transition is already running.
     var isNavigating = false;
+    // Records when this script started so the minimum loader duration can be calculated.
     var pageLoadStartTime = Date.now();
+    // Stores the timer used to hide the loader after the initial page load.
     var loaderTimer = null;
+    // Stores the failsafe timer that prevents a permanently visible loader.
     var safetyTimer = null;
 
     /**
      * Finds or dynamically creates the page loader element.
      * Ensures the loader is always available even if omitted from an HTML file.
      */
+    // Defines the function that finds the loader or creates it when an HTML page does not contain one.
     function getOrCreateLoader() {
+        // Searches the document for the element identified as the page loader.
         var loader = document.getElementById("page-loader");
         if (!loader && document.body) {
+            // Creates a div element when the loader is missing from the HTML.
             loader = document.createElement("div");
+            // Assigns the ID used by CSS and other JavaScript loader controls.
             loader.id = "page-loader";
+            // Assigns the CSS class that controls the loader overlay appearance.
             loader.className = "page-loader";
+            // Identifies the loader as a status message for assistive technologies.
             loader.setAttribute("role", "status");
+            // Allows screen readers to announce the status without interrupting the user.
             loader.setAttribute("aria-live", "polite");
+            // Gives the loader an accessible description.
             loader.setAttribute("aria-label", "Loading Campus-Cart");
+            // Builds the loader HTML structure as one string before inserting it into the document.
             loader.innerHTML =
                 '<div class="page-loader-content">' +
                 '  <div class="page-loader-visual">' +
@@ -50,20 +67,26 @@
                 '    <span class="page-loader-text">Loading Campus-Cart...</span>' +
                 '  </div>' +
                 '</div>';
+            // Places the loader at the beginning of the body so it can cover the page content.
             document.body.prepend(loader);
         }
+        // Returns the loader element to the function that requested it.
         return loader;
     }
 
     /**
      * Displays the full-screen loader and locks page scrolling.
      */
+    // Defines the function that displays the full-screen loader and locks page scrolling.
     function showPageLoader() {
+        // Gets the existing loader or creates one before changing its state.
         var loader = getOrCreateLoader();
         if (loader) {
+            // Removes the hidden class so the loader becomes visible.
             loader.classList.remove("is-hidden");
         }
         if (document.body) {
+            // Adds the page-loading class so CSS can prevent scrolling while loading.
             document.body.classList.add("page-loading");
         }
 
@@ -71,6 +94,7 @@
         if (safetyTimer) {
             clearTimeout(safetyTimer);
         }
+        // Starts a failsafe timer in case the normal navigation process becomes stuck.
         safetyTimer = setTimeout(function () {
             hidePageLoader();
             isNavigating = false;
@@ -80,6 +104,7 @@
     /**
      * Smoothly hides the full-screen loader and restores page scrolling.
      */
+    // Defines the function that hides the loader and restores normal page scrolling.
     function hidePageLoader() {
         if (safetyTimer) {
             clearTimeout(safetyTimer);
@@ -88,9 +113,11 @@
 
         var loader = document.getElementById("page-loader");
         if (loader) {
+            // Adds the hidden class so the loader can fade or transition out.
             loader.classList.add("is-hidden");
         }
         if (document.body) {
+            // Removes the page-loading class and restores normal scrolling.
             document.body.classList.remove("page-loading");
         }
     }
@@ -99,8 +126,11 @@
      * Completes initial page loading with a slight buffer so the animation
      * resolves smoothly without jarring or flashing.
      */
+    // Calculates when the initial loader should hide while respecting the minimum display time.
     function scheduleInitialHide() {
+        // Calculates the number of milliseconds that have passed since the script started.
         var elapsedTime = Date.now() - pageLoadStartTime;
+        // Calculates the remaining minimum loader time and prevents a negative delay.
         var remainingTime = Math.max(0, MIN_LOADER_TIME - elapsedTime);
 
         if (loaderTimer) {
@@ -116,23 +146,28 @@
      * Determines whether an anchor link should trigger the smooth internal page transition.
      * Excludes external links, mailto, tel, WhatsApp, download links, target="_blank", and anchor jumps.
      */
+    // Determines whether a clicked link should use the custom Campus-Cart page transition.
     function shouldTransition(link, url) {
         // Exclude external domains
+        // Rejects links that point to a different website origin.
         if (url.origin !== window.location.origin) {
             return false;
         }
 
         // Exclude links set to open in a new tab or specific target
+        // Rejects links that intentionally open in another browsing context.
         if (link.target && link.target !== "_self") {
             return false;
         }
 
         // Exclude file downloads
+        // Rejects links intended to download a file instead of navigating between pages.
         if (link.hasAttribute("download")) {
             return false;
         }
 
         // Exclude external protocol schemes
+        // Reads the original href attribute so special protocols can be identified.
         var href = link.getAttribute("href") || "";
         if (href.indexOf("mailto:") === 0 ||
             href.indexOf("tel:") === 0 ||
@@ -142,7 +177,9 @@
         }
 
         // Exclude same-page hash jumps (e.g. #student, #parent, #top)
+        // Checks whether the destination uses the same path as the current page.
         var isSamePath = url.pathname === window.location.pathname;
+        // Checks whether the destination has the same query-string parameters.
         var isSameSearch = url.search === window.location.search;
         if (isSamePath && isSameSearch && url.hash !== "") {
             return false;
@@ -162,28 +199,35 @@
      * 2. Waits for the smooth exit transition duration.
      * 3. Navigates to the destination page.
      */
+    // Starts the custom transition before navigating to the requested internal URL.
     function handleInternalNavigation(destinationUrl) {
+        // Locks the transition state so repeated clicks cannot start duplicate navigations.
         isNavigating = true;
+        // Displays the loader before the browser changes the current document.
         showPageLoader();
 
         setTimeout(function () {
+            // Navigates the browser to the destination after the exit transition finishes.
             window.location.href = destinationUrl;
         }, TRANSITION_OUT_TIME);
     }
 
     // Intercept normal internal clicks across the document
+    // Watches document clicks so eligible internal anchor links can use the custom transition.
     document.addEventListener("click", function (event) {
         // Allow default browser behaviors for modified clicks (e.g. Ctrl+click, Cmd+click to open new tab)
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
             return;
         }
 
+        // Finds the nearest anchor element associated with the clicked target.
         var link = event.target.closest ? event.target.closest("a") : null;
         if (!link || !link.href) {
             return;
         }
 
         try {
+            // Creates a complete URL object using the current page URL as the base.
             var url = new URL(link.href, window.location.href);
 
             if (!shouldTransition(link, url)) {
@@ -204,23 +248,29 @@
     });
 
     // Handle initial page load lifecycle
+    // Checks whether the browser has already completed the page loading lifecycle.
     if (document.readyState === "complete") {
         scheduleInitialHide();
     } else {
+        // Runs the initial loader hide logic once page resources have finished loading.
         window.addEventListener("load", scheduleInitialHide, { once: true });
         // Also ensure hide fires if load event was delayed by third-party frames
-        document.addEventListener("DOMContentLoaded", function () {
+        // Provides an additional fallback based on DOM readiness.
+        // Waits until the HTML has been parsed before initializing features that depend on page elements.
+    document.addEventListener("DOMContentLoaded", function () {
             setTimeout(scheduleInitialHide, 500);
         }, { once: true });
     }
 
     // Handle Browser Back / Browser Forward / BFCache restoration
+    // Handles browser back, forward, and BFCache restoration events.
     window.addEventListener("pageshow", function (event) {
         isNavigating = false;
         hidePageLoader();
     });
 
     // Expose control functions globally for safety/testing
+    // Exposes loader controls globally for testing or controlled use by other scripts.
     window.CampusCartLoader = {
         show: showPageLoader,
         hide: hidePageLoader,
@@ -236,6 +286,7 @@
 // ==========================================================
 
 // Sets up the mobile navigation menu after the page has loaded.
+// Defines the mobile navigation setup function used after the page DOM is ready.
 function initNav() {
 
     // Finds the mobile navigation button using its class name.
@@ -363,6 +414,7 @@ function initNav() {
     "use strict";
 
     /* ---------- Hardcoded catalogue data (no database) ---------- */
+    // Stores reusable image paths so product objects can reference consistent asset locations.
     var IMG = {
         bundle: "images/bundles/starter-bundle.jpg",
         hero: "images/bundles/hero-campus.jpg",
@@ -370,8 +422,10 @@ function initNav() {
     };
 
     // Pages inside /pages/ are one level deeper than index.html.
+    // Selects the correct assets directory because files in /pages/ are one folder deeper than index.html.
     var BASE = window.location.pathname.indexOf("/pages/") > -1 ? "../assets/" : "assets/";
 
+    // Stores the catalogue as an array of product objects containing names, categories, prices, descriptions, and images.
     var DEALS = [
         { name: "Basic Starter Bundle", category: "bundles", condition: "new", price: 1499, desc: "Bedding, kettle, mug set and study basics for a first-year res room.", img: IMG.bundle },
         { name: "Standard Starter Bundle", category: "bundles", condition: "new", price: 2799, desc: "Everything in Basic plus desk lamp, laundry set and kitchen starter pack.", img: IMG.bundle },
@@ -387,11 +441,13 @@ function initNav() {
         { name: "Load-Shedding Light Kit", category: "appliances", condition: "new", price: 329, desc: "Rechargeable lamp, power bank and extension lead.", img: IMG.bundle }
     ];
 
+    // Defines a helper that formats numeric prices as South African Rand values.
     var currency = function (n) {
         return "R" + Number(n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     };
 
     /* ---------- Toast helper ---------- */
+    // Defines a reusable temporary notification for user feedback.
     function toast(msg) {
         var el = document.getElementById("toast");
         if (!el) {
@@ -407,6 +463,7 @@ function initNav() {
     }
 
     /* ---------- Tabs (Shop New / Second-Hand, Student / Parent FAQ) ---------- */
+    // Defines the tab interface used for areas such as Student/Parent and New/Second-hand content.
     function initTabs() {
         Array.prototype.forEach.call(document.querySelectorAll("[data-tabs]"), function (group) {
         var buttons = group.querySelectorAll(".tab-btn");
@@ -426,6 +483,7 @@ function initNav() {
     }
 
     /* ---------- Deals & Gallery: client-side filter + sort ---------- */
+    // Converts one catalogue object into the HTML needed for a product card.
     function dealCard(item) {
         var badge = item.condition === "new"
         ? '<span class="badge badge-new">New</span>'
@@ -441,6 +499,7 @@ function initNav() {
         '</div></article>';
     }
 
+    // Initializes catalogue filtering, sorting, rendering, and result counting.
     function initDeals() {
         var out = document.getElementById("deals-results");
         if (!out) { return; }
@@ -449,6 +508,7 @@ function initNav() {
         var sort = document.getElementById("sort-by");
         var count = document.getElementById("deals-count");
 
+        // Rebuilds the deal list whenever the selected filters or sort order changes.
         function render() {
         var list = DEALS.filter(function (d) {
             return (cat.value === "all" || d.category === cat.value) &&
@@ -469,6 +529,7 @@ function initNav() {
     }
 
     /* ---------- Gallery category filter ---------- */
+    // Initializes the category buttons that show or hide gallery items.
     function initGalleryFilter() {
         var buttons = document.querySelectorAll("[data-gallery-filter]");
         if (!buttons.length) { return; }
@@ -486,22 +547,27 @@ function initNav() {
     }
 
     /* ---------- Order summary: session-only, cleared on refresh ---------- */
+    // Stores the current order in JavaScript memory; sessionStorage provides temporary persistence during the session.
     var order = [];   // in-memory only
 
+    // Serializes the current order and saves it to sessionStorage.
     function saveSession() {
         try {
         window.sessionStorage.setItem("cc_order", JSON.stringify(order));
         } catch (e) { /* storage unavailable — memory only */ }
     }
+    // Reads the saved order from sessionStorage when the page starts.
     function loadSession() {
         try {
         var raw = window.sessionStorage.getItem("cc_order");
         order = raw ? JSON.parse(raw) : [];
         } catch (e) { order = []; }
     }
+    // Calculates the complete order value from each item price and quantity.
     function total() {
         return order.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
     }
+    // Updates every cart-count element with the total quantity currently in the order.
     function updateCartCount() {
         var qty = order.reduce(function (s, i) { return s + i.qty; }, 0);
         Array.prototype.forEach.call(document.querySelectorAll("[data-cart-count]"), function (el) {
@@ -509,6 +575,7 @@ function initNav() {
         });
     }
 
+    // Adds a product to the order or increases its quantity if it already exists.
     function addItem(name, price) {
         var found = null;
         order.forEach(function (i) { if (i.name === name) { found = i; } });
@@ -519,6 +586,7 @@ function initNav() {
         toast(name + " added to your Order Summary");
     }
 
+    // Adds delegated click handling for product buttons, including cards created dynamically.
     function initAddButtons() {
         document.addEventListener("click", function (e) {
         var btn = e.target.closest ? e.target.closest("[data-add]") : null;
@@ -528,6 +596,7 @@ function initNav() {
         });
     }
 
+    // Rebuilds the Order Summary table and updates its total and empty-state display.
     function renderOrder() {
         var body = document.getElementById("order-body");
         if (!body) { return; }
@@ -556,6 +625,7 @@ function initNav() {
         if (totalEl) { totalEl.textContent = currency(total()); }
     }
 
+    // Initializes controls that are only needed on the Order Summary and checkout page.
     function initOrderPage() {
         var body = document.getElementById("order-body");
         if (!body) { return; }
@@ -605,6 +675,7 @@ function initNav() {
         });
         }
 
+        // Builds the plain-text order summary used by WhatsApp and email checkout.
         function orderText() {
         if (!order.length) { return "My Campus-Cart order summary is empty."; }
         var addr = (document.getElementById("delivery-address") || {}).value || "(not provided)";
@@ -650,6 +721,7 @@ function initNav() {
     }
 
     /* ---------- Account: reveal Student / Parent path from the hash ---------- */
+    // Uses the URL hash to reveal and scroll to the Student or Parent account section.
     function initAccountHash() {
         if (!document.getElementById("student")) { return; }
         var hash = window.location.hash;
@@ -660,12 +732,14 @@ function initNav() {
     }
 
     /* ---------- Printable checklist ---------- */
+    // Connects the checklist print button to the browser print dialog.
     function initPrint() {
         var btn = document.getElementById("print-checklist");
         if (btn) { btn.addEventListener("click", function () { window.print(); }); }
     }
 
     /* ---------- Forms: mailto hand-off only, no backend ---------- */
+    // Converts website forms into mailto messages because Campus-Cart has no backend.
     function initMailForms() {
         Array.prototype.forEach.call(document.querySelectorAll("form[data-mailto]"), function (form) {
         form.addEventListener("submit", function (e) {
@@ -687,6 +761,7 @@ function initNav() {
     }
 
     /* ---------- Product detail template: pick a product ---------- */
+    // Initializes the product selector and keeps the detail panel synchronized with the selected product.
     function initProductDetail() {
         var select = document.getElementById("detail-select");
         if (!select) { return; }
