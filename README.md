@@ -665,6 +665,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.127** — Add unified page loader and transitions. Introduces the unified full-screen loader and internal page-transition system in `assets/js/script.js`, including loader creation, safety timing, internal-link interception, BFCache handling and a small global loader API.
 
+- **v3.128** — Add storefront UI and cart interactions. Adds the client-side storefront and cart functionality, including mobile navigation, tabs, deal filtering and sorting, gallery filters, notifications, session-backed order summaries and WhatsApp, email and EFT checkout flows.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
