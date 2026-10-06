@@ -418,7 +418,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.28** — Refresh contact collection hubs. This refreshes the contact-page collection-hub information so the listed locations better support the project's student collection and delivery messaging.
 
-- **v3.29** — Add regional pickup locations to contact page.
+- **v3.29** — Add regional pickup locations to contact page. This expands the contact page with regional pickup locations, giving users more specific information about possible collection areas.
 
 - **v3.30** — Load contact form script.
 
