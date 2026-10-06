@@ -604,6 +604,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.105** — Correct HTML indentation. Applies another HTML indentation correction so nested elements and sections follow a cleaner and more consistent source-code layout.
 
+- **v3.106** — Correct HTML indentation. Improves the formatting of the affected HTML markup by aligning nested elements consistently and making the source easier to inspect.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
