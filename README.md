@@ -434,7 +434,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.36** — Add coverage page hero section. This adds a dedicated hero section to the Coverage page, giving the page a clear introduction before visitors browse the detailed coverage information.
 
-- **v3.37** — Add WhatsApp contact to coverage page.
+- **v3.37** — Add WhatsApp contact to coverage page. This adds a WhatsApp contact option to the Coverage page, providing visitors with a direct communication route for coverage and delivery-related enquiries.
 
 - **v3.38** — Add footer copyright to coverage page.
 
