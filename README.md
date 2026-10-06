@@ -520,6 +520,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.79** — Add North West coverage. This introduces a North West province section to the Coverage page, including the standard delivery timing and a Potchefstroom collection hub. The addition continues Campus-Cart's province-by-province expansion and provides a defined delivery and collection point for students in the region.
 
+- **v3.80** — Add public institutions to North West coverage. This expands the North West section with North-West University and three public TVET colleges. The institution listings give students more specific coverage information instead of only showing the province-level delivery details.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
