@@ -121,28 +121,17 @@
                              data-mailto is the recipient of the compiled email. -->
                         <div class="form-row">
                             <div class="form-group">
-
                                 <label for="c-name">Full name *</label>
                                 <input id="c-name" name="name" type="text" required autocomplete="name">
                                 <span class="error-msg" id="c-name-error" role="alert"></span>
                             </div>
-
-                            <!-- This form-group contains the email address field.
-                                 It follows the same label-and-input structure as the name field. -->
                             <div class="form-group">
-
-                                <!-- The for attribute must match the input's id attribute.
-                                     This connects the label with the correct form control. -->
                                 <label for="c-email">Email address *</label>
-
-                                <!-- type="email" identifies the field as an email input.
-                                     required makes entering an email address compulsory. -->
-                                <input id="c-email" name="email" type="email" required>
+                                <input id="c-email" name="email" type="email" required autocomplete="email">
+                                <span class="error-msg" id="c-email-error" role="alert"></span>
                             </div>
                         </div>
 
-                        <!-- This row contains the optional phone field and topic dropdown.
-                             form-row allows CSS to arrange both controls in the same row. -->
                         <div class="form-row">
 
                             <!-- This form-group contains the user's phone or WhatsApp number.
