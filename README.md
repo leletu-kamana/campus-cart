@@ -442,6 +442,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart. Commit: `07bac34`.
 
+- **v3.41** — Add institution search to coverage page. Commit: `d17806f`.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
