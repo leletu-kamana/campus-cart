@@ -2677,3 +2677,82 @@ footer li {
 .province-links {
     line-height: 2;
 }
+
+/* ==========================================================
+   CAMPUS-CART PAGE LOADER
+   The loader remains visible for 30 seconds before hiding.
+   ========================================================== */
+
+/* Covers the entire viewport while the page loader is active. */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: var(--navy);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+/* Hides the loader after the JavaScript timer finishes. */
+#page-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Centers the loader content and adds spacing between its elements. */
+.page-loader-card {
+    display: grid;
+    gap: 12px;
+    justify-items: center;
+    text-align: center;
+    padding: 28px 32px;
+}
+
+/* Styles the Campus-Cart text shown inside the loader. */
+.page-loader-logo {
+    color: var(--yellow);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Creates the circular loading spinner. */
+.page-loader-spinner {
+    width: 38px;
+    height: 38px;
+    border: 4px solid rgba(255, 255, 255, 0.22);
+    border-top-color: var(--yellow);
+    border-radius: 50%;
+    animation: campusCartSpin 700ms linear infinite;
+}
+
+/* Styles the loading message below the spinner. */
+.page-loader-text {
+    margin: 0;
+    color: var(--white);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Rotates the spinner continuously while the loader is visible. */
+@keyframes campusCartSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Reduces motion for users who have enabled reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+    #page-loader {
+        transition: none;
+    }
+
+    .page-loader-spinner {
+        animation-duration: 12000ms;
+    }
+}
+
