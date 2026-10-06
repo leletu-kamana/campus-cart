@@ -424,7 +424,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.31** — Add validation and coverage page styles. This adds CSS for form validation states and the Coverage page, giving validation feedback and coverage content a consistent visual treatment within the shared Campus-Cart design.
 
-- **v3.32** — Add Campus-Cart page loader.
+- **v3.32** — Add Campus-Cart page loader. This introduces the Campus-Cart page loader, adding a consistent loading experience while pages and their shared resources are being prepared.
 
 - **v3.33** — Add coverage page.
 
