@@ -618,6 +618,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.112** — Correct HTML indentation. Improves the remaining affected HTML formatting by correcting indentation and keeping the source structure easier to follow.
 
+- **v3.113** — Correct HTML indentation. Continues the HTML formatting corrections, making nested sections and elements more consistently aligned throughout the affected pages.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
