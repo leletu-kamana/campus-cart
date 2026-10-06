@@ -472,7 +472,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.55** — Expand KZN institution coverage. This expands KwaZulu-Natal institution coverage, adding more tertiary institutions to the province's section.
 
-- **v3.56** — Add private institutions to coverage page.
+- **v3.56** — Add private institutions to coverage page. This adds private institutions to the KwaZulu-Natal coverage page, ensuring the province includes both public and private providers.
 
 - **v3.57** — Add Limpopo delivery coverage.
 
