@@ -94,19 +94,19 @@ Add the genuine mobile browser screenshots to `assets/images/screenshots/` using
 <table>
   <tr>
     <td align="center">
-      <img src="assets/images/screenshots/mobile-01.png" alt="Campus-Cart mobile screenshot 1" width="180">
+      <img src="assets/images/screenshots/mobile/mobile-6.png" alt="Campus-Cart mobile screenshot 1" width="180">
     </td>
     <td align="center">
-      <img src="assets/images/screenshots/mobile-02.png" alt="Campus-Cart mobile screenshot 2" width="180">
+      <img src="assets/images/screenshots/mobile/mobile-7.png" alt="Campus-Cart mobile screenshot 2" width="180">
     </td>
     <td align="center">
-      <img src="assets/images/screenshots/mobile-03.png" alt="Campus-Cart mobile screenshot 3" width="180">
+      <img src="assets/images/screenshots/mobile/mobile-8.png" alt="Campus-Cart mobile screenshot 3" width="180">
     </td>
     <td align="center">
-      <img src="assets/images/screenshots/mobile-04.png" alt="Campus-Cart mobile screenshot 4" width="180">
+      <img src="assets/images/screenshots/mobile/mobile-9.png" alt="Campus-Cart mobile screenshot 4" width="180">
     </td>
     <td align="center">
-      <img src="assets/images/screenshots/mobile-05.png" alt="Campus-Cart mobile screenshot 5" width="180">
+      <img src="assets/images/screenshots/mobile/mobile-10.png" alt="Campus-Cart mobile screenshot 5" width="180">
     </td>
   </tr>
   <tr>
