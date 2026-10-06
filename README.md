@@ -440,7 +440,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.39** — Load shared scripts on coverage page. This loads the shared project scripts on the Coverage page so common JavaScript behaviour can be used consistently with the rest of the website.
 
-- **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart.
+- **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart. This merge commit brings the current `main` branch history together after the coverage-page development work, preserving the combined project state.
 
 - **v3.41** — Add institution search to coverage page.
 
