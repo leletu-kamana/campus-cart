@@ -492,7 +492,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.65** — Add Northern Cape coverage section. This adds the Northern Cape coverage section, extending Campus-Cart's geographic coverage to another province.
 
-- **v3.66** — Add public institutions to coverage.
+- **v3.66** — Add public institutions to coverage. This adds public institutions to the Northern Cape coverage information, providing more specific options for students in the province.
 
 - **v3.67** — Add private institutions to coverage list.
 
