@@ -11,9 +11,9 @@
 
     // Transition timing constants (in milliseconds)
     // Stores the duration of the loader exit transition before the browser navigates to another page.
-    var TRANSITION_OUT_TIME = 2800; // Duration of smooth exit transition before navigating
+    var TRANSITION_OUT_TIME = 3000; // Duration of smooth exit transition before navigating
     // Stores the minimum time the loader remains visible so very fast loads still look smooth.
-    var MIN_LOADER_TIME = 320;     // Minimum display time for visual smoothness on fast loads
+    var MIN_LOADER_TIME = 260;     // Minimum display time for visual smoothness on fast loads
     // Stores the maximum loader time before the failsafe automatically hides it.
     var SAFETY_TIMEOUT = 6000;     // Failsafe timeout to prevent permanently stuck loader
 
