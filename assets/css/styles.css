@@ -2567,3 +2567,113 @@ footer li {
         break-inside: avoid;
     }
 }
+
+/* ==========================================================
+   FORM VALIDATION AND RESULT BOXES (ICE Task 4)
+   Used by assets/js/forms.js on enquiry.html and contact.html
+   ========================================================== */
+
+/* Error text shown under a field. It is empty (and takes no space) until JavaScript fills it. */
+.error-msg {
+    /* Dark red, readable on white (contrast above 4.5:1). */
+    color: #b3261e;
+
+    /* Slightly smaller than body text. */
+    font-size: 0.85rem;
+}
+
+/* Red border on a field that failed validation. */
+.form-group input.input-error,
+.form-group select.input-error,
+.form-group textarea.input-error {
+    border-color: #b3261e;
+}
+
+/* The box that shows the enquiry response or the compiled email. Hidden until .show is added. */
+.form-result {
+    display: none;
+    margin-top: 24px;
+    padding: 20px;
+    background: var(--grey-light);
+    border: 1px solid var(--grey-mid);
+    border-left: 5px solid var(--yellow);
+    border-radius: var(--radius);
+}
+
+/* JavaScript adds .show after the form has been validated. */
+.form-result.show {
+    display: block;
+}
+
+/* Spacing for the list and text inside the result box. */
+.form-result h3 {
+    margin-bottom: 10px;
+}
+
+.form-result ul {
+    margin: 12px 0 16px 20px;
+}
+
+.form-result li {
+    margin-bottom: 6px;
+}
+
+/* The compiled email body keeps its line breaks and wraps long lines. */
+.form-result pre {
+    margin: 12px 0 16px;
+    padding: 14px;
+    background: var(--white);
+    border: 1px solid var(--grey-mid);
+    border-radius: 8px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: inherit;
+}
+
+/* Availability colours. Each is paired with text, so colour is never the only signal. */
+.status-ok  { color: #1b6e2d; }
+.status-low { color: #8a5a00; }
+.status-out { color: #b3261e; }
+
+
+/* ==========================================================
+   COVERAGE PAGE (all provinces and institutions)
+   ========================================================== */
+
+/* Each province is its own block with space above it. */
+.province {
+    margin-top: 40px;
+    scroll-margin-top: 90px;
+}
+
+/* Institution names flow into columns that adapt to the screen width. */
+.inst-list {
+    list-style: none;
+    margin: 12px 0 8px;
+    padding: 0;
+    columns: 260px;
+    column-gap: 28px;
+}
+
+.inst-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--grey-mid);
+    break-inside: avoid;
+}
+
+/* The [hidden] attribute must win over any display rule, so search results hide correctly. */
+.inst-list li[hidden],
+.province[hidden] {
+    display: none;
+}
+
+/* The city after an institution name is lighter text. */
+.inst-city {
+    color: #5b6470;
+    font-size: 0.9rem;
+}
+
+/* Province quick links wrap onto several lines on small screens. */
+.province-links {
+    line-height: 2;
+}
