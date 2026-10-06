@@ -574,6 +574,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.91** — Refine index.html syntax comments. Refines the explanatory comments in `index.html`, improving their wording and placement so the homepage documentation is clearer without changing the intended page content or functionality.
 
+- **v3.92** — Comment index.html syntax from lines 4 to 369. Extends explanatory documentation across the main body of `index.html`, adding comments to the relevant HTML syntax so the homepage structure and major sections are easier to follow.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
