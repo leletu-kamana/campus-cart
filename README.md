@@ -624,6 +624,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.115** — Fix malformed HTML comments. Removes invalid or malformed nested HTML comment markup and tidies comment formatting across the site pages, improving standards compliance while preserving existing content and functionality.
 
+- **v3.116** — Update index.html. Updates the homepage HTML after the formatting and comment-cleanup work, keeping the current `index.html` structure aligned with the project's latest documentation and presentation changes.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
