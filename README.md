@@ -436,7 +436,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.37** — Add WhatsApp contact to coverage page. This adds a WhatsApp contact option to the Coverage page, providing visitors with a direct communication route for coverage and delivery-related enquiries.
 
-- **v3.38** — Add footer copyright to coverage page.
+- **v3.38** — Add footer copyright to coverage page. This adds footer copyright information to the Coverage page, bringing its footer structure in line with the wider Campus-Cart website.
 
 - **v3.39** — Load shared scripts on coverage page.
 
