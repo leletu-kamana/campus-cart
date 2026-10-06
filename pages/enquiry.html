@@ -187,9 +187,22 @@
                                    </div>
                               </div>
 
-                                   <!-- <textarea> creates a multi-line text input for longer messages.
-                                        required means the user must enter a message before submitting. -->
-                                   <textarea id="enq-message" name="message" required placeholder="Tell us what you need, your campus, and when you need it."></textarea>
+                              <!-- The institution list is filled by forms.js from data.js after a province is chosen. -->
+                              <div class="form-row">
+                                   <div class="form-group">
+                                        <label for="enq-province">Province *</label>
+                                        <select id="enq-province" name="province" required>
+                                             <option value="">Choose a province...</option>
+                                        </select>
+                                        <span class="error-msg" id="enq-province-error" role="alert"></span>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="enq-institution">Institution *</label>
+                                        <select id="enq-institution" name="institution" required disabled>
+                                             <option value="">Choose a province first...</option>
+                                        </select>
+                                        <span class="error-msg" id="enq-institution-error" role="alert"></span>
+                                   </div>
                               </div>
 
                               <!-- type="submit" makes this button submit the form.
