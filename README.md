@@ -478,7 +478,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.58** — Add public university coverage entries. This adds public university coverage entries for Limpopo, providing institution-level detail for students at public universities.
 
-- **v3.59** — Add public TVET colleges to coverage.
+- **v3.59** — Add public TVET colleges to coverage. This adds public TVET colleges to Limpopo coverage, extending the province's listed institutions beyond universities.
 
 - **v3.60** — Add private institution to coverage.
 
