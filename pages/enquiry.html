@@ -115,28 +115,18 @@
 
                          <!-- <form> groups input controls that collect information from the user.
                               data-mailto and data-subject provide JavaScript with email information. -->
-                         <form data-mailto="enquiries@campus-cart.co.za" data-subject="Campus-Cart pre-purchase enquiry">
+                         <form id="enquiry-form" novalidate data-mailto="enquiries@campus-cart.co.za" data-subject="Campus-Cart pre-purchase enquiry">
 
-                              <!-- form-group groups a label and its related form control.
-                                   This keeps each individual form field organised and easier to style. -->
+                              <!-- Each form-group holds a label, a form control and an empty <span> for its error message.
+                                   JavaScript (assets/js/forms.js) fills the span when the input is not valid.
+                                   novalidate on the form turns off the browser's pop-up messages so the custom messages are used. -->
                               <div class="form-group">
-
-                                   <!-- for connects this label to the select element with id="enq-type".
-                                        The asterisk indicates that the field is required for the user. -->
                                    <label for="enq-type">I am a *</label>
-
-                                   <!-- <select> creates a dropdown list containing predefined choices.
-                                        required prevents the form from being submitted without a selection. -->
                                    <select id="enq-type" name="enquirerType" required>
-
-                                        <!-- <option> creates one selectable item inside the dropdown.
-                                             value is the data that can be read when the option is selected. -->
                                         <option value="Student">Student</option>
-
-                                        <!-- This option provides an alternative value for the user.
-                                             The value is submitted/read separately from the visible option text. -->
                                         <option value="Parent/Guardian">Parent/Guardian</option>
                                    </select>
+                                   <span class="error-msg" id="enq-type-error" role="alert"></span>
                               </div>
 
                               <!-- form-row groups multiple form fields into the same horizontal row.
