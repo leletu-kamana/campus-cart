@@ -2454,6 +2454,46 @@ footer li {
 }
 
 
+
+/* ==========================================================
+   RESPONSIVE COLOUR CONSISTENCY
+   ========================================================== */
+/*
+   Desktop and mobile layouts intentionally use the exact same
+   Campus-Cart colour variables. Responsive media queries may
+   change layout, spacing and sizing, but must not introduce a
+   different brand palette.
+
+   These explicit mobile values act as a safeguard so the core
+   brand colours remain identical across supported screen sizes.
+*/
+@media (max-width: 768px) {
+    :root {
+        --navy: #0d1b3e;
+        --navy-light: #17295c;
+        --navy-dark: #08142f;
+
+        --yellow: #ffd23f;
+        --yellow-light: #ffe477;
+
+        --gold: #b8860b;
+        --gold-light: #d9a41a;
+
+        --white: #ffffff;
+        --grey: #f2f3f5;
+        --grey-light: #f8f9fb;
+        --grey-mid: #d9dce1;
+        --grey-dark: #5a5f6a;
+
+        --text: #1a1a1a;
+        --text-light: #444444;
+
+        --success: #2e7d32;
+        --warning: #f59e0b;
+        --danger: #c62828;
+    }
+}
+
 /* ==========================================================
    29. ACCESSIBILITY
    ========================================================== */
