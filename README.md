@@ -10,6 +10,12 @@
 - **Student Email:** st10514888@rcconnect.edu.za
 - **GitHub:** [leletu-kamana](https://github.com/leletu-kamana)
 
+## Live Website
+
+**View Campus-Cart:** [https://leletu-kamana.github.io/campus-cart/](https://leletu-kamana.github.io/campus-cart/)
+
+The website is published using GitHub Pages. It is a front-end demonstration and does not process real payments or use real user accounts.
+
 ## Project Overview
 Campus-Cart is a fictional South African organisation created as a website project. The idea is to make it easier for students and families to find common tertiary-study essentials such as bedding, appliances, stationery, furniture, textbooks and starter bundles.
 
@@ -57,10 +63,28 @@ Parents and guardians who help students prepare for registration and the start o
 
 No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
 
-## Part 1 – Planning and Initial Development
-Part 1 covers the planning and initial development of the website project, with the development work focused on **HTML5 only**. This includes selecting the target organisation, developing the project idea, researching requirements, identifying the target audience, planning the site structure, creating the sitemap, creating the HTML page structure and pushing the project to GitHub.
+## Website Screenshots
 
-The main focus of Part 1 is creating the website structure using HTML5. The pages use semantic HTML elements to organise headings, navigation, sections, images, links, forms and other content. CSS styling and JavaScript interaction are not the focus of Part 1.
+This section is reserved for genuine screenshots of the rendered Campus-Cart website for **Part 2 visual evidence**. The screenshots should show the actual website in a browser rather than planning wireframes or individual project images.
+
+### Desktop Website Screenshot
+
+Add the genuine desktop screenshot here after uploading it to the repository:
+
+![Campus-Cart desktop website screenshot](screenshots/part2-desktop.png)
+
+### Mobile Website Screenshot
+
+Add the genuine mobile screenshot here after uploading it to the repository:
+
+![Campus-Cart mobile website screenshot](screenshots/part2-mobile.png)
+
+> **Screenshot requirement:** The screenshot files must be captured from the actual rendered website and uploaded to the `screenshots/` folder before these image links can display correctly. The filenames above are placeholders until the genuine screenshots are added.
+
+## Part 1 – Planning and Initial Development
+Part 1 covers the planning and initial development of Campus-Cart, with the initial website structure developed using **HTML5**. The planning identifies the organisation idea, target audience, page content, site structure and navigation before visual styling and interactive features are added. Semantic elements such as headings, navigation, sections, lists, images, links and forms help organise the information into a clear document structure (Duckett, 2011).
+
+Campus-Cart is a fictional South African student-essentials store. The website is planned around two main user groups: students who need affordable study and living essentials, and parents/guardians who help plan and budget for those items. The focus on access to affordable learning materials is also relevant to discussions of educational inequality and open educational practices (Cox, Masuku and Willmers, 2020).
 
 ### Website Pages and Features
 
@@ -72,6 +96,64 @@ The main focus of Part 1 is creating the website structure using HTML5. The page
 | Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
 | Contact | `pages/contact.html` | Provides general contact and collection/office information. |
 | Account | `pages/account.html` | Provides Student/Parent paths and the HTML structure for an Order Summary. |
+
+### Page Content, Purpose and Target Users
+
+| Page | Main Content | Purpose | Target User |
+|---|---|---|---|
+| Home (`index.html`) | Introduction, featured essentials, main navigation and links to shopping, Parent Hub and account information | Introduce Campus-Cart and help visitors choose where to go next | Students and parents/guardians |
+| About (`pages/about.html`) | Organisation background, mission, vision and intended audience | Explain what Campus-Cart is and who it serves | New visitors, students and parents/guardians |
+| Products (`pages/products.html`) | Shop New, second-hand marketplace, deals/gallery, Parent Hub, product detail and Sell With Us | Help visitors review products, prices, bundles and selling information | Students and parents/guardians |
+| Enquiry (`pages/enquiry.html`) | Pre-purchase enquiry form and enquiry details | Give visitors a way to ask about stock, products and arrangements | Prospective buyers |
+| Contact (`pages/contact.html`) | Contact methods, business information and collection information | Make it clear how visitors can contact the fictional business | All visitors |
+| Account (`pages/account.html`) | Student and parent/guardian paths, order-summary layout and hand-off information | Provide a place to review the planned order process; it is not real account authentication | Students and parents/guardians |
+
+### Low-Fidelity Wireframes
+
+These simple planning wireframes show the intended content order and page layout. They are structural guides rather than screenshots of the finished styled website.
+
+**Home page wireframe**
+
+```text
++--------------------------------------------------------------+
+| LOGO                 MAIN NAVIGATION                 ACCOUNT |
++--------------------------------------------------------------+
+| HERO: Campus-Cart introduction       | HERO IMAGE            |
+| Short description + Shop / Parent Hub buttons                 |
++--------------------------------------------------------------+
+| BUY / SELL HIGHLIGHT CARDS                                   |
++--------------------------------------------------------------+
+| FEATURED PRODUCTS / STARTER BUNDLE CARDS                      |
++--------------------------------------------------------------+
+| ABOUT / CONTACT LINKS                                        |
++--------------------------------------------------------------+
+| FOOTER: Shop links | Company links | Contact details         |
++--------------------------------------------------------------+
+```
+
+**Products page wireframe**
+
+```text
++--------------------------------------------------------------+
+| LOGO                 MAIN NAVIGATION                 ACCOUNT |
++--------------------------------------------------------------+
+| PAGE TITLE + INTRODUCTION                                    |
++--------------------------------------------------------------+
+| SHOP TABS: NEW / SECOND-HAND                                 |
+| FILTERS / SORTING CONTROLS                                   |
+| PRODUCT CARD GRID: IMAGE / NAME / PRICE / DETAILS            |
++--------------------------------------------------------------+
+| DEALS & GALLERY                                              |
++--------------------------------------------------------------+
+| PARENT HUB: CHECKLIST + STARTER BUNDLES                      |
++--------------------------------------------------------------+
+| PRODUCT DETAIL                                               |
++--------------------------------------------------------------+
+| SELL WITH US / FAQ                                           |
++--------------------------------------------------------------+
+| FOOTER                                                       |
++--------------------------------------------------------------+
+```
 
 ### Products Page Sections
 - `#shop` — Shop New and Second-Hand Marketplace tabs/sections.
@@ -103,7 +185,7 @@ The main CSS features used in Campus-Cart include:
 - **Responsive and accessibility-related styling**, including keyboard focus states and reduced-motion support.
 - **Print styling** for content that may need to be printed, such as checklist information.
 
-The main aim of Part 2 is to turn the HTML structure from Part 1 into a consistent and responsive website design while keeping the CSS organised and reusable.
+The main aim of Part 2 is to turn the HTML structure from Part 1 into a consistent and responsive website design while keeping the CSS organised and reusable. The stylesheet uses reusable variables and responsive layout rules to keep the design consistent across different screen sizes. Responsive web design principles are relevant because the layout must adapt to different devices and viewport sizes (Marcotte, 2011).
 
 ## Part 3 – Interactive Functionality (Upcoming Feature)
 Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
@@ -122,7 +204,7 @@ The planned JavaScript features include:
 
 These features will be implemented and tested during Part 3. The README will be updated again once the functionality has actually been added and tested.
 
-> **Upcoming feature note:** The HTML pages currently reference `assets/js/script.js`, but the current `main` branch directory listing does not contain this JavaScript file. The interactive features therefore remain planned for Part 3 until the JavaScript implementation is added.
+> **Part 3 boundary:** `assets/js/script.js` currently provides the mobile navigation menu only. Product tabs, filtering, sorting, order-summary calculations and checklist printing remain planned for Part 3 and should not be described as completed until implemented and tested.
 
 ## Design and Usability
 The website uses consistent navigation, clear headings, buttons and structured content sections. Responsive web design is important because users may access websites from different screen sizes (Marcotte, 2011).
@@ -136,15 +218,22 @@ The use of clear product information, visible prices and structured sections is 
 ```text
 campus-cart/
 ├── .gitattributes
-├── Changelog.md
 ├── README.md
 ├── index.html
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
+│   ├── js/
+│   │   └── script.js
 │   └── images/
 │       ├── bundles/
+│       │   ├── hero-campus.jpg
+│       │   ├── starter-bundle.jpg
+│       │   └── start-bundle-2.jpg
+│       ├── products/
+│       │   └── study-essentials.jpg
 │       ├── second-hand/
+│       │   └── marketplace.jpg
 │       └── icons/
 └── pages/
     ├── about.html
@@ -208,10 +297,17 @@ Before final submission, the project should be checked for:
 - **Accessibility checks:** meaningful headings, alternative text, labels and keyboard-friendly controls.
 - **Path checking:** confirm that all relative links open the intended files.
 
-## Known Items to Check
-1. `index.html` currently contains links to `account.html` in the root directory, while the actual account page is `pages/account.html`. These links should be corrected before final submission.
-2. The HTML pages reference `assets/js/script.js`, but the current repository tree does not show `script.js`. This is an upcoming Part 3 feature and should be added when the JavaScript implementation is developed.
-3. The README and sitemap should be kept updated whenever the page structure changes.
+## Part 1 and Part 2 Review Checklist
+
+- [x] The homepage Account links point to `pages/account.html`.
+- [x] The HTML pages use the shared external stylesheet with paths appropriate to their folder locations.
+- [x] The HTML pages load the shared JavaScript file with paths appropriate to their folder locations.
+- [x] The README page list and sitemap use the actual nested `pages/` structure and correct page filenames.
+- [x] The README includes a Page–Content–Purpose–Target User table and low-fidelity structural wireframes.
+- [x] In-text citations are included for the design and usability principles discussed in the README.
+- [ ] Capture and add genuine screenshots of the rendered desktop and mobile website for Part 2 visual evidence. Screenshots must show the actual website in a browser; the wireframes above are not a replacement for screenshots.
+
+The local HTML file and anchor paths should be checked again whenever pages or section IDs are changed. The mobile navigation JavaScript has been reviewed in the repository, but it still needs to be tested in a live browser at desktop and mobile widths.
 
 # Changelog
 
@@ -239,6 +335,7 @@ Before final submission, the project should be checked for:
 - **v2.2** — Added explanatory comments to the remaining responsive CSS sections in `assets/css/styles.css`. The update documents the mobile navigation at `850px`, small mobile layout at `620px`, very small phone adjustments at `380px`, keyboard focus styles, reduced-motion support, touch-device hover behaviour, and print-specific styling. The update improves readability and explains the responsive, accessibility, touch and print behaviour without changing the existing runtime styles.
 - **v2.3** — Added a new bundle product image at `assets/images/bundles/start-bundle-2.jpg` and updated `pages/products.html` to use the new image in the product detail section. Added a `#detail-img` rule to `assets/css/styles.css` so the selected product image fills its container while keeping the full image visible with `object-fit: contain` and centred positioning. This improves the product detail image sizing and consistency without changing the existing product detail functionality.
 - **v2.4** — Added `assets/js/script.js` for the Campus-Cart mobile navigation menu. The script toggles the mobile menu open and closed, updates the navigation button's ARIA attributes, closes the menu when a navigation link is selected or the Escape key is pressed, returns focus to the navigation button after Escape, and resets the menu when the screen becomes wider than the `850px` mobile breakpoint. It also checks that the required navigation elements exist before running.
+- **v2.5** — Updated the README to correct outdated file-structure and JavaScript notes, add a Page–Content–Purpose–Target User table, add low-fidelity home and products page wireframes, and clarify the remaining Part 2 screenshot evidence requirement.
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
