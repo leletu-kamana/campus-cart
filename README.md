@@ -426,7 +426,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.32** — Add Campus-Cart page loader. This introduces the Campus-Cart page loader, adding a consistent loading experience while pages and their shared resources are being prepared.
 
-- **v3.33** — Add coverage page.
+- **v3.33** — Add coverage page. This adds the Coverage page as a dedicated location-information page for showing where Campus-Cart services and collection options are intended to be available.
 
 - **v3.34** — Add SEO metadata to coverage page.
 
