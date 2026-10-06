@@ -243,6 +243,7 @@ The use of clear product information, visible prices and structured sections is 
 campus-cart/
 ├── .gitattributes
 ├── README.md
+├── sitemap.xml
 ├── index.html
 ├── assets/
 │   ├── css/
@@ -285,6 +286,13 @@ The repository currently uses a nested `assets/` and `pages/` structure. This di
 
 ## Sitemap
 
+The project uses two related sitemap concepts:
+
+1. **Website navigation sitemap** — the structure below shows how the public pages and major sections are organised for visitors.
+2. **XML sitemap** — the root-level `sitemap.xml` file provides search engines with the canonical public page URLs for crawling and indexing.
+
+### Website Navigation Sitemap
+
 ```text
 Home (index.html)
 │
@@ -314,6 +322,27 @@ Home (index.html)
     └── Order Summary
 ```
 
+### XML Sitemap
+
+The root-level `sitemap.xml` contains the seven public HTML pages currently published on the Campus-Cart GitHub Pages website. It uses the XML Sitemap protocol and the live GitHub Pages URLs rather than local repository paths.
+
+| Sitemap URL | Repository Page |
+|---|---|
+| `https://leletu-kamana.github.io/campus-cart/` | `index.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/about.html` | `pages/about.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/products.html` | `pages/products.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/enquiry.html` | `pages/enquiry.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/coverage.html` | `pages/coverage.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/contact.html` | `pages/contact.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/account.html` | `pages/account.html` |
+
+The XML sitemap is intentionally limited to the public HTML pages. Assets such as CSS, JavaScript, images and screenshots are not listed as individual sitemap URLs because they are supporting resources rather than standalone pages intended for search-engine indexing.
+
+After deployment, the sitemap can be submitted to **Google Search Console** using the sitemap path:
+
+`sitemap.xml`
+
+The sitemap is located at the website root so search engines can access it directly from the deployed site.
 ## Development Timeline
 
 | Week | Phase | Activity |
@@ -343,6 +372,7 @@ Before final submission, the project should be checked for:
 - [x] The HTML pages load the shared JavaScript file with paths appropriate to their folder locations.
 - [x] The README page list and sitemap use the actual nested `pages/` structure and correct page filenames.
 - [x] The README includes a Page–Content–Purpose–Target User table and low-fidelity structural wireframes.
+- [x] The root-level `sitemap.xml` lists all seven public Campus-Cart pages using their live GitHub Pages URLs.
 - [x] In-text citations are included for the design and usability principles discussed in the README.
 - [ ] Capture and add at least five genuine desktop screenshots and five genuine mobile screenshots of the rendered website for Part 2 visual evidence.
 
@@ -535,6 +565,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.86** — Add national private providers section. This adds a national private-providers section containing 20 institutions that operate across multiple provinces or provide distance-learning options. The section also explains that delivery times follow the typical timeframe for the relevant province, bringing the Coverage page together with a broader national option for students whose institutions are not limited to one province.
 
 - **v3.87** — Add Google site verification tags. This adds the Google Search Console site-verification meta tag to the homepage and the site's page templates, allowing Google to confirm ownership of the Campus-Cart website. The update also standardises the placement of the verification metadata within the HTML head sections, keeping the verification setup consistent across the website while preserving the existing SEO metadata.
+
+- **v3.88** — Add XML sitemap documentation. This updates the README to document the new root-level `sitemap.xml`, distinguishes the website navigation sitemap from the XML sitemap used by search engines, lists all seven public page URLs included in the XML sitemap, and records the Google Search Console submission path. The file structure and review checklist are also updated so the sitemap is documented as part of the deployed Campus-Cart website.
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
