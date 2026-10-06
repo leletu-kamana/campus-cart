@@ -476,7 +476,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.57** — Add Limpopo delivery coverage. This adds Limpopo delivery coverage, extending the national geographic scope of the Campus-Cart Coverage page.
 
-- **v3.58** — Add public university coverage entries.
+- **v3.58** — Add public university coverage entries. This adds public university coverage entries for Limpopo, providing institution-level detail for students at public universities.
 
 - **v3.59** — Add public TVET colleges to coverage.
 
