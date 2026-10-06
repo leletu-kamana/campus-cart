@@ -65,21 +65,45 @@ No frontend framework is used. The project is built with standard HTML, CSS and 
 
 ## Website Screenshots
 
-This section is reserved for genuine screenshots of the rendered Campus-Cart website for **Part 2 visual evidence**. The screenshots should show the actual website in a browser rather than planning wireframes or individual project images.
+This section is for **genuine screenshots of the rendered Campus-Cart website**. It supports visual evidence of the completed website across both desktop and mobile screen sizes.
 
-### Desktop Website Screenshot
+The repository reserves the following folder for the screenshots:
 
-Add the genuine desktop screenshot here after uploading it to the repository:
+`assets/images/screenshots/`
 
-![Campus-Cart desktop website screenshot](screenshots/part2-desktop.png)
+A minimum of **5 desktop screenshots and 5 mobile screenshots** can be added. Additional screenshots may also be included if they provide useful evidence of different pages, sections or responsive states.
 
-### Mobile Website Screenshot
+### Desktop Website Screenshots
 
-Add the genuine mobile screenshot here after uploading it to the repository:
+Add the genuine desktop browser screenshots to `assets/images/screenshots/` using these filenames:
 
-![Campus-Cart mobile website screenshot](screenshots/part2-mobile.png)
+![Campus-Cart desktop screenshot 1](assets/images/screenshots/desktop-01.png)
 
-> **Screenshot requirement:** The screenshot files must be captured from the actual rendered website and uploaded to the `screenshots/` folder before these image links can display correctly. The filenames above are placeholders until the genuine screenshots are added.
+![Campus-Cart desktop screenshot 2](assets/images/screenshots/desktop-02.png)
+
+![Campus-Cart desktop screenshot 3](assets/images/screenshots/desktop-03.png)
+
+![Campus-Cart desktop screenshot 4](assets/images/screenshots/desktop-04.png)
+
+![Campus-Cart desktop screenshot 5](assets/images/screenshots/desktop-05.png)
+
+### Mobile Website Screenshots
+
+Add the genuine mobile browser screenshots to `assets/images/screenshots/` using these filenames:
+
+![Campus-Cart mobile screenshot 1](assets/images/screenshots/mobile-01.png)
+
+![Campus-Cart mobile screenshot 2](assets/images/screenshots/mobile-02.png)
+
+![Campus-Cart mobile screenshot 3](assets/images/screenshots/mobile-03.png)
+
+![Campus-Cart mobile screenshot 4](assets/images/screenshots/mobile-04.png)
+
+![Campus-Cart mobile screenshot 5](assets/images/screenshots/mobile-05.png)
+
+> **Screenshot requirement:** Screenshot files must be captured from the actual rendered Campus-Cart website in a browser. Do not use planning wireframes, generated mock-ups or individual project images as substitutes for website screenshots. Upload the screenshot files to `assets/images/screenshots/` with the matching filenames so the README images display correctly.
+
+> **Additional screenshots:** If more than five desktop or mobile screenshots are added, continue the same naming pattern (for example, `desktop-06.png`, `desktop-07.png`, `mobile-06.png`, `mobile-07.png`).
 
 ## Part 1 – Planning and Initial Development
 Part 1 covers the planning and initial development of Campus-Cart, with the initial website structure developed using **HTML5**. The planning identifies the organisation idea, target audience, page content, site structure and navigation before visual styling and interactive features are added. Semantic elements such as headings, navigation, sections, lists, images, links and forms help organise the information into a clear document structure (Duckett, 2011).
@@ -234,6 +258,18 @@ campus-cart/
 │       │   └── study-essentials.jpg
 │       ├── second-hand/
 │       │   └── marketplace.jpg
+│       ├── screenshots/
+│       │   ├── desktop-01.png
+│       │   ├── desktop-02.png
+│       │   ├── desktop-03.png
+│       │   ├── desktop-04.png
+│       │   ├── desktop-05.png
+│       │   ├── mobile-01.png
+│       │   ├── mobile-02.png
+│       │   ├── mobile-03.png
+│       │   ├── mobile-04.png
+│       │   └── mobile-05.png
+│       │   └── (additional screenshots may be added)
 │       └── icons/
 └── pages/
     ├── about.html
@@ -242,6 +278,7 @@ campus-cart/
     ├── enquiry.html
     └── products.html
 ```
+
 ### Structure Note
 The repository currently uses a nested `assets/` and `pages/` structure. This differs from the original flat structure described in Section 4.2 of the assignment brief. This README documents the **actual repository structure**.
 
@@ -305,7 +342,7 @@ Before final submission, the project should be checked for:
 - [x] The README page list and sitemap use the actual nested `pages/` structure and correct page filenames.
 - [x] The README includes a Page–Content–Purpose–Target User table and low-fidelity structural wireframes.
 - [x] In-text citations are included for the design and usability principles discussed in the README.
-- [ ] Capture and add genuine screenshots of the rendered desktop and mobile website for Part 2 visual evidence. Screenshots must show the actual website in a browser; the wireframes above are not a replacement for screenshots.
+- [ ] Capture and add at least five genuine desktop screenshots and five genuine mobile screenshots of the rendered website for Part 2 visual evidence.
 
 The local HTML file and anchor paths should be checked again whenever pages or section IDs are changed. The mobile navigation JavaScript has been reviewed in the repository, but it still needs to be tested in a live browser at desktop and mobile widths.
 
@@ -325,7 +362,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v1.2** — Added descriptive comments and clarified the navigation styles in `assets/css/styles.css`. The update documents the sticky `.topbar`, `.nav` layout and spacing, `.logo`, `.nav-links` and link states, `.nav-cart` button/pill styling and hover state, and the `.nav-toggle` mobile navigation button. The changes improve readability and maintainability without changing the overall navigation structure.
 - **v1.3** — Added the **Main Container** documentation to Part 2 of `README.md`. The update explains the `.wrap`, `.section`, `.section.alt`, `.section.navy`, `.section-head` and `.eyebrow` styles, including their purpose for page width, spacing, section backgrounds, readability and headings.
 - **v1.4** — Added descriptive comments to the navigation and hero sections in `assets/css/styles.css`. The update documents the `.nav-links` layout and explains the `.hero`, `.hero-grid`, `.hero h1`, `.hero h1 em`, `.hero p.lead`, `.hero-img` and `.hero-img img` styles, including the gradient background, text colours, responsive two-column layout, image sizing, cropping and rounded corners. The styling behaviour and overall design were kept unchanged.
-- **v1.5** — Added descriptive comments to the split card section in `assets/css/styles.css`. The update documents the `.split` grid layout, two-column structure, spacing, `.split-card` padding, background, yellow border and rounded corners, as well as the heading and paragraph text styling used for the Buy/Sell highlight panels. The existing styling behaviour and runtime functionality were kept unchanged.
+- **v1.5** — Added descriptive comments to the split card section in `assets/css/styles.css`. The update documents the `.split` grid layout, two-column structure, spacing, `.split-card` padding, background, yellow border and rounded corners, as well as the heading and paragraph text styling used for the Buy/Sell highlight panels. The existing styling behaviour and overall design were kept unchanged.
 - **v1.6** — Added descriptive comments across the shared button and badge styles in `assets/css/styles.css`. The update documents the base `.btn` styling, hover and active states, navy, outline, ghost-light and small button variants, as well as the `.badge`, `.badge-verified`, `.badge-new` and `.badge-used` styles. The comments explain the layout, spacing, colours, borders, text styling and hover behaviour while keeping the existing visual behaviour unchanged.
 - **v1.7** — Added descriptive comments to the grid, card and information box styles in `assets/css/styles.css`. The update documents the `.grid`, `.grid-2`, `.grid-3` and `.grid-4` layouts, reusable `.card` styling and hover behaviour, card images and content areas, prices and buttons, the `.card-navy` variant, and the `.info-box` callout styling. The update improves readability and maintainability without changing the existing CSS output.
 - **v1.8** — Added descriptive comments to the tab, filter toolbar, form element, and gallery styles in `assets/css/styles.css`. The update documents the `.tabs` and `.tab-btn` layout and states, active tab accessibility attributes, the `.toolbar` and `.field` controls, shared input/select/textarea styling and focus states, textarea resizing, and the `.gallery` image and caption layout. The comments improve readability and maintainability without changing the existing CSS behaviour.
@@ -336,7 +373,6 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v2.3** — Added a new bundle product image at `assets/images/bundles/start-bundle-2.jpg` and updated `pages/products.html` to use the new image in the product detail section. Added a `#detail-img` rule to `assets/css/styles.css` so the selected product image fills its container while keeping the full image visible with `object-fit: contain` and centred positioning. This improves the product detail image sizing and consistency without changing the existing product detail functionality.
 - **v2.4** — Added `assets/js/script.js` for the Campus-Cart mobile navigation menu. The script toggles the mobile menu open and closed, updates the navigation button's ARIA attributes, closes the menu when a navigation link is selected or the Escape key is pressed, returns focus to the navigation button after Escape, and resets the menu when the screen becomes wider than the `850px` mobile breakpoint. It also checks that the required navigation elements exist before running.
 - **v2.5** — Updated the README to correct outdated file-structure and JavaScript notes, add a Page–Content–Purpose–Target User table, add low-fidelity home and products page wireframes, and clarify the remaining Part 2 screenshot evidence requirement.
-
 - **v2.5** — Refined the mobile navigation JavaScript by simplifying the toggle logic, adding clearer defensive checks, and reorganising click, Escape-key and resize handling while preserving the existing navigation behaviour and accessibility attributes.
 - **v2.6** — Fixed the homepage Account navigation links so both the main navigation and footer correctly point to `pages/account.html`.
 - **v2.7** — Corrected and expanded the README documentation for Parts 1 and 2, including page content, purpose and target-user information and low-fidelity wireframe planning details.
@@ -346,6 +382,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.1** — Added a `coverage.html` page to the project.
 - **v3.2** — Added `forms.js` for the project's form-related JavaScript functionality.
 - **v3.3** — Added `data.js` for the project's data-related JavaScript functionality.
+- **v3.4** — Expanded the README **Website Screenshots** section to support at least five genuine desktop screenshots and five genuine mobile screenshots. Standardised the screenshot folder to `assets/images/screenshots/`, added numbered Markdown image references, documented the naming convention for additional screenshots, updated the file/folder structure, and updated the Part 2 review checklist to require five screenshots for each viewport category.
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
