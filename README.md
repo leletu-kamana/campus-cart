@@ -504,7 +504,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.71** — Add Western Cape delivery coverage. This adds Western Cape delivery coverage, extending the Coverage page to another major South African province.
 
-- **v3.72** — Add public university coverage entries.
+- **v3.72** — Add public university coverage entries. This adds public university coverage entries for the Western Cape, giving students more specific institution information.
 
 - **v3.73** — Add public TVET colleges to coverage.
 
