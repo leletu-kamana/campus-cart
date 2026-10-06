@@ -129,39 +129,21 @@
                                    <span class="error-msg" id="enq-type-error" role="alert"></span>
                               </div>
 
-                              <!-- form-row groups multiple form fields into the same horizontal row.
-                                   CSS can use this class to control the layout of the two fields. -->
                               <div class="form-row">
-
-                                   <!-- This form-group contains the user's full name input.
-                                        Grouping the label and input improves organisation and accessibility. -->
                                    <div class="form-group">
-
-                                        <!-- The for attribute connects the label to id="enq-name".
-                                             Clicking the label can therefore focus the associated input. -->
                                         <label for="enq-name">Full name *</label>
-
-                                        <!-- type="text" creates a normal text input field.
-                                             required prevents submission when the field has been left empty. -->
-                                        <input id="enq-name" name="name" type="text" required placeholder="e.g. Thandi Mokoena">
+                                        <input id="enq-name" name="name" type="text" required autocomplete="name" placeholder="e.g. Thandi Mokoena">
+                                        <span class="error-msg" id="enq-name-error" role="alert"></span>
                                    </div>
-
-                                   <!-- This form-group contains the email address input.
-                                        It follows the same structure as the name field. -->
                                    <div class="form-group">
-
-                                        <!-- The label is connected to the email input using the matching ID.
-                                             This improves usability because the field has a clear description. -->
                                         <label for="enq-email">Email address *</label>
-
-                                        <!-- type="email" allows the browser to recognise this as an email field.
-                                             The browser can perform basic email-format validation automatically. -->
-                                        <input id="enq-email" name="email" type="email" required placeholder="you@example.co.za">
+                                        <input id="enq-email" name="email" type="email" required autocomplete="email" placeholder="you@example.co.za">
+                                        <span class="error-msg" id="enq-email-error" role="alert"></span>
                                    </div>
                               </div>
 
-                              <!-- This form-group contains an optional product or bundle reference.
-                                   Optional means the user can submit the form without completing this field. -->
+                              <!-- The item list uses <optgroup> to separate bundles, new products and second-hand items.
+                                   The option text must match the names stored in the STOCK table in forms.js. -->
                               <div class="form-group">
 
                                    <!-- The label describes what information should be entered in the input.
