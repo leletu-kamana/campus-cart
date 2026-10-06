@@ -498,7 +498,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.68** — Add North West coverage. This adds North West coverage, continuing the national expansion of the Campus-Cart delivery and institution information.
 
-- **v3.69** — Add public institutions to coverage list.
+- **v3.69** — Add public institutions to coverage list. This adds public institutions to the North West coverage list, providing institution-level detail for public providers.
 
 - **v3.70** — Add private institutions to coverage.
 
