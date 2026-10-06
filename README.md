@@ -512,6 +512,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.75** — Add national private providers section. This adds a national private-providers section, bringing the Coverage page together with broader information for private tertiary institutions across South Africa.
 
+- **v3.76** — Add Northern Cape coverage section. This adds a dedicated Northern Cape section to `pages/coverage.html`, documenting the typical campus delivery timeframe, the faster hub-city option, free collection at the hub, and the Kimberley CBD collection desk with its operating hours. The update gives students in the province clearer information about both delivery and collection arrangements.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
