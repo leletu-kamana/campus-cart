@@ -484,7 +484,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.61** — Add Mpumalanga delivery coverage. This adds Mpumalanga delivery coverage, continuing the expansion of the Coverage page across South African provinces.
 
-- **v3.62** — Add Mpumalanga university listing.
+- **v3.62** — Add Mpumalanga university listing. This adds a university listing for Mpumalanga, giving the province more specific institution-level coverage information.
 
 - **v3.63** — Add Mpumalanga TVET colleges.
 
