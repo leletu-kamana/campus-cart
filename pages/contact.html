@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+<!-- Defines the root HTML document and sets English as the page language. -->
 <html lang="en">
+<!-- Starts the document head, which contains metadata and linked resources. -->
 <head>
+    <!-- Sets UTF-8 character encoding so letters, symbols and special characters display correctly. -->
     <meta charset="utf-8">
+    <!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <title> sets the text displayed on the browser tab.
          It also describes the purpose of this webpage. -->
     <title>Contact Campus-Cart | Locations &amp; Collection Points</title>
+    <!-- Provides a short webpage description for search engines and other services. -->
     <meta name="description" content="Contact Campus-Cart and find our collection hubs in every South African province.">
+    <!-- Provides keyword metadata describing the main topics associated with the webpage. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
+     <!-- Provides the Google Search Console verification token used to verify website ownership. -->
      <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
     <!-- <link> connects this HTML document to an external CSS stylesheet.
          href specifies the relative location of the CSS file. -->
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+<!-- Starts the visible webpage body containing the content shown to visitors. -->
 <body>
 
     <!-- <header> contains the introductory content of the webpage.
@@ -25,6 +33,7 @@
         <nav class="nav" aria-label="Main navigation">
 
             <!-- <a> creates a hyperlink and href specifies where it goes.
+                 <!-- Creates an inline element used to group and style a short piece of text. -->
                  <span> separates part of the logo so it can be styled separately. -->
             <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
 
@@ -55,6 +64,7 @@
                 <!-- This link opens the enquiry page from the current directory.
                      The href attribute tells the browser which document to load. -->
                 <a href="enquiry.html">Enquiry</a>
+                <!-- Creates a hyperlink; href specifies its destination and class can control its styling. -->
                 <a href="coverage.html">Coverage</a>
 
                 <!-- This link opens the current contact page.
@@ -80,6 +90,7 @@
         <section class="hero">
 
             <!-- The wrap class controls the width and alignment of the content.
+                 <!-- Creates a container used to group content and apply CSS layout or styling. -->
                  <div> is a general container used to group related HTML elements. -->
             <div class="wrap">
 
@@ -120,43 +131,70 @@
                         <!-- novalidate turns off the browser's pop-up messages so forms.js can show its own.
                              data-mailto is the recipient of the compiled email. -->
                         <div class="form-row">
+                            <!-- Creates a container used to group content and apply CSS layout or styling. -->
                             <div class="form-group">
+                                <!-- Creates a form label and uses for to associate it with a specific form control. -->
                                 <label for="c-name">Full name *</label>
+                                <!-- Creates an input control for collecting user-entered information. -->
                                 <input id="c-name" name="name" type="text" required autocomplete="name">
+                                <!-- Creates an inline element used to group and style a short piece of text. -->
                                 <span class="error-msg" id="c-name-error" role="alert"></span>
                             </div>
+                            <!-- Creates a container used to group content and apply CSS layout or styling. -->
                             <div class="form-group">
+                                <!-- Creates a form label and uses for to associate it with a specific form control. -->
                                 <label for="c-email">Email address *</label>
+                                <!-- Creates an input control for collecting user-entered information. -->
                                 <input id="c-email" name="email" type="email" required autocomplete="email">
+                                <!-- Creates an inline element used to group and style a short piece of text. -->
                                 <span class="error-msg" id="c-email-error" role="alert"></span>
                             </div>
                         </div>
 
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="form-row">
+                            <!-- Creates a container used to group content and apply CSS layout or styling. -->
                             <div class="form-group">
+                                <!-- Creates a form label and uses for to associate it with a specific form control. -->
                                 <label for="c-phone">Phone / WhatsApp (optional)</label>
+                                <!-- Creates an input control for collecting user-entered information. -->
                                 <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="082 000 0000">
+                                <!-- Creates an inline element used to group and style a short piece of text. -->
                                 <span class="error-msg" id="c-phone-error" role="alert"></span>
                             </div>
+                            <!-- Creates a container used to group content and apply CSS layout or styling. -->
                             <div class="form-group">
+                                <!-- Creates a form label and uses for to associate it with a specific form control. -->
                                 <label for="c-topic">Topic *</label>
+                                <!-- Creates a dropdown control for selecting one option. -->
                                 <select id="c-topic" name="topic" required>
+                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Order or collection question</option>
+                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Selling second-hand items</option>
+                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Parent Hub &amp; bundles</option>
+                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Something else</option>
                                 </select>
+                                <!-- Creates an inline element used to group and style a short piece of text. -->
                                 <span class="error-msg" id="c-topic-error" role="alert"></span>
                             </div>
                         </div>
 
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="form-group">
+                            <!-- Creates a form label and uses for to associate it with a specific form control. -->
                             <label for="c-message">Message *</label>
+                            <!-- Creates a multi-line text field for entering a message. -->
                             <textarea id="c-message" name="message" required></textarea>
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="error-msg" id="c-message-error" role="alert"></span>
                         </div>
 
+                        <!-- Creates an interactive button; its attributes identify the button and support JavaScript and accessibility. -->
                         <button class="btn" type="submit">Create email</button>
+                        <!-- Creates a paragraph containing a block of related text. -->
                         <p class="hint">We build the email from your answers. You then send it from your own email app.</p>
                     </form>
 
@@ -196,6 +234,7 @@
                     <!-- card and card-navy are CSS classes used to style this content container.
                          card-body groups the heading, paragraph and button inside the card. -->
                     <div class="card card-navy">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
 
                             <!-- h3 identifies the main topic of this information card.
@@ -266,77 +305,128 @@
                      The inline style adds 28 pixels of top margin to this container. -->
                 <!-- One collection hub per province (ten hubs, because Gauteng has two). Full institution list is on coverage.html. -->
                 <div class="grid grid-3" style="margin-top:28px">
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Gqeberha, Eastern Cape</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Bloemfontein, Free State</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Brandwag collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Johannesburg, Gauteng</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>7 Jorissen Street, Braamfontein, 2001<br>Mon-Sat 10:00-16:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge badge-new">Head office</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Pretoria, Gauteng</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>128 Lynnwood Road, Hatfield, 0083 (head office)<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Locker point</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Durban, KwaZulu-Natal</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Shop 12, University Drive, Westville, 3629 (lockers)<br>Lockers daily 08:00-20:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Polokwane, Limpopo</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Polokwane CBD collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Mbombela, Mpumalanga</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Mbombela CBD collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Kimberley, Northern Cape</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Kimberley CBD collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Potchefstroom, North West</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>Potchefstroom town centre collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
+                    <!-- Creates a self-contained content card for an individual collection location. -->
                     <article class="card">
+                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
                         <div class="card-body">
+                            <!-- Creates an inline element used to group and style a short piece of text. -->
                             <span class="badge">Collection hub</span>
+                            <!-- Creates a third-level heading for a subsection or content card. -->
                             <h3>Cape Town, Western Cape</h3>
+                            <!-- Creates a paragraph containing a block of related text. -->
                             <p>45 Main Road, Rondebosch, 7700<br>Tue-Sat 10:00-15:00</p>
                         </div>
                     </article>
                 </div>
+                <!-- Creates a paragraph containing a block of related text. -->
                 <p class="hint">We deliver to public universities, TVET colleges and private institutions in every province. <a href="coverage.html">See the full coverage list</a>.</p>
             </div>
         </section>
@@ -353,14 +443,18 @@
             <!-- This is the first footer column containing company information.
                  h4 provides a heading for this group of footer content. -->
             <div>
+                <!-- Creates a fourth-level heading for a footer subsection. -->
                 <h4>Campus-Cart</h4>
+                <!-- Creates a paragraph containing a block of related text. -->
                 <p>Affordable new and second-hand student essentials for South African campuses.</p>
             </div>
 
             <!-- This footer column contains links related to shopping.
                  The unordered list groups the related navigation items. -->
             <div>
+                <!-- Creates a fourth-level heading for a footer subsection. -->
                 <h4>Shop</h4>
+                <!-- Creates an unordered list for related navigation or contact items. -->
                 <ul>
 
                     <!-- Each list item contains one navigation hyperlink.
@@ -384,7 +478,9 @@
             <!-- This footer column contains general company navigation.
                  The list provides quick access to important website pages. -->
             <div>
+                <!-- Creates a fourth-level heading for a footer subsection. -->
                 <h4>Company</h4>
+                <!-- Creates an unordered list for related navigation or contact items. -->
                 <ul>
 
                     <!-- This hyperlink opens the About page.
@@ -398,6 +494,7 @@
                     <!-- This hyperlink opens the enquiry page.
                          href stores the relative path used by the browser. -->
                     <li><a href="enquiry.html">Enquiry</a></li>
+                    <!-- Creates one item within the unordered list. -->
                     <li><a href="coverage.html">Coverage</a></li>
 
                     <!-- This hyperlink opens the contact page.
@@ -413,7 +510,9 @@
             <!-- This footer column contains the business contact information.
                  The unordered list groups the contact methods and opening hours. -->
             <div>
+                <!-- Creates a fourth-level heading for a footer subsection. -->
                 <h4>Reach us</h4>
+                <!-- Creates an unordered list for related navigation or contact items. -->
                 <ul>
 
                     <!-- mailto: creates a link that opens the user's default email application.
@@ -444,6 +543,7 @@
     <!-- <script> connects an external JavaScript file to this webpage.
          src specifies the relative location of the JavaScript file. -->
     <script src="../assets/js/script.js"></script>
+    <!-- Loads an external JavaScript file that provides website functionality and interactions. -->
     <script src="../assets/js/forms.js"></script>
 
 </body>
