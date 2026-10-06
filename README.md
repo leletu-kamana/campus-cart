@@ -474,7 +474,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.56** — Add private institutions to coverage page. This adds private institutions to the KwaZulu-Natal coverage page, ensuring the province includes both public and private providers.
 
-- **v3.57** — Add Limpopo delivery coverage.
+- **v3.57** — Add Limpopo delivery coverage. This adds Limpopo delivery coverage, extending the national geographic scope of the Campus-Cart Coverage page.
 
 - **v3.58** — Add public university coverage entries.
 
