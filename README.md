@@ -502,7 +502,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.70** — Add private institutions to coverage. This adds private institutions to the North West coverage information, improving coverage for students at private providers.
 
-- **v3.71** — Add Western Cape delivery coverage.
+- **v3.71** — Add Western Cape delivery coverage. This adds Western Cape delivery coverage, extending the Coverage page to another major South African province.
 
 - **v3.72** — Add public university coverage entries.
 
