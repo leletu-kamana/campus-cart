@@ -205,14 +205,20 @@
                                    </div>
                               </div>
 
-                              <!-- type="submit" makes this button submit the form.
-                                   JavaScript can intercept the submission and create the email message. -->
-                              <button class="btn" type="submit">Send enquiry by email</button>
+                              <!-- Shown by forms.js only when "My institution is not listed" is chosen. -->
+                              <div class="form-group" id="enq-other-group" hidden>
+                                   <label for="enq-other">Name of your institution *</label>
+                                   <input id="enq-other" name="otherInstitution" type="text" placeholder="e.g. Your private college or campus name">
+                                   <span class="error-msg" id="enq-other-error" role="alert"></span>
+                              </div>
 
-                              <!-- This paragraph explains what happens when the form is submitted.
-                                   The hint class allows CSS to display this as secondary information. -->
-                              <p class="hint">This form has no backend. Submitting opens a pre-filled email in your mail app.</p>
+                              <button class="btn" type="submit">Get availability and price</button>
+                              <p class="hint">We check the item and show the estimated total and availability on this page. You can then email the enquiry to us.</p>
                          </form>
+
+                         <!-- The response from enquiry-form JavaScript is written into this box.
+                              aria-live="polite" makes screen readers announce the new content. -->
+                         <div id="enquiry-result" class="form-result" aria-live="polite"></div>
                     </div>
 
                     <!-- This div contains information displayed beside the enquiry form.
