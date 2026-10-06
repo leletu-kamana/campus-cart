@@ -685,6 +685,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.137** — Apply Campus-Cart Navy Yellow Light Grey White colour scheme. Standardises the primary site palette around Navy, Yellow, Light Grey and White, improving visual consistency across the website.
 
+- **v3.138** — Update contact map location. Refreshes the embedded contact-page Google Map to show the University of Pretoria location and adds explicit iframe dimensions while retaining lazy loading and referrer-policy settings.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
