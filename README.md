@@ -480,7 +480,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.59** — Add public TVET colleges to coverage. This adds public TVET colleges to Limpopo coverage, extending the province's listed institutions beyond universities.
 
-- **v3.60** — Add private institution to coverage.
+- **v3.60** — Add private institution to coverage. This adds a private institution to the Limpopo coverage information, improving the representation of different tertiary-provider types.
 
 - **v3.61** — Add Mpumalanga delivery coverage.
 
