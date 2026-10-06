@@ -468,7 +468,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.53** — Add KwaZulu-Natal coverage. This adds KwaZulu-Natal coverage, extending the project's delivery and institution information into another major province.
 
-- **v3.54** — Add public universities to coverage list.
+- **v3.54** — Add public universities to coverage list. This adds public universities to the KwaZulu-Natal coverage list, giving the province institution-specific information.
 
 - **v3.55** — Expand KZN institution coverage.
 
