@@ -462,7 +462,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.50** — Add public universities to coverage page. This adds public universities to the Gauteng coverage section, providing more detailed institution-level information for students in the province.
 
-- **v3.51** — Add Gauteng TVET colleges.
+- **v3.51** — Add Gauteng TVET colleges. This adds Gauteng TVET colleges to the Coverage page, extending the province's coverage beyond universities.
 
 - **v3.52** — Add private institutions to coverage page.
 
