@@ -25,19 +25,19 @@
     /* Main dark navy used for the header, footer and buttons. */
     --navy: #0d1b3e;
     /* A slightly lighter navy for hover states on navy elements. */
-    --navy-light: #17295c;
+    --navy-light: #0d1b3e;
     /* An even darker navy for backgrounds needing extra contrast. */
-    --navy-dark: #08142f;
+    --navy-dark: #0d1b3e;
 
     /* The bright accent yellow used for highlights and calls to action. */
     --yellow: #ffd23f;
     /* A softer yellow used on hover so it doesn't feel too harsh. */
-    --yellow-light: #ffe477;
+    --yellow-light: #ffd23f;
 
     /* A muted gold used for prices and secondary accents. */
-    --gold: #b8860b;
+    --gold: #ffd23f;
     /* A lighter gold for hover states on gold elements. */
-    --gold-light: #d9a41a;
+    --gold-light: #ffd23f;
 
     /* Neutral */
     /* Pure white, used for cards and light backgrounds. */
@@ -45,24 +45,24 @@
     /* Light grey used for alternating section backgrounds. */
     --grey: #f2f3f5;
     /* An even lighter grey for subtle backgrounds like toolbars. */
-    --grey-light: #f8f9fb;
+    --grey-light: #f2f3f5;
     /* Mid-tone grey used mainly for borders and dividers. */
-    --grey-mid: #d9dce1;
+    --grey-mid: #f2f3f5;
     /* A darker grey used for muted, secondary text. */
-    --grey-dark: #5a5f6a;
+    --grey-dark: #0d1b3e;
 
     /* Near-black, the default colour for body text. */
-    --text: #1a1a1a;
+    --text: #0d1b3e;
     /* A softer dark grey for less important text. */
-    --text-light: #444444;
+    --text-light: #0d1b3e;
 
     /* Status */
     /* Green used to signal success (e.g. confirmations). */
-    --success: #2e7d32;
+    --success: #0d1b3e;
     /* Amber used to signal a warning. */
-    --warning: #f59e0b;
+    --warning: #ffd23f;
     /* Red used to signal an error or danger state. */
-    --danger: #c62828;
+    --danger: #0d1b3e;
 
     /* Layout */
     /* The widest a page's content is allowed to stretch on large screens. */
@@ -398,7 +398,7 @@ strong {
 
 /* Inside a navy section, paragraph text switches to a soft off-white for readability. */
 .section.navy p {
-    color: #e7e9f0;
+    color: #ffffff;
 }
 
 
@@ -731,7 +731,7 @@ strong {
 /* Styles the introductory paragraph text within the hero, marked with class "lead". */
 .hero p.lead {
     /* Uses a soft off-white rather than pure white, easier on the eyes for longer text. */
-    color: #e7e9f0;
+    color: #ffffff;
 
     /* Slightly larger than standard body text since it's the hero's key message. */
     font-size: 1.1rem;
@@ -811,7 +811,7 @@ strong {
 /* Styles the paragraph text inside a split card. */
 .split-card p {
     /* Uses the same soft off-white as other hero text for readability. */
-    color: #e7e9f0;
+    color: #ffffff;
 
     /* Sets a standard body-text size for the card description. */
     font-size: 1rem;
@@ -1165,7 +1165,7 @@ strong {
 /* .card-navy is a dark variant of the card, used for featured or highlighted listings. */
 .card-navy {
     /* Off-white text for readability on the dark background. */
-    color: #e7e9f0;
+    color: #ffffff;
 
     /* Navy background instead of the default white. */
     background: var(--navy);
@@ -1181,7 +1181,7 @@ strong {
 
 /* Colours paragraph text inside a navy card to the same soft off-white as other dark-background text. */
 .card-navy p {
-    color: #e7e9f0;
+    color: #ffffff;
 }
 
 
@@ -2012,7 +2012,7 @@ footer {
     padding: 52px 0 26px;
 
     /* Sets a muted light-grey/blue default text colour for the footer. */
-    color: #cfd4e0;
+    color: #f2f3f5;
 
     /* Navy background matches the header for a consistent, bookended layout. */
     background: var(--navy);
@@ -2028,13 +2028,13 @@ footer h4 {
 
 /* Ensures footer paragraph text uses the same muted colour as the rest of the footer. */
 footer p {
-    color: #cfd4e0;
+    color: #f2f3f5;
 }
 
 /* Styles links within the footer. */
 footer a {
     /* Matches the muted footer text colour rather than the site-wide gold link colour, for a subtler look. */
-    color: #cfd4e0;
+    color: #f2f3f5;
 
     /* Removes the default underline from footer links. */
     text-decoration: none;
@@ -2470,27 +2470,27 @@ footer li {
 @media (max-width: 768px) {
     :root {
         --navy: #0d1b3e;
-        --navy-light: #17295c;
-        --navy-dark: #08142f;
+        --navy-light: #0d1b3e;
+        --navy-dark: #0d1b3e;
 
         --yellow: #ffd23f;
-        --yellow-light: #ffe477;
+        --yellow-light: #ffd23f;
 
-        --gold: #b8860b;
-        --gold-light: #d9a41a;
+        --gold: #ffd23f;
+        --gold-light: #ffd23f;
 
         --white: #ffffff;
         --grey: #f2f3f5;
-        --grey-light: #f8f9fb;
-        --grey-mid: #d9dce1;
-        --grey-dark: #5a5f6a;
+        --grey-light: #f2f3f5;
+        --grey-mid: #f2f3f5;
+        --grey-dark: #0d1b3e;
 
-        --text: #1a1a1a;
-        --text-light: #444444;
+        --text: #0d1b3e;
+        --text-light: #0d1b3e;
 
-        --success: #2e7d32;
-        --warning: #f59e0b;
-        --danger: #c62828;
+        --success: #0d1b3e;
+        --warning: #ffd23f;
+        --danger: #0d1b3e;
     }
 }
 
@@ -2594,7 +2594,7 @@ footer li {
 
     /* Switches text to pure black and a print-appropriate point size for readability on paper. */
     body {
-        color: #000;
+        color: #0d1b3e;
 
         font-size: 13pt;
     }
@@ -2621,7 +2621,7 @@ footer li {
 /* Error text shown under a field. It is empty (and takes no space) until JavaScript fills it. */
 .error-msg {
     /* Dark red, readable on white (contrast above 4.5:1). */
-    color: #b3261e;
+    color: #0d1b3e;
 
     /* Slightly smaller than body text. */
     font-size: 0.85rem;
@@ -2631,7 +2631,7 @@ footer li {
 .form-group input.input-error,
 .form-group select.input-error,
 .form-group textarea.input-error {
-    border-color: #b3261e;
+    border-color: #0d1b3e;
 }
 
 /* The box that shows the enquiry response or the compiled email. Hidden until .show is added. */
@@ -2676,9 +2676,9 @@ footer li {
 }
 
 /* Availability colours. Each is paired with text, so colour is never the only signal. */
-.status-ok  { color: #1b6e2d; }
-.status-low { color: #8a5a00; }
-.status-out { color: #b3261e; }
+.status-ok  { color: #0d1b3e; }
+.status-low { color: #0d1b3e; }
+.status-out { color: #0d1b3e; }
 
 
 /* ==========================================================
@@ -2714,7 +2714,7 @@ footer li {
 
 /* The city after an institution name is lighter text. */
 .inst-city {
-    color: #5b6470;
+    color: #0d1b3e;
     font-size: 0.9rem;
 }
 
@@ -2753,7 +2753,7 @@ body.page-loading {
     align-items: center;
     justify-content: center;
     /* Creates the dark radial background behind the loader animation. */
-    background: radial-gradient(circle at center, #0e2448 0%, #071428 65%, #040c18 100%);
+    background: radial-gradient(circle at center, #0d1b3e 0%, #0d1b3e 65%, #0d1b3e 100%);
     opacity: 1;
     /* Keeps the active loader available to the user. */
     visibility: visible;
@@ -2835,9 +2835,9 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(2) {
-    --color: #fe53bb;
+    --color: #ffd23f;
     animation-name: rotate2;
-    box-shadow: 0 0 6px rgba(254, 83, 187, 0.45);
+    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45);
 }
 
 @keyframes rotate2 {
@@ -2851,9 +2851,9 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(3) {
-    --color: #8f51ea;
+    --color: #ffffff;
     animation-name: rotate3;
-    box-shadow: 0 0 6px rgba(143, 81, 234, 0.45);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
 }
 
 @keyframes rotate3 {
@@ -2887,13 +2887,13 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(5) {
-    --color: #fe53bb;
+    --color: #ffd23f;
     animation-name: rotate5;
     width: 380px;
     height: 380px;
     border: 2px solid transparent;
     border-bottom: 16px solid var(--color);
-    box-shadow: 0 0 10px rgba(254, 83, 187, 0.4);
+    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4);
 }
 
 @keyframes rotate5 {
@@ -2907,13 +2907,13 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(6) {
-    --color: #8f51ea;
+    --color: #ffffff;
     animation-name: rotate6;
     width: 380px;
     height: 380px;
     border: 2px solid transparent;
     border-bottom: 16px solid var(--color);
-    box-shadow: 0 0 10px rgba(143, 81, 234, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 @keyframes rotate6 {
@@ -2927,11 +2927,11 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(7) {
-    --color: #0044ff;
+    --color: #0d1b3e;
     animation-name: rotate1;
     width: 190px;
     height: 190px;
-    box-shadow: 0 0 6px rgba(0, 68, 255, 0.45);
+    box-shadow: 0 0 6px rgba(13, 27, 62, 0.45);
 }
 
 /* Pulsing nucleus animation */
@@ -2941,13 +2941,13 @@ body.page-loading {
         transform: translate(-50%, -50%) scale(1);
         box-shadow:
             0 0 20px rgba(255, 210, 63, 0.8),
-            0 0 40px rgba(254, 83, 187, 0.6);
+            0 0 40px rgba(255, 210, 63, 0.6);
     }
     50% {
         transform: translate(-50%, -50%) scale(1.22);
         box-shadow:
             0 0 30px rgba(255, 210, 63, 1),
-            0 0 60px rgba(254, 83, 187, 0.85);
+            0 0 60px rgba(255, 210, 63, 0.85);
     }
 }
 
@@ -2955,11 +2955,11 @@ body.page-loading {
     /* Sets the nucleus size at the centre of the loader. */
     width: 22px;
     height: 22px;
-    background: radial-gradient(circle, var(--yellow), #fe53bb);
+    background: radial-gradient(circle, var(--yellow), #ffd23f);
     border-radius: 50%;
     box-shadow:
         0 0 20px rgba(255, 210, 63, 0.8),
-        0 0 40px rgba(254, 83, 187, 0.6);
+        0 0 40px rgba(255, 210, 63, 0.6);
     position: absolute;
     top: 50%;
     left: 50%;
