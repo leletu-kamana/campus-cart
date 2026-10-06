@@ -402,115 +402,115 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.19** — Added an explicit form ID to the contact form in `pages/contact.html` and disabled native browser validation so custom form handling can target the form reliably.
 - **v3.20** — Merged the recent main-branch development history after the new coverage, navigation, SEO, form and README changes. 
 
-- **v3.21** — Clarify contact form validation config. Commit: `7e8a58d`.
+- **v3.21** — Clarify contact form validation config.
 
-- **v3.22** — Remove redundant contact form comments. Commit: `62f18d6`.
+- **v3.22** — Remove redundant contact form comments.
 
-- **v3.23** — Improve contact form accessibility. Commit: `04407ff`.
+- **v3.23** — Improve contact form accessibility.
 
-- **v3.24** — Improve contact phone field. Commit: `4ad9883`.
+- **v3.24** — Improve contact phone field.
 
-- **v3.25** — Remove redundant contact form comments. Commit: `8f9ae3e`.
+- **v3.25** — Remove redundant contact form comments.
 
-- **v3.26** — Improve contact form validation. Commit: `e2acab7`.
+- **v3.26** — Improve contact form validation.
 
-- **v3.27** — Add contact form preview and hub updates. Commit: `20f43ab`.
+- **v3.27** — Add contact form preview and hub updates.
 
-- **v3.28** — Refresh contact collection hubs. Commit: `f2b05ee`.
+- **v3.28** — Refresh contact collection hubs.
 
-- **v3.29** — Add regional pickup locations to contact page. Commit: `0f95251`.
+- **v3.29** — Add regional pickup locations to contact page.
 
-- **v3.30** — Load contact form script. Commit: `d4928b0`.
+- **v3.30** — Load contact form script.
 
-- **v3.31** — Add validation and coverage page styles. Commit: `5e1a5cf`.
+- **v3.31** — Add validation and coverage page styles.
 
-- **v3.32** — Add Campus-Cart page loader. Commit: `eef8770`.
+- **v3.32** — Add Campus-Cart page loader.
 
-- **v3.33** — Add coverage page. Commit: `28ed409`.
+- **v3.33** — Add coverage page.
 
-- **v3.34** — Add SEO metadata to coverage page. Commit: `a47d2ab`.
+- **v3.34** — Add SEO metadata to coverage page.
 
-- **v3.35** — Add province navigation to coverage page. Commit: `990233a`.
+- **v3.35** — Add province navigation to coverage page.
 
-- **v3.36** — Add coverage page hero section. Commit: `866ccfd`.
+- **v3.36** — Add coverage page hero section.
 
-- **v3.37** — Add WhatsApp contact to coverage page. Commit: `25ccbb2`.
+- **v3.37** — Add WhatsApp contact to coverage page.
 
-- **v3.38** — Add footer copyright to coverage page. Commit: `7565e4f`.
+- **v3.38** — Add footer copyright to coverage page.
 
-- **v3.39** — Load shared scripts on coverage page. Commit: `faee72c`.
+- **v3.39** — Load shared scripts on coverage page.
 
-- **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart. Commit: `07bac34`.
+- **v3.40** — Merge branch 'main' of https://github.com/leletu-kamana/campus-cart.
 
-- **v3.41** — Add institution search to coverage page. Commit: `d17806f`.
+- **v3.41** — Add institution search to coverage page.
 
-- **v3.42** — Add Eastern Cape coverage section. Commit: `3511282`.
+- **v3.42** — Add Eastern Cape coverage section.
 
-- **v3.43** — Add public university coverage. Commit: `3b85012`.
+- **v3.43** — Add public university coverage.
 
-- **v3.44** — Add Eastern Cape TVET colleges. Commit: `e03db5c`.
+- **v3.44** — Add Eastern Cape TVET colleges.
 
-- **v3.45** — Add private institutions to coverage. Commit: `04bcdcc`.
+- **v3.45** — Add private institutions to coverage.
 
-- **v3.46** — Add Free State delivery coverage. Commit: `4feb5e4`.
+- **v3.46** — Add Free State delivery coverage.
 
-- **v3.47** — Add public universities to coverage page. Commit: `39954e6`.
+- **v3.47** — Add public universities to coverage page.
 
-- **v3.48** — Add public TVET colleges to coverage. Commit: `3d65359`.
+- **v3.48** — Add public TVET colleges to coverage.
 
-- **v3.49** — Add private institutions and Gauteng coverage. Commit: `f2e9d8b`.
+- **v3.49** — Add private institutions and Gauteng coverage.
 
-- **v3.50** — Add public universities to coverage page. Commit: `533abb9`.
+- **v3.50** — Add public universities to coverage page.
 
-- **v3.51** — Add Gauteng TVET colleges. Commit: `77a8915`.
+- **v3.51** — Add Gauteng TVET colleges.
 
-- **v3.52** — Add private institutions to coverage page. Commit: `e354fb9`.
+- **v3.52** — Add private institutions to coverage page.
 
-- **v3.53** — Add KwaZulu-Natal coverage. Commit: `15f8955`.
+- **v3.53** — Add KwaZulu-Natal coverage.
 
-- **v3.54** — Add public universities to coverage list. Commit: `30303e2`.
+- **v3.54** — Add public universities to coverage list.
 
-- **v3.55** — Expand KZN institution coverage. Commit: `655e772`.
+- **v3.55** — Expand KZN institution coverage.
 
-- **v3.56** — Add private institutions to coverage page. Commit: `c86fd82`.
+- **v3.56** — Add private institutions to coverage page.
 
-- **v3.57** — Add Limpopo delivery coverage. Commit: `a6569a2`.
+- **v3.57** — Add Limpopo delivery coverage.
 
-- **v3.58** — Add public university coverage entries. Commit: `6e1a717`.
+- **v3.58** — Add public university coverage entries.
 
-- **v3.59** — Add public TVET colleges to coverage. Commit: `5673070`.
+- **v3.59** — Add public TVET colleges to coverage.
 
-- **v3.60** — Add private institution to coverage. Commit: `ae53d89`.
+- **v3.60** — Add private institution to coverage.
 
-- **v3.61** — Add Mpumalanga delivery coverage. Commit: `da95be0`.
+- **v3.61** — Add Mpumalanga delivery coverage.
 
-- **v3.62** — Add Mpumalanga university listing. Commit: `cc45cb7`.
+- **v3.62** — Add Mpumalanga university listing.
 
-- **v3.63** — Add Mpumalanga TVET colleges. Commit: `d96f40e`.
+- **v3.63** — Add Mpumalanga TVET colleges.
 
-- **v3.64** — Add private institutions to coverage page. Commit: `9c560b9`.
+- **v3.64** — Add private institutions to coverage page.
 
-- **v3.65** — Add Northern Cape coverage section. Commit: `c921f14`.
+- **v3.65** — Add Northern Cape coverage section.
 
-- **v3.66** — Add public institutions to coverage. Commit: `de33f79`.
+- **v3.66** — Add public institutions to coverage.
 
-- **v3.67** — Add private institutions to coverage list. Commit: `6eec325`.
+- **v3.67** — Add private institutions to coverage list.
 
-- **v3.68** — Add North West coverage. Commit: `4736164`.
+- **v3.68** — Add North West coverage.
 
-- **v3.69** — Add public institutions to coverage list. Commit: `625a5be`.
+- **v3.69** — Add public institutions to coverage list.
 
-- **v3.70** — Add private institutions to coverage. Commit: `59fa4f8`.
+- **v3.70** — Add private institutions to coverage.
 
-- **v3.71** — Add Western Cape delivery coverage. Commit: `7515d8d`.
+- **v3.71** — Add Western Cape delivery coverage.
 
-- **v3.72** — Add public university coverage entries. Commit: `85cdc16`.
+- **v3.72** — Add public university coverage entries.
 
-- **v3.73** — Add public TVET colleges to coverage. Commit: `06b6829`.
+- **v3.73** — Add public TVET colleges to coverage.
 
-- **v3.74** — Add private institutions to coverage list. Commit: `411422f`.
+- **v3.74** — Add private institutions to coverage list.
 
-- **v3.75** — Add national private providers section. Commit: `f07256c`.
+- **v3.75** — Add national private providers section.
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
