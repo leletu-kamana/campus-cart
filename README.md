@@ -470,7 +470,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.54** — Add public universities to coverage list. This adds public universities to the KwaZulu-Natal coverage list, giving the province institution-specific information.
 
-- **v3.55** — Expand KZN institution coverage.
+- **v3.55** — Expand KZN institution coverage. This expands KwaZulu-Natal institution coverage, adding more tertiary institutions to the province's section.
 
 - **v3.56** — Add private institutions to coverage page.
 
