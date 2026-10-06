@@ -450,7 +450,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.44** — Add Eastern Cape TVET colleges. This adds Eastern Cape TVET colleges to the coverage information, extending the page beyond universities to include vocational and technical institutions.
 
-- **v3.45** — Add private institutions to coverage.
+- **v3.45** — Add private institutions to coverage. This adds private institutions to the Eastern Cape coverage information, giving students at private providers a dedicated place in the coverage list.
 
 - **v3.46** — Add Free State delivery coverage.
 
