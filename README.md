@@ -518,6 +518,8 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.78** — Add private institutions to Northern Cape coverage. This adds ATTI Kimberley and Qualitas Career Academy to the Northern Cape private-institution section. The change broadens the province's coverage beyond public providers and TVET colleges, giving students at private institutions relevant institution-level information.
 
+- **v3.79** — Add North West coverage. This introduces a North West province section to the Coverage page, including the standard delivery timing and a Potchefstroom collection hub. The addition continues Campus-Cart's province-by-province expansion and provides a defined delivery and collection point for students in the region.
+
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
 
