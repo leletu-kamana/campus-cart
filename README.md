@@ -452,7 +452,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.45** — Add private institutions to coverage. This adds private institutions to the Eastern Cape coverage information, giving students at private providers a dedicated place in the coverage list.
 
-- **v3.46** — Add Free State delivery coverage.
+- **v3.46** — Add Free State delivery coverage. This adds Free State delivery coverage, extending the geographic scope of Campus-Cart beyond the Eastern Cape.
 
 - **v3.47** — Add public universities to coverage page.
 
