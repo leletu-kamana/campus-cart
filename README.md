@@ -89,17 +89,34 @@ Add the genuine desktop browser screenshots to `assets/images/screenshots/` usin
 
 ### Mobile Website Screenshots
 
-Add the genuine mobile browser screenshots to `assets/images/screenshots/` using these filenames:
+Add the genuine mobile browser screenshots to `assets/images/screenshots/` using these filenames. The screenshots are displayed **side by side in a horizontal gallery** so the mobile evidence is aligned consistently in the README.
 
-![Campus-Cart mobile screenshot 1](assets/images/screenshots/mobile-01.png)
-
-![Campus-Cart mobile screenshot 2](assets/images/screenshots/mobile-02.png)
-
-![Campus-Cart mobile screenshot 3](assets/images/screenshots/mobile-03.png)
-
-![Campus-Cart mobile screenshot 4](assets/images/screenshots/mobile-04.png)
-
-![Campus-Cart mobile screenshot 5](assets/images/screenshots/mobile-05.png)
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/images/screenshots/mobile-01.png" alt="Campus-Cart mobile screenshot 1" width="180">
+    </td>
+    <td align="center">
+      <img src="assets/images/screenshots/mobile-02.png" alt="Campus-Cart mobile screenshot 2" width="180">
+    </td>
+    <td align="center">
+      <img src="assets/images/screenshots/mobile-03.png" alt="Campus-Cart mobile screenshot 3" width="180">
+    </td>
+    <td align="center">
+      <img src="assets/images/screenshots/mobile-04.png" alt="Campus-Cart mobile screenshot 4" width="180">
+    </td>
+    <td align="center">
+      <img src="assets/images/screenshots/mobile-05.png" alt="Campus-Cart mobile screenshot 5" width="180">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Mobile 1</strong></td>
+    <td align="center"><strong>Mobile 2</strong></td>
+    <td align="center"><strong>Mobile 3</strong></td>
+    <td align="center"><strong>Mobile 4</strong></td>
+    <td align="center"><strong>Mobile 5</strong></td>
+  </tr>
+</table>
 
 > **Screenshot requirement:** Screenshot files must be captured from the actual rendered Campus-Cart website in a browser. Do not use planning wireframes, generated mock-ups or individual project images as substitutes for website screenshots. Upload the screenshot files to `assets/images/screenshots/` with the matching filenames so the README images display correctly.
 
