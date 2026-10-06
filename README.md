@@ -402,7 +402,7 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.19** — Added an explicit form ID to the contact form in `pages/contact.html` and disabled native browser validation so custom form handling can target the form reliably.
 - **v3.20** — Merged the recent main-branch development history after the new coverage, navigation, SEO, form and README changes. 
 
-- **v3.21** — Clarify contact form validation config.
+- **v3.21** — Clarify contact form validation config. This documents the contact form configuration in `pages/contact.html`, explaining the purpose of `novalidate` and the `data-mailto` attribute so the custom `forms.js` handling is easier to understand and maintain.
 
 - **v3.22** — Remove redundant contact form comments.
 
