@@ -159,6 +159,9 @@
                         <button class="btn" type="submit">Create email</button>
                         <p class="hint">We build the email from your answers. You then send it from your own email app.</p>
                     </form>
+
+                    <!-- forms.js writes the compiled email (To, Subject, Body) and the send link into this box. -->
+                    <div id="contact-preview" class="form-result" aria-live="polite"></div>
                 </div>
 
                 <!-- This div contains additional contact information beside the form.
@@ -249,7 +252,7 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="strict-origin-when-cross-origin"
-                        alt="Static illustrated map of Campus-Cart office and collection locations in South Africa"
+                        alt="Map of South Africa showing Campus-Cart collection hubs"
                         loading="lazy"
                         >
                     </iframe>
@@ -261,29 +264,15 @@
 
                 <!-- grid-4 creates a four-column layout for the location cards.
                      The inline style adds 28 pixels of top margin to this container. -->
-                <div class="grid grid-4" style="margin-top:28px">
-
-                    <!-- <article> represents a self-contained piece of content.
-                         Here it is used for an individual location card. -->
+                <!-- One collection hub per province (ten hubs, because Gauteng has two). Full institution list is on coverage.html. -->
+                <div class="grid grid-3" style="margin-top:28px">
                     <article class="card">
                         <div class="card-body">
-
-                            <!-- badge-new is a CSS class used to identify the head office visually.
-                                 The span acts as a small label above the location name. -->
-                            <span class="badge badge-new">Head office</span>
-
-                            <!-- h3 identifies the name of the first location.
-                                 It acts as the heading for this individual article. -->
-                            <h3>Pretoria CBD</h3>
-
-                            <!-- <br> forces the opening hours onto a new line.
-                                 This keeps the address and operating hours visually separated. -->
-                            <p>128 Lynnwood Road, Hatfield, Pretoria, 0083<br>Mon–Fri 09:00–17:00</p>
+                            <span class="badge">Collection hub</span>
+                            <h3>Gqeberha, Eastern Cape</h3>
+                            <p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
                         </div>
                     </article>
-
-                    <!-- This article contains the Johannesburg collection point.
-                         The card classes control its appearance through CSS. -->
                     <article class="card">
                         <div class="card-body">
 
