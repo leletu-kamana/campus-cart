@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leletu-kamana.github.io/campus-cart/seo/sitemap.xml
+Sitemap: https://leletu-kamana.github.io/campus-cart/sitemap.xml
