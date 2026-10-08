@@ -376,11 +376,16 @@
           <div class="toolbar">
 
             <!-- This field provides keyword search across product names, categories, conditions and descriptions. -->
-            <div class="field">
+            <div class="field search-field">
               <!-- Connects the label to the keyword search input for accessibility. -->
               <label for="product-search">Search products</label>
-              <!-- JavaScript reads this input and updates the product results as the user types. -->
-              <input id="product-search" type="search" placeholder="Search by product, category or keyword" autocomplete="off">
+              <!-- Groups the search input and button into one responsive control. -->
+              <div class="search-control">
+                <!-- JavaScript reads this value when the user presses the Search button. -->
+                <input id="product-search" type="search" placeholder="Search by product, category or keyword" autocomplete="off">
+                <!-- Submits the keyword search without requiring a live search while typing. -->
+                <button class="btn btn-sm search-btn" id="product-search-btn" type="button">Search</button>
+              </div>
             </div>
 
             <!-- field groups a label and its related form control. -->
