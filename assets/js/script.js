@@ -529,7 +529,23 @@ function initNav() {
         }
         }
         [cat, cond, sort].forEach(function (el) { el.addEventListener("change", render); });
-        if (search) { search.addEventListener("input", render); }
+
+        // Searches only when the user presses the Search button.
+        var searchButton = document.getElementById("product-search-btn");
+        if (searchButton) {
+            searchButton.addEventListener("click", render);
+        }
+
+        // Also allows the Enter key to submit the search from the keyboard.
+        if (search) {
+            search.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    render();
+                }
+            });
+        }
+
         render();
     }
 
