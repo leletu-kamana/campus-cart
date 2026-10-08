@@ -1326,6 +1326,31 @@ strong {
     gap: 6px;
 }
 
+/* Gives the keyword search field enough space on desktop without forcing the other controls off-screen. */
+.search-field {
+    flex: 2 1 280px;
+}
+
+/* Places the search input and button beside each other on larger screens. */
+.search-control {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+}
+
+/* Lets the search input use the available horizontal space beside the button. */
+.search-control input {
+    flex: 1 1 auto;
+}
+
+/* Keeps the Search button compact on desktop. */
+.search-btn {
+    width: auto;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
 /* Styles the text label above a form field. */
 .field label {
     /* Navy label text ties it to the brand's heading colour. */
@@ -2352,6 +2377,16 @@ footer li {
 
     /* Ensures each field takes the full toolbar width once stacked vertically. */
     .field {
+        width: 100%;
+    }
+
+    /* Stacks the search input and button so the control remains easy to use on narrow screens. */
+    .search-control {
+        flex-direction: column;
+    }
+
+    /* Makes the Search button full-width for comfortable touch interaction on phones. */
+    .search-btn {
         width: 100%;
     }
 
