@@ -503,15 +503,19 @@ function initNav() {
     function initDeals() {
         var out = document.getElementById("deals-results");
         if (!out) { return; }
+        var search = document.getElementById("product-search");
         var cat = document.getElementById("filter-category");
         var cond = document.getElementById("filter-condition");
         var sort = document.getElementById("sort-by");
         var count = document.getElementById("deals-count");
 
-        // Rebuilds the deal list whenever the selected filters or sort order changes.
+        // Rebuilds the deal list whenever the search, filters or sort order changes.
         function render() {
+        var term = search ? search.value.trim().toLowerCase() : "";
         var list = DEALS.filter(function (d) {
-            return (cat.value === "all" || d.category === cat.value) &&
+            var searchable = (d.name + " " + d.category + " " + d.condition + " " + d.desc).toLowerCase();
+            return (!term || searchable.indexOf(term) !== -1) &&
+            (cat.value === "all" || d.category === cat.value) &&
             (cond.value === "all" || d.condition === cond.value);
         });
         if (sort.value === "price-asc") { list.sort(function (a, b) { return a.price - b.price; }); }
@@ -525,6 +529,7 @@ function initNav() {
         }
         }
         [cat, cond, sort].forEach(function (el) { el.addEventListener("change", render); });
+        if (search) { search.addEventListener("input", render); }
         render();
     }
 
