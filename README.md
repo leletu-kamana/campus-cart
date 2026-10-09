@@ -397,16 +397,6 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 # Changelog
 
-- **v3.147** — Refine shared stylesheet. Applies the latest stylesheet adjustments after the search, loader and colour-contrast updates, keeping the shared visual presentation aligned with the current interface.
-- **v3.146** — Add form and coverage interactions. Adds JavaScript for enquiry/contact form validation, stock and availability calculations, delivery estimates, email composition, and accessible invalid-input feedback. Also adds search/filter behaviour to the Coverage page.
-- **v3.145** — Add South African coverage dataset. Adds province-level delivery lead times, collection hubs and institution lists for all nine provinces, plus national private-provider data used by the coverage and enquiry/delivery-estimate features.
-- **v3.144** — Improve colour tokens and accessibility contrast. Expands the navy, neutral and status colour palette and applies more consistent colours to text, form states, the footer and loader styling to improve readability and contrast.
-- **v3.143** — Restore the intended CSS and JavaScript versions. Restores assets/css/styles.css to the requested historical version from commit 45b4590 and assets/js/script.js to the version from commit ce86bf9, returning the loader and script behaviour to the selected baseline.
-- **v3.142** — Correct and revert loader centring changes. Adjusts the orbital loader's centring and animation, then reverts the later centring change to preserve the intended loader appearance.
-- **v3.141** — Improve responsive product search controls. Refines the product search layout so the input and Search button remain usable across desktop and mobile viewport sizes.
-
-## Earlier Development History
-
 - **v0.1** — Initial flat HTML/CSS/JS project structure created per assignment Section 4.2 (`index.html`, `about.html`, `products.html`, `enquiry.html`, `contact.html`, plus `css/`, `js/`, `images/`).
 - **v0.2** — Added `account.html` as a documented additional page (Student/Parent paths, Order Summary).
 - **v0.3** — Consolidated Shop, Deals & Gallery, Parent Hub, Product Detail, and Sell With Us into a single `products.html` using in-page anchors, reducing total file count while keeping all planned content.
@@ -700,6 +690,14 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - **v3.139** — Update product map location. Updates the embedded Google Map on the Products page to the University of Pretoria location, aligning the displayed map with the intended store/business location.
 
 - **v3.140** — Merge latest main branch history. Records the merge of the latest `main` branch history after the recent screenshot, colour-scheme and map-location updates, preserving the combined project state.
+
+- **v3.147** — Refine shared stylesheet. Applies the latest stylesheet adjustments after the search, loader and colour-contrast updates, keeping the shared visual presentation aligned with the current interface.
+- **v3.146** — Add form and coverage interactions. Adds JavaScript for enquiry/contact form validation, stock and availability calculations, delivery estimates, email composition, and accessible invalid-input feedback. Also adds search/filter behaviour to the Coverage page.
+- **v3.145** — Add South African coverage dataset. Adds province-level delivery lead times, collection hubs and institution lists for all nine provinces, plus national private-provider data used by the coverage and enquiry/delivery-estimate features.
+- **v3.144** — Improve colour tokens and accessibility contrast. Expands the navy, neutral and status colour palette and applies more consistent colours to text, form states, the footer and loader styling to improve readability and contrast.
+- **v3.143** — Restore the intended CSS and JavaScript versions. Restores assets/css/styles.css to the requested historical version from commit 45b4590 and assets/js/script.js to the version from commit ce86bf9, returning the loader and script behaviour to the selected baseline.
+- **v3.142** — Correct and revert loader centring changes. Adjusts the orbital loader's centring and animation, then reverts the later centring change to preserve the intended loader appearance.
+- **v3.141** — Improve responsive product search controls. Refines the product search layout so the input and Search button remain usable across desktop and mobile viewport sizes.
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
