@@ -2836,12 +2836,13 @@ body.page-loading {
    Adaptive 3D orbital rings with central glowing nucleus.
    ---------------------------------------------------------- */
 .page-loader-visual .loader {
-    /* Centres the animated orbital loader elements. */
+    /* Keeps the orbital rings centred without overriding their 3D transforms. */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: ccPulse 2s infinite ease-in-out;
+    /* The original pulse keyframes translate elements and were moving the entire
+       loader away from the centre. Only the nucleus should pulse. */
     transform: scale(0.82);
     transform-origin: center center;
 }
