@@ -503,19 +503,15 @@ function initNav() {
     function initDeals() {
         var out = document.getElementById("deals-results");
         if (!out) { return; }
-        var search = document.getElementById("product-search");
         var cat = document.getElementById("filter-category");
         var cond = document.getElementById("filter-condition");
         var sort = document.getElementById("sort-by");
         var count = document.getElementById("deals-count");
 
-        // Rebuilds the deal list whenever the search, filters or sort order changes.
+        // Rebuilds the deal list whenever the selected filters or sort order changes.
         function render() {
-        var term = search ? search.value.trim().toLowerCase() : "";
         var list = DEALS.filter(function (d) {
-            var searchable = (d.name + " " + d.category + " " + d.condition + " " + d.desc).toLowerCase();
-            return (!term || searchable.indexOf(term) !== -1) &&
-            (cat.value === "all" || d.category === cat.value) &&
+            return (cat.value === "all" || d.category === cat.value) &&
             (cond.value === "all" || d.condition === cond.value);
         });
         if (sort.value === "price-asc") { list.sort(function (a, b) { return a.price - b.price; }); }
@@ -529,23 +525,6 @@ function initNav() {
         }
         }
         [cat, cond, sort].forEach(function (el) { el.addEventListener("change", render); });
-
-        // Searches only when the user presses the Search button.
-        var searchButton = document.getElementById("product-search-btn");
-        if (searchButton) {
-            searchButton.addEventListener("click", render);
-        }
-
-        // Also allows the Enter key to submit the search from the keyboard.
-        if (search) {
-            search.addEventListener("keydown", function (event) {
-                if (event.key === "Enter") {
-                    event.preventDefault();
-                    render();
-                }
-            });
-        }
-
         render();
     }
 
