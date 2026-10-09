@@ -2848,9 +2848,23 @@ body.page-loading {
     justify-content: center;
     align-items: center;
     position: relative;
-    animation: ccPulse 2s infinite ease-in-out;
-    transform: scale(0.82);
+    /* Stores the loader size so the animation and the media queries share one value. */
+    --loader-scale: 0.82;
+    /* Uses its own keyframes so the pulse keeps the scale instead of overriding it. */
+    animation: ccLoaderBreathe 2s infinite ease-in-out;
+    transform: scale(var(--loader-scale));
     transform-origin: center center;
+}
+
+/* Gently grows and shrinks the whole loader around its set scale. */
+@keyframes ccLoaderBreathe {
+    0%,
+    100% {
+        transform: scale(var(--loader-scale));
+    }
+    50% {
+        transform: scale(calc(var(--loader-scale) * 1.06));
+    }
 }
 
 .page-loader-visual .ring {
@@ -3064,7 +3078,7 @@ body.page-loading {
     }
 
     .page-loader-visual .loader {
-        transform: scale(0.64);
+        --loader-scale: 0.64;
     }
 
     .page-loader-brand {
@@ -3080,23 +3094,31 @@ body.page-loading {
     }
 
     .page-loader-visual .loader {
-        transform: scale(0.52);
+        --loader-scale: 0.52;
     }
 }
 
-/* Accessibility: disables rotation and reduces transitions for reduced-motion users */
+/* Accessibility: reduced-motion users keep a calm, slow loader instead of a frozen one.
+   The pulsing and scaling are removed, but the rings still turn slowly so the
+   loader clearly shows that the page is working. */
 @media (prefers-reduced-motion: reduce) {
     #page-loader {
         transition: opacity 0.05s ease, visibility 0.05s ease;
     }
 
     .page-loader-visual .loader,
-    .page-loader-visual .nucleus,
-    .page-loader-visual .ring {
+    .page-loader-visual .nucleus {
         animation: none !important;
     }
 
     .page-loader-visual .nucleus {
         transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Section 30 forces every animation to run once for 0.01ms, so the loader rings
+       must override both values here or they would stop after a single turn. */
+    .page-loader-visual .ring {
+        animation-duration: 4s !important;
+        animation-iteration-count: infinite !important;
     }
 }
