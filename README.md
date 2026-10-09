@@ -397,6 +397,16 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 # Changelog
 
+## Recent Updates — 8 October 2026
+
+- **Search field added to Part 3 shop controls** — Added a product-search input to the shop controls so visitors can enter keywords to find catalogue items.
+- **Keyword search added to catalogue filtering** — Connected keyword matching to the Part 3 catalogue filtering behaviour, helping visitors narrow products by their details.
+- **Responsive product search layout** — Improved the search controls for different viewport sizes so the search interface works more comfortably on desktop and mobile screens.
+- **Search requires an explicit button press** — Updated the interaction so visitors press the Search button to run a search instead of filtering automatically while typing.
+- **Search controls refined for responsiveness and usability** — Further adjusted the responsive search controls to keep the input and Search button usable across screen sizes.
+
+## Earlier Development History
+
 - **v0.1** — Initial flat HTML/CSS/JS project structure created per assignment Section 4.2 (`index.html`, `about.html`, `products.html`, `enquiry.html`, `contact.html`, plus `css/`, `js/`, `images/`).
 - **v0.2** — Added `account.html` as a documented additional page (Student/Parent paths, Order Summary).
 - **v0.3** — Consolidated Shop, Deals & Gallery, Parent Hub, Product Detail, and Sell With Us into a single `products.html` using in-page anchors, reducing total file count while keeping all planned content.
