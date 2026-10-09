@@ -397,13 +397,13 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 # Changelog
 
-## Recent Updates — 8 October 2026
-
-- **Search field added to Part 3 shop controls** — Added a product-search input to the shop controls so visitors can enter keywords to find catalogue items.
-- **Keyword search added to catalogue filtering** — Connected keyword matching to the Part 3 catalogue filtering behaviour, helping visitors narrow products by their details.
-- **Responsive product search layout** — Improved the search controls for different viewport sizes so the search interface works more comfortably on desktop and mobile screens.
-- **Search requires an explicit button press** — Updated the interaction so visitors press the Search button to run a search instead of filtering automatically while typing.
-- **Search controls refined for responsiveness and usability** — Further adjusted the responsive search controls to keep the input and Search button usable across screen sizes.
+- **v3.147** — Refine shared stylesheet. Applies the latest stylesheet adjustments after the search, loader and colour-contrast updates, keeping the shared visual presentation aligned with the current interface.
+- **v3.146** — Add form and coverage interactions. Adds JavaScript for enquiry/contact form validation, stock and availability calculations, delivery estimates, email composition, and accessible invalid-input feedback. Also adds search/filter behaviour to the Coverage page.
+- **v3.145** — Add South African coverage dataset. Adds province-level delivery lead times, collection hubs and institution lists for all nine provinces, plus national private-provider data used by the coverage and enquiry/delivery-estimate features.
+- **v3.144** — Improve colour tokens and accessibility contrast. Expands the navy, neutral and status colour palette and applies more consistent colours to text, form states, the footer and loader styling to improve readability and contrast.
+- **v3.143** — Restore the intended CSS and JavaScript versions. Restores assets/css/styles.css to the requested historical version from commit 45b4590 and assets/js/script.js to the version from commit ce86bf9, returning the loader and script behaviour to the selected baseline.
+- **v3.142** — Correct and revert loader centring changes. Adjusts the orbital loader's centring and animation, then reverts the later centring change to preserve the intended loader appearance.
+- **v3.141** — Improve responsive product search controls. Refines the product search layout so the input and Search button remain usable across desktop and mobile viewport sizes.
 
 ## Earlier Development History
 
