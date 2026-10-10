@@ -11,7 +11,7 @@
 
     // Transition timing constants (in milliseconds)
     // Stores the duration of the loader exit transition before the browser navigates to another page.
-    var TRANSITION_OUT_TIME = 3000; // Duration of smooth exit transition before navigating
+    var TRANSITION_OUT_TIME = 1200; // Duration of smooth exit transition before navigating (kept short so pages feel quick)
     // Stores the minimum time the loader remains visible so very fast loads still look smooth.
     var MIN_LOADER_TIME = 260;     // Minimum display time for visual smoothness on fast loads
     // Stores the maximum loader time before the failsafe automatically hides it.
@@ -484,6 +484,11 @@ function initNav() {
 
     /* ---------- Deals & Gallery: client-side filter + sort ---------- */
     // Converts one catalogue object into the HTML needed for a product card.
+    // Escapes quotes and angle brackets so product text can sit safely inside an HTML attribute.
+    function attr(text) {
+        return String(text).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
     function dealCard(item) {
         var badge = item.condition === "new"
         ? '<span class="badge badge-new">New</span>'
@@ -495,7 +500,12 @@ function initNav() {
         '<h3>' + item.name + '</h3>' +
         '<p class="price">' + currency(item.price) + '</p>' +
         '<p>' + item.desc + '</p>' +
+        '<div class="card-actions">' +
         '<button class="btn btn-sm" data-add="' + item.name + '" data-price="' + item.price + '">Add to Order Summary</button>' +
+        '<button class="btn btn-sm btn-outline" type="button" data-quickview' +
+        ' data-name="' + attr(item.name) + '" data-price="' + item.price + '" data-desc="' + attr(item.desc) + '"' +
+        ' data-img="' + BASE + item.img + '" data-condition="' + item.condition + '">Quick view</button>' +
+        '</div>' +
         '</div></article>';
     }
 
@@ -507,11 +517,17 @@ function initNav() {
         var cond = document.getElementById("filter-condition");
         var sort = document.getElementById("sort-by");
         var count = document.getElementById("deals-count");
+        var search = document.getElementById("product-search");
 
         // Rebuilds the deal list whenever the selected filters or sort order changes.
         function render() {
+        // Keyword search: the typed text must appear in the name, category or description.
+        var term = search ? search.value.trim().toLowerCase() : "";
         var list = DEALS.filter(function (d) {
-            return (cat.value === "all" || d.category === cat.value) &&
+            var matchesSearch = term === "" ||
+            (d.name + " " + d.category + " " + d.desc).toLowerCase().indexOf(term) > -1;
+            return matchesSearch &&
+            (cat.value === "all" || d.category === cat.value) &&
             (cond.value === "all" || d.condition === cond.value);
         });
         if (sort.value === "price-asc") { list.sort(function (a, b) { return a.price - b.price; }); }
@@ -519,12 +535,13 @@ function initNav() {
         if (sort.value === "name") { list.sort(function (a, b) { return a.name.localeCompare(b.name); }); }
         out.innerHTML = list.length
             ? list.map(dealCard).join("")
-            : '<div class="empty-state"><h3>No matches</h3><p>Try a different category or condition.</p></div>';
+            : '<div class="empty-state"><h3>No matches</h3><p>Try a different keyword, category or condition.</p></div>';
         if (count) {
             count.textContent = list.length + " of " + DEALS.length + " deals shown";
         }
         }
         [cat, cond, sort].forEach(function (el) { el.addEventListener("change", render); });
+        if (search) { search.addEventListener("input", render); }
         render();
     }
 
@@ -732,10 +749,59 @@ function initNav() {
     }
 
     /* ---------- Printable checklist ---------- */
-    // Connects the checklist print button to the browser print dialog.
+    // Prints only the First Year Checklist, not the whole page.
+    // Clicking the button builds a clean print sheet from the checklist on the page and marks the page
+    // as "printing the checklist". The print styles in styles.css then hide everything except that sheet.
     function initPrint() {
         var btn = document.getElementById("print-checklist");
-        if (btn) { btn.addEventListener("click", function () { window.print(); }); }
+        if (!btn) { return; }
+
+        var sheet = null;
+
+        // Removes the print sheet and returns the page to normal.
+        function removeSheet() {
+            if (sheet) {
+                sheet.parentNode.removeChild(sheet);
+                sheet = null;
+            }
+            document.body.classList.remove("printing-checklist");
+        }
+
+        btn.addEventListener("click", function () {
+            removeSheet();
+
+            var source = btn.closest(".info-box").querySelector(".checklist");
+
+            sheet = document.createElement("div");
+            sheet.id = "print-sheet";
+
+            var title = document.createElement("p");
+            title.className = "print-title";
+            title.textContent = "Campus-Cart First Year Checklist";
+
+            var intro = document.createElement("p");
+            intro.textContent = "Tick off what you already own and buy only what is still missing.";
+
+            // A copy of the checklist, so the list on the page itself is left unchanged.
+            var list = source.cloneNode(true);
+            list.className = "print-list";
+
+            var source_note = document.createElement("p");
+            source_note.className = "print-note";
+            source_note.textContent = "Printed from " + window.location.href.split("#")[0];
+
+            sheet.appendChild(title);
+            sheet.appendChild(intro);
+            sheet.appendChild(list);
+            sheet.appendChild(source_note);
+            document.body.appendChild(sheet);
+            document.body.classList.add("printing-checklist");
+
+            window.print();
+        });
+
+        // Puts the page back to normal once the print dialog closes.
+        window.addEventListener("afterprint", removeSheet);
     }
 
     /* ---------- Forms: mailto hand-off only, no backend ---------- */
@@ -786,18 +852,18 @@ function initNav() {
         render();
     }
 
-    /* ---------- Boot ---------- */
-    document.addEventListener("DOMContentLoaded", function () {
-        loadSession();
-        initNav();
-        initTabs();
-        initDeals();
-        initGalleryFilter();
-        initAddButtons();
-        initProductDetail();
-        initOrderPage();
-        initAccountHash();
-        initPrint();
-        initMailForms();
-        updateCartCount();
-    });
+/* ---------- Boot ---------- */
+document.addEventListener("DOMContentLoaded", function () {
+    loadSession();
+    initNav();
+    initTabs();
+    initDeals();
+    initGalleryFilter();
+    initAddButtons();
+    initProductDetail();
+    initOrderPage();
+    initAccountHash();
+    initPrint();
+    initMailForms();
+    updateCartCount();
+});
