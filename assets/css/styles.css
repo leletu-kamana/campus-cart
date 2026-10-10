@@ -1498,7 +1498,6 @@ textarea {
     line-height: 1.5;
 }
 
-
 /* ==========================================================
    17. FORMS
    ========================================================== */
@@ -3067,6 +3066,19 @@ body.page-loading {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.015em;
+}
+
+/* Desktop only: a larger loader on wide screens.
+   The visual box grows with the loader so the title below it is not covered. */
+@media (min-width: 1025px) {
+    .page-loader-visual {
+        width: 400px;
+        height: 400px;
+    }
+
+    .page-loader-visual .loader {
+        --loader-scale: 1;
+    }
 }
 
 /* Responsive scaling for mobile and smaller tablets */
