@@ -3378,3 +3378,57 @@ body.lightbox-open {
     gap: 8px;
 }
 
+/* ---------- FAQ accordion ---------- */
+
+.accordion {
+    display: grid;
+    gap: 12px;
+}
+
+.acc-item {
+    border: 2px solid var(--navy);
+    border-radius: var(--radius);
+    background: var(--white);
+    overflow: hidden;
+}
+
+.acc-item summary {
+    position: relative;
+    padding: 16px 52px 16px 20px;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Removes the default triangle in Safari. */
+.acc-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* A plus sign that turns into a minus when the answer is open. */
+.acc-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--navy);
+}
+
+.acc-item[open] summary::after {
+    content: "\2212";
+}
+
+.acc-item summary:hover,
+.acc-item summary:focus-visible {
+    background: var(--yellow);
+    outline: none;
+}
+
+.acc-body {
+    padding: 4px 20px 18px;
+    animation: ccSlideDown 0.25s ease;
+}
+
