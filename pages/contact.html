@@ -193,34 +193,18 @@
                             </div>
                         </div>
 
-                        <!-- Creates a container used to group content and apply CSS layout or styling. -->
+                        <!-- Two rows of fields. Each field only unlocks when the one before it is filled in correctly
+                            (see setupFormGate in forms.js). The order is: topic, order reference, requested outcome, phone. -->
                         <div class="form-row">
-                            <!-- Creates a container used to group content and apply CSS layout or styling. -->
                             <div class="form-group">
-                                <!-- Creates a form label and uses for to associate it with a specific form control. -->
-                                <label for="c-phone">Phone / WhatsApp (optional)</label>
-                                <!-- Creates an input control for collecting user-entered information. -->
-                                <input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="082 000 0000">
-                                <!-- Creates an inline element used to group and style a short piece of text. -->
-                                <span class="error-msg" id="c-phone-error" role="alert"></span>
-                            </div>
-                            <!-- Creates a container used to group content and apply CSS layout or styling. -->
-                            <div class="form-group">
-                                <!-- Creates a form label and uses for to associate it with a specific form control. -->
                                 <label for="c-topic">Topic *</label>
-                                <!-- Creates a dropdown control for selecting one option. -->
                                 <select id="c-topic" name="topic" required>
-                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Order or collection question</option>
-                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Complaint or problem with an order</option>
                                     <option>Selling second-hand items</option>
-                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Parent Hub &amp; bundles</option>
-                                    <!-- Creates one selectable option inside a dropdown list. -->
                                     <option>Something else</option>
                                 </select>
-                                <!-- Creates an inline element used to group and style a short piece of text. -->
                                 <span class="error-msg" id="c-topic-error" role="alert"></span>
                             </div>
                         </div>
