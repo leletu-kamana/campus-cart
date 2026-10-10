@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Custom "page not found" page. GitHub Pages shows this file for any address that does not exist. -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found | Campus-Cart</title>
+    <meta name="description" content="This Campus-Cart page could not be found. Play a quick student essentials game or return to shopping.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#0d1b3e">
+    <link rel="stylesheet" href="https://leletu-kamana.github.io/campus-cart/assets/css/styles.css">
+    <link rel="stylesheet" href="https://leletu-kamana.github.io/campus-cart/assets/css/404.css">
+    <script src="https://leletu-kamana.github.io/campus-cart/assets/js/404.js" defer></script>
+</head>
+<body>
+    <main class="error-page">
+        <section class="section error-section" aria-labelledby="error-title">
+            <div class="wrap">
+                <div class="error-layout">
+                    <div class="error-copy">
+                        <span class="eyebrow">Error 404 · Wrong turn!</span>
+                        <h1 id="error-title">Looks like this page went missing.</h1>
+                        <p class="error-lead">The link may be old, moved, or mistyped. While you find your way back, try catching a few student essentials.</p>
+
+                        <nav class="error-actions" aria-label="Helpful links">
+                            <a class="btn" href="https://leletu-kamana.github.io/campus-cart/index.html">Go to home</a>
+                            <a class="btn btn-outline" href="https://leletu-kamana.github.io/campus-cart/pages/products.html">Shop student essentials</a>
+                            <a class="text-link" href="https://leletu-kamana.github.io/campus-cart/pages/contact.html">Need help? Contact us</a>
+                        </nav>
+                        <p class="error-hint">Tip: check the web address for spelling mistakes.</p>
+                    </div>
+
+                    <aside class="game-card" aria-labelledby="game-title">
+                        <div class="game-heading">
+                            <div>
+                                <span class="game-kicker">A tiny Campus-Cart game</span>
+                                <h2 id="game-title">Catch the essentials</h2>
+                            </div>
+                            <span class="game-icon" aria-hidden="true">🎒</span>
+                        </div>
+                        <p class="game-instructions">Move the basket to catch falling school supplies. Each item earns 1 point. Avoid missing them!</p>
+
+                        <div class="game-stats" aria-label="Game status">
+                            <div><span>Score</span><strong id="game-score">0</strong></div>
+                            <div><span>Time</span><strong><span id="game-time">30</span>s</strong></div>
+                            <div><span>Best</span><strong id="game-best">0</strong></div>
+                        </div>
+
+                        <div class="game-board-wrap">
+                            <canvas id="game-canvas" width="640" height="360" tabindex="0" role="img" aria-label="Catch the essentials game. Use the left and right arrow keys, A and D, or the controls below to move the basket.">
+                                Your browser does not support the game canvas. You can still use the links above to navigate Campus-Cart.
+                            </canvas>
+                            <div class="game-overlay" id="game-overlay">
+                                <div class="game-overlay-content">
+                                    <span class="overlay-emoji" aria-hidden="true">📚</span>
+                                    <h3 id="overlay-title">Ready to collect?</h3>
+                                    <p id="overlay-message">Catch as many falling essentials as you can in 30 seconds.</p>
+                                    <button class="btn game-start" id="game-start" type="button">Start game</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="game-controls" aria-label="Touch controls">
+                            <button class="control-button" id="move-left" type="button" aria-label="Move basket left">← Left</button>
+                            <p>Use ← → or A / D</p>
+                            <button class="control-button" id="move-right" type="button" aria-label="Move basket right">Right →</button>
+                        </div>
+                        <p class="game-status" id="game-status" aria-live="polite">Game ready. Press Start game when you are ready.</p>
+                        <div class="game-footer">
+                            <span>Quick break, then back to campus essentials.</span>
+                            <button class="game-reset-link" id="game-reset" type="button">Reset score</button>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="help-strip">
+                    <span aria-hidden="true">🧭</span>
+                    <p><strong>Still lost?</strong> Head back to the homepage or browse the products page to find what you need.</p>
+                    <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html">Browse products →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
