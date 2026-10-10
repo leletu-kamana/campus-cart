@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Starts the enquiry code only if the enquiry form is on this page.
     if (enquiryForm) {
+        loadStockFromFile();
         setupEnquiryForm(enquiryForm);
     }
 
@@ -105,6 +106,75 @@ function clearErrorsOnInput(form) {
 
 
 // ==========================================================
+// STEP-BY-STEP FORM GATE
+// ==========================================================
+
+// Stops a visitor from continuing with a form until the current field is correct.
+// "steps" is the list of fields in the order they are filled in. Each step has:
+//   input - the field,  label - its name for the status message,
+//   check - a function that returns an error message, or "" when the field is fine.
+// A field after an invalid one is locked (made inert, so it cannot be clicked or tabbed to),
+// and the submit button stays disabled until every field is valid.
+function setupFormGate(form, steps) {
+
+    const submitButton = form.querySelector("[type=submit]");
+
+    // A short message above the button tells the visitor what to do next.
+    const status = document.createElement("p");
+    status.className = "gate-status";
+    status.setAttribute("aria-live", "polite");
+    submitButton.parentNode.insertBefore(status, submitButton);
+
+    // Works out which fields are locked and whether the form can be submitted.
+    function refresh() {
+        let blockedBy = null;
+
+        steps.forEach(function (step) {
+            const group = step.input.closest(".form-group");
+
+            // Fields that are hidden right now (such as "Name of your institution") are not part of the path.
+            if (group.hidden) {
+                group.inert = false;
+                return;
+            }
+
+            // Everything after the first invalid field is locked.
+            const locked = blockedBy !== null;
+            group.inert = locked;
+            group.classList.toggle("field-locked", locked);
+
+            if (!locked && step.check() !== "") {
+                blockedBy = step;
+            }
+        });
+
+        submitButton.disabled = blockedBy !== null;
+        status.textContent = blockedBy
+            ? "To continue, please complete \u201C" + blockedBy.label + "\u201D correctly."
+            : "All details look good. You can continue.";
+    }
+
+    // Checks again whenever the visitor types, picks an option or the browser autofills.
+    form.addEventListener("input", refresh);
+    form.addEventListener("change", refresh);
+
+    // When the visitor leaves a field, its error appears straight away so they know what to fix.
+    steps.forEach(function (step) {
+        step.input.addEventListener("blur", function () {
+            const message = step.check();
+            if (message !== "") {
+                showError(step.input, message);
+            } else {
+                clearError(step.input);
+            }
+        });
+    });
+
+    refresh();
+}
+
+
+// ==========================================================
 // ENQUIRY FORM
 // ==========================================================
 
@@ -125,6 +195,32 @@ const STOCK = {
     "Two-Tier Bookshelf":         { price: 380,  stock: 1,  type: "Second-hand" },
     "Study Chair":                { price: 450,  stock: 1,  type: "Second-hand" }
 };
+
+// Loads the latest stock levels from assets/data/stock.json using AJAX (fetch),
+// so the enquiry page can be updated without editing any JavaScript.
+// If the file cannot be loaded (for example when the page is opened straight from a
+// folder instead of a web server), the built-in STOCK table above is used instead.
+function loadStockFromFile() {
+    if (typeof fetch !== "function") { return; }
+
+    fetch("../assets/data/stock.json", { cache: "no-cache" })
+        .then(function (response) {
+            if (!response.ok) { throw new Error("Stock file not found"); }
+            return response.json();
+        })
+        .then(function (data) {
+            Object.keys(data).forEach(function (name) {
+                const item = data[name];
+                // Only accept entries that have the expected number fields.
+                if (item && typeof item.price === "number" && typeof item.stock === "number") {
+                    STOCK[name] = { price: item.price, stock: item.stock, type: String(item.type) };
+                }
+            });
+        })
+        .catch(function () {
+            // Keep the built-in table. The enquiry form still works.
+        });
+}
 
 // Adds working days to a date, skipping Saturdays and Sundays (public holidays are not counted).
 function addWorkingDays(start, days) {
@@ -150,6 +246,7 @@ function getProvince(code) {
 function setupEnquiryForm(form) {
 
     // Finds the fields that the code needs to read.
+    const enquirerType = document.getElementById("enq-type");
     const name = document.getElementById("enq-name");
     const email = document.getElementById("enq-email");
     const item = document.getElementById("enq-item");
@@ -214,6 +311,43 @@ function setupEnquiryForm(form) {
     // Clears a field's error message as soon as the user edits that field.
     clearErrorsOnInput(form);
 
+    // The fields in the order the visitor fills them in. Each check returns an error message,
+    // or "" when the field is fine. The same checks lock the later fields (setupFormGate)
+    // and are used again when the form is submitted.
+    const steps = [
+        { input: enquirerType, label: "I am a", check: function () {
+            return enquirerType.value === "" ? "Please choose whether you are a student or a parent." : "";
+        } },
+        { input: name, label: "Full name", check: function () {
+            return name.value.trim().length < 2 ? "Please enter your full name (at least 2 characters)." : "";
+        } },
+        { input: email, label: "Email address", check: function () {
+            return !isValidEmail(email.value.trim()) ? "Please enter a valid email address, e.g. you@example.co.za." : "";
+        } },
+        { input: item, label: "Bundle or product", check: function () {
+            return item.value === "" ? "Please choose a bundle or product." : "";
+        } },
+        { input: quantity, label: "Quantity", check: function () {
+            const amount = Number(quantity.value);
+            return (quantity.value === "" || !Number.isInteger(amount) || amount < 1 || amount > 10) ? "Please enter a whole number from 1 to 10." : "";
+        } },
+        { input: method, label: "How do you want to get it?", check: function () {
+            return method.value === "" ? "Please choose delivery or collection." : "";
+        } },
+        { input: province, label: "Province", check: function () {
+            return province.value === "" ? "Please choose your province." : "";
+        } },
+        { input: institution, label: "Institution", check: function () {
+            return institution.value === "" ? "Please choose your institution." : "";
+        } },
+        { input: other, label: "Name of your institution", check: function () {
+            // If the institution is not on the list, the user must type its name.
+            return (institution.value === "My institution is not listed" && other.value.trim().length < 3) ? "Please type the name of your institution." : "";
+        } }
+    ];
+
+    setupFormGate(form, steps);
+
     // Runs when the user presses the submit button.
     form.addEventListener("submit", function (event) {
 
@@ -234,29 +368,13 @@ function setupEnquiryForm(form) {
             if (!firstBad) { firstBad = input; }
         }
 
-        if (name.value.trim().length < 2) {
-            fail(name, "Please enter your full name (at least 2 characters).");
-        }
-        if (!isValidEmail(email.value.trim())) {
-            fail(email, "Please enter a valid email address, e.g. you@example.co.za.");
-        }
-        if (item.value === "") {
-            fail(item, "Please choose a bundle or product.");
-        }
+        // Runs every check from the steps list. Fields that are hidden right now are skipped.
+        steps.forEach(function (step) {
+            if (step.input.closest(".form-group").hidden) { return; }
+            const message = step.check();
+            if (message !== "") { fail(step.input, message); }
+        });
         const qty = Number(quantity.value);
-        if (!Number.isInteger(qty) || qty < 1 || qty > 10) {
-            fail(quantity, "Please enter a whole number from 1 to 10.");
-        }
-        if (province.value === "") {
-            fail(province, "Please choose your province.");
-        }
-        if (institution.value === "") {
-            fail(institution, "Please choose your institution.");
-        }
-        // If the institution is not on the list, the user must type its name.
-        if (institution.value === "My institution is not listed" && other.value.trim().length < 3) {
-            fail(other, "Please type the name of your institution.");
-        }
 
         // Stops here and moves the cursor to the first problem field.
         if (!valid) {
@@ -322,13 +440,23 @@ function setupEnquiryForm(form) {
         }
 
         // Builds the pre-filled email the user can send to confirm.
-        const subject = "Campus-Cart enquiry: " + item.value;
+        // It follows a professional layout: a subject that names the request, a polite greeting,
+        // the order details, a clear request and a courteous closing.
+        const subject = "Availability Enquiry \u2013 " + item.value;
         const body =
-            "Hi Campus-Cart team,\r\n\r\n" +
-            "I would like to confirm: " + qty + " x " + item.value + " (" + formatRand(total) + ").\r\n" +
-            deliveryText + "\r\n" +
+            "Dear Campus-Cart Team,\r\n\r\n" +
+            "I am writing to enquire about the availability of the item below and, if it is available, to arrange to purchase it.\r\n\r\n" +
+            "Item: " + item.value + "\r\n" +
+            "Quantity: " + qty + "\r\n" +
+            "Estimated total: " + formatRand(total) + "\r\n" +
+            "Order method: " + deliveryText + "\r\n" +
             "Institution: " + inst.name + " (" + prov.name + ")\r\n\r\n" +
-            "Name: " + name.value.trim() + "\r\n" +
+            "Could you please confirm that the item is available and let me know the next steps for payment and " +
+            (method.value === "Delivery" ? "delivery" : "collection") + "?\r\n\r\n" +
+            "Thank you for your assistance. I look forward to your response.\r\n\r\n" +
+            "Kind regards,\r\n" +
+            name.value.trim() + "\r\n" +
+            "(" + enquirerType.value + ")\r\n" +
             "Email: " + email.value.trim();
         const mailto = "mailto:" + form.dataset.mailto +
             "?subject=" + encodeURIComponent(subject) +
@@ -368,6 +496,50 @@ function escapeHtml(text) {
 
 
 // ==========================================================
+// CONTACT EMAIL WORDING
+// ==========================================================
+
+// The answer in the "What would you like us to do?" list that needs a phone number.
+const CALL_BACK = "Call or WhatsApp me";
+
+// Turns the chosen outcome into a polite sentence for the email.
+function outcomeSentence(choice, phoneNumber) {
+    if (choice === CALL_BACK) {
+        return "I would appreciate it if you could call or WhatsApp me on " + phoneNumber + ".";
+    }
+    if (choice === "Arrange a refund") {
+        return "I would appreciate it if you could arrange a refund for me.";
+    }
+    if (choice === "Arrange a replacement or swap") {
+        return "I would appreciate it if you could arrange a replacement or swap for me.";
+    }
+    if (choice === "Update me on my order") {
+        return "I would appreciate an update on the status of my order.";
+    }
+    return "I would appreciate a reply by email with the information I have requested.";
+}
+
+// Builds a clear subject line that names the problem or request, like
+// "Complaint Regarding Order CC-1025" or "Order and Collection Query \u2013 Thandi Mokoena".
+function buildContactSubject(topicText, orderRef, fullName) {
+    const labels = {
+        "Order or collection question": "Order and Collection Query",
+        "Complaint or problem with an order": "Complaint Regarding Order",
+        "Selling second-hand items": "Second-Hand Selling Query",
+        "Parent Hub & bundles": "Parent Hub and Bundle Query",
+        "Something else": "General Query"
+    };
+    const label = labels[topicText] || "General Query";
+
+    // A complaint with an order reference reads naturally as "Complaint Regarding Order CC-1025".
+    if (topicText === "Complaint or problem with an order") {
+        return orderRef !== "" ? label + " " + orderRef : "Complaint Regarding My Order \u2013 " + fullName;
+    }
+    return label + " \u2013 " + (orderRef !== "" ? "Order " + orderRef : fullName);
+}
+
+
+// ==========================================================
 // CONTACT FORM
 // ==========================================================
 
@@ -378,10 +550,48 @@ function setupContactForm(form) {
     const email = document.getElementById("c-email");
     const phone = document.getElementById("c-phone");
     const topic = document.getElementById("c-topic");
+    const order = document.getElementById("c-order");
+    const outcome = document.getElementById("c-outcome");
     const message = document.getElementById("c-message");
     const preview = document.getElementById("contact-preview");
 
     clearErrorsOnInput(form);
+
+    // The fields in the order the visitor fills them in (see setupFormGate for how this list is used).
+    const steps = [
+        { input: name, label: "Full name", check: function () {
+            return name.value.trim().length < 2 ? "Please enter your full name (at least 2 characters)." : "";
+        } },
+        { input: email, label: "Email address", check: function () {
+            return !isValidEmail(email.value.trim()) ? "Please enter a valid email address, e.g. you@example.co.za." : "";
+        } },
+        { input: topic, label: "Topic", check: function () {
+            return topic.value === "" ? "Please choose a topic." : "";
+        } },
+        { input: order, label: "Order reference", check: function () {
+            // Optional, but if something is typed it must look like an order reference.
+            return (order.value.trim() !== "" && !/^[A-Za-z0-9#\- ]{3,30}$/.test(order.value.trim()))
+                ? "Use 3 to 30 letters, numbers, # or dashes, e.g. CC-1025." : "";
+        } },
+        { input: outcome, label: "What would you like us to do?", check: function () {
+            return outcome.value === "" ? "Please tell us what you would like us to do." : "";
+        } },
+        { input: phone, label: "Phone / WhatsApp", check: function () {
+            // A phone number is needed when the visitor asks for a call or WhatsApp message.
+            if (outcome.value === CALL_BACK && phone.value.trim() === "") {
+                return "Please enter your phone number so we can call or WhatsApp you.";
+            }
+            // Otherwise optional, but if something is typed it must look like a valid number.
+            return (phone.value.trim() !== "" && !isValidPhone(phone.value.trim()))
+                ? "Please enter a valid number, e.g. 082 000 0000 or +27 82 000 0000." : "";
+        } },
+        { input: message, label: "Message", check: function () {
+            // At least 10 characters so the message contains something useful.
+            return message.value.trim().length < 10 ? "Please type a message of at least 10 characters." : "";
+        } }
+    ];
+
+    setupFormGate(form, steps);
 
     // Runs when the user presses the submit button.
     form.addEventListener("submit", function (event) {
@@ -402,25 +612,11 @@ function setupContactForm(form) {
             if (!firstBad) { firstBad = input; }
         }
 
-        // Name: at least 2 characters.
-        if (name.value.trim().length < 2) {
-            fail(name, "Please enter your full name (at least 2 characters).");
-        }
-
-        // Email: must match the pattern.
-        if (!isValidEmail(email.value.trim())) {
-            fail(email, "Please enter a valid email address, e.g. you@example.co.za.");
-        }
-
-        // Phone: optional, but if something is typed it must look like a valid number.
-        if (phone.value.trim() !== "" && !isValidPhone(phone.value.trim())) {
-            fail(phone, "Please enter a valid number, e.g. 082 000 0000 or +27 82 000 0000.");
-        }
-
-        // Message: at least 10 characters so it contains something useful.
-        if (message.value.trim().length < 10) {
-            fail(message, "Please type a message of at least 10 characters.");
-        }
+        // Runs every check from the steps list.
+        steps.forEach(function (step) {
+            const problem = step.check();
+            if (problem !== "") { fail(step.input, problem); }
+        });
 
         // Stops here and focuses the first problem field.
         if (!valid) {
@@ -428,20 +624,43 @@ function setupContactForm(form) {
             return;
         }
 
-        // ----- Compile the validated information into an email -----
+        // ----- Compile the validated information into a professional email -----
+        // The email follows the layout of a formal message: a clear subject, a polite greeting,
+        // relevant details, a clear request and a courteous closing.
         const recipient = form.dataset.mailto;
-        const subject = form.dataset.subject + ": " + topic.value;
+        const subject = buildContactSubject(topic.value, order.value.trim(), name.value.trim());
 
-        // Lines of the email body, joined with Windows-style line breaks for email apps.
         const lines = [
-            "Name: " + name.value.trim(),
-            "Email: " + email.value.trim(),
-            "Phone: " + (phone.value.trim() || "Not provided"),
-            "Topic: " + topic.value,
+            "Dear Campus-Cart Team,",
             "",
-            "Message:",
-            message.value.trim()
+            "I am writing to you about: " + topic.value + ".",
+            ""
         ];
+
+        // The order reference is only added when the visitor gave one.
+        if (order.value.trim() !== "") {
+            lines.push("Order reference: " + order.value.trim(), "");
+        }
+
+        lines.push(
+            "Details:",
+            message.value.trim(),
+            "",
+            "Requested outcome:",
+            outcomeSentence(outcome.value, phone.value.trim()),
+            "",
+            "Thank you for your time and assistance. I look forward to your response.",
+            "",
+            "Kind regards,",
+            name.value.trim(),
+            "Email: " + email.value.trim()
+        );
+
+        // The phone number is only added when the visitor gave one.
+        if (phone.value.trim() !== "") {
+            lines.push("Phone: " + phone.value.trim());
+        }
+
         const body = lines.join("\r\n");
 
         // Builds the mailto link. encodeURIComponent makes spaces and symbols safe in a URL.
