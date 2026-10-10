@@ -166,7 +166,7 @@
 
                          <!-- <form> groups input controls that collect information from the user.
                               data-mailto and data-subject provide JavaScript with email information. -->
-                         <form id="enquiry-form" novalidate data-mailto="enquiries@campus-cart.co.za" data-subject="Campus-Cart pre-purchase enquiry">
+                         <form id="enquiry-form" action="mailto:enquiries@campus-cart.co.za" method="post" enctype="text/plain" novalidate data-mailto="enquiries@campus-cart.co.za" data-subject="Campus-Cart pre-purchase enquiry">
 
                               <!-- Each form-group holds a label, a form control and an empty <span> for its error message.
                                    JavaScript (assets/js/forms.js) fills the span when the input is not valid.
@@ -192,7 +192,7 @@
                                         <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-name">Full name *</label>
                                         <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
-                                        <input id="enq-name" name="name" type="text" required autocomplete="name" placeholder="e.g. Thandi Mokoena">
+                                        <input id="enq-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="e.g. Thandi Mokoena">
                                         <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-name-error" role="alert"></span>
                                    </div>
@@ -201,7 +201,7 @@
                                         <!-- Creates a label associated with a form control through the for attribute. -->
                                         <label for="enq-email">Email address *</label>
                                         <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
-                                        <input id="enq-email" name="email" type="email" required autocomplete="email" placeholder="you@example.co.za">
+                                        <input id="enq-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.co.za">
                                         <!-- Creates an inline element used to group and style a short piece of text. -->
                                         <span class="error-msg" id="enq-email-error" role="alert"></span>
                                    </div>
@@ -316,7 +316,7 @@
                                    <!-- Creates a label associated with a form control through the for attribute. -->
                                    <label for="enq-other">Name of your institution *</label>
                                    <!-- Creates a form input control; its attributes define the type, identifier, validation and other input behaviour. -->
-                                   <input id="enq-other" name="otherInstitution" type="text" placeholder="e.g. Your private college or campus name">
+                                   <input id="enq-other" name="otherInstitution" type="text" minlength="3" maxlength="100" placeholder="e.g. Your private college or campus name">
                                    <!-- Creates an inline element used to group and style a short piece of text. -->
                                    <span class="error-msg" id="enq-other-error" role="alert"></span>
                               </div>
