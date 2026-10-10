@@ -3134,3 +3134,83 @@ body.page-loading {
         animation-iteration-count: infinite !important;
     }
 }
+
+
+/* ==========================================================
+   PART 3 INTERACTIVE FEATURES
+   Hub map, gallery lightbox, product quick-view modal,
+   FAQ accordion and scroll reveal animation.
+   ========================================================== */
+
+/* Elements hidden with the hidden attribute must stay hidden even though the
+   rules below give them a display value. */
+.lightbox[hidden],
+.modal-backdrop[hidden],
+.lb-btn[hidden] {
+    display: none !important;
+}
+
+/* Page title that uses an h1 for SEO but keeps the size of a section heading. */
+.section-head h1 {
+    margin-bottom: 16px;
+    color: var(--navy);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+/* ---------- Interactive hub map (Leaflet) ---------- */
+
+/* Picker above the map for keyboard and screen-reader users. */
+.map-picker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.map-picker label {
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.map-picker select {
+    width: auto;
+    flex: 1 1 260px;
+    max-width: 420px;
+}
+
+/* The map box. A fixed height is needed because Leaflet draws into it. */
+.hub-map {
+    width: 100%;
+    height: 460px;
+    border: 3px solid var(--navy);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--grey);
+    z-index: 0;
+}
+
+/* Message shown if the map library could not load. */
+.hub-map.map-unavailable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    height: auto;
+    min-height: 120px;
+    text-align: center;
+    color: var(--navy);
+}
+
+.map-popup p {
+    margin: 4px 0 0;
+    font-size: 0.9rem;
+}
+
+/* Shorter map on phones so the page can still be scrolled past it. */
+@media (max-width: 600px) {
+    .hub-map {
+        height: 340px;
+    }
+}
+
