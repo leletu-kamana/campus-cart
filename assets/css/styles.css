@@ -3432,3 +3432,85 @@ body.lightbox-open {
     animation: ccSlideDown 0.25s ease;
 }
 
+/* ---------- Scroll reveal ---------- */
+
+/* Cards start faint only when JavaScript is running, so nothing is ever hidden without it. */
+.js-reveal .reveal:not(.is-visible) {
+    opacity: 0;
+}
+
+.js-reveal .reveal.is-visible {
+    animation: ccReveal 0.5s ease backwards;
+}
+
+@keyframes ccReveal {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes ccFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes ccPopIn {
+    from { opacity: 0; transform: translateY(12px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes ccSlideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* Profile image on the left, information on the right */
+.author-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    text-align: left;
+}
+
+.author-image {
+    flex: 0 0 180px;
+}
+
+.author {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--navy);
+    overflow: hidden;
+}
+
+.author-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.author-info h3 {
+    margin-top: 0;
+}
+
+/* Stack the image and information on smaller screens */
+@media (max-width: 600px) {
+    .author-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .author-image {
+        flex-basis: auto;
+    }
+
+    .author {
+        width: 140px;
+        height: 140px;
+    }
+}
+
