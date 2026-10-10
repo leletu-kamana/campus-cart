@@ -57,7 +57,10 @@ Parents and guardians who help students prepare for registration and the start o
 |---|---|
 | HTML5 | Page structure, semantic elements, forms, navigation, tables and content. |
 | CSS3 | Layout, colours, typography, cards, buttons and responsive design. |
-| JavaScript | Planned client-side interaction such as tabs, filters and order-summary behaviour. |
+| JavaScript | Client-side interaction: tabs, search, filtering and sorting, order summary, form validation, lightbox, quick-view modal, accordion, hub map and scroll animation. |
+| Leaflet 1.9.4 | Open-source JavaScript map library (BSD-2-Clause licence). Stored locally in `assets/vendor/leaflet/` so no third-party script is loaded from another site. |
+| OpenStreetMap | Map tiles and data for the collection-hub map, credited on the map. |
+| Fetch API (AJAX) | The enquiry form loads stock levels from `assets/data/stock.json` without reloading the page. |
 | Git | Version control. |
 | GitHub | Repository and version management. |
 
@@ -228,24 +231,71 @@ The main CSS features used in Campus-Cart include:
 
 The main aim of Part 2 is to turn the HTML structure from Part 1 into a consistent and responsive website design while keeping the CSS organised and reusable. The stylesheet uses reusable variables and responsive layout rules to keep the design consistent across different screen sizes. Responsive web design principles are relevant because the layout must adapt to different devices and viewport sizes (Marcotte, 2011).
 
-## Part 3 – Interactive Functionality (Upcoming Feature)
-Part 3 will focus on the **interactive functionality** that will be added to Campus-Cart in a future development stage. This section is currently an **upcoming feature** and should not be treated as completed functionality yet.
+## Part 3 – Interactive Functionality, SEO, Forms and Publishing
+Part 3 turns Campus-Cart from a styled set of pages into a working, searchable and published website. Every feature below supports the storyline of the site: a student or parent finds essentials, checks price and delivery for their institution, and collects the order from a hub.
 
-The planned JavaScript features include:
-- Shop New / Second-Hand tab switching.
-- Product category and condition filtering.
-- Product sorting.
-- Adding products to the Order Summary.
-- Updating quantities and subtotals.
-- Calculating the order total.
-- Clearing the Order Summary.
-- Moving to the delivery/address step.
-- Navigation menu interaction on smaller screens. (Available Feature)
-- Printing the Parent Hub checklist.
+### JavaScript Features
+| Feature | Where | What it does for the visitor | Files |
+|---|---|---|---|
+| Interactive map | `contact.html` | Shows every collection hub as a pin on a Leaflet map. Clicking a pin shows the address and opening hours. A dropdown jumps to a hub for keyboard users. The map resizes for phones and the scroll wheel only zooms after the map is clicked. | `features.js`, `data.js`, `vendor/leaflet/` |
+| Image lightbox | Every page with photos (`index.html`, `about.html`, `products.html`) | Clicking or pressing Enter on any content photo opens a larger image with caption, previous, next and close controls. Arrow keys, Esc, the dark background and swipe gestures also work. Product cards that JavaScript adds later are included. Logos, icons, linked images and map tiles are left out. | `features.js` |
+| Quick-view modal | `products.html` | Opens a deal in a dialog with a larger photo, description and an Add to Order Summary button. Focus stays inside the dialog and returns to the button when it closes. | `features.js`, `script.js` |
+| Accordion | `products.html` (Student and Parent FAQ) | Questions open and close with a click. Only one answer in a group stays open. Built on the native `<details>` element so it still works without JavaScript. | `features.js` |
+| Dynamic content | `products.html` | The deal cards are generated from a JavaScript array rather than typed into the HTML. | `script.js` |
+| Search, filter and sort | `products.html` | Keyword search across name, category and description, plus category and condition filters and sorting by price or name. A counter shows how many deals match. | `script.js` |
+| Tabs | `products.html` | Shop New and Second-Hand tabs, Student and Parent FAQ tabs and gallery category buttons. | `script.js` |
+| DOM manipulation | All pages | Cards, the Order Summary table, toast messages, the map pins and the lightbox are created, shown, hidden and updated by JavaScript. | `script.js`, `features.js` |
+| Animation | All pages | Cards fade in as they scroll into view, the lightbox and modal fade in, accordion answers slide open and the page loader plays between pages. Animations are shortened or removed for visitors who ask their device to reduce motion. | `styles.css`, `features.js` |
+| Printable checklist | `products.html` (Parent Hub) | The Print this checklist button prints only the First Year Checklist, as a clean one-page sheet with an empty box beside each item. The rest of the page is hidden while printing. | `script.js`, `styles.css` |
+| Coverage search | `coverage.html` | Filters the list of institutions as the visitor types. | `forms.js` |
 
-These features will be implemented and tested during Part 3. The README will be updated again once the functionality has actually been added and tested.
+### Forms
+| Form | Purpose | Behaviour |
+|---|---|---|
+| `enquiry.html` | A pre-purchase question about one product or bundle for one institution. | Fields use HTML5 attributes (`required`, `type`, `minlength`, `maxlength`, `min` and `max`). JavaScript then checks the rules specific to Campus-Cart and shows an error beside each wrong field. A valid enquiry shows a response with price, stock status and an estimated delivery date, and offers a professionally worded email the visitor can send. Stock levels are loaded with `fetch()` from `assets/data/stock.json`. If that file cannot be loaded, for example when the page is opened directly from a folder, a built-in copy of the same table is used. |
+| `contact.html` | A general message or complaint to Campus-Cart. | Collects contact details, a topic (including complaints about an order), an optional order reference, the outcome the visitor wants and the message, using HTML5 attributes (`required`, `type`, `pattern`, `minlength` and `maxlength`). After validation the details are compiled into a professional email addressed to the recipient written in the form's `data-mailto` attribute, ready for the visitor to send. |
 
-> **Part 3 boundary:** `assets/js/script.js` currently provides the mobile navigation menu only. Product tabs, filtering, sorting, order-summary calculations and checklist printing remain planned for Part 3 and should not be described as completed until implemented and tested.
+**Step-by-step form gate.** On both forms the visitor cannot continue until the current field is correct. Each field stays locked until the one before it passes validation, the error message appears when the visitor leaves a wrong field, and the submit button stays disabled until every field is valid. A message above the button names the field to complete next. If an earlier field is changed to something invalid, the later fields lock again. The logic is in `setupFormGate()` in `forms.js`, and the same checks are used again when the form is submitted.
+
+**Professional email layout.** Both compiled emails follow the same four characteristics of a professional message: a clear subject line that names the request or problem, a polite and formal tone, the relevant details (order reference, item, quantity, institution), and a clear request. For example, a complaint with an order reference produces the subject "Complaint Regarding Order CC-1025", and the body has a greeting, the details, a "Requested outcome" sentence, a closing line and the sender's contact details.
+
+Both `<form>` elements have an `action` attribute (a `mailto:` address) and `method="post"`. JavaScript normally stops the default submission and shows the response on the same page. The `action` is the fallback if JavaScript is unavailable. Both forms were designed around their own purpose and do not share the same fields.
+
+### Search Engine Optimisation
+- **Titles and descriptions:** every page has its own title and meta description that describe that page.
+- **Headings:** every page has exactly one `<h1>` followed by `<h2>` and `<h3>` headings in order. The Products page had no `<h1>` and now has one.
+- **Keywords:** the pages target words a student or parent would realistically search for. The keywords meta tag lists student essentials, South Africa, university, TVET college, second-hand, starter bundle and delivery, and the same words appear in the page titles, descriptions and headings.
+- **Sharing and indexing:** each page has a canonical address, Open Graph and Twitter card tags for link previews, a theme colour and a favicon. The home page includes `Organization` structured data.
+- **Images:** descriptive file names, meaningful `alt` text, and width and height attributes. The largest photographs were compressed without changing their names or dimensions (see the changelog).
+- **URLs and links:** short readable page names such as `pages/coverage.html`, and internal links with descriptive anchor text.
+- **Crawling:** `sitemap.xml` lists the seven public pages and `robots.txt` points to it. A custom `404.html` helps visitors who follow an old link.
+- **Off-page and local SEO:** the Google Search Console ownership tag is on every page. Collection hub addresses are written the same way on the Contact page and on the map. No backlinks have been created, so none are claimed here.
+- **Mobile and speed:** the layout is responsive, the map and lightbox are sized for phones, and the page-transition delay was shortened.
+
+### Security
+- Form input is validated for format and length, and text is escaped before it is placed in the page.
+- Map popups, the lightbox and the modal are built with `textContent`, so text can never be read as HTML.
+- No API keys, passwords or credentials are used or stored in the repository.
+- Leaflet is stored in the repository instead of being loaded from another website. The only outside requests are OpenStreetMap map tiles and the external links on the Products page, which use `rel="noopener"`.
+- GitHub Pages serves the site over HTTPS.
+
+### Testing Matrix
+| Area | Test | Expected result |
+|---|---|---|
+| Map | Open `contact.html`, click a pin, choose a hub in the dropdown. | Ten pins show. A popup shows the hub address and hours. |
+| Lightbox | Click a photo on the home, About and Products pages (including a deal card), press the arrow keys, press Esc. | The larger image opens, changes and closes. Focus returns to the image. |
+| Quick view | Click Quick view on a deal, then Add to Order Summary. | The dialog opens, the item is added and the dialog closes. |
+| Search and filter | Type `kettle`, change the category and the sort order. | Only matching deals show and the counter updates. |
+| Accordion | Open one FAQ answer, then another. | The first answer closes when the second opens. |
+| Forms | Fill each form from the top, try a bad email, then fill in valid details. | Later fields stay locked until the current one is correct and the submit button stays disabled. Errors show beside the wrong fields. Valid details give a response or a compiled email. |
+| Email layout | Create an email from the contact form with a complaint topic and an order reference. | The subject names the problem, and the body has a greeting, details, requested outcome, closing and sender details. |
+| Responsive | View every page at 360 px and 1280 px wide. | No sideways scrolling and every control can be used. |
+| Print | Click Print this checklist on the Parent Hub and look at the print preview. | Only the checklist prints, with a box beside each item. |
+| Deployment | Open the live GitHub Pages link in a private window. | The same features work online as locally. |
+
+- [ ] Re-test every row of the matrix on the live GitHub Pages site before submission.
+
+See the Changelog entries v3.141 to v3.156 for each issue found, the change made and the result.
 
 ## Design and Usability
 The website uses consistent navigation, clear headings, buttons and structured content sections. Responsive web design is important because users may access websites from different screen sizes (Marcotte, 2011).
@@ -261,12 +311,21 @@ campus-cart/
 ├── .gitattributes
 ├── README.md
 ├── sitemap.xml
+├── robots.txt
+├── 404.html
 ├── index.html
 ├── assets/
 │   ├── css/
 │   │   └── styles.css
+│   ├── data/
+│   │   └── stock.json
 │   ├── js/
-│   │   └── script.js
+│   │   ├── script.js
+│   │   ├── features.js
+│   │   ├── forms.js
+│   │   └── data.js
+│   ├── vendor/
+│   │   └── leaflet/
 │   └── images/
 │       ├── bundles/
 │       │   ├── hero-campus.jpg
@@ -691,13 +750,37 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 
 - **v3.140** — Merge latest main branch history. Records the merge of the latest `main` branch history after the recent screenshot, colour-scheme and map-location updates, preserving the combined project state.
 
-- **v3.141** — Improve responsive product search controls. Refines the product search layout so the input and Search button remain usable across desktop and mobile viewport sizes.
-- **v3.142** — Correct and revert loader centring changes. Adjusts the orbital loader's centring and animation, then reverts the later centring change to preserve the intended loader appearance.
-- **v3.143** — Restore the intended CSS and JavaScript versions. Restores assets/css/styles.css to the requested historical version from commit 45b4590 and assets/js/script.js to the version from commit ce86bf9, returning the loader and script behaviour to the selected baseline.
-- **v3.144** — Improve colour tokens and accessibility contrast. Expands the navy, neutral and status colour palette and applies more consistent colours to text, form states, the footer and loader styling to improve readability and contrast.
-- **v3.145** — Add South African coverage dataset. Adds province-level delivery lead times, collection hubs and institution lists for all nine provinces, plus national private-provider data used by the coverage and enquiry/delivery-estimate features.
-- **v3.146** — Add form and coverage interactions. Adds JavaScript for enquiry/contact form validation, stock and availability calculations, delivery estimates, email composition, and accessible invalid-input feedback. Also adds search/filter behaviour to the Coverage page.
-- **v3.147** — Refine shared stylesheet. Applies the latest stylesheet adjustments after the search, loader and colour-contrast updates, keeping the shared visual presentation aligned with the current interface.
+- **v3.141** — Map. Issue: the Contact page showed one embedded Google map of a single location and no collection hubs. Change: replaced it with an interactive Leaflet map in `features.js` that places a pin for each hub from `data.js`, adds popups and a "Jump to a collection hub" dropdown, and credits OpenStreetMap. Result: visitors can see and explore all ten hubs, including on a phone.
+
+- **v3.142** — Gallery. Issue: gallery images could not be enlarged. Change: added a lightbox with captions, previous, next and close controls, keyboard and swipe support, and focus handling. Result: images can be viewed larger without leaving the page.
+
+- **v3.143** — Products. Issue: the search box on the Deals section was not connected to any code. Change: connected it in `script.js` so it works together with the category, condition and sort controls, and added a Quick view button that opens a product dialog. Result: visitors can find a deal by keyword and preview it before adding it.
+
+- **v3.144** — FAQ. Issue: the FAQ answers were all displayed at once and made the page long. Change: converted the Student and Parent FAQ into an accordion built on `<details>` and `<summary>` where one answer opens at a time. Result: shorter page and easier scanning.
+
+- **v3.145** — Forms. Issue: neither form had an `action` attribute and the enquiry stock table was hard-coded. Change: added `action` and `method` to both forms and made `forms.js` load stock levels from `assets/data/stock.json` with `fetch()`, keeping a built-in fallback. Result: stock can be updated in one data file, and the form still works when opened from a folder.
+
+- **v3.146** — SEO. Issue: the Products page had no `<h1>` and no page had a canonical address or social preview tags. Change: added one `<h1>` to Products, plus canonical links, Open Graph and Twitter tags, theme colour, favicon and `Organization` structured data. Added `404.html`. Result: clearer page structure and better link previews.
+
+- **v3.147** — Performance. Issue: `hero-campus.jpg` was 2 127 KB and three other photographs were over 600 KB, and every page change waited 3 seconds. Change: recompressed the four photographs (hero 199 KB, starter bundle 67 KB, study essentials 67 KB, start bundle 2 102 KB) keeping the same names and sizes, and shortened the page-transition delay in `script.js` from 3 000 ms to 1 200 ms. Result: pages load and change faster.
+
+- **v3.148** — Animation. Issue: cards appeared with no motion. Change: added a scroll-reveal animation, and fade and slide transitions for the lightbox, modal and accordion in `styles.css`. Result: smoother interaction that is reduced for visitors who prefer less motion.
+
+- **v3.149** — Documentation. Issue: the README still described Part 3 as an upcoming feature. Change: documented the Part 3 features, forms, SEO, security, testing matrix, file structure, technologies and references. Result: the README matches the code in the repository.
+
+- **v3.150** — About page. Issue: the site did not say who built it. Change: added a "Meet the author" section to `pages/about.html` with the author's name, programme and campus, and links to the GitHub profile, this repository and the portfolio. Result: visitors and assessors can see who created the site.
+
+- **v3.151** — Loader. Issue: the page loader looked small on large desktop screens. Change: raised the loader scale from 0.82 to 1 for screens 1025 px wide and above in `styles.css` and enlarged its container to match. Result: a larger loader on desktop, with phone and tablet sizes unchanged.
+
+- **v3.152** — Forms. Issue: a visitor could fill in the later fields of the enquiry and contact forms before the earlier ones were correct, and only found the errors on submit. Change: added `setupFormGate()` to `forms.js` so each field unlocks only when the previous one is valid, errors show as soon as a field is left, and the submit button stays disabled until the whole form is valid. Moved the validation rules into one list per form that both the gate and the submit handler use. Result: visitors cannot continue with an incorrect form and are told which field to fix next.
+
+- **v3.153** — Email format. Issue: the compiled emails were plain lists of fields with a generic subject. Change: rewrote the contact and enquiry emails with a subject that names the request (for example "Complaint Regarding Order CC-1025"), a formal greeting, the relevant details, a clear requested outcome and a courteous closing. Added a "Complaint or problem with an order" topic, an optional order reference and a "What would you like us to do?" choice to the contact form, and a phone number is now required when the visitor asks for a call back. Result: emails read as professional messages and tell the team exactly what the customer wants.
+
+- **v3.154** — Lightbox. Issue: only the Products gallery images could be enlarged; the photos on the home page, About page, product cards and deal cards could not. Change: `features.js` now makes every content photo open in the lightbox, uses one page-level listener so cards added by JavaScript are included, groups next and previous by gallery, card grid or section, and skips logos, icons, linked images and map tiles. Result: any photo on the site can be viewed larger with the mouse, keyboard or a swipe.
+
+- **v3.155** — Licence and credits. Issue: the site did not state who owns it or which third-party software and map data it uses, and the footer Sitemap link on the inner pages pointed to a file that does not exist (`pages/sitemap.xml`). Change: added a "Licence and credits" section to `pages/about.html` (copyright, Leaflet under the BSD 2-Clause Licence, OpenStreetMap data under the ODbL), added a "Licence and credits" link to the footer of every page, and corrected the inner-page Sitemap link to `../sitemap.xml`. Result: the licences are visible to visitors and the footer links work.
+
+- **v3.156** — Printing. Issue: the Print this checklist button printed the whole Products page (navigation, bundles, forms and footer) instead of just the checklist. Change: `initPrint()` in `script.js` now builds a clean print sheet from the checklist, and a print rule in `styles.css` hides everything else while it prints. Each item has an empty box to tick. The page returns to normal when the print dialog closes. Result: the printout contains only the First Year Checklist.
 
 ## References
 - Cox, G., Masuku, B. and Willmers, M. (2020) 'Open Textbooks and Social Justice: Open Educational Practices to Address Economic, Cultural and Political Injustice at the University of Cape Town', *Journal of Interactive Media in Education*, 2020(1), p. 2. Available at: https://doi.org/10.5334/jime.556 (Accessed: 4 August 2026).
@@ -709,3 +792,13 @@ The local HTML file and anchor paths should be checked again whenever pages or s
 - Majid, E.S.A., Kamaruddin, N. and Mansor, Z. (2015) 'Adaptation of usability principles in responsive web design technique for e-commerce development', *2015 International Conference on Electrical Engineering and Informatics (ICEEI)*, Denpasar, Indonesia, pp. 726–729. doi: 10.1109/ICEEI.2015.7352593.
 
 - Marcotte, E. (2011) *Responsive Web Design*. New York: A Book Apart.
+
+- Leaflet (n.d.) *Leaflet Quick Start Guide*. Available at: https://leafletjs.com/examples/quick-start/ (Accessed: 9 October 2026).
+
+- Mozilla Developer Network (n.d.) *Fetch API*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API (Accessed: 9 October 2026).
+
+- Mozilla Developer Network (n.d.) *\<details\>: The Details disclosure element*. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details (Accessed: 9 October 2026).
+
+- OpenStreetMap Foundation (n.d.) *Licence and Legal FAQ*. Available at: https://osmfoundation.org/wiki/Licence_and_Legal_FAQ (Accessed: 9 October 2026).
+
+- World Wide Web Consortium (n.d.) *Modal Dialog Pattern, ARIA Authoring Practices Guide*. Available at: https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/ (Accessed: 9 October 2026).
