@@ -207,6 +207,29 @@
                                 </select>
                                 <span class="error-msg" id="c-topic-error" role="alert"></span>
                             </div>
+                            <div class="form-group">
+                                <label for="c-order">Order reference (optional)</label>
+                                <input id="c-order" name="orderReference" type="text" pattern="[A-Za-z0-9#\- ]{3,30}" title="3 to 30 letters, numbers, # or dashes, for example CC-1025" maxlength="30" placeholder="e.g. CC-1025">
+                                <span class="error-msg" id="c-order-error" role="alert"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="c-outcome">What would you like us to do? *</label>
+                                <select id="c-outcome" name="outcome" required>
+                                    <option>Reply by email</option>
+                                    <option>Call or WhatsApp me</option>
+                                    <option>Arrange a refund</option>
+                                    <option>Arrange a replacement or swap</option>
+                                    <option>Update me on my order</option>
+                                </select>
+                                <span class="error-msg" id="c-outcome-error" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="c-phone">Phone / WhatsApp (needed for a call back)</label>
+                                <input id="c-phone" name="phone" type="tel" pattern="(\+27|0)[0-9 \-]{8,13}" title="A South African number such as 082 000 0000 or +27 82 000 0000" maxlength="20" autocomplete="tel" placeholder="082 000 0000">
+                                <span class="error-msg" id="c-phone-error" role="alert"></span>
+                            </div>
                         </div>
 
                         <!-- Creates a container used to group content and apply CSS layout or styling. -->
