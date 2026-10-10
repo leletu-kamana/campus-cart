@@ -3540,3 +3540,55 @@ body.lightbox-open {
     overflow-wrap: anywhere;
 }
 
+/* ---------- Print only the First Year Checklist ---------- */
+
+/* The print sheet is built by initPrint() in script.js. It never shows on screen. */
+#print-sheet {
+    display: none;
+}
+
+@media print {
+
+    /* While the checklist is being printed, everything else on the page is hidden. */
+    body.printing-checklist > *:not(#print-sheet) {
+        display: none !important;
+    }
+
+    body.printing-checklist #print-sheet {
+        display: block;
+        color: #000;
+        font-size: 13pt;
+        line-height: 1.5;
+    }
+
+    #print-sheet .print-title {
+        margin: 0 0 6pt;
+        font-size: 20pt;
+        font-weight: 700;
+    }
+
+    #print-sheet .print-note {
+        margin-top: 18pt;
+        font-size: 9pt;
+        color: #444;
+    }
+
+    /* Each item gets an empty box to tick instead of a bullet. */
+    #print-sheet .print-list {
+        margin: 12pt 0 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #print-sheet .print-list li {
+        margin: 0 0 8pt;
+        padding: 0;
+        break-inside: avoid;
+    }
+
+    #print-sheet .print-list li::before {
+        content: "\2610";
+        margin-right: 10pt;
+        font-size: 16pt;
+    }
+}
