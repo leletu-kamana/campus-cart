@@ -3514,3 +3514,29 @@ body.lightbox-open {
     }
 }
 
+/* ---------- Step-by-step form gate ---------- */
+
+/* A field that is locked until the one before it is filled in correctly. */
+.form-group.field-locked {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Message above the submit button that says what to complete next. */
+.gate-status {
+    margin: 4px 0 12px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+/* The submit button looks switched off until the form is valid. */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Lets the long file path in the licence section wrap on narrow phone screens. */
+#licence code {
+    overflow-wrap: anywhere;
+}
+
