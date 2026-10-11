@@ -406,10 +406,17 @@
               </select>
             </div>
             <!-- Creates a paragraph of text. The id "deals-count" lets CSS or JavaScript identify this element. The class "hint" connects it to CSS styling or JavaScript behaviour. -->
-            <p id="deals-count" class="hint" style="margin:0 0 6px auto"></p>
+            <p id="deals-count" class="hint" style="margin:0 0 6px auto" aria-live="polite"></p>
           </div>
           <!-- Groups related content so it can be arranged or styled together. The id "deals-results" lets CSS or JavaScript identify this element. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
           <div class="grid grid-3" id="deals-results"></div>
+          <!-- Holds the See more and See less buttons for the deals grid. -->
+          <div class="deals-more" id="deals-more">
+            <!-- Shows six more products each time it is pressed. -->
+            <button class="btn btn-navy" id="deals-see-more" type="button" hidden>See more</button>
+            <!-- Returns the grid to the first six products. -->
+            <button class="btn btn-outline" id="deals-see-less" type="button" hidden>See less</button>
+          </div>
           <!-- Defines a third-level heading for a subsection or card. -->
           <h3 style="margin-top:48px">Visual gallery</h3>
           <!-- Groups related content so it can be arranged or styled together. The class "tabs" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
