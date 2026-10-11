@@ -87,17 +87,21 @@
     <header class="topbar">
       <!-- Groups navigation links and identifies the menu for accessibility. The class "nav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
       <nav class="nav" aria-label="Main navigation">
-        <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "logo" connects it to CSS styling or JavaScript behaviour. -->
-        <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
-        <!-- Groups related content so it can be arranged or styled together. The class "nav-datetime" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <div class="nav-datetime" aria-label="Current South African date and time">
-          <!-- Groups a short piece of inline text for styling or scripting. The id "navTime" lets CSS or JavaScript identify this element. -->
-          <span id="navTime">00:00:00</span>
-          <!-- Groups a short piece of inline text for styling or scripting. The class "nav-date-divider" connects it to CSS styling or JavaScript behaviour. -->
-          <span class="nav-date-divider">|</span>
-          <!-- Groups a short piece of inline text for styling or scripting. The id "navDate" lets CSS or JavaScript identify this element. -->
-          <span id="navDate">Loading...</span>
-        <!-- Closes the <div> element opened earlier in this section. -->
+        <!-- Groups navigation links and identifies the menu for accessibility. The class "nav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+      <nav class="nav" aria-label="Main navigation">
+        <!-- Groups the logo and the live clock so the clock sits directly under the Campus-Cart name. The class "brand" connects it to CSS styling. -->
+        <div class="brand">
+          <!-- Creates a hyperlink to the home page. The class "logo" connects it to CSS styling. -->
+          <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+          <!-- Live South African time and date, filled in every second by updateNavDateTime() in script.js. -->
+          <div class="nav-clock" role="group" aria-label="Current South African date and time">
+            <!-- Shows the current time, updated by script.js. -->
+            <span id="navTime">00:00:00</span>
+            <!-- Separator between the time and the date. -->
+            <span class="clock-divider">|</span>
+            <!-- Shows the current date, updated by script.js. -->
+            <span id="navDate">Loading...</span>
+          </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
         <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
