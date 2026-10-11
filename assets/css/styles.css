@@ -3701,3 +3701,22 @@ body.lightbox-open {
 .game-card #game-status:empty {
     display: none; /* Hides the empty status line. */
 }
+
+/* ==========================================================
+   DEALS GRID: SEE MORE AND SEE LESS BUTTONS
+   Used by initDeals() in script.js on products.html
+   ========================================================== */
+
+/* Row that holds the See more and See less buttons under the product grid. */
+.deals-more {
+    display: flex; /* Lays the buttons out in a row. */
+    flex-wrap: wrap; /* Lets the buttons wrap onto two lines on narrow screens. */
+    justify-content: center; /* Centres the buttons under the grid. */
+    gap: 12px; /* Sets the space between the buttons. */
+    margin-top: 28px; /* Sets the space between the grid and the buttons. */
+}
+
+/* The hidden attribute must win over the display value that .btn sets. */
+.deals-more .btn[hidden] {
+    display: none; /* Keeps a hidden button out of the layout. */
+}
