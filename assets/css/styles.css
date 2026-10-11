@@ -182,9 +182,9 @@ body {
        Improves font rendering on supported browsers.
     */
     /* Smooths font edges on WebKit browsers (Chrome, Safari). */
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* Smooths font edges on WebKit browsers. */
     /* Smooths font edges on older Firefox/macOS. */
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale; /* Smooths font edges on Firefox for macOS. */
 }
 
 
@@ -603,7 +603,7 @@ strong {
     color: var(--yellow); /* Sets the text colour. */
 
     /* Draws a solid yellow underline beneath the active link so it's clearly marked. */
-    border-bottom-color: var(--yellow);
+    border-bottom-color: var(--yellow); /* Sets the colour of the bottom border. */
 }
 
 
@@ -1188,7 +1188,7 @@ strong {
     background: var(--navy); /* Sets the background colour or background image. */
 
     /* Matches the border colour to the background so no light edge shows. */
-    border-color: var(--navy);
+    border-color: var(--navy); /* Sets the border colour. */
 }
 
 /* Colours headings inside a navy card yellow so they remain legible. */
@@ -1415,7 +1415,7 @@ textarea:focus {
     outline: none; /* Draws an outline around the element without affecting layout. */
 
     /* Switches the border to navy to clearly indicate which field is active. */
-    border-color: var(--navy);
+    border-color: var(--navy); /* Sets the border colour. */
 
     /*
        Adds a soft yellow "glow" ring around the focused
@@ -2143,7 +2143,7 @@ footer li {
 
     /* Uses CSS order to visually move the hero image above the text column once they stack. */
     .hero-img {
-        order: -1;
+        order: -1; /* Changes the visual order of this flex or grid item. */
     }
 
     /* Reduces the four-column grid down to two columns so cards don't become too narrow. */
@@ -2666,8 +2666,8 @@ footer li {
 .form-group input.input-error,
 .form-group select.input-error,
 .form-group textarea.input-error {
-    border-color: #b3261e;
-    border-color: #0d1b3e;
+    border-color: #b3261e; /* Sets the border colour to red (the next line overrides it). */
+    border-color: #0d1b3e; /* Overrides the red above with navy. */
 }
 
 /* The box that shows the enquiry response or the compiled email. Hidden until .show is added. */
@@ -2707,7 +2707,7 @@ footer li {
     border: 1px solid var(--grey-mid); /* Sets the border width, style, and colour. */
     border-radius: 8px; /* Rounds the corners of the element. */
     white-space: pre-wrap; /* Controls how whitespace and line wrapping are handled. */
-    overflow-wrap: anywhere;
+    overflow-wrap: anywhere; /* Lets long words break so they do not overflow. */
     font-family: inherit; /* Sets the typeface, including fallback fonts. */
 }
 
@@ -2727,7 +2727,7 @@ footer li {
 /* Each province is its own block with space above it. */
 .province {
     margin-top: 40px; /* Sets the outer spacing above the element. */
-    scroll-margin-top: 90px;
+    scroll-margin-top: 90px; /* Leaves room for the sticky header when scrolled to. */
 }
 
 /* Institution names flow into columns that adapt to the screen width. */
@@ -2735,7 +2735,7 @@ footer li {
     list-style: none; /* Controls the appearance of list markers. */
     margin: 12px 0 8px; /* Sets the outer spacing around the element. */
     padding: 0; /* Sets the inner spacing between content and border. */
-    columns: 260px;
+    columns: 260px; /* Splits the content into columns at least 260px wide. */
     column-gap: 28px; /* Sets the spacing between columns. */
 }
 
@@ -2780,7 +2780,7 @@ body.page-loading {
     /* Positions the loader overlay relative to the viewport. */
     position: fixed; /* Sets the positioning method used to place this element. */
     /* Stretches the overlay to all four edges of the viewport. */
-    inset: 0;
+    inset: 0; /* Sets top, right, bottom and left to 0 so it fills the screen. */
     /* Makes the overlay span the full viewport width. */
     width: 100vw; /* Sets the element's width. */
     /* Provides the standard viewport-height fallback. */
@@ -3233,7 +3233,7 @@ body.lightbox-open {
 
 .lightbox {
     position: fixed; /* Sets the positioning method used to place this element. */
-    inset: 0;
+    inset: 0; /* Sets top, right, bottom and left to 0 so it fills the screen. */
     z-index: 99990; /* Controls the stacking order when elements overlap. */
     display: flex; /* Controls how an element participates in the page layout. */
     align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
@@ -3307,7 +3307,7 @@ body.lightbox-open {
 
 .modal-backdrop {
     position: fixed; /* Sets the positioning method used to place this element. */
-    inset: 0;
+    inset: 0; /* Sets top, right, bottom and left to 0 so it fills the screen. */
     z-index: 99990; /* Controls the stacking order when elements overlap. */
     display: flex; /* Controls how an element participates in the page layout. */
     align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
@@ -3537,7 +3537,7 @@ body.lightbox-open {
 
 /* Lets the long file path in the licence section wrap on narrow phone screens. */
 #licence code {
-    overflow-wrap: anywhere;
+    overflow-wrap: anywhere; /* Lets long words break so they do not overflow. */
 }
 
 /* ---------- Print only the First Year Checklist ---------- */
@@ -3593,11 +3593,26 @@ body.lightbox-open {
     }
 }
 
+/* Brand block: the Campus-Cart logo with the live clock stacked directly under it.
+   It is one flex item in the navbar, so the menu button and links are not affected. */
+.brand {
+    display: flex; /* Controls how an element participates in the page layout. */
+    flex-direction: column; /* Stacks the logo above the clock. */
+    align-items: flex-start; /* Keeps both lines aligned to the left edge of the logo. */
+    gap: 2px; /* Sets the spacing between flex or grid items. */
+    flex-shrink: 0; /* Stops the block from being squeezed when the nav is crowded. */
+}
+
+/* A tighter line height so the logo and clock sit close together. */
+.brand .logo {
+    line-height: 1.15; /* Sets the space between lines of text. */
+}
+
 /* Compact live clock */
 .nav-clock {
     display: flex; /* Controls how an element participates in the page layout. */
     align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
-    justify-content: center; /* Distributes items along the main axis. */
+    justify-content: flex-start; /* Starts the clock at the left, under the logo. */
     gap: 7px; /* Sets the spacing between flex or grid items. */
     white-space: nowrap; /* Controls how whitespace and line wrapping are handled. */
     font-family: Arial, sans-serif; /* Sets the typeface, including fallback fonts. */
@@ -3609,7 +3624,7 @@ body.lightbox-open {
 #navTime {
     font-size: 13px; /* Sets the text size. */
     font-weight: 700; /* Sets how thick or bold the text appears. */
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums; /* Gives every digit the same width. */
     color: #ffcc33; /* Sets the text colour. */
 }
 
@@ -3646,4 +3661,43 @@ body.lightbox-open {
     #navTime {
         font-size: 11px; /* Sets the text size. */
     }
+}
+
+/* ==========================================================
+   404 PAGE GAME (Campus Runner)
+   Used by assets/js/game.js on 404.html
+   ========================================================== */
+
+/* The white card that holds the game, the instructions and the button. */
+.game-card {
+    margin-top: 40px; /* Sets the outer spacing above the card. */
+    padding: 24px; /* Sets the inner spacing between content and border. */
+    background: var(--white); /* Sets the background colour. */
+    border: 2px solid var(--navy); /* Draws a navy border around the card. */
+    border-radius: var(--radius); /* Rounds the corners to match the other cards. */
+    box-shadow: var(--shadow); /* Adds the shared soft shadow. */
+}
+
+/* Keeps the heading close to the instructions below it. */
+.game-card h2 {
+    margin-bottom: 8px; /* Sets the outer spacing below the heading. */
+}
+
+/* The game screen. It scales down on small phones but never grows past its real size. */
+.game-canvas {
+    display: block; /* Removes the small gap browsers leave under inline elements. */
+    width: 100%; /* Fills the card width on small screens. */
+    max-width: 640px; /* Stops the game from growing larger than its drawn size. */
+    height: auto; /* Keeps the correct proportions as the width changes. */
+    margin: 14px 0 10px; /* Sets the outer spacing above and below the game. */
+    background: var(--grey); /* Shows a light background before the first frame is drawn. */
+    border: 3px solid var(--navy); /* Draws a navy frame around the game. */
+    border-radius: 10px; /* Rounds the corners of the frame. */
+    cursor: pointer; /* Shows a pointer because tapping the game makes the runner jump. */
+    touch-action: manipulation; /* Stops double-tap zoom so quick taps count as jumps. */
+}
+
+/* The status line under the game is only for screen readers when empty, so it takes no extra space. */
+.game-card #game-status:empty {
+    display: none; /* Hides the empty status line. */
 }
