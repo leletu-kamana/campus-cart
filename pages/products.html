@@ -1,1038 +1,974 @@
 <!DOCTYPE html>
-<!-- Defines the root HTML document and sets English as the page language. -->
+<!-- Sets the root HTML element and the page language. -->
 <html lang="en">
-  <!-- Starts the document head, which contains metadata and linked resources. -->
+  <!-- Groups page metadata, the title, and linked resources. -->
   <head>
-    <!-- Sets UTF-8 character encoding so text and special characters display correctly. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta charset="utf-8">
-    <!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <title> sets the name shown on the browser tab and helps identify the webpage.
-It also provides useful information for search engines and accessibility. -->
+    <!-- Sets the title shown in the browser tab. -->
     <title>Shop Student Essentials &amp; Bundles | Campus-Cart</title>
-    <!-- Provides a description of the webpage for search engines. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="description" content="Shop new and second-hand student essentials, starter bundles and the Parent Hub with delivery across South Africa.">
-    <!-- SEO (Part 3): canonical address, social sharing preview, theme colour and icon. -->
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to an external webpage. -->
     <link rel="canonical" href="https://leletu-kamana.github.io/campus-cart/pages/products.html">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="robots" content="index, follow">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="theme-color" content="#0d1b3e">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:type" content="website">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:site_name" content="Campus-Cart">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:locale" content="en_ZA">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:description" content="Shop new and second-hand student essentials, starter bundles and the Parent Hub with delivery across South Africa.">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:url" content="https://leletu-kamana.github.io/campus-cart/pages/products.html">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:image" content="https://leletu-kamana.github.io/campus-cart/assets/images/bundles/hero-campus.jpg">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:image:alt" content="South African students on a university campus carrying study essentials">
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
-    <!-- Provides keyword metadata describing the main subjects of the webpage. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-      <!-- Provides the Google Search Console verification token used to verify website ownership. -->
-      <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
-    <!-- Links this HTML document to an external CSS stylesheet.
-The href attribute specifies the location of the CSS file. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+    <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- Closes the <head> element opened earlier in this section. -->
   </head>
-
-  <body class="page-loading">
-
-    <!-- Full-Screen Campus-Cart Page Loader (Uiverse.io by Chris-immanuel-matthew) -->
-    <!-- Creates the full-screen loading container; the id identifies it for JavaScript and the class connects it to CSS styling. -->
-    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
-      <!-- Groups the loader animation and loading message into one layout container. -->
-      <div class="page-loader-content">
-        <!-- Contains the visual animation used by the page loader. -->
-        <div class="page-loader-visual">
-          <!-- Creates the animated loader; aria-hidden hides decorative animation from screen readers. -->
-          <div class="loader" aria-hidden="true">
-            <!-- Creates the centre element of the animated loader. -->
-            <div class="nucleus"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-          </div>
+<!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
+<body class="page-loading">
+  <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
+    <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="page-loader-content">
+      <!-- Groups related content so it can be arranged or styled together. The class "page-loader-visual" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="page-loader-visual">
+        <!-- Groups related content so it can be arranged or styled together. The class "loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+        <div class="loader" aria-hidden="true">
+          <!-- Groups related content so it can be arranged or styled together. The class "nucleus" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="nucleus"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+        <!-- Closes the <div> element opened earlier in this section. -->
         </div>
-        <!-- Contains the Campus-Cart loading branding and hides decorative content from screen readers. -->
-        <div class="page-loader-brand" aria-hidden="true">
-          <!-- Displays the Campus-Cart loader title; the nested span allows part of the name to be styled separately. -->
-          <span class="page-loader-title">Campus<span>-Cart</span></span>
-          <!-- Displays the loading message shown while the page is being prepared. -->
-          <span class="page-loader-text">Loading Campus-Cart...</span>
-        </div>
-      </div>
+    <!-- Closes the <div> element opened earlier in this section. -->
     </div>
-
-    <!-- <header> contains introductory content and website navigation.
-The class attribute connects this element to CSS styling. -->
-    <header class="topbar">
-
-      <!-- <nav> defines a section containing navigation links.
-aria-label provides an accessible name for screen readers. -->
-      <nav class="nav" aria-label="Main navigation">
-
-        <!-- <a> creates a hyperlink and href specifies its destination.
-<span> allows part of the logo text to be styled separately. -->
-        <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
-
-        <div class="nav-datetime" aria-label="Current South African date and time">
-            <span id="navTime">00:00:00</span>
-            <span class="nav-date-divider">|</span>
-            <span id="navDate">Loading...</span>
-        </div>
-
-        <!-- <button> creates an interactive button for the navigation.
-aria-expanded tells assistive technology whether the menu is open. -->
-        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
-
-        <!-- <div> groups the navigation links into one container.
-The class attribute allows CSS to control the links' layout. -->
-        <div class="nav-links">
-
-          <!-- href contains the relative path to the home page.
-Clicking the anchor navigates the browser to that page. -->
-          <a href="../index.html">Home</a>
-
-          <!-- This anchor uses a relative path to open the About page. -->
-          <a href="about.html">About</a>
-
-          <!-- #shop is a fragment identifier that targets an element with id="shop". -->
-          <a href="products.html">Shop</a>
-
-          <!-- #parent-hub targets the element whose id is "parent-hub". -->
-          <a href="products.html#parent-hub">Parent Hub</a>
-
-          <!-- This anchor navigates to the enquiry page. -->
-          <a href="enquiry.html">Enquiry</a>
-                <!-- Creates a hyperlink; href specifies its destination and class can control its appearance. -->
-                <a href="coverage.html">Coverage</a>
-
-          <!-- This anchor navigates to the contact page. -->
-          <a href="contact.html">Contact</a>
-
-          <!-- This anchor navigates to the account page. -->
-          <a href="account.html">Account</a>
-
-          <!-- <span> contains the cart number that JavaScript can update.
-data-cart-count is a custom data attribute used by JavaScript. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
-        </div>
-      </nav>
-    </header>
-
-    <!-- <nav> creates another navigation area for sections on this page.
-aria-label describes the purpose of this navigation to assistive technology. -->
-    <nav class="subnav" aria-label="Section navigation">
-      <!-- Creates an unordered list for related items. -->
-      <ul>
-
-        <!-- <ul> creates an unordered list and <li> creates each list item.
-The anchor inside each item links to a section using its ID. -->
-        <li><a href="#shop">Shop</a></li>
-
-        <!-- &amp; is an HTML entity that displays the ampersand (&) character. -->
-        <li><a href="#deals-gallery">Deals &amp; Gallery</a></li>
-
-        <!-- This fragment links to the element with id="parent-hub". -->
-        <li><a href="#parent-hub">Parent Hub</a></li>
-
-        <!-- This fragment links to the product detail section on this page. -->
-        <li><a href="#product-detail">Product Detail</a></li>
-
-        <!-- This fragment links directly to the selling and FAQ section. -->
-        <li><a href="#sell-with-us">Sell With Us &amp; FAQ</a></li>
+  <!-- Groups related content so it can be arranged or styled together. The class "page-loader-brand" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <div class="page-loader-brand" aria-hidden="true">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-title" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="page-loader-title">Campus<span>-Cart</span></span>
+    <!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-text" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="page-loader-text">Loading Campus-Cart...</span>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups introductory content and the main navigation area. The class "topbar" connects it to CSS styling or JavaScript behaviour. -->
+<header class="topbar">
+  <!-- Groups navigation links and identifies the menu for accessibility. The class "nav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <nav class="nav" aria-label="Main navigation">
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "logo" connects it to CSS styling or JavaScript behaviour. -->
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <!-- Groups related content so it can be arranged or styled together. The class "nav-datetime" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+    <div class="nav-datetime" aria-label="Current South African date and time">
+      <!-- Groups a short piece of inline text for styling or scripting. The id "navTime" lets CSS or JavaScript identify this element. -->
+      <span id="navTime">00:00:00</span>
+      <!-- Groups a short piece of inline text for styling or scripting. The class "nav-date-divider" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="nav-date-divider">|</span>
+      <!-- Groups a short piece of inline text for styling or scripting. The id "navDate" lets CSS or JavaScript identify this element. -->
+      <span id="navDate">Loading...</span>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+  <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="nav-links">
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="../index.html">Home</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="about.html">About</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="products.html">Shop</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="products.html#parent-hub">Parent Hub</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="enquiry.html">Enquiry</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="coverage.html">Coverage</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="contact.html">Contact</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="account.html">Account</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
+    <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <nav> element opened earlier in this section. -->
+</nav>
+<!-- Closes the <header> element opened earlier in this section. -->
+</header>
+<!-- Groups navigation links and identifies the menu for accessibility. The class "subnav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+<nav class="subnav" aria-label="Section navigation">
+  <!-- Starts an unordered (bulleted) list. -->
+  <ul>
+    <!-- Defines one item in a list. The href attribute points to a section on this page. -->
+    <li><a href="#shop">Shop</a></li>
+    <!-- Defines one item in a list. The href attribute points to a section on this page. -->
+    <li><a href="#deals-gallery">Deals &amp; Gallery</a></li>
+    <!-- Defines one item in a list. The href attribute points to a section on this page. -->
+    <li><a href="#parent-hub">Parent Hub</a></li>
+    <!-- Defines one item in a list. The href attribute points to a section on this page. -->
+    <li><a href="#product-detail">Product Detail</a></li>
+    <!-- Defines one item in a list. The href attribute points to a section on this page. -->
+    <li><a href="#sell-with-us">Sell With Us &amp; FAQ</a></li>
+  <!-- Closes the <ul> element opened earlier in this section. -->
+  </ul>
+<!-- Closes the <nav> element opened earlier in this section. -->
+</nav>
+<!-- Contains the page's main content. -->
+<main>
+  <!-- Groups content that belongs to one topic or page section. The id "shop" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+  <section class="section" id="shop">
+    <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="wrap">
+      <!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="section-head">
+        <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+        <span class="eyebrow">Section 1</span>
+        <!-- Defines the main heading of the page. -->
+        <h1>Shop student essentials and starter bundles</h1>
+        <!-- Creates a paragraph of text. -->
+        <p>Switch between brand-new stock and our manually reviewed second-hand marketplace.</p>
+      <!-- Closes the <div> element opened earlier in this section. -->
+      </div>
+    <!-- Groups related content so it can be arranged or styled together. -->
+    <div data-tabs>
+      <!-- Groups related content so it can be arranged or styled together. The class "tabs" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+      <div class="tabs" role="tablist" aria-label="Shop tabs">
+        <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+        <button class="tab-btn" role="tab" aria-selected="true" data-panel="panel-new">Shop New</button>
+        <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+        <button class="tab-btn" role="tab" aria-selected="false" data-panel="panel-used">Second-Hand Marketplace</button>
+      <!-- Closes the <div> element opened earlier in this section. -->
+      </div>
+    <!-- Groups related content so it can be arranged or styled together. The id "panel-new" lets CSS or JavaScript identify this element. The class "tab-panel" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="tab-panel" id="panel-new" role="tabpanel">
+      <!-- Groups related content so it can be arranged or styled together. The class "grid grid-4" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="grid grid-4">
+        <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+        <article class="card">
+          <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+          <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
+          <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="card-body">
+            <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+            <span class="badge badge-new">New</span>
+            <!-- Defines a third-level heading for a subsection or card. -->
+            <h3>Duvet &amp; Linen Set (Double)</h3>
+            <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+            <p class="price">R749.00</p>
+            <!-- Creates a paragraph of text. -->
+            <p>Winter duvet, fitted sheet, pillow and two covers.</p>
+            <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+            <button class="btn btn-sm" data-add="Duvet &amp; Linen Set (Double)" data-price="749">Add to Order Summary</button>
+          <!-- Closes the <div> element opened earlier in this section. -->
+          </div>
+      <!-- Closes the <article> element opened earlier in this section. -->
+      </article>
+    <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+    <article class="card">
+      <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+      <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
+      <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="card-body">
+        <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+        <span class="badge badge-new">New</span>
+        <!-- Defines a third-level heading for a subsection or card. -->
+        <h3>Electric Kettle 1.7L</h3>
+        <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+        <p class="price">R289.00</p>
+        <!-- Creates a paragraph of text. -->
+        <p>Fast-boil, res-friendly and load-shedding ready.</p>
+        <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+        <button class="btn btn-sm" data-add="Electric Kettle 1.7L" data-price="289">Add to Order Summary</button>
+      <!-- Closes the <div> element opened earlier in this section. -->
+      </div>
+  <!-- Closes the <article> element opened earlier in this section. -->
+  </article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge badge-new">New</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Stationery Mega Pack</h3>
+    <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+    <p class="price">R249.00</p>
+    <!-- Creates a paragraph of text. -->
+    <p>Files, pads, pens, highlighters and a calculator.</p>
+    <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+    <button class="btn btn-sm" data-add="Stationery Mega Pack" data-price="249">Add to Order Summary</button>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge badge-new">New</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Load-Shedding Light Kit</h3>
+    <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+    <p class="price">R329.00</p>
+    <!-- Creates a paragraph of text. -->
+    <p>Rechargeable lamp, power bank and extension lead.</p>
+    <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+    <button class="btn btn-sm" data-add="Load-Shedding Light Kit" data-price="329">Add to Order Summary</button>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The id "panel-used" lets CSS or JavaScript identify this element. The class "tab-panel" connects it to CSS styling or JavaScript behaviour. -->
+<div class="tab-panel" id="panel-used" role="tabpanel" hidden>
+  <!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="info-box" style="margin-bottom:24px">
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>How the marketplace works</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Every listing is submitted through a form, then <strong>manually reviewed</strong> by our team at a collection point before it appears here. There is no automatic upload and no live seller dashboard on this site.</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Groups related content so it can be arranged or styled together. The class "gallery" connects it to CSS styling or JavaScript behaviour. -->
+<div class="gallery">
+  <!-- Creates the <figure> HTML element. -->
+  <figure>
+    <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+    <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
+    <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+    <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
+  <!-- Closes the <figure> element opened earlier in this section. -->
+  </figure>
+<!-- Creates the <figure> HTML element. -->
+<figure>
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used mini bar fridge" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+  <figcaption><strong>Mini Bar Fridge</strong> — R1 150 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. -->
+<figure>
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+  <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. -->
+<figure>
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+  <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. -->
+<figure>
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used bookshelf" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+  <figcaption><strong>Two-Tier Bookshelf</strong> — R380 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. -->
+<figure>
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study chair" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+  <figcaption><strong>Study Chair</strong> — R450 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Creates a paragraph of text. The href attribute points to a section on this page. The class "btn btn-outline" connects it to CSS styling or JavaScript behaviour. -->
+<p style="margin-top:20px"><a class="btn btn-outline" href="#sell-with-us">How to list your own items</a></p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Groups content that belongs to one topic or page section. The id "deals-gallery" lets CSS or JavaScript identify this element. The class "section alt" connects it to CSS styling or JavaScript behaviour. -->
+<section class="section alt" id="deals-gallery">
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap">
+    <!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="section-head">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="eyebrow">Section 2</span>
+      <!-- Defines a second-level heading for a major section. -->
+      <h2>Deals &amp; Gallery</h2>
+      <!-- Creates a paragraph of text. -->
+      <p>Filter and sort in your browser — the list comes from a fixed data set in the site's script, not a database.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. The class "toolbar" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="toolbar">
+    <!-- Groups related content so it can be arranged or styled together. The class "field search-field" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="field search-field">
+      <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "product-search". -->
+      <label for="product-search">Search products</label>
+      <!-- Groups related content so it can be arranged or styled together. The class "search-control" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="search-control">
+        <!-- Creates a form field; type determines the kind of input. The type="search" attribute determines the input format. The id "product-search" lets CSS or JavaScript identify this element. -->
+        <input id="product-search" type="search" placeholder="Search by product, category or keyword" autocomplete="off">
+      <!-- Closes the <div> element opened earlier in this section. -->
+      </div>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Groups related content so it can be arranged or styled together. The class "field" connects it to CSS styling or JavaScript behaviour. -->
+<div class="field">
+  <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "filter-category". -->
+  <label for="filter-category">Category</label>
+  <!-- Creates a drop-down list of options. The id "filter-category" lets CSS or JavaScript identify this element. -->
+  <select id="filter-category">
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="all">All categories</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="bundles">Bundles</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="appliances">Appliances</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="furniture">Furniture</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="bedding">Bedding</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="textbooks">Textbooks</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="stationery">Stationery</option>
+  <!-- Closes the <select> element opened earlier in this section. -->
+  </select>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "field" connects it to CSS styling or JavaScript behaviour. -->
+<div class="field">
+  <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "filter-condition". -->
+  <label for="filter-condition">Condition</label>
+  <!-- Creates a drop-down list of options. The id "filter-condition" lets CSS or JavaScript identify this element. -->
+  <select id="filter-condition">
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="all">New &amp; second-hand</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="new">New only</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="used">Second-hand only</option>
+  <!-- Closes the <select> element opened earlier in this section. -->
+  </select>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "field" connects it to CSS styling or JavaScript behaviour. -->
+<div class="field">
+  <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "sort-by". -->
+  <label for="sort-by">Sort by</label>
+  <!-- Creates a drop-down list of options. The id "sort-by" lets CSS or JavaScript identify this element. -->
+  <select id="sort-by">
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="default">Featured</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="price-asc">Price: low to high</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="price-desc">Price: high to low</option>
+    <!-- Defines one choice in a drop-down list. -->
+    <option value="name">Name A–Z</option>
+  <!-- Closes the <select> element opened earlier in this section. -->
+  </select>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Creates a paragraph of text. The id "deals-count" lets CSS or JavaScript identify this element. The class "hint" connects it to CSS styling or JavaScript behaviour. -->
+<p id="deals-count" class="hint" style="margin:0 0 6px auto"></p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The id "deals-results" lets CSS or JavaScript identify this element. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
+<div class="grid grid-3" id="deals-results"></div>
+<!-- Defines a third-level heading for a subsection or card. -->
+<h3 style="margin-top:48px">Visual gallery</h3>
+<!-- Groups related content so it can be arranged or styled together. The class "tabs" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+<div class="tabs" role="tablist" aria-label="Gallery filters">
+  <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+  <button class="tab-btn" role="tab" aria-selected="true" data-gallery-filter="all">All</button>
+  <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+  <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="bundles">Bundles</button>
+  <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+  <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="res-life">Res life</button>
+  <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+  <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="second-hand">Second-hand</button>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "gallery" connects it to CSS styling or JavaScript behaviour. -->
+<div class="gallery">
+  <!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
+  <figure data-gallery-item="bundles">
+    <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+    <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
+    <!-- Creates the <figcaption> HTML element. -->
+    <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
+  <!-- Closes the <figure> element opened earlier in this section. -->
+  </figure>
+<!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
+<figure data-gallery-item="second-hand">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand items" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. -->
+  <figcaption>Reviewed second-hand stock at our Braamfontein point.</figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
+<figure data-gallery-item="res-life">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
+  <!-- Creates the <figcaption> HTML element. -->
+  <figcaption>Registration week collections on campus.</figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
+<figure data-gallery-item="bundles">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. -->
+  <figcaption>Bedding and linen included in every bundle tier.</figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
+<figure data-gallery-item="second-hand">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
+  <!-- Creates the <figcaption> HTML element. -->
+  <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
+<figure data-gallery-item="res-life">
+  <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+  <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
+  <!-- Creates the <figcaption> HTML element. -->
+  <figcaption>Move-in day at a partner residence.</figcaption>
+<!-- Closes the <figure> element opened earlier in this section. -->
+</figure>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Groups content that belongs to one topic or page section. The id "parent-hub" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+<section class="section" id="parent-hub">
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap">
+    <!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="section-head">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="eyebrow">Section 3</span>
+      <!-- Defines a second-level heading for a major section. -->
+      <h2>Parent Hub</h2>
+      <!-- Creates a paragraph of text. -->
+      <p>Plan the whole first year with a printable checklist and three fixed-price bundles.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. The class "grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="grid grid-2">
+    <!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="info-box">
+      <!-- Defines a third-level heading for a subsection or card. -->
+      <h3>First Year Checklist</h3>
+      <!-- Starts an unordered (bulleted) list. The class "checklist" connects it to CSS styling or JavaScript behaviour. -->
+      <ul class="checklist">
+        <!-- Defines one item in a list. -->
+        <li>Single/double bedding set, pillow and mattress protector</li>
+        <!-- Defines one item in a list. -->
+        <li>Towels and a laundry bag or basket</li>
+        <!-- Defines one item in a list. -->
+        <li>Kettle, two mugs, plate, bowl and cutlery set</li>
+        <!-- Defines one item in a list. -->
+        <li>Desk lamp and extension lead with surge protection</li>
+        <!-- Defines one item in a list. -->
+        <li>Rechargeable light or power bank for load shedding</li>
+        <!-- Defines one item in a list. -->
+        <li>Lockable trunk or storage crate</li>
+        <!-- Defines one item in a list. -->
+        <li>Stationery: files, pads, pens, calculator</li>
+        <!-- Defines one item in a list. -->
+        <li>Prescribed textbooks (check second-hand first)</li>
+        <!-- Defines one item in a list. -->
+        <li>Basic toolkit: scissors, tape, plasters, spare globes</li>
+        <!-- Defines one item in a list. -->
+        <li>Copies of ID, registration and residence letters</li>
+      <!-- Closes the <ul> element opened earlier in this section. -->
       </ul>
-    </nav>
-
-    <!-- <main> identifies the primary content of the webpage.
-It separates the main page content from navigation and footer content. -->
-    <main>
-
-      <!-- <section> groups related content into a semantic webpage section.
-id gives the section a unique identifier for internal links. -->
-      <section class="section" id="shop">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- This div groups the heading and introductory paragraph together.
-class="section-head" allows CSS to style this group. -->
-          <div class="section-head">
-
-            <!-- <span> is an inline element used for a short piece of text.
-The class attribute allows this text to receive CSS styling. -->
-            <span class="eyebrow">Section 1</span>
-
-            <!-- <h2> creates a second-level heading for the section. -->
-            <h1>Shop student essentials and starter bundles</h1>
-
-            <!-- <p> creates a paragraph containing normal text content. -->
-            <p>Switch between brand-new stock and our manually reviewed second-hand marketplace.</p>
-          </div>
-
-          <!-- data-tabs is a custom attribute that JavaScript can use.
-It identifies this container as a group of interactive tabs. -->
-          <div data-tabs>
-
-            <!-- role="tablist" identifies this element as a group of tabs.
-aria-label provides an accessible description of the tab group. -->
-            <div class="tabs" role="tablist" aria-label="Shop tabs">
-
-              <!-- role="tab" identifies the button as a tab control.
-data-panel stores the ID of the content panel it controls. -->
-              <button class="tab-btn" role="tab" aria-selected="true" data-panel="panel-new">Shop New</button>
-
-              <!-- aria-selected="false" means this tab is not selected initially.
-data-panel connects this button to the second-hand content panel. -->
-              <button class="tab-btn" role="tab" aria-selected="false" data-panel="panel-used">Second-Hand Marketplace</button>
-            </div>
-
-            <!-- role="tabpanel" identifies this element as tab content.
-id="panel-new" matches the data-panel value of the first tab. -->
-            <div class="tab-panel" id="panel-new" role="tabpanel">
-
-              <!-- class="grid grid-4" applies two CSS classes to this container.
-The classes control the layout and number of columns. -->
-              <div class="grid grid-4">
-
-                <!-- <article> represents a self-contained piece of content.
-Here it is used to represent one individual product. -->
-                <article class="card">
-
-                  <!-- src specifies the image location and alt provides alternative text.
-loading="lazy" allows the browser to delay loading the image. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
-
-                  <!-- This div groups the text and controls belonging to the product.
-class="card-body" allows CSS to style the card content. -->
-                  <div class="card-body">
-
-                    <!-- <span> displays short inline content.
-The badge classes allow CSS to style the product status. -->
-                    <span class="badge badge-new">New</span>
-
-                    <!-- <h3> creates a third-level heading for the product name. -->
-                    <h3>Duvet &amp; Linen Set (Double)</h3>
-
-                    <!-- class="price" identifies this paragraph as a product price.
-CSS can use the class to control its appearance. -->
-                    <p class="price">R749.00</p>
-
-                    <!-- This paragraph provides additional information about the product. -->
-                    <p>Winter duvet, fitted sheet, pillow and two covers.</p>
-
-                    <!-- data-add stores the product name for JavaScript to read.
-data-price stores the product price as a custom data value. -->
-                    <button class="btn btn-sm" data-add="Duvet &amp; Linen Set (Double)" data-price="749">Add to Order Summary</button>
-                  </div>
-                </article>
-
-                <!-- This <article> represents another independent product.
-The card class allows it to share the same CSS styling. -->
-                <article class="card">
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
-                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                  <div class="card-body">
-                    <!-- Creates an inline element used to group and style a short piece of text. -->
-                    <span class="badge badge-new">New</span>
-                    <!-- Creates a third-level heading for a subsection, product or information card. -->
-                    <h3>Electric Kettle 1.7L</h3>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p class="price">R289.00</p>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p>Fast-boil, res-friendly and load-shedding ready.</p>
-
-                    <!-- Custom data attributes allow JavaScript to access product information.
-data-add stores the name while data-price stores the numeric price. -->
-                    <button class="btn btn-sm" data-add="Electric Kettle 1.7L" data-price="289">Add to Order Summary</button>
-                  </div>
-                </article>
-
-                <!-- This article represents another product card in the grid. -->
-                <article class="card">
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
-                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                  <div class="card-body">
-                    <!-- Creates an inline element used to group and style a short piece of text. -->
-                    <span class="badge badge-new">New</span>
-                    <!-- Creates a third-level heading for a subsection, product or information card. -->
-                    <h3>Stationery Mega Pack</h3>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p class="price">R249.00</p>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p>Files, pads, pens, highlighters and a calculator.</p>
-
-                    <!-- The JavaScript can read both values from these custom attributes. -->
-                    <button class="btn btn-sm" data-add="Stationery Mega Pack" data-price="249">Add to Order Summary</button>
-                  </div>
-                </article>
-
-                <!-- This article represents the fourth product in the product grid. -->
-                <article class="card">
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
-                  <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                  <div class="card-body">
-                    <!-- Creates an inline element used to group and style a short piece of text. -->
-                    <span class="badge badge-new">New</span>
-                    <!-- Creates a third-level heading for a subsection, product or information card. -->
-                    <h3>Load-Shedding Light Kit</h3>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p class="price">R329.00</p>
-                    <!-- Creates a paragraph containing related text. -->
-                    <p>Rechargeable lamp, power bank and extension lead.</p>
-
-                    <!-- data-add and data-price provide values that JavaScript can use. -->
-                    <button class="btn btn-sm" data-add="Load-Shedding Light Kit" data-price="329">Add to Order Summary</button>
-                  </div>
-                </article>
-              </div>
-            </div>
-
-            <!-- hidden is a Boolean HTML attribute that hides the element.
-JavaScript can remove it when the second tab is selected. -->
-            <div class="tab-panel" id="panel-used" role="tabpanel" hidden>
-
-              <!-- Inline style applies CSS directly to this element.
-margin-bottom creates space below the information box. -->
-              <div class="info-box" style="margin-bottom:24px">
-
-                <!-- <h3> creates a heading for the information box. -->
-                <h3>How the marketplace works</h3>
-
-                <!-- <strong> gives semantic importance to the enclosed text.
-Browsers normally display strong text in bold. -->
-                <p>Every listing is submitted through a form, then <strong>manually reviewed</strong> by our team at a collection point before it appears here. There is no automatic upload and no live seller dashboard on this site.</p>
-              </div>
-
-              <!-- class="gallery" groups multiple image figures together.
-CSS can use this class to control the gallery layout. -->
-              <div class="gallery">
-
-                <!-- <figure> groups media content with its related caption.
-It is useful when an image and description belong together. -->
-                <figure>
-
-                  <!-- src specifies the image path while alt provides alternative text.
-width and height provide the image dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
-
-                  <!-- <figcaption> provides a caption associated with the figure. -->
-                  <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure groups the image and information for another item. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used mini bar fridge" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Mini Bar Fridge</strong> — R1 150 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand textbook listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand laptop bag listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand bookshelf listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used bookshelf" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Two-Tier Bookshelf</strong> — R380 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-
-                <!-- This figure contains a second-hand study chair listing. -->
-                <figure>
-                  <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study chair" loading="lazy" width="1200" height="900">
-                  <!-- Provides a caption describing the content of the associated figure. -->
-                  <figcaption><strong>Study Chair</strong> — R450 · Johannesburg · <span class="badge badge-verified">Verified Seller</span></figcaption>
-                </figure>
-              </div>
-
-              <!-- style adds spacing above the paragraph using inline CSS.
-The anchor inside it links to the selling section. -->
-              <p style="margin-top:20px"><a class="btn btn-outline" href="#sell-with-us">How to list your own items</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 2 contains product filtering, sorting and the visual gallery.
-The id allows other elements to link directly to this section. -->
-      <section class="section alt" id="deals-gallery">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Groups the heading and introductory text for this section. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 2</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Deals &amp; Gallery</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>Filter and sort in your browser — the list comes from a fixed data set in the site's script, not a database.</p>
-          </div>
-
-          <!-- toolbar groups the filtering and sorting form controls.
-CSS uses this class to arrange the controls on the page. -->
-          <div class="toolbar">
-
-            <!-- This field provides keyword search across product names, categories, conditions and descriptions. -->
-            <div class="field search-field">
-              <!-- Connects the label to the keyword search input for accessibility. -->
-              <label for="product-search">Search products</label>
-              <!-- Groups the search input and button into one responsive control. -->
-              <div class="search-control">
-                <!-- JavaScript reads this value when the user presses the Search button. -->
-                <input id="product-search" type="search" placeholder="Search by product, category or keyword" autocomplete="off">
-
-              </div>
-            </div>
-
-            <!-- field groups a label and its related form control. -->
-            <div class="field">
-
-              <!-- for connects the label to the select element with the same ID. -->
-              <label for="filter-category">Category</label>
-
-              <!-- <select> creates a dropdown list for selecting a value.
-id uniquely identifies this control for HTML, CSS and JavaScript. -->
-              <select id="filter-category">
-
-                <!-- <option> represents one selectable value inside a select element.
-value is the data returned when this option is selected. -->
-                <option value="all">All categories</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="bundles">Bundles</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="appliances">Appliances</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="furniture">Furniture</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="bedding">Bedding</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="textbooks">Textbooks</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="stationery">Stationery</option>
-              </select>
-            </div>
-
-            <!-- This field groups the condition label and dropdown together. -->
-            <div class="field">
-              <!-- Creates a form label and associates it with a control using the for attribute. -->
-              <label for="filter-condition">Condition</label>
-              <!-- Creates a dropdown control for selecting one available value. -->
-              <select id="filter-condition">
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="all">New &amp; second-hand</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="new">New only</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="used">Second-hand only</option>
-              </select>
-            </div>
-
-            <!-- This field groups the sorting label and dropdown together. -->
-            <div class="field">
-              <!-- Creates a form label and associates it with a control using the for attribute. -->
-              <label for="sort-by">Sort by</label>
-              <!-- Creates a dropdown control for selecting one available value. -->
-              <select id="sort-by">
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="default">Featured</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="price-asc">Price: low to high</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="price-desc">Price: high to low</option>
-                <!-- Creates one selectable option inside a dropdown control. -->
-                <option value="name">Name A–Z</option>
-              </select>
-            </div>
-
-            <!-- id uniquely identifies this paragraph so JavaScript can update it.
-It can display information such as the number of matching products. -->
-            <p id="deals-count" class="hint" style="margin:0 0 6px auto"></p>
-          </div>
-
-          <!-- This container starts empty and can be populated by JavaScript.
-The id allows JavaScript to locate this element in the DOM. -->
-          <div class="grid grid-3" id="deals-results"></div>
-
-          <!-- Inline CSS adds spacing above this heading.
-Creates a third-level heading for a subsection, product or information card.
-<h3> creates a third-level heading for the gallery. -->
-          <h3 style="margin-top:48px">Visual gallery</h3>
-
-          <!-- role="tablist" identifies these buttons as a group of tabs.
-aria-label describes the purpose of the controls to screen readers. -->
-          <div class="tabs" role="tablist" aria-label="Gallery filters">
-
-            <!-- data-gallery-filter stores the category JavaScript should display.
-aria-selected shows that this filter is selected initially. -->
-            <button class="tab-btn" role="tab" aria-selected="true" data-gallery-filter="all">All</button>
-
-            <!-- This button filters the gallery to products in the bundles category. -->
-            <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="bundles">Bundles</button>
-
-            <!-- This button filters the gallery to residence-life images. -->
-            <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="res-life">Res life</button>
-
-            <!-- This button filters the gallery to second-hand images. -->
-            <button class="tab-btn" role="tab" aria-selected="false" data-gallery-filter="second-hand">Second-hand</button>
-          </div>
-
-          <!-- gallery contains the figure elements used to display the images. -->
-          <div class="gallery">
-
-            <!-- data-gallery-item identifies the category of this gallery item.
-JavaScript can compare this value with the selected filter. -->
-            <figure data-gallery-item="bundles">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the second-hand gallery category. -->
-            <figure data-gallery-item="second-hand">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand items" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Reviewed second-hand stock at our Braamfontein point.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the res-life gallery category. -->
-            <figure data-gallery-item="res-life">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Registration week collections on campus.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the bundles gallery category. -->
-            <figure data-gallery-item="bundles">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Bedding and linen included in every bundle tier.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the second-hand gallery category. -->
-            <figure data-gallery-item="second-hand">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
-            </figure>
-
-            <!-- This figure is assigned to the res-life gallery category. -->
-            <figure data-gallery-item="res-life">
-              <!-- Embeds an image; src specifies the image file, alt provides alternative text, and other attributes control loading and dimensions. -->
-              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
-              <!-- Provides a caption describing the content of the associated figure. -->
-              <figcaption>Move-in day at a partner residence.</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 3 contains information intended for parents and guardians.
-The id allows navigation links to jump directly to this section. -->
-      <section class="section" id="parent-hub">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Groups the section heading and introductory paragraph. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 3</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Parent Hub</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>Plan the whole first year with a printable checklist and three fixed-price bundles.</p>
-          </div>
-
-          <!-- grid-2 applies a two-column CSS layout to the content. -->
-          <div class="grid grid-2">
-
-            <!-- info-box groups the checklist content into one styled container. -->
-            <div class="info-box">
-              <!-- Creates a third-level heading for a subsection, product or information card. -->
-              <h3>First Year Checklist</h3>
-
-              <!-- <ul> creates an unordered list of checklist requirements.
-Each <li> represents one individual list item. -->
-              <ul class="checklist">
-                <!-- Creates one item within an unordered list. -->
-                <li>Single/double bedding set, pillow and mattress protector</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Towels and a laundry bag or basket</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Kettle, two mugs, plate, bowl and cutlery set</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Desk lamp and extension lead with surge protection</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Rechargeable light or power bank for load shedding</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Lockable trunk or storage crate</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Stationery: files, pads, pens, calculator</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Prescribed textbooks (check second-hand first)</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Basic toolkit: scissors, tape, plasters, spare globes</li>
-                <!-- Creates one item within an unordered list. -->
-                <li>Copies of ID, registration and residence letters</li>
-              </ul>
-
-              <!-- Inline CSS adds spacing above the button.
-The button can be targeted by JavaScript using its ID. -->
-              <p style="margin-top:16px">
-                <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
-                <button class="btn" id="print-checklist">Print this checklist</button>
-              </p>
-            </div>
-
-            <!-- This div contains the three different starter bundle cards. -->
-            <div>
-
-              <!-- Nested div elements create the card and its content container.
-The classes allow CSS to style the card consistently. -->
-              <div class="card">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="card-body">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="badge">Tier 1</span>
-                  <!-- Creates a third-level heading for a subsection, product or information card. -->
-                  <h3>Basic Starter Bundle</h3>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p class="price">R1 499.00</p>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p>Bedding set, kettle, two-mug set, plate/bowl/cutlery, stationery starter.</p>
-
-                  <!-- data-add and data-price store values that JavaScript can read. -->
-                  <button class="btn btn-sm" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
-                </div>
-              </div>
-
-              <!-- <br> inserts a line break between the bundle cards. -->
-              <br>
-
-              <!-- This card represents the second starter bundle. -->
-              <div class="card">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="card-body">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="badge badge-used">Tier 2 · most chosen</span>
-                  <!-- Creates a third-level heading for a subsection, product or information card. -->
-                  <h3>Standard Starter Bundle</h3>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p class="price">R2 799.00</p>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p>Everything in Basic, plus desk lamp, laundry basket, towel set, kitchen starter pack and extension lead.</p>
-                  <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
-                  <button class="btn btn-sm" data-add="Standard Starter Bundle" data-price="2799">Add to Order Summary</button>
-                </div>
-              </div>
-
-              <!-- Another line break separates the second and third bundle. -->
-              <br>
-
-              <!-- This card represents the third starter bundle. -->
-              <div class="card">
-                <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-                <div class="card-body">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="badge badge-verified">Tier 3</span>
-                  <!-- Creates a third-level heading for a subsection, product or information card. -->
-                  <h3>Premium Starter Bundle</h3>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p class="price">R4 499.00</p>
-                  <!-- Creates a paragraph containing related text. -->
-                  <p>Everything in Standard, plus lockable trunk, study chair, rechargeable light kit, mini kettle-and-fridge combo option and full stationery pack.</p>
-                  <!-- Creates an interactive button; its attributes support JavaScript behaviour, styling and accessibility. -->
-                  <button class="btn btn-sm" data-add="Premium Starter Bundle" data-price="4499">Add to Order Summary</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4 provides a reusable layout for displaying product details.
-The ID allows navigation links to open this section directly. -->
-      <section class="section alt" id="product-detail">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Contains the product-detail heading and introductory information. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 4</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Product detail template</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>This is the reusable layout every product uses. Choose an item to preview it.</p>
-          </div>
-
-          <!-- toolbar groups the product selection control. -->
-          <div class="toolbar">
-            <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-            <div class="field">
-
-              <!-- for connects the label to the select element with the matching ID. -->
-              <label for="detail-select">Preview product</label>
-
-              <!-- JavaScript can add product options to this select element. -->
-              <select id="detail-select"></select>
-            </div>
-          </div>
-
-          <!-- grid-2 creates two columns for the product image and information. -->
-          <div class="grid grid-2">
-
-            <!-- map-frame is used as a styled container for the product image. -->
-            <div class="product-map-frame">
-
-              <!-- id allows JavaScript to change this image dynamically.
-alt provides alternative text if the image cannot be displayed. -->
-              <img id="detail-img" src="../assets/images/bundles/start-bundle-2.jpg" alt="Selected product" loading="lazy">
-            </div>
-
-            <!-- This div contains the selected product's information and controls. -->
-            <div>
-
-              <!-- span is used for short inline labels such as product badges. -->
-              <span class="badge badge-verified">Verified Seller</span>
-
-              <!-- id allows JavaScript to update this element with the product condition. -->
-              <span class="badge" id="detail-condition">Brand new</span>
-
-              <!-- id allows JavaScript to replace the product name dynamically. -->
-              <h3 id="detail-name">Product name</h3>
-
-              <!-- id allows JavaScript to update the displayed product price. -->
-              <p class="price order-total" id="detail-price">R0.00</p>
-
-              <!-- id allows JavaScript to replace this paragraph with the product description. -->
-              <p id="detail-desc">Product description.</p>
-
-              <!-- data-add and data-price store values for JavaScript to use.
-The ID allows JavaScript to locate this specific button. -->
-              <button class="btn" id="detail-add" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
-
-              <!-- Inline CSS adds spacing above the collection heading. -->
-              <h3 style="margin-top:28px">Collection points</h3>
-
-              <!-- <ul> creates an unordered list of available collection locations. -->
-              <ul>
-                <!-- Creates one item within an unordered list. -->
-                <li><strong>Residence desk</strong> — Hatfield res reception, Mon–Fri 09:00–17:00</li>
-                <!-- Creates one item within an unordered list. -->
-                <li><strong>Campus point</strong> — Braamfontein student centre, Mon–Sat 10:00–16:00</li>
-                <!-- Creates one item within an unordered list. -->
-                <li><strong>Secure locker</strong> — Westville locker bank, daily 08:00–20:00</li>
-              </ul>
-
-              <!-- This div uses the map-frame class to style the map container. -->
-              <div class="map-frame">
-
-                <!-- src contains the external map URL that the iframe loads.
-width and height define the initial dimensions of the embedded map. -->
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7186.981585776484!2d28.22582041027299!3d-25.754347799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561bd17853bd3%3A0xa7083bed5b42c902!2sUniversity%20of%20Pretoria!5e0!3m2!1sen!2sza!4v1791328431492!5m2!1sen!2sza"
-                    width="600"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    alt="Static illustrated map of Campus-Cart office and collection locations in South Africa"
-                    loading="lazy"
-                    width="1400"
-                    height="700">
-                  </iframe>
-              </div>
-
-              <!-- class="map-note" allows CSS to style this explanatory paragraph. -->
-              <p class="map-note">This is a static map. Live GPS tracking is not available.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 5 contains seller information and frequently asked questions.
-The ID allows other links to navigate directly to this section. -->
-      <section class="section" id="sell-with-us">
-        <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-        <div class="wrap">
-
-          <!-- Contains the heading and introduction for the seller section. -->
-          <div class="section-head">
-            <!-- Creates an inline element used to group and style a short piece of text. -->
-            <span class="eyebrow">Section 5</span>
-            <!-- Creates a second-level heading for a major webpage section. -->
-            <h2>Sell With Us</h2>
-            <!-- Creates a paragraph containing related text. -->
-            <p>Turn last year's kit into cash. Listings are reviewed by a person before they go live.</p>
-          </div>
-
-          <!-- grid-4 creates a four-column layout for the four process cards. -->
-          <div class="grid grid-4">
-
-            <!-- Each card represents one step of the selling process.
-card-navy applies the darker card styling through CSS. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>1. Submit</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Complete the external listing form with photos, condition notes and your asking price.</p>
-              </div>
-            </div>
-
-            <!-- This card represents the second step in the process. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>2. Review</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Our team checks the item at a collection point and confirms it is complete and working.</p>
-              </div>
-            </div>
-
-            <!-- This card represents the third step in the process. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>3. List</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Approved items are published to the Second-Hand Marketplace with a Verified Seller badge.</p>
-              </div>
-            </div>
-
-            <!-- This card represents the final step in the process. -->
-            <div class="card card-navy">
-              <!-- Creates a general container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates a third-level heading for a subsection, product or information card. -->
-                <h3>4. Hand over</h3>
-                <!-- Creates a paragraph containing related text. -->
-                <p>Buyer collects at the agreed point; we confirm the handover with both parties.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Inline CSS adds space above the paragraph.
-The anchor links to an external Google Forms page. -->
-          <p style="margin-top:24px">
-
-            <!-- target="_blank" opens the link in a new browser tab.
-rel="noopener" prevents the new page from accessing the opener. -->
-            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfd7onwzfjuahqTVVFDm6zUPfi0c0_D8rymwmhWDp8Fpir-iA/viewform?usp=dialog" target="_blank" rel="noopener">Open the listing form (Google Form)</a>
-          </p>
-
-          <!-- Inline CSS adds space above the FAQ heading. -->
-          <h3 style="margin-top:48px">Frequently asked questions</h3>
-
-          <!-- data-tabs identifies this container as an interactive tab group.
-JavaScript can use this attribute to control the FAQ panels. -->
-          <div data-tabs>
-
-            <!-- role="tablist" identifies this as a group of tab controls.
-aria-label provides an accessible name for the tab group. -->
-            <div class="tabs" role="tablist" aria-label="FAQ tabs">
-
-              <!-- data-panel identifies which FAQ panel this tab controls.
-aria-selected indicates that this tab is currently selected. -->
-              <button class="tab-btn" role="tab" aria-selected="true" data-panel="faq-student">Student FAQ</button>
-
-              <!-- This tab controls the parent FAQ panel.
-aria-selected="false" means it is not selected initially. -->
-              <button class="tab-btn" role="tab" aria-selected="false" data-panel="faq-parent">Parent FAQ</button>
-            </div>
-
-            <!-- This panel contains questions intended for students.
-role="tabpanel" identifies it as content controlled by a tab. -->
-            <div class="tab-panel" id="faq-student" role="tabpanel">
-
-              <div class="accordion">
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>Can I pay in instalments?</summary>
-                  <div class="acc-body"><p>Payment plans are arranged manually over email before collection. Typically a 50% holding amount and the balance on collection. Nothing is charged on this website.</p></div>
-                </details>
-
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>What if a second-hand item is faulty?</summary>
-                  <div class="acc-body"><p>Report it within 48 hours of collection and we arrange a swap or refund with the seller. Items are tested at review, so faults are rare.</p></div>
-                </details>
-
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>How does delivery work?</summary>
-                  <div class="acc-body"><p>Collection at any listed residence, campus or locker point is free. Courier delivery is quoted per order and confirmed before you pay.</p></div>
-                </details>
-
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>How much do I earn when selling?</summary>
-                  <div class="acc-body"><p>You set the asking price. Campus-Cart keeps a small handling fee that is confirmed in writing before your listing goes live.</p></div>
-                </details>
-              </div>
-            </div>
-
-            <!-- hidden prevents this panel from displaying initially.
-JavaScript can show it when the Parent FAQ tab is selected. -->
-            <div class="tab-panel" id="faq-parent" role="tabpanel" hidden>
-
-              <div class="accordion">
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>Are bundle prices fixed?</summary>
-                  <div class="acc-body"><p>Yes. Each bundle lists its contents and one price. Substitutions on request never increase the price without written confirmation.</p></div>
-                </details>
-
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>Can I pay off a bundle before registration?</summary>
-                  <div class="acc-body"><p>Yes — arrange a staged payment plan by email. We hold stock once the first payment reflects.</p></div>
-                </details>
-
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>What is the returns policy?</summary>
-                  <div class="acc-body"><p>Unused new items may be returned within 7 days of collection in their original packaging. Second-hand items follow the 48-hour fault window.</p></div>
-                </details>
-
-                <!-- Each details element is a collapsible FAQ item; summary is its clickable question. -->
-                <details class="acc-item">
-                  <summary>How do I know a seller is legitimate?</summary>
-                  <div class="acc-body"><p>Every second-hand listing is inspected in person by our team before publication. The Verified Seller badge means a staff member handled the item.</p></div>
-                </details>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- <footer> contains information displayed at the bottom of the webpage.
-It commonly contains navigation, contact details and copyright information. -->
-    <footer>
-
-      <!-- wrap controls the content width while footer-grid controls its layout.
-Both classes are defined in the external CSS file. -->
-      <div class="wrap footer-grid">
-
-        <!-- This div groups the website name and description. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Campus-Cart</h4>
-          <!-- Creates a paragraph containing related text. -->
-          <p>Affordable new and second-hand student essentials for South African campuses.</p>
-        </div>
-
-        <!-- This div contains navigation links related to shopping.
-Creates an unordered list for related items.
-<ul> creates the unordered list containing those links. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Shop</h4>
-          <!-- Creates an unordered list for related items. -->
-          <ul>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html">Shop New</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#product-detail">Product Detail</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-          </ul>
-        </div>
-
-        <!-- This div contains navigation links related to the company. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Company</h4>
-          <!-- Creates an unordered list for related items. -->
-          <ul>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="about.html">About</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="products.html#parent-hub">Parent Hub</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="coverage.html">Coverage</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="contact.html">Contact</a></li>
-            <!-- Creates one item within an unordered list. -->
-            <li><a href="account.html">Account</a></li>
-          </ul>
-        </div>
-
-        <!-- This div groups the website's contact information. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Reach us</h4>
-          <!-- Creates an unordered list for related items. -->
-          <ul>
-
-            <!-- mailto: creates a link that can open an email application.
-The address after mailto: becomes the email recipient. -->
-            <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
-
-            <!-- This URL uses WhatsApp's web link format to open the contact.
-The number is included as part of the URL. -->
-            <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
-
-            <!-- This list item contains plain text rather than a hyperlink. -->
-            <li>Mon–Fri, 09:00–17:00 SAST</li>
-          </ul>
-        </div>
+    <!-- Creates a paragraph of text. -->
+    <p style="margin-top:16px">
+      <!-- Creates a button for an action or interactive control. The id "print-checklist" lets CSS or JavaScript identify this element. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
+      <button class="btn" id="print-checklist">Print this checklist</button>
+    <!-- Closes the <p> element opened earlier in this section. -->
+    </p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Groups related content so it can be arranged or styled together. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card">
+    <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="card-body">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="badge">Tier 1</span>
+      <!-- Defines a third-level heading for a subsection or card. -->
+      <h3>Basic Starter Bundle</h3>
+      <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+      <p class="price">R1 499.00</p>
+      <!-- Creates a paragraph of text. -->
+      <p>Bedding set, kettle, two-mug set, plate/bowl/cutlery, stationery starter.</p>
+      <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+      <button class="btn btn-sm" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Inserts a line break. -->
+<br>
+<!-- Groups related content so it can be arranged or styled together. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<div class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-used" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge badge-used">Tier 2 · most chosen</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Standard Starter Bundle</h3>
+    <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+    <p class="price">R2 799.00</p>
+    <!-- Creates a paragraph of text. -->
+    <p>Everything in Basic, plus desk lamp, laundry basket, towel set, kitchen starter pack and extension lead.</p>
+    <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+    <button class="btn btn-sm" data-add="Standard Starter Bundle" data-price="2799">Add to Order Summary</button>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Inserts a line break. -->
+<br>
+<!-- Groups related content so it can be arranged or styled together. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<div class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge badge-verified">Tier 3</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Premium Starter Bundle</h3>
+    <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+    <p class="price">R4 499.00</p>
+    <!-- Creates a paragraph of text. -->
+    <p>Everything in Standard, plus lockable trunk, study chair, rechargeable light kit, mini kettle-and-fridge combo option and full stationery pack.</p>
+    <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+    <button class="btn btn-sm" data-add="Premium Starter Bundle" data-price="4499">Add to Order Summary</button>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Groups content that belongs to one topic or page section. The id "product-detail" lets CSS or JavaScript identify this element. The class "section alt" connects it to CSS styling or JavaScript behaviour. -->
+<section class="section alt" id="product-detail">
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap">
+    <!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="section-head">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="eyebrow">Section 4</span>
+      <!-- Defines a second-level heading for a major section. -->
+      <h2>Product detail template</h2>
+      <!-- Creates a paragraph of text. -->
+      <p>This is the reusable layout every product uses. Choose an item to preview it.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. The class "toolbar" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="toolbar">
+    <!-- Groups related content so it can be arranged or styled together. The class "field" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="field">
+      <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "detail-select". -->
+      <label for="detail-select">Preview product</label>
+      <!-- Creates a drop-down list of options. The id "detail-select" lets CSS or JavaScript identify this element. -->
+      <select id="detail-select"></select>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
+<div class="grid grid-2">
+  <!-- Groups related content so it can be arranged or styled together. The class "product-map-frame" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="product-map-frame">
+    <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. The id "detail-img" lets CSS or JavaScript identify this element. -->
+    <img id="detail-img" src="../assets/images/bundles/start-bundle-2.jpg" alt="Selected product" loading="lazy">
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+  <span class="badge badge-verified">Verified Seller</span>
+  <!-- Groups a short piece of inline text for styling or scripting. The id "detail-condition" lets CSS or JavaScript identify this element. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+  <span class="badge" id="detail-condition">Brand new</span>
+  <!-- Defines a third-level heading for a subsection or card. The id "detail-name" lets CSS or JavaScript identify this element. -->
+  <h3 id="detail-name">Product name</h3>
+  <!-- Creates a paragraph of text. The id "detail-price" lets CSS or JavaScript identify this element. The class "price order-total" connects it to CSS styling or JavaScript behaviour. -->
+  <p class="price order-total" id="detail-price">R0.00</p>
+  <!-- Creates a paragraph of text. The id "detail-desc" lets CSS or JavaScript identify this element. -->
+  <p id="detail-desc">Product description.</p>
+  <!-- Creates a button for an action or interactive control. The id "detail-add" lets CSS or JavaScript identify this element. The class "btn" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+  <button class="btn" id="detail-add" data-add="Basic Starter Bundle" data-price="1499">Add to Order Summary</button>
+  <!-- Defines a third-level heading for a subsection or card. -->
+  <h3 style="margin-top:28px">Collection points</h3>
+  <!-- Starts an unordered (bulleted) list. -->
+  <ul>
+    <!-- Defines one item in a list. -->
+    <li><strong>Residence desk</strong> — Hatfield res reception, Mon–Fri 09:00–17:00</li>
+    <!-- Defines one item in a list. -->
+    <li><strong>Campus point</strong> — Braamfontein student centre, Mon–Sat 10:00–16:00</li>
+    <!-- Defines one item in a list. -->
+    <li><strong>Secure locker</strong> — Westville locker bank, daily 08:00–20:00</li>
+  <!-- Closes the <ul> element opened earlier in this section. -->
+  </ul>
+<!-- Groups related content so it can be arranged or styled together. The class "map-frame" connects it to CSS styling or JavaScript behaviour. -->
+<div class="map-frame">
+  <!-- Embeds another webpage or external content inside this page. -->
+  <iframe
+    <!-- Provides visible text content for this part of the page. -->
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7186.981585776484!2d28.22582041027299!3d-25.754347799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9561bd17853bd3%3A0xa7083bed5b42c902!2sUniversity%20of%20Pretoria!5e0!3m2!1sen!2sza!4v1791328431492!5m2!1sen!2sza"
+    <!-- Provides visible text content for this part of the page. -->
+    width="600"
+    <!-- Provides visible text content for this part of the page. -->
+    height="450"
+    <!-- Provides visible text content for this part of the page. -->
+    style="border:0;"
+    <!-- Provides visible text content for this part of the page. -->
+    allowfullscreen=""
+    <!-- Provides visible text content for this part of the page. -->
+    loading="lazy"
+    <!-- Provides visible text content for this part of the page. -->
+    referrerpolicy="strict-origin-when-cross-origin"
+    <!-- Provides visible text content for this part of the page. -->
+    alt="Static illustrated map of Campus-Cart office and collection locations in South Africa"
+    <!-- Provides visible text content for this part of the page. -->
+    loading="lazy"
+    <!-- Provides visible text content for this part of the page. -->
+    width="1400"
+    <!-- Provides visible text content for this part of the page. -->
+    height="700">
+  <!-- Closes the <iframe> element opened earlier in this section. -->
+  </iframe>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Creates a paragraph of text. The class "map-note" connects it to CSS styling or JavaScript behaviour. -->
+<p class="map-note">This is a static map. Live GPS tracking is not available.</p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Groups content that belongs to one topic or page section. The id "sell-with-us" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+<section class="section" id="sell-with-us">
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap">
+    <!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="section-head">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="eyebrow">Section 5</span>
+      <!-- Defines a second-level heading for a major section. -->
+      <h2>Sell With Us</h2>
+      <!-- Creates a paragraph of text. -->
+      <p>Turn last year's kit into cash. Listings are reviewed by a person before they go live.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. The class "grid grid-4" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="grid grid-4">
+    <!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="card card-navy">
+      <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="card-body">
+        <!-- Defines a third-level heading for a subsection or card. -->
+        <h3>1. Submit</h3>
+        <!-- Creates a paragraph of text. -->
+        <p>Complete the external listing form with photos, condition notes and your asking price.</p>
+      <!-- Closes the <div> element opened earlier in this section. -->
       </div>
-
-      <!-- class="footer-bottom" identifies the bottom copyright area.
-&copy; is an HTML entity that displays the copyright symbol. -->
-      <div class="wrap footer-bottom">
-
-    <!-- Provides a direct link to the XML sitemap so users and search engines can easily access the website's indexed page list. -->
-    <!-- The relative path points to the sitemap.xml file stored in the repository's seo folder. -->
-    <p><a href="about.html#licence">Licence and credits</a> | <a href="../sitemap.xml">Sitemap.xml</a></p>
-
-
-        <!-- Creates a paragraph containing related text. -->
-        <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
-      </div>
-    </footer>
-
-    <!-- <script> connects an external JavaScript file to this webpage.
-src specifies the path where the JavaScript file is located. -->
-    <script src="../assets/js/script.js"></script>
-    <script src="../assets/js/features.js"></script>
-
-  </body>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+<div class="card card-navy">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>2. Review</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Our team checks the item at a collection point and confirms it is complete and working.</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+<div class="card card-navy">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>3. List</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Approved items are published to the Second-Hand Marketplace with a Verified Seller badge.</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+<div class="card card-navy">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>4. Hand over</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Buyer collects at the agreed point; we confirm the handover with both parties.</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Creates a paragraph of text. -->
+<p style="margin-top:24px">
+  <!-- Creates a hyperlink to the specified web address. The href attribute points to an external webpage. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
+  <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfd7onwzfjuahqTVVFDm6zUPfi0c0_D8rymwmhWDp8Fpir-iA/viewform?usp=dialog" target="_blank" rel="noopener">Open the listing form (Google Form)</a>
+<!-- Closes the <p> element opened earlier in this section. -->
+</p>
+<!-- Defines a third-level heading for a subsection or card. -->
+<h3 style="margin-top:48px">Frequently asked questions</h3>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div data-tabs>
+  <!-- Groups related content so it can be arranged or styled together. The class "tabs" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <div class="tabs" role="tablist" aria-label="FAQ tabs">
+    <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+    <button class="tab-btn" role="tab" aria-selected="true" data-panel="faq-student">Student FAQ</button>
+    <!-- Creates a button for an action or interactive control. The class "tab-btn" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. A data attribute stores a value that JavaScript can read. -->
+    <button class="tab-btn" role="tab" aria-selected="false" data-panel="faq-parent">Parent FAQ</button>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Groups related content so it can be arranged or styled together. The id "faq-student" lets CSS or JavaScript identify this element. The class "tab-panel" connects it to CSS styling or JavaScript behaviour. -->
+<div class="tab-panel" id="faq-student" role="tabpanel">
+  <!-- Groups related content so it can be arranged or styled together. The class "accordion" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="accordion">
+    <!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+    <details class="acc-item">
+      <!-- Provides the clickable heading for a details disclosure widget. -->
+      <summary>Can I pay in instalments?</summary>
+      <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="acc-body"><p>Payment plans are arranged manually over email before collection. Typically a 50% holding amount and the balance on collection. Nothing is charged on this website.</p></div>
+    <!-- Closes the <details> element opened earlier in this section. -->
+    </details>
+  <!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+  <details class="acc-item">
+    <!-- Provides the clickable heading for a details disclosure widget. -->
+    <summary>What if a second-hand item is faulty?</summary>
+    <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="acc-body"><p>Report it within 48 hours of collection and we arrange a swap or refund with the seller. Items are tested at review, so faults are rare.</p></div>
+  <!-- Closes the <details> element opened earlier in this section. -->
+  </details>
+<!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+<details class="acc-item">
+  <!-- Provides the clickable heading for a details disclosure widget. -->
+  <summary>How does delivery work?</summary>
+  <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="acc-body"><p>Collection at any listed residence, campus or locker point is free. Courier delivery is quoted per order and confirmed before you pay.</p></div>
+<!-- Closes the <details> element opened earlier in this section. -->
+</details>
+<!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+<details class="acc-item">
+  <!-- Provides the clickable heading for a details disclosure widget. -->
+  <summary>How much do I earn when selling?</summary>
+  <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="acc-body"><p>You set the asking price. Campus-Cart keeps a small handling fee that is confirmed in writing before your listing goes live.</p></div>
+<!-- Closes the <details> element opened earlier in this section. -->
+</details>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The id "faq-parent" lets CSS or JavaScript identify this element. The class "tab-panel" connects it to CSS styling or JavaScript behaviour. -->
+<div class="tab-panel" id="faq-parent" role="tabpanel" hidden>
+  <!-- Groups related content so it can be arranged or styled together. The class "accordion" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="accordion">
+    <!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+    <details class="acc-item">
+      <!-- Provides the clickable heading for a details disclosure widget. -->
+      <summary>Are bundle prices fixed?</summary>
+      <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="acc-body"><p>Yes. Each bundle lists its contents and one price. Substitutions on request never increase the price without written confirmation.</p></div>
+    <!-- Closes the <details> element opened earlier in this section. -->
+    </details>
+  <!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+  <details class="acc-item">
+    <!-- Provides the clickable heading for a details disclosure widget. -->
+    <summary>Can I pay off a bundle before registration?</summary>
+    <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="acc-body"><p>Yes — arrange a staged payment plan by email. We hold stock once the first payment reflects.</p></div>
+  <!-- Closes the <details> element opened earlier in this section. -->
+  </details>
+<!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+<details class="acc-item">
+  <!-- Provides the clickable heading for a details disclosure widget. -->
+  <summary>What is the returns policy?</summary>
+  <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="acc-body"><p>Unused new items may be returned within 7 days of collection in their original packaging. Second-hand items follow the 48-hour fault window.</p></div>
+<!-- Closes the <details> element opened earlier in this section. -->
+</details>
+<!-- Creates a disclosure widget that can expand or collapse. The class "acc-item" connects it to CSS styling or JavaScript behaviour. -->
+<details class="acc-item">
+  <!-- Provides the clickable heading for a details disclosure widget. -->
+  <summary>How do I know a seller is legitimate?</summary>
+  <!-- Groups related content so it can be arranged or styled together. The class "acc-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="acc-body"><p>Every second-hand listing is inspected in person by our team before publication. The Verified Seller badge means a staff member handled the item.</p></div>
+<!-- Closes the <details> element opened earlier in this section. -->
+</details>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Closes the <main> element opened earlier in this section. -->
+</main>
+<!-- Groups footer information, contact details, and secondary navigation. -->
+<footer>
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap footer-grid" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap footer-grid">
+    <!-- Groups related content so it can be arranged or styled together. -->
+    <div>
+      <!-- Defines a fourth-level heading for a smaller subsection. -->
+      <h4>Campus-Cart</h4>
+      <!-- Creates a paragraph of text. -->
+      <p>Affordable new and second-hand student essentials for South African campuses.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. -->
+  <div>
+    <!-- Defines a fourth-level heading for a smaller subsection. -->
+    <h4>Shop</h4>
+    <!-- Starts an unordered (bulleted) list. -->
+    <ul>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html">Shop New</a></li>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html#product-detail">Product Detail</a></li>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    <!-- Closes the <ul> element opened earlier in this section. -->
+    </ul>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Defines a fourth-level heading for a smaller subsection. -->
+  <h4>Company</h4>
+  <!-- Starts an unordered (bulleted) list. -->
+  <ul>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="about.html">About</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="products.html#parent-hub">Parent Hub</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="enquiry.html">Enquiry</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="coverage.html">Coverage</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="contact.html">Contact</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="account.html">Account</a></li>
+  <!-- Closes the <ul> element opened earlier in this section. -->
+  </ul>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Defines a fourth-level heading for a smaller subsection. -->
+  <h4>Reach us</h4>
+  <!-- Starts an unordered (bulleted) list. -->
+  <ul>
+    <!-- Defines one item in a list. The href attribute points to an email address. -->
+    <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+    <!-- Defines one item in a list. The href attribute points to an external webpage. -->
+    <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+    <!-- Defines one item in a list. -->
+    <li>Mon–Fri, 09:00–17:00 SAST</li>
+  <!-- Closes the <ul> element opened earlier in this section. -->
+  </ul>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "wrap footer-bottom" connects it to CSS styling or JavaScript behaviour. -->
+<div class="wrap footer-bottom">
+  <!-- Creates a paragraph of text. The href attribute points to the specified page or resource. -->
+  <p><a href="about.html#licence">Licence and credits</a> | <a href="../sitemap.xml">Sitemap.xml</a></p>
+  <!-- Creates a paragraph of text. -->
+  <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <footer> element opened earlier in this section. -->
+</footer>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/js/script.js"></script>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/js/features.js"></script>
+<!-- Closes the <body> element opened earlier in this section. -->
+</body>
 </html>
