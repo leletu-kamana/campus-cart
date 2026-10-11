@@ -6,11 +6,11 @@
 // ==========================================================
 
 // Waits until the HTML page has finished loading before running the code.
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { // Run setup after the HTML has been parsed.
 
     // Looks for each form on the current page. Only one of them exists on each page.
-    const enquiryForm = document.getElementById("enquiry-form");
-    const contactForm = document.getElementById("contact-form");
+    const enquiryForm = document.getElementById("enquiry-form"); // Get the enquiry form, or null if this page has none.
+    const contactForm = document.getElementById("contact-form"); // Get the contact form, or null if this page has none.
 
     // Starts the enquiry code only if the enquiry form is on this page.
     if (enquiryForm) {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function showError(input, message) {
 
     // Finds the empty <span> that sits next to this field and holds its error message.
-    const errorBox = document.getElementById(input.id + "-error");
+    const errorBox = document.getElementById(input.id + "-error"); // Match the field ID to its error-message element.
 
     // Writes the message into the span, if the span exists.
     if (errorBox) {
@@ -78,7 +78,7 @@ function isValidEmail(value) {
 function isValidPhone(value) {
 
     // Removes spaces, dashes and brackets so only digits (and a possible +) remain.
-    const cleaned = value.replace(/[\s\-()]/g, "");
+    const cleaned = value.replace(/[\s\-()]/g, ""); // Remove formatting characters before checking the number.
 
     // Accepts 0 followed by 9 digits (e.g. 0821234567) or +27 followed by 9 digits.
     return /^(0\d{9}|\+27\d{9})$/.test(cleaned);
@@ -117,17 +117,17 @@ function clearErrorsOnInput(form) {
 // and the submit button stays disabled until every field is valid.
 function setupFormGate(form, steps) {
 
-    const submitButton = form.querySelector("[type=submit]");
+    const submitButton = form.querySelector("[type=submit]"); // Find the form submit button.
 
     // A short message above the button tells the visitor what to do next.
     const status = document.createElement("p");
     status.className = "gate-status";
-    status.setAttribute("aria-live", "polite");
+    status.setAttribute("aria-live", "polite"); // Announce status updates to assistive technology.
     submitButton.parentNode.insertBefore(status, submitButton);
 
     // Works out which fields are locked and whether the form can be submitted.
     function refresh() {
-        let blockedBy = null;
+        let blockedBy = null; // Store the first invalid step that blocks later fields.
 
         steps.forEach(function (step) {
             const group = step.input.closest(".form-group");
@@ -140,7 +140,7 @@ function setupFormGate(form, steps) {
 
             // Everything after the first invalid field is locked.
             const locked = blockedBy !== null;
-            group.inert = locked;
+            group.inert = locked; // Prevent interaction with fields that are not ready yet.
             group.classList.toggle("field-locked", locked);
 
             if (!locked && step.check() !== "") {
@@ -148,7 +148,7 @@ function setupFormGate(form, steps) {
             }
         });
 
-        submitButton.disabled = blockedBy !== null;
+        submitButton.disabled = blockedBy !== null; // Enable submit only when all visible steps pass.
         status.textContent = blockedBy
             ? "To continue, please complete \u201C" + blockedBy.label + "\u201D correctly."
             : "All details look good. You can continue.";
@@ -180,7 +180,7 @@ function setupFormGate(form, steps) {
 
 // Illustrative stock levels for the demo site. The site has no database,
 // so the availability response is worked out from this table.
-const STOCK = {
+const STOCK = { // Demo catalogue: each product has a price, quantity available and condition.
     "Basic Starter Bundle":       { price: 1499, stock: 12, type: "New" },
     "Standard Starter Bundle":    { price: 2799, stock: 8,  type: "New" },
     "Premium Starter Bundle":     { price: 4499, stock: 3,  type: "New" },
@@ -201,9 +201,9 @@ const STOCK = {
 // If the file cannot be loaded (for example when the page is opened straight from a
 // folder instead of a web server), the built-in STOCK table above is used instead.
 function loadStockFromFile() {
-    if (typeof fetch !== "function") { return; }
+    if (typeof fetch !== "function") { return; } // Keep the built-in stock table if fetch is unavailable.
 
-    fetch("../assets/data/stock.json", { cache: "no-cache" })
+    fetch("../assets/data/stock.json", { cache: "no-cache" }) // Request fresh stock data instead of a cached copy.
         .then(function (response) {
             if (!response.ok) { throw new Error("Stock file not found"); }
             return response.json();
@@ -224,7 +224,7 @@ function loadStockFromFile() {
 
 // Adds working days to a date, skipping Saturdays and Sundays (public holidays are not counted).
 function addWorkingDays(start, days) {
-    const d = new Date(start);
+    const d = new Date(start); // Copy the starting date so the original value is unchanged.
     while (days > 0) {
         d.setDate(d.getDate() + 1);
         // getDay() returns 0 for Sunday and 6 for Saturday.
@@ -374,7 +374,7 @@ function setupEnquiryForm(form) {
             const message = step.check();
             if (message !== "") { fail(step.input, message); }
         });
-        const qty = Number(quantity.value);
+        const qty = Number(quantity.value); // Convert the quantity field text into a number for calculations.
 
         // Stops here and moves the cursor to the first problem field.
         if (!valid) {
@@ -383,8 +383,8 @@ function setupEnquiryForm(form) {
         }
 
         // ----- Processing: work out the response from the validated input -----
-        const product = STOCK[item.value];
-        const total = product.price * qty;
+        const product = STOCK[item.value]; // Find the selected product in the stock catalogue.
+        const total = product.price * qty; // Calculate the estimated total before delivery fees.
         const prov = getProvince(province.value);
         // Looks the institution up. National private providers and typed-in institutions have no town,
         // so the province's typical delivery time is used for them.
@@ -416,7 +416,7 @@ function setupEnquiryForm(form) {
         const leadDays = inHubCity ? 1 : prov.leadDays;
 
         // Orders placed before 12:00 on a weekday are dispatched the same day; later orders count from the next working day.
-        const now = new Date();
+        const now = new Date(); // Use the current local date and time for the estimate.
         const afterCutoff = now.getHours() >= 12 || now.getDay() === 0 || now.getDay() === 6;
         const readyBy = addWorkingDays(now, leadDays + (afterCutoff ? 1 : 0));
 
@@ -458,7 +458,7 @@ function setupEnquiryForm(form) {
             name.value.trim() + "\r\n" +
             "(" + enquirerType.value + ")\r\n" +
             "Email: " + email.value.trim();
-        const mailto = "mailto:" + form.dataset.mailto +
+        const mailto = "mailto:" + form.dataset.mailto + // Build a link that opens the visitor’s email application.
             "?subject=" + encodeURIComponent(subject) +
             "&body=" + encodeURIComponent(body);
 
@@ -500,7 +500,7 @@ function escapeHtml(text) {
 // ==========================================================
 
 // The answer in the "What would you like us to do?" list that needs a phone number.
-const CALL_BACK = "Call or WhatsApp me";
+const CALL_BACK = "Call or WhatsApp me"; // Shared option text used to decide whether a phone number is required.
 
 // Turns the chosen outcome into a polite sentence for the email.
 function outcomeSentence(choice, phoneNumber) {
@@ -522,7 +522,7 @@ function outcomeSentence(choice, phoneNumber) {
 // Builds a clear subject line that names the problem or request, like
 // "Complaint Regarding Order CC-1025" or "Order and Collection Query \u2013 Thandi Mokoena".
 function buildContactSubject(topicText, orderRef, fullName) {
-    const labels = {
+    const labels = { // Convert form topic labels into concise email subject wording.
         "Order or collection question": "Order and Collection Query",
         "Complaint or problem with an order": "Complaint Regarding Order",
         "Selling second-hand items": "Second-Hand Selling Query",
@@ -627,10 +627,10 @@ function setupContactForm(form) {
         // ----- Compile the validated information into a professional email -----
         // The email follows the layout of a formal message: a clear subject, a polite greeting,
         // relevant details, a clear request and a courteous closing.
-        const recipient = form.dataset.mailto;
+        const recipient = form.dataset.mailto; // Read the email address configured in the form's data-mailto attribute.
         const subject = buildContactSubject(topic.value, order.value.trim(), name.value.trim());
 
-        const lines = [
+        const lines = [ // Build the email body as separate lines before joining them.
             "Dear Campus-Cart Team,",
             "",
             "I am writing to you about: " + topic.value + ".",
@@ -661,7 +661,7 @@ function setupContactForm(form) {
             lines.push("Phone: " + phone.value.trim());
         }
 
-        const body = lines.join("\r\n");
+        const body = lines.join("\r\n"); // Use CRLF line breaks for the email body.
 
         // Builds the mailto link. encodeURIComponent makes spaces and symbols safe in a URL.
         const mailto = "mailto:" + recipient +
@@ -694,13 +694,13 @@ function setupContactForm(form) {
 function setupCoverageSearch(box) {
 
     // Every institution on the page is an <li> with a data-name attribute.
-    const items = document.querySelectorAll(".inst-list li");
-    const provinces = document.querySelectorAll(".province");
+    const items = document.querySelectorAll(".inst-list li"); // Collect all institution entries that can be filtered.
+    const provinces = document.querySelectorAll(".province"); // Collect province sections so empty ones can be hidden.
     const count = document.getElementById("coverage-count");
 
     // Runs each time the user types in the search box.
     box.addEventListener("input", function () {
-        const term = box.value.trim().toLowerCase();
+        const term = box.value.trim().toLowerCase(); // Normalise the search phrase for case-insensitive matching.
         let shown = 0;
 
         // Shows an institution only if its name or city contains the search text.
