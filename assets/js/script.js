@@ -851,19 +851,46 @@ function initNav() { // Declares a function that groups this behaviour for reuse
         select.addEventListener("change", render); // Registers an event listener so this code runs when the specified event occurs.
         render(); // Calls the required function to carry out this operation.
     } // Opens or closes the surrounding code structure.
+    
+    function updateNavDateTime() {
+        const now = new Date();
 
-/* ---------- Boot ---------- */
-document.addEventListener("DOMContentLoaded", function () { // Registers an event listener so this code runs when the specified event occurs.
-    loadSession(); // Calls the required function to carry out this operation.
-    initNav(); // Calls the required function to carry out this operation.
-    initTabs(); // Calls the required function to carry out this operation.
-    initDeals(); // Calls the required function to carry out this operation.
-    initGalleryFilter(); // Calls the required function to carry out this operation.
-    initAddButtons(); // Calls the required function to carry out this operation.
-    initProductDetail(); // Calls the required function to carry out this operation.
-    initOrderPage(); // Calls the required function to carry out this operation.
-    initAccountHash(); // Calls the required function to carry out this operation.
-    initPrint(); // Calls the required function to carry out this operation.
-    initMailForms(); // Calls the required function to carry out this operation.
-    updateCartCount(); // Calls the required function to carry out this operation.
-}); // Closes the current expression, callback, or code block.
+        const time = new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Africa/Johannesburg",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+        }).format(now);
+
+        const date = new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Africa/Johannesburg",
+            day: "2-digit",
+            month: "short",
+            year: "numeric"
+        }).format(now);
+
+        document.getElementById("navTime").textContent = time;
+        document.getElementById("navDate").textContent = date;
+    }
+
+    updateNavDateTime();
+    setInterval(updateNavDateTime, 1000);
+
+
+    /* ---------- Boot ---------- */
+    document.addEventListener("DOMContentLoaded", function () { // Registers an event listener so this code runs when the specified event occurs.
+        loadSession(); // Calls the required function to carry out this operation.
+        initNav(); // Calls the required function to carry out this operation.
+        initTabs(); // Calls the required function to carry out this operation.
+        initDeals(); // Calls the required function to carry out this operation.
+        initGalleryFilter(); // Calls the required function to carry out this operation.
+        initAddButtons(); // Calls the required function to carry out this operation.
+        initProductDetail(); // Calls the required function to carry out this operation.
+        initOrderPage(); // Calls the required function to carry out this operation.
+        initAccountHash(); // Calls the required function to carry out this operation.
+        initPrint(); // Calls the required function to carry out this operation.
+        initMailForms(); // Calls the required function to carry out this operation.
+        updateCartCount(); // Calls the required function to carry out this operation.
+    }
+);
