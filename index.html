@@ -38,7 +38,7 @@
     <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
     <!-- Connects this HTML page to the external CSS stylesheet. -->
     <!-- HTML syntax defines this element and its content as part of the webpage structure. -->
-        <!-- Structured data (Part 3 SEO): tells search engines what Campus-Cart is. -->
+    <!-- Structured data (JSON-LD) describes Campus-Cart to search engines using Schema.org vocabulary. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -102,11 +102,11 @@
         <!-- Creates a hyperlink; href specifies the destination and class controls its styling when provided. -->
         <a class="logo" href="index.html">Campus<span>-Cart</span></a>
 
-        <!-- Compact live clock -->
+        <!-- Displays the live South African time and date; JavaScript updates the spans below. -->
         <div class="nav-clock">
-            <span id="navTime">00:00:00</span>
-            <span class="clock-divider">|</span>
-            <span id="navDate">Loading...</span>
+          <span id="navTime">00:00:00</span>
+          <span class="clock-divider">|</span>
+          <span id="navDate">Loading...</span>
         </div>
 
         <!-- Button used to open or close the navigation menu. -->
@@ -136,8 +136,8 @@
           <!-- Links the user to the enquiry page. -->
           <!-- Creates a hyperlink; href specifies the destination and class controls its styling when provided. -->
           <a href="pages/enquiry.html">Enquiry</a>
-                <!-- Creates a hyperlink; href specifies the destination and class controls its styling when provided. -->
-                <a href="pages/coverage.html">Coverage</a>
+          <!-- Links to the page describing delivery and collection coverage. -->
+          <a href="pages/coverage.html">Coverage</a>
 
           <!-- Links the user to the contact page. -->
           <!-- Creates a hyperlink; href specifies the destination and class controls its styling when provided. -->
@@ -542,8 +542,8 @@
             <li><a href="pages/products.html#parent-hub">Parent Hub</a></li>
             <!-- Creates one item within the unordered list. -->
             <li><a href="pages/enquiry.html">Enquiry</a></li>
-                    <!-- Creates one item within the unordered list. -->
-                    <li><a href="pages/coverage.html">Coverage</a></li>
+            <!-- Creates one item within the unordered list. -->
+            <li><a href="pages/coverage.html">Coverage</a></li>
             <!-- Creates one item within the unordered list. -->
             <li><a href="pages/contact.html">Contact</a></li>
             <!-- Creates one item within the unordered list. -->
@@ -580,12 +580,8 @@
       <!-- Creates a generic container used to group content and apply CSS layout or styling. -->
       <div class="wrap footer-bottom">
 
-    <!-- Provides a direct link to the XML sitemap so users and search engines can easily access the website's indexed page list. -->
-    <!-- The relative path points to the sitemap.xml file stored in the repository's seo folder. -->
-    <p><a href="pages/about.html#licence">Licence and credits</a> | <a href="sitemap.xml">Sitemap.xml</a></p>
-
-
-
+        <!-- Links to licence information and the XML sitemap for site navigation and indexing. -->
+        <p><a href="pages/about.html#licence">Licence and credits</a> | <a href="sitemap.xml">Sitemap.xml</a></p>
         <!-- &copy; is an HTML entity that displays the copyright symbol ©. -->
         <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
       </div>
@@ -596,6 +592,5 @@
     <!-- Loads the external JavaScript file that controls the website functionality and interactions. -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/features.js"></script>
-    
   </body>
 </html>
