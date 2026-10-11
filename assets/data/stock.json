@@ -1,0 +1,67 @@
+{
+  "Basic Starter Bundle": {
+    "price": 1499,
+    "stock": 12,
+    "type": "New"
+  },
+  "Standard Starter Bundle": {
+    "price": 2799,
+    "stock": 8,
+    "type": "New"
+  },
+  "Premium Starter Bundle": {
+    "price": 4499,
+    "stock": 3,
+    "type": "New"
+  },
+  "Duvet & Linen Set (Double)": {
+    "price": 749,
+    "stock": 20,
+    "type": "New"
+  },
+  "Electric Kettle 1.7L": {
+    "price": 289,
+    "stock": 25,
+    "type": "New"
+  },
+  "Stationery Mega Pack": {
+    "price": 249,
+    "stock": 30,
+    "type": "New"
+  },
+  "Load-Shedding Light Kit": {
+    "price": 329,
+    "stock": 0,
+    "type": "New"
+  },
+  "Study Desk": {
+    "price": 650,
+    "stock": 1,
+    "type": "Second-hand"
+  },
+  "Mini Bar Fridge": {
+    "price": 1150,
+    "stock": 1,
+    "type": "Second-hand"
+  },
+  "Accounting Textbook Set": {
+    "price": 420,
+    "stock": 1,
+    "type": "Second-hand"
+  },
+  "Laptop Bag 15\"": {
+    "price": 180,
+    "stock": 1,
+    "type": "Second-hand"
+  },
+  "Two-Tier Bookshelf": {
+    "price": 380,
+    "stock": 1,
+    "type": "Second-hand"
+  },
+  "Study Chair": {
+    "price": 450,
+    "stock": 1,
+    "type": "Second-hand"
+  }
+}
