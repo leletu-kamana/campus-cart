@@ -475,8 +475,29 @@ function initNav() { // Declares a reusable function for this feature.
         { name: "Law Textbook Set", category: "textbooks", condition: "used", price: 480, desc: "Common first-year law titles, checked for missing pages and heavy highlighting.", img: "images/products/law-textbook-set.jpg" }, // Adds the product "Law Textbook Set" to the catalogue.
         { name: "Engineering Maths Textbook", category: "textbooks", condition: "used", price: 360, desc: "First-year engineering mathematics textbook with worked examples, in good condition.", img: "images/products/engineering-maths-textbook.jpg" }, // Adds the product "Engineering Maths Textbook" to the catalogue.
         { name: "A4 Lever Arch File 5-Pack", category: "stationery", condition: "new", price: 169, desc: "Five sturdy lever arch files with labels for sorting notes by module.", img: "images/products/a4-lever-arch-file-5-pack.jpg" }, // Adds the product "A4 Lever Arch File 5-Pack" to the catalogue.
-        { name: "LED Desk Lamp", category: "stationery", condition: "new", price: 229, desc: "Adjustable LED lamp with a USB port, bright enough for late-night study.", img: "images/products/led-desk-lamp.jpg" } // Adds the product "LED Desk Lamp" to the catalogue.
+        { name: "LED Desk Lamp", category: "stationery", condition: "new", price: 229, desc: "Adjustable LED lamp with a USB port, bright enough for late-night study.", img: "images/products/led-desk-lamp.jpg" }, // Adds the product "LED Desk Lamp" to the catalogue.
+        // A fourth round of products, again two for every category.
+        { name: "Cleaning Essentials Bundle", category: "bundles", condition: "new", price: 349, desc: "Mop, bucket, cloths, sponges and a spray bottle to keep a res room spotless.", img: "images/products/cleaning-essentials-bundle.jpg" }, // Adds the product "Cleaning Essentials Bundle" to the catalogue.
+        { name: "Second-Hand Kitchen Bundle", category: "bundles", condition: "used", price: 700, desc: "Reviewed pots, pans, plates and cutlery from a graduating student.", img: "images/products/second-hand-kitchen-bundle.jpg" }, // Adds the product "Second-Hand Kitchen Bundle" to the catalogue.
+        { name: "Clothes Rail with Shelf", category: "furniture", condition: "new", price: 449, desc: "Freestanding rail with a bottom shelf for shoes, ideal for small res rooms.", img: "images/products/clothes-rail-with-shelf.jpg" }, // Adds the product "Clothes Rail with Shelf" to the catalogue.
+        { name: "Second-Hand Study Table", category: "furniture", condition: "used", price: 380, desc: "Sturdy table from a graduating student, wiped down and checked by our team.", img: "images/products/second-hand-study-table.jpg" }, // Adds the product "Second-Hand Study Table" to the catalogue.
+        { name: "Toaster (2-Slice)", category: "appliances", condition: "new", price: 329, desc: "Two-slice toaster with a crumb tray and adjustable browning settings.", img: "images/products/toaster-2-slice.jpg" }, // Adds the product "Toaster (2-Slice)" to the catalogue.
+        { name: "Second-Hand Microwave Oven", category: "appliances", condition: "used", price: 650, desc: "Reviewed listing, tested at our collection point. Turntable included.", img: "images/products/second-hand-microwave-oven.jpg" }, // Adds the product "Second-Hand Microwave Oven" to the catalogue.
+        { name: "Memory Foam Pillow", category: "bedding", condition: "new", price: 259, desc: "Supportive memory foam pillow with a washable cover for better sleep.", img: "images/products/memory-foam-pillow.jpg" }, // Adds the product "Memory Foam Pillow" to the catalogue.
+        { name: "Fitted Sheet Two-Pack", category: "bedding", condition: "new", price: 289, desc: "Two soft cotton-blend fitted sheets for a standard single res bed.", img: "images/products/fitted-sheet-two-pack.jpg" }, // Adds the product "Fitted Sheet Two-Pack" to the catalogue.
+        { name: "Business Management Textbook Set", category: "textbooks", condition: "used", price: 430, desc: "Common first-year business management titles, checked for missing pages and heavy highlighting.", img: "images/products/business-management-textbook-set.jpg" }, // Adds the product "Business Management Textbook Set" to the catalogue.
+        { name: "Psychology Textbook Set", category: "textbooks", condition: "used", price: 410, desc: "Common first-year psychology titles, checked by our team before listing.", img: "images/products/psychology-textbook-set.jpg" }, // Adds the product "Psychology Textbook Set" to the catalogue.
+        { name: "Wireless Mouse and Mousepad", category: "stationery", condition: "new", price: 249, desc: "Quiet wireless mouse with a mousepad, handy for laptop study at a desk.", img: "images/products/wireless-mouse-and-mousepad.jpg" }, // Adds the product "Wireless Mouse and Mousepad" to the catalogue.
+        { name: "Highlighter and Pen Pack", category: "stationery", condition: "new", price: 79, desc: "Twelve highlighters and pens in assorted colours for notes and revision.", img: "images/products/highlighter-and-pen-pack.jpg" } // Adds the product "Highlighter and Pen Pack" to the catalogue.
     ]; // Closes the current block, expression, or function call.
+
+    // Product photos that exist in assets/images/products/. A product only uses its own photo when its file name is listed here.
+    // Until then it shows the generic photo below, so the browser never asks for a file that is missing.
+    var PHOTOS = []; // Add a file name here, such as "electric-kettle-1-7l.jpg", after saving that photo.
+    DEALS.forEach(function (d) { // Loops through every product.
+        var file = d.img.split("/").pop(); // Gets the file name from the product's photo path.
+        if (PHOTOS.indexOf(file) === -1) { d.img = d.condition === "used" ? IMG.used : IMG.bundle; } // Uses the generic photo when the product photo has not been added yet.
+    });
 
     // Defines a helper that formats numeric prices as South African Rand values.
     var currency = function (n) { // Declares and initializes the variable used by this operation.
