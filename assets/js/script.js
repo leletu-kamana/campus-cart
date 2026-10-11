@@ -576,9 +576,14 @@ function initNav() { // Declares a reusable function for this feature.
         var sort = document.getElementById("sort-by"); // Declares and initializes the variable used by this operation.
         var count = document.getElementById("deals-count"); // Declares and initializes the variable used by this operation.
         var search = document.getElementById("product-search"); // Declares and initializes the variable used by this operation.
+        var moreBtn = document.getElementById("deals-see-more"); // Finds the See more button.
+        var lessBtn = document.getElementById("deals-see-less"); // Finds the See less button.
+        var STEP = 6; // How many products are shown first, and how many each See more adds.
+        var shown = STEP; // How many products are showing right now.
 
         // Rebuilds the deal list whenever the selected filters or sort order changes.
-        function render() { // Declares a reusable function for this feature.
+        function render(keep) { // Declares a reusable function for this feature. Passing true keeps the current number of products.
+        if (keep !== true) { shown = STEP; } // Goes back to six products whenever a filter, the sort order or the search changes.
         // Keyword search: the typed text must appear in the name, category or description.
         var term = search ? search.value.trim().toLowerCase() : ""; // Declares and initializes the variable used by this operation.
         var list = DEALS.filter(function (d) { // Declares and initializes the variable used by this operation.
@@ -592,11 +597,27 @@ function initNav() { // Declares a reusable function for this feature.
         if (sort.value === "price-desc") { list.sort(function (a, b) { return b.price - a.price; }); } // Checks the condition before running this block.
         if (sort.value === "name") { list.sort(function (a, b) { return a.name.localeCompare(b.name); }); } // Checks the condition before running this block.
         out.innerHTML = list.length // Builds or replaces the element's HTML content.
-            ? list.map(dealCard).join("") // Transforms each item into the value or markup required for rendering.
+            ? list.slice(0, shown).map(dealCard).join("") // Builds cards for only the products that should show now.
             : '<div class="empty-state"><h3>No matches</h3><p>Try a different keyword, category or condition.</p></div>'; // Performs the next step in the current Campus-Cart operation.
         if (count) { // Checks the condition before running this block.
-            count.textContent = list.length + " of " + DEALS.length + " deals shown"; // Updates the element's text without parsing it as HTML.
+            count.textContent = Math.min(shown, list.length) + " of " + list.length + " deals shown"; // Shows how many products are visible out of the matching products.
         } // Closes the current block, expression, or function call.
+        if (moreBtn) { moreBtn.hidden = shown >= list.length; } // Hides See more when every matching product is already showing.
+        if (lessBtn) { lessBtn.hidden = shown <= STEP || list.length <= STEP; } // Hides See less when only the first six are showing.
+        } // Closes the current block, expression, or function call.
+        if (moreBtn) { // Only sets up the button if it is on the page.
+            moreBtn.addEventListener("click", function () { // Listens for a click on See more.
+                shown += STEP; // Adds six more products.
+                render(true); // Redraws the grid and keeps the new number.
+                if (moreBtn.hidden && lessBtn) { lessBtn.focus(); } // Moves keyboard focus to See less when See more disappears.
+            }); // Closes the current block, expression, or function call.
+        } // Closes the current block, expression, or function call.
+        if (lessBtn) { // Only sets up the button if it is on the page.
+            lessBtn.addEventListener("click", function () { // Listens for a click on See less.
+                shown = STEP; // Goes back to the first six products.
+                render(true); // Redraws the grid with six products.
+                out.scrollIntoView({ block: "start" }); // Scrolls back to the top of the grid so the visitor is not left at the bottom.
+            }); // Closes the current block, expression, or function call.
         } // Closes the current block, expression, or function call.
         [cat, cond, sort].forEach(function (el) { el.addEventListener("change", render); }); // Registers a handler that runs when this element receives the specified event.
         if (search) { search.addEventListener("input", render); } // Checks the condition before running this block.
