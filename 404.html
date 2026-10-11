@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <!-- Custom "page not found" page. GitHub Pages shows this file for any address that does not exist. -->
 <html lang="en">
+<!-- Holds page information that is not shown on the page. -->
 <head>
+    <!-- Sets the character encoding to UTF-8. -->
     <meta charset="utf-8">
+    <!-- Makes the page scale to the width of the device. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Sets the title shown in the browser tab. -->
     <title>Page not found | Campus-Cart</title>
+    <!-- Sets the short description shown by search engines. -->
     <meta name="description" content="This Campus-Cart page could not be found. Return to the home page or browse student essentials.">
     <!-- noindex stops search engines listing this error page. -->
     <meta name="robots" content="noindex">
+    <!-- Sets the browser toolbar colour on mobile. -->
     <meta name="theme-color" content="#0d1b3e">
     <!-- Absolute paths are used because this page can be shown at any address on the site. -->
     <link rel="stylesheet" href="https://leletu-kamana.github.io/campus-cart/assets/css/styles.css">
 </head>
+<!-- Holds everything that is shown on the page. -->
 <body>
+    <!-- Holds the main content of the page. -->
     <main>
+        <!-- Groups one section of the page. -->
         <section class="section">
+            <!-- Groups content so it can be styled together. -->
             <div class="wrap">
+                <!-- Groups content so it can be styled together. -->
                 <div class="section-head">
+                    <!-- Wraps a short piece of text. -->
                     <span class="eyebrow">Error 404</span>
+                    <!-- Main heading of the page. -->
                     <h1>We could not find that page</h1>
+                    <!-- Paragraph of text. -->
                     <p>The link may be old or mistyped. Try one of these instead:</p>
                 </div>
+                <!-- Paragraph of text. -->
                 <p>
+                    <!-- Link to another page. -->
                     <a class="btn" href="https://leletu-kamana.github.io/campus-cart/index.html">Go to the home page</a>
+                    <!-- Link to another page. -->
                     <a class="btn btn-outline" href="https://leletu-kamana.github.io/campus-cart/pages/products.html">Shop student essentials</a>
+                    <!-- Link to another page. -->
                     <a class="btn btn-outline" href="https://leletu-kamana.github.io/campus-cart/pages/contact.html">Contact us</a>
                 </p>
+                <!-- Groups the game in a card. -->
+                <div class="game-card">
+                    <!-- Heading for the game. -->
+                    <h2>No connection? Play while you wait</h2>
+                    <!-- Short instructions for the game. -->
+                    <p class="hint">Jump over the crates. Press Space or the up arrow, or tap the game, to jump.</p>
+                    <!-- Game screen. The text inside is shown only if the browser cannot draw canvas. -->
+                    <canvas id="game-canvas" class="game-canvas" width="640" height="220" tabindex="0" aria-label="Campus Runner game. Press Space or the up arrow to jump over the crates.">Your browser cannot show this game.</canvas>
+                    <!-- Announces the game state to screen readers. -->
+                    <p id="game-status" class="hint" aria-live="polite"></p>
+                    <!-- Button that starts or restarts the game. -->
+                    <button class="btn" id="game-start" type="button">Start game</button>
+                </div>
             </div>
         </section>
     </main>
+    <!-- Loads the game. An absolute path is used because this page can be shown at any address. -->
+    <script src="https://leletu-kamana.github.io/campus-cart/assets/js/game.js" defer></script>
 </body>
 </html>
