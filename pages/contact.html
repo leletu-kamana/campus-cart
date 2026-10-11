@@ -1,630 +1,586 @@
 <!DOCTYPE html>
-<!-- Defines the root HTML document and sets English as the page language. -->
+<!-- Sets the root HTML element and the page language. -->
 <html lang="en">
-  <!-- Starts the document head, which contains metadata and linked resources. -->
+  <!-- Groups page metadata, the title, and linked resources. -->
   <head>
-    <!-- Sets UTF-8 character encoding so letters, symbols and special characters display correctly. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta charset="utf-8">
-    <!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <title> sets the text displayed on the browser tab.
-It also describes the purpose of this webpage. -->
+    <!-- Sets the title shown in the browser tab. -->
     <title>Contact Campus-Cart | Locations &amp; Collection Points</title>
-    <!-- Provides a short webpage description for search engines and other services. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="description" content="Contact Campus-Cart and find our collection hubs in every South African province.">
-    <!-- SEO (Part 3): canonical address, social sharing preview, theme colour and icon. -->
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to an external webpage. -->
     <link rel="canonical" href="https://leletu-kamana.github.io/campus-cart/pages/contact.html">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="robots" content="index, follow">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="theme-color" content="#0d1b3e">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:type" content="website">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:site_name" content="Campus-Cart">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:locale" content="en_ZA">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:description" content="Contact Campus-Cart and find our collection hubs in every South African province.">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:url" content="https://leletu-kamana.github.io/campus-cart/pages/contact.html">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:image" content="https://leletu-kamana.github.io/campus-cart/assets/images/bundles/hero-campus.jpg">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta property="og:image:alt" content="South African students on a university campus carrying study essentials">
-    
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Links an external resource or declares a document relationship. -->
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
-    <!-- Provides keyword metadata describing the main topics associated with the webpage. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-    <!-- Provides the Google Search Console verification token used to verify website ownership. -->
+    <!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
     <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
-    <!-- <link> connects this HTML document to an external CSS stylesheet.
-href specifies the relative location of the CSS file. -->
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
     <link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css">
-    <!-- Links an external resource or declares a document relationship. -->
+    <!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
     <link rel="stylesheet" href="../assets/css/styles.css">
+  <!-- Closes the <head> element opened earlier in this section. -->
   </head>
-  <!-- Opens the visible webpage body. -->
-  <body class="page-loading">
-
-    <!-- Full-Screen Campus-Cart Page Loader (Uiverse.io by Chris-immanuel-matthew) -->
-    <!-- Creates the full-screen loading container; the id identifies it for JavaScript and the class connects it to CSS styling. -->
-    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
-      <!-- Groups the loader animation and loading message into one layout container. -->
-      <div class="page-loader-content">
-        <!-- Contains the visual animation used by the page loader. -->
-        <div class="page-loader-visual">
-          <!-- Creates the animated loader; aria-hidden hides decorative animation from screen readers. -->
-          <div class="loader" aria-hidden="true">
-            <!-- Creates the centre element of the animated loader. -->
-            <div class="nucleus"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-            <div class="ring"></div>
-          </div>
+<!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
+<body class="page-loading">
+  <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
+    <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="page-loader-content">
+      <!-- Groups related content so it can be arranged or styled together. The class "page-loader-visual" connects it to CSS styling or JavaScript behaviour. -->
+      <div class="page-loader-visual">
+        <!-- Groups related content so it can be arranged or styled together. The class "loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+        <div class="loader" aria-hidden="true">
+          <!-- Groups related content so it can be arranged or styled together. The class "nucleus" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="nucleus"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+          <!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="ring"></div>
+        <!-- Closes the <div> element opened earlier in this section. -->
         </div>
-        <!-- Contains the Campus-Cart loading branding and hides decorative content from screen readers. -->
-        <div class="page-loader-brand" aria-hidden="true">
-          <!-- Displays the Campus-Cart loader title; the nested span allows part of the name to be styled separately. -->
-          <span class="page-loader-title">Campus<span>-Cart</span></span>
-          <!-- Displays the loading message shown while the page is being prepared. -->
-          <span class="page-loader-text">Loading Campus-Cart...</span>
-        </div>
-      </div>
+    <!-- Closes the <div> element opened earlier in this section. -->
     </div>
-
-    <!-- <header> contains the introductory content of the webpage.
-The topbar class allows CSS to style the header. -->
-    <header class="topbar">
-
-      <!-- <nav> contains the main navigation links for the website.
-aria-label gives the navigation a meaningful name for accessibility. -->
-      <nav class="nav" aria-label="Main navigation">
-
-        <!-- <a> creates a hyperlink and href specifies where it goes.
-Creates an inline element used to group and style a short piece of text.
-<span> separates part of the logo so it can be styled separately. -->
-        <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
-
-        <!-- Creates the nav-datetime element to group related content and apply layout or styling. -->
-        <div class="nav-datetime" aria-label="Current South African date and time">
-          <span id="navTime">00:00:00</span>
-          <span class="nav-date-divider">|</span>
-          <span id="navDate">Loading...</span>
-        </div>
-
-        <!-- <button> creates an interactive button for the navigation menu.
-aria-expanded tells assistive technology whether the menu is expanded. -->
-        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
-
-        <!-- This div groups the website's navigation links together.
-The nav-links class allows CSS and JavaScript to control this group. -->
-        <div class="nav-links">
-
-          <!-- ../ moves up from the pages folder to reach index.html.
-The href attribute stores the destination of the hyperlink. -->
-          <a href="../index.html">Home</a>
-
-          <!-- This link opens about.html from the current pages folder.
-Relative paths avoid needing the full website URL. -->
-          <a href="about.html">About</a>
-
-          <!-- #shop is a URL fragment that targets an element with id="shop".
-This allows the browser to open a specific section of products.html. -->
-          <a href="products.html">Shop</a>
-
-          <!-- The #parent-hub fragment targets the Parent Hub section.
-The target element must have a matching id attribute. -->
-          <a href="products.html#parent-hub">Parent Hub</a>
-
-          <!-- This link opens the enquiry page from the current directory.
-The href attribute tells the browser which document to load. -->
-          <a href="enquiry.html">Enquiry</a>
-          <!-- Creates a hyperlink; href specifies its destination and class can control its styling. -->
-          <a href="coverage.html">Coverage</a>
-
-          <!-- This link opens the current contact page.
-It is useful for keeping Contact available in the main navigation. -->
-          <a href="contact.html">Contact</a>
-
-          <!-- This anchor navigates to the account page. -->
-          <a href="account.html">Account</a>
-
-          <!-- data-cart-count is a custom data attribute used by JavaScript.
-The span separates the cart number so JavaScript can update it. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
-        </div>
-      </nav>
-    </header>
-
-    <!-- <main> contains the primary content of the webpage.
-A webpage normally uses one main element for its central content. -->
-    <main>
-
-      <!-- <section> groups related content into a meaningful webpage section.
-The hero class is used by CSS to style the introductory area. -->
-      <section class="hero">
-
-        <!-- The wrap class controls the width and alignment of the content.
-Creates a container used to group content and apply CSS layout or styling.
-<div> is a general container used to group related HTML elements. -->
-        <div class="wrap">
-
-          <!-- <span> is an inline element used for a short piece of text.
-The eyebrow class provides specific styling through CSS. -->
-          <span class="eyebrow">Contact</span>
-
-          <!-- <h1> is the main heading of the webpage.
-It describes the main purpose of this contact page. -->
-          <h1>Talk to a real person</h1>
-
-          <!-- <p> creates a paragraph containing supporting information.
-The lead class allows CSS to style it as introductory text. -->
-          <p class="lead">Weekdays 09:00–17:00 SAST. During registration week we answer WhatsApp until 19:00.</p>
-        </div>
-      </section>
-
-      <!-- This section contains the contact form and additional contact information.
-The section class provides general spacing and styling through CSS. -->
-      <section class="section">
-
-        <!-- grid grid-2 applies two CSS classes to the same element.
-These classes create a two-column layout for the page content. -->
-        <div class="wrap grid grid-2">
-
-          <!-- form-card groups the contact form inside a styled container.
-The class is used by CSS to control the card's appearance. -->
-          <div class="form-card">
-
-            <!-- <h2> creates a second-level heading under the main h1.
-Heading levels organise content into a logical hierarchy. -->
-            <h2>General contact form</h2>
-
-            <!-- <form> groups controls used to collect information from the user.
-data-mailto and data-subject provide values that JavaScript can use. -->
-            <form id="contact-form" action="mailto:hello@campus-cart.co.za" method="post" enctype="text/plain" novalidate data-mailto="hello@campus-cart.co.za" data-subject="Campus-Cart website contact">
-
-              <!-- novalidate turns off the browser's pop-up messages so forms.js can show its own.
-data-mailto is the recipient of the compiled email. -->
-              <div class="form-row">
-                <!-- Creates a container used to group content and apply CSS layout or styling. -->
-                <div class="form-group">
-                  <!-- Creates a form label and uses for to associate it with a specific form control. -->
-                  <label for="c-name">Full name *</label>
-                  <!-- Creates an input control for collecting user-entered information. -->
-                  <input id="c-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="error-msg" id="c-name-error" role="alert"></span>
-                </div>
-                <!-- Creates a container used to group content and apply CSS layout or styling. -->
-                <div class="form-group">
-                  <!-- Creates a form label and uses for to associate it with a specific form control. -->
-                  <label for="c-email">Email address *</label>
-                  <!-- Creates an input control for collecting user-entered information. -->
-                  <input id="c-email" name="email" type="email" required maxlength="120" autocomplete="email">
-                  <!-- Creates an inline element used to group and style a short piece of text. -->
-                  <span class="error-msg" id="c-email-error" role="alert"></span>
-                </div>
-              </div>
-
-              <!-- Two rows of fields. Each field only unlocks when the one before it is filled in correctly
-(see setupFormGate in forms.js). The order is: topic, order reference, requested outcome, phone. -->
-              <div class="form-row">
-                <!-- Creates the form-group element to group related content and apply layout or styling. -->
-                <div class="form-group">
-                  <label for="c-topic">Topic *</label>
-                  <!-- Creates a dropdown control for selecting an option. -->
-                  <select id="c-topic" name="topic" required>
-                    <option>Order or collection question</option>
-                    <option>Complaint or problem with an order</option>
-                    <option>Selling second-hand items</option>
-                    <option>Parent Hub &amp; bundles</option>
-                    <option>Something else</option>
-                  </select>
-                  <span class="error-msg" id="c-topic-error" role="alert"></span>
-                </div>
-                <!-- Creates the form-group element to group related content and apply layout or styling. -->
-                <div class="form-group">
-                  <label for="c-order">Order reference (optional)</label>
-                  <!-- Creates a form input and defines its type and validation attributes. -->
-                  <input id="c-order" name="orderReference" type="text" pattern="[A-Za-z0-9#\- ]{3,30}" title="3 to 30 letters, numbers, # or dashes, for example CC-1025" maxlength="30" placeholder="e.g. CC-1025">
-                  <span class="error-msg" id="c-order-error" role="alert"></span>
-                </div>
-              </div>
-              <!-- Creates the form-row element to group related content and apply layout or styling. -->
-              <div class="form-row">
-                <!-- Creates the form-group element to group related content and apply layout or styling. -->
-                <div class="form-group">
-                  <label for="c-outcome">What would you like us to do? *</label>
-                  <!-- Creates a dropdown control for selecting an option. -->
-                  <select id="c-outcome" name="outcome" required>
-                    <option>Reply by email</option>
-                    <option>Call or WhatsApp me</option>
-                    <option>Arrange a refund</option>
-                    <option>Arrange a replacement or swap</option>
-                    <option>Update me on my order</option>
-                  </select>
-                  <span class="error-msg" id="c-outcome-error" role="alert"></span>
-                </div>
-                <!-- Creates the form-group element to group related content and apply layout or styling. -->
-                <div class="form-group">
-                  <label for="c-phone">Phone / WhatsApp (needed for a call back)</label>
-                  <!-- Creates a form input and defines its type and validation attributes. -->
-                  <input id="c-phone" name="phone" type="tel" pattern="(\+27|0)[0-9 \-]{8,13}" title="A South African number such as 082 000 0000 or +27 82 000 0000" maxlength="20" autocomplete="tel" placeholder="082 000 0000">
-                  <span class="error-msg" id="c-phone-error" role="alert"></span>
-                </div>
-              </div>
-
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="form-group">
-                <!-- Creates a form label and uses for to associate it with a specific form control. -->
-                <label for="c-message">Message *</label>
-                <!-- Creates a multi-line text field for entering a message. -->
-                <textarea id="c-message" name="message" required minlength="10" maxlength="1000"></textarea>
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="error-msg" id="c-message-error" role="alert"></span>
-              </div>
-
-              <!-- Creates an interactive button; its attributes identify the button and support JavaScript and accessibility. -->
-              <button class="btn" type="submit">Create email</button>
-              <!-- Creates a paragraph containing a block of related text. -->
-              <p class="hint">We build the email from your answers. You then send it from your own email app.</p>
-            </form>
-
-            <!-- forms.js writes the compiled email (To, Subject, Body) and the send link into this box. -->
-            <div id="contact-preview" class="form-result" aria-live="polite"></div>
+  <!-- Groups related content so it can be arranged or styled together. The class "page-loader-brand" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <div class="page-loader-brand" aria-hidden="true">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-title" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="page-loader-title">Campus<span>-Cart</span></span>
+    <!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-text" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="page-loader-text">Loading Campus-Cart...</span>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups introductory content and the main navigation area. The class "topbar" connects it to CSS styling or JavaScript behaviour. -->
+<header class="topbar">
+  <!-- Groups navigation links and identifies the menu for accessibility. The class "nav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <nav class="nav" aria-label="Main navigation">
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "logo" connects it to CSS styling or JavaScript behaviour. -->
+    <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
+    <!-- Groups related content so it can be arranged or styled together. The class "nav-datetime" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+    <div class="nav-datetime" aria-label="Current South African date and time">
+      <!-- Groups a short piece of inline text for styling or scripting. The id "navTime" lets CSS or JavaScript identify this element. -->
+      <span id="navTime">00:00:00</span>
+      <!-- Groups a short piece of inline text for styling or scripting. The class "nav-date-divider" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="nav-date-divider">|</span>
+      <!-- Groups a short piece of inline text for styling or scripting. The id "navDate" lets CSS or JavaScript identify this element. -->
+      <span id="navDate">Loading...</span>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+  <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+  <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="nav-links">
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="../index.html">Home</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="about.html">About</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="products.html">Shop</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="products.html#parent-hub">Parent Hub</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="enquiry.html">Enquiry</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="coverage.html">Coverage</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="contact.html">Contact</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+    <a href="account.html">Account</a>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
+    <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <nav> element opened earlier in this section. -->
+</nav>
+<!-- Closes the <header> element opened earlier in this section. -->
+</header>
+<!-- Contains the page's main content. -->
+<main>
+  <!-- Groups content that belongs to one topic or page section. The class "hero" connects it to CSS styling or JavaScript behaviour. -->
+  <section class="hero">
+    <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="wrap">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="eyebrow">Contact</span>
+      <!-- Defines the main heading of the page. -->
+      <h1>Talk to a real person</h1>
+      <!-- Creates a paragraph of text. The class "lead" connects it to CSS styling or JavaScript behaviour. -->
+      <p class="lead">Weekdays 09:00–17:00 SAST. During registration week we answer WhatsApp until 19:00.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Groups content that belongs to one topic or page section. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+<section class="section">
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap grid grid-2">
+    <!-- Groups related content so it can be arranged or styled together. The class "form-card" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="form-card">
+      <!-- Defines a second-level heading for a major section. -->
+      <h2>General contact form</h2>
+      <!-- Groups controls used to collect and submit user input. The id "contact-form" lets CSS or JavaScript identify this element. A data attribute stores a value that JavaScript can read. -->
+      <form id="contact-form" action="mailto:hello@campus-cart.co.za" method="post" enctype="text/plain" novalidate data-mailto="hello@campus-cart.co.za" data-subject="Campus-Cart website contact">
+        <!-- Groups related content so it can be arranged or styled together. The class "form-row" connects it to CSS styling or JavaScript behaviour. -->
+        <div class="form-row">
+          <!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+          <div class="form-group">
+            <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-name". -->
+            <label for="c-name">Full name *</label>
+            <!-- Creates a form field; type determines the kind of input. The type="text" attribute determines the input format. The id "c-name" lets CSS or JavaScript identify this element. -->
+            <input id="c-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name">
+            <!-- Groups a short piece of inline text for styling or scripting. The id "c-name-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+            <span class="error-msg" id="c-name-error" role="alert"></span>
+          <!-- Closes the <div> element opened earlier in this section. -->
           </div>
-
-          <!-- This div contains additional contact information beside the form.
-The grid layout places it in the second column. -->
-          <div>
-
-            <!-- info-box creates a styled information container.
-It contains alternative ways for users to contact Campus-Cart. -->
-            <div class="info-box">
-
-              <!-- h3 creates a subsection heading within the information box.
-It describes the contact methods listed below. -->
-              <h3>Other ways to reach us</h3>
-
-              <!-- <strong> gives the word Email stronger importance visually and semantically.
-The mailto link opens the user's default email application. -->
-              <p><strong>Email:</strong> <a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></p>
-
-              <!-- This paragraph provides a separate email address for orders.
-mailto: tells the browser to open an email application. -->
-              <p><strong>Orders:</strong> <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a></p>
-
-              <!-- The WhatsApp hyperlink uses an external URL to open a conversation.
-The number in the URL uses South Africa's international country code. -->
-              <p><strong>WhatsApp:</strong> <a href="https://wa.me/27123456789">012 345 6789</a></p>
-            </div>
-
-            <!-- <br> creates a line break between the information box and card.
-This original element provides visual spacing between the containers. -->
-            <br>
-
-            <!-- card and card-navy are CSS classes used to style this content container.
-card-body groups the heading, paragraph and button inside the card. -->
-            <div class="card card-navy">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-
-                <!-- h3 identifies the main topic of this information card.
-It is a subsection heading below the page's h2. -->
-                <h3>Buying a specific bundle?</h3>
-
-                <!-- This paragraph provides instructions for users interested in a bundle.
-It explains which form should be used for the enquiry. -->
-                <p>Use the enquiry form so we can quote availability and collection.</p>
-
-                <!-- This hyperlink sends the user to the enquiry page.
-The btn class provides the button appearance using CSS. -->
-                <a class="btn" href="enquiry.html">Pre-purchase enquiry</a>
-              </div>
-            </div>
-          </div>
+        <!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+        <div class="form-group">
+          <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-email". -->
+          <label for="c-email">Email address *</label>
+          <!-- Creates a form field; type determines the kind of input. The type="email" attribute determines the input format. The id "c-email" lets CSS or JavaScript identify this element. -->
+          <input id="c-email" name="email" type="email" required maxlength="120" autocomplete="email">
+          <!-- Groups a short piece of inline text for styling or scripting. The id "c-email-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+          <span class="error-msg" id="c-email-error" role="alert"></span>
+        <!-- Closes the <div> element opened earlier in this section. -->
         </div>
-      </section>
-
-      <!-- This section contains the physical locations and collection points.
-id="locations" allows links to jump directly to this section. -->
-      <section class="section alt" id="locations">
-
-        <!-- wrap controls the content width while section-head groups heading content.
-These classes are defined in the external stylesheet. -->
-        <div class="wrap">
-
-          <!-- section-head groups the introductory heading and paragraph.
-It creates a consistent heading layout used throughout the website. -->
-          <div class="section-head">
-
-            <!-- The eyebrow provides a small label above the main section heading.
-The class controls its visual styling through CSS. -->
-            <span class="eyebrow">Find us</span>
-
-            <!-- h2 identifies the main heading for the locations section.
-It follows the h1 and maintains the document's heading hierarchy. -->
-            <h2>Our locations</h2>
-
-            <!-- This paragraph explains how the displayed map works.
-It provides context about the locations shown on the page. -->
-            <p>Offices and staffed collection points. Click a pin for the address and opening hours, or use the dropdown to jump to a hub. Zoom and drag to explore.</p>
-          </div>
-
-          <!-- Interactive map (Part 3): Leaflet draws one pin per collection hub using the data in data.js.
-The dropdown gives keyboard and screen-reader users another way to reach each hub. -->
-          <div class="map-picker">
-            <label for="hub-select">Jump to a collection hub</label>
-            <!-- Creates a dropdown control for selecting an option. -->
-            <select id="hub-select">
-              <option value="">Show all hubs</option>
-            </select>
-          </div>
-          <div id="hub-map" class="hub-map" role="region" aria-label="Interactive map of Campus-Cart collection hubs"></div>
-          <noscript><p class="map-note">The interactive map needs JavaScript. Every collection hub is also listed in the cards below.</p></noscript>
-
-          <!-- map-note provides additional information below the embedded map.
-The class allows CSS to style this note separately. -->
-          <p class="map-note">Map data &copy; OpenStreetMap contributors. Pins show fixed collection hubs. The site never tracks your location.</p>
-
-          <!-- grid-4 creates a four-column layout for the location cards.
-The inline style adds 28 pixels of top margin to this container. -->
-          <!-- One collection hub per province (ten hubs, because Gauteng has two). Full institution list is on coverage.html. -->
-          <div class="grid grid-3" style="margin-top:28px">
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Gqeberha, Eastern Cape</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Bloemfontein, Free State</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Brandwag collection desk<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Johannesburg, Gauteng</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>7 Jorissen Street, Braamfontein, 2001<br>Mon-Sat 10:00-16:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge badge-new">Head office</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Pretoria, Gauteng</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>128 Lynnwood Road, Hatfield, 0083 (head office)<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Locker point</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Durban, KwaZulu-Natal</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Shop 12, University Drive, Westville, 3629 (lockers)<br>Lockers daily 08:00-20:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Polokwane, Limpopo</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Polokwane CBD collection desk<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Mbombela, Mpumalanga</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Mbombela CBD collection desk<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Kimberley, Northern Cape</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Kimberley CBD collection desk<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Potchefstroom, North West</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>Potchefstroom town centre collection desk<br>Mon-Fri 09:00-17:00</p>
-              </div>
-            </article>
-            <!-- Creates a self-contained content card for an individual collection location. -->
-            <article class="card">
-              <!-- Creates a container used to group content and apply CSS layout or styling. -->
-              <div class="card-body">
-                <!-- Creates an inline element used to group and style a short piece of text. -->
-                <span class="badge">Collection hub</span>
-                <!-- Creates a third-level heading for a subsection or content card. -->
-                <h3>Cape Town, Western Cape</h3>
-                <!-- Creates a paragraph containing a block of related text. -->
-                <p>45 Main Road, Rondebosch, 7700<br>Tue-Sat 10:00-15:00</p>
-              </div>
-            </article>
-          </div>
-          <!-- Creates a paragraph containing a block of related text. -->
-          <p class="hint">We deliver to public universities, TVET colleges and private institutions in every province. <a href="coverage.html">See the full coverage list</a>.</p>
-        </div>
-      </section>
-    </main>
-
-    <!-- <footer> contains information displayed at the bottom of the webpage.
-It commonly contains company details, navigation links and contact information. -->
-    <footer>
-
-      <!-- wrap controls the footer content width while footer-grid controls its layout.
-Both classes are defined in the external CSS stylesheet. -->
-      <div class="wrap footer-grid">
-
-        <!-- This is the first footer column containing company information.
-h4 provides a heading for this group of footer content. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Campus-Cart</h4>
-          <!-- Creates a paragraph containing a block of related text. -->
-          <p>Affordable new and second-hand student essentials for South African campuses.</p>
-        </div>
-
-        <!-- This footer column contains links related to shopping.
-The unordered list groups the related navigation items. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Shop</h4>
-          <!-- Creates an unordered list for related navigation or contact items. -->
-          <ul>
-
-            <!-- Each list item contains one navigation hyperlink.
-The #shop fragment opens the matching section on products.html. -->
-            <li><a href="products.html">Shop New</a></li>
-
-            <!-- &amp; is an HTML entity that displays the ampersand character.
-The fragment targets the Deals & Gallery section. -->
-            <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
-
-            <!-- This hyperlink targets the Product Detail section.
-The destination depends on an element with the matching ID. -->
-            <li><a href="products.html#product-detail">Product Detail</a></li>
-
-            <!-- This link targets the Sell With Us section of products.html.
-URL fragments allow users to jump directly to specific content. -->
-            <li><a href="products.html#sell-with-us">Sell With Us</a></li>
-          </ul>
-        </div>
-
-        <!-- This footer column contains general company navigation.
-The list provides quick access to important website pages. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Company</h4>
-          <!-- Creates an unordered list for related navigation or contact items. -->
-          <ul>
-
-            <!-- This hyperlink opens the About page.
-Because both files are inside the pages folder, only the filename is needed. -->
-            <li><a href="about.html">About</a></li>
-
-            <!-- This link jumps to the Parent Hub section of products.html.
-The #parent-hub fragment identifies the target section. -->
-            <li><a href="products.html#parent-hub">Parent Hub</a></li>
-
-            <!-- This hyperlink opens the enquiry page.
-href stores the relative path used by the browser. -->
-            <li><a href="enquiry.html">Enquiry</a></li>
-            <!-- Creates one item within the unordered list. -->
-            <li><a href="coverage.html">Coverage</a></li>
-
-            <!-- This hyperlink opens the contact page.
-It allows users to return to the current contact section. -->
-            <li><a href="contact.html">Contact</a></li>
-
-            <!-- This hyperlink opens the Account page.
-The browser follows the relative URL stored in the href attribute. -->
-            <li><a href="account.html">Account</a></li>
-          </ul>
-        </div>
-
-        <!-- This footer column contains the business contact information.
-The unordered list groups the contact methods and opening hours. -->
-        <div>
-          <!-- Creates a fourth-level heading for a footer subsection. -->
-          <h4>Reach us</h4>
-          <!-- Creates an unordered list for related navigation or contact items. -->
-          <ul>
-
-            <!-- mailto: creates a link that opens the user's default email application.
-The email address after mailto: becomes the email recipient. -->
-            <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
-
-            <!-- This external link opens a WhatsApp conversation.
-The number uses South Africa's international country code in the URL. -->
-            <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
-
-            <!-- This list item displays the normal business operating hours.
-It is plain text because the hours do not need to be clickable. -->
-            <li>Mon–Fri, 09:00–17:00 SAST</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- footer-bottom creates a separate bottom area for copyright information.
-The wrap class keeps the content aligned with the rest of the footer. -->
-      <div class="wrap footer-bottom">
-
-        <!-- Provides a direct link to the XML sitemap so users and search engines can easily access the website's indexed page list. -->
-        <!-- The relative path points to the sitemap.xml file stored in the repository's seo folder. -->
-        <p><a href="about.html#licence">Licence and credits</a> | <a href="../sitemap.xml">Sitemap.xml</a></p>
-
-        <!-- &copy; is an HTML entity that displays the copyright symbol.
-This paragraph also explains the limitations of the static demonstration site. -->
-        <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
-      </div>
-    </footer>
-
-    <!-- <script> connects an external JavaScript file to this webpage.
-src specifies the relative location of the JavaScript file. -->
-    <script src="../assets/js/script.js"></script>
-    <!-- Loads an external JavaScript file that provides website functionality and interactions. -->
-    <script src="../assets/js/data.js"></script>
-    <script src="../assets/vendor/leaflet/leaflet.js"></script>
-    <script src="../assets/js/features.js"></script>
-    <script src="../assets/js/forms.js"></script>
-
-  </body>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. The class "form-row" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="form-row">
+    <!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="form-group">
+      <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-topic". -->
+      <label for="c-topic">Topic *</label>
+      <!-- Creates a drop-down list of options. The id "c-topic" lets CSS or JavaScript identify this element. -->
+      <select id="c-topic" name="topic" required>
+        <!-- Defines one choice in a drop-down list. -->
+        <option>Order or collection question</option>
+        <!-- Defines one choice in a drop-down list. -->
+        <option>Complaint or problem with an order</option>
+        <!-- Defines one choice in a drop-down list. -->
+        <option>Selling second-hand items</option>
+        <!-- Defines one choice in a drop-down list. -->
+        <option>Parent Hub &amp; bundles</option>
+        <!-- Defines one choice in a drop-down list. -->
+        <option>Something else</option>
+      <!-- Closes the <select> element opened earlier in this section. -->
+      </select>
+    <!-- Groups a short piece of inline text for styling or scripting. The id "c-topic-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="error-msg" id="c-topic-error" role="alert"></span>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+<div class="form-group">
+  <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-order". -->
+  <label for="c-order">Order reference (optional)</label>
+  <!-- Creates a form field; type determines the kind of input. The type="text" attribute determines the input format. The id "c-order" lets CSS or JavaScript identify this element. -->
+  <input id="c-order" name="orderReference" type="text" pattern="[A-Za-z0-9#\- ]{3,30}" title="3 to 30 letters, numbers, # or dashes, for example CC-1025" maxlength="30" placeholder="e.g. CC-1025">
+  <!-- Groups a short piece of inline text for styling or scripting. The id "c-order-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+  <span class="error-msg" id="c-order-error" role="alert"></span>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "form-row" connects it to CSS styling or JavaScript behaviour. -->
+<div class="form-row">
+  <!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="form-group">
+    <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-outcome". -->
+    <label for="c-outcome">What would you like us to do? *</label>
+    <!-- Creates a drop-down list of options. The id "c-outcome" lets CSS or JavaScript identify this element. -->
+    <select id="c-outcome" name="outcome" required>
+      <!-- Defines one choice in a drop-down list. -->
+      <option>Reply by email</option>
+      <!-- Defines one choice in a drop-down list. -->
+      <option>Call or WhatsApp me</option>
+      <!-- Defines one choice in a drop-down list. -->
+      <option>Arrange a refund</option>
+      <!-- Defines one choice in a drop-down list. -->
+      <option>Arrange a replacement or swap</option>
+      <!-- Defines one choice in a drop-down list. -->
+      <option>Update me on my order</option>
+    <!-- Closes the <select> element opened earlier in this section. -->
+    </select>
+  <!-- Groups a short piece of inline text for styling or scripting. The id "c-outcome-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+  <span class="error-msg" id="c-outcome-error" role="alert"></span>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+<div class="form-group">
+  <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-phone". -->
+  <label for="c-phone">Phone / WhatsApp (needed for a call back)</label>
+  <!-- Creates a form field; type determines the kind of input. The type="tel" attribute determines the input format. The id "c-phone" lets CSS or JavaScript identify this element. -->
+  <input id="c-phone" name="phone" type="tel" pattern="(\+27|0)[0-9 \-]{8,13}" title="A South African number such as 082 000 0000 or +27 82 000 0000" maxlength="20" autocomplete="tel" placeholder="082 000 0000">
+  <!-- Groups a short piece of inline text for styling or scripting. The id "c-phone-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+  <span class="error-msg" id="c-phone-error" role="alert"></span>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "form-group" connects it to CSS styling or JavaScript behaviour. -->
+<div class="form-group">
+  <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "c-message". -->
+  <label for="c-message">Message *</label>
+  <!-- Creates a multi-line text input field. The id "c-message" lets CSS or JavaScript identify this element. -->
+  <textarea id="c-message" name="message" required minlength="10" maxlength="1000"></textarea>
+  <!-- Groups a short piece of inline text for styling or scripting. The id "c-message-error" lets CSS or JavaScript identify this element. The class "error-msg" connects it to CSS styling or JavaScript behaviour. -->
+  <span class="error-msg" id="c-message-error" role="alert"></span>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Creates a button for an action or interactive control. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
+<button class="btn" type="submit">Create email</button>
+<!-- Creates a paragraph of text. The class "hint" connects it to CSS styling or JavaScript behaviour. -->
+<p class="hint">We build the email from your answers. You then send it from your own email app.</p>
+<!-- Closes the <form> element opened earlier in this section. -->
+</form>
+<!-- Groups related content so it can be arranged or styled together. The id "contact-preview" lets CSS or JavaScript identify this element. The class "form-result" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+<div id="contact-preview" class="form-result" aria-live="polite"></div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="info-box">
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Other ways to reach us</h3>
+    <!-- Creates a paragraph of text. The href attribute points to an email address. -->
+    <p><strong>Email:</strong> <a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></p>
+    <!-- Creates a paragraph of text. The href attribute points to an email address. -->
+    <p><strong>Orders:</strong> <a href="mailto:orders@campus-cart.co.za">orders@campus-cart.co.za</a></p>
+    <!-- Creates a paragraph of text. The href attribute points to an external webpage. -->
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/27123456789">012 345 6789</a></p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Inserts a line break. -->
+<br>
+<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+<div class="card card-navy">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Buying a specific bundle?</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Use the enquiry form so we can quote availability and collection.</p>
+    <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
+    <a class="btn" href="enquiry.html">Pre-purchase enquiry</a>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Groups content that belongs to one topic or page section. The id "locations" lets CSS or JavaScript identify this element. The class "section alt" connects it to CSS styling or JavaScript behaviour. -->
+<section class="section alt" id="locations">
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap">
+    <!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="section-head">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="eyebrow">Find us</span>
+      <!-- Defines a second-level heading for a major section. -->
+      <h2>Our locations</h2>
+      <!-- Creates a paragraph of text. -->
+      <p>Offices and staffed collection points. Click a pin for the address and opening hours, or use the dropdown to jump to a hub. Zoom and drag to explore.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. The class "map-picker" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="map-picker">
+    <!-- Provides a readable label for a form control. The for attribute connects this label to the form control with id "hub-select". -->
+    <label for="hub-select">Jump to a collection hub</label>
+    <!-- Creates a drop-down list of options. The id "hub-select" lets CSS or JavaScript identify this element. -->
+    <select id="hub-select">
+      <!-- Defines one choice in a drop-down list. -->
+      <option value="">Show all hubs</option>
+    <!-- Closes the <select> element opened earlier in this section. -->
+    </select>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The id "hub-map" lets CSS or JavaScript identify this element. The class "hub-map" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+<div id="hub-map" class="hub-map" role="region" aria-label="Interactive map of Campus-Cart collection hubs"></div>
+<!-- Creates the <noscript> HTML element. The class "map-note" connects it to CSS styling or JavaScript behaviour. -->
+<noscript><p class="map-note">The interactive map needs JavaScript. Every collection hub is also listed in the cards below.</p></noscript>
+<!-- Creates a paragraph of text. The class "map-note" connects it to CSS styling or JavaScript behaviour. -->
+<p class="map-note">Map data &copy; OpenStreetMap contributors. Pins show fixed collection hubs. The site never tracks your location.</p>
+<!-- Groups related content so it can be arranged or styled together. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
+<div class="grid grid-3" style="margin-top:28px">
+  <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+  <article class="card">
+    <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+    <div class="card-body">
+      <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+      <span class="badge">Collection hub</span>
+      <!-- Defines a third-level heading for a subsection or card. -->
+      <h3>Gqeberha, Eastern Cape</h3>
+      <!-- Creates a paragraph of text. -->
+      <p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Bloemfontein, Free State</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Brandwag collection desk<br>Mon-Fri 09:00-17:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Johannesburg, Gauteng</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>7 Jorissen Street, Braamfontein, 2001<br>Mon-Sat 10:00-16:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge badge-new">Head office</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Pretoria, Gauteng</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>128 Lynnwood Road, Hatfield, 0083 (head office)<br>Mon-Fri 09:00-17:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Locker point</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Durban, KwaZulu-Natal</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Shop 12, University Drive, Westville, 3629 (lockers)<br>Lockers daily 08:00-20:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Polokwane, Limpopo</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Polokwane CBD collection desk<br>Mon-Fri 09:00-17:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Mbombela, Mpumalanga</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Mbombela CBD collection desk<br>Mon-Fri 09:00-17:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Kimberley, Northern Cape</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Kimberley CBD collection desk<br>Mon-Fri 09:00-17:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Potchefstroom, North West</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>Potchefstroom town centre collection desk<br>Mon-Fri 09:00-17:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+<article class="card">
+  <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="card-body">
+    <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
+    <span class="badge">Collection hub</span>
+    <!-- Defines a third-level heading for a subsection or card. -->
+    <h3>Cape Town, Western Cape</h3>
+    <!-- Creates a paragraph of text. -->
+    <p>45 Main Road, Rondebosch, 7700<br>Tue-Sat 10:00-15:00</p>
+  <!-- Closes the <div> element opened earlier in this section. -->
+  </div>
+<!-- Closes the <article> element opened earlier in this section. -->
+</article>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Creates a paragraph of text. The href attribute points to the specified page or resource. The class "hint" connects it to CSS styling or JavaScript behaviour. -->
+<p class="hint">We deliver to public universities, TVET colleges and private institutions in every province. <a href="coverage.html">See the full coverage list</a>.</p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <section> element opened earlier in this section. -->
+</section>
+<!-- Closes the <main> element opened earlier in this section. -->
+</main>
+<!-- Groups footer information, contact details, and secondary navigation. -->
+<footer>
+  <!-- Groups related content so it can be arranged or styled together. The class "wrap footer-grid" connects it to CSS styling or JavaScript behaviour. -->
+  <div class="wrap footer-grid">
+    <!-- Groups related content so it can be arranged or styled together. -->
+    <div>
+      <!-- Defines a fourth-level heading for a smaller subsection. -->
+      <h4>Campus-Cart</h4>
+      <!-- Creates a paragraph of text. -->
+      <p>Affordable new and second-hand student essentials for South African campuses.</p>
+    <!-- Closes the <div> element opened earlier in this section. -->
+    </div>
+  <!-- Groups related content so it can be arranged or styled together. -->
+  <div>
+    <!-- Defines a fourth-level heading for a smaller subsection. -->
+    <h4>Shop</h4>
+    <!-- Starts an unordered (bulleted) list. -->
+    <ul>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html">Shop New</a></li>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html#product-detail">Product Detail</a></li>
+      <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+      <li><a href="products.html#sell-with-us">Sell With Us</a></li>
+    <!-- Closes the <ul> element opened earlier in this section. -->
+    </ul>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Defines a fourth-level heading for a smaller subsection. -->
+  <h4>Company</h4>
+  <!-- Starts an unordered (bulleted) list. -->
+  <ul>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="about.html">About</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="products.html#parent-hub">Parent Hub</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="enquiry.html">Enquiry</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="coverage.html">Coverage</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="contact.html">Contact</a></li>
+    <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+    <li><a href="account.html">Account</a></li>
+  <!-- Closes the <ul> element opened earlier in this section. -->
+  </ul>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. -->
+<div>
+  <!-- Defines a fourth-level heading for a smaller subsection. -->
+  <h4>Reach us</h4>
+  <!-- Starts an unordered (bulleted) list. -->
+  <ul>
+    <!-- Defines one item in a list. The href attribute points to an email address. -->
+    <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
+    <!-- Defines one item in a list. The href attribute points to an external webpage. -->
+    <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
+    <!-- Defines one item in a list. -->
+    <li>Mon–Fri, 09:00–17:00 SAST</li>
+  <!-- Closes the <ul> element opened earlier in this section. -->
+  </ul>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Groups related content so it can be arranged or styled together. The class "wrap footer-bottom" connects it to CSS styling or JavaScript behaviour. -->
+<div class="wrap footer-bottom">
+  <!-- Creates a paragraph of text. The href attribute points to the specified page or resource. -->
+  <p><a href="about.html#licence">Licence and credits</a> | <a href="../sitemap.xml">Sitemap.xml</a></p>
+  <!-- Creates a paragraph of text. -->
+  <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
+<!-- Closes the <div> element opened earlier in this section. -->
+</div>
+<!-- Closes the <footer> element opened earlier in this section. -->
+</footer>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/js/script.js"></script>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/js/data.js"></script>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/vendor/leaflet/leaflet.js"></script>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/js/features.js"></script>
+<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+<script src="../assets/js/forms.js"></script>
+<!-- Closes the <body> element opened earlier in this section. -->
+</body>
 </html>
