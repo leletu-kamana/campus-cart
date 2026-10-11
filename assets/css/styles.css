@@ -23,71 +23,71 @@
 :root {
     /* Brand */
     /* Main dark navy used for the header, footer and buttons. */
-    --navy: #0d1b3e;
+    --navy: #0d1b3e; /* Defines a reusable CSS custom property. */
     /* A slightly lighter navy for hover states on navy elements. */
-    --navy-light: #17295c;
-    --navy-light: #0d1b3e;
+    --navy-light: #17295c; /* Defines a reusable CSS custom property. */
+    --navy-light: #0d1b3e; /* Defines a reusable CSS custom property. */
     /* An even darker navy for backgrounds needing extra contrast. */
-    --navy-dark: #08142f;
-    --navy-dark: #0d1b3e;
+    --navy-dark: #08142f; /* Defines a reusable CSS custom property. */
+    --navy-dark: #0d1b3e; /* Defines a reusable CSS custom property. */
 
     /* The bright accent yellow used for highlights and calls to action. */
-    --yellow: #ffd23f;
+    --yellow: #ffd23f; /* Defines a reusable CSS custom property. */
     /* A softer yellow used on hover so it doesn't feel too harsh. */
-    --yellow-light: #ffe477;
-    --yellow-light: #ffd23f;
+    --yellow-light: #ffe477; /* Defines a reusable CSS custom property. */
+    --yellow-light: #ffd23f; /* Defines a reusable CSS custom property. */
 
     /* A muted gold used for prices and secondary accents. */
-    --gold: #b8860b;
-    --gold: #ffd23f;
+    --gold: #b8860b; /* Defines a reusable CSS custom property. */
+    --gold: #ffd23f; /* Defines a reusable CSS custom property. */
     /* A lighter gold for hover states on gold elements. */
-    --gold-light: #d9a41a;
-    --gold-light: #ffd23f;
+    --gold-light: #d9a41a; /* Defines a reusable CSS custom property. */
+    --gold-light: #ffd23f; /* Defines a reusable CSS custom property. */
 
     /* Neutral */
     /* Pure white, used for cards and light backgrounds. */
-    --white: #ffffff;
+    --white: #ffffff; /* Defines a reusable CSS custom property. */
     /* Light grey used for alternating section backgrounds. */
-    --grey: #f2f3f5;
+    --grey: #f2f3f5; /* Defines a reusable CSS custom property. */
     /* An even lighter grey for subtle backgrounds like toolbars. */
-    --grey-light: #f8f9fb;
-    --grey-light: #f2f3f5;
+    --grey-light: #f8f9fb; /* Defines a reusable CSS custom property. */
+    --grey-light: #f2f3f5; /* Defines a reusable CSS custom property. */
     /* Mid-tone grey used mainly for borders and dividers. */
-    --grey-mid: #d9dce1;
-    --grey-mid: #f2f3f5;
+    --grey-mid: #d9dce1; /* Defines a reusable CSS custom property. */
+    --grey-mid: #f2f3f5; /* Defines a reusable CSS custom property. */
     /* A darker grey used for muted, secondary text. */
-    --grey-dark: #5a5f6a;
-    --grey-dark: #0d1b3e;
+    --grey-dark: #5a5f6a; /* Defines a reusable CSS custom property. */
+    --grey-dark: #0d1b3e; /* Defines a reusable CSS custom property. */
 
     /* Near-black, the default colour for body text. */
-    --text: #1a1a1a;
-    --text: #0d1b3e;
+    --text: #1a1a1a; /* Defines a reusable CSS custom property. */
+    --text: #0d1b3e; /* Defines a reusable CSS custom property. */
     /* A softer dark grey for less important text. */
-    --text-light: #444444;
-    --text-light: #0d1b3e;
+    --text-light: #444444; /* Defines a reusable CSS custom property. */
+    --text-light: #0d1b3e; /* Defines a reusable CSS custom property. */
 
     /* Status */
     /* Green used to signal success (e.g. confirmations). */
-    --success: #2e7d32;
-    --success: #0d1b3e;
+    --success: #2e7d32; /* Defines a reusable CSS custom property. */
+    --success: #0d1b3e; /* Defines a reusable CSS custom property. */
     /* Amber used to signal a warning. */
-    --warning: #f59e0b;
-    --warning: #ffd23f;
+    --warning: #f59e0b; /* Defines a reusable CSS custom property. */
+    --warning: #ffd23f; /* Defines a reusable CSS custom property. */
     /* Red used to signal an error or danger state. */
-    --danger: #c62828;
-    --danger: #0d1b3e;
+    --danger: #c62828; /* Defines a reusable CSS custom property. */
+    --danger: #0d1b3e; /* Defines a reusable CSS custom property. */
 
     /* Layout */
     /* The widest a page's content is allowed to stretch on large screens. */
-    --max-width: 1180px;
+    --max-width: 1180px; /* Defines a reusable CSS custom property. */
 
     /* Radius */
     /* Standard corner rounding for cards and larger boxes. */
-    --radius: 14px;
+    --radius: 14px; /* Defines a reusable CSS custom property. */
     /* Smaller rounding for compact elements like the nav toggle. */
-    --radius-small: 8px;
+    --radius-small: 8px; /* Defines a reusable CSS custom property. */
     /* A very large radius so pill-shaped buttons look fully rounded. */
-    --radius-pill: 999px;
+    --radius-pill: 999px; /* Defines a reusable CSS custom property. */
 
     /* Shadows */
     /*
@@ -122,24 +122,24 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Controls whether padding and borders are included in the declared dimensions. */
 }
 
 html {
     /* Makes clicking an in-page anchor link scroll smoothly instead of jumping instantly. */
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Controls whether scrolling happens instantly or smoothly. */
     /* Stops the sticky navbar from covering the target section when jumping to an anchor. */
-    scroll-padding-top: 90px;
+    scroll-padding-top: 90px; /* Sets top spacing when scrolling to a target position. */
 }
 
 body {
     /* Removes the browser's default outer spacing around the page. */
-    margin: 0;
+    margin: 0; /* Sets the outer spacing around the element. */
     /* Removes the browser's default inner spacing on the page. */
-    padding: 0;
+    padding: 0; /* Sets the inner spacing between content and border. */
 
     /* Stops the page from shrinking below a usable width on very narrow screens. */
-    min-width: 320px;
+    min-width: 320px; /* Sets the smallest permitted width. */
 
     /*
        IMPORTANT:
@@ -158,25 +158,25 @@ body {
         sans-serif;
 
     /* Sets the base text size for the whole page in pixels. */
-    font-size: 17px;
+    font-size: 17px; /* Sets the text size. */
 
     /*
        Gives text more breathing room.
     */
     /* Sets the space between lines of text relative to the font size, improving readability. */
-    line-height: 1.65;
+    line-height: 1.65; /* Sets the vertical spacing between lines of text. */
 
     /*
        Prevents artificial spacing between letters.
     */
     /* Resets letter spacing to the font's natural default. */
-    letter-spacing: normal;
+    letter-spacing: normal; /* Sets the spacing between characters. */
 
     /* Sets the default text colour using the --text variable. */
-    color: var(--text);
+    color: var(--text); /* Sets the text colour. */
 
     /* Sets the default page background colour to white. */
-    background: var(--white);
+    background: var(--white); /* Sets the background colour or background image. */
 
     /*
        Improves font rendering on supported browsers.
@@ -195,22 +195,22 @@ body {
 */
 img {
     /* Removes the small gap browsers leave under inline images by default. */
-    display: block;
+    display: block; /* Controls how an element participates in the page layout. */
 
     /* Makes the image fill the width of its parent container. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
     /* Stops the image from ever growing wider than its container. */
-    max-width: 100%;
+    max-width: 100%; /* Sets the largest permitted width. */
 
     /* Lets the height scale automatically to keep the image's proportions. */
-    height: auto;
+    height: auto; /* Sets the element's height. */
 }
 
 
 /* Links */
 a {
     /* Sets the default link colour to the gold accent instead of the browser's default blue. */
-    color: var(--gold);
+    color: var(--gold); /* Sets the text colour. */
 }
 
 
@@ -224,7 +224,7 @@ input,
 select,
 textarea {
     /* Makes these elements use the same font settings as their surrounding text. */
-    font: inherit;
+    font: inherit; /* Sets multiple font-related properties at once. */
 }
 
 
@@ -232,9 +232,9 @@ textarea {
 /* Styles the highlight colour shown when a user selects (drags over) text. */
 ::selection {
     /* Text colour while selected. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
     /* Highlight background colour while selected. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 }
 
 
@@ -260,7 +260,7 @@ h2,
 h3,
 h4 {
     /* Removes the default space browsers add above headings. */
-    margin-top: 0;
+    margin-top: 0; /* Sets the outer spacing above the element. */
 
     /* Uses the same readable font stack as the body text for consistency. */
     font-family:
@@ -270,92 +270,92 @@ h4 {
         sans-serif;
 
     /* Makes headings extra bold (800 weight) so they stand out from body text. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /*
        Prevents headings from looking squeezed together.
     */
     /* Slightly loosens letter spacing so bold headings don't look cramped. */
-    letter-spacing: -0.3px;
+    letter-spacing: -0.3px; /* Sets the spacing between characters. */
 
     /* Tightens the line height for headings, which usually look better closer together. */
-    line-height: 1.2;
+    line-height: 1.2; /* Sets the vertical spacing between lines of text. */
 }
 
 
 /* Main heading */
 h1 {
     /* Adds space below the main heading before the next element. */
-    margin-bottom: 18px;
+    margin-bottom: 18px; /* Sets the outer spacing below the element. */
 
     /*
        clamp(min, preferred, max) lets the heading scale
        fluidly with viewport width, but never shrink below
        2.3rem or grow past 3.5rem.
     */
-    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    font-size: clamp(2.3rem, 5vw, 3.5rem); /* Sets the text size. */
 }
 
 
 /* Section heading */
 h2 {
     /* Adds space below section headings. */
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Sets the outer spacing below the element. */
 
     /* Colours section headings navy so they read as structural, not accent, text. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Fluidly scales the heading size between roughly 1.8rem and 2.5rem. */
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Sets the text size. */
 }
 
 
 /* Card heading */
 h3 {
     /* Adds space below card headings. */
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Sets the outer spacing below the element. */
 
     /* Colours card headings navy to match the brand palette. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Sets a fixed, moderate size suitable for card titles. */
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Sets the text size. */
 }
 
 
 /* Small heading */
 h4 {
     /* Adds a smaller gap below h4 elements, which are used for minor headings. */
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Sets the outer spacing below the element. */
 
     /* Sets a modest size, just slightly larger than body text. */
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* Sets the text size. */
 }
 
 
 /* Paragraphs */
 p {
     /* Removes the default top margin so spacing is controlled only from below. */
-    margin-top: 0;
+    margin-top: 0; /* Sets the outer spacing above the element. */
 
     /* Adds consistent space after each paragraph. */
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Sets the outer spacing below the element. */
 
     /*
        Better readability.
     */
     /* Slightly looser line height than the body default, for easier reading in longer text blocks. */
-    line-height: 1.7;
+    line-height: 1.7; /* Sets the vertical spacing between lines of text. */
 
     /* Resets letter spacing to normal for paragraph text. */
-    letter-spacing: 0;
+    letter-spacing: 0; /* Sets the spacing between characters. */
 }
 
 
 /* Strong text */
 strong {
     /* Sets bold (but not extra-bold) weight for emphasised text inside paragraphs. */
-    font-weight: 700;
+    font-weight: 700; /* Sets how thick or bold the text appears. */
 }
 
 
@@ -369,14 +369,14 @@ strong {
 */
 .wrap {
     /* Fills the available width minus 40px total, so there's 20px breathing room on each side. */
-    width: calc(100% - 40px);
+    width: calc(100% - 40px); /* Sets the element's width. */
 
     /* Never grows wider than the site's maximum content width. */
-    max-width: var(--max-width);
+    max-width: var(--max-width); /* Sets the largest permitted width. */
 
     /* Centres the container horizontally. */
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto; /* Sets the outer spacing to the left of the element. */
+    margin-right: auto; /* Sets the outer spacing to the right of the element. */
 }
 
 
@@ -384,35 +384,35 @@ strong {
 /* .section is the standard vertical spacing wrapper used between blocks of content on a page. */
 .section {
     /* Adds space above the section's content. */
-    padding-top: 72px;
+    padding-top: 72px; /* Sets the inner spacing above the content. */
     /* Adds matching space below the section's content. */
-    padding-bottom: 72px;
+    padding-bottom: 72px; /* Sets the inner spacing below the content. */
 }
 
 /* .section.alt gives a section a light grey background to visually separate it from white sections. */
 .section.alt {
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 }
 
 /* .section.navy gives a section the dark navy "feature" background with light text. */
 .section.navy {
     /* Default text colour becomes white on this dark background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Applies the navy background colour. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 /* Inside a navy section, headings switch to yellow so they remain readable and on-brand. */
 .section.navy h2,
 .section.navy h3 {
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 }
 
 /* Inside a navy section, paragraph text switches to a soft off-white for readability. */
 .section.navy p {
-    color: #e7e9f0;
-    color: #ffffff;
+    color: #e7e9f0; /* Sets the text colour. */
+    color: #ffffff; /* Sets the text colour. */
 }
 
 
@@ -420,10 +420,10 @@ strong {
 /* .section-head wraps the intro text at the top of a section (eyebrow + heading + lead paragraph). */
 .section-head {
     /* Keeps the intro text block narrow so lines don't stretch too wide to read comfortably. */
-    max-width: 720px;
+    max-width: 720px; /* Sets the largest permitted width. */
 
     /* Adds space between the intro and whatever content follows it (e.g. a grid of cards). */
-    margin-bottom: 38px;
+    margin-bottom: 38px; /* Sets the outer spacing below the element. */
 }
 
 
@@ -431,24 +431,24 @@ strong {
 /* .eyebrow is the small uppercase label shown above a section heading, e.g. "FEATURED". */
 .eyebrow {
     /* Lets the label sit on its own line while only taking up as much width as its text needs. */
-    display: inline-block;
+    display: inline-block; /* Controls how an element participates in the page layout. */
 
     /* Adds a small gap between the label and the heading below it. */
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Sets the outer spacing below the element. */
 
     /* Colours the label gold to make it a subtle accent. */
-    color: var(--gold);
+    color: var(--gold); /* Sets the text colour. */
 
     /* Keeps the label text small since it's a secondary detail, not a heading. */
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Sets the text size. */
     /* Makes the label extra bold so it still stands out despite being small. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /* Spreads the letters out, a common styling trick for small uppercase labels. */
-    letter-spacing: 2px;
+    letter-spacing: 2px; /* Sets the spacing between characters. */
 
     /* Forces the text to render in uppercase regardless of how it's typed in the HTML. */
-    text-transform: uppercase;
+    text-transform: uppercase; /* Changes text letter case visually. */
 }
 
 
@@ -458,65 +458,65 @@ strong {
 /* .topbar is the outer wrapper for the whole site header, including its sticky behaviour. */
 .topbar {
     /* Keeps the header fixed to the top of the viewport as the user scrolls down. */
-    position: sticky;
+    position: sticky; /* Sets the positioning method used to place this element. */
 
     /* Sticks the header exactly at the top edge (0px) of the viewport. */
-    top: 0;
+    top: 0; /* Sets the distance from the top edge for a positioned element. */
 
     /* Places the header above other page content so it never gets covered while scrolling. */
-    z-index: 1000;
+    z-index: 1000; /* Controls the stacking order when elements overlap. */
 
     /* Sets header text to white so it's readable against the dark background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Applies the navy brand colour as the header background. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* Adds a soft shadow beneath the header to visually separate it from the page content. */
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Adds a shadow around the element. */
 }
 
 
 /* .nav is the inner flex row that actually lays out the logo, links, and cart button. */
 .nav {
     /* Matches the same responsive width rule as .wrap so nav content aligns with page content. */
-    width: calc(100% - 40px);
+    width: calc(100% - 40px); /* Sets the element's width. */
 
     /* Caps the nav row at the site's maximum content width. */
-    max-width: var(--max-width);
+    max-width: var(--max-width); /* Sets the largest permitted width. */
 
     /* Guarantees a minimum header height even if content is short. */
-    min-height: 72px;
+    min-height: 72px; /* Sets the smallest permitted height. */
 
     /* Centres the nav row horizontally within the full-width .topbar. */
-    margin: 0 auto;
+    margin: 0 auto; /* Sets the outer spacing around the element. */
 
     /* Adds vertical breathing room above and below the nav content. */
-    padding: 14px 0;
+    padding: 14px 0; /* Sets the inner spacing between content and border. */
 
     /* Switches the nav into a horizontal flexbox layout. */
     /* Uses flexbox to centre the loader contents. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Vertically centres the logo, links, and button within the nav row. */
     /* Centres the loader vertically. */
-    align-items: center;
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
 
     /* Pushes the logo to the left and the links/cart to the right, with space between. */
-    justify-content: space-between;
+    justify-content: space-between; /* Distributes items along the main axis. */
 
     /* Adds consistent spacing between the nav's direct children if they wrap. */
-    gap: 20px;
+    gap: 20px; /* Sets the spacing between flex or grid items. */
 }
 
 
 /* Logo */
 .logo {
     /* Stops the logo from shrinking if the nav row runs out of space. */
-    flex-shrink: 0;
+    flex-shrink: 0; /* Sets how much a flex item can shrink when space is limited. */
 
     /* Colours the main part of the logo text yellow, the brand accent. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Uses the same font stack as the rest of the site for consistency. */
     font-family:
@@ -525,22 +525,22 @@ strong {
         sans-serif;
 
     /* Sets a moderately large size so the logo is prominent but not overpowering. */
-    font-size: 1.35rem;
+    font-size: 1.35rem; /* Sets the text size. */
 
     /* Makes the logo very bold (900 weight) so it reads clearly as a brand mark. */
-    font-weight: 900;
+    font-weight: 900; /* Sets how thick or bold the text appears. */
 
     /* Tightens the letters slightly for a more compact, wordmark-like look. */
-    letter-spacing: -0.5px;
+    letter-spacing: -0.5px; /* Sets the spacing between characters. */
 
     /* Removes the underline that links have by default. */
-    text-decoration: none;
+    text-decoration: none; /* Controls text decorations such as underlines. */
 }
 
 /* .logo span targets a secondary word/part inside the logo (e.g. "Cart" in "Campus Cart"). */
 .logo span {
     /* Colours the secondary part of the logo white, contrasting with the yellow main part. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 }
 
 
@@ -548,40 +548,40 @@ strong {
 /* .nav-links is the flex container holding all of the individual nav <a> links. */
 .nav-links {
     /* Lays the links out horizontally. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Vertically aligns all links to the same baseline within the row. */
-    align-items: center;
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
 
     /* Groups the links toward the right edge of the nav row. */
-    justify-content: flex-end;
+    justify-content: flex-end; /* Distributes items along the main axis. */
 
     /* Adds even spacing between each link. */
-    gap: 20px;
+    gap: 20px; /* Sets the spacing between flex or grid items. */
 
     /* Allows links to drop to a new line instead of overflowing on narrow screens. */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
 }
 
 /* Base styling shared by every individual nav link. */
 .nav-links a {
     /* Adds a small clickable padding area around each link's text. */
-    padding: 7px 3px;
+    padding: 7px 3px; /* Sets the inner spacing between content and border. */
 
     /* Sets link text to white to match the header's dark background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Keeps nav link text at a comfortable, slightly smaller-than-body size. */
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* Sets the text size. */
 
     /* Makes nav links bold so they're easy to scan. */
-    font-weight: 700;
+    font-weight: 700; /* Sets how thick or bold the text appears. */
 
     /* Removes the default underline styling on links. */
-    text-decoration: none;
+    text-decoration: none; /* Controls text decorations such as underlines. */
 
     /* Reserves space for a bottom border (used on hover/active) so layout doesn't shift when it appears. */
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid transparent; /* Sets the bottom border. */
 
     /*
        Animates colour and border changes smoothly rather
@@ -594,13 +594,13 @@ strong {
 
 /* Changes the link colour to yellow when the mouse hovers over it. */
 .nav-links a:hover {
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 }
 
 /* .active marks whichever nav link corresponds to the current page. */
 .nav-links a.active {
     /* Highlights the current page's link in yellow. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Draws a solid yellow underline beneath the active link so it's clearly marked. */
     border-bottom-color: var(--yellow);
@@ -615,31 +615,31 @@ strong {
        padding rule above, since this element needs different
        spacing to look like a button instead of a plain link.
     */
-    padding: 8px 17px !important;
+    padding: 8px 17px !important; /* Sets the inner spacing between content and border. */
 
     /* Forces the cart button's text to navy, overriding the white link colour rule. */
-    color: var(--navy) !important;
+    color: var(--navy) !important; /* Sets the text colour. */
 
     /* Gives the cart button a solid yellow background so it pops visually. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 
     /* Rounds the corners fully so the button reads as a pill shape. */
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill); /* Rounds the corners of the element. */
 
     /* Forces extra-bold text weight for the cart button, overriding the standard link weight. */
-    font-weight: 800 !important;
+    font-weight: 800 !important; /* Sets how thick or bold the text appears. */
 
     /* Removes the underline/border-bottom styling that other nav links use. */
-    border-bottom: none !important;
+    border-bottom: none !important; /* Sets the bottom border. */
 }
 
 /* Slightly lightens the cart button's colours on hover for interactive feedback. */
 .nav-cart:hover {
     /* Keeps the text navy on hover as well. */
-    color: var(--navy) !important;
+    color: var(--navy) !important; /* Sets the text colour. */
 
     /* Switches to the lighter yellow variable for a subtle hover effect. */
-    background: var(--yellow-light);
+    background: var(--yellow-light); /* Sets the background colour or background image. */
 }
 
 
@@ -647,39 +647,39 @@ strong {
 /* .nav-toggle is the hamburger-style button used to open/close the nav menu on small screens. */
 .nav-toggle {
     /* Hidden by default; only shown on narrow screens via a media query further down. */
-    display: none;
+    display: none; /* Controls how an element participates in the page layout. */
 
     /* Sets a comfortable clickable padding area. */
-    padding: 7px 13px;
+    padding: 7px 13px; /* Sets the inner spacing between content and border. */
 
     /* Colours the icon/text yellow to match the brand accent. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* No background by default, so it blends with the navy header. */
-    background: transparent;
+    background: transparent; /* Sets the background colour or background image. */
 
     /* Draws a yellow outline so the button is still visible against the dark header. */
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--yellow); /* Sets the border width, style, and colour. */
 
     /* Rounds the corners slightly for a soft button shape. */
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-small); /* Rounds the corners of the element. */
 
     /* Shows a pointer cursor to indicate the element is clickable. */
-    cursor: pointer;
+    cursor: pointer; /* Sets the mouse pointer appearance over the element. */
 
     /* Sets a readable text size for the toggle label/icon. */
-    font-size: 1rem;
+    font-size: 1rem; /* Sets the text size. */
     /* Makes the toggle text bold to match other nav elements. */
-    font-weight: 700;
+    font-weight: 700; /* Sets how thick or bold the text appears. */
 }
 
 /* Inverts the toggle button's colours on hover for clear interactive feedback. */
 .nav-toggle:hover {
     /* Switches text colour to navy on hover. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Fills the background with yellow on hover. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 }
 
 
@@ -689,10 +689,10 @@ strong {
 /* .hero is the large introductory banner section shown at the top of the homepage. */
 .hero {
     /* Adds generous vertical space above and below the hero content. */
-    padding: 80px 0;
+    padding: 80px 0; /* Sets the inner spacing between content and border. */
 
     /* Sets default text colour to white for readability on the dark background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /*
        Creates a diagonal (135 degree) gradient background
@@ -709,22 +709,22 @@ strong {
 
 /* Overrides the default h1 colour so it stays white inside the dark hero background. */
 .hero h1 {
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 }
 
 /* Targets any <em> (emphasis) text inside the hero heading, used to highlight a key word. */
 .hero h1 em {
     /* Colours the emphasised word yellow so it stands out from the rest of the white heading. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Removes the italic styling browsers apply to <em> by default, keeping it upright. */
-    font-style: normal;
+    font-style: normal; /* Sets the text style, such as normal or italic. */
 }
 
 /* .hero-grid lays out the hero's text column and image column side by side. */
 .hero-grid {
     /* Switches to CSS grid for a clean two-column layout. */
-    display: grid;
+    display: grid; /* Controls how an element participates in the page layout. */
 
     /*
        Defines two flexible columns: the first slightly wider
@@ -736,51 +736,51 @@ strong {
         minmax(0, 0.95fr);
 
     /* Adds space between the two columns. */
-    gap: 46px;
+    gap: 46px; /* Sets the spacing between flex or grid items. */
 
     /* Vertically centres both columns relative to each other. */
-    align-items: center;
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
 }
 
 /* Styles the introductory paragraph text within the hero, marked with class "lead". */
 .hero p.lead {
     /* Uses a soft off-white rather than pure white, easier on the eyes for longer text. */
-    color: #e7e9f0;
-    color: #ffffff;
+    color: #e7e9f0; /* Sets the text colour. */
+    color: #ffffff; /* Sets the text colour. */
 
     /* Slightly larger than standard body text since it's the hero's key message. */
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Sets the text size. */
 
     /* Extra generous line spacing for a relaxed, easy-to-read introduction. */
-    line-height: 1.75;
+    line-height: 1.75; /* Sets the vertical spacing between lines of text. */
 }
 
 /* .hero-img is the container wrapping the hero's featured image. */
 .hero-img {
     /* Clips anything (like the image's corners) that would poke outside the rounded box. */
     /* Prevents the loader graphics from creating page overflow. */
-    overflow: hidden;
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 
     /* Rounds the image container's corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 
     /* Adds a soft shadow so the image appears to lift off the page. */
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Adds a shadow around the element. */
 }
 
 /* Styles the actual <img> element inside .hero-img. */
 .hero-img img {
     /* Ensures the image fills the full width of its container. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 
     /* Fixes a consistent height so the hero layout doesn't jump between pages with different images. */
-    height: 400px;
+    height: 400px; /* Sets the element's height. */
 
     /* Crops the image to fill the box while preserving its aspect ratio (no stretching/distortion). */
-    object-fit: cover;
+    object-fit: cover; /* Controls how an image or video fits within its dimensions. */
 
     /* Matches the rounding of the parent container so corners look consistent. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 
@@ -790,47 +790,47 @@ strong {
 /* .split arranges a small set of highlight cards (e.g. "Buy" vs "Sell") side by side within the hero. */
 .split {
     /* Uses grid layout for equal-width columns. */
-    display: grid;
+    display: grid; /* Controls how an element participates in the page layout. */
 
     /* Creates two equal-width flexible columns. */
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
     /* Adds spacing between the two split cards. */
-    gap: 20px;
+    gap: 20px; /* Sets the spacing between flex or grid items. */
 
     /* Adds space above the split cards, separating them from the text above. */
-    margin-top: 28px;
+    margin-top: 28px; /* Sets the outer spacing above the element. */
 }
 
 /* .split-card is an individual highlight box within the .split grid. */
 .split-card {
     /* Adds internal spacing so the text doesn't touch the card's edges. */
-    padding: 22px;
+    padding: 22px; /* Sets the inner spacing between content and border. */
 
     /* A very subtle semi-transparent white overlay, letting the navy hero background show through slightly. */
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.07); /* Sets the background colour or background image. */
 
     /* Draws a yellow border to visually separate the card from the hero background. */
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--yellow); /* Sets the border width, style, and colour. */
 
     /* Rounds the card's corners to match the site's overall style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 /* Colours the heading inside a split card yellow so it's visible against the semi-transparent background. */
 .split-card h3 {
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 }
 
 /* Styles the paragraph text inside a split card. */
 .split-card p {
     /* Uses the same soft off-white as other hero text for readability. */
-    color: #e7e9f0;
-    color: #ffffff;
+    color: #e7e9f0; /* Sets the text colour. */
+    color: #ffffff; /* Sets the text colour. */
 
     /* Sets a standard body-text size for the card description. */
-    font-size: 1rem;
+    font-size: 1rem; /* Sets the text size. */
 }
 
 
@@ -840,46 +840,46 @@ strong {
 /* .btn is the base class shared by every button-style element (links or actual <button>s) on the site. */
 .btn {
     /* Uses inline-flex so the button's content (e.g. text + icon) can be centred inside it. */
-    display: inline-flex;
+    display: inline-flex; /* Controls how an element participates in the page layout. */
 
     /* Centres content vertically within the button. */
-    align-items: center;
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
     /* Centres content horizontally within the button. */
     /* Centres the loader horizontally. */
-    justify-content: center;
+    justify-content: center; /* Distributes items along the main axis. */
 
     /* Guarantees a comfortably large, tappable minimum height. */
-    min-height: 46px;
+    min-height: 46px; /* Sets the smallest permitted height. */
 
     /* Sets generous horizontal padding so the button doesn't feel cramped around its text. */
-    padding: 12px 24px;
+    padding: 12px 24px; /* Sets the inner spacing between content and border. */
 
     /* Default text colour is navy, contrasting against the yellow background below. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Default button background uses the bright yellow brand colour. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 
     /* Reserves a transparent border so hover/variant states can add a coloured border without shifting size. */
-    border: 2px solid transparent;
+    border: 2px solid transparent; /* Sets the border width, style, and colour. */
 
     /* Fully rounds the corners for a pill-shaped button. */
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill); /* Rounds the corners of the element. */
 
     /* Sets a standard, readable button text size. */
-    font-size: 1rem;
+    font-size: 1rem; /* Sets the text size. */
 
     /* Makes button text extra bold so it reads clearly as an action. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /* Keeps text vertically compact within the button. */
-    line-height: 1.2;
+    line-height: 1.2; /* Sets the vertical spacing between lines of text. */
 
     /* Removes the underline that would otherwise appear if the button is actually a link. */
-    text-decoration: none;
+    text-decoration: none; /* Controls text decorations such as underlines. */
 
     /* Shows a pointer cursor to signal the button is clickable. */
-    cursor: pointer;
+    cursor: pointer; /* Sets the mouse pointer appearance over the element. */
 
     /*
        Smoothly animates the button's lift and colour change
@@ -894,77 +894,77 @@ strong {
 /* Lifts the button slightly and darkens its background when hovered, giving tactile feedback. */
 .btn:hover {
     /* Moves the button up by 2px, creating a subtle "lift" effect. */
-    transform: translateY(-2px);
+    transform: translateY(-2px); /* Moves, rotates, scales, or skews the element. */
 
     /* Switches to the lighter gold shade on hover. */
-    background: var(--gold-light);
+    background: var(--gold-light); /* Sets the background colour or background image. */
 }
 
 /* Returns the button to its normal position while actively being clicked/pressed. */
 .btn:active {
-    transform: translateY(0);
+    transform: translateY(0); /* Moves, rotates, scales, or skews the element. */
 }
 
 /* .btn-navy is a variant of .btn with a dark navy background instead of yellow, for less urgent actions. */
 .btn-navy {
     /* White text so it's readable against the dark navy background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Applies the navy background colour instead of the default yellow. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 /* Lightens the navy button slightly on hover. */
 .btn-navy:hover {
-    background: var(--navy-light);
+    background: var(--navy-light); /* Sets the background colour or background image. */
 }
 
 /* .btn-outline is a variant with no fill, just a navy border, for secondary actions. */
 .btn-outline {
     /* Text colour matches the border for a clean outlined look. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* No background fill, letting the page background show through. */
-    background: transparent;
+    background: transparent; /* Sets the background colour or background image. */
 
     /* Draws a solid navy border since there's no background to define the button's shape. */
-    border: 2px solid var(--navy);
+    border: 2px solid var(--navy); /* Sets the border width, style, and colour. */
 }
 
 /* On hover, the outline button fills in solid to give clear feedback. */
 .btn-outline:hover {
     /* Switches text to white once the background fills in. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Fills the button with navy on hover. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 /* .btn-ghost-light is an outlined button meant for use on dark backgrounds (e.g. the hero). */
 .btn-ghost-light {
     /* Yellow text/border so it's visible against dark backgrounds. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* No fill by default. */
-    background: transparent;
+    background: transparent; /* Sets the background colour or background image. */
 
     /* Yellow border defines the button's shape without a solid background. */
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--yellow); /* Sets the border width, style, and colour. */
 }
 
 /* On hover, the ghost button fills with yellow and swaps text to navy for contrast. */
 .btn-ghost-light:hover {
-    color: var(--navy);
-    background: var(--yellow);
+    color: var(--navy); /* Sets the text colour. */
+    background: var(--yellow); /* Sets the background colour or background image. */
 }
 
 /* .btn-sm is a smaller-footprint version of .btn for compact spaces like cards. */
 .btn-sm {
     /* Reduces padding compared to the default button size. */
-    padding: 9px 17px;
+    padding: 9px 17px; /* Sets the inner spacing between content and border. */
 
     /* Slightly smaller text to match the reduced button size. */
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Sets the text size. */
 }
 
 
@@ -974,66 +974,66 @@ strong {
 /* .badge is a small pill label used to tag products, e.g. "NEW" or "VERIFIED". */
 .badge {
     /* Uses inline-flex so multiple badges can sit next to each other and align their content. */
-    display: inline-flex;
+    display: inline-flex; /* Controls how an element participates in the page layout. */
 
     /* Aligns badge content vertically centred. */
-    align-items: center;
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
 
     /* Adds a small gap to the right so multiple badges don't touch each other. */
-    margin-right: 6px;
+    margin-right: 6px; /* Sets the outer spacing to the right of the element. */
     /* Adds a small gap below, useful if badges wrap onto a new line. */
-    margin-bottom: 6px;
+    margin-bottom: 6px; /* Sets the outer spacing below the element. */
 
     /* Sets compact internal padding suitable for short label text. */
-    padding: 5px 12px;
+    padding: 5px 12px; /* Sets the inner spacing between content and border. */
 
     /* Default badge text colour is navy. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Default badge background is a neutral light grey. */
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 
     /* Fully rounds the badge into a pill shape. */
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill); /* Rounds the corners of the element. */
 
     /* Keeps badge text small since it's a secondary label, not primary content. */
-    font-size: 0.75rem;
+    font-size: 0.75rem; /* Sets the text size. */
 
     /* Makes badge text extra bold so it stays legible at a small size. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /* Spaces out uppercase letters slightly for readability. */
-    letter-spacing: 0.7px;
+    letter-spacing: 0.7px; /* Sets the spacing between characters. */
 
     /* Forces badge text to render in uppercase. */
-    text-transform: uppercase;
+    text-transform: uppercase; /* Changes text letter case visually. */
 }
 
 /* .badge-verified is a variant used to mark verified sellers/listings. */
 .badge-verified {
     /* White text for contrast against the gold background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Gold background signals a special, trusted status. */
-    background: var(--gold);
+    background: var(--gold); /* Sets the background colour or background image. */
 }
 
 /* .badge-new marks a brand-new listing with a bold navy/yellow combination. */
 .badge-new {
     /* Yellow text stands out against the dark background. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Navy background makes this badge visually distinct from the default grey badge. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 /* .badge-used marks a second-hand listing. */
 .badge-used {
     /* Navy text for contrast against the yellow background. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Yellow background differentiates this badge from both the default and "new" badges. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 }
 
 
@@ -1043,10 +1043,10 @@ strong {
 /* .grid is the base grid container; specific column-count classes below extend it. */
 .grid {
     /* Enables CSS grid layout for whatever element this class is applied to. */
-    display: grid;
+    display: grid; /* Controls how an element participates in the page layout. */
 
     /* Adds consistent spacing between every grid item, both rows and columns. */
-    gap: 24px;
+    gap: 24px; /* Sets the spacing between flex or grid items. */
 }
 
 /* .grid-2 arranges grid items into two equal-width columns. */
@@ -1074,28 +1074,28 @@ strong {
 /* .card is the reusable product/listing card used throughout the site. */
 .card {
     /* Allows the card to shrink below its content's natural width instead of overflowing its grid cell. */
-    min-width: 0;
+    min-width: 0; /* Sets the smallest permitted width. */
 
     /* Stacks the card's image and body vertically using flexbox. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Sets the flex direction to a vertical column. */
-    flex-direction: column;
+    flex-direction: column; /* Sets the direction in which flex items are arranged. */
 
     /* Clips the image's corners so they follow the card's rounded border. */
-    overflow: hidden;
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 
     /* White card background, standard for content cards. */
-    background: var(--white);
+    background: var(--white); /* Sets the background colour or background image. */
 
     /* A subtle light grey border outlines the card. */
-    border: 1px solid var(--grey-mid);
+    border: 1px solid var(--grey-mid); /* Sets the border width, style, and colour. */
 
     /* Rounds the card's corners using the shared radius variable. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 
     /* Applies the shared soft drop-shadow to lift the card off the page. */
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Adds a shadow around the element. */
 
     /*
        Animates the hover lift and shadow change smoothly
@@ -1109,83 +1109,83 @@ strong {
 /* Lifts the card up slightly and deepens its shadow when hovered, suggesting interactivity. */
 .card:hover {
     /* Moves the card up 4px on hover. */
-    transform: translateY(-4px);
+    transform: translateY(-4px); /* Moves, rotates, scales, or skews the element. */
 
     /* Swaps to the stronger hover shadow variable. */
-    box-shadow: var(--shadow-hover);
+    box-shadow: var(--shadow-hover); /* Adds a shadow around the element. */
 }
 
 /* Styles the product image at the top of each card. */
 .card img {
     /* Fills the full width of the card. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 
     /* Fixes a consistent image height so cards line up evenly in a grid. */
-    height: 210px;
+    height: 210px; /* Sets the element's height. */
 
     /* Crops the image to fill the space without distorting its proportions. */
-    object-fit: cover;
+    object-fit: cover; /* Controls how an image or video fits within its dimensions. */
 }
 
 /* .card-body wraps the text content below the card image (title, price, button, etc.). */
 .card-body {
     /* Allows the body to shrink if needed, avoiding overflow inside the card. */
-    min-width: 0;
+    min-width: 0; /* Sets the smallest permitted width. */
 
     /* Lets the body grow to fill any remaining vertical space in the card. */
-    flex: 1;
+    flex: 1; /* Sets how a flex item grows, shrinks, and uses available space. */
 
     /* Stacks the body's children (heading, text, button) vertically. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Sets a vertical flex direction for the card body's contents. */
-    flex-direction: column;
+    flex-direction: column; /* Sets the direction in which flex items are arranged. */
 
     /* Adds internal spacing around the card's text content. */
-    padding: 20px;
+    padding: 20px; /* Sets the inner spacing between content and border. */
 }
 
 /* Styles descriptive paragraph text inside the card body. */
 .card-body p {
     /* Uses the slightly muted text colour for secondary descriptive text. */
-    color: var(--text-light);
+    color: var(--text-light); /* Sets the text colour. */
 
     /* Slightly smaller than standard body text, appropriate for a compact card. */
-    font-size: 0.96rem;
+    font-size: 0.96rem; /* Sets the text size. */
 }
 
 /* .price highlights the product price within a card. */
 .card-body .price {
     /* Adds a little breathing room above and below the price. */
-    margin: 6px 0 12px;
+    margin: 6px 0 12px; /* Sets the outer spacing around the element. */
 
     /* Colours the price gold to draw attention as a key detail. */
-    color: var(--gold);
+    color: var(--gold); /* Sets the text colour. */
 
     /* Makes the price noticeably larger than surrounding text. */
-    font-size: 1.3rem;
+    font-size: 1.3rem; /* Sets the text size. */
 
     /* Bolds the price so it's easy to spot at a glance. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 }
 
 /* Pushes the card's button to the bottom of the card and aligns it to the left. */
 .card-body .btn {
     /* "auto" margin on top pushes this element down, filling any leftover flex space above it. */
-    margin-top: auto;
+    margin-top: auto; /* Sets the outer spacing above the element. */
 
     /* Overrides the default block alignment so the button only takes up as much width as it needs. */
-    align-self: flex-start;
+    align-self: flex-start; /* Overrides cross-axis alignment for this individual item. */
 }
 
 /* .card-navy is a dark variant of the card, used for featured or highlighted listings. */
 .card-navy {
     /* Off-white text for readability on the dark background. */
-    color: #e7e9f0;
-    color: #ffffff;
+    color: #e7e9f0; /* Sets the text colour. */
+    color: #ffffff; /* Sets the text colour. */
 
     /* Navy background instead of the default white. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* Matches the border colour to the background so no light edge shows. */
     border-color: var(--navy);
@@ -1193,13 +1193,13 @@ strong {
 
 /* Colours headings inside a navy card yellow so they remain legible. */
 .card-navy h3 {
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 }
 
 /* Colours paragraph text inside a navy card to the same soft off-white as other dark-background text. */
 .card-navy p {
-    color: #e7e9f0;
-    color: #ffffff;
+    color: #e7e9f0; /* Sets the text colour. */
+    color: #ffffff; /* Sets the text colour. */
 }
 
 
@@ -1209,16 +1209,16 @@ strong {
 /* .info-box is a callout box used to highlight tips or important notices within the page content. */
 .info-box {
     /* Generous internal padding so the message doesn't feel cramped. */
-    padding: 22px 24px;
+    padding: 22px 24px; /* Sets the inner spacing between content and border. */
 
     /* Light grey background makes the box stand out from the surrounding white content. */
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 
     /* A thick gold left border acts as a visual "flag" marking this as a callout. */
-    border-left: 7px solid var(--gold);
+    border-left: 7px solid var(--gold); /* Sets the left border. */
 
     /* Rounds the box's corners to match the site's overall card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 
@@ -1228,54 +1228,54 @@ strong {
 /* .tabs is the horizontal row of clickable tab buttons (e.g. for filtering categories). */
 .tabs {
     /* Lays tab buttons out in a horizontal row. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Lets tabs wrap onto a new line if there isn't enough horizontal space. */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
 
     /* Adds spacing between individual tab buttons. */
-    gap: 10px;
+    gap: 10px; /* Sets the spacing between flex or grid items. */
 
     /* Adds space below the tab row, separating it from the content panel underneath. */
-    margin-bottom: 26px;
+    margin-bottom: 26px; /* Sets the outer spacing below the element. */
 
     /* Adds space between the tabs and the divider line below them. */
-    padding-bottom: 12px;
+    padding-bottom: 12px; /* Sets the inner spacing below the content. */
 
     /* Draws a thick grey line beneath the tab row to visually separate tabs from content. */
-    border-bottom: 3px solid var(--grey-mid);
+    border-bottom: 3px solid var(--grey-mid); /* Sets the bottom border. */
 }
 
 /* .tab-btn is an individual clickable tab. */
 .tab-btn {
     /* Comfortable padding so the tab is easy to click/tap. */
-    padding: 10px 20px;
+    padding: 10px 20px; /* Sets the inner spacing between content and border. */
 
     /* Default (inactive) tab text colour is navy. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Default (inactive) tab background is light grey. */
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 
     /* Reserves border space so the layout doesn't shift when a border might be added later. */
-    border: 2px solid transparent;
+    border: 2px solid transparent; /* Sets the border width, style, and colour. */
 
     /* Fully rounds tab buttons into pill shapes. */
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill); /* Rounds the corners of the element. */
 
     /* Sets a comfortable, slightly smaller-than-body tab text size. */
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* Sets the text size. */
 
     /* Bolds the tab label so it's easy to read. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /* Shows a pointer cursor since tabs are clickable. */
-    cursor: pointer;
+    cursor: pointer; /* Sets the mouse pointer appearance over the element. */
 }
 
 /* Darkens the tab's background slightly on hover for feedback. */
 .tab-btn:hover {
-    background: var(--grey-mid);
+    background: var(--grey-mid); /* Sets the background colour or background image. */
 }
 
 /*
@@ -1286,10 +1286,10 @@ strong {
 */
 .tab-btn[aria-selected="true"] {
     /* The active tab's text turns yellow to stand out. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* The active tab's background switches to navy, clearly marking it as selected. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 /*
@@ -1298,7 +1298,7 @@ strong {
    actually hidden from view (not just semantically hidden).
 */
 .tab-panel[hidden] {
-    display: none;
+    display: none; /* Controls how an element participates in the page layout. */
 }
 
 
@@ -1308,52 +1308,52 @@ strong {
 /* .toolbar is the row of filter/search controls shown above a product listing grid. */
 .toolbar {
     /* Lays the filter fields out in a horizontal row. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Aligns fields along their bottom edge, so labels of different lengths don't misalign the inputs. */
-    align-items: flex-end;
+    align-items: flex-end; /* Aligns items across the cross-axis of a flex or grid container. */
 
     /* Allows fields to wrap onto multiple lines on narrower screens. */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
 
     /* Adds spacing between each filter field. */
-    gap: 14px;
+    gap: 14px; /* Sets the spacing between flex or grid items. */
 
     /* Adds space below the toolbar, separating it from the results grid. */
-    margin-bottom: 28px;
+    margin-bottom: 28px; /* Sets the outer spacing below the element. */
 
     /* Adds internal padding so the toolbar's background doesn't touch its content edges. */
-    padding: 18px;
+    padding: 18px; /* Sets the inner spacing between content and border. */
 
     /* Light grey background distinguishes the toolbar as a distinct control panel. */
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 
     /* Rounds the toolbar's corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 /* .field wraps a single label + input pair within the toolbar or a form. */
 .field {
     /* Stacks the label above its input. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Sets a vertical flex direction. */
-    flex-direction: column;
+    flex-direction: column; /* Sets the direction in which flex items are arranged. */
 
     /* Adds a small consistent gap between the label and its input. */
-    gap: 6px;
+    gap: 6px; /* Sets the spacing between flex or grid items. */
 }
 
 /* Styles the text label above a form field. */
 .field label {
     /* Navy label text ties it to the brand's heading colour. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Slightly smaller than body text, appropriate for a label. */
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Sets the text size. */
 
     /* Bolds the label so it's easy to distinguish from the input value. */
-    font-weight: 700;
+    font-weight: 700; /* Sets how thick or bold the text appears. */
 }
 
 
@@ -1365,25 +1365,25 @@ input,
 select,
 textarea {
     /* Makes form fields fill the full width of their container by default. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 
     /* Allows the field to shrink below its content's natural width inside flex/grid layouts. */
-    min-width: 0;
+    min-width: 0; /* Sets the smallest permitted width. */
 
     /* Comfortable internal padding so typed text isn't cramped against the edges. */
-    padding: 12px 14px;
+    padding: 12px 14px; /* Sets the inner spacing between content and border. */
 
     /* Standard dark text colour for user input. */
-    color: var(--text);
+    color: var(--text); /* Sets the text colour. */
 
     /* White background for a clean, readable input field. */
-    background: var(--white);
+    background: var(--white); /* Sets the background colour or background image. */
 
     /* A light grey border gives the field a visible outline before it's focused. */
-    border: 2px solid var(--grey-mid);
+    border: 2px solid var(--grey-mid); /* Sets the border width, style, and colour. */
 
     /* Rounds the input's corners for a soft, modern look. */
-    border-radius: 10px;
+    border-radius: 10px; /* Rounds the corners of the element. */
 
     /* Uses the same font stack as the rest of the site so inputs feel consistent with body text. */
     font-family:
@@ -1393,10 +1393,10 @@ textarea {
         sans-serif;
 
     /* Sets a comfortable, readable text size for typed input. */
-    font-size: 1rem;
+    font-size: 1rem; /* Sets the text size. */
 
     /* Slightly loosens line spacing, useful for multi-line textareas. */
-    line-height: 1.5;
+    line-height: 1.5; /* Sets the vertical spacing between lines of text. */
 
     /*
        Smoothly animates the border and glow when a field
@@ -1412,7 +1412,7 @@ input:focus,
 select:focus,
 textarea:focus {
     /* Removes the browser's default focus outline since we're providing a custom one below. */
-    outline: none;
+    outline: none; /* Draws an outline around the element without affecting layout. */
 
     /* Switches the border to navy to clearly indicate which field is active. */
     border-color: var(--navy);
@@ -1430,10 +1430,10 @@ textarea:focus {
 /* Extra rules specific to multi-line text areas. */
 textarea {
     /* Guarantees the textarea starts tall enough to be useful for longer messages. */
-    min-height: 150px;
+    min-height: 150px; /* Sets the smallest permitted height. */
 
     /* Lets the user manually resize the textarea vertically only, not horizontally. */
-    resize: vertical;
+    resize: vertical; /* Controls whether the user can resize the element. */
 }
 
 
@@ -1443,59 +1443,59 @@ textarea {
 /* .gallery lays out a grid of images, e.g. for a product's photo gallery. */
 .gallery {
     /* Uses CSS grid to arrange gallery items. */
-    display: grid;
+    display: grid; /* Controls how an element participates in the page layout. */
 
     /* Creates three equal-width columns for the gallery images. */
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
     /* Adds spacing between gallery images. */
-    gap: 16px;
+    gap: 16px; /* Sets the spacing between flex or grid items. */
 }
 
 /* Styles each individual gallery item, which is a <figure> wrapping an image and caption. */
 .gallery figure {
     /* Clips the image's corners to match the figure's rounded shape. */
-    overflow: hidden;
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 
     /* Removes the default margin browsers apply to <figure> elements. */
-    margin: 0;
+    margin: 0; /* Sets the outer spacing around the element. */
 
     /* Sets caption text to white to be readable against the dark background. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 
     /* Navy background shows behind the caption text area. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* Rounds the figure's corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 
     /* Adds a soft shadow so gallery items lift slightly off the page. */
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Adds a shadow around the element. */
 }
 
 /* Sets a consistent size and crop for every gallery image. */
 .gallery img {
     /* Fills the full width of its figure. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 
     /* Fixes a shorter height than the main card images, suited to a dense gallery grid. */
-    height: 180px;
+    height: 180px; /* Sets the element's height. */
 
     /* Crops the image to fill the space while preserving its proportions. */
-    object-fit: cover;
+    object-fit: cover; /* Controls how an image or video fits within its dimensions. */
 }
 
 /* Styles the caption text shown below each gallery image. */
 .gallery figcaption {
     /* Adds internal padding so the caption text doesn't touch the figure's edges. */
-    padding: 12px 14px;
+    padding: 12px 14px; /* Sets the inner spacing between content and border. */
 
     /* Slightly smaller than body text, appropriate for a caption. */
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Sets the text size. */
 
     /* Comfortable line spacing for potentially multi-line captions. */
-    line-height: 1.5;
+    line-height: 1.5; /* Sets the vertical spacing between lines of text. */
 }
 
 /* ==========================================================
@@ -1504,75 +1504,75 @@ textarea {
 /* .form-card is the white card wrapper used to contain an entire form (e.g. contact or checkout). */
 .form-card {
     /* Generous internal padding around the whole form. */
-    padding: 28px;
+    padding: 28px; /* Sets the inner spacing between content and border. */
 
     /* White background, consistent with other card components. */
-    background: var(--white);
+    background: var(--white); /* Sets the background colour or background image. */
 
     /* Light grey border outlines the form card. */
-    border: 1px solid var(--grey-mid);
+    border: 1px solid var(--grey-mid); /* Sets the border width, style, and colour. */
 
     /* Rounds the corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 
     /* Adds the shared soft shadow so the form card lifts off the page. */
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Adds a shadow around the element. */
 }
 
 /* .form-row arranges two related fields side by side (e.g. First Name / Last Name). */
 .form-row {
     /* Uses grid to create equal-width side-by-side columns. */
-    display: grid;
+    display: grid; /* Controls how an element participates in the page layout. */
 
     /* Creates two equal-width columns for paired fields. */
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
     /* Adds spacing between the two fields in the row. */
-    gap: 18px;
+    gap: 18px; /* Sets the spacing between flex or grid items. */
 }
 
 /* .form-group wraps a single label + input (or textarea) combination within a form. */
 .form-group {
     /* Stacks the label above the input. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Sets a vertical flex direction. */
-    flex-direction: column;
+    flex-direction: column; /* Sets the direction in which flex items are arranged. */
 
     /* Adds a small gap between the label and its input. */
-    gap: 6px;
+    gap: 6px; /* Sets the spacing between flex or grid items. */
 
     /* Adds space below each field group, separating it from the next one. */
-    margin-bottom: 18px;
+    margin-bottom: 18px; /* Sets the outer spacing below the element. */
 }
 
 /* Styles the label text within a form group. */
 .form-group label {
     /* Navy label colour ties it to the site's heading colour. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Bolds the label so it's clearly distinguished from the input below it. */
-    font-weight: 700;
+    font-weight: 700; /* Sets how thick or bold the text appears. */
 }
 
 /* Ensures inputs, selects, and textareas inside a form group always take the full width available. */
 .form-group input,
 .form-group select,
 .form-group textarea {
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 }
 
 /* .hint is small helper text shown beneath a field, e.g. "Must be at least 8 characters". */
 .hint {
     /* Uses the muted dark grey colour since hints are secondary, non-critical information. */
-    color: var(--grey-dark);
+    color: var(--grey-dark); /* Sets the text colour. */
 
     /* Smaller than body text, appropriate for a subtle helper note. */
-    font-size: 0.88rem;
+    font-size: 0.88rem; /* Sets the text size. */
 
     /* Comfortable line spacing in case the hint wraps onto multiple lines. */
-    line-height: 1.5;
+    line-height: 1.5; /* Sets the vertical spacing between lines of text. */
 }
 
 
@@ -1582,25 +1582,25 @@ textarea {
 /* .checklist is an unordered list styled with custom checkmark icons instead of bullet points. */
 .checklist {
     /* Removes the default margin browsers apply to lists. */
-    margin: 0;
+    margin: 0; /* Sets the outer spacing around the element. */
 
     /* Removes the default padding (which normally creates the bullet indent). */
-    padding: 0;
+    padding: 0; /* Sets the inner spacing between content and border. */
 
     /* Removes the default bullet-point markers since custom checkmarks are added instead. */
-    list-style: none;
+    list-style: none; /* Controls the appearance of list markers. */
 }
 
 /* Styles each individual list item in the checklist. */
 .checklist li {
     /* Establishes this element as the positioning context for the absolutely-positioned checkmark below. */
-    position: relative;
+    position: relative; /* Sets the positioning method used to place this element. */
 
     /* Adds vertical padding between items and left padding to leave room for the checkmark icon. */
-    padding: 9px 0 9px 34px;
+    padding: 9px 0 9px 34px; /* Sets the inner spacing between content and border. */
 
     /* Adds a dashed divider line beneath each list item. */
-    border-bottom: 1px dashed var(--grey-mid);
+    border-bottom: 1px dashed var(--grey-mid); /* Sets the bottom border. */
 }
 
 /*
@@ -1610,40 +1610,40 @@ textarea {
 */
 .checklist li::before {
     /* Inserts a Unicode checkmark character (✓) as the icon's content. */
-    content: "\2713";
+    content: "\2713"; /* Sets generated content for a pseudo-element. */
 
     /* Takes the icon out of normal flow so it can be placed precisely. */
-    position: absolute;
+    position: absolute; /* Sets the positioning method used to place this element. */
 
     /* Aligns the icon near the top of the list item. */
-    top: 9px;
+    top: 9px; /* Sets the distance from the top edge for a positioned element. */
     /* Positions the icon flush with the left edge of the list item. */
-    left: 0;
+    left: 0; /* Sets the distance from the left edge for a positioned element. */
 
     /* Sets a fixed square size for the checkmark's background box. */
-    width: 24px;
-    height: 24px;
+    width: 24px; /* Sets the element's width. */
+    height: 24px; /* Sets the element's height. */
 
     /* Navy checkmark colour for contrast against the yellow background box. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* Yellow background box behind the checkmark, matching the brand accent. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 
     /* Slightly rounds the checkmark box's corners. */
-    border-radius: 6px;
+    border-radius: 6px; /* Rounds the corners of the element. */
 
     /* Sets the checkmark symbol's size. */
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Sets the text size. */
 
     /* Bolds the checkmark so it's clearly visible. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /* Matches the line-height to the box height so the checkmark centres vertically. */
-    line-height: 24px;
+    line-height: 24px; /* Sets the vertical spacing between lines of text. */
 
     /* Centres the checkmark horizontally within its box. */
-    text-align: center;
+    text-align: center; /* Aligns inline text within its container. */
 }
 
 
@@ -1653,65 +1653,65 @@ textarea {
 /* .order-table displays a shopping cart or order summary as a proper HTML table. */
 .order-table {
     /* Makes the table stretch to fill its container's full width. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 
     /* Merges adjacent cell borders into single lines instead of doubled borders. */
-    border-collapse: collapse;
+    border-collapse: collapse; /* Controls whether table cell borders are separate or combined. */
 }
 
 /* Shared padding and divider styling for both header and data cells. */
 .order-table th,
 .order-table td {
     /* Adds internal spacing so cell content isn't cramped against the borders. */
-    padding: 14px 10px;
+    padding: 14px 10px; /* Sets the inner spacing between content and border. */
 
     /* Draws a thin divider line beneath each row. */
-    border-bottom: 1px solid var(--grey-mid);
+    border-bottom: 1px solid var(--grey-mid); /* Sets the bottom border. */
 
     /* Left-aligns cell content, overriding the browser's default centred alignment for header cells. */
-    text-align: left;
+    text-align: left; /* Aligns inline text within its container. */
 }
 
 /* Styles specific to the table's header row. */
 .order-table th {
     /* Yellow header text stands out against the dark background below. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Navy background clearly distinguishes the header row from the data rows. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* Slightly smaller than body text, appropriate for column labels. */
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* Sets the text size. */
 }
 
 /* .order-total highlights the final total price at the bottom of the order summary. */
 .order-total {
     /* Gold colour matches how prices are styled elsewhere on the site (e.g. card prices). */
-    color: var(--gold);
+    color: var(--gold); /* Sets the text colour. */
 
     /* Large size makes the total the most prominent figure in the table. */
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Sets the text size. */
 
     /* Bolds the total so it's unmistakable. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 }
 
 /* .empty-state is shown in place of the table when the cart/order list has no items. */
 .empty-state {
     /* Generous padding gives the empty message room to breathe within its box. */
-    padding: 30px;
+    padding: 30px; /* Sets the inner spacing between content and border. */
 
     /* Muted grey text signals this is a placeholder/informational message, not primary content. */
-    color: var(--grey-dark);
+    color: var(--grey-dark); /* Sets the text colour. */
 
     /* Light grey background distinguishes the empty state box from the surrounding page. */
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 
     /* Rounds the box's corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 
     /* Centres the message text within the box. */
-    text-align: center;
+    text-align: center; /* Aligns inline text within its container. */
 }
 
 
@@ -1721,19 +1721,19 @@ textarea {
 /* .step is an individual numbered step box, e.g. for a "How it works" or checkout process section. */
 .step {
     /* Adds space below each step, separating it from the next one in the list. */
-    margin-bottom: 18px;
+    margin-bottom: 18px; /* Sets the outer spacing below the element. */
 
     /* Generous internal padding around the step's content. */
-    padding: 22px;
+    padding: 22px; /* Sets the inner spacing between content and border. */
 
     /* White background, consistent with other content boxes. */
-    background: var(--white);
+    background: var(--white); /* Sets the background colour or background image. */
 
     /* A grey border outlines the step box. */
-    border: 2px solid var(--grey-mid);
+    border: 2px solid var(--grey-mid); /* Sets the border width, style, and colour. */
 
     /* Rounds the step box's corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 /*
@@ -1742,32 +1742,32 @@ textarea {
 */
 .step h3 span {
     /* Uses inline-flex so the number can be centred within its circular badge. */
-    display: inline-flex;
+    display: inline-flex; /* Controls how an element participates in the page layout. */
 
     /* Vertically centres the number within the circle. */
-    align-items: center;
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
 
     /* Horizontally centres the number within the circle. */
-    justify-content: center;
+    justify-content: center; /* Distributes items along the main axis. */
 
     /* Sets a fixed circle size. */
-    width: 34px;
-    height: 34px;
+    width: 34px; /* Sets the element's width. */
+    height: 34px; /* Sets the element's height. */
 
     /* Adds a small gap between the number circle and the step's heading text. */
-    margin-right: 10px;
+    margin-right: 10px; /* Sets the outer spacing to the right of the element. */
 
     /* Yellow number text for contrast against the navy circle. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Navy circle background, echoing the site's brand colours. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* A border-radius of 50% turns the square box into a perfect circle. */
-    border-radius: 50%;
+    border-radius: 50%; /* Rounds the corners of the element. */
 
     /* Sets the number's font size to fit comfortably within the small circle. */
-    font-size: 1rem;
+    font-size: 1rem; /* Sets the text size. */
 }
 
 
@@ -1777,62 +1777,62 @@ textarea {
 /* .toast is a temporary pop-up notification (e.g. "Added to cart") shown at the bottom of the screen. */
 .toast {
     /* Positions the toast relative to the browser window rather than the page's normal flow. */
-    position: fixed;
+    position: fixed; /* Sets the positioning method used to place this element. */
 
     /* Places the toast horizontally centred using left: 50% together with the transform below. */
-    left: 50%;
+    left: 50%; /* Sets the distance from the left edge for a positioned element. */
     /* Places the toast near the bottom of the viewport. */
-    bottom: 26px;
+    bottom: 26px; /* Sets the distance from the bottom edge for a positioned element. */
 
     /* Ensures the toast appears above all other page content, including the sticky header. */
-    z-index: 2000;
+    z-index: 2000; /* Controls the stacking order when elements overlap. */
 
     /* Prevents the toast from stretching edge-to-edge on very narrow screens. */
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 30px); /* Sets the largest permitted width. */
 
     /* Comfortable internal padding around the toast's message text. */
-    padding: 13px 22px;
+    padding: 13px 22px; /* Sets the inner spacing between content and border. */
 
     /* Yellow text stands out against the dark background. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Navy background matches the header/footer for brand consistency. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* Fully rounds the toast into a pill shape. */
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill); /* Rounds the corners of the element. */
 
     /* Adds a soft shadow so the toast appears to float above the page. */
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); /* Adds a shadow around the element. */
 
     /* Bolds the toast message so it's easy to read at a glance. */
-    font-weight: 700;
+    font-weight: 700; /* Sets how thick or bold the text appears. */
 
     /* Centres the message text within the toast. */
-    text-align: center;
+    text-align: center; /* Aligns inline text within its container. */
 
     /* Starts fully transparent (invisible) until the .show class is added by JavaScript. */
-    opacity: 0;
+    opacity: 0; /* Sets the element's transparency. */
 
     /* Prevents the invisible toast from blocking clicks on elements beneath it. */
-    pointer-events: none;
+    pointer-events: none; /* Controls whether an element can be the target of pointer interaction. */
 
     /*
        Shifts the toast left by exactly half its own width,
        which combined with left: 50% perfectly centres it
        regardless of the toast's actual width.
     */
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Moves, rotates, scales, or skews the element. */
 
     /* Smoothly fades the toast in/out instead of it appearing/disappearing instantly. */
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease; /* Animates changes to CSS properties over time. */
 }
 
 /* .show is toggled on by JavaScript to reveal the toast when a notification needs to appear. */
 .toast.show {
     /* Fades the toast fully into view. */
     /* Keeps the loader fully visible while active. */
-    opacity: 1;
+    opacity: 1; /* Sets the element's transparency. */
 }
 
 
@@ -1852,29 +1852,29 @@ textarea {
 /* .map-frame / .product-map-frame wrap an embedded map (e.g. Google Maps) so it fits the page layout. */
 .map-frame, .product-map-frame {
     /* Establishes this box as the positioning context for the map content inside it. */
-    position: relative;
+    position: relative; /* Sets the positioning method used to place this element. */
 
     /* Makes the map frame fill the full width of its container. */
-    width: 100%;
+    width: 100%; /* Sets the element's width. */
 
     /*
        Responsive map height.
        The map gets smaller on smaller screens.
     */
     /* Guarantees the map has a reasonable minimum height even before the embed loads. */
-    min-height: 420px;
+    min-height: 420px; /* Sets the smallest permitted height. */
 
     /* Clips anything from the embedded map that would spill outside the rounded frame. */
-    overflow: hidden;
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 
     /* Grey placeholder background shown while the map embed is loading. */
-    background: var(--grey);
+    background: var(--grey); /* Sets the background colour or background image. */
 
     /* A thick navy border frames the map, matching the brand colour. */
-    border: 4px solid var(--navy);
+    border: 4px solid var(--navy); /* Sets the border width, style, and colour. */
 
     /* Rounds the frame's corners to match the site's card style. */
-    border-radius: var(--radius);
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 
@@ -1884,24 +1884,24 @@ textarea {
 /* Forces the actual embedded map iframe to always match its parent frame's size. */
 .map-frame iframe {
     /* Removes the small inline-element gap iframes can have by default. */
-    display: block;
+    display: block; /* Controls how an element participates in the page layout. */
 
     /* !important is needed here because the map embed's own inline styles/attributes would otherwise win. */
-    width: 100% !important;
+    width: 100% !important; /* Sets the element's width. */
 
     /* Also forces the minimum width to 100%, preventing the embed from imposing its own fixed width. */
-    min-width: 100% !important;
+    min-width: 100% !important; /* Sets the smallest permitted width. */
 
     /* Forces a fixed pixel height so the map fills the frame consistently. */
-    height: 420px !important;
+    height: 420px !important; /* Sets the element's height. */
 
     /* Removes any default spacing around the iframe. */
-    margin: 0;
+    margin: 0; /* Sets the outer spacing around the element. */
 
-    padding: 0;
+    padding: 0; /* Sets the inner spacing between content and border. */
 
     /* Removes the default border browsers sometimes add to iframes. */
-    border: 0;
+    border: 0; /* Sets the border width, style, and colour. */
 }
 
 
@@ -1911,17 +1911,17 @@ textarea {
 */
 /* Handles map embed scripts that wrap the iframe in an extra <div>, forcing that wrapper to full width too. */
 .map-frame > div {
-    width: 100% !important;
+    width: 100% !important; /* Sets the element's width. */
 
     /* Removes any max-width limit the embed script might have applied to its wrapper div. */
-    max-width: none !important;
+    max-width: none !important; /* Sets the largest permitted width. */
 }
 
 /* Also targets an iframe nested inside that extra wrapper div, applying the same full-width fix. */
 .map-frame > div iframe {
-    width: 100% !important;
+    width: 100% !important; /* Sets the element's width. */
 
-    max-width: none !important;
+    max-width: none !important; /* Sets the largest permitted width. */
 }
 
 
@@ -1929,24 +1929,24 @@ textarea {
 /* .map-note is small explanatory text placed beneath a map, e.g. directions or a disclaimer. */
 .map-note {
     /* Adds space above the note, separating it from the map. */
-    margin-top: 10px;
+    margin-top: 10px; /* Sets the outer spacing above the element. */
 
     /* Muted grey colour marks this as secondary, non-critical text. */
-    color: var(--grey-dark);
+    color: var(--grey-dark); /* Sets the text colour. */
 
     /* Smaller than body text, appropriate for a caption-style note. */
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Sets the text size. */
 
     /* Comfortable line spacing in case the note wraps onto multiple lines. */
-    line-height: 1.5;
+    line-height: 1.5; /* Sets the vertical spacing between lines of text. */
 }
 
 /* Makes the selected product image fill its full container */
 #detail-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+    width: 100%; /* Sets the element's width. */
+    height: 100%; /* Sets the element's height. */
+    object-fit: contain; /* Controls how an image or video fits within its dimensions. */
+    object-position: center; /* Sets the alignment of content inside its box. */
 }
 
 
@@ -1956,67 +1956,67 @@ textarea {
 /* .subnav is a secondary yellow navigation bar, e.g. for jumping between sections on a long page. */
 .subnav {
     /* Yellow background clearly distinguishes this from the main navy header. */
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 }
 
 /* Styles the <ul> list that holds the sub-navigation links. */
 .subnav ul {
     /* Caps the list's width to match the site's overall content width. */
-    max-width: var(--max-width);
+    max-width: var(--max-width); /* Sets the largest permitted width. */
 
     /* Centres the list horizontally within the full-width subnav bar. */
-    margin: 0 auto;
+    margin: 0 auto; /* Sets the outer spacing around the element. */
 
     /* Adds internal padding around the list. */
-    padding: 12px 20px;
+    padding: 12px 20px; /* Sets the inner spacing between content and border. */
 
     /* Lays the links out horizontally. */
-    display: flex;
+    display: flex; /* Controls how an element participates in the page layout. */
 
     /* Allows links to wrap onto a new line on narrow screens. */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
 
     /* Adds spacing between individual sub-nav links. */
-    gap: 8px;
+    gap: 8px; /* Sets the spacing between flex or grid items. */
 
     /* Removes the default bullet points from the list. */
-    list-style: none;
+    list-style: none; /* Controls the appearance of list markers. */
 }
 
 /* Styles each individual sub-navigation link as a small pill button. */
 .subnav a {
     /* Lets the link only take up as much width as its text needs, while still accepting padding. */
-    display: inline-block;
+    display: inline-block; /* Controls how an element participates in the page layout. */
 
     /* Adds clickable padding around the link text. */
-    padding: 7px 14px;
+    padding: 7px 14px; /* Sets the inner spacing between content and border. */
 
     /* Navy text contrasts against the yellow subnav background. */
-    color: var(--navy);
+    color: var(--navy); /* Sets the text colour. */
 
     /* A semi-transparent white background gives each link a subtle pill shape distinct from the bar itself. */
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.55); /* Sets the background colour or background image. */
 
     /* Fully rounds the link into a pill shape. */
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill); /* Rounds the corners of the element. */
 
     /* Slightly smaller than body text, suitable for a compact nav link. */
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Sets the text size. */
 
     /* Bolds the link text for legibility. */
-    font-weight: 800;
+    font-weight: 800; /* Sets how thick or bold the text appears. */
 
     /* Removes the default underline styling. */
-    text-decoration: none;
+    text-decoration: none; /* Controls text decorations such as underlines. */
 }
 
 /* Inverts the sub-nav link's colours on hover for clear feedback. */
 .subnav a:hover {
     /* Text switches to yellow on hover. */
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 
     /* Background switches to solid navy on hover. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 
@@ -2026,66 +2026,66 @@ textarea {
 /* Styles the site-wide <footer> element shown at the bottom of every page. */
 footer {
     /* Adds generous top padding and a smaller bottom padding, leaving room for the copyright line. */
-    padding: 52px 0 26px;
+    padding: 52px 0 26px; /* Sets the inner spacing between content and border. */
 
     /* Sets a muted light-grey/blue default text colour for the footer. */
-    color: #cfd4e0;
-    color: #f2f3f5;
+    color: #cfd4e0; /* Sets the text colour. */
+    color: #f2f3f5; /* Sets the text colour. */
 
     /* Navy background matches the header for a consistent, bookended layout. */
-    background: var(--navy);
+    background: var(--navy); /* Sets the background colour or background image. */
 
     /* Slightly smaller than the main body text, appropriate for footer content. */
-    font-size: 0.95rem;
+    font-size: 0.95rem; /* Sets the text size. */
 }
 
 /* Colours footer column headings (e.g. "Company", "Support") yellow to stand out against the navy background. */
 footer h4 {
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 }
 
 /* Ensures footer paragraph text uses the same muted colour as the rest of the footer. */
 footer p {
-    color: #cfd4e0;
-    color: #f2f3f5;
+    color: #cfd4e0; /* Sets the text colour. */
+    color: #f2f3f5; /* Sets the text colour. */
 }
 
 /* Styles links within the footer. */
 footer a {
     /* Matches the muted footer text colour rather than the site-wide gold link colour, for a subtler look. */
-    color: #cfd4e0;
-    color: #f2f3f5;
+    color: #cfd4e0; /* Sets the text colour. */
+    color: #f2f3f5; /* Sets the text colour. */
 
     /* Removes the default underline from footer links. */
-    text-decoration: none;
+    text-decoration: none; /* Controls text decorations such as underlines. */
 }
 
 /* Highlights footer links in yellow when hovered. */
 footer a:hover {
-    color: var(--yellow);
+    color: var(--yellow); /* Sets the text colour. */
 }
 
 /* Removes default list styling from footer link lists (e.g. under each column heading). */
 footer ul {
     /* Removes the browser's default list margin. */
-    margin: 0;
+    margin: 0; /* Sets the outer spacing around the element. */
 
     /* Removes the browser's default list padding (and thus the bullet indent). */
-    padding: 0;
+    padding: 0; /* Sets the inner spacing between content and border. */
 
     /* Removes the bullet point markers. */
-    list-style: none;
+    list-style: none; /* Controls the appearance of list markers. */
 }
 
 /* Adds small consistent vertical spacing between each footer list item. */
 footer li {
-    padding: 4px 0;
+    padding: 4px 0; /* Sets the inner spacing between content and border. */
 }
 
 /* .footer-grid arranges the footer's columns (e.g. brand info + three link columns). */
 .footer-grid {
     /* Uses CSS grid to lay out the footer's columns. */
-    display: grid;
+    display: grid; /* Controls how an element participates in the page layout. */
 
     /*
        Gives the first column (likely brand/about info) extra
@@ -2097,16 +2097,16 @@ footer li {
         repeat(3, 1fr);
 
     /* Adds spacing between the footer's columns. */
-    gap: 30px;
+    gap: 30px; /* Sets the spacing between flex or grid items. */
 }
 
 /* .footer-bottom is the thin strip at the very bottom of the footer, usually holding the copyright text. */
 .footer-bottom {
     /* Adds space above the bottom strip, separating it from the columns above. */
-    margin-top: 30px;
+    margin-top: 30px; /* Sets the outer spacing above the element. */
 
     /* Adds space between the divider line and the copyright text. */
-    padding-top: 18px;
+    padding-top: 18px; /* Sets the inner spacing above the content. */
 
     /* A subtle semi-transparent white line divides the footer columns from the copyright strip. */
     border-top:
@@ -2114,7 +2114,7 @@ footer li {
         rgba(255, 255, 255, 0.15);
 
     /* Smaller text size appropriate for fine-print copyright/legal text. */
-    font-size: 0.88rem;
+    font-size: 0.88rem; /* Sets the text size. */
 }
 
 
@@ -2130,15 +2130,15 @@ footer li {
 
     /* Reduces the gap between nav links slightly to help them fit on a narrower header. */
     .nav-links {
-        gap: 14px;
+        gap: 14px; /* Sets the spacing between flex or grid items. */
     }
 
     /* Stacks the hero's text and image into a single column instead of side by side. */
     .hero-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Defines the number and size of grid columns. */
 
         /* Uses a slightly smaller gap now that the columns stack vertically. */
-        gap: 35px;
+        gap: 35px; /* Sets the spacing between flex or grid items. */
     }
 
     /* Uses CSS order to visually move the hero image above the text column once they stack. */
@@ -2172,7 +2172,7 @@ footer li {
 
     /* Stacks the two split cards vertically instead of side by side. */
     .split {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Defines the number and size of grid columns. */
     }
 }
 
@@ -2189,32 +2189,32 @@ footer li {
 
     /* Allows the nav row's contents to wrap onto multiple lines once the mobile menu opens beneath it. */
     .nav {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
     }
 
     /* Reveals the hamburger toggle button, which is hidden by default on larger screens. */
     .nav-toggle {
-        display: block;
+        display: block; /* Controls how an element participates in the page layout. */
     }
 
     /* Hides the nav links by default on mobile; they're revealed only when the menu is opened. */
     .nav-links {
-        display: none;
+        display: none; /* Controls how an element participates in the page layout. */
 
         /* Makes the menu take the full width of the header once it's open. */
-        width: 100%;
+        width: 100%; /* Sets the element's width. */
 
         /* Stacks the links vertically instead of horizontally. */
-        flex-direction: column;
+        flex-direction: column; /* Sets the direction in which flex items are arranged. */
 
         /* Stretches each link to the full width of the menu instead of centring them. */
-        align-items: stretch;
+        align-items: stretch; /* Aligns items across the cross-axis of a flex or grid container. */
 
         /* Uses a tighter gap between stacked links compared to the horizontal desktop layout. */
-        gap: 2px;
+        gap: 2px; /* Sets the spacing between flex or grid items. */
 
         /* Adds space above the stacked links, separating them from the header row. */
-        padding-top: 10px;
+        padding-top: 10px; /* Sets the inner spacing above the content. */
     }
 
     /*
@@ -2227,25 +2227,25 @@ footer li {
     */
     .nav-links.open,
     .nav-links.is-open {
-        display: flex;
+        display: flex; /* Controls how an element participates in the page layout. */
     }
 
     /* Makes each stacked mobile link fill the full menu width. */
     .nav-links a {
-        width: 100%;
+        width: 100%; /* Sets the element's width. */
 
         /* Increases the clickable padding area for easier tapping on touch screens. */
-        padding: 10px 12px;
+        padding: 10px 12px; /* Sets the inner spacing between content and border. */
     }
 
     /* Adds a subtle highlight background when hovering/tapping a mobile menu link. */
     .nav-links a:hover {
-        background: rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.06); /* Sets the background colour or background image. */
     }
 
     /* Prevents the cart button from stretching to the full menu width like the other stacked links. */
     .nav-cart {
-        width: fit-content !important;
+        width: fit-content !important; /* Sets the element's width. */
     }
 }
 
@@ -2261,18 +2261,18 @@ footer li {
 
     /* Slightly reduces the base body text size to fit more comfortably on small screens. */
     body {
-        font-size: 16px;
+        font-size: 16px; /* Sets the text size. */
     }
 
     /* Reduces the side margin on the main container slightly for small screens. */
     .wrap {
-        width: calc(100% - 30px);
+        width: calc(100% - 30px); /* Sets the element's width. */
     }
 
     /* Reduces the vertical spacing between sections since screen space is limited. */
     .section {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 50px; /* Sets the inner spacing above the content. */
+        padding-bottom: 50px; /* Sets the inner spacing below the content. */
     }
 
 
@@ -2280,17 +2280,17 @@ footer li {
 
     /* Shrinks the main heading size so it doesn't overwhelm a small screen. */
     h1 {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* Sets the text size. */
 
         /* Slightly loosens letter spacing at the smaller size for readability. */
-        letter-spacing: -0.5px;
+        letter-spacing: -0.5px; /* Sets the spacing between characters. */
     }
 
     /* Shrinks section headings to fit better on small screens. */
     h2 {
-        font-size: 1.85rem;
+        font-size: 1.85rem; /* Sets the text size. */
 
-        letter-spacing: -0.3px;
+        letter-spacing: -0.3px; /* Sets the spacing between characters. */
     }
 
 
@@ -2298,12 +2298,12 @@ footer li {
 
     /* Reduces the hero's vertical padding on small screens. */
     .hero {
-        padding: 52px 0;
+        padding: 52px 0; /* Sets the inner spacing between content and border. */
     }
 
     /* Shortens the hero image's height so it doesn't dominate a small screen. */
     .hero-img img {
-        height: 260px;
+        height: 260px; /* Sets the element's height. */
     }
 
 
@@ -2314,7 +2314,7 @@ footer li {
     .grid-3,
     .grid-4,
     .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Defines the number and size of grid columns. */
     }
 
 
@@ -2322,7 +2322,7 @@ footer li {
 
     /* Slightly increases the card image height for better visibility once cards are full-width. */
     .card img {
-        height: 220px;
+        height: 220px; /* Sets the element's height. */
     }
 
 
@@ -2330,20 +2330,20 @@ footer li {
 
     /* Makes buttons stretch the full width of their container, which is easier to tap on mobile. */
     .btn {
-        width: 100%;
+        width: 100%; /* Sets the element's width. */
 
         /* Ensures button text stays centred even at full width. */
-        text-align: center;
+        text-align: center; /* Aligns inline text within its container. */
     }
 
     /* Also stretches the card's button to full width once the card layout is narrower. */
     .card-body .btn {
-        align-self: stretch;
+        align-self: stretch; /* Overrides cross-axis alignment for this individual item. */
     }
 
     /* Keeps small buttons at their natural width rather than forcing them full-width like the main .btn. */
     .btn-sm {
-        width: auto;
+        width: auto; /* Sets the element's width. */
     }
 
 
@@ -2351,12 +2351,12 @@ footer li {
 
     /* Stacks paired form fields (like first/last name) into a single column on small screens. */
     .form-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Defines the number and size of grid columns. */
     }
 
     /* Reduces the form card's padding slightly to save space on small screens. */
     .form-card {
-        padding: 20px;
+        padding: 20px; /* Sets the inner spacing between content and border. */
     }
 
 
@@ -2364,15 +2364,15 @@ footer li {
 
     /* Stacks the filter toolbar's fields vertically instead of in a row. */
     .toolbar {
-        flex-direction: column;
+        flex-direction: column; /* Sets the direction in which flex items are arranged. */
 
         /* Stretches each field to the toolbar's full width once stacked. */
-        align-items: stretch;
+        align-items: stretch; /* Aligns items across the cross-axis of a flex or grid container. */
     }
 
     /* Ensures each field takes the full toolbar width once stacked vertically. */
     .field {
-        width: 100%;
+        width: 100%; /* Sets the element's width. */
     }
 
 
@@ -2380,22 +2380,22 @@ footer li {
 
     /* Reduces the map's minimum height on small screens to save vertical space. */
     .map-frame {
-        min-height: 300px;
+        min-height: 300px; /* Sets the smallest permitted height. */
     }
 
     /* Matches the embedded iframe's height to the smaller map frame. */
     .map-frame iframe {
-        height: 300px !important;
+        height: 300px !important; /* Sets the element's height. */
     }
 
     /* Footer */
 
     /* Collapses the footer's columns into a single stacked column on small screens. */
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Defines the number and size of grid columns. */
 
         /* Uses a slightly smaller gap between the stacked footer sections. */
-        gap: 25px;
+        gap: 25px; /* Sets the spacing between flex or grid items. */
     }
 
 
@@ -2407,12 +2407,12 @@ footer li {
        its columns unreadably.
     */
     .order-table {
-        display: block;
+        display: block; /* Controls how an element participates in the page layout. */
 
-        overflow-x: auto;
+        overflow-x: auto; /* Controls horizontal overflow. */
 
         /* Stops cell text from wrapping, which keeps columns readable while scrolling horizontally. */
-        white-space: nowrap;
+        white-space: nowrap; /* Controls how whitespace and line wrapping are handled. */
     }
 
 
@@ -2420,10 +2420,10 @@ footer li {
 
     /* Slightly narrows the toast so it doesn't touch the screen edges on small phones. */
     .toast {
-        width: calc(100% - 30px);
+        width: calc(100% - 30px); /* Sets the element's width. */
 
         /* Uses a slightly smaller radius than the pill shape used on larger screens. */
-        border-radius: 12px;
+        border-radius: 12px; /* Rounds the corners of the element. */
     }
 }
 
@@ -2439,37 +2439,37 @@ footer li {
 
     /* Reduces the container's side margin even further on very small screens. */
     .wrap {
-        width: calc(100% - 24px);
+        width: calc(100% - 24px); /* Sets the element's width. */
     }
 
     /* Shrinks the main heading a bit more for very small screens. */
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Sets the text size. */
     }
 
     /* Shrinks section headings a bit more for very small screens. */
     h2 {
-        font-size: 1.7rem;
+        font-size: 1.7rem; /* Sets the text size. */
     }
 
     /* Further reduces the hero image's height for very small screens. */
     .hero-img img {
-        height: 220px;
+        height: 220px; /* Sets the element's height. */
     }
 
     /* Further reduces the card image height for very small screens. */
     .card img {
-        height: 190px;
+        height: 190px; /* Sets the element's height. */
     }
 
     /* Reduces the card body's internal padding to save space on very small screens. */
     .card-body {
-        padding: 16px;
+        padding: 16px; /* Sets the inner spacing between content and border. */
     }
 
     /* Reduces the split card's internal padding to save space on very small screens. */
     .split-card {
-        padding: 17px;
+        padding: 17px; /* Sets the inner spacing between content and border. */
     }
 }
 
@@ -2489,41 +2489,41 @@ footer li {
 */
 @media (max-width: 768px) {
     :root {
-        --navy: #0d1b3e;
-        --navy-light: #17295c;
-        --navy-dark: #08142f;
-        --navy-light: #0d1b3e;
-        --navy-dark: #0d1b3e;
+        --navy: #0d1b3e; /* Defines a reusable CSS custom property. */
+        --navy-light: #17295c; /* Defines a reusable CSS custom property. */
+        --navy-dark: #08142f; /* Defines a reusable CSS custom property. */
+        --navy-light: #0d1b3e; /* Defines a reusable CSS custom property. */
+        --navy-dark: #0d1b3e; /* Defines a reusable CSS custom property. */
 
-        --yellow: #ffd23f;
-        --yellow-light: #ffe477;
-        --yellow-light: #ffd23f;
+        --yellow: #ffd23f; /* Defines a reusable CSS custom property. */
+        --yellow-light: #ffe477; /* Defines a reusable CSS custom property. */
+        --yellow-light: #ffd23f; /* Defines a reusable CSS custom property. */
 
-        --gold: #b8860b;
-        --gold-light: #d9a41a;
-        --gold: #ffd23f;
-        --gold-light: #ffd23f;
+        --gold: #b8860b; /* Defines a reusable CSS custom property. */
+        --gold-light: #d9a41a; /* Defines a reusable CSS custom property. */
+        --gold: #ffd23f; /* Defines a reusable CSS custom property. */
+        --gold-light: #ffd23f; /* Defines a reusable CSS custom property. */
 
-        --white: #ffffff;
-        --grey: #f2f3f5;
-        --grey-light: #f8f9fb;
-        --grey-mid: #d9dce1;
-        --grey-dark: #5a5f6a;
-        --grey-light: #f2f3f5;
-        --grey-mid: #f2f3f5;
-        --grey-dark: #0d1b3e;
+        --white: #ffffff; /* Defines a reusable CSS custom property. */
+        --grey: #f2f3f5; /* Defines a reusable CSS custom property. */
+        --grey-light: #f8f9fb; /* Defines a reusable CSS custom property. */
+        --grey-mid: #d9dce1; /* Defines a reusable CSS custom property. */
+        --grey-dark: #5a5f6a; /* Defines a reusable CSS custom property. */
+        --grey-light: #f2f3f5; /* Defines a reusable CSS custom property. */
+        --grey-mid: #f2f3f5; /* Defines a reusable CSS custom property. */
+        --grey-dark: #0d1b3e; /* Defines a reusable CSS custom property. */
 
-        --text: #1a1a1a;
-        --text-light: #444444;
-        --text: #0d1b3e;
-        --text-light: #0d1b3e;
+        --text: #1a1a1a; /* Defines a reusable CSS custom property. */
+        --text-light: #444444; /* Defines a reusable CSS custom property. */
+        --text: #0d1b3e; /* Defines a reusable CSS custom property. */
+        --text-light: #0d1b3e; /* Defines a reusable CSS custom property. */
 
-        --success: #2e7d32;
-        --warning: #f59e0b;
-        --danger: #c62828;
-        --success: #0d1b3e;
-        --warning: #ffd23f;
-        --danger: #0d1b3e;
+        --success: #2e7d32; /* Defines a reusable CSS custom property. */
+        --warning: #f59e0b; /* Defines a reusable CSS custom property. */
+        --danger: #c62828; /* Defines a reusable CSS custom property. */
+        --success: #0d1b3e; /* Defines a reusable CSS custom property. */
+        --warning: #ffd23f; /* Defines a reusable CSS custom property. */
+        --danger: #0d1b3e; /* Defines a reusable CSS custom property. */
     }
 }
 
@@ -2538,10 +2538,10 @@ footer li {
 */
 :focus-visible {
     /* Draws a thick yellow outline around the focused element. */
-    outline: 3px solid var(--yellow);
+    outline: 3px solid var(--yellow); /* Draws an outline around the element without affecting layout. */
 
     /* Adds a small gap between the element and its outline so the outline doesn't touch the element's edge. */
-    outline-offset: 3px;
+    outline-offset: 3px; /* Sets the gap between an element and its outline. */
 }
 
 
@@ -2557,7 +2557,7 @@ footer li {
 
     /* Disables the smooth-scroll behaviour, making anchor jumps instant instead of animated. */
     html {
-        scroll-behavior: auto;
+        scroll-behavior: auto; /* Controls whether scrolling happens instantly or smoothly. */
     }
 
     /* Forces nearly every animation and transition on the page to happen almost instantly instead of visibly. */
@@ -2565,13 +2565,13 @@ footer li {
     *::before,
     *::after {
         /* Shortens all animations to effectively zero duration. */
-        animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important; /* Sets how long one animation cycle takes. */
 
         /* Ensures animations only run once instead of repeating. */
-        animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important; /* Sets how many times the animation repeats. */
 
         /* Shortens all transitions to effectively zero duration. */
-        transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important; /* Sets how long a transition takes. */
     }
 }
 
@@ -2588,15 +2588,15 @@ footer li {
 
     /* Disables the card's lift-on-hover effect on touch devices, since there's no real hover state. */
     .card:hover {
-        transform: none;
+        transform: none; /* Moves, rotates, scales, or skews the element. */
 
         /* Keeps the card's normal shadow instead of the hover shadow, which wouldn't make sense on touch. */
-        box-shadow: var(--shadow);
+        box-shadow: var(--shadow); /* Adds a shadow around the element. */
     }
 
     /* Disables the button's lift-on-hover animation on touch devices for the same reason. */
     .btn:hover {
-        transform: none;
+        transform: none; /* Moves, rotates, scales, or skews the element. */
     }
 }
 
@@ -2622,28 +2622,28 @@ footer li {
     .btn,
     .toolbar,
     .nav-toggle {
-        display: none !important;
+        display: none !important; /* Controls how an element participates in the page layout. */
     }
 
     /* Switches text to pure black and a print-appropriate point size for readability on paper. */
     body {
-        color: #000;
-        color: #0d1b3e;
+        color: #000; /* Sets the text colour. */
+        color: #0d1b3e; /* Sets the text colour. */
 
-        font-size: 13pt;
+        font-size: 13pt; /* Sets the text size. */
     }
 
     /* Removes the on-screen section spacing since printed pages don't need the same visual breathing room. */
     .section {
-        padding: 0;
+        padding: 0; /* Sets the inner spacing between content and border. */
     }
 
     /* Removes card shadows (which don't print well) and stops a card from being split awkwardly across a page break. */
     .card {
-        box-shadow: none;
+        box-shadow: none; /* Adds a shadow around the element. */
 
         /* Tells the browser's print engine to avoid breaking a card across two pages if possible. */
-        break-inside: avoid;
+        break-inside: avoid; /* Controls whether content may break inside an element during printing or columns. */
     }
 }
 
@@ -2655,11 +2655,11 @@ footer li {
 /* Error text shown under a field. It is empty (and takes no space) until JavaScript fills it. */
 .error-msg {
     /* Dark red, readable on white (contrast above 4.5:1). */
-    color: #b3261e;
-    color: #0d1b3e;
+    color: #b3261e; /* Sets the text colour. */
+    color: #0d1b3e; /* Sets the text colour. */
 
     /* Slightly smaller than body text. */
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Sets the text size. */
 }
 
 /* Red border on a field that failed validation. */
@@ -2672,43 +2672,43 @@ footer li {
 
 /* The box that shows the enquiry response or the compiled email. Hidden until .show is added. */
 .form-result {
-    display: none;
-    margin-top: 24px;
-    padding: 20px;
-    background: var(--grey-light);
-    border: 1px solid var(--grey-mid);
-    border-left: 5px solid var(--yellow);
-    border-radius: var(--radius);
+    display: none; /* Controls how an element participates in the page layout. */
+    margin-top: 24px; /* Sets the outer spacing above the element. */
+    padding: 20px; /* Sets the inner spacing between content and border. */
+    background: var(--grey-light); /* Sets the background colour or background image. */
+    border: 1px solid var(--grey-mid); /* Sets the border width, style, and colour. */
+    border-left: 5px solid var(--yellow); /* Sets the left border. */
+    border-radius: var(--radius); /* Rounds the corners of the element. */
 }
 
 /* JavaScript adds .show after the form has been validated. */
 .form-result.show {
-    display: block;
+    display: block; /* Controls how an element participates in the page layout. */
 }
 
 /* Spacing for the list and text inside the result box. */
 .form-result h3 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Sets the outer spacing below the element. */
 }
 
 .form-result ul {
-    margin: 12px 0 16px 20px;
+    margin: 12px 0 16px 20px; /* Sets the outer spacing around the element. */
 }
 
 .form-result li {
-    margin-bottom: 6px;
+    margin-bottom: 6px; /* Sets the outer spacing below the element. */
 }
 
 /* The compiled email body keeps its line breaks and wraps long lines. */
 .form-result pre {
-    margin: 12px 0 16px;
-    padding: 14px;
-    background: var(--white);
-    border: 1px solid var(--grey-mid);
-    border-radius: 8px;
-    white-space: pre-wrap;
+    margin: 12px 0 16px; /* Sets the outer spacing around the element. */
+    padding: 14px; /* Sets the inner spacing between content and border. */
+    background: var(--white); /* Sets the background colour or background image. */
+    border: 1px solid var(--grey-mid); /* Sets the border width, style, and colour. */
+    border-radius: 8px; /* Rounds the corners of the element. */
+    white-space: pre-wrap; /* Controls how whitespace and line wrapping are handled. */
     overflow-wrap: anywhere;
-    font-family: inherit;
+    font-family: inherit; /* Sets the typeface, including fallback fonts. */
 }
 
 /* Availability colours. Each is paired with text, so colour is never the only signal. */
@@ -2726,41 +2726,41 @@ footer li {
 
 /* Each province is its own block with space above it. */
 .province {
-    margin-top: 40px;
+    margin-top: 40px; /* Sets the outer spacing above the element. */
     scroll-margin-top: 90px;
 }
 
 /* Institution names flow into columns that adapt to the screen width. */
 .inst-list {
-    list-style: none;
-    margin: 12px 0 8px;
-    padding: 0;
+    list-style: none; /* Controls the appearance of list markers. */
+    margin: 12px 0 8px; /* Sets the outer spacing around the element. */
+    padding: 0; /* Sets the inner spacing between content and border. */
     columns: 260px;
-    column-gap: 28px;
+    column-gap: 28px; /* Sets the spacing between columns. */
 }
 
 .inst-list li {
-    padding: 6px 0;
-    border-bottom: 1px solid var(--grey-mid);
-    break-inside: avoid;
+    padding: 6px 0; /* Sets the inner spacing between content and border. */
+    border-bottom: 1px solid var(--grey-mid); /* Sets the bottom border. */
+    break-inside: avoid; /* Controls whether content may break inside an element during printing or columns. */
 }
 
 /* The [hidden] attribute must win over any display rule, so search results hide correctly. */
 .inst-list li[hidden],
 .province[hidden] {
-    display: none;
+    display: none; /* Controls how an element participates in the page layout. */
 }
 
 /* The city after an institution name is lighter text. */
 .inst-city {
-    color: #5b6470;
-    color: #0d1b3e;
-    font-size: 0.9rem;
+    color: #5b6470; /* Sets the text colour. */
+    color: #0d1b3e; /* Sets the text colour. */
+    font-size: 0.9rem; /* Sets the text size. */
 }
 
 /* Province quick links wrap onto several lines on small screens. */
 .province-links {
-    line-height: 2;
+    line-height: 2; /* Sets the vertical spacing between lines of text. */
 }
 
 /* ==========================================================
@@ -2772,69 +2772,69 @@ footer li {
 
 /* Locks background scrolling while the full-screen loader is active. */
 body.page-loading {
-    overflow: hidden !important;
+    overflow: hidden !important; /* Controls what happens when content exceeds the element's box. */
 }
 
 /* Full-screen fixed overlay covering the entire viewport. */
 #page-loader {
     /* Positions the loader overlay relative to the viewport. */
-    position: fixed;
+    position: fixed; /* Sets the positioning method used to place this element. */
     /* Stretches the overlay to all four edges of the viewport. */
     inset: 0;
     /* Makes the overlay span the full viewport width. */
-    width: 100vw;
+    width: 100vw; /* Sets the element's width. */
     /* Provides the standard viewport-height fallback. */
-    height: 100vh;
+    height: 100vh; /* Sets the element's height. */
     /* Uses the dynamic viewport height on supported mobile browsers. */
-    height: 100dvh;
+    height: 100dvh; /* Sets the element's height. */
     /* Places the loader above every other page element. */
-    z-index: 999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index: 999999; /* Controls the stacking order when elements overlap. */
+    display: flex; /* Controls how an element participates in the page layout. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
     /* Creates the dark radial background behind the loader animation. */
-    background: radial-gradient(circle at center, #0e2448 0%, #071428 65%, #040c18 100%);
-    background: radial-gradient(circle at center, #0d1b3e 0%, #0d1b3e 65%, #0d1b3e 100%);
-    opacity: 1;
+    background: radial-gradient(circle at center, #0e2448 0%, #071428 65%, #040c18 100%); /* Sets the background colour or background image. */
+    background: radial-gradient(circle at center, #0d1b3e 0%, #0d1b3e 65%, #0d1b3e 100%); /* Sets the background colour or background image. */
+    opacity: 1; /* Sets the element's transparency. */
     /* Keeps the active loader available to the user. */
-    visibility: visible;
+    visibility: visible; /* Controls whether the element is visible while retaining its layout space. */
     /* Allows the active overlay to receive pointer input. */
-    pointer-events: auto;
+    pointer-events: auto; /* Controls whether an element can be the target of pointer interaction. */
     /* Smoothly animates the overlay when it is hidden. */
-    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 350ms ease;
-    overflow: hidden;
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 350ms ease; /* Animates changes to CSS properties over time. */
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 }
 
 /* Smoothly fades and disables the overlay once page loading is complete. */
 #page-loader.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    opacity: 0; /* Sets the element's transparency. */
+    visibility: hidden; /* Controls whether the element is visible while retaining its layout space. */
+    pointer-events: none; /* Controls whether an element can be the target of pointer interaction. */
 }
 
 /* Centers the loader animation and branding content. */
 .page-loader-content {
     /* Lays out the loader animation and text in a vertical flex column. */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 16px;
-    max-width: 90vw;
-    box-sizing: border-box;
-    user-select: none;
+    display: flex; /* Controls how an element participates in the page layout. */
+    flex-direction: column; /* Sets the direction in which flex items are arranged. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
+    text-align: center; /* Aligns inline text within its container. */
+    padding: 16px; /* Sets the inner spacing between content and border. */
+    max-width: 90vw; /* Sets the largest permitted width. */
+    box-sizing: border-box; /* Controls whether padding and borders are included in the declared dimensions. */
+    user-select: none; /* Controls whether the user can select the element's text. */
 }
 
 /* Bounding box for the 3D rotating rings, preventing any viewport overflow. */
 .page-loader-visual {
     /* Establishes a positioning context for the animated loader elements. */
-    position: relative;
-    width: 320px;
-    height: 320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Sets the positioning method used to place this element. */
+    width: 320px; /* Sets the element's width. */
+    height: 320px; /* Sets the element's height. */
+    display: flex; /* Controls how an element participates in the page layout. */
+    justify-content: center; /* Distributes items along the main axis. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
 }
 
 /* ----------------------------------------------------------
@@ -2843,174 +2843,174 @@ body.page-loading {
    ---------------------------------------------------------- */
 .page-loader-visual .loader {
     /* Centres the animated orbital loader elements. */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    display: flex; /* Controls how an element participates in the page layout. */
+    justify-content: center; /* Distributes items along the main axis. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    position: relative; /* Sets the positioning method used to place this element. */
     /* Stores the loader size so the animation and the media queries share one value. */
-    --loader-scale: 0.82;
+    --loader-scale: 0.82; /* Defines a reusable CSS custom property. */
     /* Uses its own keyframes so the pulse keeps the scale instead of overriding it. */
-    animation: ccLoaderBreathe 2s infinite ease-in-out;
-    transform: scale(var(--loader-scale));
-    transform-origin: center center;
+    animation: ccLoaderBreathe 2s infinite ease-in-out; /* Applies a named animation and its timing settings. */
+    transform: scale(var(--loader-scale)); /* Moves, rotates, scales, or skews the element. */
+    transform-origin: center center; /* Sets the point around which transforms occur. */
 }
 
 /* Gently grows and shrinks the whole loader around its set scale. */
 @keyframes ccLoaderBreathe {
     0%,
     100% {
-        transform: scale(var(--loader-scale));
+        transform: scale(var(--loader-scale)); /* Moves, rotates, scales, or skews the element. */
     }
     50% {
-        transform: scale(calc(var(--loader-scale) * 1.06));
+        transform: scale(calc(var(--loader-scale) * 1.06)); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring {
     /* Positions each orbital ring independently around the nucleus. */
-    position: absolute;
-    width: 190px;
-    height: 190px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    --color: var(--yellow);
-    border-bottom: 8px solid var(--color);
-    animation: rotate1 1s ease-in-out infinite;
-    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45);
+    position: absolute; /* Sets the positioning method used to place this element. */
+    width: 190px; /* Sets the element's width. */
+    height: 190px; /* Sets the element's height. */
+    border: 2px solid transparent; /* Sets the border width, style, and colour. */
+    border-radius: 50%; /* Rounds the corners of the element. */
+    --color: var(--yellow); /* Defines a reusable CSS custom property. */
+    border-bottom: 8px solid var(--color); /* Sets the bottom border. */
+    animation: rotate1 1s ease-in-out infinite; /* Applies a named animation and its timing settings. */
+    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45); /* Adds a shadow around the element. */
 }
 
 @keyframes rotate1 {
     /* Defines the first orbital rotation animation. */
     from {
-        transform: rotateX(50deg) rotateZ(110deg);
+        transform: rotateX(50deg) rotateZ(110deg); /* Moves, rotates, scales, or skews the element. */
     }
     to {
-        transform: rotateX(50deg) rotateZ(470deg);
+        transform: rotateX(50deg) rotateZ(470deg); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring:nth-child(2) {
-    --color: #fe53bb;
-    --color: #ffd23f;
-    animation-name: rotate2;
-    box-shadow: 0 0 6px rgba(254, 83, 187, 0.45);
-    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45);
+    --color: #fe53bb; /* Defines a reusable CSS custom property. */
+    --color: #ffd23f; /* Defines a reusable CSS custom property. */
+    animation-name: rotate2; /* Selects the keyframes animation to run. */
+    box-shadow: 0 0 6px rgba(254, 83, 187, 0.45); /* Adds a shadow around the element. */
+    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45); /* Adds a shadow around the element. */
 }
 
 @keyframes rotate2 {
     /* Defines the second orbital rotation animation. */
     from {
-        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg); /* Moves, rotates, scales, or skews the element. */
     }
     to {
-        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring:nth-child(3) {
-    --color: #8f51ea;
-    --color: #ffffff;
-    animation-name: rotate3;
-    box-shadow: 0 0 6px rgba(143, 81, 234, 0.45);
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+    --color: #8f51ea; /* Defines a reusable CSS custom property. */
+    --color: #ffffff; /* Defines a reusable CSS custom property. */
+    animation-name: rotate3; /* Selects the keyframes animation to run. */
+    box-shadow: 0 0 6px rgba(143, 81, 234, 0.45); /* Adds a shadow around the element. */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.45); /* Adds a shadow around the element. */
 }
 
 @keyframes rotate3 {
     /* Defines the third orbital rotation animation. */
     from {
-        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg); /* Moves, rotates, scales, or skews the element. */
     }
     to {
-        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring:nth-child(4) {
-    --color: var(--yellow);
-    animation-name: rotate4;
-    width: 380px;
-    height: 380px;
-    border: 2px solid transparent;
-    border-bottom: 16px solid var(--color);
-    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4);
+    --color: var(--yellow); /* Defines a reusable CSS custom property. */
+    animation-name: rotate4; /* Selects the keyframes animation to run. */
+    width: 380px; /* Sets the element's width. */
+    height: 380px; /* Sets the element's height. */
+    border: 2px solid transparent; /* Sets the border width, style, and colour. */
+    border-bottom: 16px solid var(--color); /* Sets the bottom border. */
+    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4); /* Adds a shadow around the element. */
 }
 
 @keyframes rotate4 {
     /* Defines the fourth orbital rotation animation. */
     from {
-        transform: rotateX(50deg) rotateZ(470deg);
+        transform: rotateX(50deg) rotateZ(470deg); /* Moves, rotates, scales, or skews the element. */
     }
     to {
-        transform: rotateX(50deg) rotateZ(110deg);
+        transform: rotateX(50deg) rotateZ(110deg); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring:nth-child(5) {
-    --color: #fe53bb;
-    --color: #ffd23f;
-    animation-name: rotate5;
-    width: 380px;
-    height: 380px;
-    border: 2px solid transparent;
-    border-bottom: 16px solid var(--color);
-    box-shadow: 0 0 10px rgba(254, 83, 187, 0.4);
-    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4);
+    --color: #fe53bb; /* Defines a reusable CSS custom property. */
+    --color: #ffd23f; /* Defines a reusable CSS custom property. */
+    animation-name: rotate5; /* Selects the keyframes animation to run. */
+    width: 380px; /* Sets the element's width. */
+    height: 380px; /* Sets the element's height. */
+    border: 2px solid transparent; /* Sets the border width, style, and colour. */
+    border-bottom: 16px solid var(--color); /* Sets the bottom border. */
+    box-shadow: 0 0 10px rgba(254, 83, 187, 0.4); /* Adds a shadow around the element. */
+    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4); /* Adds a shadow around the element. */
 }
 
 @keyframes rotate5 {
     /* Defines the fifth orbital rotation animation. */
     from {
-        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg); /* Moves, rotates, scales, or skews the element. */
     }
     to {
-        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+        transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring:nth-child(6) {
-    --color: #8f51ea;
-    --color: #ffffff;
-    animation-name: rotate6;
-    width: 380px;
-    height: 380px;
-    border: 2px solid transparent;
-    border-bottom: 16px solid var(--color);
-    box-shadow: 0 0 10px rgba(143, 81, 234, 0.4);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    --color: #8f51ea; /* Defines a reusable CSS custom property. */
+    --color: #ffffff; /* Defines a reusable CSS custom property. */
+    animation-name: rotate6; /* Selects the keyframes animation to run. */
+    width: 380px; /* Sets the element's width. */
+    height: 380px; /* Sets the element's height. */
+    border: 2px solid transparent; /* Sets the border width, style, and colour. */
+    border-bottom: 16px solid var(--color); /* Sets the bottom border. */
+    box-shadow: 0 0 10px rgba(143, 81, 234, 0.4); /* Adds a shadow around the element. */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Adds a shadow around the element. */
 }
 
 @keyframes rotate6 {
     /* Defines the sixth orbital rotation animation. */
     from {
-        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg); /* Moves, rotates, scales, or skews the element. */
     }
     to {
-        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+        transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg); /* Moves, rotates, scales, or skews the element. */
     }
 }
 
 .page-loader-visual .ring:nth-child(7) {
-    --color: #0044ff;
-    --color: #0d1b3e;
-    animation-name: rotate1;
-    width: 190px;
-    height: 190px;
-    box-shadow: 0 0 6px rgba(0, 68, 255, 0.45);
-    box-shadow: 0 0 6px rgba(13, 27, 62, 0.45);
+    --color: #0044ff; /* Defines a reusable CSS custom property. */
+    --color: #0d1b3e; /* Defines a reusable CSS custom property. */
+    animation-name: rotate1; /* Selects the keyframes animation to run. */
+    width: 190px; /* Sets the element's width. */
+    height: 190px; /* Sets the element's height. */
+    box-shadow: 0 0 6px rgba(0, 68, 255, 0.45); /* Adds a shadow around the element. */
+    box-shadow: 0 0 6px rgba(13, 27, 62, 0.45); /* Adds a shadow around the element. */
 }
 
 /* Pulsing nucleus animation */
 @keyframes ccPulse {
     0%,
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1); /* Moves, rotates, scales, or skews the element. */
         box-shadow:
             0 0 20px rgba(255, 210, 63, 0.8),
             0 0 40px rgba(254, 83, 187, 0.6),
             0 0 40px rgba(255, 210, 63, 0.6);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.22);
+        transform: translate(-50%, -50%) scale(1.22); /* Moves, rotates, scales, or skews the element. */
         box-shadow:
             0 0 30px rgba(255, 210, 63, 1),
             0 0 60px rgba(254, 83, 187, 0.85),
@@ -3020,64 +3020,64 @@ body.page-loading {
 
 .page-loader-visual .nucleus {
     /* Sets the nucleus size at the centre of the loader. */
-    width: 22px;
-    height: 22px;
-    background: radial-gradient(circle, var(--yellow), #fe53bb);
-    background: radial-gradient(circle, var(--yellow), #ffd23f);
-    border-radius: 50%;
+    width: 22px; /* Sets the element's width. */
+    height: 22px; /* Sets the element's height. */
+    background: radial-gradient(circle, var(--yellow), #fe53bb); /* Sets the background colour or background image. */
+    background: radial-gradient(circle, var(--yellow), #ffd23f); /* Sets the background colour or background image. */
+    border-radius: 50%; /* Rounds the corners of the element. */
     box-shadow:
         0 0 20px rgba(255, 210, 63, 0.8),
         0 0 40px rgba(254, 83, 187, 0.6),
         0 0 40px rgba(255, 210, 63, 0.6);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ccPulse 1s ease-in-out infinite;
+    position: absolute; /* Sets the positioning method used to place this element. */
+    top: 50%; /* Sets the distance from the top edge for a positioned element. */
+    left: 50%; /* Sets the distance from the left edge for a positioned element. */
+    transform: translate(-50%, -50%); /* Moves, rotates, scales, or skews the element. */
+    animation: ccPulse 1s ease-in-out infinite; /* Applies a named animation and its timing settings. */
 }
   
 /* Campus-Cart loader brand label */
 .page-loader-brand {
     /* Arranges the loader title and message vertically. */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    margin-top: 14px;
+    display: flex; /* Controls how an element participates in the page layout. */
+    flex-direction: column; /* Sets the direction in which flex items are arranged. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    gap: 6px; /* Sets the spacing between flex or grid items. */
+    margin-top: 14px; /* Sets the outer spacing above the element. */
 }
 
 .page-loader-title {
     /* Styles the main Campus-Cart loader title. */
-    color: var(--yellow);
-    font-size: clamp(1.4rem, 4vw, 1.85rem);
-    font-weight: 800;
-    letter-spacing: -0.01em;
+    color: var(--yellow); /* Sets the text colour. */
+    font-size: clamp(1.4rem, 4vw, 1.85rem); /* Sets the text size. */
+    font-weight: 800; /* Sets how thick or bold the text appears. */
+    letter-spacing: -0.01em; /* Sets the spacing between characters. */
 }
 
 .page-loader-title span {
     /* Styles the secondary span inside the loader title. */
-    color: var(--white);
+    color: var(--white); /* Sets the text colour. */
 }
 
 .page-loader-text {
     /* Styles the loading message below the brand title. */
-    margin: 0;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 0.95rem;
-    font-weight: 500;
-    letter-spacing: 0.015em;
+    margin: 0; /* Sets the outer spacing around the element. */
+    color: rgba(255, 255, 255, 0.88); /* Sets the text colour. */
+    font-size: 0.95rem; /* Sets the text size. */
+    font-weight: 500; /* Sets how thick or bold the text appears. */
+    letter-spacing: 0.015em; /* Sets the spacing between characters. */
 }
 
 /* Desktop only: a larger loader on wide screens.
    The visual box grows with the loader so the title below it is not covered. */
 @media (min-width: 1025px) {
     .page-loader-visual {
-        width: 400px;
-        height: 400px;
+        width: 400px; /* Sets the element's width. */
+        height: 400px; /* Sets the element's height. */
     }
 
     .page-loader-visual .loader {
-        --loader-scale: 1;
+        --loader-scale: 1; /* Defines a reusable CSS custom property. */
     }
 }
 
@@ -3085,28 +3085,28 @@ body.page-loading {
 @media (max-width: 520px) {
     /* Reduces loader dimensions on smaller screens. */
     .page-loader-visual {
-        width: 250px;
-        height: 250px;
+        width: 250px; /* Sets the element's width. */
+        height: 250px; /* Sets the element's height. */
     }
 
     .page-loader-visual .loader {
-        --loader-scale: 0.64;
+        --loader-scale: 0.64; /* Defines a reusable CSS custom property. */
     }
 
     .page-loader-brand {
-        margin-top: 8px;
+        margin-top: 8px; /* Sets the outer spacing above the element. */
     }
 }
 
 @media (max-width: 360px) {
     /* Further reduces loader dimensions on very small screens. */
     .page-loader-visual {
-        width: 200px;
-        height: 200px;
+        width: 200px; /* Sets the element's width. */
+        height: 200px; /* Sets the element's height. */
     }
 
     .page-loader-visual .loader {
-        --loader-scale: 0.52;
+        --loader-scale: 0.52; /* Defines a reusable CSS custom property. */
     }
 }
 
@@ -3115,23 +3115,23 @@ body.page-loading {
    loader clearly shows that the page is working. */
 @media (prefers-reduced-motion: reduce) {
     #page-loader {
-        transition: opacity 0.05s ease, visibility 0.05s ease;
+        transition: opacity 0.05s ease, visibility 0.05s ease; /* Animates changes to CSS properties over time. */
     }
 
     .page-loader-visual .loader,
     .page-loader-visual .nucleus {
-        animation: none !important;
+        animation: none !important; /* Applies a named animation and its timing settings. */
     }
 
     .page-loader-visual .nucleus {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1); /* Moves, rotates, scales, or skews the element. */
     }
 
     /* Section 30 forces every animation to run once for 0.01ms, so the loader rings
        must override both values here or they would stop after a single turn. */
     .page-loader-visual .ring {
-        animation-duration: 4s !important;
-        animation-iteration-count: infinite !important;
+        animation-duration: 4s !important; /* Sets how long one animation cycle takes. */
+        animation-iteration-count: infinite !important; /* Sets how many times the animation repeats. */
     }
 }
 
@@ -3147,70 +3147,70 @@ body.page-loading {
 .lightbox[hidden],
 .modal-backdrop[hidden],
 .lb-btn[hidden] {
-    display: none !important;
+    display: none !important; /* Controls how an element participates in the page layout. */
 }
 
 /* Page title that uses an h1 for SEO but keeps the size of a section heading. */
 .section-head h1 {
-    margin-bottom: 16px;
-    color: var(--navy);
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 16px; /* Sets the outer spacing below the element. */
+    color: var(--navy); /* Sets the text colour. */
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Sets the text size. */
 }
 
 /* ---------- Interactive hub map (Leaflet) ---------- */
 
 /* Picker above the map for keyboard and screen-reader users. */
 .map-picker {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 14px;
+    display: flex; /* Controls how an element participates in the page layout. */
+    flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    gap: 10px; /* Sets the spacing between flex or grid items. */
+    margin-bottom: 14px; /* Sets the outer spacing below the element. */
 }
 
 .map-picker label {
-    font-weight: 700;
-    color: var(--navy);
+    font-weight: 700; /* Sets how thick or bold the text appears. */
+    color: var(--navy); /* Sets the text colour. */
 }
 
 .map-picker select {
-    width: auto;
-    flex: 1 1 260px;
-    max-width: 420px;
+    width: auto; /* Sets the element's width. */
+    flex: 1 1 260px; /* Sets how a flex item grows, shrinks, and uses available space. */
+    max-width: 420px; /* Sets the largest permitted width. */
 }
 
 /* The map box. A fixed height is needed because Leaflet draws into it. */
 .hub-map {
-    width: 100%;
-    height: 460px;
-    border: 3px solid var(--navy);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--grey);
-    z-index: 0;
+    width: 100%; /* Sets the element's width. */
+    height: 460px; /* Sets the element's height. */
+    border: 3px solid var(--navy); /* Sets the border width, style, and colour. */
+    border-radius: var(--radius); /* Rounds the corners of the element. */
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
+    background: var(--grey); /* Sets the background colour or background image. */
+    z-index: 0; /* Controls the stacking order when elements overlap. */
 }
 
 /* Message shown if the map library could not load. */
 .hub-map.map-unavailable {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    height: auto;
-    min-height: 120px;
-    text-align: center;
-    color: var(--navy);
+    display: flex; /* Controls how an element participates in the page layout. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
+    padding: 24px; /* Sets the inner spacing between content and border. */
+    height: auto; /* Sets the element's height. */
+    min-height: 120px; /* Sets the smallest permitted height. */
+    text-align: center; /* Aligns inline text within its container. */
+    color: var(--navy); /* Sets the text colour. */
 }
 
 .map-popup p {
-    margin: 4px 0 0;
-    font-size: 0.9rem;
+    margin: 4px 0 0; /* Sets the outer spacing around the element. */
+    font-size: 0.9rem; /* Sets the text size. */
 }
 
 /* Shorter map on phones so the page can still be scrolled past it. */
 @media (max-width: 600px) {
     .hub-map {
-        height: 340px;
+        height: 340px; /* Sets the element's height. */
     }
 }
 
@@ -3218,80 +3218,80 @@ body.page-loading {
 
 /* Thumbnails look clickable and show a clear focus outline for keyboard users. */
 main img[role="button"] {
-    cursor: zoom-in;
+    cursor: zoom-in; /* Sets the mouse pointer appearance over the element. */
 }
 
 main img[role="button"]:focus-visible {
-    outline: 3px solid var(--yellow);
-    outline-offset: 3px;
+    outline: 3px solid var(--yellow); /* Draws an outline around the element without affecting layout. */
+    outline-offset: 3px; /* Sets the gap between an element and its outline. */
 }
 
 /* Stops the page behind a lightbox or modal from scrolling. */
 body.lightbox-open {
-    overflow: hidden;
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 }
 
 .lightbox {
-    position: fixed;
+    position: fixed; /* Sets the positioning method used to place this element. */
     inset: 0;
-    z-index: 99990;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 56px 64px;
-    background: rgba(8, 20, 47, 0.92);
-    animation: ccFadeIn 0.2s ease;
+    z-index: 99990; /* Controls the stacking order when elements overlap. */
+    display: flex; /* Controls how an element participates in the page layout. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
+    padding: 56px 64px; /* Sets the inner spacing between content and border. */
+    background: rgba(8, 20, 47, 0.92); /* Sets the background colour or background image. */
+    animation: ccFadeIn 0.2s ease; /* Applies a named animation and its timing settings. */
 }
 
 .lb-figure {
-    max-width: min(1000px, 100%);
-    margin: 0;
-    text-align: center;
-    color: var(--white);
+    max-width: min(1000px, 100%); /* Sets the largest permitted width. */
+    margin: 0; /* Sets the outer spacing around the element. */
+    text-align: center; /* Aligns inline text within its container. */
+    color: var(--white); /* Sets the text colour. */
 }
 
 .lb-image {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 72vh;
-    border-radius: 10px;
-    background: var(--navy);
+    display: block; /* Controls how an element participates in the page layout. */
+    margin: 0 auto; /* Sets the outer spacing around the element. */
+    max-width: 100%; /* Sets the largest permitted width. */
+    max-height: 72vh; /* Sets the largest permitted height. */
+    border-radius: 10px; /* Rounds the corners of the element. */
+    background: var(--navy); /* Sets the background colour or background image. */
 }
 
 .lb-caption {
-    margin-top: 12px;
-    font-size: 1rem;
+    margin-top: 12px; /* Sets the outer spacing above the element. */
+    font-size: 1rem; /* Sets the text size. */
 }
 
 .lb-count {
-    margin: 4px 0 0;
-    font-size: 0.85rem;
-    opacity: 0.8;
+    margin: 4px 0 0; /* Sets the outer spacing around the element. */
+    font-size: 0.85rem; /* Sets the text size. */
+    opacity: 0.8; /* Sets the element's transparency. */
 }
 
 /* Close, previous and next buttons. At least 44px so they are easy to tap. */
 .lb-btn {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border: 2px solid var(--yellow);
-    border-radius: 50%;
-    background: var(--navy);
-    color: var(--yellow);
-    font-size: 1.8rem;
-    line-height: 1;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
+    position: absolute; /* Sets the positioning method used to place this element. */
+    display: flex; /* Controls how an element participates in the page layout. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
+    width: 48px; /* Sets the element's width. */
+    height: 48px; /* Sets the element's height. */
+    border: 2px solid var(--yellow); /* Sets the border width, style, and colour. */
+    border-radius: 50%; /* Rounds the corners of the element. */
+    background: var(--navy); /* Sets the background colour or background image. */
+    color: var(--yellow); /* Sets the text colour. */
+    font-size: 1.8rem; /* Sets the text size. */
+    line-height: 1; /* Sets the vertical spacing between lines of text. */
+    cursor: pointer; /* Sets the mouse pointer appearance over the element. */
+    transition: background 0.2s ease, color 0.2s ease; /* Animates changes to CSS properties over time. */
 }
 
 .lb-btn:hover,
 .lb-btn:focus-visible {
-    background: var(--yellow);
-    color: var(--navy);
+    background: var(--yellow); /* Sets the background colour or background image. */
+    color: var(--navy); /* Sets the text colour. */
 }
 
 .lb-close { top: 12px; right: 12px; }
@@ -3306,64 +3306,64 @@ body.lightbox-open {
 /* ---------- Product quick-view modal ---------- */
 
 .modal-backdrop {
-    position: fixed;
+    position: fixed; /* Sets the positioning method used to place this element. */
     inset: 0;
-    z-index: 99990;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    background: rgba(8, 20, 47, 0.8);
-    animation: ccFadeIn 0.2s ease;
+    z-index: 99990; /* Controls the stacking order when elements overlap. */
+    display: flex; /* Controls how an element participates in the page layout. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
+    padding: 16px; /* Sets the inner spacing between content and border. */
+    background: rgba(8, 20, 47, 0.8); /* Sets the background colour or background image. */
+    animation: ccFadeIn 0.2s ease; /* Applies a named animation and its timing settings. */
 }
 
 .modal {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: min(760px, 100%);
-    max-height: 92vh;
-    overflow: auto;
-    border-radius: var(--radius);
-    background: var(--white);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    animation: ccPopIn 0.25s ease;
+    position: relative; /* Sets the positioning method used to place this element. */
+    display: grid; /* Controls how an element participates in the page layout. */
+    grid-template-columns: 1fr 1fr; /* Defines the number and size of grid columns. */
+    width: min(760px, 100%); /* Sets the element's width. */
+    max-height: 92vh; /* Sets the largest permitted height. */
+    overflow: auto; /* Controls what happens when content exceeds the element's box. */
+    border-radius: var(--radius); /* Rounds the corners of the element. */
+    background: var(--white); /* Sets the background colour or background image. */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Adds a shadow around the element. */
+    animation: ccPopIn 0.25s ease; /* Applies a named animation and its timing settings. */
 }
 
 .modal-image {
-    width: 100%;
-    height: 100%;
-    min-height: 220px;
-    object-fit: cover;
+    width: 100%; /* Sets the element's width. */
+    height: 100%; /* Sets the element's height. */
+    min-height: 220px; /* Sets the smallest permitted height. */
+    object-fit: cover; /* Controls how an image or video fits within its dimensions. */
 }
 
 .modal-body {
-    padding: 28px 24px;
+    padding: 28px 24px; /* Sets the inner spacing between content and border. */
 }
 
 .modal-body h2 {
-    margin: 10px 0 6px;
-    font-size: 1.5rem;
+    margin: 10px 0 6px; /* Sets the outer spacing around the element. */
+    font-size: 1.5rem; /* Sets the text size. */
 }
 
 .modal-close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 44px;
-    height: 44px;
-    border: 2px solid var(--navy);
-    border-radius: 50%;
-    background: var(--white);
-    color: var(--navy);
-    font-size: 1.6rem;
-    line-height: 1;
-    cursor: pointer;
+    position: absolute; /* Sets the positioning method used to place this element. */
+    top: 8px; /* Sets the distance from the top edge for a positioned element. */
+    right: 8px; /* Sets the distance from the right edge for a positioned element. */
+    width: 44px; /* Sets the element's width. */
+    height: 44px; /* Sets the element's height. */
+    border: 2px solid var(--navy); /* Sets the border width, style, and colour. */
+    border-radius: 50%; /* Rounds the corners of the element. */
+    background: var(--white); /* Sets the background colour or background image. */
+    color: var(--navy); /* Sets the text colour. */
+    font-size: 1.6rem; /* Sets the text size. */
+    line-height: 1; /* Sets the vertical spacing between lines of text. */
+    cursor: pointer; /* Sets the mouse pointer appearance over the element. */
 }
 
 .modal-close:hover,
 .modal-close:focus-visible {
-    background: var(--yellow);
+    background: var(--yellow); /* Sets the background colour or background image. */
 }
 
 @media (max-width: 640px) {
@@ -3373,74 +3373,74 @@ body.lightbox-open {
 
 /* Quick view button sits beside the add button on each deal card. */
 .card-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: flex; /* Controls how an element participates in the page layout. */
+    flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
+    gap: 8px; /* Sets the spacing between flex or grid items. */
 }
 
 /* ---------- FAQ accordion ---------- */
 
 .accordion {
-    display: grid;
-    gap: 12px;
+    display: grid; /* Controls how an element participates in the page layout. */
+    gap: 12px; /* Sets the spacing between flex or grid items. */
 }
 
 .acc-item {
-    border: 2px solid var(--navy);
-    border-radius: var(--radius);
-    background: var(--white);
-    overflow: hidden;
+    border: 2px solid var(--navy); /* Sets the border width, style, and colour. */
+    border-radius: var(--radius); /* Rounds the corners of the element. */
+    background: var(--white); /* Sets the background colour or background image. */
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 }
 
 .acc-item summary {
-    position: relative;
-    padding: 16px 52px 16px 20px;
-    font-weight: 700;
-    color: var(--navy);
-    cursor: pointer;
-    list-style: none;
+    position: relative; /* Sets the positioning method used to place this element. */
+    padding: 16px 52px 16px 20px; /* Sets the inner spacing between content and border. */
+    font-weight: 700; /* Sets how thick or bold the text appears. */
+    color: var(--navy); /* Sets the text colour. */
+    cursor: pointer; /* Sets the mouse pointer appearance over the element. */
+    list-style: none; /* Controls the appearance of list markers. */
 }
 
 /* Removes the default triangle in Safari. */
 .acc-item summary::-webkit-details-marker {
-    display: none;
+    display: none; /* Controls how an element participates in the page layout. */
 }
 
 /* A plus sign that turns into a minus when the answer is open. */
 .acc-item summary::after {
-    content: "+";
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: var(--navy);
+    content: "+"; /* Sets generated content for a pseudo-element. */
+    position: absolute; /* Sets the positioning method used to place this element. */
+    right: 18px; /* Sets the distance from the right edge for a positioned element. */
+    top: 50%; /* Sets the distance from the top edge for a positioned element. */
+    transform: translateY(-50%); /* Moves, rotates, scales, or skews the element. */
+    font-size: 1.5rem; /* Sets the text size. */
+    color: var(--navy); /* Sets the text colour. */
 }
 
 .acc-item[open] summary::after {
-    content: "\2212";
+    content: "\2212"; /* Sets generated content for a pseudo-element. */
 }
 
 .acc-item summary:hover,
 .acc-item summary:focus-visible {
-    background: var(--yellow);
-    outline: none;
+    background: var(--yellow); /* Sets the background colour or background image. */
+    outline: none; /* Draws an outline around the element without affecting layout. */
 }
 
 .acc-body {
-    padding: 4px 20px 18px;
-    animation: ccSlideDown 0.25s ease;
+    padding: 4px 20px 18px; /* Sets the inner spacing between content and border. */
+    animation: ccSlideDown 0.25s ease; /* Applies a named animation and its timing settings. */
 }
 
 /* ---------- Scroll reveal ---------- */
 
 /* Cards start faint only when JavaScript is running, so nothing is ever hidden without it. */
 .js-reveal .reveal:not(.is-visible) {
-    opacity: 0;
+    opacity: 0; /* Sets the element's transparency. */
 }
 
 .js-reveal .reveal.is-visible {
-    animation: ccReveal 0.5s ease backwards;
+    animation: ccReveal 0.5s ease backwards; /* Applies a named animation and its timing settings. */
 }
 
 @keyframes ccReveal {
@@ -3465,52 +3465,52 @@ body.lightbox-open {
 
 /* Profile image on the left, information on the right */
 .author-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 24px;
-    text-align: left;
+    display: flex; /* Controls how an element participates in the page layout. */
+    flex-direction: row; /* Sets the direction in which flex items are arranged. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    gap: 24px; /* Sets the spacing between flex or grid items. */
+    text-align: left; /* Aligns inline text within its container. */
 }
 
 .author-image {
-    flex: 0 0 180px;
+    flex: 0 0 180px; /* Sets how a flex item grows, shrinks, and uses available space. */
 }
 
 .author {
-    display: block;
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--navy);
-    overflow: hidden;
+    display: block; /* Controls how an element participates in the page layout. */
+    width: 180px; /* Sets the element's width. */
+    height: 180px; /* Sets the element's height. */
+    object-fit: cover; /* Controls how an image or video fits within its dimensions. */
+    border-radius: 50%; /* Rounds the corners of the element. */
+    border: 4px solid var(--navy); /* Sets the border width, style, and colour. */
+    overflow: hidden; /* Controls what happens when content exceeds the element's box. */
 }
 
 .author-info {
-    flex: 1;
-    min-width: 0;
+    flex: 1; /* Sets how a flex item grows, shrinks, and uses available space. */
+    min-width: 0; /* Sets the smallest permitted width. */
 }
 
 .author-info h3 {
-    margin-top: 0;
+    margin-top: 0; /* Sets the outer spacing above the element. */
 }
 
 /* Stack the image and information on smaller screens */
 @media (max-width: 600px) {
     .author-box {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 16px;
+        flex-direction: column; /* Sets the direction in which flex items are arranged. */
+        align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+        text-align: center; /* Aligns inline text within its container. */
+        gap: 16px; /* Sets the spacing between flex or grid items. */
     }
 
     .author-image {
-        flex-basis: auto;
+        flex-basis: auto; /* Sets the starting size of a flex item before free space is distributed. */
     }
 
     .author {
-        width: 140px;
-        height: 140px;
+        width: 140px; /* Sets the element's width. */
+        height: 140px; /* Sets the element's height. */
     }
 }
 
@@ -3518,21 +3518,21 @@ body.lightbox-open {
 
 /* A field that is locked until the one before it is filled in correctly. */
 .form-group.field-locked {
-    opacity: 0.45;
-    cursor: not-allowed;
+    opacity: 0.45; /* Sets the element's transparency. */
+    cursor: not-allowed; /* Sets the mouse pointer appearance over the element. */
 }
 
 /* Message above the submit button that says what to complete next. */
 .gate-status {
-    margin: 4px 0 12px;
-    font-weight: 700;
-    color: var(--navy);
+    margin: 4px 0 12px; /* Sets the outer spacing around the element. */
+    font-weight: 700; /* Sets how thick or bold the text appears. */
+    color: var(--navy); /* Sets the text colour. */
 }
 
 /* The submit button looks switched off until the form is valid. */
 .btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    opacity: 0.5; /* Sets the element's transparency. */
+    cursor: not-allowed; /* Sets the mouse pointer appearance over the element. */
 }
 
 /* Lets the long file path in the licence section wrap on narrow phone screens. */
@@ -3544,106 +3544,106 @@ body.lightbox-open {
 
 /* The print sheet is built by initPrint() in script.js. It never shows on screen. */
 #print-sheet {
-    display: none;
+    display: none; /* Controls how an element participates in the page layout. */
 }
 
 @media print {
 
     /* While the checklist is being printed, everything else on the page is hidden. */
     body.printing-checklist > *:not(#print-sheet) {
-        display: none !important;
+        display: none !important; /* Controls how an element participates in the page layout. */
     }
 
     body.printing-checklist #print-sheet {
-        display: block;
-        color: #000;
-        font-size: 13pt;
-        line-height: 1.5;
+        display: block; /* Controls how an element participates in the page layout. */
+        color: #000; /* Sets the text colour. */
+        font-size: 13pt; /* Sets the text size. */
+        line-height: 1.5; /* Sets the vertical spacing between lines of text. */
     }
 
     #print-sheet .print-title {
-        margin: 0 0 6pt;
-        font-size: 20pt;
-        font-weight: 700;
+        margin: 0 0 6pt; /* Sets the outer spacing around the element. */
+        font-size: 20pt; /* Sets the text size. */
+        font-weight: 700; /* Sets how thick or bold the text appears. */
     }
 
     #print-sheet .print-note {
-        margin-top: 18pt;
-        font-size: 9pt;
-        color: #444;
+        margin-top: 18pt; /* Sets the outer spacing above the element. */
+        font-size: 9pt; /* Sets the text size. */
+        color: #444; /* Sets the text colour. */
     }
 
     /* Each item gets an empty box to tick instead of a bullet. */
     #print-sheet .print-list {
-        margin: 12pt 0 0;
-        padding: 0;
-        list-style: none;
+        margin: 12pt 0 0; /* Sets the outer spacing around the element. */
+        padding: 0; /* Sets the inner spacing between content and border. */
+        list-style: none; /* Controls the appearance of list markers. */
     }
 
     #print-sheet .print-list li {
-        margin: 0 0 8pt;
-        padding: 0;
-        break-inside: avoid;
+        margin: 0 0 8pt; /* Sets the outer spacing around the element. */
+        padding: 0; /* Sets the inner spacing between content and border. */
+        break-inside: avoid; /* Controls whether content may break inside an element during printing or columns. */
     }
 
     #print-sheet .print-list li::before {
-        content: "\2610";
-        margin-right: 10pt;
-        font-size: 16pt;
+        content: "\2610"; /* Sets generated content for a pseudo-element. */
+        margin-right: 10pt; /* Sets the outer spacing to the right of the element. */
+        font-size: 16pt; /* Sets the text size. */
     }
 }
 
 /* Compact live clock */
 .nav-clock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    white-space: nowrap;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: #ffffff;
-    flex-shrink: 0;
+    display: flex; /* Controls how an element participates in the page layout. */
+    align-items: center; /* Aligns items across the cross-axis of a flex or grid container. */
+    justify-content: center; /* Distributes items along the main axis. */
+    gap: 7px; /* Sets the spacing between flex or grid items. */
+    white-space: nowrap; /* Controls how whitespace and line wrapping are handled. */
+    font-family: Arial, sans-serif; /* Sets the typeface, including fallback fonts. */
+    font-size: 12px; /* Sets the text size. */
+    color: #ffffff; /* Sets the text colour. */
+    flex-shrink: 0; /* Sets how much a flex item can shrink when space is limited. */
 }
 
 #navTime {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 13px; /* Sets the text size. */
+    font-weight: 700; /* Sets how thick or bold the text appears. */
     font-variant-numeric: tabular-nums;
-    color: #ffcc33;
+    color: #ffcc33; /* Sets the text colour. */
 }
 
 #navDate {
-    color: #e0e5ed;
+    color: #e0e5ed; /* Sets the text colour. */
 }
 
 .clock-divider {
-    color: #738096;
+    color: #738096; /* Sets the text colour. */
 }
 
 /* Tablet and mobile */
 @media (max-width: 768px) {
     .navbar {
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-wrap: wrap; /* Controls whether flex items can move onto another line. */
+        gap: 10px; /* Sets the spacing between flex or grid items. */
     }
 
     .nav-clock {
-        font-size: 11px;
-        gap: 5px;
+        font-size: 11px; /* Sets the text size. */
+        gap: 5px; /* Sets the spacing between flex or grid items. */
     }
 
     #navTime {
-        font-size: 12px;
+        font-size: 12px; /* Sets the text size. */
     }
 }
 
 @media (max-width: 380px) {
     .nav-clock {
-        font-size: 10px;
+        font-size: 10px; /* Sets the text size. */
     }
 
     #navTime {
-        font-size: 11px;
+        font-size: 11px; /* Sets the text size. */
     }
 }
