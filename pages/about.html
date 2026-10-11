@@ -1,342 +1,390 @@
 <!DOCTYPE html>
+<!-- Starts the HTML document and sets English as its language. -->
 <html lang="en">
+<!-- Starts the document head, which holds metadata and resource links. -->
 <head>
-<!-- Sets UTF-8 character encoding so letters, symbols and special characters display correctly. -->
+
+<!-- Sets the character encoding so text and symbols display correctly. -->
 <meta charset="utf-8">
-<!-- Controls the viewport so the responsive layout scales correctly on different screen sizes. -->
+
+<!-- Configures the viewport for responsive layouts on different screens. -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- <title> sets the text displayed on the browser tab.
-      &amp; is an HTML entity used to display the & character. -->
+  
+  <!-- Sets the title displayed in the browser tab and search results. -->
   <title>About Campus-Cart | Our History, Mission &amp; Vision</title>
-  <!-- Provides a short webpage description for search engines and other services. -->
+  
+  <!-- Provides the page description used by search engines and previews. -->
   <meta name="description" content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces.">
-    <!-- SEO (Part 3): canonical address, social sharing preview, theme colour and icon. -->
+    
+    <!-- Identifies the preferred canonical URL for search engines. -->
     <link rel="canonical" href="https://leletu-kamana.github.io/campus-cart/pages/about.html">
+    <!-- Tells search engines they may index this page and follow its links. -->
     <meta name="robots" content="index, follow">
+    <!-- Sets the browser theme colour for supported mobile interfaces. -->
     <meta name="theme-color" content="#0d1b3e">
+    <!-- Identifies this page as a website in social-sharing metadata. -->
     <meta property="og:type" content="website">
+    <!-- Sets the site name shown in social-sharing previews. -->
     <meta property="og:site_name" content="Campus-Cart">
+    <!-- Sets the language and regional format for social-sharing metadata. -->
     <meta property="og:locale" content="en_ZA">
+    <!-- Provides the description used in social-sharing previews. -->
     <meta property="og:description" content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces.">
+    <!-- Sets the page URL used in social-sharing previews. -->
     <meta property="og:url" content="https://leletu-kamana.github.io/campus-cart/pages/about.html">
+    <!-- Sets the image displayed in social-sharing previews. -->
     <meta property="og:image" content="https://leletu-kamana.github.io/campus-cart/assets/images/bundles/hero-campus.jpg">
+    <!-- Describes the social-sharing image for accessibility. -->
     <meta property="og:image:alt" content="South African students on a university campus carrying study essentials">
+    <!-- Selects the large-image card format for supported social previews. -->
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Defines the favicon shown by supported browsers. -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
-  <!-- Provides keyword metadata describing the main topics associated with the webpage. -->
+  
+  <!-- Lists keywords associated with this webpage. -->
   <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-  <!-- Provides the Google Search Console verification token used to verify website ownership. -->
+  
+  <!-- Provides the site-verification token for Google Search Console. -->
   <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
-  <!-- <link> connects this HTML document to an external CSS stylesheet.
-      ../ moves one folder up before accessing the assets folder. -->
+  
+
+  <!-- Loads the external stylesheet that controls the page's appearance. -->
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
+<!-- Starts the visible webpage content and applies the page-loading state. -->
 <body class="page-loading">
 
-  <!-- Full-Screen Campus-Cart Page Loader (Uiverse.io by Chris-immanuel-matthew) -->
+  
+  <!-- Builds part of the accessible page-loading overlay. -->
   <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
+    <!-- Builds part of the accessible page-loading overlay. -->
     <div class="page-loader-content">
+      <!-- Builds part of the accessible page-loading overlay. -->
       <div class="page-loader-visual">
+        <!-- Groups related page elements into a container that can be styled with CSS. -->
         <div class="loader" aria-hidden="true">
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="nucleus"></div>
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="ring"></div>
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="ring"></div>
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="ring"></div>
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="ring"></div>
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="ring"></div>
+          <!-- Groups related page elements into a container that can be styled with CSS. -->
           <div class="ring"></div>
         </div>
       </div>
+      <!-- Builds part of the accessible page-loading overlay. -->
       <div class="page-loader-brand" aria-hidden="true">
+        <!-- Marks a short piece of text for styling or identification. -->
         <span class="page-loader-title">Campus<span>-Cart</span></span>
+        <!-- Marks a short piece of text for styling or identification. -->
         <span class="page-loader-text">Loading Campus-Cart...</span>
       </div>
     </div>
   </div>
 
-  <!-- <header> contains the main introductory content of the webpage.
-      The topbar class allows CSS to style this header area. -->
+  
+  <!-- Starts the document head, which holds metadata and resource links. -->
   <header class="topbar">
 
-    <!-- <nav> groups the main navigation links for the website.
-        aria-label provides an accessible name for screen readers. -->
+    
+    <!-- Groups the main navigation links and labels the navigation for assistive technology. -->
     <nav class="nav" aria-label="Main navigation">
 
-      <!-- <a> creates a hyperlink and href specifies its destination.
-        Creates an inline element used to group and style a short piece of text.
-          <span> separates "-Cart" so it can receive different styling. -->
+      
+      <!-- Creates the clickable Campus-Cart logo and links it to the homepage. -->
       <a class="logo" href="../index.html">Campus<span>-Cart</span></a>
 
+        <!-- Groups the live time and date displayed in the navigation bar. -->
         <div class="nav-datetime" aria-label="Current South African date and time">
+            <!-- Provides the element JavaScript updates with the current time. -->
             <span id="navTime">00:00:00</span>
+            <!-- Marks a short piece of text for styling or identification. -->
             <span class="nav-date-divider">|</span>
+            <!-- Provides the element JavaScript updates with the current date. -->
             <span id="navDate">Loading...</span>
         </div>
 
-      <!-- <button> creates a clickable control for the navigation menu.
-          aria-expanded indicates whether the navigation is currently expanded. -->
+      
+      <!-- Creates the control used to open or close the mobile navigation. -->
       <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
 
-      <!-- This div groups all the main navigation links together.
-          The nav-links class allows CSS and JavaScript to control the group. -->
+      
+      <!-- Groups the primary navigation links. -->
       <div class="nav-links">
 
-        <!-- ../ moves from the pages folder to the main website folder.
-            index.html is therefore used as the destination of this link. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="../index.html">Home</a>
 
-        <!-- This relative link opens about.html from the current directory.
-            Relative paths do not require the complete website URL. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="about.html">About</a>
 
-        <!-- #shop is a URL fragment targeting an element with id="shop".
-            It allows the user to jump directly to the Shop section. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="products.html">Shop</a>
 
-        <!-- The #parent-hub fragment targets the Parent Hub section.
-            The destination must contain an element with the matching ID. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="products.html#parent-hub">Parent Hub</a>
 
-        <!-- This hyperlink opens the enquiry page in the same directory.
-            The href attribute contains the relative path to the page. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="enquiry.html">Enquiry</a>
-                  <!-- Creates a hyperlink; href specifies its destination and class can control its styling. -->
+                  
+                  <!-- Creates a hyperlink to another page, section, or external resource. -->
                   <a href="coverage.html">Coverage</a>
 
-        <!-- This hyperlink opens the contact page.
-            Anchor elements are commonly used for navigation between pages. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="contact.html">Contact</a>
 
-        <!-- This anchor navigates to the account page. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a href="account.html">Account</a>
 
-        <!-- data-cart-count is a custom data attribute used by JavaScript.
-            The <span> allows JavaScript to update only the cart number. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
       </div>
     </nav>
   </header>
 
-  <!-- <main> contains the primary content of the webpage.
-      A document normally uses one main element for its central content. -->
+  
+  <!-- Starts the main content of the webpage. -->
   <main>
 
-    <!-- <section> groups related content into a meaningful webpage section.
-        The hero class allows CSS to style this introductory section. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="hero">
 
-      <!-- wrap is a layout container used to control content width.
-          It helps keep the page content aligned consistently. -->
+      
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap">
 
-        <!-- <span> is an inline element used for a short piece of text.
-            The eyebrow class controls its appearance using CSS. -->
+        
+        <!-- Marks a short piece of text for styling or identification. -->
         <span class="eyebrow">About us</span>
 
-        <!-- <h1> is the main heading of the webpage.
-            It normally represents the highest-level heading on the page. -->
+        
+        <!-- Defines the page's main heading. -->
         <h1>Built by students, for students and their families</h1>
 
-        <!-- <p> creates a paragraph containing supporting information.
-            The lead class gives this introductory paragraph special styling. -->
+        
+        <!-- Starts a paragraph of descriptive text. -->
         <p class="lead">Campus-Cart is a South African student essentials marketplace that pairs affordable new stock with a manually reviewed second-hand range.</p>
       </div>
     </section>
 
-    <!-- This section contains the history of Campus-Cart.
-        The section class provides the general spacing and styling. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="section">
 
-      <!-- grid grid-2 applies two CSS classes to create a two-column layout.
-          wrap controls the width of the content inside the section. -->
+      
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap grid grid-2">
 
-        <!-- This div contains the written history of the company.
-            It forms the first column of the two-column grid. -->
+        
+        <!-- Groups related page elements into a container that can be styled with CSS. -->
         <div>
 
-          <!-- h2 creates a second-level heading below the page's h1.
-              Heading levels help organise the document logically. -->
+          
+          <!-- Defines a second-level heading for this section. -->
           <h2>Our history</h2>
 
-          <!-- <p> creates a block of paragraph text.
-              Each paragraph separates a different part of the company history. -->
+          
+          <!-- Starts a paragraph of descriptive text. -->
           <p>In 2021 a handful of final-year students in Pretoria noticed the same thing every November: perfectly good kettles, fridges, desks and textbooks were being dumped in res corridors, while first-years arriving in January were paying full retail for the same items.</p>
 
-          <!-- This paragraph explains how the original idea developed.
-              Multiple <p> elements make the information easier to read. -->
+          
+          <!-- Starts a paragraph of descriptive text. -->
           <p>What began as a WhatsApp group with a spreadsheet grew into an organised handover service across campuses in several provinces, and today we deliver to every public university, TVET college and major private institution in all nine provinces. By 2023 we had added new stock so that families could buy a complete bundle in one go, and by 2025 we formalised collection points at residences, campus desks and secure lockers.</p>
 
-          <!-- This paragraph describes the current operation of the business.
-              It remains inside the same content column as the history. -->
+          
+          <!-- Starts a paragraph of descriptive text. -->
           <p>Today Campus-Cart operates as a small, student-run team with reviewers who physically check every second-hand listing before it goes live.</p>
         </div>
 
-        <!-- This div forms the second column of the grid.
-            It contains an image related to the second-hand marketplace. -->
+        
+        <!-- Groups related page elements into a container that can be styled with CSS. -->
         <div>
 
-          <!-- <img> displays an image on the webpage.
-              src specifies the image path while alt provides alternative text. -->
+          
+          <!-- Displays an image; its attributes specify the source, alternative text, dimensions, and loading behaviour. -->
           <img class="map-frame" src="../assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair" loading="lazy" width="1200" height="900">
         </div>
       </div>
     </section>
 
-    <!-- This section contains the company's mission and vision.
-        The alt class provides an alternative visual background style. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="section alt">
 
-      <!-- grid-2 creates two columns for the mission and vision.
-          wrap keeps the content within the website's normal width. -->
+      
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap grid grid-2">
 
-        <!-- info-box creates a styled container for the mission.
-            It forms the first column of this section. -->
+        
+        <!-- Creates a styled information panel. -->
         <div class="info-box">
 
-          <!-- h3 creates a subsection heading for the mission.
-              It is lower in hierarchy than the section's main heading. -->
+          
+          <!-- Defines a third-level heading within this content block. -->
           <h3>Our mission</h3>
 
-          <!-- This paragraph explains the purpose of Campus-Cart.
-              Paragraph elements are used for blocks of descriptive text. -->
+          
+          <!-- Starts a paragraph of descriptive text. -->
           <p>To make the cost of starting tertiary education fairer, by giving students and their families access to affordable, quality-checked essentials and a safe way to resell what they outgrow.</p>
         </div>
 
-        <!-- This info-box contains the company's long-term vision.
-            It forms the second column beside the mission. -->
+        
+        <!-- Creates a styled information panel. -->
         <div class="info-box">
 
-          <!-- h3 provides the heading for the vision content.
-              It identifies the purpose of the information box. -->
+          
+          <!-- Defines a third-level heading within this content block. -->
           <h3>Our vision</h3>
 
-          <!-- This paragraph explains the desired future outcome.
-              The text remains inside the second information box. -->
+          
+          <!-- Starts a paragraph of descriptive text. -->
           <p>A South Africa where no student delays or drops out of study because they cannot afford a bed, a desk or a prescribed textbook — and where student kit circulates instead of ending up in a skip.</p>
         </div>
       </div>
     </section>
 
-    <!-- This section explains the target audience of the website.
-        id="who-we-serve" allows the section to be targeted by a URL fragment. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="section" id="who-we-serve">
 
-      <!-- wrap controls the content width within the section.
-          It keeps the content aligned with other sections on the page. -->
+      
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap">
 
-        <!-- section-head groups the introductory heading content.
-            This class provides consistent styling across the website. -->
+        
+        <!-- Groups related page elements into a container that can be styled with CSS. -->
         <div class="section-head">
 
-          <!-- The eyebrow provides a small label above the section heading.
-              CSS controls its visual appearance. -->
+          
+          <!-- Marks a short piece of text for styling or identification. -->
           <span class="eyebrow">Audience</span>
 
-          <!-- h2 identifies the main heading for this webpage section.
-              It is correctly placed below the page's h1 in the hierarchy. -->
+          
+          <!-- Defines a second-level heading for this section. -->
           <h2>Who we serve</h2>
         </div>
 
-        <!-- grid-2 creates two columns for the audience cards.
-            Each article below represents one target audience. -->
+        
+        <!-- Creates a CSS grid layout for arranging related content. -->
         <div class="grid grid-2">
 
-          <!-- <article> represents a self-contained piece of content.
-              Here it is used to represent the primary audience card. -->
+          
+          <!-- Creates a hyperlink to another page, section, or external resource. -->
           <article class="card"><div class="card-body">
 
-            <!-- badge-new displays a labelled badge for the primary audience.
-                The CSS class controls its appearance. -->
+            
+            <!-- Marks a short piece of text for styling or identification. -->
             <span class="badge badge-new">Primary audience</span>
 
-            <!-- h3 identifies the main heading inside this article.
-                It describes who the primary audience is. -->
+            
+            <!-- Defines a third-level heading within this content block. -->
             <h3>Tertiary students, ages 19–30</h3>
 
-            <!-- This paragraph describes the characteristics of the audience.
-                It provides supporting information below the article heading. -->
+            
+            <!-- Starts a paragraph of descriptive text. -->
             <p>Undergraduates, postgraduates and TVET students living in residence, private digs or commuting from home. They are price-sensitive, mobile-first, and often buying for the first time without family nearby.</p>
 
-            <!-- <ul> creates an unordered list.
-                It is used here because these points do not require a specific order. -->
+            
+            <!-- Starts an unordered, bulleted list. -->
             <ul>
 
-              <!-- <li> represents one item inside the unordered list.
-                  Each item describes one student requirement. -->
+              
+              <!-- Adds one item to the surrounding list. -->
               <li>Need affordable basics fast, usually in registration week</li>
 
-              <!-- This list item identifies another student requirement.
-                  List items are automatically grouped under the parent <ul>. -->
+              
+              <!-- Adds one item to the surrounding list. -->
               <li>Want to resell items at the end of the year</li>
 
-              <!-- This list item describes the preferred collection method.
-                  No numbering is used because the order is not important. -->
+              
+              <!-- Adds one item to the surrounding list. -->
               <li>Prefer collection on or near campus</li>
             </ul>
 
-            <!-- This anchor links to the Student path on account.html.
-                The btn classes make the hyperlink look like a button. -->
+            
+            <!-- Creates a hyperlink to another page, section, or external resource. -->
             <a class="btn btn-sm" href="account.html#student">Student path</a>
           </div></article>
 
-          <!-- This article represents the secondary target audience.
-              article is suitable because the content is self-contained. -->
+          
+          <!-- Creates a hyperlink to another page, section, or external resource. -->
           <article class="card"><div class="card-body">
 
-            <!-- badge-used identifies the secondary audience visually.
-                The class allows CSS to control the badge appearance. -->
+            
+            <!-- Marks a short piece of text for styling or identification. -->
             <span class="badge badge-used">Secondary audience</span>
 
-            <!-- h3 provides the heading for the secondary audience card.
-                It identifies parents and guardians as the audience. -->
+            
+            <!-- Defines a third-level heading within this content block. -->
             <h3>Parents and guardians</h3>
 
-            <!-- This paragraph explains the needs of parents and guardians.
-                It provides descriptive information about this audience. -->
+            
+            <!-- Starts a paragraph of descriptive text. -->
             <p>Adults funding a student's first year who need clear, fixed pricing, a checklist they can print, and reassurance that a second-hand item has been checked by a person.</p>
 
-            <!-- This unordered list contains important audience requirements.
-                The order of these requirements is not important. -->
+            
+            <!-- Starts an unordered, bulleted list. -->
             <ul>
 
-              <!-- This list item describes the budgeting requirement.
-                  It appears as a bullet point in the browser. -->
+              
+              <!-- Adds one item to the surrounding list. -->
               <li>Budget in advance with fixed-price bundles</li>
 
-              <!-- This item describes accessibility and presentation preferences.
-                  It is grouped with the other parent requirements. -->
+              
+              <!-- Adds one item to the surrounding list. -->
               <li>Larger type, plain language, printable checklist</li>
 
-              <!-- This item describes preferred contact methods.
-                  It is another bullet point within the unordered list. -->
+              
+              <!-- Adds one item to the surrounding list. -->
               <li>Direct contact by email or WhatsApp</li>
             </ul>
 
-            <!-- This hyperlink opens the Parent Hub section of products.html.
-                btn and btn-sm apply the site's button styling. -->
+            
+            <!-- Creates a hyperlink to another page, section, or external resource. -->
             <a class="btn btn-sm" href="products.html#parent-hub">Parent Hub</a>
           </div></article>
         </div>
       </div>
     </section>
 
-    <!-- Author section: says who designed and built the website.
-        id="author" lets other pages link straight to this section. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="section alt" id="author">
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap">
+        <!-- Groups related page elements into a container that can be styled with CSS. -->
         <div class="section-head">
+          <!-- Marks a short piece of text for styling or identification. -->
           <span class="eyebrow">The author</span>
+          <!-- Defines a second-level heading for this section. -->
           <h2>Meet the author</h2>
         </div>
 
+        <!-- Creates a CSS grid layout for arranging related content. -->
         <div class="grid grid-2">
+            <!-- Creates a styled information panel. -->
             <div class="info-box author-box">
+                <!-- Groups the author's profile image. -->
                 <div class="author-image">
+                <!-- Displays an image; its attributes specify the source, alternative text, dimensions, and loading behaviour. -->
                 <img
                     class="author"
                     src="https://media.licdn.com/dms/image/v2/D4D35AQHDiZjqIjth8w/profile-framedphoto-shrink_400_400/B4DZ.psKQ.J4AY-/0/1785258354110?e=1792270800&v=beta&t=Wg7vJli-6x9YSGnBg3N_AEXnzOdP8eskuil-V7Oq4SA"
@@ -347,15 +395,19 @@
                 >
                 </div>
 
+                <!-- Groups the author's name and biography. -->
                 <div class="author-info">
+                <!-- Defines a third-level heading within this content block. -->
                 <h3>Leletu Kamana</h3>
 
+                <!-- Starts a paragraph of descriptive text. -->
                 <p>
                     First-year Diploma in Information Technology
                     (Software Development) student at The IIE Rosebank
                     International, Port Elizabeth Campus.
                 </p>
 
+                <!-- Starts a paragraph of descriptive text. -->
                 <p>
                     Campus-Cart is the website project for the WEDE5020
                     module, created by Leletu and published on GitHub Pages.
@@ -363,11 +415,17 @@
                 </div>
             </div>
 
+          <!-- Creates a styled information panel. -->
           <div class="info-box">
+            <!-- Defines a third-level heading within this content block. -->
             <h3>Find the author online</h3>
+            <!-- Starts an unordered, bulleted list. -->
             <ul>
+              <!-- Adds one item to the surrounding list. -->
               <li><a href="https://github.com/leletu-kamana" target="_blank" rel="noopener noreferrer">GitHub profile</a></li>
+              <!-- Adds one item to the surrounding list. -->
               <li><a href="https://github.com/leletu-kamana/campus-cart" target="_blank" rel="noopener noreferrer">Campus-Cart source code</a></li>
+              <!-- Adds one item to the surrounding list. -->
               <li><a href="https://leletu-kamana-portfolio-2026.vercel.app/" target="_blank" rel="noopener noreferrer">Personal portfolio</a></li>
             </ul>
           </div>
@@ -375,25 +433,38 @@
       </div>
     </section>
 
-    <!-- Licence and credits: who owns the site and which third-party software and data it uses.
-        id="licence" lets the footer link straight to this section. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="section" id="licence">
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap">
+        <!-- Groups related page elements into a container that can be styled with CSS. -->
         <div class="section-head">
+          <!-- Marks a short piece of text for styling or identification. -->
           <span class="eyebrow">Licence</span>
+          <!-- Defines a second-level heading for this section. -->
           <h2>Licence and credits</h2>
         </div>
 
+        <!-- Creates a CSS grid layout for arranging related content. -->
         <div class="grid grid-2">
+          <!-- Creates a styled information panel. -->
           <div class="info-box">
+            <!-- Defines a third-level heading within this content block. -->
             <h3>This website</h3>
+            <!-- Starts a paragraph of descriptive text. -->
             <p>&copy; 2026 Leletu Kamana. Campus-Cart is a student demonstration project created for the WEDE5020 module at The IIE Rosebank International, Port Elizabeth Campus. It does not sell real products or process real payments.</p>
           </div>
 
+          <!-- Creates a styled information panel. -->
           <div class="info-box">
+            <!-- Defines a third-level heading within this content block. -->
             <h3>Third-party software and data</h3>
+            <!-- Starts an unordered, bulleted list. -->
             <ul>
+              <!-- Adds one item to the surrounding list. -->
               <li><a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 draws the collection hub map. Copyright &copy; 2010&ndash;2023 Volodymyr Agafonkin and &copy; 2010&ndash;2011 CloudMade, released under the BSD 2-Clause Licence. The licence text is kept in <code>assets/vendor/leaflet/LICENSE</code>.</li>
+              <!-- Adds one item to the surrounding list. -->
               <li>Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>, available under the Open Database Licence (ODbL).</li>
             </ul>
           </div>
@@ -401,130 +472,130 @@
       </div>
     </section>
 
-    <!-- This section provides a final call-to-action for visitors.
-        The navy class applies the darker section styling through CSS. -->
+    
+    <!-- Starts a section of related webpage content. -->
     <section class="section navy">
 
-      <!-- wrap keeps the call-to-action content aligned with the website.
-          It also controls the maximum width of the content. -->
+      
+      <!-- Creates a width-constrained container for aligning page content. -->
       <div class="wrap">
 
-        <!-- h2 creates the main heading for this final section.
-            It asks the visitor whether they want to contact the business. -->
+        
+        <!-- Defines a second-level heading for this section. -->
         <h2>Want to talk to us?</h2>
 
-        <!-- This paragraph explains the two available contact options.
-            It gives the user context before the action buttons. -->
+        
+        <!-- Starts a paragraph of descriptive text. -->
         <p>Send a pre-purchase enquiry about a specific bundle, or use the general contact form.</p>
 
-        <!-- This link opens the enquiry page.
-            The btn class makes the hyperlink visually appear as a button. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a class="btn" href="enquiry.html">Send an enquiry</a>
 
-        <!-- This link opens the general contact page.
-            btn-ghost-light provides an alternative button appearance. -->
+        
+        <!-- Creates a hyperlink to another page, section, or external resource. -->
         <a class="btn btn-ghost-light" href="contact.html">Contact us</a>
       </div>
     </section>
   </main>
 
-  <!-- <footer> contains information displayed at the bottom of the webpage.
-      It commonly contains company details, navigation and contact information. -->
+  
+  <!-- Starts the footer content shown at the bottom of the page. -->
   <footer>
 
-    <!-- wrap controls the footer width while footer-grid controls its layout.
-        Both classes are defined in the external CSS stylesheet. -->
+    
+    <!-- Creates a width-constrained container for aligning page content. -->
     <div class="wrap footer-grid">
 
-      <!-- This footer column contains the Campus-Cart description.
-          h4 provides a heading for this group of footer content. -->
+      
+      <!-- Groups related page elements into a container that can be styled with CSS. -->
       <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
 
-      <!-- This footer column contains shopping-related navigation.
-          The unordered list groups related navigation links together. -->
+      
+      <!-- Groups related page elements into a container that can be styled with CSS. -->
       <div><h4>Shop</h4><ul>
 
-        <!-- Each <li> represents one item in the navigation list.
-            The <a> element makes the item clickable. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="products.html">Shop New</a></li>
 
-        <!-- This link targets the Shop section containing second-hand products.
-            The URL fragment identifies the target section. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="products.html#shop">Second-Hand</a></li>
 
-        <!-- &amp; displays the ampersand symbol in HTML.
-            The fragment targets the Deals & Gallery section. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="products.html#deals-gallery">Deals &amp; Gallery</a></li>
 
-        <!-- This link targets the Sell With Us section.
-            URL fragments allow users to jump directly to specific content. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="products.html#sell-with-us">Sell With Us</a></li>
       </ul></div>
 
-      <!-- This footer column contains general company navigation.
-          The links provide access to important website pages and sections. -->
+      
+      <!-- Groups related page elements into a container that can be styled with CSS. -->
       <div><h4>Company</h4><ul>
 
-        <!-- This hyperlink opens the About page.
-            The relative path works because both files are in the pages folder. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="about.html">About</a></li>
 
-        <!-- This link targets the Parent Hub section of products.html.
-            The #parent-hub fragment identifies the destination. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="products.html#parent-hub">Parent Hub</a></li>
 
-        <!-- This hyperlink opens the enquiry page.
-            href stores the relative destination of the link. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="enquiry.html">Enquiry</a></li>
-                      <!-- Creates one item within the unordered list. -->
+                      
+                      <!-- Adds one item to the surrounding list. -->
                       <li><a href="coverage.html">Coverage</a></li>
 
-        <!-- This hyperlink opens the contact page.
-            It allows visitors to reach the general contact section. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="contact.html">Contact</a></li>
 
-        <!-- This hyperlink opens the Account page.
-            The browser follows the relative URL stored in the href attribute. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="account.html">Account</a></li>
       </ul></div>
 
-      <!-- This footer column contains the available contact methods.
-          The unordered list groups the contact information together. -->
+      
+      <!-- Groups related page elements into a container that can be styled with CSS. -->
       <div><h4>Reach us</h4><ul>
 
-        <!-- mailto: opens the user's default email application.
-            The email address after mailto: becomes the recipient. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
 
-        <!-- This external hyperlink opens a WhatsApp conversation.
-            The URL uses South Africa's international country code. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li> 
 
-        <!-- This list item displays the normal business operating hours.
-            It is plain text because the opening hours are not interactive. -->
+        
+        <!-- Adds one item to the surrounding list. -->
         <li>Mon–Fri, 09:00–17:00 SAST</li> 
       </ul></div> 
     </div> 
 
-    <!-- footer-bottom creates the lower part of the footer.
-        The wrap class keeps the content aligned with the rest of the page. -->
+    
+    <!-- Creates a width-constrained container for aligning page content. -->
     <div class="wrap footer-bottom">
 
-    <!-- Provides a direct link to the XML sitemap so users and search engines can easily access the website's indexed page list. -->
-    <!-- The relative path points to the sitemap.xml file stored in the repository's seo folder. -->
+    
+    <!-- Starts a paragraph of descriptive text. -->
     <p><a href="about.html#licence">Licence and credits</a> | <a href="../sitemap.xml">Sitemap.xml</a></p>
 
 
-
-      <!-- &copy; is an HTML entity that displays the copyright symbol.
-          The paragraph also identifies this as a static demonstration website. -->
+      <!-- Starts a paragraph of descriptive text. -->
       <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
     </div> 
   </footer> 
   
-  <!-- <script> connects an external JavaScript file to this HTML page.
-      src specifies the location of script.js relative to the pages folder. -->
+  
+  <!-- Loads the shared JavaScript that controls site interactions. -->
   <script src="../assets/js/script.js"></script>
+    <!-- Loads the JavaScript features used by this page. -->
     <script src="../assets/js/features.js"></script> 
 
 </body> 
