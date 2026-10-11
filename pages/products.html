@@ -182,20 +182,48 @@
                   <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                   <div class="card-body">
                     <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+            <!-- role="tabpanel" identifies this element as tab content.
+              id="panel-new" matches the data-panel value of the first tab. -->
+            <div class="tab-panel" id="panel-new" role="tabpanel">
+
+              <!-- class="grid grid-4" applies two CSS classes to this container.
+                The classes control the layout and number of columns. -->
+              <div class="grid grid-4">
+
+                <!-- <article> represents a self-contained piece of content.
+                  Here it is used to represent one individual product. -->
+                <article class="card">
+
+                  <!-- src specifies the image location and alt provides alternative text.
+                    loading="lazy" allows the browser to delay loading the image. -->
+                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
+
+                  <!-- This div groups the text and controls belonging to the product.
+                    class="card-body" allows CSS to style the card content. -->
+                  <div class="card-body">
+
+                    <!-- <span> displays short inline content.
+                      The badge classes allow CSS to style the product status. -->
                     <span class="badge badge-new">New</span>
                     <!-- Defines a third-level heading for a subsection or card. -->
                     <h3>Duvet &amp; Linen Set (Double)</h3>
                     <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+                    <!-- class="price" identifies this paragraph as a product price.
+                      CSS can use the class to control its appearance. -->
                     <p class="price">R749.00</p>
                     <!-- Creates a paragraph of text. -->
                     <p>Winter duvet, fitted sheet, pillow and two covers.</p>
                     <!-- Creates a button for an action or interactive control. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. A data attribute stores a value that JavaScript can read. -->
+                    <!-- data-add stores the product name for JavaScript to read.
+                      data-price stores the product price as a custom data value. -->
                     <button class="btn btn-sm" data-add="Duvet &amp; Linen Set (Double)" data-price="749">Add to Order Summary</button>
                   <!-- Closes the <div> element opened earlier in this section. -->
                   </div>
                 <!-- Closes the <article> element opened earlier in this section. -->
                 </article>
                 <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+                <!-- This <article> represents another independent product.
+                  The card class allows it to share the same CSS styling. -->
                 <article class="card">
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
                   <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
@@ -262,10 +290,17 @@
             <!-- Groups related content so it can be arranged or styled together. The id "panel-used" lets CSS or JavaScript identify this element. The class "tab-panel" connects it to CSS styling or JavaScript behaviour. -->
             <div class="tab-panel" id="panel-used" role="tabpanel" hidden>
               <!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
+            <!-- hidden is a Boolean HTML attribute that hides the element.
+              JavaScript can remove it when the second tab is selected. -->
+            <div class="tab-panel" id="panel-used" role="tabpanel" hidden>
+              <!-- Inline style applies CSS directly to this element.
+                margin-bottom creates space below the information box. -->
               <div class="info-box" style="margin-bottom:24px">
                 <!-- Defines a third-level heading for a subsection or card. -->
                 <h3>How the marketplace works</h3>
                 <!-- Creates a paragraph of text. -->
+                <!-- <strong> gives semantic importance to the enclosed text.
+                  Browsers normally display strong text in bold. -->
                 <p>Every listing is submitted through a form, then <strong>manually reviewed</strong> by our team at a collection point before it appears here. There is no automatic upload and no live seller dashboard on this site.</p>
               <!-- Closes the <div> element opened earlier in this section. -->
               </div>
@@ -274,6 +309,16 @@
                 <!-- Creates the <figure> HTML element. -->
                 <figure>
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+              <!-- class="gallery" groups multiple image figures together.
+                CSS can use this class to control the gallery layout. -->
+              <div class="gallery">
+
+                <!-- <figure> groups media content with its related caption.
+                  It is useful when an image and description belong together. -->
+                <figure>
+
+                  <!-- src specifies the image path while alt provides alternative text.
+                      width and height provide the image dimensions. -->
                   <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
                   <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
                   <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
