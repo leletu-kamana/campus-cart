@@ -3720,3 +3720,269 @@ body.lightbox-open {
 .deals-more .btn[hidden] {
     display: none; /* Keeps a hidden button out of the layout. */
 }
+
+/* ==========================================================
+   LEGAL PAGES, COOKIE BANNER AND CONSENT PLACEHOLDERS
+   Used by privacy.html, terms.html, cookies.html, returns.html
+   and assets/js/consent.js
+   ========================================================== */
+
+/* ---------- Legal pages ---------- */
+
+/* Keeps long policy text at a comfortable reading width. */
+.legal {
+    max-width: 820px; /* Limits the line length so the text is easy to read. */
+}
+
+/* Small line under the page title with the date and version. */
+.legal-meta {
+    margin-bottom: 20px; /* Sets the space between the line and the notice below it. */
+    color: var(--grey-dark); /* Uses the muted text colour. */
+    font-size: 0.92rem; /* Makes the text slightly smaller than the body text. */
+}
+
+/* The "On this page" list of links. */
+.legal-toc {
+    margin: 24px 0 8px; /* Sets the space above and below the list. */
+    padding: 18px 22px; /* Sets the space inside the box. */
+    background: var(--grey); /* Gives the box a light background. */
+    border-radius: var(--radius); /* Rounds the corners to match the other boxes. */
+}
+
+/* The heading inside the "On this page" box. */
+.legal-toc h2 {
+    margin-bottom: 8px; /* Sets the space below the heading. */
+    font-size: 1.1rem; /* Makes the heading smaller than a section heading. */
+}
+
+/* The numbered list of links. */
+.legal-toc ol {
+    margin: 0; /* Removes the default outer spacing. */
+    padding-left: 22px; /* Leaves room for the numbers. */
+    columns: 2 260px; /* Splits the list into columns that are at least 260px wide. */
+    column-gap: 28px; /* Sets the space between the columns. */
+}
+
+/* Each link in the list. */
+.legal-toc li {
+    padding: 3px 0; /* Adds a little space above and below each link. */
+    break-inside: avoid; /* Stops one link from being split between two columns. */
+}
+
+/* Section headings inside the policy text. */
+.legal h2 {
+    margin-top: 40px; /* Sets the space above each section. */
+    font-size: 1.5rem; /* Makes the section headings a little smaller than on other pages. */
+}
+
+/* Lists inside the policy text. */
+.legal ul,
+.legal ol {
+    margin: 0 0 16px; /* Sets the space below each list. */
+    padding-left: 24px; /* Indents the list items. */
+}
+
+/* Each list item. */
+.legal li {
+    margin-bottom: 6px; /* Adds space between the list items. */
+}
+
+/* Wrapper that lets a wide table scroll sideways on small screens. */
+.legal-table-wrap {
+    overflow-x: auto; /* Adds a sideways scroll bar only when the table is too wide. */
+    margin-bottom: 20px; /* Sets the space below the table. */
+}
+
+/* The tables in the cookie policy. */
+.legal-table {
+    width: 100%; /* Makes the table fill the available width. */
+    min-width: 640px; /* Stops the columns from being squashed too far. */
+    border-collapse: collapse; /* Merges the cell borders into single lines. */
+    font-size: 0.95rem; /* Makes the table text slightly smaller. */
+}
+
+/* The table caption. */
+.legal-table caption {
+    padding-bottom: 8px; /* Sets the space between the caption and the table. */
+    font-weight: 800; /* Makes the caption bold. */
+    text-align: left; /* Aligns the caption to the left. */
+}
+
+/* Header and data cells. */
+.legal-table th,
+.legal-table td {
+    padding: 10px 12px; /* Sets the space inside each cell. */
+    border-bottom: 1px solid var(--grey-mid); /* Draws a thin line under each row. */
+    text-align: left; /* Aligns the text to the left. */
+    vertical-align: top; /* Starts the text at the top of the cell. */
+}
+
+/* Header cells. */
+.legal-table th {
+    color: var(--yellow); /* Shows the header text in yellow. */
+    background: var(--navy); /* Gives the header row the navy background. */
+}
+
+/* ---------- Footer legal links ---------- */
+
+/* A button that looks like a footer link, used for "Cookie settings". */
+.link-button {
+    padding: 0; /* Removes the button padding. */
+    color: inherit; /* Uses the same colour as the links around it. */
+    background: none; /* Removes the button background. */
+    border: 0; /* Removes the button border. */
+    font: inherit; /* Uses the same font as the links around it. */
+    text-decoration: underline; /* Underlines it so it looks clickable. */
+    cursor: pointer; /* Shows a pointer when the mouse is over it. */
+}
+
+/* Highlights the button the same way the footer links are highlighted. */
+.link-button:hover {
+    color: var(--yellow); /* Turns the text yellow on hover. */
+}
+
+/* ---------- Cookie banner ---------- */
+
+/* The banner that sits at the bottom of the screen. */
+.cookie-banner {
+    position: fixed; /* Keeps the banner on the screen while the page scrolls. */
+    right: 12px; /* Leaves a small gap on the right. */
+    bottom: 12px; /* Leaves a small gap at the bottom. */
+    left: 12px; /* Leaves a small gap on the left. */
+    z-index: 99980; /* Places it above the page but below the lightbox and quick view. */
+    max-width: 880px; /* Stops the banner from stretching across wide screens. */
+    max-height: 88vh; /* Keeps the banner from covering the whole screen on small phones. */
+    margin: 0 auto; /* Centres the banner. */
+    padding: 20px 22px; /* Sets the space inside the banner. */
+    overflow-y: auto; /* Lets the banner scroll if the content is taller than the screen. */
+    color: var(--white); /* Shows white text. */
+    background: var(--navy); /* Uses the navy background. */
+    border: 2px solid var(--yellow); /* Draws a yellow border. */
+    border-radius: var(--radius); /* Rounds the corners. */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); /* Adds a shadow so the banner stands out. */
+}
+
+/* The hidden attribute must win over any display value. */
+.cookie-banner[hidden],
+.cookie-settings[hidden],
+.cookie-actions[hidden] {
+    display: none; /* Keeps hidden parts out of the layout. */
+}
+
+/* The banner title. */
+.cookie-banner .cookie-title {
+    margin-bottom: 8px; /* Sets the space below the title. */
+    color: var(--yellow); /* Shows the title in yellow. */
+    font-size: 1.25rem; /* Sets the title size. */
+}
+
+/* Paragraphs inside the banner. */
+.cookie-banner p {
+    margin-bottom: 12px; /* Sets the space below each paragraph. */
+    color: var(--white); /* Keeps the text white. */
+    font-size: 0.97rem; /* Makes the text slightly smaller. */
+}
+
+/* Links inside the banner. */
+.cookie-banner a {
+    color: var(--yellow); /* Shows the links in yellow so they can be seen on navy. */
+}
+
+/* The row of buttons. */
+.cookie-actions {
+    display: flex; /* Lays the buttons out in a row. */
+    flex-wrap: wrap; /* Lets the buttons wrap on narrow screens. */
+    gap: 10px; /* Sets the space between the buttons. */
+}
+
+/* The group of settings choices. */
+.cookie-options {
+    margin: 0 0 14px; /* Sets the space below the group. */
+    padding: 0; /* Removes the default padding. */
+    border: 0; /* Removes the default border. */
+}
+
+/* The group name. */
+.cookie-options legend {
+    margin-bottom: 8px; /* Sets the space below the group name. */
+    padding: 0; /* Removes the default padding. */
+    font-weight: 800; /* Makes the group name bold. */
+}
+
+/* One tick box with its text. */
+.cookie-option {
+    display: flex; /* Puts the tick box and the text side by side. */
+    align-items: flex-start; /* Lines the tick box up with the first line of text. */
+    gap: 12px; /* Sets the space between the tick box and the text. */
+    margin-bottom: 12px; /* Sets the space between the options. */
+}
+
+/* The tick box itself. The global input rule makes inputs full width, so this resets it. */
+.cookie-banner input[type="checkbox"] {
+    flex: 0 0 22px; /* Keeps the tick box a fixed size. */
+    width: 22px; /* Sets the width. */
+    height: 22px; /* Sets the height. */
+    min-width: 22px; /* Stops the tick box from shrinking. */
+    margin: 2px 0 0; /* Lines it up with the text. */
+    padding: 0; /* Removes the input padding. */
+    accent-color: var(--yellow); /* Colours the tick in the brand yellow. */
+}
+
+/* The label next to the tick box. */
+.cookie-option label {
+    color: var(--white); /* Keeps the text white. */
+    cursor: pointer; /* Shows a pointer because clicking the label ticks the box. */
+}
+
+/* The explanation under each option name. */
+.cookie-help {
+    display: block; /* Puts the explanation on its own line. */
+    font-size: 0.9rem; /* Makes the explanation slightly smaller. */
+    opacity: 0.9; /* Softens the explanation a little. */
+}
+
+/* ---------- Blocked map placeholders ---------- */
+
+/* The message shown in place of a map that has not been allowed yet. */
+.consent-placeholder {
+    display: flex; /* Stacks the message and the button. */
+    flex-direction: column; /* Puts the button under the message. */
+    align-items: center; /* Centres the content sideways. */
+    justify-content: center; /* Centres the content up and down. */
+    gap: 12px; /* Sets the space between the message and the button. */
+    min-height: 260px; /* Gives the box a map-like height. */
+    padding: 24px; /* Sets the space inside the box. */
+    color: var(--navy); /* Shows navy text. */
+    background: var(--grey); /* Uses a light background. */
+    text-align: center; /* Centres the text. */
+}
+
+/* Removes the extra space under the message. */
+.consent-placeholder p {
+    margin: 0; /* Removes the paragraph margin. */
+    max-width: 520px; /* Keeps the message at a readable width. */
+}
+
+/* A blocked map frame must not show an empty iframe. */
+.map-frame iframe[hidden] {
+    display: none !important; /* Hides the iframe until maps are allowed. */
+}
+
+/* Hides the banner when the page is printed. */
+@media print {
+    .cookie-banner {
+        display: none !important; /* Removes the banner from the printout. */
+    }
+}
+
+/* Links inside the legal pages use navy and an underline so they are easy to read on white. */
+.legal a:not(.btn) {
+    color: var(--navy); /* Shows the links in navy instead of the yellow link colour. */
+    text-decoration: underline; /* Underlines the links so they are clear without relying on colour. */
+    text-underline-offset: 2px; /* Moves the underline slightly away from the text. */
+}
+
+/* Highlights a legal link when the mouse is over it. */
+.legal a:not(.btn):hover {
+    background: var(--yellow); /* Gives the link a yellow highlight on hover. */
+}
