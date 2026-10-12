@@ -25,6 +25,16 @@ The website has two main audiences:
 
 The project uses **HTML5, CSS3 and vanilla JavaScript**. It is a front-end demonstration and does not use a backend database, real user authentication or an online payment gateway. This keeps the project focused on website structure, content, navigation, responsive design and client-side interaction.
 
+## Legal and Privacy Pages
+The website includes the pages and controls a South African trading site is expected to have:
+- **Privacy Policy** (`pages/privacy.html`) written around the Protection of Personal Information Act (POPIA).
+- **Terms and Conditions** (`pages/terms.html`).
+- **Cookie Policy** (`pages/cookies.html`) listing the browser storage and outside services the site uses.
+- **Returns, Refunds and Delivery** (`pages/returns.html`) based on the Consumer Protection Act and the Electronic Communications and Transactions Act.
+- **Cookie banner and settings** (`assets/js/consent.js`). Embedded maps (Google Maps and OpenStreetMap) stay switched off until the visitor allows them. A "Cookie settings" button in every footer reopens the choices.
+
+These pages describe a fictional demonstration business. They are drafts and should be reviewed by a legal professional before Campus-Cart trades for real.
+
 ## Project Goals and Objectives
 
 ### Goals
