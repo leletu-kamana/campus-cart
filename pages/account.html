@@ -98,7 +98,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -272,9 +272,9 @@
               <!-- Creates a paragraph of text. The id "order-total" lets CSS or JavaScript identify this element. The class "order-total" connects it to CSS styling or JavaScript behaviour. -->
               <p style="margin-top:18px">Total: <span class="order-total" id="order-total">R0.00</span></p>
               <!-- Creates a button for an action or interactive control. The id "order-clear" lets CSS or JavaScript identify this element. The class "btn btn-outline btn-sm" connects it to CSS styling or JavaScript behaviour. -->
-              <button class="btn btn-outline btn-sm" id="order-clear">Clear summary</button>
+              <button type="button" class="btn btn-outline btn-sm" id="order-clear">Clear summary</button>
               <!-- Creates a button for an action or interactive control. The id "skip-to-address" lets CSS or JavaScript identify this element. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
-              <button class="btn btn-sm" id="skip-to-address">Skip to Address</button>
+              <button type="button" class="btn btn-sm" id="skip-to-address">Skip to Address</button>
             </div>
           </div>
           <!-- Groups related content so it can be arranged or styled together. The id "step-address" lets CSS or JavaScript identify this element. The class "step" connects it to CSS styling or JavaScript behaviour. -->
@@ -317,7 +317,7 @@
             <!-- Creates a link that opens an email message to the specified address. The href attribute points to an email address. The id "checkout-email" lets CSS or JavaScript identify this element. The class "btn btn-navy" connects it to CSS styling or JavaScript behaviour. -->
             <a class="btn btn-navy" id="checkout-email" href="mailto:orders@campus-cart.co.za">Send by email</a>
             <!-- Creates a button for an action or interactive control. The id "checkout-eft" lets CSS or JavaScript identify this element. The class "btn btn-outline" connects it to CSS styling or JavaScript behaviour. -->
-            <button class="btn btn-outline" id="checkout-eft">Show EFT instructions</button>
+            <button type="button" class="btn btn-outline" id="checkout-eft">Show EFT instructions</button>
             <!-- Groups related content so it can be arranged or styled together. The id "eft-details" lets CSS or JavaScript identify this element. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
             <div class="info-box" id="eft-details" hidden style="margin-top:20px">
               <!-- Defines a third-level heading for a subsection or card. -->
@@ -406,12 +406,28 @@
       </div>
       <!-- Groups related content so it can be arranged or styled together. The class "wrap footer-bottom" connects it to CSS styling or JavaScript behaviour. -->
       <div class="wrap footer-bottom">
+        <!-- Legal links and the button that reopens the cookie choices. -->
+        <p class="footer-legal">
+          <a href="privacy.html">Privacy Policy</a>
+           | 
+          <a href="terms.html">Terms &amp; Conditions</a>
+           | 
+          <a href="cookies.html">Cookie Policy</a>
+           | 
+          <a href="returns.html">Returns &amp; Delivery</a>
+           | 
+          <button type="button" class="link-button" data-cookie-settings>Cookie settings</button>
+        </p>
+        <!-- Head office address. -->
+        <p>Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, 0083.</p>
         <!-- Creates a paragraph of text. The href attribute points to the specified page or resource. -->
         <p><a href="about.html#licence">Licence and credits</a> | <a href="../sitemap.xml">Sitemap.xml</a></p>
         <!-- Creates a paragraph of text. -->
         <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
       </div>
     </footer>
+    <!-- Loads the cookie and privacy choices before the other scripts. -->
+    <script src="../assets/js/consent.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="../assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
