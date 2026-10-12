@@ -111,7 +111,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -425,12 +425,28 @@
       </div>
       <!-- Groups related content so it can be arranged or styled together. The class "wrap footer-bottom" connects it to CSS styling or JavaScript behaviour. -->
       <div class="wrap footer-bottom">
+        <!-- Legal links and the button that reopens the cookie choices. -->
+        <p class="footer-legal">
+          <a href="pages/privacy.html">Privacy Policy</a>
+           | 
+          <a href="pages/terms.html">Terms &amp; Conditions</a>
+           | 
+          <a href="pages/cookies.html">Cookie Policy</a>
+           | 
+          <a href="pages/returns.html">Returns &amp; Delivery</a>
+           | 
+          <button type="button" class="link-button" data-cookie-settings>Cookie settings</button>
+        </p>
+        <!-- Head office address. -->
+        <p>Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, 0083.</p>
         <!-- Creates a paragraph of text. The href attribute points to the specified page or resource. -->
         <p><a href="pages/about.html#licence">Licence and credits</a> | <a href="sitemap.xml">Sitemap.xml</a></p>
         <!-- Creates a paragraph of text. -->
         <p>&copy; 2026 Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
       </div>
     </footer>
+    <!-- Loads the cookie and privacy choices before the other scripts. -->
+    <script src="assets/js/consent.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
