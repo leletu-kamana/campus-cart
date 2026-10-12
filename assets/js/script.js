@@ -416,7 +416,7 @@ function initNav() { // Declares a reusable function for this feature.
     /* ---------- Hardcoded catalogue data (no database) ---------- */
     // Stores reusable image paths so product objects can reference consistent asset locations.
     var IMG = { // Declares and initializes the variable used by this operation.
-        bundle: "images/bundles/starter-bundle.jpg", // Defines a property or argument in the current structure.
+        bundle: "images/bundles/starter-bundle-3.jpg", // Defines a property or argument in the current structure.
         hero: "images/bundles/hero-campus.jpg", // Defines a property or argument in the current structure.
         used: "images/second-hand/marketplace.jpg" // Defines a property or argument in the current structure.
     }; // Closes the current block, expression, or function call.
