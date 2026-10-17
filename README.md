@@ -12,9 +12,9 @@
 
 ## Live Website
 
-**View Campus-Cart:** [https://campus-cart-olive.vercel.app/](https://campus-cart-olive.vercel.app/)
+**View Campus-Cart:** [https://campus-cart-olive.vercel.app/](https://campus-cart-olive.vercel.app/)/ [https://leletu-kamana.github.io/campus-cart/](https://leletu-kamana.github.io/campus-cart/)
 
-The website is published using GitHub Pages. It is a front-end demonstration and does not process real payments or use real user accounts.
+The website is published using GitHub Pages and Vercel Pages. It is a front-end demonstration and does not process real payments or use real user accounts.
 
 ## Project Overview
 Campus-Cart is a fictional South African organisation created as a website project. The idea is to make it easier for students and families to find common tertiary-study essentials such as bedding, appliances, stationery, furniture, textbooks and starter bundles.
