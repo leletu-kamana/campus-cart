@@ -4842,3 +4842,64 @@ input[type="radio"] {
     background: var(--yellow); /* Turns the chip yellow on hover. */
 }
 
+/* ---------- 10. Content blocks ---------- */
+
+/* The filter and search bar above the product list. */
+.toolbar {
+    gap: 14px 16px; /* Sets the space between fields. */
+    padding: 18px 20px; /* Sets the space inside the bar. */
+    background: var(--white); /* Uses a white background. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+}
+
+/* Every field in the bar can grow to share the row. */
+.toolbar .field {
+    flex: 1 1 160px; /* Lets each field grow and shrink. */
+}
+
+/* The search field gets more room. */
+.toolbar .field:first-child {
+    flex: 2 1 260px; /* Makes the search field wider. */
+}
+
+/* Notice and tip boxes. */
+.info-box {
+    padding: 22px 24px; /* Sets the space inside the box. */
+    background: var(--yellow-soft); /* Uses a soft yellow background. */
+    border: 1px solid #f0dc8c; /* Draws a soft yellow border. */
+    border-left: 6px solid var(--yellow); /* Draws a strong yellow edge on the left. */
+}
+
+/* Empty state shown when a list has no items. */
+.empty-state {
+    padding: 36px 24px; /* Sets the space inside the box. */
+    background: var(--grey-light); /* Uses a light background. */
+    border: 2px dashed var(--grey-mid); /* Draws a dashed border so it reads as empty. */
+    border-radius: var(--radius); /* Rounds the corners. */
+}
+
+/* Gallery pictures zoom slightly on hover. */
+.gallery figure {
+    border-radius: 16px; /* Rounds the corners. */
+    transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease); /* Animates hover. */
+}
+
+/* Hover state of a gallery picture. */
+.gallery figure:hover {
+    transform: translateY(-3px); /* Lifts the picture. */
+    box-shadow: var(--shadow-hover); /* Strengthens the shadow. */
+}
+
+/* Frequently asked questions. */
+.acc-item {
+    border: 1.5px solid var(--line); /* Draws a soft border. */
+    transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease); /* Animates the open state. */
+}
+
+/* The open question stands out. */
+.acc-item[open] {
+    border-color: var(--navy); /* Darkens the border. */
+    box-shadow: var(--shadow); /* Adds a soft shadow. */
+}
+
