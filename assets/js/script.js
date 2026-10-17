@@ -491,9 +491,9 @@ function initNav() { // Declares a reusable function for this feature.
         { name: "Highlighter and Pen Pack", category: "stationery", condition: "new", price: 79, desc: "Twelve highlighters and pens in assorted colours for notes and revision.", img: "images/products/highlighters.jpg", alt: "Six coloured highlighters standing in a clear holder" } // Adds the product "Highlighter and Pen Pack" to the catalogue.
     ]; // Closes the current block, expression, or function call.
 
-    // Product photos that exist in assets/images/products/. A product only uses its own photo when its file name is listed here.
-    // Until then it shows the generic photo below, so the browser never asks for a file that is missing.
-    var PHOTOS = []; // Add a file name here, such as "electric-kettle-1-7l.jpg", after saving that photo.
+    // Product photos that exist. A product only uses its own photo when its file name is listed here.
+    // To add a photo: save it in assets/images/products/, set that product's img and alt in the DEALS list, and add the file name here.
+    var PHOTOS = ["bagpack.jpg", "bedding-duvets.jpg", "bundle-basic.jpg", "bundle-premium.jpg", "bundle-standard.jpg", "duvet.jpg", "essential-bundle.jpg", "highlighters.jpg", "kettle.jpg", "laptop-bag.jpg", "scientific-calculator.jpg", "stationery.jpg", "study-funiture.jpg", "table-chair.jpg", "table-fan.jpg", "table-lap.jpg", "textbook.jpg"]; // File names of the product photos that exist. Add a name here after saving a new photo in assets/images/products/.
     DEALS.forEach(function (d) { // Loops through every product.
         var file = d.img.split("/").pop(); // Gets the file name from the product's photo path.
         if (PHOTOS.indexOf(file) === -1) { d.img = d.condition === "used" ? IMG.used : IMG.bundle; } // Uses the generic photo when the product photo has not been added yet.
