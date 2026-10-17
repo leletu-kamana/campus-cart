@@ -552,9 +552,9 @@ function initNav() { // Declares a reusable function for this feature.
         ? '<span class="badge badge-new">New</span>' // Performs the next step in the current Campus-Cart operation.
         : '<span class="badge badge-used">Second-hand</span>'; // Performs the next step in the current Campus-Cart operation.
         return '<article class="card">' + // Exits this function and returns the stated value.
-        '<img src="' + BASE + item.img + '" alt="' + item.name + '" loading="lazy" width="1200" height="900">' + // Provides a string segment used to build the output.
+        '<img src="' + BASE + item.img + '" alt="' + (item.alt || item.name) + '" loading="lazy" width="800" height="800" decoding="async">' + // Uses the descriptive alt text when the product has one.
         '<div class="card-body">' + // Provides a string segment used to build the output.
-        badge + '<span class="badge badge-verified">Verified Seller</span>' + // Performs the next step in the current Campus-Cart operation.
+        '<div class="card-tags">' + badge + '<span class="badge badge-verified">Verified Seller</span></div>' + // Puts the status labels in one row.
         '<h3>' + item.name + '</h3>' + // Provides a string segment used to build the output.
         '<p class="price">' + currency(item.price) + '</p>' + // Provides a string segment used to build the output.
         '<p>' + item.desc + '</p>' + // Provides a string segment used to build the output.
@@ -562,7 +562,7 @@ function initNav() { // Declares a reusable function for this feature.
         '<button class="btn btn-sm" data-add="' + item.name + '" data-price="' + item.price + '">Add to Order Summary</button>' + // Provides a string segment used to build the output.
         '<button class="btn btn-sm btn-outline" type="button" data-quickview' + // Provides a string segment used to build the output.
         ' data-name="' + attr(item.name) + '" data-price="' + item.price + '" data-desc="' + attr(item.desc) + '"' + // Provides a string segment used to build the output.
-        ' data-img="' + BASE + item.img + '" data-condition="' + item.condition + '">Quick view</button>' + // Provides a string segment used to build the output.
+        ' data-img="' + BASE + item.img + '" data-alt="' + (item.alt || item.name) + '" data-condition="' + item.condition + '">Quick view</button>' + // Passes the photo, its description and the condition to the quick view window.
         '</div>' + // Provides a string segment used to build the output.
         '</div></article>'; // Provides a string segment used to build the output.
     } // Closes the current block, expression, or function call.
