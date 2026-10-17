@@ -4476,3 +4476,137 @@ main:focus {
     box-shadow: none; /* Removes the shadow. */
 }
 
+/* ---------- 7. Cards ---------- */
+
+/* Product, bundle and information cards. */
+.card {
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-radius: var(--radius); /* Uses the larger radius. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+    transition: transform 0.28s var(--ease), box-shadow 0.28s var(--ease), border-color 0.28s var(--ease); /* Animates the hover effect. */
+}
+
+/* Hover state of a card. */
+.card:hover {
+    transform: translateY(-5px); /* Lifts the card. */
+    box-shadow: var(--shadow-hover); /* Strengthens the shadow. */
+    border-color: rgba(13, 27, 62, 0.22); /* Darkens the border slightly. */
+}
+
+/* The product photo. A soft shimmer shows while the image is still loading. */
+.card img {
+    aspect-ratio: 4 / 3; /* Keeps every photo the same shape so cards line up. */
+    height: auto; /* Lets the aspect ratio set the height. */
+    background: linear-gradient(100deg, #eceef2 30%, #f7f8fa 50%, #eceef2 70%); /* Draws the loading shimmer. */
+    background-size: 200% 100%; /* Makes the shimmer wide enough to move. */
+    animation: ccShimmer 1.4s linear infinite; /* Moves the shimmer across. */
+    transition: transform 0.6s var(--ease); /* Animates the zoom on hover. */
+}
+
+/* Slowly zoom the photo when the card is hovered. */
+.card:hover img {
+    transform: scale(1.045); /* Zooms the photo slightly. */
+}
+
+/* Shimmer movement. */
+@keyframes ccShimmer {
+    0% { background-position: 100% 0; } /* Starts on the right. */
+    100% { background-position: -100% 0; } /* Ends on the left. */
+}
+
+/* Space inside a card below the photo. */
+.card-body {
+    padding: 18px 18px 20px; /* Sets the space inside the card body. */
+}
+
+/* The row of small labels such as New and Verified Seller. */
+.card-tags {
+    display: flex; /* Lines the labels up in a row. */
+    flex-wrap: wrap; /* Lets the labels wrap. */
+    gap: 6px; /* Sets the space between labels. */
+    margin-bottom: 10px; /* Sets the space below the labels. */
+}
+
+/* Labels inside the row do not need their own margins. */
+.card-tags .badge {
+    margin: 0; /* Removes the margin. */
+}
+
+/* Product title. */
+.card-body h3 {
+    margin-bottom: 4px; /* Sets the space below the title. */
+}
+
+/* Price with a yellow highlighter stroke behind it. */
+.card-body .price {
+    align-self: flex-start; /* Stops the price from stretching across the card. */
+    margin: 4px 0 10px; /* Sets the space around the price. */
+    padding: 0 4px; /* Adds a little space for the highlight. */
+    color: var(--navy); /* Shows the price in navy so it can be read. */
+    background: linear-gradient(transparent 58%, var(--yellow) 58%); /* Draws the yellow highlighter stroke. */
+    font-size: 1.35rem; /* Makes the price large. */
+    font-weight: 800; /* Makes the price bold. */
+    letter-spacing: -0.01em; /* Tightens the digits slightly. */
+}
+
+/* Card description. */
+.card-body p {
+    color: var(--text-light); /* Uses the secondary text colour. */
+    font-size: 0.95rem; /* Makes the description slightly smaller. */
+    line-height: 1.55; /* Keeps the description compact. */
+}
+
+/* The row with the add and quick view buttons. */
+.card-actions {
+    margin-top: auto; /* Pins the buttons to the bottom of the card. */
+    padding-top: 14px; /* Sets the space above the buttons. */
+}
+
+/* The main add button takes the remaining space. */
+.card-actions .btn:first-child {
+    flex: 1 1 auto; /* Lets the add button grow. */
+}
+
+/* Dark card variant. */
+.card-navy {
+    border-color: var(--navy); /* Matches the border to the card. */
+}
+
+/* Placeholder cards shown while the product list loads. */
+.card-skeleton {
+    overflow: hidden; /* Clips the shimmer to the card. */
+    background: var(--white); /* Uses a white background. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-radius: var(--radius); /* Matches the real cards. */
+}
+
+/* The grey blocks inside a placeholder card. */
+.sk-block {
+    background: linear-gradient(100deg, #eceef2 30%, #f7f8fa 50%, #eceef2 70%); /* Draws the shimmer. */
+    background-size: 200% 100%; /* Makes the shimmer wide enough to move. */
+    animation: ccShimmer 1.4s linear infinite; /* Moves the shimmer across. */
+    border-radius: 8px; /* Rounds the blocks. */
+}
+
+/* The placeholder photo. */
+.sk-img {
+    aspect-ratio: 4 / 3; /* Matches the real photo shape. */
+    border-radius: 0; /* Lets the card clip the corners. */
+}
+
+/* The placeholder lines. */
+.sk-line {
+    height: 14px; /* Sets the line height. */
+    margin: 14px 18px 0; /* Sets the space around the line. */
+}
+
+/* A shorter line. */
+.sk-line.short {
+    width: 45%; /* Makes the line shorter. */
+}
+
+/* Space at the bottom of a placeholder card. */
+.card-skeleton .sk-line:last-child {
+    margin-bottom: 22px; /* Adds space under the last line. */
+}
+
