@@ -5313,3 +5313,805 @@ footer h3 {
     }
 }
 
+/* ---------- 404 page ---------- */
+
+/* Message on the left, illustration on the right. */
+.error-hero {
+    display: grid; /* Lays out two columns. */
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); /* Gives the message slightly more room. */
+    gap: clamp(24px, 4vw, 48px); /* Scales the space between the columns. */
+    align-items: center; /* Centres both columns vertically. */
+}
+
+/* The illustration. */
+.error-hero__art {
+    margin: 0; /* Removes the default figure margin. */
+}
+
+/* The illustration picture. */
+.error-hero__art img {
+    background: var(--white); /* Matches the white background of the illustration. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-radius: var(--radius); /* Rounds the corners. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+}
+
+/* On tablets and phones the illustration goes below the message. */
+@media (max-width: 820px) {
+    .error-hero {
+        grid-template-columns: 1fr; /* Stacks the message and the illustration. */
+    }
+}
+
+/* The three links on the 404 page need a little space between them when they stack on a phone. */
+.error-hero__text p .btn {
+    margin-bottom: 10px; /* Sets the space below each link button. */
+}
+
+/* 
+  Scopes the visual refresh exclusively to the 404 error page.
+  Establishes the main flex container layout, minimum viewport height,
+  and default background and text colors.
+*/
+.cc404 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+  color: #14213d;
+}
+
+/* 
+  Creates a clean, compact header that remains fully usable on mobile.
+  Applies the primary dark theme background and a contrasting bottom border.
+*/
+.cc404-header {
+  width: 100%;
+  background: #0d1b3e;
+  color: #fff;
+  border-bottom: 3px solid #f5c542;
+}
+
+/* 
+  Defines the navigation bar layout and fluid maximum width.
+  Centers content horizontally and spaces child elements evenly.
+*/
+.cc404-nav {
+  width: min(1120px, calc(100% - 40px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* 
+  Styles the brand logo and title wrapper inside the header.
+  Ensures clean inline-flex alignment, spacing, and typography.
+*/
+.cc404-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+/* 
+  Formats the icon mark box next to the brand name.
+  Applies a rounded grid layout with high-contrast background coloring.
+*/
+.cc404-brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  background: #f5c542;
+  color: #0d1b3e;
+  font-size: 1.1rem;
+}
+
+/* 
+  Groups navigation links together with a flexible wrap layout.
+  Maintains consistent gap spacing across all list items.
+*/
+.cc404-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+}
+
+/* 
+  Styles individual navigation anchor links.
+  Sets readable font sizes, weights, and removes default text decoration.
+*/
+.cc404-nav-links a {
+  color: #eef2ff;
+  text-decoration: none;
+  font-size: .92rem;
+  font-weight: 650;
+}
+
+/* 
+  Defines hover and keyboard focus states for navigation links.
+  Changes text color to a bright accent yellow for clear visibility.
+*/
+.cc404-nav-links a:hover,
+.cc404-nav-links a:focus-visible {
+  color: #f5c542;
+}
+
+/* 
+  Keeps the core error page content centered with generous breathing room.
+  Uses flexible sizing and fluid padding to adapt across different screen sizes.
+*/
+.cc404-main {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  flex: 1;
+  padding: clamp(34px, 6vw, 76px) 0 48px;
+}
+
+/* 
+  Sets up a responsive two-column grid layout for the hero section.
+  Dynamically scales column sizes and gap spacing using clamp functions.
+*/
+.cc404-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 76px);
+}
+
+/* 
+  Styles the badge or eyebrow tag above the main heading.
+  Applies an uppercase pill shape with a clean border and distinct font weight.
+*/
+.cc404-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  color: #43516d;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+/* 
+  Creates a small decorative indicator dot inside the eyebrow badge.
+  Gives it a circular shape and vibrant accent background color.
+*/
+.cc404-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f5c542;
+}
+
+/* 
+  Formats the prominent 404 error code text number.
+  Uses massive fluid font sizing and tight line height for strong visual impact.
+*/
+.cc404-code {
+  margin: 18px 0 0;
+  color: #0d1b3e;
+  font-size: clamp(5.5rem, 15vw, 9.5rem);
+  font-weight: 900;
+  line-height: .88;
+  letter-spacing: -.09em;
+}
+
+/* 
+  Styles the primary headline title for the error message.
+  Limits maximum line width and applies proportional scaling with clamp.
+*/
+.cc404-title {
+  max-width: 620px;
+  margin: 20px 0 14px;
+  color: #0d1b3e;
+  font-size: clamp(1.9rem, 4vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+}
+
+/* 
+  Formats the descriptive paragraph copy text below the title.
+  Ensures optimal readability with a comfortable line height and muted color.
+*/
+.cc404-copy {
+  max-width: 540px;
+  margin: 0;
+  color: #5a667d;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* 
+  Arranges call-to-action buttons in a flexible wrap container.
+  Adds top margin separation and spacing between multiple buttons.
+*/
+.cc404-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* 
+  Styles standard interactive command buttons across the page.
+  Applies padding, rounded borders, dark theme colors, and transition effects.
+*/
+.cc404-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border: 2px solid #0d1b3e;
+  border-radius: 12px;
+  background: #0d1b3e;
+  color: #fff !important;
+  font: inherit;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+/* 
+  Adds a smooth hover lift animation and soft shadow to primary buttons.
+  Enhances tactile feedback when users move their cursor over them.
+*/
+.cc404-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 22px #0d1b3e20;
+}
+
+/* 
+  Provides alternative styling for secondary action buttons.
+  Swaps background and text colors for a clean outlined appearance.
+*/
+.cc404-button-secondary {
+  background: #fff;
+  color: #0d1b3e !important;
+}
+
+/* 
+  Ensures accessible high-contrast focus outlines for interactive elements.
+  Applies a clear custom outline ring to buttons and links on keyboard navigation.
+*/
+.cc404-button:focus-visible,
+.cc404-nav a:focus-visible,
+.cc404-quick-link:focus-visible,
+.cc404-game button:focus-visible {
+  outline: 3px solid #f5c542;
+  outline-offset: 4px;
+}
+
+/* 
+  Builds a lightweight CSS illustration, avoiding external image dependencies.
+  Uses layered shapes, gradients, and absolute positioning for custom graphics.
+*/
+.cc404-art {
+  position: relative;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #e4e9f2;
+  border-radius: 30px;
+  background: radial-gradient(circle at 50% 42%, #fff 0, #fff 25%, #eef2fb 70%);
+  box-shadow: 0 22px 60px #0d1b3e0c;
+}
+
+/* 
+  Generates shared structural pseudo-element circles for the artwork container.
+  Positions them absolutely with uniform border styling.
+*/
+.cc404-art::before,
+.cc404-art::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #dce3f0;
+  border-radius: 50%;
+}
+
+/* 
+  Sizes the outer decorative circular ring inside the art panel.
+  Creates depth and framing for the central illustration elements.
+*/
+.cc404-art::before {
+  width: 260px;
+  height: 260px;
+}
+
+/* 
+  Sizes the inner decorative circular ring inside the art panel.
+  Complements the outer ring to build a complete geometric backdrop.
+*/
+.cc404-art::after {
+  width: 205px;
+  height: 205px;
+}
+
+/* 
+  Styles the dashed orbital track path element.
+  Rotates the container at an angle to simulate a dynamic space orbit.
+*/
+.cc404-orbit {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  height: 105px;
+  border: 2px dashed #cbd5e7;
+  border-radius: 50%;
+  transform: rotate(-28deg);
+}
+
+/* 
+  Constructs the main backpack icon graphic element using pure CSS shapes.
+  Applies custom borders, background color, box shadow, and rotation.
+*/
+.cc404-backpack {
+  position: relative;
+  z-index: 2;
+  width: 142px;
+  height: 166px;
+  margin-top: 18px;
+  border: 5px solid #0d1b3e;
+  border-radius: 38px 38px 28px 28px;
+  background: #f5c542;
+  box-shadow: 12px 16px 0 #0d1b3e12;
+  transform: rotate(-7deg);
+}
+
+/* 
+  Draws the top carrying handle strap pseudo-element on the backpack graphic.
+  Positions it above the main body with rounded top borders.
+*/
+.cc404-backpack::before {
+  position: absolute;
+  top: -20px;
+  left: 35px;
+  width: 62px;
+  height: 34px;
+  border: 5px solid #0d1b3e;
+  border-bottom: 0;
+  border-radius: 22px 22px 0 0;
+  content: "";
+}
+
+/* 
+  Styles the front accessory pocket box element on the backpack illustration.
+  Positions it near the bottom with a clean white background.
+*/
+.cc404-pocket {
+  position: absolute;
+  right: 17px;
+  bottom: 17px;
+  left: 17px;
+  height: 57px;
+  border: 4px solid #0d1b3e;
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* 
+  Adds a small zipper or latch line detail onto the backpack pocket element.
+  Uses a centered horizontal bar pseudo-element.
+*/
+.cc404-pocket::after {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  width: 22px;
+  height: 5px;
+  border-radius: 4px;
+  background: #0d1b3e;
+  content: "";
+  transform: translateX(-50%);
+}
+
+/* 
+  Formats decorative floating star elements in the illustration canvas.
+  Positions them with high stacking order and distinct coloring.
+*/
+.cc404-star {
+  position: absolute;
+  z-index: 3;
+  color: #f0b900;
+  font-size: 2rem;
+}
+
+/* 
+  Positions the first decorative star element in the upper left area.
+  Places it precisely using percentage offsets.
+*/
+.cc404-star-one {
+  top: 52px;
+  left: 16%;
+}
+
+/* 
+  Positions the second decorative star element in the lower right area.
+  Adjusts font size slightly for visual variety.
+*/
+.cc404-star-two {
+  right: 15%;
+  bottom: 62px;
+  font-size: 1.5rem;
+}
+
+/* 
+  Styles a floating label tag element inside the illustration panel.
+  Applies a rounded card style with a slight rotation angle.
+*/
+.cc404-tag {
+  position: absolute;
+  z-index: 3;
+  right: 13%;
+  top: 55px;
+  padding: 8px 11px;
+  border: 1px solid #e4e9f2;
+  border-radius: 10px;
+  background: #fff;
+  color: #0d1b3e;
+  font-size: .8rem;
+  font-weight: 850;
+  transform: rotate(7deg);
+}
+
+/* 
+  Formats the caption text anchored at the bottom of the artwork container.
+  Ensures subtle contrast and proper stacking context.
+*/
+.cc404-art-caption {
+  position: absolute;
+  bottom: 22px;
+  z-index: 3;
+  color: #69758b;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+/* 
+  Presents helpful navigation destinations as clear, tappable cards.
+  Arranges items in a responsive grid layout with hover elevation effects.
+*/
+.cc404-help {
+  margin-top: clamp(40px, 7vw, 72px);
+}
+
+/* 
+  Styles section headings introducing help card links.
+  Applies tight tracking and responsive scaling.
+*/
+.cc404-section-heading {
+  margin: 0 0 8px;
+  color: #0d1b3e;
+  font-size: clamp(1.35rem, 2.6vw, 1.8rem);
+  letter-spacing: -.035em;
+}
+
+/* 
+  Formats descriptive supporting copy text underneath section headings.
+  Sets clean line spacing and muted text coloring.
+*/
+.cc404-section-copy {
+  margin: 0 0 20px;
+  color: #69758b;
+  line-height: 1.6;
+}
+
+/* 
+  Creates a three-column CSS grid container for quick link cards.
+  Maintains uniform column spacing across wide viewports.
+*/
+.cc404-quick-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* 
+  Styles individual interactive quick link cards.
+  Applies padding, rounded borders, background fills, and smooth transition rules.
+*/
+.cc404-quick-link {
+  display: block;
+  padding: 20px;
+  border: 1px solid #e3e8f1;
+  border-radius: 16px;
+  background: #fff;
+  color: #14213d;
+  text-decoration: none;
+  transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+
+/* 
+  Triggers a lift transform and accent border color on quick link hover.
+  Enhances interactivity with a soft drop shadow.
+*/
+.cc404-quick-link:hover {
+  transform: translateY(-3px);
+  border-color: #f0c338;
+  box-shadow: 0 12px 30px #0d1b3e0b;
+}
+
+/* 
+  Formats the icon container box inside each quick link card.
+  Centers glyphs within a rounded light-yellow background box.
+*/
+.cc404-link-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff5ce;
+  color: #0d1b3e;
+  font-size: 1.2rem;
+}
+
+/* 
+  Emphasizes the bold title heading text inside quick link cards.
+  Ensures block display spacing above description text.
+*/
+.cc404-quick-link strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* 
+  Styles the description text span element at the bottom of quick link cards.
+  Applies muted coloring and comfortable line height.
+*/
+.cc404-quick-link span:last-child {
+  color: #69758b;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+/* 
+  Gives the embedded Campus Runner game its own clean responsive panel.
+  Styles the container, canvas element, and helper text for optimal gameplay.
+*/
+.cc404-game {
+  margin-top: 34px;
+  padding: clamp(20px, 4vw, 30px);
+  border: 1px solid #e3e8f1;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 16px 42px #0d1b3e08;
+}
+
+/* 
+  Aligns the header section content of the embedded game panel.
+  Uses flexbox to separate titles and status labels cleanly.
+*/
+.cc404-game-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+/* 
+  Styles heading titles within the game container panel.
+  Applies responsive font sizing and dark theme color.
+*/
+.cc404-game h2 {
+  margin: 0 0 6px;
+  color: #0d1b3e;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+}
+
+/* 
+  Formats descriptive text paragraphs inside the game container.
+  Sets clean line height and muted text appearance.
+*/
+.cc404-game p {
+  margin: 0;
+  color: #69758b;
+  line-height: 1.6;
+}
+
+/* 
+  Styles status labels or tags shown in the game header section.
+  Uses a rounded pill badge with warm accent coloring.
+*/
+.cc404-game-label {
+  flex-shrink: 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #fff5ce;
+  color: #6b5100;
+  font-size: .75rem;
+  font-weight: 850;
+}
+
+/* 
+  Formats the game canvas element to be fully responsive.
+  Disables default touch scrolling behaviors to improve touch controls.
+*/
+.cc404-game .game-canvas,
+.cc404-game canvas {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 140px;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  background: #f7f9fd;
+  touch-action: manipulation;
+}
+
+/* 
+  Arranges bottom footer controls and hints inside the game panel.
+  Spaces elements evenly using a wrapping flex layout.
+*/
+.cc404-game-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+/* 
+  Styles keyboard or touch instruction hint text in the game footer.
+  Applies smaller font sizing and muted text coloring.
+*/
+.cc404-game-bottom .hint {
+  color: #69758b;
+  font-size: .88rem;
+}
+
+/* 
+  Styles the main page footer container at the bottom of the layout.
+  Centers copyright or link text with a top separator border.
+*/
+.cc404-footer {
+  padding: 22px 20px;
+  border-top: 1px solid #e3e8f1;
+  background: #fff;
+  color: #69758b;
+  text-align: center;
+  font-size: .88rem;
+}
+
+/* 
+  Formats anchor links located inside the main page footer.
+  Applies bold weights and custom underline styling.
+*/
+.cc404-footer a {
+  color: #0d1b3e;
+  font-weight: 800;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* 
+  Stacks the hero sections and quick link cards cleanly on smaller screens.
+  Adapts layout grids to single columns to prevent horizontal overflow.
+*/
+@media (max-width: 760px) {
+  .cc404-nav {
+    width: min(100% - 28px, 1120px);
+    min-height: 66px;
+  }
+  
+  .cc404-nav-links {
+    gap: 12px;
+  }
+  
+  .cc404-nav-links a {
+    font-size: .82rem;
+  }
+  
+  .cc404-main {
+    width: min(100% - 28px, 1120px);
+    padding-top: 34px;
+  }
+  
+  .cc404-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .cc404-art {
+    min-height: 270px;
+  }
+  
+  .cc404-quick-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .cc404-quick-link {
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    column-gap: 13px;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .cc404-link-icon {
+    grid-row: span 2;
+    margin: 0;
+  }
+  
+  .cc404-quick-link strong {
+    margin-bottom: 3px;
+  }
+  
+  .cc404-game-head {
+    flex-direction: column;
+  }
+}
+
+/* 
+  Adjusts navigation and action layouts for very small mobile screens.
+  Swaps flex directions to column-based stacks for full-width elements.
+*/
+@media (max-width: 420px) {
+  .cc404-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 0;
+    gap: 10px;
+  }
+  
+  .cc404-nav-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .cc404-actions {
+    flex-direction: column;
+  }
+  
+  .cc404-button {
+    width: 100%;
+  }
+  
+  .cc404-art {
+    min-height: 240px;
+  }
+  
+  .cc404-orbit {
+    width: 250px;
+  }
+}
+
+/* 
+  Respects user accessibility settings who prefer reduced motion.
+  Disables CSS transition effects and transform animations for comfort.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .cc404-button,
+  .cc404-quick-link {
+    transition: none;
+  }
+  
+  .cc404-button:hover,
+  .cc404-quick-link:hover {
+    transform: none;
+  }
+}
