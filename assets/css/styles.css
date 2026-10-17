@@ -4031,3 +4031,107 @@ body.lightbox-open {
     --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* Smooth easing used for all transitions. */
 }
 
+/* ---------- 2. Base ---------- */
+
+/* Anchor jumps stop below the sticky bars instead of behind them. */
+html {
+    scroll-padding-top: calc(var(--sticky-offset) + 16px); /* Leaves room for the sticky header and sub-navigation. */
+}
+
+/* Page text. */
+body {
+    color: var(--text); /* Uses the main text colour. */
+    background: var(--white); /* Keeps the page background white. */
+    text-rendering: optimizeLegibility; /* Asks the browser for the best text shapes. */
+}
+
+/* Fluid headings give clearer hierarchy on every screen size. */
+h1 {
+    font-size: clamp(2.15rem, 5.2vw, 3.6rem); /* Scales the main heading with the screen. */
+    line-height: 1.08; /* Tightens the lines of a large heading. */
+    letter-spacing: -0.022em; /* Pulls large letters slightly closer together. */
+}
+
+/* Section headings. */
+h2 {
+    font-size: clamp(1.65rem, 3.6vw, 2.4rem); /* Scales the section heading with the screen. */
+    line-height: 1.15; /* Keeps two-line headings compact. */
+    letter-spacing: -0.015em; /* Pulls the letters slightly closer together. */
+}
+
+/* Card headings. */
+h3 {
+    font-size: 1.2rem; /* Sets a comfortable card heading size. */
+    line-height: 1.25; /* Keeps card titles compact. */
+    letter-spacing: -0.005em; /* Slightly tightens the title. */
+}
+
+/* Longer text is easier to read at a limited line length. */
+p {
+    line-height: 1.7; /* Gives paragraphs room to breathe. */
+}
+
+/* Links in running text use navy with a clear underline instead of low-contrast yellow. */
+a {
+    color: var(--navy); /* Shows links in navy so they pass contrast checks on white. */
+    text-decoration-thickness: 1.5px; /* Makes the underline easy to see. */
+    text-underline-offset: 3px; /* Moves the underline slightly away from the text. */
+    text-decoration-color: rgba(13, 27, 62, 0.45); /* Softens the underline until the link is hovered. */
+}
+
+/* Hovered links get a solid underline. */
+a:hover {
+    text-decoration-color: currentColor; /* Makes the underline solid on hover. */
+}
+
+/* Links that act as buttons or menu items should not be underlined. */
+.btn,
+.logo,
+.nav-links a,
+.subnav a,
+.lb-btn,
+footer a,
+.skip-link,
+.breadcrumb a,
+.province-links a {
+    text-decoration: none; /* Removes the underline from navigation-style links. */
+}
+
+/* Links on dark backgrounds are yellow. */
+.hero a:not(.btn),
+.section.navy a:not(.btn),
+.cookie-banner a {
+    color: var(--yellow); /* Shows links in yellow on navy. */
+}
+
+/* A stronger focus ring that can be seen on both white and navy backgrounds. */
+:focus-visible {
+    outline: 3px solid var(--yellow); /* Draws a yellow ring. */
+    outline-offset: 2px; /* Leaves a small gap between the element and the ring. */
+    box-shadow: 0 0 0 2px var(--navy); /* Adds a navy inner ring so the yellow shows on white. */
+}
+
+/* The first link on every page lets keyboard users skip the menu. */
+.skip-link {
+    position: absolute; /* Takes the link out of the page flow. */
+    top: -80px; /* Hides the link above the screen. */
+    left: 12px; /* Places it near the left edge. */
+    z-index: 1000000; /* Keeps it above the loader and every other layer. */
+    padding: 12px 18px; /* Sets the space inside the link. */
+    color: var(--navy); /* Shows navy text. */
+    background: var(--yellow); /* Uses a yellow background. */
+    border-radius: var(--radius-control); /* Rounds the corners. */
+    font-weight: 800; /* Makes the text bold. */
+}
+
+/* The skip link appears when it receives keyboard focus. */
+.skip-link:focus {
+    top: 12px; /* Slides the link into view. */
+}
+
+/* The main area receives focus from the skip link, so it must not show a ring itself. */
+main:focus {
+    outline: none; /* Removes the ring from the main area. */
+    box-shadow: none; /* Removes the inner ring as well. */
+}
+
