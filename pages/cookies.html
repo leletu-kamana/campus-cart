@@ -44,6 +44,8 @@
   </head>
   <!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
   <body class="page-loading">
+    <!-- Lets keyboard users jump past the menu to the main content. -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
       <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
@@ -96,7 +98,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -116,16 +118,26 @@
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
           <a href="account.html">Account</a>
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+          <a class="nav-cart" href="account.html#order">Order <span class="cart-badge" data-cart-count>0</span></a>
         </div>
       </nav>
     </header>
     <!-- Contains the page's main content. -->
-            <main>
+            <main id="main" tabindex="-1">
             <!-- Page banner with the title. -->
             <section class="hero">
                 <!-- Keeps the content centred. -->
                 <div class="wrap">
+                  <!-- Trail of links that shows where this page sits in the site. -->
+                  <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <!-- Ordered list of the steps in the trail. -->
+                    <ol>
+                      <!-- First step: the home page. -->
+                      <li><a href="../index.html">Home</a></li>
+                      <!-- Current step: this page. -->
+                      <li aria-current="page">Cookie Policy</li>
+                    </ol>
+                  </nav>
                 <!-- Short label above the title. -->
                     <span class="eyebrow">Legal</span>
                     <!-- Main heading of the page. -->
@@ -169,7 +181,7 @@
                     <!-- Section heading. -->
                     <h2 id="own">2. Storage used by Campus-Cart</h2>
                     <!-- Lets a wide table scroll sideways on small screens. -->
-                    <div class="legal-table-wrap">
+                    <div class="legal-table-wrap" tabindex="0" role="region" aria-label="Browser storage set by the Campus-Cart website">
                         <!-- Starts the table. -->
                         <table class="legal-table">
                             <!-- Names the table. -->
@@ -195,7 +207,7 @@
                     <!-- Section heading. -->
                     <h2 id="third">3. Outside services</h2>
                     <!-- Lets a wide table scroll sideways on small screens. -->
-                    <div class="legal-table-wrap">
+                    <div class="legal-table-wrap" tabindex="0" role="region" aria-label="Third-party services that may see your visit">
                         <!-- Starts the table. -->
                         <table class="legal-table">
                             <!-- Names the table. -->
@@ -250,9 +262,9 @@
       <!-- Groups related content so it can be arranged or styled together. The class "wrap footer-grid" connects it to CSS styling or JavaScript behaviour. -->
       <div class="wrap footer-grid">
         <!-- Groups related content so it can be arranged or styled together. -->
-        <div><h4>Campus-Cart</h4><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
+        <div><h3>Campus-Cart</h3><p>Affordable new and second-hand student essentials for South African campuses.</p></div>
         <!-- Groups related content so it can be arranged or styled together. -->
-        <div><h4>Shop</h4><ul>
+        <div><h3>Shop</h3><ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
             <li><a href="products.html">Shop New</a></li>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -263,7 +275,7 @@
             <li><a href="products.html#sell-with-us">Sell With Us</a></li>
           </ul></div>
         <!-- Groups related content so it can be arranged or styled together. -->
-        <div><h4>Company</h4><ul>
+        <div><h3>Company</h3><ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
             <li><a href="about.html">About</a></li>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -278,7 +290,7 @@
             <li><a href="account.html">Account</a></li>
           </ul></div>
         <!-- Groups related content so it can be arranged or styled together. -->
-        <div><h4>Reach us</h4><ul>
+        <div><h3>Reach us</h3><ul>
             <!-- Defines one item in a list. The href attribute points to an email address. -->
             <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
             <!-- Defines one item in a list. The href attribute points to an external webpage. -->
@@ -311,6 +323,8 @@
     </footer>
     <!-- Loads the cookie and privacy choices before the other scripts. -->
     <script src="../assets/js/consent.js"></script>
+    <!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+    <script src="../assets/js/ui.js" defer></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="../assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
