@@ -58,7 +58,9 @@
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
-  <body bg="blue" class="page-loading">
+  <body class="page-loading">
+    <!-- Lets keyboard users jump past the menu to the main content. -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
       <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
@@ -111,7 +113,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -131,12 +133,12 @@
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
           <a href="pages/account.html">Account</a>
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
-          <a class="nav-cart" href="pages/account.html#order">Order (<span data-cart-count>0</span>)</a>
+          <a class="nav-cart" href="pages/account.html#order">Order <span class="cart-badge" data-cart-count>0</span></a>
         </div>
       </nav>
     </header>
     <!-- Contains the page's main content. -->
-    <main>
+    <main id="main" tabindex="-1">
       <!-- Groups content that belongs to one topic or page section. The class "hero" connects it to CSS styling or JavaScript behaviour. -->
       <section class="hero">
         <!-- Groups related content so it can be arranged or styled together. The class "wrap hero-grid" connects it to CSS styling or JavaScript behaviour. -->
@@ -154,7 +156,7 @@
               <!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
               <div class="split-card">
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>I am a Student</h3>
+                <h2>I am a Student</h2>
                 <!-- Creates a paragraph of text. -->
                 <p>Shop deals, browse the second-hand marketplace and sell what you no longer need.</p>
                 <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
@@ -163,7 +165,7 @@
               <!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
               <div class="split-card">
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>I am a Parent/Guardian</h3>
+                <h2>I am a Parent/Guardian</h2>
                 <!-- Creates a paragraph of text. -->
                 <p>Use the First Year Checklist and fixed-price starter bundles to plan spend with confidence.</p>
                 <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-ghost-light" connects it to CSS styling or JavaScript behaviour. -->
@@ -174,8 +176,25 @@
           <!-- Groups related content so it can be arranged or styled together. The class "hero-img" connects it to CSS styling or JavaScript behaviour. -->
           <div class="hero-img">
             <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-            <img src="assets/images/bundles/hero-campus.jpg" alt="South African students walking on campus with laptops and a storage crate" width="1600" height="900">
+            <img src="assets/images/bundles/hero-banner.jpg" srcset="assets/images/bundles/hero-banner-640.jpg 640w, assets/images/bundles/hero-banner.jpg 1200w" sizes="(max-width: 1000px) 100vw, 580px" alt="A student desk set up with a navy desk lamp, an open laptop, notebooks, a pen holder and a navy backpack beside a sunny window" width="1200" height="670" fetchpriority="high" decoding="async">
           </div>
+        </div>
+      </section>
+      <!-- Quick reasons to trust the shop. -->
+      <section class="trust-strip" aria-label="Why shop with Campus-Cart">
+        <!-- Keeps the content centred. -->
+        <div class="wrap">
+          <!-- List of trust points. -->
+          <ul>
+            <!-- Coverage point. -->
+            <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>26 public universities and 50 TVET colleges covered</span></li>
+            <!-- New and second-hand point. -->
+            <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/></svg></span><span>New stock and reviewed second-hand deals</span></li>
+            <!-- Collection point. -->
+            <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span><span>Free collection at listed residence and campus points</span></li>
+            <!-- Payment point. -->
+            <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg></span><span>Pay by EFT. Nothing is charged on this website</span></li>
+          </ul>
         </div>
       </section>
       <!-- Groups content that belongs to one topic or page section. The id "mission" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
@@ -242,13 +261,16 @@
             <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
             <article class="card">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="assets/images/bundles/starter-bundle.jpg" alt="Basic starter bundle contents laid out" loading="lazy" width="1200" height="900">
+              <img src="assets/images/bundles/bundle-basic.jpg" alt="Four items from the Basic Starter Bundle: a duvet, an electric kettle, stacked mugs and a notebook" loading="lazy" width="1000" height="1000" decoding="async">
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge badge-new">New</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">New</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Basic Starter Bundle</h3>
+    </div>
+    <h3>Basic Starter Bundle</h3>
                 <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                 <p class="price">R1 499.00</p>
                 <!-- Creates a paragraph of text. -->
@@ -260,13 +282,16 @@
             <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
             <article class="card">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="assets/images/bundles/starter-bundle.jpg" alt="Standard starter bundle contents laid out" loading="lazy" width="1200" height="900">
+              <img src="assets/images/bundles/bundle-standard.jpg" alt="Four items from the Standard Starter Bundle: a duvet, an electric kettle, stacked mugs and a navy desk lamp" loading="lazy" width="1000" height="1000" decoding="async">
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge badge-new">New</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">New</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Standard Starter Bundle</h3>
+    </div>
+    <h3>Standard Starter Bundle</h3>
                 <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                 <p class="price">R2 799.00</p>
                 <!-- Creates a paragraph of text. -->
@@ -282,10 +307,16 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-used" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge badge-used">Second-hand</span>
+                <!-- Row that holds the small status labels. -->
+                <div class="card-tags">
+                  <span class="badge badge-used">Second-hand</span>
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge badge-verified">Verified Seller</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-verified">Verified Seller</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
+    </div>
+    </div>
                 <h3>Marketplace Picks</h3>
                 <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                 <p class="price">From R180.00</p>
@@ -368,14 +399,14 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Campus-Cart</h4>
+          <h3>Campus-Cart</h3>
           <!-- Creates a paragraph of text. -->
           <p>Affordable new and second-hand student essentials for South African campuses.</p>
         </div>
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Shop</h4>
+          <h3>Shop</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -391,7 +422,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Company</h4>
+          <h3>Company</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -411,7 +442,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Reach us</h4>
+          <h3>Reach us</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to an email address. -->
@@ -447,6 +478,8 @@
     </footer>
     <!-- Loads the cookie and privacy choices before the other scripts. -->
     <script src="assets/js/consent.js"></script>
+    <!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+    <script src="assets/js/ui.js" defer></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
