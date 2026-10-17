@@ -4430,3 +4430,49 @@ main:focus {
     stroke-linejoin: round; /* Rounds the line corners. */
 }
 
+/* ---------- 6. Buttons ---------- */
+
+/* Shared button shape. */
+.btn {
+    min-height: 48px; /* Gives every button a comfortable touch height. */
+    padding: 12px 24px; /* Sets the space inside the button. */
+    border-radius: var(--radius-control); /* Uses the shared control radius. */
+    font-weight: 800; /* Makes the label bold. */
+    letter-spacing: 0.005em; /* Slightly opens the label. */
+    box-shadow: 0 1px 0 rgba(13, 27, 62, 0.18), 0 6px 14px rgba(13, 27, 62, 0.12); /* Gives a raised look. */
+    transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease), background 0.18s var(--ease), color 0.18s var(--ease); /* Animates every state change. */
+}
+
+/* Hover state. */
+.btn:hover {
+    transform: translateY(-2px); /* Lifts the button. */
+    box-shadow: 0 2px 0 rgba(13, 27, 62, 0.2), 0 12px 22px rgba(13, 27, 62, 0.18); /* Strengthens the shadow. */
+}
+
+/* Pressed state. */
+.btn:active {
+    transform: translateY(0); /* Pushes the button back down. */
+    box-shadow: 0 1px 0 rgba(13, 27, 62, 0.2); /* Flattens the shadow. */
+}
+
+/* Outline and ghost buttons stay flat. */
+.btn-outline,
+.btn-ghost-light {
+    box-shadow: none; /* Removes the raised look. */
+}
+
+/* Small buttons. */
+.btn-sm {
+    min-height: 42px; /* Keeps small buttons easy to tap. */
+    padding: 9px 18px; /* Sets the space inside the button. */
+}
+
+/* A disabled button must not look clickable. */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+    opacity: 0.5; /* Fades the button. */
+    cursor: not-allowed; /* Shows the not-allowed cursor. */
+    transform: none; /* Stops the lift effect. */
+    box-shadow: none; /* Removes the shadow. */
+}
+
