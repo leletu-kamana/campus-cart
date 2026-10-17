@@ -3986,3 +3986,48 @@ body.lightbox-open {
 .legal a:not(.btn):hover {
     background: var(--yellow); /* Gives the link a yellow highlight on hover. */
 }
+
+/* ==========================================================
+   UI/UX UPGRADE: DESIGN SYSTEM v2
+   This layer sits at the end of the stylesheet on purpose. It keeps the
+   Campus-Cart palette (navy, yellow, light grey, white) and refines the
+   tokens, spacing, typography, buttons, cards, forms, navigation and
+   feedback so that every page shares one consistent look.
+   Sections: 1 Tokens, 2 Base, 3 Layout, 4 Header, 5 Hero, 6 Buttons,
+   7 Cards, 8 Forms, 9 Tabs and chips, 10 Content blocks, 11 Checkout,
+   12 Feedback, 13 Footer, 14 Responsive refinements.
+   ========================================================== */
+
+/* ---------- 1. Design tokens ---------- */
+
+/* Tokens are redefined here so every older rule that uses var() picks up the refined values. */
+:root {
+    --navy: #0d1b3e; /* Main brand navy. */
+    --navy-light: #17295c; /* Lighter navy for gradients and hover states. */
+    --navy-dark: #08142f; /* Darker navy for the footer and deep shadows. */
+    --yellow: #ffd23f; /* Brand yellow, used for buttons, highlights and focus rings. */
+    --yellow-light: #ffe477; /* Lighter yellow for hover states. */
+    --yellow-soft: #fff7d6; /* Very light yellow for notice boxes. */
+    --gold: #0d1b3e; /* Text that used to be yellow on white is now navy so it can be read. */
+    --gold-light: #ffe477; /* Hover colour for yellow buttons. */
+    --white: #ffffff; /* White. */
+    --grey: #f2f3f5; /* Light grey section background. */
+    --grey-light: #f8f9fb; /* Lightest grey for panels. */
+    --grey-mid: #d5dae3; /* Visible but soft border colour. */
+    --grey-dark: #4b5675; /* Muted text colour with good contrast on white. */
+    --text: #0d1b3e; /* Main text colour. */
+    --text-light: #36425f; /* Secondary text colour. */
+    --success: #1b6e2d; /* Success green. */
+    --warning: #8a5a00; /* Warning amber. */
+    --danger: #b3261e; /* Error red. */
+    --radius: 18px; /* Corner radius for cards and panels. */
+    --radius-small: 10px; /* Corner radius for small controls. */
+    --radius-control: 12px; /* Corner radius for buttons and inputs. */
+    --line: #dfe3ea; /* Hairline colour for borders and dividers. */
+    --shadow: 0 1px 2px rgba(13, 27, 62, 0.06), 0 8px 22px rgba(13, 27, 62, 0.08); /* Soft resting shadow. */
+    --shadow-hover: 0 2px 4px rgba(13, 27, 62, 0.08), 0 16px 34px rgba(13, 27, 62, 0.16); /* Stronger hover shadow. */
+    --header-h: 76px; /* Height of the sticky header, updated by ui.js. */
+    --sticky-offset: 90px; /* Header plus sticky sub-navigation height, updated by ui.js. */
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1); /* Smooth easing used for all transitions. */
+}
+
