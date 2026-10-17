@@ -365,7 +365,7 @@
             opener = button; // Remembers the button.
 
             picture.src = button.getAttribute("data-img"); // Shows the product photo.
-            picture.alt = button.getAttribute("data-name"); // Sets the image description.
+            picture.alt = button.getAttribute("data-alt") || button.getAttribute("data-name"); // Sets the image description, using the full description when there is one.
             title.textContent = button.getAttribute("data-name"); // Sets the title.
             description.textContent = button.getAttribute("data-desc"); // Sets the description.
             price.textContent = "R" + Number(button.getAttribute("data-price")).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Formats the price as Rand with spaces between thousands.
@@ -442,11 +442,39 @@
     }
 
     // ------------------------------------------------------
+    // MAP PERMISSION
+    // The map tiles come from OpenStreetMap, so the map only loads after the visitor allows maps.
+    // ------------------------------------------------------
+
+    function gateHubMap() { // Waits for permission before loading the map.
+        var box = document.getElementById("hub-map"); // Finds the map box on the page.
+        if (!box) { return; } // Stops when the page has no map box.
+        if (!window.CCConsent || window.CCConsent.allowed("maps")) { initHubMap(); return; } // Builds the map straight away when maps are allowed.
+        box.classList.add("map-unavailable"); // Reuses the message box styling.
+        var text = document.createElement("p"); // Creates the message.
+        text.textContent = "The map uses OpenStreetMap, which receives your IP address when it loads, so it stays off until you allow it. You can still use the collection hub cards below."; // Explains why the map is blocked.
+        var button = document.createElement("button"); // Creates the button.
+        button.type = "button"; // Makes it a plain button.
+        button.className = "btn btn-sm"; // Gives it the button styling.
+        button.textContent = "Allow maps and show the map"; // Sets the label.
+        button.addEventListener("click", function () { window.CCConsent.grant("maps"); }); // Records the visitor's permission.
+        box.appendChild(text); // Adds the message to the map box.
+        box.appendChild(button); // Adds the button to the map box.
+        document.addEventListener("cc-consent-change", function onChange() { // Listens for the visitor changing their choices.
+            if (!window.CCConsent.allowed("maps")) { return; } // Waits until maps are allowed.
+            document.removeEventListener("cc-consent-change", onChange); // Stops listening.
+            box.classList.remove("map-unavailable"); // Removes the message styling.
+            box.textContent = ""; // Clears the message.
+            initHubMap(); // Builds the map.
+        });
+    }
+
+    // ------------------------------------------------------
     // START
     // ------------------------------------------------------
 
     document.addEventListener("DOMContentLoaded", function () { // Runs when the page has finished loading.
-        initHubMap(); // Builds the hub map.
+        gateHubMap(); // Builds the hub map once maps are allowed.
         initLightbox(); // Sets up the lightbox.
         initQuickView(); // Sets up the quick view.
         initAccordion(); // Sets up the accordions.
