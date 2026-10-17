@@ -5268,9 +5268,9 @@ footer h3 {
 
 /* The white circle in the picture. */
 .shop-banner__badge {
-    top: 10.24%; /* Matches the vertical position of the circle. */
-    left: 65.04%; /* Matches the horizontal position of the circle. */
-    width: 10.74%; /* Matches the width of the circle. */
+    top: 10.14%; /* Matches the vertical position of the circle. */
+    left: 65.27%; /* Matches the horizontal position of the circle. */
+    width: 11.24%; /* Matches the width of the circle. */
     height: 32.4%; /* Matches the height of the circle. */
     padding: 1.2cqw; /* Keeps the text away from the edge of the circle. */
     border-radius: 50%; /* Keeps the text area round. */
