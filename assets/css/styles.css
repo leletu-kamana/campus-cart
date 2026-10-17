@@ -4173,3 +4173,99 @@ main:focus {
     gap: clamp(18px, 2.4vw, 28px); /* Scales the gap between grid items. */
 }
 
+/* ---------- 4. Header and navigation ---------- */
+
+/* The header stays on screen and gains a shadow once the page is scrolled. */
+.topbar {
+    background: rgba(13, 27, 62, 0.97); /* Uses navy with a hint of transparency. */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Adds a faint bottom edge. */
+    backdrop-filter: saturate(140%) blur(10px); /* Softly blurs what scrolls underneath. */
+    transition: box-shadow 0.25s var(--ease); /* Fades the shadow in smoothly. */
+}
+
+/* Added by ui.js after the visitor scrolls. */
+.topbar.is-scrolled {
+    box-shadow: 0 10px 28px rgba(8, 20, 47, 0.38); /* Lifts the header off the page. */
+}
+
+/* The navigation row. */
+.nav {
+    min-height: 68px; /* Keeps a comfortable header height. */
+    padding: 10px 0; /* Sets the space above and below the row. */
+}
+
+/* The logo and clock block. */
+.brand .logo {
+    font-size: 1.4rem; /* Makes the logo easy to see. */
+    letter-spacing: -0.02em; /* Tightens the letters of the wordmark. */
+}
+
+/* Menu links become soft pills. */
+.nav-links {
+    gap: 4px; /* Sets the space between menu links. */
+}
+
+/* One menu link. */
+.nav-links a {
+    padding: 9px 13px; /* Gives each link a larger click area. */
+    border-bottom: 0; /* Removes the old underline. */
+    border-radius: var(--radius-control); /* Rounds the hover background. */
+    font-size: 0.95rem; /* Sets the link size. */
+    transition: background 0.2s var(--ease), color 0.2s var(--ease); /* Fades the hover effect. */
+}
+
+/* Hover state of a menu link. */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1); /* Lightens the background on hover. */
+    color: var(--yellow); /* Turns the text yellow on hover. */
+}
+
+/* The link for the page the visitor is on. */
+.nav-links a.active {
+    background: rgba(255, 210, 63, 0.16); /* Tints the current link yellow. */
+    color: var(--yellow); /* Shows the text in yellow. */
+}
+
+/* The order button with a live item count. */
+.nav-cart {
+    display: inline-flex; /* Lines the text and the count up in a row. */
+    align-items: center; /* Centres them vertically. */
+    gap: 8px; /* Sets the space between the text and the count. */
+    margin-left: 6px; /* Separates the button from the other links. */
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); /* Gives the button a tactile edge. */
+}
+
+/* The circle that shows how many items are in the order summary. */
+.cart-badge {
+    display: inline-flex; /* Centres the number. */
+    align-items: center; /* Centres the number vertically. */
+    justify-content: center; /* Centres the number sideways. */
+    min-width: 24px; /* Keeps the circle round for one digit. */
+    height: 24px; /* Sets the circle height. */
+    padding: 0 7px; /* Lets the circle stretch for two digits. */
+    color: var(--yellow); /* Shows a yellow number. */
+    background: var(--navy); /* Uses a navy circle. */
+    border-radius: var(--radius-pill); /* Makes the badge fully rounded. */
+    font-size: 0.8rem; /* Sets the number size. */
+    font-weight: 800; /* Makes the number bold. */
+    line-height: 1; /* Stops extra line height from stretching the badge. */
+}
+
+/* ui.js adds this class briefly when an item is added so the count visibly reacts. */
+.cart-badge.is-bump {
+    animation: ccBump 0.45s var(--ease); /* Plays a short pop animation. */
+}
+
+/* Pop animation for the cart count. */
+@keyframes ccBump {
+    0% { transform: scale(1); } /* Starts at normal size. */
+    40% { transform: scale(1.35); } /* Grows. */
+    100% { transform: scale(1); } /* Returns to normal size. */
+}
+
+/* The Menu button on small screens. */
+.nav-toggle {
+    min-height: 44px; /* Meets the recommended touch target size. */
+    border-radius: var(--radius-control); /* Matches the other controls. */
+}
+
