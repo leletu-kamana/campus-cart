@@ -25,46 +25,7 @@ The website has two main audiences:
 
 The project uses **HTML5, CSS3 and vanilla JavaScript**. It is a front-end demonstration and does not use a backend database, real user authentication or an online payment gateway. This keeps the project focused on website structure, content, navigation, responsive design and client-side interaction.
 
-## Legal and Privacy Pages
-The website includes the pages and controls a South African trading site is expected to have:
-- **Privacy Policy** (`pages/privacy.html`) written around the Protection of Personal Information Act (POPIA).
-- **Terms and Conditions** (`pages/terms.html`).
-- **Cookie Policy** (`pages/cookies.html`) listing the browser storage and outside services the site uses.
-- **Returns, Refunds and Delivery** (`pages/returns.html`) based on the Consumer Protection Act and the Electronic Communications and Transactions Act.
-- **Cookie banner and settings** (`assets/js/consent.js`). Embedded maps (Google Maps and OpenStreetMap) stay switched off until the visitor allows them. A "Cookie settings" button in every footer reopens the choices.
 
-These pages describe a fictional demonstration business. They are drafts and should be reviewed by a legal professional before Campus-Cart trades for real.
-
-## Photographs and Images
-Real photographs now appear on the home page, shop, bundles, account page and the 404 page.
-
-- **Products:** 17 of the 48 deals products have their own photograph with a descriptive alt text. The other 31 show a shared generic photo, because no matching photograph was supplied. They are listed in [docs/images-needed.md](docs/images-needed.md), which also explains how to add a photo.
-- **Bundles:** the Basic, Standard and Premium bundle pictures are 2 by 2 grids of the real product photos for items each bundle includes, so they do not misrepresent the contents.
-- **Home, shop and 404:** a new desk-scene hero, a shop banner with real links and text over the picture, and a custom 404 illustration.
-- **Performance:** the supplied 10 MB of photographs were optimised to about 1.1 MB, hero and banner images use `srcset`, and every image has width and height attributes and alt text. Four heavy existing images were reduced in place (for example `hero-campus.jpg`, 2,127 KB to 139 KB).
-- **Details:** every supplied image, where it is used, and which were deliberately not used are in [docs/IMAGE-USAGE.md](docs/IMAGE-USAGE.md).
-
-## UI/UX Upgrade (Design System v2)
-The whole site was redesigned for a modern, consistent, responsive look while keeping the Campus-Cart navy, yellow, light grey and white palette. It is built only with HTML5, CSS3 and vanilla JavaScript.
-
-**What changed**
-- A shared design system at the end of `assets/css/styles.css`: refined colour, type, spacing, radius and shadow tokens, used by every page.
-- Header: sticky with a scroll shadow, pill menu links, an animated order count, a large mobile menu panel and a skip link.
-- Pages: gradient hero with breadcrumbs on inner pages, a trust strip on the home page, a four-step guide above the order summary.
-- Product cards: tag row, highlighter-style price, hover lift and photo zoom, loading shimmer and skeleton cards.
-- Forms: larger fields, clear focus halo, custom select arrow and search icon, red error messages with an icon.
-- Feedback: toast messages, empty states, back-to-top button, cart count animation.
-- Accessibility: visible focus ring on white and navy, readable contrast everywhere, touch targets of 44px or more, a main landmark, ordered headings.
-- New file `assets/js/ui.js` and a `docs/` folder. No file was renamed, moved or deleted.
-
-**Inspiration.** Dribbble was searched for e-commerce ideas. Only the listing text (shot titles and tags) could be read, not the images, so patterns were adapted rather than copied. Details are in [docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md).
-
-**Setup and use.** Download or clone the repository and open `index.html` in a browser, or serve the folder with any static web server. The site needs no build step. The hosted version is at https://leletu-kamana.github.io/campus-cart/. The 404 page only looks complete on the hosted site.
-
-**Works in the browser only:** navigation, search, filters, sorting, order summary (kept in `sessionStorage` for one tab), form validation, building an email in the visitor's own email app, cookie choices, the 404 game.
-**Needs a backend or outside service (not provided):** real accounts, taking payments, a shared product or order database, live stock, sending emails automatically. The site does not pretend to do any of these.
-
-**Testing.** See [docs/TESTING.md](docs/TESTING.md). In short: 65 of 65 browser checks passed, axe-core found 0 accessibility violations across 22 page and size combinations, and the HTML, CSS and JavaScript checks reported no errors.
 
 ## Project Goals and Objectives
 
@@ -491,9 +452,50 @@ Before final submission, the project should be checked for:
 - [x] The README includes a Page–Content–Purpose–Target User table and low-fidelity structural wireframes.
 - [x] The root-level `sitemap.xml` lists all seven public Campus-Cart pages using their live GitHub Pages URLs.
 - [x] In-text citations are included for the design and usability principles discussed in the README.
-- [ ] Capture and add at least five genuine desktop screenshots and five genuine mobile screenshots of the rendered website for Part 2 visual evidence.
+- [x] Capture and add at least five genuine desktop screenshots and five genuine mobile screenshots of the rendered website for Part 2 visual evidence.
 
 The local HTML file and anchor paths should be checked again whenever pages or section IDs are changed. The mobile navigation JavaScript has been reviewed in the repository, but it still needs to be tested in a live browser at desktop and mobile widths.
+
+## Legal and Privacy Pages
+The website includes the pages and controls a South African trading site is expected to have:
+- **Privacy Policy** (`pages/privacy.html`) written around the Protection of Personal Information Act (POPIA).
+- **Terms and Conditions** (`pages/terms.html`).
+- **Cookie Policy** (`pages/cookies.html`) listing the browser storage and outside services the site uses.
+- **Returns, Refunds and Delivery** (`pages/returns.html`) based on the Consumer Protection Act and the Electronic Communications and Transactions Act.
+- **Cookie banner and settings** (`assets/js/consent.js`). Embedded maps (Google Maps and OpenStreetMap) stay switched off until the visitor allows them. A "Cookie settings" button in every footer reopens the choices.
+
+These pages describe a fictional demonstration business. They are drafts and should be reviewed by a legal professional before Campus-Cart trades for real.
+
+## Photographs and Images
+Real photographs now appear on the home page, shop, bundles, account page and the 404 page.
+
+- **Products:** 17 of the 48 deals products have their own photograph with a descriptive alt text. The other 31 show a shared generic photo, because no matching photograph was supplied. They are listed in [docs/images-needed.md](docs/images-needed.md), which also explains how to add a photo.
+- **Bundles:** the Basic, Standard and Premium bundle pictures are 2 by 2 grids of the real product photos for items each bundle includes, so they do not misrepresent the contents.
+- **Home, shop and 404:** a new desk-scene hero, a shop banner with real links and text over the picture, and a custom 404 illustration.
+- **Performance:** the supplied 10 MB of photographs were optimised to about 1.1 MB, hero and banner images use `srcset`, and every image has width and height attributes and alt text. Four heavy existing images were reduced in place (for example `hero-campus.jpg`, 2,127 KB to 139 KB).
+- **Details:** every supplied image, where it is used, and which were deliberately not used are in [docs/IMAGE-USAGE.md](docs/IMAGE-USAGE.md).
+
+## UI/UX Upgrade (Design System v2)
+The whole site was redesigned for a modern, consistent, responsive look while keeping the Campus-Cart navy, yellow, light grey and white palette. It is built only with HTML5, CSS3 and vanilla JavaScript.
+
+**What changed**
+- A shared design system at the end of `assets/css/styles.css`: refined colour, type, spacing, radius and shadow tokens, used by every page.
+- Header: sticky with a scroll shadow, pill menu links, an animated order count, a large mobile menu panel and a skip link.
+- Pages: gradient hero with breadcrumbs on inner pages, a trust strip on the home page, a four-step guide above the order summary.
+- Product cards: tag row, highlighter-style price, hover lift and photo zoom, loading shimmer and skeleton cards.
+- Forms: larger fields, clear focus halo, custom select arrow and search icon, red error messages with an icon.
+- Feedback: toast messages, empty states, back-to-top button, cart count animation.
+- Accessibility: visible focus ring on white and navy, readable contrast everywhere, touch targets of 44px or more, a main landmark, ordered headings.
+- New file `assets/js/ui.js` and a `docs/` folder. No file was renamed, moved or deleted.
+
+**Inspiration.** Dribbble was searched for e-commerce ideas. Only the listing text (shot titles and tags) could be read, not the images, so patterns were adapted rather than copied. Details are in [docs/DESIGN-SYSTEM.md](docs/DESIGN-SYSTEM.md).
+
+**Setup and use.** Download or clone the repository and open `index.html` in a browser, or serve the folder with any static web server. The site needs no build step. The hosted version is at https://leletu-kamana.github.io/campus-cart/. The 404 page only looks complete on the hosted site.
+
+**Works in the browser only:** navigation, search, filters, sorting, order summary (kept in `sessionStorage` for one tab), form validation, building an email in the visitor's own email app, cookie choices, the 404 game.
+**Needs a backend or outside service (not provided):** real accounts, taking payments, a shared product or order database, live stock, sending emails automatically. The site does not pretend to do any of these.
+
+**Testing.** See [docs/TESTING.md](docs/TESTING.md). In short: 65 of 65 browser checks passed, axe-core found 0 accessibility violations across 22 page and size combinations, and the HTML, CSS and JavaScript checks reported no errors.
 
 # Changelog
 
