@@ -4610,3 +4610,27 @@ main:focus {
     margin-bottom: 22px; /* Adds space under the last line. */
 }
 
+/* ---------- Badges ---------- */
+
+/* Small status labels. */
+.badge {
+    margin: 0 6px 6px 0; /* Keeps the older spacing for badges outside cards. */
+    padding: 5px 11px; /* Sets the space inside the label. */
+    font-size: 0.7rem; /* Keeps the label small. */
+    letter-spacing: 0.08em; /* Spreads the capital letters. */
+}
+
+/* Verified seller label is light with a tick so it differs from the New label. */
+.badge-verified {
+    color: var(--navy); /* Shows navy text. */
+    background: var(--white); /* Uses a white background. */
+    box-shadow: inset 0 0 0 1.5px var(--navy); /* Draws a navy outline. */
+}
+
+/* The tick before the Verified Seller text. */
+.badge-verified::before {
+    content: "\2713"; /* Draws a check mark. */
+    margin-right: 5px; /* Sets the space after the tick. */
+    font-weight: 900; /* Makes the tick bold. */
+}
+
