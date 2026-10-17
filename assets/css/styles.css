@@ -5045,3 +5045,31 @@ input[type="radio"] {
     stroke-linejoin: round; /* Rounds the line corners. */
 }
 
+/* ---------- 13. Footer ---------- */
+
+/* The site footer. */
+footer {
+    border-top: 4px solid var(--yellow); /* Adds a yellow line at the top. */
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%); /* Draws a subtle navy gradient. */
+}
+
+/* Footer column headings. */
+footer h4 {
+    margin-bottom: 12px; /* Sets the space below the heading. */
+    font-size: 0.82rem; /* Makes the heading small. */
+    letter-spacing: 0.12em; /* Spreads the capital letters. */
+    text-transform: uppercase; /* Writes the heading in capitals. */
+}
+
+/* Footer links. */
+footer a {
+    text-decoration: none; /* Removes the underline. */
+    transition: color 0.2s var(--ease); /* Fades the hover colour. */
+}
+
+/* Hover state of footer links. */
+footer a:hover {
+    color: var(--yellow); /* Turns the link yellow. */
+    text-decoration: underline; /* Underlines the link on hover. */
+}
+
