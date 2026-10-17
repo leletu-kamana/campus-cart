@@ -5073,3 +5073,95 @@ footer a:hover {
     text-decoration: underline; /* Underlines the link on hover. */
 }
 
+/* ---------- 14. Responsive refinements ---------- */
+
+/* Tablets. */
+@media (max-width: 1000px) {
+    .trust-strip ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } /* Shows two trust points per row. */
+    .checkout-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } /* Shows two steps per row. */
+}
+
+/* Phones and small tablets: the mobile menu. */
+@media (max-width: 850px) {
+    .nav-links {
+        margin: 8px 0 6px; /* Sets the space around the open menu. */
+        padding: 8px; /* Sets the space inside the menu panel. */
+        background: rgba(255, 255, 255, 0.05); /* Draws a faint panel. */
+        border-radius: 16px; /* Rounds the panel. */
+        animation: ccMenuIn 0.22s var(--ease); /* Slides the panel open. */
+    }
+    .nav-links a { padding: 13px 14px; font-size: 1rem; } /* Makes each link a large tap target. */
+    .nav-cart { margin: 6px 0 2px; } /* Adjusts the order button spacing. */
+}
+
+/* Menu panel animation. */
+@keyframes ccMenuIn {
+    from { opacity: 0; transform: translateY(-8px); } /* Starts faded and slightly higher. */
+    to { opacity: 1; transform: none; } /* Ends fully visible. */
+}
+
+/* Small phones. */
+@media (max-width: 620px) {
+    .trust-strip ul { grid-template-columns: 1fr; padding: 16px 0; } /* Stacks the trust points. */
+    .checkout-steps { grid-template-columns: 1fr; } /* Stacks the steps. */
+    .tabs { display: flex; } /* Lets the tab control fill the width. */
+    .tab-btn { flex: 1 0 auto; } /* Shares the width between the tabs. */
+    .toolbar .field, .toolbar .field:first-child { flex: 0 0 auto; width: 100%; } /* Stacks the filter fields. */
+    .card-actions .btn:first-child { flex: 1 1 100%; } /* Makes the add button full width. */
+    .to-top { right: 12px; bottom: 12px; } /* Moves the button closer to the corner. */
+    .hero::before { width: 280px; height: 280px; } /* Shrinks the glow. */
+}
+
+/* Text inside the dark cards stays white so it can be read on navy. The general card text colour above is for light cards only. */
+.card-navy .card-body p,
+.card-navy p {
+    color: var(--white); /* Shows white text on the navy card. */
+}
+
+/* Headings inside the dark cards stay yellow. */
+.card-navy .card-body h3,
+.card-navy h3 {
+    color: var(--yellow); /* Shows yellow headings on the navy card. */
+}
+
+/* The footer headings are now h3 elements so the heading order stays correct. They keep the old h4 look. */
+footer h3 {
+    margin-bottom: 12px; /* Sets the space below the heading. */
+    color: var(--yellow); /* Shows the heading in yellow. */
+    font-size: 0.82rem; /* Makes the heading small. */
+    letter-spacing: 0.12em; /* Spreads the capital letters. */
+    text-transform: uppercase; /* Writes the heading in capitals. */
+}
+
+/* The two choice cards on the home page use h2 for correct heading order but look like card headings. */
+.split-card h2 {
+    margin-bottom: 10px; /* Sets the space below the heading. */
+    color: var(--yellow); /* Shows the heading in yellow. */
+    font-size: 1.2rem; /* Matches the old h3 size. */
+    letter-spacing: -0.005em; /* Slightly tightens the title. */
+}
+
+/* A table wrapper that can be scrolled with the keyboard shows a focus ring. */
+.legal-table-wrap:focus-visible {
+    outline-offset: 3px; /* Leaves a gap so the ring is not clipped. */
+}
+
+/* On small phones the two tabs sit side by side and scroll sideways if the labels are too long. */
+@media (max-width: 620px) {
+    .tabs { flex-wrap: nowrap; } /* Keeps the tabs on one line. */
+    .tab-btn { padding: 10px 14px; font-size: 0.9rem; } /* Makes the tabs more compact. */
+}
+
+/* Text that is read by screen readers but not shown on the screen. */
+.visually-hidden {
+    position: absolute; /* Takes the text out of the page flow. */
+    width: 1px; /* Shrinks the box to one pixel. */
+    height: 1px; /* Shrinks the box to one pixel. */
+    margin: -1px; /* Pulls the box out of the layout. */
+    padding: 0; /* Removes the padding. */
+    overflow: hidden; /* Clips anything that spills out. */
+    clip: rect(0, 0, 0, 0); /* Clips the box so nothing is drawn. */
+    white-space: nowrap; /* Keeps the text on one line. */
+    border: 0; /* Removes the border. */
+}
+
