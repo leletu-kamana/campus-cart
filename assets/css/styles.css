@@ -5165,3 +5165,151 @@ footer h3 {
     border: 0; /* Removes the border. */
 }
 
+/* ==========================================================
+   PHOTO INTEGRATION: card photos, shop banner, 404 illustration
+   Added when the supplied product, bundle and banner photos were put on the site.
+   ========================================================== */
+
+/* The supplied product and bundle photos are square, so cards now use a square photo area. A 4:3 crop would cut the top of tall items such as the chair and the backpack. */
+.card img {
+    aspect-ratio: 1 / 1; /* Shows the whole product photo in a square. */
+    object-fit: cover; /* Fills the square without stretching the photo. */
+}
+
+/* A photo with a caption inside a content column, used on the Account page. */
+.section-photo {
+    margin: 0 0 18px; /* Sets the space below the photo. */
+    overflow: hidden; /* Clips the photo to the rounded corners. */
+    background: var(--white); /* Gives the caption a white background. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-radius: var(--radius); /* Rounds the corners. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+}
+
+/* The photo itself. */
+.section-photo img {
+    aspect-ratio: 3 / 2; /* Keeps the photo in a landscape shape. */
+    object-fit: cover; /* Fills the shape without stretching the photo. */
+}
+
+/* The caption under the photo. */
+.section-photo figcaption {
+    padding: 10px 16px 12px; /* Sets the space around the caption. */
+    color: var(--grey-dark); /* Uses the muted text colour. */
+    font-size: 0.92rem; /* Makes the caption slightly smaller. */
+}
+
+/* ---------- Shop banner ---------- */
+
+/* Space around the banner at the top of the Shop page. */
+.shop-banner {
+    padding: 28px 0 0; /* Leaves space above the banner and none below, because the next section has its own padding. */
+}
+
+/* The banner frame. Its width is used to scale the text placed over the picture. */
+.shop-banner__frame {
+    position: relative; /* Lets the links and text sit over the picture. */
+    margin: 0; /* Removes the default figure margin. */
+    overflow: hidden; /* Clips the picture to the rounded corners. */
+    border-radius: var(--radius); /* Rounds the corners. */
+    box-shadow: var(--shadow-hover); /* Lifts the banner off the page. */
+    container-type: inline-size; /* Lets the text size follow the banner width. */
+}
+
+/* The banner picture. */
+.shop-banner__img {
+    display: block; /* Removes the gap under the picture. */
+    width: 100%; /* Fills the banner. */
+    height: auto; /* Keeps the picture proportions. */
+}
+
+/* Shared style of the real links and text that sit over the white and yellow shapes in the picture. */
+.shop-banner__btn,
+.shop-banner__badge,
+.shop-banner__note {
+    position: absolute; /* Places each item over the picture. */
+    display: flex; /* Centres the text inside the shape. */
+    align-items: center; /* Centres the text up and down. */
+    justify-content: center; /* Centres the text sideways. */
+    margin: 0; /* Removes the paragraph margin. */
+    color: var(--navy); /* Shows navy text on the white and yellow shapes. */
+    font-size: clamp(9px, 1.55vw, 20px); /* Sets a size that works where container units are not supported. */
+    font-size: 1.7cqw; /* Scales the text with the banner width. */
+    font-weight: 800; /* Makes the text bold. */
+    line-height: 1.15; /* Keeps multi-line text compact. */
+    text-align: center; /* Centres each line. */
+    text-decoration: none; /* Removes the link underline. */
+}
+
+/* The white button shape in the picture. */
+.shop-banner__btn--light {
+    top: 76.2%; /* Matches the vertical position of the white shape. */
+    left: 4.92%; /* Matches the horizontal position of the white shape. */
+    width: 16.5%; /* Matches the width of the white shape. */
+    height: 12.8%; /* Matches the height of the white shape. */
+    font-size: 2.1cqw; /* Makes the button label larger than the other text. */
+    border-radius: 1.5cqw; /* Rounds the link like the shape beneath it. */
+}
+
+/* The yellow button shape in the picture. */
+.shop-banner__btn--yellow {
+    top: 76.2%; /* Matches the vertical position of the yellow shape. */
+    left: 23.5%; /* Matches the horizontal position of the yellow shape. */
+    width: 15.55%; /* Matches the width of the yellow shape. */
+    height: 12.8%; /* Matches the height of the yellow shape. */
+    font-size: 1.85cqw; /* Sizes the longer label so it fits inside the yellow shape. */
+    border-radius: 1.5cqw; /* Rounds the link like the shape beneath it. */
+}
+
+/* Hover and focus feedback for the two links. */
+.shop-banner__btn:hover {
+    background: rgba(13, 27, 62, 0.08); /* Tints the button slightly. */
+}
+
+/* The white circle in the picture. */
+.shop-banner__badge {
+    top: 10.14%; /* Matches the vertical position of the circle. */
+    left: 65.04%; /* Matches the horizontal position of the circle. */
+    width: 10.74%; /* Matches the width of the circle. */
+    height: 32.4%; /* Matches the height of the circle. */
+    padding: 1.2cqw; /* Keeps the text away from the edge of the circle. */
+    border-radius: 50%; /* Keeps the text area round. */
+    font-size: 1.5cqw; /* Sets a size that fits four short lines. */
+}
+
+/* The white strip in the lower right of the picture. */
+.shop-banner__note {
+    top: 67.06%; /* Matches the vertical position of the strip. */
+    left: 80.82%; /* Matches the horizontal position of the strip. */
+    width: 19.18%; /* Matches the width of the strip. */
+    height: 14.36%; /* Matches the height of the strip. */
+    padding: 0 1.2cqw 0 3.6cqw; /* Leaves room for the slanted left edge of the strip. */
+    font-size: 1.25cqw; /* Sets a size that fits two short lines. */
+}
+
+/* The version for small screens, hidden on larger screens. */
+.shop-banner__mobile {
+    display: none; /* Hides the small-screen version by default. */
+}
+
+/* Small screens: the text over the picture would be unreadably small, so the same information is shown below it. */
+@media (max-width: 700px) {
+    .shop-banner__btn,
+    .shop-banner__badge,
+    .shop-banner__note {
+        display: none; /* Hides the items placed over the picture. */
+    }
+    .shop-banner__mobile {
+        display: block; /* Shows the small-screen version. */
+        padding-top: 14px; /* Sets the space under the picture. */
+    }
+    .shop-banner__mobile p {
+        margin-bottom: 10px; /* Sets the space between the lines. */
+    }
+    .shop-banner__actions {
+        display: flex; /* Lines the buttons up. */
+        flex-wrap: wrap; /* Lets them wrap on very narrow screens. */
+        gap: 10px; /* Sets the space between the buttons. */
+    }
+}
+
