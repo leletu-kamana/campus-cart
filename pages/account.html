@@ -46,6 +46,8 @@
   </head>
   <!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
   <body class="page-loading">
+    <!-- Lets keyboard users jump past the menu to the main content. -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
       <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
@@ -98,7 +100,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -118,7 +120,7 @@
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
           <a href="account.html">Account</a>
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+          <a class="nav-cart" href="account.html#order">Order <span class="cart-badge" data-cart-count>0</span></a>
         </div>
       </nav>
     </header>
@@ -135,11 +137,21 @@
       </ul>
     </nav>
     <!-- Contains the page's main content. -->
-    <main>
+    <main id="main" tabindex="-1">
       <!-- Groups content that belongs to one topic or page section. The class "hero" connects it to CSS styling or JavaScript behaviour. -->
       <section class="hero">
         <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
         <div class="wrap">
+          <!-- Trail of links that shows where this page sits in the site. -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <!-- Ordered list of the steps in the trail. -->
+            <ol>
+              <!-- First step: the home page. -->
+              <li><a href="../index.html">Home</a></li>
+              <!-- Current step: this page. -->
+              <li aria-current="page">Account</li>
+            </ol>
+          </nav>
           <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
           <span class="eyebrow">Your path</span>
           <!-- Defines the main heading of the page. -->
@@ -175,7 +187,16 @@
             </ol>
           </div>
           <!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
-          <div class="info-box">
+          <!-- Right-hand column with a photo above the tip box. -->
+                    <div>
+                        <!-- Photo with its caption. -->
+                        <figure class="section-photo">
+                            <!-- A student studying on a bed with a laptop and notes. -->
+                            <img src="../assets/images/bundles/student-lifestyle.jpg" alt="A student lying on a residence bed, writing notes beside an open laptop" loading="lazy" width="1000" height="667" decoding="async">
+                            <!-- Caption for the photo. -->
+                            <figcaption>Plan your first-year setup around how you study.</figcaption>
+                        </figure>
+                        <div class="info-box">
             <!-- Defines a third-level heading for a subsection or card. -->
             <h3>Good to know</h3>
             <!-- Creates a paragraph of text. -->
@@ -183,6 +204,7 @@
             <!-- Creates a paragraph of text. -->
             <p>Payment plans are arranged by email — nothing is charged on this website.</p>
           </div>
+                    </div>
         </div>
       </section>
       <!-- Groups content that belongs to one topic or page section. The id "parent" lets CSS or JavaScript identify this element. The class "section alt" connects it to CSS styling or JavaScript behaviour. -->
@@ -233,6 +255,17 @@
             <!-- Creates a paragraph of text. -->
             <p>Items you added while browsing. This list lives in the current browser session only and clears when you close the tab — no payment gateway is involved.</p>
           </div>
+          <!-- Four-step guide to the hand-off. -->
+          <ol class="checkout-steps" aria-label="Order steps">
+            <!-- Step one. -->
+            <li>Review your items<small>Check quantities and the total below.</small></li>
+            <!-- Step two. -->
+            <li>Choose collection or delivery<small>Pick a listed collection point.</small></li>
+            <!-- Step three. -->
+            <li>Pay by EFT<small>Or arrange a plan over WhatsApp.</small></li>
+            <!-- Step four. -->
+            <li>We confirm<small>Availability and handover details.</small></li>
+          </ol>
           <!-- Groups related content so it can be arranged or styled together. The class "step" connects it to CSS styling or JavaScript behaviour. -->
           <div class="step">
             <!-- Defines a third-level heading for a subsection or card. -->
@@ -349,14 +382,14 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Campus-Cart</h4>
+          <h3>Campus-Cart</h3>
           <!-- Creates a paragraph of text. -->
           <p>Affordable new and second-hand student essentials for South African campuses.</p>
         </div>
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Shop</h4>
+          <h3>Shop</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -372,7 +405,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Company</h4>
+          <h3>Company</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -392,7 +425,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Reach us</h4>
+          <h3>Reach us</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to an email address. -->
@@ -428,6 +461,8 @@
     </footer>
     <!-- Loads the cookie and privacy choices before the other scripts. -->
     <script src="../assets/js/consent.js"></script>
+    <!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+    <script src="../assets/js/ui.js" defer></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="../assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
