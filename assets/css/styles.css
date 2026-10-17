@@ -4903,3 +4903,145 @@ input[type="radio"] {
     box-shadow: var(--shadow); /* Adds a soft shadow. */
 }
 
+/* ---------- 11. Order summary and checkout ---------- */
+
+/* Four-step guide above the order summary. */
+.checkout-steps {
+    display: grid; /* Lays the steps out in a grid. */
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* Makes four equal columns. */
+    gap: 12px; /* Sets the space between steps. */
+    margin: 0 0 28px; /* Sets the space below the guide. */
+    padding: 0; /* Removes the list padding. */
+    list-style: none; /* Removes the numbers drawn by the list. */
+    counter-reset: cc-step; /* Starts the step counter. */
+}
+
+/* One step. */
+.checkout-steps li {
+    position: relative; /* Lets the number circle sit inside the step. */
+    padding: 16px 16px 16px 58px; /* Leaves room for the number circle. */
+    background: var(--white); /* Uses a white background. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-radius: 14px; /* Rounds the corners. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+    font-size: 0.95rem; /* Sets the text size. */
+    font-weight: 700; /* Makes the text bold. */
+    line-height: 1.35; /* Keeps the text compact. */
+    counter-increment: cc-step; /* Counts this step. */
+}
+
+/* The number circle. */
+.checkout-steps li::before {
+    content: counter(cc-step); /* Shows the step number. */
+    position: absolute; /* Places the circle inside the step. */
+    top: 50%; /* Centres it vertically. */
+    left: 14px; /* Places it on the left. */
+    display: grid; /* Centres the number. */
+    place-items: center; /* Centres the number. */
+    width: 32px; /* Sets the circle width. */
+    height: 32px; /* Sets the circle height. */
+    color: var(--yellow); /* Shows a yellow number. */
+    background: var(--navy); /* Uses a navy circle. */
+    border-radius: 50%; /* Makes the shape a circle. */
+    transform: translateY(-50%); /* Centres the circle exactly. */
+    font-weight: 800; /* Makes the number bold. */
+}
+
+/* A short second line of help inside a step. */
+.checkout-steps small {
+    display: block; /* Puts the help on its own line. */
+    margin-top: 2px; /* Sets the space above the help. */
+    color: var(--grey-dark); /* Uses the muted text colour. */
+    font-weight: 500; /* Makes the help lighter. */
+}
+
+/* Step panels in the order summary. */
+.step {
+    padding: 26px; /* Sets the space inside the panel. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+}
+
+/* The order table sits in a rounded frame. */
+#order-table-wrap {
+    overflow-x: auto; /* Lets the table scroll sideways on tiny screens. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-radius: 14px; /* Rounds the corners. */
+}
+
+/* Alternate rows are lightly shaded. */
+.order-table tbody tr:nth-child(even) {
+    background: var(--grey-light); /* Shades every second row. */
+}
+
+/* The order total. */
+.order-total {
+    color: var(--navy); /* Shows the total in navy. */
+    font-size: 1.6rem; /* Makes the total large. */
+}
+
+/* ---------- 12. Feedback ---------- */
+
+/* The small message that appears after an action such as adding an item. */
+.toast {
+    bottom: 24px; /* Places the message above the bottom edge. */
+    padding: 14px 22px; /* Sets the space inside the message. */
+    border: 1px solid rgba(255, 210, 63, 0.55); /* Draws a thin yellow edge. */
+    border-radius: 14px; /* Rounds the message box. */
+    transform: translate(-50%, 14px); /* Starts slightly lower and centred. */
+    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease); /* Fades and slides the message. */
+}
+
+/* A check mark before the message. */
+.toast::before {
+    content: "\2713"; /* Draws a check mark. */
+    margin-right: 10px; /* Sets the space after the check mark. */
+    font-weight: 900; /* Makes the check mark bold. */
+}
+
+/* The visible message. */
+.toast.show {
+    transform: translate(-50%, 0); /* Slides the message into place. */
+}
+
+/* Button that returns the visitor to the top of a long page. */
+.to-top {
+    position: fixed; /* Keeps the button on screen. */
+    right: 18px; /* Places it near the right edge. */
+    bottom: 18px; /* Places it near the bottom edge. */
+    z-index: 900; /* Keeps it above the page content. */
+    display: grid; /* Centres the arrow. */
+    place-items: center; /* Centres the arrow. */
+    width: 48px; /* Sets the button width. */
+    height: 48px; /* Sets the button height. */
+    padding: 0; /* Removes the default padding. */
+    color: var(--yellow); /* Shows a yellow arrow. */
+    background: var(--navy); /* Uses a navy button. */
+    border: 2px solid var(--yellow); /* Draws a yellow ring. */
+    border-radius: 50%; /* Makes the button round. */
+    box-shadow: var(--shadow-hover); /* Lifts the button. */
+    cursor: pointer; /* Shows a pointer over the button. */
+    opacity: 0; /* Hides the button until the page is scrolled. */
+    visibility: hidden; /* Removes it from keyboard focus while hidden. */
+    transform: translateY(12px); /* Starts slightly lower. */
+    transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0.25s; /* Fades and slides the button. */
+}
+
+/* Shown after scrolling down. */
+.to-top.is-visible {
+    opacity: 1; /* Shows the button. */
+    visibility: visible; /* Makes the button focusable. */
+    transform: none; /* Moves it into place. */
+}
+
+/* The arrow drawing. */
+.to-top svg {
+    width: 20px; /* Sets the arrow width. */
+    height: 20px; /* Sets the arrow height. */
+    fill: none; /* Draws an outline only. */
+    stroke: currentColor; /* Uses the button text colour. */
+    stroke-width: 2.6; /* Sets the line thickness. */
+    stroke-linecap: round; /* Rounds the line ends. */
+    stroke-linejoin: round; /* Rounds the line corners. */
+}
+
