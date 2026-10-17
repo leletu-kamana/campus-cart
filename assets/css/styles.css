@@ -4135,3 +4135,41 @@ main:focus {
     box-shadow: none; /* Removes the inner ring as well. */
 }
 
+/* ---------- 3. Layout ---------- */
+
+/* Vertical rhythm for every section. */
+.section {
+    padding-top: clamp(56px, 8vw, 96px); /* Scales the space above a section. */
+    padding-bottom: clamp(56px, 8vw, 96px); /* Scales the space below a section. */
+}
+
+/* A softer separation between alternating sections. */
+.section.alt {
+    background: var(--grey); /* Uses the light grey background. */
+}
+
+/* Section introductions are narrower and have more space below. */
+.section-head {
+    max-width: 760px; /* Keeps the intro at a readable width. */
+    margin-bottom: clamp(28px, 4vw, 44px); /* Scales the space below the intro. */
+}
+
+/* The small label above a heading becomes a yellow pill that is readable on white and navy. */
+.eyebrow {
+    display: inline-flex; /* Lets the label hug its text. */
+    align-items: center; /* Centres the text vertically. */
+    margin-bottom: 14px; /* Sets the space below the label. */
+    padding: 5px 13px; /* Sets the space inside the pill. */
+    color: var(--navy); /* Shows navy text on the yellow pill. */
+    background: var(--yellow); /* Gives the pill the brand yellow. */
+    border-radius: var(--radius-pill); /* Makes the label fully rounded. */
+    font-size: 0.74rem; /* Keeps the label small. */
+    font-weight: 800; /* Makes the label bold. */
+    letter-spacing: 0.12em; /* Spreads the capital letters. */
+}
+
+/* Grids get a little more air on large screens. */
+.grid {
+    gap: clamp(18px, 2.4vw, 28px); /* Scales the gap between grid items. */
+}
+
