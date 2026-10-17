@@ -44,6 +44,8 @@
   </head>
   <!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
   <body class="page-loading">
+    <!-- Lets keyboard users jump past the menu to the main content. -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
       <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
@@ -96,7 +98,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -116,7 +118,7 @@
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
           <a href="account.html">Account</a>
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+          <a class="nav-cart" href="account.html#order">Order <span class="cart-badge" data-cart-count>0</span></a>
         </div>
       </nav>
     </header>
@@ -137,8 +139,34 @@
       </ul>
     </nav>
     <!-- Contains the page's main content. -->
-    <main>
+    <main id="main" tabindex="-1">
       <!-- Groups content that belongs to one topic or page section. The id "shop" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+      <!-- Promotional banner at the top of the shop. The buttons and text are real HTML placed over the picture. -->
+      <section class="shop-banner" aria-label="Shop student essentials">
+        <!-- Keeps the banner centred. -->
+        <div class="wrap">
+          <!-- Holds the banner picture and the items placed over it. -->
+          <figure class="shop-banner__frame">
+            <!-- Banner picture with a cart icon, a laptop, a backpack and notebooks. -->
+            <img class="shop-banner__img" src="../assets/images/bundles/shop-banner.jpg" srcset="../assets/images/bundles/shop-banner-800.jpg 800w, ../assets/images/bundles/shop-banner.jpg 1600w" sizes="(max-width: 1240px) 100vw, 1180px" alt="Campus-Cart shop banner in navy and yellow with a shopping cart icon, a navy backpack, a laptop showing the shop and notebooks and pens" width="1600" height="530" fetchpriority="high" decoding="async">
+            <!-- Link placed over the white button in the picture. -->
+            <a class="shop-banner__btn shop-banner__btn--light" href="#deals-gallery">Shop now</a>
+            <!-- Link placed over the yellow button in the picture. -->
+            <a class="shop-banner__btn shop-banner__btn--yellow" href="#parent-hub">Starter bundles</a>
+            <!-- Text placed over the white circle in the picture. -->
+            <p class="shop-banner__badge">Starter bundles from R1,499</p>
+            <!-- Text placed over the white strip in the picture. -->
+            <p class="shop-banner__note">Free collection at listed campus points</p>
+          </figure>
+          <!-- The same links and facts for small screens, where text over the picture would be too small. -->
+          <div class="shop-banner__mobile">
+            <!-- Short summary line. -->
+            <p><strong>Starter bundles from R1,499.</strong> Free collection at listed campus points.</p>
+            <!-- Main actions. -->
+            <p class="shop-banner__actions"><a class="btn" href="#deals-gallery">Shop now</a> <a class="btn btn-outline" href="#parent-hub">Starter bundles</a></p>
+          </div>
+        </div>
+      </section>
       <section class="section" id="shop">
         <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
         <div class="wrap">
@@ -165,6 +193,8 @@
             <!-- role="tabpanel" identifies this element as tab content.
               id="panel-new" matches the data-panel value of the first tab. -->
             <div class="tab-panel" id="panel-new" role="tabpanel">
+              <!-- Heading for screen readers only, so the product titles below follow the page title in the correct order. -->
+              <h2 class="visually-hidden">New products</h2>
 
               <!-- class="grid grid-4" applies two CSS classes to this container.
                 The classes control the layout and number of columns. -->
@@ -176,7 +206,7 @@
 
                   <!-- src specifies the image location and alt provides alternative text.
                     loading="lazy" allows the browser to delay loading the image. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Duvet and linen set" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/products/duvet.jpg" alt="Folded grey duvet with navy piping" loading="lazy" width="800" height="800" decoding="async">
 
                   <!-- This div groups the text and controls belonging to the product.
                     class="card-body" allows CSS to style the card content. -->
@@ -184,9 +214,12 @@
 
                     <!-- <span> displays short inline content.
                       The badge classes allow CSS to style the product status. -->
-                    <span class="badge badge-new">New</span>
+                    <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">New</span>
                     <!-- Defines a third-level heading for a subsection or card. -->
-                    <h3>Duvet &amp; Linen Set (Double)</h3>
+    </div>
+    <h3>Duvet &amp; Linen Set (Double)</h3>
                     <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                     <!-- class="price" identifies this paragraph as a product price.
                       CSS can use the class to control its appearance. -->
@@ -204,13 +237,16 @@
                   The card class allows it to share the same CSS styling. -->
                 <article class="card">
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Electric kettle" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/products/kettle.jpg" alt="Stainless steel electric kettle with a yellow trim on its power base" loading="lazy" width="800" height="800" decoding="async">
                   <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                   <div class="card-body">
                     <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-                    <span class="badge badge-new">New</span>
+                    <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">New</span>
                     <!-- Defines a third-level heading for a subsection or card. -->
-                    <h3>Electric Kettle 1.7L</h3>
+    </div>
+    <h3>Electric Kettle 1.7L</h3>
                     <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                     <p class="price">R289.00</p>
                     <!-- Creates a paragraph of text. -->
@@ -222,13 +258,16 @@
                 <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
                 <article class="card">
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Stationery mega pack" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/products/stationery.jpg" alt="Notebooks, pencils, highlighters, sticky notes, a ruler and a calculator laid out together" loading="lazy" width="664" height="664" decoding="async">
                   <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                   <div class="card-body">
                     <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-                    <span class="badge badge-new">New</span>
+                    <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">New</span>
                     <!-- Defines a third-level heading for a subsection or card. -->
-                    <h3>Stationery Mega Pack</h3>
+    </div>
+    <h3>Stationery Mega Pack</h3>
                     <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                     <p class="price">R249.00</p>
                     <!-- Creates a paragraph of text. -->
@@ -240,13 +279,16 @@
                 <!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
                 <article class="card">
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/bundles/starter-bundle.jpg" alt="Load-shedding light kit" loading="lazy" width="800" height="800">
                   <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                   <div class="card-body">
                     <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-                    <span class="badge badge-new">New</span>
+                    <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">New</span>
                     <!-- Defines a third-level heading for a subsection or card. -->
-                    <h3>Load-Shedding Light Kit</h3>
+    </div>
+    <h3>Load-Shedding Light Kit</h3>
                     <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                     <p class="price">R329.00</p>
                     <!-- Creates a paragraph of text. -->
@@ -282,7 +324,7 @@
 
                   <!-- src specifies the image path while alt provides alternative text.
                       width and height provide the image dimensions. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used study desk" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/products/study-funiture.jpg" alt="White study desk with a white chair, a desk lamp and shelves in a bedroom" loading="lazy" width="800" height="800" decoding="async">
                   <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
                   <figcaption><strong>Study Desk</strong> — R650 · Pretoria · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
@@ -296,14 +338,14 @@
                 <!-- Creates the <figure> HTML element. -->
                 <figure>
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used accounting textbooks" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/products/textbook.jpg" alt="Navy hardcover textbook with a yellow bookmark ribbon" loading="lazy" width="800" height="800" decoding="async">
                   <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
                   <figcaption><strong>Accounting Textbook Set</strong> — R420 · Cape Town · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
                 <!-- Creates the <figure> HTML element. -->
                 <figure>
                   <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-                  <img src="../assets/images/second-hand/marketplace.jpg" alt="Used laptop bag" loading="lazy" width="1200" height="900">
+                  <img src="../assets/images/products/laptop-bag.jpg" alt="Navy padded laptop sleeve with yellow zip pulls" loading="lazy" width="800" height="800" decoding="async">
                   <!-- Creates the <figcaption> HTML element. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
                   <figcaption><strong>Laptop Bag 15&quot;</strong> — R180 · Durban · <span class="badge badge-verified">Verified Seller</span></figcaption>
                 </figure>
@@ -409,7 +451,8 @@
             <p id="deals-count" class="hint" style="margin:0 0 6px auto" aria-live="polite"></p>
           </div>
           <!-- Groups related content so it can be arranged or styled together. The id "deals-results" lets CSS or JavaScript identify this element. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
-          <div class="grid grid-3" id="deals-results"></div>
+          <!-- Grey placeholder cards shown until the product list is ready. -->
+          <div class="grid grid-3" id="deals-results" aria-busy="true"><article class="card-skeleton" aria-hidden="true"><div class="sk-block sk-img"></div><div class="sk-block sk-line"></div><div class="sk-block sk-line short"></div><div class="sk-block sk-line"></div></article><article class="card-skeleton" aria-hidden="true"><div class="sk-block sk-img"></div><div class="sk-block sk-line"></div><div class="sk-block sk-line short"></div><div class="sk-block sk-line"></div></article><article class="card-skeleton" aria-hidden="true"><div class="sk-block sk-img"></div><div class="sk-block sk-line"></div><div class="sk-block sk-line short"></div><div class="sk-block sk-line"></div></article><article class="card-skeleton" aria-hidden="true"><div class="sk-block sk-img"></div><div class="sk-block sk-line"></div><div class="sk-block sk-line short"></div><div class="sk-block sk-line"></div></article><article class="card-skeleton" aria-hidden="true"><div class="sk-block sk-img"></div><div class="sk-block sk-line"></div><div class="sk-block sk-line short"></div><div class="sk-block sk-line"></div></article><article class="card-skeleton" aria-hidden="true"><div class="sk-block sk-img"></div><div class="sk-block sk-line"></div><div class="sk-block sk-line short"></div><div class="sk-block sk-line"></div></article></div>
           <!-- Holds the See more and See less buttons for the deals grid. -->
           <div class="deals-more" id="deals-more">
             <!-- Shows six more products each time it is pressed. -->
@@ -435,7 +478,7 @@
             <!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
             <figure data-gallery-item="bundles">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Starter bundle contents" loading="lazy" width="1200" height="900">
+              <img src="../assets/images/bundles/bundle-standard.jpg" alt="Four items from the Standard Starter Bundle: a duvet, an electric kettle, stacked mugs and a navy desk lamp" loading="lazy" width="1000" height="1000" decoding="async">
               <!-- Creates the <figcaption> HTML element. -->
               <figcaption>Standard Starter Bundle, packed and ready for collection.</figcaption>
             </figure>
@@ -449,28 +492,28 @@
             <!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
             <figure data-gallery-item="res-life">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1600" height="900">
+              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students on campus" loading="lazy" width="1200" height="675">
               <!-- Creates the <figcaption> HTML element. -->
               <figcaption>Registration week collections on campus.</figcaption>
             </figure>
             <!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
             <figure data-gallery-item="bundles">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="../assets/images/bundles/starter-bundle.jpg" alt="Bedding in a bundle" loading="lazy" width="1200" height="900">
+              <img src="../assets/images/products/bedding-duvets.jpg" alt="White pillows and a rolled white duvet" loading="lazy" width="580" height="580" decoding="async">
               <!-- Creates the <figcaption> HTML element. -->
               <figcaption>Bedding and linen included in every bundle tier.</figcaption>
             </figure>
             <!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
             <figure data-gallery-item="second-hand">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="../assets/images/second-hand/marketplace.jpg" alt="Used textbooks" loading="lazy" width="1200" height="900">
+              <img src="../assets/images/products/textbook.jpg" alt="Navy hardcover textbook with a yellow bookmark ribbon" loading="lazy" width="800" height="800" decoding="async">
               <!-- Creates the <figcaption> HTML element. -->
               <figcaption>Prescribed textbooks resold by graduating students.</figcaption>
             </figure>
             <!-- Creates the <figure> HTML element. A data attribute stores a value that JavaScript can read. -->
             <figure data-gallery-item="res-life">
               <!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1600" height="900">
+              <img src="../assets/images/bundles/hero-campus.jpg" alt="Students carrying a crate" loading="lazy" width="1200" height="675">
               <!-- Creates the <figcaption> HTML element. -->
               <figcaption>Move-in day at a partner residence.</figcaption>
             </figure>
@@ -532,9 +575,12 @@
                 <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                 <div class="card-body">
                   <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                  <span class="badge">Tier 1</span>
+                  <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Tier 1</span>
                   <!-- Defines a third-level heading for a subsection or card. -->
-                  <h3>Basic Starter Bundle</h3>
+    </div>
+    <h3>Basic Starter Bundle</h3>
                   <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                   <p class="price">R1 499.00</p>
                   <!-- Creates a paragraph of text. -->
@@ -550,9 +596,12 @@
                 <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                 <div class="card-body">
                   <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-used" connects it to CSS styling or JavaScript behaviour. -->
-                  <span class="badge badge-used">Tier 2 · most chosen</span>
+                  <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-used">Tier 2 · most chosen</span>
                   <!-- Defines a third-level heading for a subsection or card. -->
-                  <h3>Standard Starter Bundle</h3>
+    </div>
+    <h3>Standard Starter Bundle</h3>
                   <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                   <p class="price">R2 799.00</p>
                   <!-- Creates a paragraph of text. -->
@@ -568,9 +617,12 @@
                 <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
                 <div class="card-body">
                   <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
-                  <span class="badge badge-verified">Tier 3</span>
+                  <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-verified">Tier 3</span>
                   <!-- Defines a third-level heading for a subsection or card. -->
-                  <h3>Premium Starter Bundle</h3>
+    </div>
+    <h3>Premium Starter Bundle</h3>
                   <!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
                   <p class="price">R4 499.00</p>
                   <!-- Creates a paragraph of text. -->
@@ -809,14 +861,14 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Campus-Cart</h4>
+          <h3>Campus-Cart</h3>
           <!-- Creates a paragraph of text. -->
           <p>Affordable new and second-hand student essentials for South African campuses.</p>
         </div>
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Shop</h4>
+          <h3>Shop</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -832,7 +884,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Company</h4>
+          <h3>Company</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -852,7 +904,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Reach us</h4>
+          <h3>Reach us</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to an email address. -->
@@ -888,6 +940,8 @@
     </footer>
     <!-- Loads the cookie and privacy choices before the other scripts. -->
     <script src="../assets/js/consent.js"></script>
+    <!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+    <script src="../assets/js/ui.js" defer></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="../assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
