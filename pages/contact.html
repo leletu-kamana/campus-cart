@@ -46,6 +46,8 @@
   </head>
   <!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
   <body class="page-loading">
+    <!-- Lets keyboard users jump past the menu to the main content. -->
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
     <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
       <!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
@@ -98,7 +100,7 @@
           </div>
         </div>
         <!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
         <!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
         <div class="nav-links">
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
@@ -118,16 +120,26 @@
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
           <a href="account.html">Account</a>
           <!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
-          <a class="nav-cart" href="account.html#order">Order (<span data-cart-count>0</span>)</a>
+          <a class="nav-cart" href="account.html#order">Order <span class="cart-badge" data-cart-count>0</span></a>
         </div>
       </nav>
     </header>
     <!-- Contains the page's main content. -->
-    <main>
+    <main id="main" tabindex="-1">
       <!-- Groups content that belongs to one topic or page section. The class "hero" connects it to CSS styling or JavaScript behaviour. -->
       <section class="hero">
         <!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
         <div class="wrap">
+          <!-- Trail of links that shows where this page sits in the site. -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <!-- Ordered list of the steps in the trail. -->
+            <ol>
+              <!-- First step: the home page. -->
+              <li><a href="../index.html">Home</a></li>
+              <!-- Current step: this page. -->
+              <li aria-current="page">Contact</li>
+            </ol>
+          </nav>
           <!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
           <span class="eyebrow">Contact</span>
           <!-- Defines the main heading of the page. -->
@@ -314,9 +326,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Gqeberha, Eastern Cape</h3>
+    </div>
+    <h3>Gqeberha, Eastern Cape</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Summerstrand collection desk<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -326,9 +341,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Bloemfontein, Free State</h3>
+    </div>
+    <h3>Bloemfontein, Free State</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Brandwag collection desk<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -338,9 +356,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Johannesburg, Gauteng</h3>
+    </div>
+    <h3>Johannesburg, Gauteng</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>7 Jorissen Street, Braamfontein, 2001<br>Mon-Sat 10:00-16:00</p>
               </div>
@@ -350,9 +371,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge badge-new">Head office</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge badge-new">Head office</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Pretoria, Gauteng</h3>
+    </div>
+    <h3>Pretoria, Gauteng</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>128 Lynnwood Road, Hatfield, 0083 (head office)<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -362,9 +386,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Locker point</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Locker point</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Durban, KwaZulu-Natal</h3>
+    </div>
+    <h3>Durban, KwaZulu-Natal</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Shop 12, University Drive, Westville, 3629 (lockers)<br>Lockers daily 08:00-20:00</p>
               </div>
@@ -374,9 +401,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Polokwane, Limpopo</h3>
+    </div>
+    <h3>Polokwane, Limpopo</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Polokwane CBD collection desk<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -386,9 +416,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Mbombela, Mpumalanga</h3>
+    </div>
+    <h3>Mbombela, Mpumalanga</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Mbombela CBD collection desk<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -398,9 +431,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Kimberley, Northern Cape</h3>
+    </div>
+    <h3>Kimberley, Northern Cape</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Kimberley CBD collection desk<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -410,9 +446,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Potchefstroom, North West</h3>
+    </div>
+    <h3>Potchefstroom, North West</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>Potchefstroom town centre collection desk<br>Mon-Fri 09:00-17:00</p>
               </div>
@@ -422,9 +461,12 @@
               <!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
               <div class="card-body">
                 <!-- Groups a short piece of inline text for styling or scripting. The class "badge" connects it to CSS styling or JavaScript behaviour. -->
-                <span class="badge">Collection hub</span>
+                <!-- Row that holds the small status labels. -->
+    <div class="card-tags">
+      <span class="badge">Collection hub</span>
                 <!-- Defines a third-level heading for a subsection or card. -->
-                <h3>Cape Town, Western Cape</h3>
+    </div>
+    <h3>Cape Town, Western Cape</h3>
                 <!-- Creates a paragraph of text. -->
                 <p>45 Main Road, Rondebosch, 7700<br>Tue-Sat 10:00-15:00</p>
               </div>
@@ -442,14 +484,14 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Campus-Cart</h4>
+          <h3>Campus-Cart</h3>
           <!-- Creates a paragraph of text. -->
           <p>Affordable new and second-hand student essentials for South African campuses.</p>
         </div>
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Shop</h4>
+          <h3>Shop</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -465,7 +507,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Company</h4>
+          <h3>Company</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
@@ -485,7 +527,7 @@
         <!-- Groups related content so it can be arranged or styled together. -->
         <div>
           <!-- Defines a fourth-level heading for a smaller subsection. -->
-          <h4>Reach us</h4>
+          <h3>Reach us</h3>
           <!-- Starts an unordered (bulleted) list. -->
           <ul>
             <!-- Defines one item in a list. The href attribute points to an email address. -->
@@ -521,6 +563,8 @@
     </footer>
     <!-- Loads the cookie and privacy choices before the other scripts. -->
     <script src="../assets/js/consent.js"></script>
+    <!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+    <script src="../assets/js/ui.js" defer></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
     <script src="../assets/js/script.js"></script>
     <!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
