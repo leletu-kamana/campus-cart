@@ -4634,3 +4634,211 @@ main:focus {
     font-weight: 900; /* Makes the tick bold. */
 }
 
+/* ---------- 8. Forms ---------- */
+
+/* Text fields, drop-downs and text areas. */
+input,
+select,
+textarea {
+    min-height: 48px; /* Gives every field a comfortable touch height. */
+    padding: 12px 14px; /* Sets the space inside the field. */
+    border: 1.5px solid #b9c1d1; /* Draws a clearly visible border. */
+    border-radius: var(--radius-control); /* Uses the shared control radius. */
+    background-color: var(--white); /* Uses a white background. */
+    transition: border-color 0.18s var(--ease), box-shadow 0.18s var(--ease), background-color 0.18s var(--ease); /* Animates focus changes. */
+}
+
+/* Hover state of a field. */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--navy); /* Darkens the border on hover. */
+}
+
+/* Focus state of a field: a navy border with a soft yellow halo. */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border-color: var(--navy); /* Makes the border navy. */
+    outline: none; /* Removes the default outline because the halo replaces it. */
+    box-shadow: 0 0 0 4px rgba(255, 210, 63, 0.7); /* Draws the yellow halo. */
+}
+
+/* Drop-downs use one custom arrow so they look the same in every browser. */
+select {
+    padding-right: 42px; /* Leaves room for the arrow. */
+    appearance: none; /* Removes the native arrow. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1.5l6 6 6-6' fill='none' stroke='%230d1b3e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); /* Draws a navy chevron. */
+    background-repeat: no-repeat; /* Shows the arrow once. */
+    background-position: right 14px center; /* Places the arrow on the right. */
+    cursor: pointer; /* Shows a pointer over the drop-down. */
+}
+
+/* The product search box gets a magnifier icon. */
+input[type="search"] {
+    padding-left: 44px; /* Leaves room for the icon. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%230d1b3e' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E"); /* Draws a navy magnifier. */
+    background-repeat: no-repeat; /* Shows the icon once. */
+    background-position: 15px center; /* Places the icon on the left. */
+}
+
+/* Tick boxes and radio buttons keep their normal size. */
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto; /* Cancels the full-width rule. */
+    min-height: 0; /* Cancels the minimum height. */
+    accent-color: var(--navy); /* Colours the tick in navy. */
+}
+
+/* Field labels. */
+.field label,
+.form-group label {
+    color: var(--navy); /* Shows navy labels. */
+    font-size: 0.92rem; /* Sets the label size. */
+    font-weight: 700; /* Makes the label bold. */
+}
+
+/* The card that wraps a form. */
+.form-card {
+    padding: clamp(22px, 4vw, 36px); /* Scales the space inside the card. */
+    border-radius: 22px; /* Rounds the corners more than a normal card. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+}
+
+/* Error text under a field. It is empty and takes no space until a message is added. */
+.error-msg {
+    color: var(--danger); /* Shows errors in red so they stand out. */
+    font-size: 0.88rem; /* Sets the error size. */
+    font-weight: 600; /* Makes the error slightly bold. */
+}
+
+/* A red exclamation mark appears before every error message. */
+.error-msg:not(:empty)::before {
+    content: "!"; /* Draws the exclamation mark. */
+    display: inline-grid; /* Centres the mark inside a circle. */
+    place-items: center; /* Centres the mark. */
+    width: 17px; /* Sets the circle width. */
+    height: 17px; /* Sets the circle height. */
+    margin-right: 7px; /* Sets the space after the circle. */
+    color: var(--white); /* Shows a white mark. */
+    background: var(--danger); /* Uses a red circle. */
+    border-radius: 50%; /* Makes the shape a circle. */
+    font-size: 0.72rem; /* Sets the mark size. */
+    font-weight: 800; /* Makes the mark bold. */
+}
+
+/* A field that failed validation. */
+.form-group input.input-error,
+.form-group select.input-error,
+.form-group textarea.input-error {
+    border-color: var(--danger); /* Draws a red border. */
+    background-color: #fff6f5; /* Tints the field light red. */
+}
+
+/* Result and email preview panel shown after a form is validated. */
+.form-result {
+    background: var(--grey-light); /* Uses the lightest grey. */
+    border: 1px solid var(--line); /* Draws a hairline border. */
+    border-left: 6px solid var(--yellow); /* Draws a yellow edge on the left. */
+    border-radius: var(--radius); /* Rounds the corners. */
+    box-shadow: var(--shadow); /* Adds the resting shadow. */
+}
+
+/* The panel fades in when it appears. */
+.form-result.show {
+    animation: ccPopIn 0.3s var(--ease); /* Reuses the pop-in animation. */
+}
+
+/* Stock status text uses colour and words together. */
+.status-ok { color: var(--success); font-weight: 700; } /* Shows in-stock text in green. */
+.status-low { color: var(--warning); font-weight: 700; } /* Shows low-stock text in amber. */
+.status-out { color: var(--danger); font-weight: 700; } /* Shows out-of-stock text in red. */
+
+/* The message above a locked submit button. */
+.gate-status {
+    padding: 10px 14px; /* Sets the space inside the message. */
+    color: var(--navy); /* Shows navy text. */
+    background: var(--yellow-soft); /* Uses a soft yellow background. */
+    border-radius: var(--radius-small); /* Rounds the corners. */
+    font-size: 0.92rem; /* Sets the message size. */
+}
+
+/* ---------- 9. Tabs, chips and sub-navigation ---------- */
+
+/* Tabs become a segmented control. */
+.tabs {
+    display: inline-flex; /* Lets the control hug its buttons. */
+    max-width: 100%; /* Stops the control from overflowing. */
+    margin-bottom: 28px; /* Sets the space below the tabs. */
+    padding: 6px; /* Sets the space inside the control. */
+    overflow-x: auto; /* Lets the tabs scroll sideways on tiny screens. */
+    background: var(--grey); /* Uses a light grey track. */
+    border: 0; /* Removes the old bottom border. */
+    border-radius: 14px; /* Rounds the track. */
+    gap: 4px; /* Sets the space between tabs. */
+}
+
+/* One tab. */
+.tab-btn {
+    padding: 10px 20px; /* Sets the space inside the tab. */
+    white-space: nowrap; /* Keeps the label on one line. */
+    background: transparent; /* Removes the old grey fill. */
+    border-radius: 10px; /* Rounds the tab. */
+    transition: background 0.2s var(--ease), color 0.2s var(--ease), box-shadow 0.2s var(--ease); /* Animates the change. */
+}
+
+/* Hover state of a tab. */
+.tab-btn:hover {
+    background: rgba(13, 27, 62, 0.08); /* Tints the tab on hover. */
+}
+
+/* The selected tab. */
+.tab-btn[aria-selected="true"] {
+    color: var(--yellow); /* Shows yellow text. */
+    background: var(--navy); /* Uses a navy background. */
+    box-shadow: var(--shadow); /* Lifts the selected tab. */
+}
+
+/* The yellow bar of anchor links stays visible under the header while scrolling. */
+.subnav {
+    position: sticky; /* Keeps the bar on screen. */
+    top: var(--header-h); /* Places it just under the header. */
+    z-index: 900; /* Keeps it above the page but below the header and dialogs. */
+    box-shadow: 0 6px 16px rgba(13, 27, 62, 0.12); /* Separates it from the content. */
+}
+
+/* The links scroll sideways on small screens instead of wrapping into many rows. */
+.subnav ul {
+    flex-wrap: nowrap; /* Keeps the chips on one line. */
+    overflow-x: auto; /* Lets the chips scroll sideways. */
+    scrollbar-width: none; /* Hides the scroll bar in Firefox. */
+}
+
+/* Hides the scroll bar in Chrome and Safari. */
+.subnav ul::-webkit-scrollbar {
+    display: none; /* Removes the scroll bar. */
+}
+
+/* One chip. */
+.subnav a {
+    white-space: nowrap; /* Keeps the chip on one line. */
+    background: rgba(255, 255, 255, 0.7); /* Uses a soft white chip. */
+    transition: background 0.2s var(--ease), color 0.2s var(--ease); /* Animates hover. */
+}
+
+/* Province quick links on the coverage page become chips as well. */
+.province-links a {
+    display: inline-block; /* Lets the link have padding. */
+    margin: 0 6px 8px 0; /* Sets the space around each chip. */
+    padding: 6px 14px; /* Sets the space inside the chip. */
+    background: var(--grey); /* Uses a light grey chip. */
+    border-radius: var(--radius-pill); /* Makes the chip fully rounded. */
+    font-weight: 700; /* Makes the label bold. */
+    transition: background 0.2s var(--ease); /* Animates hover. */
+}
+
+/* Hover state of a province chip. */
+.province-links a:hover {
+    background: var(--yellow); /* Turns the chip yellow on hover. */
+}
+
