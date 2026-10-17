@@ -956,6 +956,7 @@ function initNav() { // Declares a reusable function for this feature.
     updateNavDateTime(); // Calls the function or method needed for this operation.
     setInterval(updateNavDateTime, 1000); // Calls the function or method needed for this operation.
 
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
 
     /* ---------- Boot ---------- */
     document.addEventListener("DOMContentLoaded", function () { // Registers a document-level event handler for this interaction.
