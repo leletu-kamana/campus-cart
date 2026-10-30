@@ -421,7 +421,7 @@
         // Older browsers simply show everything straight away.
         if (!("IntersectionObserver" in window)) { return; } // Stops when the browser does not support IntersectionObserver.
 
-        var targets = document.querySelectorAll("main .card, main .info-box, main .split-card, main .gallery figure"); // Finds the elements to reveal.
+        var targets = document.querySelectorAll("main article, main figure"); // Finds the elements to reveal.
         if (!targets.length) { return; } // Stops when there are none.
 
         document.documentElement.classList.add("js-reveal"); // Adds a class that tells the CSS the effect is running.
@@ -445,6 +445,26 @@
     // MAP PERMISSION
     // The map tiles come from OpenStreetMap, so the map only loads after the visitor allows maps.
     // ------------------------------------------------------
+
+
+    // The contact page lists the collection hubs as cards but has no map box, so this builds one
+    // above the cards: a short heading, a "jump to a hub" dropdown and the empty map area.
+    function injectHubMap() {
+        if (document.getElementById("hub-map")) { return; } // The page already has its own map box.
+        var cards = Array.prototype.filter.call(document.querySelectorAll("main article"), function (a) {
+            return /Collection hub/i.test(a.textContent);
+        });
+        if (!cards.length) { return; } // Not a page that lists hubs.
+        var grid = cards[0].parentElement;
+        var wrap = make("div", "cc-hub-map-wrap");
+        wrap.innerHTML =
+            '<h3 class="text-xl font-extrabold text-[#0d1b3e]">Find a hub on the map</h3>' +
+            '<p class="mt-1 text-sm text-slate-600">Pick a hub to zoom to it, or tap a marker for the address and opening hours.</p>' +
+            '<div class="mt-4 max-w-sm"><label for="hub-select" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Jump to a hub</label>' +
+            '<select id="hub-select" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"><option value="">All hubs</option></select></div>' +
+            '<div id="hub-map" class="hub-map mt-4" role="region" aria-label="Map of Campus-Cart collection hubs"></div>';
+        grid.parentElement.insertBefore(wrap, grid);
+    }
 
     function gateHubMap() { // Waits for permission before loading the map.
         var box = document.getElementById("hub-map"); // Finds the map box on the page.
@@ -474,6 +494,7 @@
     // ------------------------------------------------------
 
     document.addEventListener("DOMContentLoaded", function () { // Runs when the page has finished loading.
+        injectHubMap(); // Builds the map box on pages that list hubs but have no map.
         gateHubMap(); // Builds the hub map once maps are allowed.
         initLightbox(); // Sets up the lightbox.
         initQuickView(); // Sets up the quick view.
