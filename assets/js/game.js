@@ -1,231 +1,274 @@
 // ==========================================================
 // CAMPUS-CART
-// 404 page game: "Campus Runner"
+// game.js - 404 page game: "Campus Runner"
 // A small endless runner. Jump over the crates for as long as you can.
 // Plain JavaScript and the canvas element, no libraries.
+// Runs only on a page that has the #game-canvas element.
+// (Replaces the older game.js: the 404 page now shows a live score and
+// a saved best score, so this version updates those two badges too.)
 // ==========================================================
 
-(function () { // Wraps the whole game in a function so its variables stay private.
-    "use strict"; // Turns on stricter error checking.
+(function () {
+  'use strict';
+  const $ = (sel) => document.querySelector(sel);
+  if (!$('#game-canvas')) return;
 
-    // ---------- Setup ----------
-    var canvas = document.getElementById("game-canvas"); // Finds the game canvas on the page.
-    var startBtn = document.getElementById("game-start"); // Finds the start and restart button.
-    var statusEl = document.getElementById("game-status"); // Finds the text that announces the game state.
-    if (!canvas || !canvas.getContext || !startBtn || !statusEl) { return; } // Stops quietly if something is missing.
-    var ctx = canvas.getContext("2d"); // Gets the tool used to draw on the canvas.
-    var W = 640; // Width of the game world in pixels.
-    var H = 220; // Height of the game world in pixels.
-    var GROUND = 180; // Y position of the ground line.
-    var NAVY = "#0d1b3e"; // Main brand colour.
-    var YELLOW = "#ffd23f"; // Accent brand colour.
-    var GREY = "#f2f3f5"; // Light background colour.
-    var GRAVITY = 0.65; // How fast the runner is pulled down each frame.
-    var JUMP = -12; // Upward speed given to the runner when it jumps.
-    var dpr = Math.min(window.devicePixelRatio || 1, 2); // Uses a sharper canvas on high resolution screens.
-    canvas.width = W * dpr; // Sets the real canvas width.
-    canvas.height = H * dpr; // Sets the real canvas height.
-    ctx.scale(dpr, dpr); // Lets the code below keep using the 640 by 220 world size.
+  /* ===== Campus Runner mini-game ===== */
 
-    // ---------- Game state ----------
-    var state = "idle"; // Current state: idle, running or over.
-    var runner; // The player object, created in reset().
-    var crates; // List of crates on the screen.
-    var clouds; // List of background clouds.
-    var speed; // Current game speed in pixels per frame.
-    var distance; // Distance travelled so far.
-    var score; // Score shown to the player.
-    var best = 0; // Best score on this device.
-    var gapLeft; // Distance left before the next crate appears.
-    var steps; // Frame counter used for the leg animation.
-    var lastTime; // Time of the previous frame.
-    var overAt = 0; // Time the last game ended, used to stop accidental restarts.
-    var rafId = 0; // ID of the running animation loop.
-    var crateTypes = [ // The crate sizes the game picks from.
-        { w: 26, h: 34 }, // Small single crate.
-        { w: 34, h: 44 }, // Medium crate.
-        { w: 26, h: 54 }, // Tall crate.
-        { w: 52, h: 34 } // Wide pair of crates.
-    ];
+      const canvas = $('#game-canvas');
+      const ctx = canvas.getContext('2d');
+      const statusEl = $('#game-status');
+      const scoreEl = $('#game-score');
+      const bestEl = $('#game-best');
+      const startBtn = $('#game-start');
 
-    try { // Starts error handling in case storage is blocked.
-        best = Number(window.localStorage.getItem("cc_game_best")) || 0; // Loads the saved best score.
-    } catch (e) { best = 0; } // Uses zero if storage is unavailable.
+      // Game state
+      const GROUND_Y = 214;          // where the floor sits on the canvas
+      const GRAVITY = 0.55;
+      const JUMP_VELOCITY = -11.5;
+      const PLAYER_W = 32;
+      const PLAYER_H = 44;
+      const CRATE_W = 34;
+      const CRATE_H = 34;
 
-    // ---------- Helpers ----------
-    function pad(n) { // Turns a number into five digits, like 00042.
-        var s = String(n); // Converts the number to text.
-        while (s.length < 5) { s = "0" + s; } // Adds zeros at the front until it has five digits.
-        return s; // Returns the padded text.
-    }
+      let running = false;
+      let over = false;
+      let score = 0;
+      let best = 0;
+      let player = null;
+      let crates = [];
+      let crateTimer = 0;
+      let frameId = null;
+      let lastTime = 0;
 
-    function reset() { // Puts the game back to its starting values.
-        runner = { x: 60, y: GROUND - 44, w: 30, h: 44, vy: 0, onGround: true }; // Creates the runner standing on the ground.
-        crates = []; // Removes all crates.
-        clouds = [{ x: 120, y: 40 }, { x: 380, y: 28 }, { x: 560, y: 56 }]; // Places three clouds.
-        speed = 6; // Starts at a gentle speed.
-        distance = 0; // Resets the distance.
-        score = 0; // Resets the score.
-        gapLeft = 380; // Waits a little before the first crate.
-        steps = 0; // Resets the animation counter.
-    }
+      // Load best score from localStorage (cc_game_best, per the Cookie Policy)
+      try {
+        best = Number(localStorage.getItem('cc_game_best')) || 0;
+      } catch (e) { best = 0; }
+      bestEl.textContent = 'Best ' + best;
 
-    // ---------- Drawing ----------
-    function drawCrate(c) { // Draws one crate as a navy box with a yellow frame and cross.
-        var y = GROUND - c.h; // Top edge of the crate.
-        ctx.fillStyle = NAVY; // Chooses navy for the box.
-        ctx.fillRect(c.x, y, c.w, c.h); // Draws the box.
-        ctx.strokeStyle = YELLOW; // Chooses yellow for the lines.
-        ctx.lineWidth = 2; // Sets the line thickness.
-        ctx.strokeRect(c.x + 3, y + 3, c.w - 6, c.h - 6); // Draws an inner frame.
-        ctx.beginPath(); // Starts a new line.
-        ctx.moveTo(c.x + 3, y + 3); // Moves to the top left corner of the frame.
-        ctx.lineTo(c.x + c.w - 3, y + c.h - 3); // Draws a diagonal across the box.
-        ctx.stroke(); // Paints the line.
-    }
+      function resetGame() {
+        running = true;
+        over = false;
+        score = 0;
+        crates = [];
+        crateTimer = 0;
+        player = {
+          x: 70,
+          y: GROUND_Y - PLAYER_H,
+          w: PLAYER_W,
+          h: PLAYER_H,
+          vy: 0,
+          grounded: true
+        };
+        scoreEl.textContent = 'Score 0';
+        statusEl.textContent = 'Go! Press Space or tap to jump.';
+      }
 
-    function drawRunner() { // Draws the student runner.
-        var x = runner.x; // Left edge of the runner.
-        var y = runner.y; // Top edge of the runner.
-        ctx.fillStyle = YELLOW; // Chooses yellow for the head and backpack.
-        ctx.fillRect(x + 8, y, 16, 14); // Draws the head.
-        ctx.fillRect(x - 4, y + 18, 10, 18); // Draws the backpack.
-        ctx.fillStyle = NAVY; // Chooses navy for the body.
-        ctx.fillRect(x + 6, y + 16, 20, 18); // Draws the body.
-        ctx.fillRect(x + 18, y + 4, 4, 4); // Draws an eye.
-        var step = runner.onGround && Math.floor(steps / 5) % 2 === 0; // Alternates the legs while running on the ground.
-        ctx.fillRect(x + 8, y + 34, 6, step ? 10 : 6); // Draws the back leg.
-        ctx.fillRect(x + 18, y + 34, 6, step ? 6 : 10); // Draws the front leg.
-    }
+      function endGame() {
+        running = false;
+        over = true;
+        statusEl.textContent = 'Crashed! Score ' + score + '. Press Start game to try again.';
+        startBtn.innerHTML = 'Play again <img src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg" alt="" class="h-4 w-4">';
+        if (score > best) {
+          best = score;
+          bestEl.textContent = 'Best ' + best;
+          try { localStorage.setItem('cc_game_best', String(best)); } catch (e) { /* storage blocked */ }
+        }
+      }
 
-    function draw() { // Draws one complete frame.
-        ctx.fillStyle = GREY; // Chooses the background colour.
-        ctx.fillRect(0, 0, W, H); // Fills the whole canvas.
-        ctx.fillStyle = "#ffffff"; // Chooses white for the clouds.
-        clouds.forEach(function (c) { // Loops through the clouds.
-            ctx.fillRect(c.x, c.y, 46, 12); // Draws the flat base of a cloud.
-            ctx.fillRect(c.x + 10, c.y - 8, 26, 10); // Draws the top of a cloud.
+      function spawnCrate() {
+        crates.push({
+          x: canvas.width + 20,
+          y: GROUND_Y - CRATE_H,
+          w: CRATE_W,
+          h: CRATE_H,
+          passed: false,
+          speed: 5.2 + Math.min(score * 0.12, 4)
         });
-        ctx.fillStyle = NAVY; // Chooses navy for the ground.
-        ctx.fillRect(0, GROUND, W, 3); // Draws the ground line.
-        for (var g = -(distance % 40); g < W; g += 40) { // Draws small ground marks that scroll with the distance.
-            ctx.fillRect(g, GROUND + 10, 14, 2); // Draws one mark below the ground line.
-        }
-        crates.forEach(drawCrate); // Draws every crate.
-        drawRunner(); // Draws the runner.
-        ctx.fillStyle = NAVY; // Chooses navy for the text.
-        ctx.font = "bold 16px 'Segoe UI', Arial, sans-serif"; // Sets the text style.
-        ctx.textAlign = "right"; // Aligns the score to the right.
-        ctx.fillText("Best " + pad(best) + "   Score " + pad(score), W - 14, 26); // Draws the best score and the current score.
-        ctx.textAlign = "center"; // Centres the messages.
-        if (state === "idle") { ctx.fillText("Press Space or tap to start", W / 2, 90); } // Shows the start message.
-        if (state === "over") { ctx.fillText("Game over - press Space or tap to play again", W / 2, 90); } // Shows the game over message.
-    }
+      }
 
-    // ---------- Game logic ----------
-    function hit() { // Checks whether the runner touches any crate.
-        var rx = runner.x + 5; // Left edge of the runner's hit box, made a little smaller to be fair.
-        var ry = runner.y + 4; // Top edge of the hit box.
-        var rw = runner.w - 10; // Width of the hit box.
-        var rh = runner.h - 6; // Height of the hit box.
-        for (var i = 0; i < crates.length; i++) { // Loops through every crate.
-            var c = crates[i]; // Gets one crate.
-            var cy = GROUND - c.h; // Top edge of the crate.
-            if (rx < c.x + c.w && rx + rw > c.x && ry + rh > cy) { return true; } // Detects two overlapping boxes.
-        }
-        return false; // No crate was touched.
-    }
+      function update(dt) {
+        if (!running || over) return;
 
-    function end() { // Stops the game and saves the best score.
-        state = "over"; // Marks the game as finished.
-        overAt = performance.now(); // Remembers when it ended.
-        if (score > best) { // Checks for a new best score.
-            best = score; // Stores the new best score.
-            try { window.localStorage.setItem("cc_game_best", String(best)); } catch (e) { best = score; } // Saves it on this device if possible.
+        // Player physics
+        if (!player.grounded) {
+          player.vy += GRAVITY * dt * 60;
+          player.y += player.vy * dt * 60;
+          if (player.y + player.h >= GROUND_Y) {
+            player.y = GROUND_Y - player.h;
+            player.vy = 0;
+            player.grounded = true;
+          }
         }
-        draw(); // Draws the final frame with the game over message.
-        statusEl.textContent = "Game over. Your score was " + score + ". Best score " + best + "."; // Announces the result.
-        startBtn.textContent = "Play again"; // Changes the button label.
-    }
 
-    function update(dt) { // Moves everything forward by one step.
-        score = Math.floor(distance / 12); // Works out the score from the distance.
-        speed = Math.min(13, 6 + score * 0.007); // Speeds up as the score grows, up to a limit.
-        distance += speed * dt; // Adds the distance travelled in this step.
-        steps += dt; // Advances the leg animation.
-        runner.vy += GRAVITY * dt; // Pulls the runner down.
-        runner.y += runner.vy * dt; // Moves the runner up or down.
-        if (runner.y >= GROUND - runner.h) { // Checks whether the runner has reached the ground.
-            runner.y = GROUND - runner.h; // Keeps the runner on the ground.
-            runner.vy = 0; // Stops the falling.
-            runner.onGround = true; // Allows another jump.
+        // Spawn crates
+        crateTimer -= dt;
+        if (crateTimer <= 0) {
+          spawnCrate();
+          crateTimer = 1.1 + Math.random() * 1.1;
         }
-        gapLeft -= speed * dt; // Counts down to the next crate.
-        if (gapLeft <= 0) { // Checks whether it is time for a new crate.
-            var type = crateTypes[Math.floor(Math.random() * crateTypes.length)]; // Picks a random crate size.
-            crates.push({ x: W + 10, w: type.w, h: type.h }); // Adds the crate just past the right edge.
-            gapLeft = type.w + speed * 38 + 140 + Math.random() * 220; // Sets a safe, random gap to the next crate.
-        }
-        for (var i = crates.length - 1; i >= 0; i--) { // Loops through the crates from the end.
-            crates[i].x -= speed * dt; // Moves the crate to the left.
-            if (crates[i].x + crates[i].w < 0) { crates.splice(i, 1); } // Removes crates that have left the screen.
-        }
-        clouds.forEach(function (c) { // Loops through the clouds.
-            c.x -= speed * dt * 0.2; // Moves clouds slowly for a depth effect.
-            if (c.x < -60) { c.x = W + 20; } // Brings a cloud back in on the right.
+
+        // Move crates + collisions
+        crates.forEach((crate) => {
+          crate.x -= crate.speed * dt * 60;
+
+          // Score when a crate passes the player
+          if (!crate.passed && crate.x + crate.w < player.x) {
+            crate.passed = true;
+            score += 1;
+            scoreEl.textContent = 'Score ' + score;
+          }
+
+          // AABB collision
+          if (
+            player.x < crate.x + crate.w &&
+            player.x + player.w > crate.x &&
+            player.y < crate.y + crate.h &&
+            player.y + player.h > crate.y
+          ) {
+            endGame();
+          }
         });
-        if (hit()) { end(); } // Ends the game after a collision.
-    }
 
-    function loop(time) { // Runs once for every screen refresh while the game is playing.
-        if (state !== "running") { return; } // Stops the loop when the game is not running.
-        var dt = Math.max(0, Math.min((time - lastTime) / 16.667, 3)); // Counts how many 60 fps frames passed, capped for slow devices.
-        lastTime = time; // Remembers this frame's time.
-        update(dt); // Moves everything.
-        if (state === "running") { // Checks that the game did not just end.
-            draw(); // Draws the new frame.
-            rafId = requestAnimationFrame(loop); // Asks for the next frame.
+        // Remove off-screen crates
+        crates = crates.filter((crate) => crate.x + crate.w > -30);
+      }
+
+      function draw() {
+        // Clear
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Sky gradient
+        const sky = ctx.createLinearGradient(0, 0, 0, canvas.height);
+        sky.addColorStop(0, '#10214d');
+        sky.addColorStop(1, '#0a1533');
+        ctx.fillStyle = sky;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Faint stars
+        ctx.fillStyle = 'rgba(255,255,255,0.25)';
+        for (let i = 0; i < 12; i++) {
+          const sx = (i * 67 + 23) % canvas.width;
+          const sy = (i * 41 + 17) % 90;
+          ctx.fillRect(sx, sy, 2, 2);
         }
-    }
 
-    function start() { // Begins a new game.
-        if (rafId) { cancelAnimationFrame(rafId); } // Cancels any loop that is still running.
-        reset(); // Sets the starting values.
-        state = "running"; // Marks the game as running.
-        lastTime = performance.now(); // Remembers the starting time.
-        statusEl.textContent = "Game started. Jump over the crates."; // Announces the start.
-        startBtn.textContent = "Restart game"; // Changes the button label.
-        canvas.focus({ preventScroll: true }); // Moves the keyboard focus to the game.
-        rafId = requestAnimationFrame(loop); // Starts the loop.
-    }
+        // Ground
+        ctx.fillStyle = '#0d1b3e';
+        ctx.fillRect(0, GROUND_Y, canvas.width, canvas.height - GROUND_Y);
+        ctx.fillStyle = '#ffd23f';
+        ctx.fillRect(0, GROUND_Y, canvas.width, 3);
 
-    function jump() { // Handles one jump or start request.
-        if (state === "idle") { start(); return; } // Starts the game on the first press.
-        if (state === "over") { // Checks whether the game has ended.
-            if (performance.now() - overAt > 400) { start(); } // Restarts, but not instantly, so a late jump does not restart by accident.
-            return; // Stops here after handling the restart.
+        // Ground dashes scrolling with score
+        ctx.fillStyle = 'rgba(255,255,255,0.15)';
+        const dashOffset = (score * 24) % 40;
+        for (let x = -dashOffset; x < canvas.width; x += 40) {
+          ctx.fillRect(x, GROUND_Y + 12, 20, 4);
         }
-        if (runner.onGround) { // Only lets the runner jump from the ground.
-            runner.vy = JUMP; // Launches the runner upwards.
-            runner.onGround = false; // Marks the runner as in the air.
-        }
-    }
 
-    // ---------- Controls ----------
-    canvas.addEventListener("keydown", function (e) { // Listens for key presses while the game has focus.
-        if (e.code === "Space" || e.key === "ArrowUp" || e.key === " ") { // Checks for the jump keys.
-            e.preventDefault(); // Stops the page from scrolling.
-            jump(); // Jumps or starts the game.
-        }
-    });
-    canvas.addEventListener("pointerdown", function (e) { // Listens for a tap or click on the game.
-        e.preventDefault(); // Stops the browser from selecting text or zooming.
-        canvas.focus({ preventScroll: true }); // Gives the game keyboard focus.
-        jump(); // Jumps or starts the game.
-    });
-    startBtn.addEventListener("click", start); // Starts or restarts the game from the button.
+        // Crates
+        crates.forEach((crate) => {
+          ctx.fillStyle = '#c2572f';
+          roundRect(ctx, crate.x, crate.y, crate.w, crate.h, 5);
+          ctx.fill();
+          ctx.fillStyle = '#8f3d1f';
+          ctx.fillRect(crate.x + 6, crate.y + 6, crate.w - 12, 4);
+          ctx.fillRect(crate.x + 6, crate.y + 16, crate.w - 12, 4);
+        });
 
-    // ---------- First frame ----------
-    reset(); // Sets the starting values.
-    draw(); // Draws the opening screen.
+        // Player (mini backpack)
+        if (player) {
+          const px = player.x;
+          const py = player.y;
+          // Body
+          ctx.fillStyle = '#ffd23f';
+          roundRect(ctx, px, py, player.w, player.h, 9);
+          ctx.fill();
+          // Pocket
+          ctx.fillStyle = '#e6b300';
+          roundRect(ctx, px + 7, py + 10, player.w - 14, player.h - 16, 6);
+          ctx.fill();
+          // Straps hint
+          ctx.fillStyle = '#e6b300';
+          ctx.fillRect(px + 5, py + 8, 4, player.h - 14);
+          ctx.fillRect(px + player.w - 9, py + 8, 4, player.h - 14);
+        }
+
+        // HUD text inside the canvas when not running
+        if (!running && !over) {
+          ctx.fillStyle = 'rgba(255,255,255,0.6)';
+          ctx.font = '600 15px Inter, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText('Press Start game to begin', canvas.width / 2, 130);
+        }
+      }
+
+      function roundRect(ctx, x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y);
+        ctx.arcTo(x + w, y, x + w, y + h, r);
+        ctx.arcTo(x + w, y + h, x, y + h, r);
+        ctx.arcTo(x, y + h, x, y, r);
+        ctx.arcTo(x, y, x + w, y, r);
+        ctx.closePath();
+      }
+
+      function loop(time) {
+        if (!lastTime) lastTime = time;
+        const dt = Math.min((time - lastTime) / 1000, 0.05);
+        lastTime = time;
+
+        update(dt);
+        draw();
+
+        if (running && !over) {
+          frameId = requestAnimationFrame(loop);
+        } else {
+          // One final draw so the crash frame stays visible
+          draw();
+          frameId = null;
+        }
+      }
+
+      function startGame() {
+        if (frameId) cancelAnimationFrame(frameId);
+        resetGame();
+        lastTime = 0;
+        startBtn.innerHTML = 'Playing… <img src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg" alt="" class="h-4 w-4">';
+        frameId = requestAnimationFrame(loop);
+      }
+
+      startBtn.addEventListener('click', startGame);
+
+      // Jump controls
+      function tryJump() {
+        if (!running || over) return;
+        if (player.grounded) {
+          player.vy = JUMP_VELOCITY;
+          player.grounded = false;
+        }
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.code === 'Space' || e.code === 'ArrowUp') {
+          e.preventDefault();
+          tryJump();
+        }
+      });
+
+      // Touch / click on canvas jumps
+      canvas.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        if (!running && !over) {
+          startGame();
+        } else {
+          tryJump();
+        }
+      });
+
+      // Initial draw
+      resetGame();
+      running = false;
+      draw();
 })();
