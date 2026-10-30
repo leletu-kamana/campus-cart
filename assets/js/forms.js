@@ -18,11 +18,7 @@ document.addEventListener("DOMContentLoaded", function () { // Run setup after t
         setupEnquiryForm(enquiryForm); // Execute this statement to update state or produce a result.
     } // Close this block or callback.
 
-    // Starts the coverage search only if the search box is on this page.
-    const searchBox = document.getElementById("coverage-search"); // Declare a constant for use in this operation.
-    if (searchBox) { // Begin this block of code.
-        setupCoverageSearch(searchBox); // Execute this statement to update state or produce a result.
-    } // Close this block or callback.
+    // (The coverage search lives in interactions.js.)
 
     // Starts the contact code only if the contact form is on this page.
     if (contactForm) { // Begin this block of code.
@@ -35,6 +31,87 @@ document.addEventListener("DOMContentLoaded", function () { // Run setup after t
 // SHARED HELPER FUNCTIONS
 // ==========================================================
 
+// ---------- Helpers that let this file work with the Tailwind markup ----------
+// The pages hide things with the Tailwind "hidden" class, not the hidden attribute,
+// and wrap each field in a plain <div>, so these small helpers cover both styles.
+function groupOf(input) { // The wrapper that holds a field, its label and its error message.
+    return input.closest("#enq-other-group") || input.closest(".form-group") || input.parentElement;
+}
+function isHiddenGroup(group) { // True when the wrapper is hidden by either method.
+    return group.hidden || group.classList.contains("hidden");
+}
+function setHidden(el, hide) { // Hides or shows an element using both methods.
+    el.hidden = hide;
+    el.classList.toggle("hidden", hide);
+}
+function showBox(box, visible) { // Shows or hides a result box (enquiry result, email preview).
+    box.classList.add("cc-result");
+    box.classList.toggle("show", visible);
+    box.classList.toggle("hidden", !visible);
+    if (!visible) { box.innerHTML = ""; }
+}
+function showBox2(box) { // Shows a result box that already has its content.
+    box.classList.add("cc-result", "show");
+    box.classList.remove("hidden");
+}
+function productFor(name) { // Finds price and stock for an item, even if the stock table has no entry for it.
+    if (STOCK[name]) { return STOCK[name]; }
+    const found = (window.CC_CATALOGUE ? window.CC_CATALOGUE.DEALS : []).find(function (d) { return d.name === name; });
+    return { price: found ? found.price : 0, stock: 5, type: found && found.condition === "used" ? "Second-hand" : "New" };
+}
+
+// ==========================================================
+// WEB3FORMS DELIVERY
+// Sends a validated form to the Campus-Cart inbox through Web3Forms.
+// While it sends, the button shows "Sending..." and is disabled.
+// If sending fails, the box that is already on screen still offers the
+// "open in my email app" link, so the visitor can send it by email instead.
+// ==========================================================
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+const WEB3FORMS_KEY = "ce1abf2e-a2e8-46b7-b6a5-f9814d57b8aa";
+
+async function sendViaWeb3Forms(form, fields, box) {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form); // Every named field in the form.
+    formData.append("access_key", WEB3FORMS_KEY);
+    Object.keys(fields).forEach(function (key) { formData.set(key, fields[key]); }); // subject, from_name, email, message.
+
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    // Adds a short status line at the top of the result box.
+    function status(text, ok) {
+        let line = box.querySelector(".cc-send-status");
+        if (!line) {
+            line = document.createElement("p");
+            line.className = "cc-send-status";
+            line.setAttribute("role", "status");
+            line.style.cssText = "margin-bottom:.75rem;font-weight:700;";
+            box.insertBefore(line, box.firstChild);
+        }
+        line.style.color = ok ? "#047857" : "#b91c1c";
+        line.textContent = text;
+    }
+
+    try {
+        const response = await fetch(WEB3FORMS_URL, { method: "POST", body: formData });
+        const data = await response.json();
+        if (response.ok) {
+            status("Success! Your message has been sent.", true);
+            form.reset();
+        } else {
+            status("Error: " + data.message + " You can still send it from your email app below.", false);
+        }
+    } catch (error) {
+        status("Something went wrong. Please try again, or send it from your email app below.", false);
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        form.dispatchEvent(new Event("input", { bubbles: true })); // Lets the form gate lock or unlock the submit button again.
+    }
+}
+
 // Shows an error message under a field and marks the field as invalid for screen readers.
 function showError(input, message) { // Begin this block of code.
 
@@ -44,6 +121,7 @@ function showError(input, message) { // Begin this block of code.
     // Writes the message into the span, if the span exists.
     if (errorBox) { // Begin this block of code.
         errorBox.textContent = message; // Execute this statement to update state or produce a result.
+        errorBox.classList.remove("hidden"); // The Tailwind pages keep empty error messages hidden.
     } // Close this block or callback.
 
     // Adds a CSS class so the field gets a red border.
@@ -62,6 +140,7 @@ function clearError(input) { // Begin this block of code.
     // Empties the message text.
     if (errorBox) { // Begin this block of code.
         errorBox.textContent = ""; // Execute this statement to update state or produce a result.
+        errorBox.classList.add("hidden"); // Hides the empty message again.
     } // Close this block or callback.
 
     // Removes the red border and the invalid flag.
@@ -130,10 +209,10 @@ function setupFormGate(form, steps) { // Begin this block of code.
         let blockedBy = null; // Store the first invalid step that blocks later fields.
 
         steps.forEach(function (step) { // Begin this block of code.
-            const group = step.input.closest(".form-group"); // Declare a constant for use in this operation.
+            const group = groupOf(step.input); // Declare a constant for use in this operation.
 
             // Fields that are hidden right now (such as "Name of your institution") are not part of the path.
-            if (group.hidden) { // Begin this block of code.
+            if (isHiddenGroup(group)) { // Begin this block of code.
                 group.inert = false; // Update or inspect the relevant form or page element.
                 return; // Execute this statement to update state or produce a result.
             } // Close this block or callback.
@@ -281,7 +360,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
         while (institution.children.length > 1) { // Begin this block of code.
             institution.removeChild(institution.lastChild); // Update or inspect the relevant form or page element.
         } // Close this block or callback.
-        otherGroup.hidden = true; // Execute this statement to update state or produce a result.
+        setHidden(otherGroup, true); // Execute this statement to update state or produce a result.
         const chosen = getProvince(province.value); // Declare a constant for use in this operation.
         if (!chosen) { // Begin this block of code.
             institution.options[0].text = "Choose a province first..."; // Update or inspect the relevant form or page element.
@@ -305,7 +384,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
 
     // Shows the extra text box when the user picks "My institution is not listed".
     institution.addEventListener("change", function () { // Begin this block of code.
-        otherGroup.hidden = institution.value !== "My institution is not listed"; // Execute this statement to update state or produce a result.
+        setHidden(otherGroup, institution.value !== "My institution is not listed"); // Execute this statement to update state or produce a result.
     }); // Close this block or callback.
 
     // Clears a field's error message as soon as the user edits that field.
@@ -355,8 +434,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
         event.preventDefault(); // Execute this statement to update state or produce a result.
 
         // Clears the previous response.
-        result.innerHTML = ""; // Update or inspect the relevant form or page element.
-        result.classList.remove("show"); // Update or inspect the relevant form or page element.
+        showBox(result, false);
 
         let valid = true; // Declare a variable whose value may change.
         let firstBad = null; // Declare a variable whose value may change.
@@ -370,7 +448,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
 
         // Runs every check from the steps list. Fields that are hidden right now are skipped.
         steps.forEach(function (step) { // Begin this block of code.
-            if (step.input.closest(".form-group").hidden) { return; } // Run this block only when the condition is true.
+            if (isHiddenGroup(groupOf(step.input))) { return; } // Run this block only when the condition is true.
             const message = step.check(); // Declare a constant for use in this operation.
             if (message !== "") { fail(step.input, message); } // Run this block only when the condition is true.
         }); // Close this block or callback.
@@ -383,7 +461,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
         } // Close this block or callback.
 
         // ----- Processing: work out the response from the validated input -----
-        const product = STOCK[item.value]; // Find the selected product in the stock catalogue.
+        const product = productFor(item.value); // Find the selected product in the stock catalogue.
         const total = product.price * qty; // Calculate the estimated total before delivery fees.
         const prov = getProvince(province.value); // Declare a constant for use in this operation.
         // Looks the institution up. National private providers and typed-in institutions have no town,
@@ -458,7 +536,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
             name.value.trim() + "\r\n" + // This line contributes to the current expression or data structure.
             "(" + enquirerType.value + ")\r\n" + // Continue building the text value used in this operation.
             "Email: " + email.value.trim(); // Continue building the text value used in this operation.
-        const mailto = "mailto:" + form.dataset.mailto + // Build a link that opens the visitor’s email application.
+        const mailto = "mailto:" + (form.dataset.mailto || "enquiries@campus-cart.co.za") + // Build a link that opens the visitor’s email application.
             "?subject=" + encodeURIComponent(subject) + // Continue building the text value used in this operation.
             "&body=" + encodeURIComponent(body); // Continue building the text value used in this operation.
 
@@ -475,12 +553,13 @@ function setupEnquiryForm(form) { // Begin this block of code.
             deliveryHtml + // This line contributes to the current expression or data structure.
             "</ul>" + // Continue building the text value used in this operation.
             "<p class=\"hint\">Estimates exclude public holidays. Stock, prices and delivery times are illustrative for this demo site.</p>" + // Continue building the text value used in this operation.
-            "<a class=\"btn btn-navy\" href=\"#\">Email this enquiry to us</a>"; // Continue building the text value used in this operation.
+            "<a class=\"cc-btn\" href=\"#\">Email this enquiry to us</a>"; // Continue building the text value used in this operation.
 
         // Sets the mailto link through the DOM so the & characters in it are never misread as HTML.
-        result.querySelector("a.btn").href = mailto; // Update or inspect the relevant form or page element.
+        result.querySelector("a.cc-btn").href = mailto; // Update or inspect the relevant form or page element.
 
-        result.classList.add("show"); // Update or inspect the relevant form or page element.
+        showBox2(result);
+        sendViaWeb3Forms(form, { subject: subject, from_name: name.value.trim(), email: email.value.trim(), message: body }, result);
         result.scrollIntoView({ behavior: "smooth", block: "nearest" }); // Update or inspect the relevant form or page element.
     }); // Close this block or callback.
 } // Close this block or callback.
@@ -600,8 +679,7 @@ function setupContactForm(form) { // Begin this block of code.
         event.preventDefault(); // Execute this statement to update state or produce a result.
 
         // Hides any earlier preview.
-        preview.innerHTML = ""; // Update or inspect the relevant form or page element.
-        preview.classList.remove("show"); // Update or inspect the relevant form or page element.
+        showBox(preview, false);
 
         let valid = true; // Declare a variable whose value may change.
         let firstBad = null; // Declare a variable whose value may change.
@@ -627,7 +705,7 @@ function setupContactForm(form) { // Begin this block of code.
         // ----- Compile the validated information into a professional email -----
         // The email follows the layout of a formal message: a clear subject, a polite greeting,
         // relevant details, a clear request and a courteous closing.
-        const recipient = form.dataset.mailto; // Read the email address configured in the form's data-mailto attribute.
+        const recipient = form.dataset.mailto || "hello@campus-cart.co.za"; // Read the email address configured in the form's data-mailto attribute.
         const subject = buildContactSubject(topic.value, order.value.trim(), name.value.trim()); // Declare a constant for use in this operation.
 
         const lines = [ // Build the email body as separate lines before joining them.
@@ -674,47 +752,15 @@ function setupContactForm(form) { // Begin this block of code.
             "<p><strong>To:</strong> " + escapeHtml(recipient) + "<br>" + // Continue building the text value used in this operation.
             "<strong>Subject:</strong> " + escapeHtml(subject) + "</p>" + // Continue building the text value used in this operation.
             "<pre>" + escapeHtml(body) + "</pre>" + // Continue building the text value used in this operation.
-            "<a class=\"btn btn-navy\" href=\"#\">Open in my email app and send</a>" + // Continue building the text value used in this operation.
-            "<p class=\"hint\">Nothing is sent from this website. Your email app opens with the message filled in.</p>"; // Continue building the text value used in this operation.
+            "<a class=\"cc-btn\" href=\"#\">Open in my email app and send</a>" + // Continue building the text value used in this operation.
+            "<p class=\"hint\">Your message is sent to our team automatically. If that fails, use the button above to send it from your email app.</p>"; // Continue building the text value used in this operation.
 
         // Sets the mailto link through the DOM so the & characters in it are never misread as HTML.
-        preview.querySelector("a.btn").href = mailto; // Update or inspect the relevant form or page element.
+        preview.querySelector("a.cc-btn").href = mailto; // Update or inspect the relevant form or page element.
 
         // Makes the preview visible and scrolls it into view.
-        preview.classList.add("show"); // Update or inspect the relevant form or page element.
+        showBox2(preview);
+        sendViaWeb3Forms(form, { subject: subject, from_name: name.value.trim(), email: email.value.trim(), message: body }, preview);
         preview.scrollIntoView({ behavior: "smooth", block: "nearest" }); // Update or inspect the relevant form or page element.
-    }); // Close this block or callback.
-} // Close this block or callback.
-
-
-// ==========================================================
-// COVERAGE PAGE SEARCH
-// ==========================================================
-
-function setupCoverageSearch(box) { // Begin this block of code.
-
-    // Every institution on the page is an <li> with a data-name attribute.
-    const items = document.querySelectorAll(".inst-list li"); // Collect all institution entries that can be filtered.
-    const provinces = document.querySelectorAll(".province"); // Collect province sections so empty ones can be hidden.
-    const count = document.getElementById("coverage-count"); // Declare a constant for use in this operation.
-
-    // Runs each time the user types in the search box.
-    box.addEventListener("input", function () { // Begin this block of code.
-        const term = box.value.trim().toLowerCase(); // Normalise the search phrase for case-insensitive matching.
-        let shown = 0; // Declare a variable whose value may change.
-
-        // Shows an institution only if its name or city contains the search text.
-        items.forEach(function (li) { // Begin this block of code.
-            const match = li.dataset.name.includes(term); // Declare a constant for use in this operation.
-            li.hidden = !match; // Update or inspect the relevant form or page element.
-            if (match) { shown++; } // Run this block only when the condition is true.
-        }); // Close this block or callback.
-
-        // Hides a whole province section when none of its institutions match.
-        provinces.forEach(function (sec) { // Begin this block of code.
-            sec.hidden = term !== "" && sec.querySelectorAll(".inst-list li:not([hidden])").length === 0; // Update or inspect the relevant form or page element.
-        }); // Close this block or callback.
-
-        count.textContent = term === "" ? "" : shown + " institution" + (shown === 1 ? "" : "s") + " found."; // Update or inspect the relevant form or page element.
     }); // Close this block or callback.
 } // Close this block or callback.
