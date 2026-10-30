@@ -1,664 +1,682 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- Sets the root HTML element and the page language. -->
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Campus-Cart | Affordable Student Essentials in South Africa</title>
-  <meta name="description" content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa.">
-  <link rel="canonical" href="https://campus-cart-olive.vercel.app/">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0d1b3e">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Campus-Cart">
-  <meta property="og:locale" content="en_ZA">
-  <meta property="og:description" content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa.">
-  <meta property="og:url" content="https://campus-cart-olive.vercel.app/">
-  <meta property="og:image" content="https://campus-cart-olive.vercel.app/assets/images/bundles/hero-campus.jpg">
-  <meta property="og:image:alt" content="South African students on a university campus carrying study essentials">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
-  
-  <meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-  <meta name="google-site-verification" content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w" />
-  <meta name="google-site-verification" content="zmfWZjO-hFulB-7N7pr2L-zWFYL5ptPBfwohr0NXcNg" />
-  
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Campus-Cart",
-      "url": "https://campus-cart-olive.vercel.app/",
-      "description": "Campus-Cart sells new and second-hand student essentials and delivers to universities and TVET colleges across South Africa.",
-      "email": "hello@campus-cart.co.za",
-      "areaServed": { "@type": "Country", "name": "South Africa" }
-    }
-  </script>
-  
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-
-<body class="page-loading">
-  <a class="skip-link" href="#main">Skip to main content</a>
-  
-  <!-- Page Loader -->
-  <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Campus-Cart">
-    <div class="page-loader-content">
-      <div class="page-loader-visual">
-        <div class="loader" aria-hidden="true">
-          <div class="nucleus"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-          <div class="ring"></div>
-        </div>
-      </div>
-      <div class="page-loader-brand" aria-hidden="true">
-        <span class="page-loader-title">Campus<span>-Cart</span></span>
-        <span class="page-loader-text">Loading Campus-Cart...</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Repaired Header: Merged utility strip, brand, clock, and navigation without nested headers -->
-  <header class="topbar">
-    <div class="topbar-utility">
-      <div class="wrap">
-        <span>Free collection at listed campus points · <a href="pages/returns.html">30-day returns</a> · Pay by EFT</span>
-      </div>
-    </div>
-    <nav class="nav" aria-label="Main navigation">
-      <div class="brand">
-        <a class="logo" href="index.html">Campus<span>-Cart</span></a>
-        <div class="nav-clock" role="group" aria-label="Current South African date and time">
-          <span id="navTime">00:00:00</span>
-          <span class="clock-divider">|</span>
-          <span id="navDate">Loading...</span>
-        </div>
-      </div>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/products.html">Shop</a>
-        <a href="pages/products.html#parent-hub">Parent Hub</a>
-        <a href="pages/enquiry.html">Enquiry</a>
-        <a href="pages/coverage.html">Coverage</a>
-        <a href="pages/contact.html">Contact</a>
-        <a href="pages/account.html">Account</a>
-        
-        <button type="button" class="icon-btn" id="searchOpen" aria-label="Search products">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="7" />
-            <path d="M21 21l-4.35-4.35" />
-          </svg>
-        </button>
-        
-        <button type="button" class="icon-btn theme-toggle" id="themeToggle" aria-label="Switch to light theme">
-          <svg class="moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-          </svg>
-          <svg class="sun" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-          </svg>
-        </button>
-        
-        <button type="button" class="icon-btn" id="wishBtn" aria-label="Wishlist">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-          </svg>
-          <span class="count-badge" id="wishCount" hidden>0</span>
-        </button>
-        
-        <div class="cart-wrap">
-          <button type="button" class="icon-btn" id="cartOpen" aria-label="Open order summary" aria-haspopup="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-              <path d="M3 6h18" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-            <span class="count-badge" id="cartCount" hidden>0</span>
-          </button>
-          <div class="cart-pop" id="cartPop" role="dialog" aria-label="Order summary">
-            <h3>Your Order Summary</h3>
-            <div class="mini-cart-list" id="miniCartList">
-              <p class="mini-empty">Nothing added yet — browse the Shop to add items.</p>
-            </div>
-            <div class="mini-total"><span>Total</span><span id="miniCartTotal">R0.00</span></div>
-            <a class="btn btn-sm" style="width:100%;margin-top:12px" href="pages/account.html#order">Review &amp; hand off</a>
-          </div>
-        </div>
-        
-        <a class="nav-cart" href="pages/account.html#order">Order <span class="cart-badge" data-cart-count>0</span></a>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Search Overlay -->
-  <div class="search-overlay" id="searchOverlay" hidden>
-    <div class="search-box">
-      <div class="search-field">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="11" cy="11" r="7" />
-          <path d="M21 21l-4.35-4.35" />
-        </svg>
-        <input type="search" id="searchInput" placeholder="Search bundles, appliances, textbooks…" autocomplete="off" aria-label="Search products">
-        <button type="button" class="search-close" id="searchClose" aria-label="Close search">×</button>
-      </div>
-      <div class="search-results" id="searchResults"></div>
-    </div>
-  </div>
-
-  <main id="main" tabindex="-1">
-    <!-- Hero Slider -->
-    <section class="hero hero-slider" id="heroSlider" aria-label="Featured highlights">
-      <div class="slides" id="slides">
-        <div class="slide is-active" data-slide>
-          <div class="wrap hero-grid">
-            <div>
-              <span class="eyebrow">Proudly South African</span>
-              <h1>Kit out res without <em>breaking the budget</em></h1>
-              <p class="lead">Campus-Cart brings new and carefully reviewed second-hand student essentials together in one place — bedding, appliances, textbooks and full starter bundles, delivered to every province and collected on campus or at a hub near you. We cover all 26 public universities, all 50 public TVET colleges and the major private institutions.</p>
-              <div class="hero-actions">
-                <a class="btn" href="pages/account.html#student">I'm a student <span class="arr" aria-hidden="true">→</span></a>
-                <a class="btn btn-ghost" href="pages/account.html#parent">Parent / guardian</a>
-              </div>
-            </div>
-            <div class="slide-media">
-              <span class="slide-sticker">Bundle season</span>
-              <img src="assets/images/bundles/hero-banner.jpg" srcset="assets/images/bundles/hero-banner-640.jpg 640w, assets/images/bundles/hero-banner.jpg 1200w" sizes="(max-width:1000px) 100vw, 580px" alt="A student desk with a navy lamp, open laptop, notebooks and a navy backpack by a sunny window" width="1200" height="670" fetchpriority="high" decoding="async">
-            </div>
-          </div>
-        </div>
-        <div class="slide" data-slide>
-          <div class="wrap hero-grid">
-            <div>
-              <span class="eyebrow">Second-hand marketplace</span>
-              <h1>Buy reviewed, <em>sell smart</em></h1>
-              <p class="lead">Desks, fridges, chairs and textbooks from graduating students — checked by our team before they go live, at up to 50% off.</p>
-              <div class="hero-actions">
-                <a class="btn" href="pages/products.html#shop">Browse marketplace <span class="arr" aria-hidden="true">→</span></a>
-              </div>
-            </div>
-            <div class="slide-media">
-              <span class="slide-sticker">Verified sellers</span>
-              <img src="assets/images/second-hand/marketplace.jpg" alt="Reviewed second-hand student items" loading="lazy" width="900" height="675">
-            </div>
-          </div>
-        </div>
-        <div class="slide" data-slide>
-          <div class="wrap hero-grid">
-            <div>
-              <span class="eyebrow">Parent Hub</span>
-              <h1>Plan the year with <em>fixed prices</em></h1>
-              <p class="lead">Print the first-year checklist and pick a bundle tier that fits your budget before registration week.</p>
-              <div class="hero-actions">
-                <a class="btn" href="pages/products.html#parent-hub">Open Parent Hub <span class="arr" aria-hidden="true">→</span></a>
-              </div>
-            </div>
-            <div class="slide-media">
-              <span class="slide-sticker">From R1 499</span>
-              <img src="assets/images/bundles/bundle-standard.jpg" alt="Standard Starter Bundle items" loading="lazy" width="900" height="675">
-            </div>
-          </div>
-        </div>
-      </div>
-      <button type="button" class="slider-arrow prev" id="slidePrev" aria-label="Previous slide">‹</button>
-      <button type="button" class="slider-arrow next" id="slideNext" aria-label="Next slide">›</button>
-      <div class="slider-dots" id="slideDots"></div>
-    </section>
-
-    <!-- Student / Parent Split Cards -->
-    <section class="section" id="paths">
-      <div class="wrap">
-        <div class="split">
-          <div class="split-card">
-            <h2>I am a Student</h2>
-            <p>Shop deals, browse the second-hand marketplace and sell what you no longer need.</p>
-            <a class="btn" href="pages/account.html#student">Student path</a>
-          </div>
-          <div class="split-card">
-            <h2>I am a Parent/Guardian</h2>
-            <p>Use the First Year Checklist and fixed-price starter bundles to plan spend with confidence.</p>
-            <a class="btn btn-ghost-light" href="pages/account.html#parent">Parent path</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust Strip -->
-    <section class="trust-strip" aria-label="Why shop with Campus-Cart">
-      <div class="wrap">
-        <ul>
-          <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" /><circle cx="12" cy="10" r="2.5" /></svg></span><span>26 public universities and 50 TVET colleges covered</span></li>
-          <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4 8 4 8-4z" /><path d="M4 7v10l8 4 8-4V7" /></svg></span><span>New stock and reviewed second-hand deals</span></li>
-          <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7" /><path d="M5 10v10h14V10" /><path d="M10 20v-6h4v6" /></svg></span><span>Free collection at listed residence and campus points</span></li>
-          <li><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" /><path d="M3 10h18" /></svg></span><span>Pay by EFT. Nothing is charged on this website</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Category Tiles -->
-    <section class="section" aria-labelledby="cats-title">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Shop by need</span>
-          <h2 id="cats-title">Find exactly what your room needs</h2>
-        </div>
-        <div class="category-grid">
-          <a class="category-card" href="pages/products.html#deals-gallery">
-            <img src="assets/images/bundles/bundle-standard.jpg" alt="Starter bundles" loading="lazy" width="600" height="450">
-            <span class="category-label"><strong>Starter Bundles</strong><span>From R1 499 →</span></span>
-          </a>
-          <a class="category-card" href="pages/products.html#deals-gallery">
-            <img src="assets/images/products/duvet.jpg" alt="Bedding" loading="lazy" width="600" height="450">
-            <span class="category-label"><strong>Bedding &amp; Linen</strong><span>From R219 →</span></span>
-          </a>
-          <a class="category-card" href="pages/products.html#deals-gallery">
-            <img src="assets/images/products/kettle.jpg" alt="Appliances" loading="lazy" width="600" height="450">
-            <span class="category-label"><strong>Appliances</strong><span>From R289 →</span></span>
-          </a>
-          <a class="category-card" href="pages/products.html#deals-gallery">
-            <img src="assets/images/products/study-funiture.jpg" alt="Furniture" loading="lazy" width="600" height="450">
-            <span class="category-label"><strong>Furniture &amp; Desks</strong><span>From R310 →</span></span>
-          </a>
-          <a class="category-card" href="pages/products.html#deals-gallery">
-            <img src="assets/images/products/textbook.jpg" alt="Textbooks" loading="lazy" width="600" height="450">
-            <span class="category-label"><strong>Textbooks</strong><span>From R360 →</span></span>
-          </a>
-          <a class="category-card" href="pages/products.html#deals-gallery">
-            <img src="assets/images/products/stationery.jpg" alt="Stationery" loading="lazy" width="600" height="450">
-            <span class="category-label"><strong>Stationery</strong><span>From R79 →</span></span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Promo Banners -->
-    <section class="section" style="padding-top:0">
-      <div class="wrap promo-grid">
-        <div class="promo-card">
-          <img src="assets/images/second-hand/marketplace.jpg" alt="Second-hand marketplace" loading="lazy" width="800" height="400">
-          <div class="promo-body">
-            <h3>Second-Hand Marketplace</h3>
-            <p>Up to 50% off reviewed desks, fridges and textbooks.</p>
-            <a class="btn btn-sm" href="pages/products.html#shop">Browse marketplace <span class="arr" aria-hidden="true">→</span></a>
-          </div>
-        </div>
-        <div class="promo-card">
-          <img src="assets/images/bundles/bundle-standard.jpg" alt="Starter bundles" loading="lazy" width="800" height="400">
-          <div class="promo-body">
-            <h3>Starter Bundles</h3>
-            <p>Complete rooms from R1 499 — fixed prices parents can plan around.</p>
-            <a class="btn btn-sm" href="pages/products.html#parent-hub">See bundles <span class="arr" aria-hidden="true">→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Deal of the Week -->
-    <section class="section alt" id="deal-week">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Deal of the week</span>
-          <h2>The Standard Starter Bundle</h2>
-        </div>
-        <div class="deal-card">
-          <div class="deal-media">
-            <img src="assets/images/bundles/bundle-standard.jpg" alt="Standard Starter Bundle" loading="lazy" width="800" height="900">
-            <span class="flag flag-sale">-10%</span>
-          </div>
-          <div class="deal-body">
-            <h3>Standard Starter Bundle</h3>
-            <div class="rating-line" style="margin-top:6px"><span class="stars" aria-hidden="true">★★★★★</span><span style="font-size:.82rem;color:var(--muted)">4.9 · 142 reviews</span></div>
-            <p class="price-row"><span class="price">R2 519.00</span><span class="price-old">R2 799.00</span><span class="price-discount">Save R280</span></p>
-            <p style="color:var(--muted);margin-top:8px">Everything in Basic plus desk lamp, laundry set, kitchen starter pack and extension lead. Price shown is the deal price until the timer ends.</p>
-            <div class="deal-timer" aria-label="Deal countdown">
-              <div class="timer-box"><strong id="td-days">0</strong><span>Days</span></div>
-              <div class="timer-box"><strong id="td-hours">0</strong><span>Hours</span></div>
-              <div class="timer-box"><strong id="td-mins">0</strong><span>Mins</span></div>
-              <div class="timer-box"><strong id="td-secs">0</strong><span>Secs</span></div>
-            </div>
-            <div class="card-actions" style="margin-top:18px">
-              <button class="btn" type="button" data-add="Standard Starter Bundle" data-price="2519">Add to Order</button>
-              <button class="btn btn-ghost" type="button" data-quickview data-name="Standard Starter Bundle" data-price="2519" data-desc="Everything in Basic plus desk lamp, laundry set, kitchen starter pack and extension lead — deal price." data-img="assets/images/bundles/bundle-standard.jpg" data-alt="Standard Starter Bundle" data-condition="new">Quick view</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission -->
-    <section class="section" id="mission">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Our mission</span>
-          <h2>Affordable essentials, dignified student living</h2>
-          <p>Too many students arrive at university with a bag and a bed frame. We exist to close that gap: fair prices, a trusted second-hand marketplace, and pricing that parents can plan around before registration week.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card card-navy">
-            <div class="card-body">
-              <h3>Fair, visible prices</h3>
-              <p>Every bundle lists its contents and a fixed price. No surprises at the till.</p>
-            </div>
-          </div>
-          <div class="card card-navy">
-            <div class="card-body">
-              <h3>Reviewed listings</h3>
-              <p>Second-hand items are manually reviewed by our team before they appear on the site.</p>
-            </div>
-          </div>
-          <div class="card card-navy">
-            <div class="card-body">
-              <h3>Safe collection</h3>
-              <p>Collect at residence desks, campus points or secure lockers — never a random street corner.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Products (Upgraded with Wishlist, Quick View, Add to Order) -->
-    <section class="section alt" id="featured">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Featured</span>
-          <h2>Starter bundles students actually use</h2>
-          <p>Hover a card for Quick view, tap the heart to save it for later, or add straight to your Order Summary.</p>
-        </div>
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="card-media" style="position:relative">
-              <span class="flag flag-new">New</span>
-              <button type="button" class="wish-btn" data-wish="Basic Starter Bundle" aria-label="Add Basic Starter Bundle to wishlist" aria-pressed="false">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                </svg>
-              </button>
-              <img src="assets/images/bundles/bundle-basic.jpg" alt="Four items from the Basic Starter Bundle: a duvet, an electric kettle, stacked mugs and a notebook" loading="lazy" width="1000" height="1000" decoding="async">
-              <div class="qv-overlay"><button type="button" class="btn btn-sm" data-quickview data-name="Basic Starter Bundle" data-price="1499" data-desc="Bedding set, kettle, mug set and study basics for a first-year res room." data-img="assets/images/bundles/bundle-basic.jpg" data-alt="Basic Starter Bundle" data-condition="new">Quick view</button></div>
-            </div>
-            <div class="card-body">
-              <div class="card-tags"><span class="badge badge-new">New</span></div>
-              <h3>Basic Starter Bundle</h3>
-              <div class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span><span style="font-size:.82rem;color:var(--muted)">4.7 · 88 reviews</span></div>
-              <p class="price">R1 499.00</p>
-              <p>Bedding set, kettle, mug set and study basics for a first-year res room.</p>
-              <div class="card-actions">
-                <button class="btn btn-sm" type="button" data-add="Basic Starter Bundle" data-price="1499">Add to Order</button>
-                <a class="btn btn-sm" href="pages/products.html#parent-hub">See contents</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media" style="position:relative">
-              <span class="flag flag-new">New</span>
-              <button type="button" class="wish-btn" data-wish="Standard Starter Bundle" aria-label="Add Standard Starter Bundle to wishlist" aria-pressed="false">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                </svg>
-              </button>
-              <img src="assets/images/bundles/bundle-standard.jpg" alt="Four items from the Standard Starter Bundle: a duvet, an electric kettle, stacked mugs and a navy desk lamp" loading="lazy" width="1000" height="1000" decoding="async">
-              <div class="qv-overlay"><button type="button" class="btn btn-sm" data-quickview data-name="Standard Starter Bundle" data-price="2799" data-desc="Everything in Basic plus desk lamp, laundry set and kitchen starter pack." data-img="assets/images/bundles/bundle-standard.jpg" data-alt="Standard Starter Bundle" data-condition="new">Quick view</button></div>
-            </div>
-            <div class="card-body">
-              <div class="card-tags"><span class="badge badge-new">New</span><span class="badge badge-verified">Most chosen</span></div>
-              <h3>Standard Starter Bundle</h3>
-              <div class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span><span style="font-size:.82rem;color:var(--muted)">4.9 · 142 reviews</span></div>
-              <p class="price">R2 799.00</p>
-              <p>Basic plus desk lamp, laundry set and a kitchen starter pack.</p>
-              <div class="card-actions">
-                <button class="btn btn-sm" type="button" data-add="Standard Starter Bundle" data-price="2799">Add to Order</button>
-                <a class="btn btn-sm" href="pages/products.html#parent-hub">See contents</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-media" style="position:relative">
-              <span class="flag flag-used">Second-hand</span>
-              <button type="button" class="wish-btn" data-wish="Marketplace Picks" aria-label="Add Marketplace Picks to wishlist" aria-pressed="false">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                </svg>
-              </button>
-              <img src="assets/images/second-hand/marketplace.jpg" alt="Second-hand student items on display" loading="lazy" width="1200" height="900">
-              <div class="qv-overlay"><button type="button" class="btn btn-sm" data-quickview data-name="Marketplace Picks" data-price="180" data-desc="Reviewed fridges, desks, chairs and textbooks from graduating students." data-img="assets/images/second-hand/marketplace.jpg" data-alt="Marketplace Picks" data-condition="used">Quick view</button></div>
-            </div>
-            <div class="card-body">
-              <div class="card-tags">
-                <span class="badge badge-used">Second-hand</span>
-                <span class="badge badge-verified">Verified Seller</span>
-              </div>
-              <h3>Marketplace Picks</h3>
-              <div class="rating-line"><span class="stars" aria-hidden="true">★★★★★</span><span style="font-size:.82rem;color:var(--muted)">4.8 · 96 reviews</span></div>
-              <p class="price">From R180.00</p>
-              <p>Reviewed fridges, desks, chairs and textbooks from graduating students.</p>
-              <div class="card-actions">
-                <a class="btn btn-sm" href="pages/products.html#shop">Browse marketplace</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lookbook -->
-    <section class="section" id="lookbook">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">The Campus Lookbook</span>
-          <h2>Real rooms, styled with Campus-Cart</h2>
-        </div>
-        <div class="lookbook">
-          <figure>
-            <img src="assets/images/bundles/hero-campus.jpg" alt="Students walking on campus with essentials" loading="lazy" width="800" height="800">
-            <figcaption><strong>Move-in morning</strong> Res drop-off at a partner residence.</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/products/study-funiture.jpg" alt="A simple study desk setup" loading="lazy" width="800" height="800">
-            <figcaption><strong>Study corner</strong> Desk, lamp and stationery from the Shop.</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/products/bedding-duvets.jpg" alt="Fresh bedding and pillows" loading="lazy" width="800" height="800">
-            <figcaption><strong>Fresh res bed</strong> Everything in the Standard bundle.</figcaption>
-          </figure>
-          <figure>
-            <img src="assets/images/second-hand/marketplace.jpg" alt="Second-hand pieces in a res room" loading="lazy" width="800" height="800">
-            <figcaption><strong>Second-hand finds</strong> Verified marketplace pieces that last.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Carousel -->
-    <section class="section alt" id="reviews">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Customer reviews</span>
-          <h2>What students and parents say</h2>
-        </div>
-        <div class="tst-shell">
-          <div class="tst-track" id="tstTrack">
-            <div class="tst-slide">
-              <div class="tst-card">
-                <div class="tst-stars" aria-hidden="true">★★★★★</div>
-                <p class="tst-text">"Ordered the Standard bundle for my daughter's res room. It arrived before registration and the collection point was right by her residence desk."</p>
-                <div class="tst-person"><span class="tst-avatar" aria-hidden="true">NP</span>
-                  <div><strong>Nomsa P.</strong><span>Verified buyer · Parent · Pretoria</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="tst-slide">
-              <div class="tst-card">
-                <div class="tst-stars" aria-hidden="true">★★★★★</div>
-                <p class="tst-text">"I sold my fridge and desk through the marketplace in December. The review was quick and the handover was organised."</p>
-                <div class="tst-person"><span class="tst-avatar" aria-hidden="true">TM</span>
-                  <div><strong>Thabo M.</strong><span>Verified seller · Final-year student · Johannesburg</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="tst-slide">
-              <div class="tst-card">
-                <div class="tst-stars" aria-hidden="true">★★★★★</div>
-                <p class="tst-text">"They had the exact textbook set I needed at half the bookshop price, and the seller was verified. No stress."</p>
-                <div class="tst-person"><span class="tst-avatar" aria-hidden="true">AK</span>
-                  <div><strong>Ayanda K.</strong><span>Verified buyer · First-year student · Cape Town</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tst-dots" id="tstDots"></div>
-        <p style="text-align:center;margin-top:14px;font-size:.82rem;color:var(--muted)">Demo quotes — replace with real feedback when available.</p>
-      </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter" aria-labelledby="newsletter-title">
-      <div class="wrap">
-        <div>
-          <h2 id="newsletter-title">Back-to-campus tips, once a month</h2>
-          <p>Registration deadlines, checklists and the best second-hand finds — no spam, unsubscribe anytime.</p>
-        </div>
-        <form class="newsletter-form" id="newsletter-form" novalidate>
-          <label class="visually-hidden" for="newsletter-email">Email address</label>
-          <input id="newsletter-email" type="email" placeholder="you@example.co.za" autocomplete="email" required>
-          <button type="submit" class="btn">Subscribe <span class="arr" aria-hidden="true">→</span></button>
-          <p class="newsletter-note" id="newsletter-status" aria-live="polite">We'll open your email app with the sign-up message — nothing is stored here.</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- About Teaser -->
-    <section class="section" id="about-teaser">
-      <div class="wrap grid grid-2">
-        <div>
-          <span class="eyebrow">About us</span>
-          <h2>Started in a res corridor in 2021</h2>
-          <p>Campus-Cart began when a group of students resold their res kit instead of throwing it away. Today we serve students aged 19–30 and the parents and guardians who fund them, across major South African campuses.</p>
-          <a class="btn btn-outline" href="pages/about.html">Read our story</a>
-        </div>
-        <div class="info-box">
-          <h3>Who we serve</h3>
-          <p><strong>Primary:</strong> tertiary students aged 19–30 living in residence, digs or at home.</p>
-          <p><strong>Secondary:</strong> parents and guardians budgeting for registration season.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA / Get in Touch -->
-    <section class="section navy" id="get-in-touch">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Get in touch</span>
-          <h2>Questions before you buy?</h2>
-          <p>Ask about a specific bundle, or reach the team about collection points, payment plans and second-hand listings.</p>
-        </div>
-        <div class="grid grid-2">
-          <div class="split-card">
-            <h3>Pre-purchase enquiry</h3>
-            <p>Reference a bundle or product and we will confirm availability and collection options.</p>
-            <a class="btn" href="pages/enquiry.html">Send an enquiry</a>
-          </div>
-          <div class="split-card">
-            <h3>General contact</h3>
-            <p>Email or WhatsApp us, or find your nearest collection and office location.</p>
-            <a class="btn btn-ghost-light" href="pages/contact.html">Contact us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Quick View Modal (Moved outside footer to fix invalid nesting) -->
-  <div class="modal-backdrop" id="quickview-backdrop" hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="qv-title">
-      <button type="button" class="modal-close" id="qv-close" aria-label="Close product details">×</button>
-      <img class="modal-image" id="qv-img" src="" alt="">
-      <div class="modal-body">
-        <span class="badge badge-verified" id="qv-badge">New</span>
-        <h2 id="qv-title">Product</h2>
-        <p class="price" id="qv-price">R0.00</p>
-        <p style="color:var(--muted)" id="qv-desc"></p>
-        <div class="option-group" style="margin-top:10px">
-          <span style="font-size:.8rem;font-weight:700;color:var(--navy);display:block;margin-bottom:6px">Bundle tier</span>
-          <div class="chip-row" style="display:flex;gap:8px;flex-wrap:wrap">
-            <button type="button" class="chip active" style="padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);font-weight:600" data-opt="Single">Single</button>
-            <button type="button" class="chip" style="padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);font-weight:600" data-opt="Double">Double</button>
-          </div>
-        </div>
-        <button type="button" class="btn" id="qv-add" style="margin-top:14px">Add to Order Summary</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="wrap footer-grid">
-      <div>
-        <h3>Campus-Cart</h3>
-        <p>Affordable new and second-hand student essentials for South African campuses.</p>
-      </div>
-      <div>
-        <h3>Shop</h3>
-        <ul>
-          <li><a href="pages/products.html">Shop New</a></li>
-          <li><a href="pages/products.html#shop">Second-Hand</a></li>
-          <li><a href="pages/products.html#deals-gallery">Deals &amp; Gallery</a></li>
-          <li><a href="pages/products.html#sell-with-us">Sell With Us</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Company</h3>
-        <ul>
-          <li><a href="pages/about.html">About</a></li>
-          <li><a href="pages/products.html#parent-hub">Parent Hub</a></li>
-          <li><a href="pages/enquiry.html">Enquiry</a></li>
-          <li><a href="pages/coverage.html">Coverage</a></li>
-          <li><a href="pages/contact.html">Contact</a></li>
-          <li><a href="pages/account.html">Account</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Reach us</h3>
-        <ul>
-          <li><a href="mailto:hello@campus-cart.co.za">hello@campus-cart.co.za</a></li>
-          <li><a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a></li>
-          <li>Mon–Fri, 09:00–17:00 SAST</li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrap footer-bottom">
-      <p class="footer-legal">
-        <a href="pages/privacy.html">Privacy Policy</a> |
-        <a href="pages/terms.html">Terms &amp; Conditions</a> |
-        <a href="pages/cookies.html">Cookie Policy</a> |
-        <a href="pages/returns.html">Returns &amp; Delivery</a> |
-        <button type="button" class="link-button" data-cookie-settings>Cookie settings</button>
-      </p>
-      <p>Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, 0083.</p>
-      <p><a href="pages/about.html#licence">Licence and credits</a> | <a href="sitemap.xml">Sitemap.xml</a></p>
-      <p>&copy; <span id="copyright-year"></span> Campus-Cart. Static demo site — no payments are processed and no personal data is stored.</p>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/consent.js"></script>
-  <script src="assets/js/ui.js" defer></script>
-  <script src="assets/js/script.js"></script>
-  <script src="assets/js/features.js"></script>
-  <script src="assets/js/interactions.js"></script>
-</body>
+	<!-- Groups page metadata, the title, and linked resources. -->
+	<head>
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta charset="utf-8" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Sets the title shown in the browser tab. -->
+		<!-- <title> sets the name shown on the browser tab and helps identify the webpage.
+     It also provides useful information for search engines and accessibility. -->
+		<!-- Sets the webpage title displayed in the browser tab and used as the document title. -->
+		<title>Campus-Cart | Affordable Student Essentials in South Africa</title>
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta
+			name="description"
+			content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa."
+		/>
+		<!-- Links this page to an external resource or identifies a related URL. The href attribute points to an external webpage. -->
+		<link rel="canonical" href="https://campus-cart-olive.vercel.app/" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta name="robots" content="index, follow" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta name="theme-color" content="#0d1b3e" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta property="og:type" content="website" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta property="og:site_name" content="Campus-Cart" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta property="og:locale" content="en_ZA" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta
+			property="og:description"
+			content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa."
+		/>
+		<meta property="og:url" content="https://campus-cart-olive.vercel.app/" />
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta
+			property="og:image"
+			content="https://campus-cart-olive.vercel.app/assets/images/bundles/hero-campus.jpg"
+		/>
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta
+			property="og:image:alt"
+			content="South African students on a university campus carrying study essentials"
+		/>
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
+		/>
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta
+			name="keywords"
+			content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery"
+		/>
+		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
+		<meta
+			name="google-site-verification"
+			content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w"
+		/>
+		<meta
+			name="google-site-verification"
+			content="zmfWZjO-hFulB-7N7pr2L-zWFYL5ptPBfwohr0NXcNg"
+		/>
+		<!-- Provides structured data in JSON-LD format for search engines. -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Campus-Cart",
+				"url": "https://campus-cart-olive.vercel.app/",
+				"description": "Campus-Cart sells new and second-hand student essentials and delivers to universities and TVET colleges across South Africa.",
+				"email": "hello@campus-cart.co.za",
+				"areaServed": { "@type": "Country", "name": "South Africa" }
+			}
+		</script>
+		<!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+	</head>
+	<!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
+	<body class="page-loading">
+		<!-- Lets keyboard users jump past the menu to the main content. -->
+		<a class="skip-link" href="#main">Skip to main content</a>
+		<!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+		<div
+			id="page-loader"
+			class="page-loader"
+			role="status"
+			aria-live="polite"
+			aria-label="Loading Campus-Cart"
+		>
+			<!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
+			<div class="page-loader-content">
+				<!-- Groups related content so it can be arranged or styled together. The class "page-loader-visual" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="page-loader-visual">
+					<!-- Groups related content so it can be arranged or styled together. The class "loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+					<div class="loader" aria-hidden="true">
+						<!-- Groups related content so it can be arranged or styled together. The class "nucleus" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="nucleus"></div>
+						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="ring"></div>
+						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="ring"></div>
+						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="ring"></div>
+						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="ring"></div>
+						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="ring"></div>
+						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="ring"></div>
+					</div>
+				</div>
+				<!-- Groups related content so it can be arranged or styled together. The class "page-loader-brand" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+				<div class="page-loader-brand" aria-hidden="true">
+					<!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-title" connects it to CSS styling or JavaScript behaviour. -->
+					<span class="page-loader-title">Campus<span>-Cart</span></span>
+					<!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-text" connects it to CSS styling or JavaScript behaviour. -->
+					<span class="page-loader-text">Loading Campus-Cart...</span>
+				</div>
+			</div>
+		</div>
+		<!-- Groups introductory content and the main navigation area. The class "topbar" connects it to CSS styling or JavaScript behaviour. -->
+		<header class="topbar">
+			<!-- Groups navigation links and identifies the menu for accessibility. The class "nav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+			<nav class="nav" aria-label="Main navigation">
+				<!-- Groups the logo and the live clock so the clock sits directly under the Campus-Cart name. The class "brand" connects it to CSS styling. -->
+				<div class="brand">
+					<!-- Creates a hyperlink to the home page. The class "logo" connects it to CSS styling. -->
+					<a class="logo" href="index.html">Campus<span>-Cart</span></a>
+					<!-- Live South African time and date, filled in every second by updateNavDateTime() in script.js. -->
+					<div
+						class="nav-clock"
+						role="group"
+						aria-label="Current South African date and time"
+					>
+						<!-- Shows the current time, updated by script.js. -->
+						<span id="navTime">00:00:00</span>
+						<!-- Separator between the time and the date. -->
+						<span class="clock-divider">|</span>
+						<!-- Shows the current date, updated by script.js. -->
+						<span id="navDate">Loading...</span>
+					</div>
+				</div>
+				<!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
+				<button
+					type="button"
+					class="nav-toggle"
+					aria-expanded="false"
+					aria-label="Menu"
+				>
+					Menu
+				</button>
+				<!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="nav-links">
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="index.html">Home</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/about.html">About</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/products.html">Shop</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/products.html#parent-hub">Parent Hub</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/enquiry.html">Enquiry</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/coverage.html">Coverage</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/contact.html">Contact</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
+					<a href="pages/account.html">Account</a>
+					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
+					<a class="nav-cart" href="pages/account.html#order"
+						>Order <span class="cart-badge" data-cart-count>0</span></a
+					>
+				</div>
+			</nav>
+		</header>
+		<!-- Contains the page's main content. -->
+		<main id="main" tabindex="-1">
+			<!-- Groups content that belongs to one topic or page section. The class "hero" connects it to CSS styling or JavaScript behaviour. -->
+			<section class="hero">
+				<!-- Groups related content so it can be arranged or styled together. The class "wrap hero-grid" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="wrap hero-grid">
+					<!-- Groups related content so it can be arranged or styled together. -->
+					<div>
+						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+						<span class="eyebrow">Proudly South African</span>
+						<!-- Defines the main heading of the page. -->
+						<h1>Kit out res without <em>breaking the budget</em></h1>
+						<!-- Creates a paragraph of text. The class "lead" connects it to CSS styling or JavaScript behaviour. -->
+						<p class="lead">
+							Campus-Cart brings new and carefully reviewed second-hand student
+							essentials together in one place — bedding, appliances, textbooks
+							and full starter bundles, delivered to every province and
+							collected on campus or at a hub near you. We cover all 26 public
+							universities, all 50 public TVET colleges and the major private
+							institutions.
+						</p>
+						<!-- Groups related content so it can be arranged or styled together. The class "split" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="split">
+							<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="split-card">
+								<!-- Defines a third-level heading for a subsection or card. -->
+								<h2>I am a Student</h2>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Shop deals, browse the second-hand marketplace and sell what
+									you no longer need.
+								</p>
+								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
+								<a class="btn" href="pages/account.html#student"
+									>Student path</a
+								>
+							</div>
+							<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="split-card">
+								<!-- Defines a third-level heading for a subsection or card. -->
+								<h2>I am a Parent/Guardian</h2>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Use the First Year Checklist and fixed-price starter bundles
+									to plan spend with confidence.
+								</p>
+								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-ghost-light" connects it to CSS styling or JavaScript behaviour. -->
+								<a class="btn btn-ghost-light" href="pages/account.html#parent"
+									>Parent path</a
+								>
+							</div>
+						</div>
+					</div>
+					<!-- Groups related content so it can be arranged or styled together. The class "hero-img" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="hero-img">
+						<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+						<img
+							src="assets/images/bundles/hero-banner.jpg"
+							srcset="
+								assets/images/bundles/hero-banner-640.jpg  640w,
+								assets/images/bundles/hero-banner.jpg     1200w
+							"
+							sizes="(max-width: 1000px) 100vw, 580px"
+							alt="A student desk set up with a navy desk lamp, an open laptop, notebooks, a pen holder and a navy backpack beside a sunny window"
+							width="1200"
+							height="670"
+							fetchpriority="high"
+							decoding="async"
+						/>
+					</div>
+				</div>
+			</section>
+			<!-- Quick reasons to trust the shop. -->
+			<section class="trust-strip" aria-label="Why shop with Campus-Cart">
+				<!-- Keeps the content centred. -->
+				<div class="wrap">
+					<!-- List of trust points. -->
+					<ul>
+						<!-- Coverage point. -->
+						<li>
+							<span class="trust-icon" aria-hidden="true"
+								><svg viewBox="0 0 24 24">
+									<path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+									<circle cx="12" cy="10" r="2.5" /></svg></span
+							><span>26 public universities and 50 TVET colleges covered</span>
+						</li>
+						<!-- New and second-hand point. -->
+						<li>
+							<span class="trust-icon" aria-hidden="true"
+								><svg viewBox="0 0 24 24">
+									<path d="M20 7l-8-4-8 4 8 4 8-4z" />
+									<path d="M4 7v10l8 4 8-4V7" /></svg></span
+							><span>New stock and reviewed second-hand deals</span>
+						</li>
+						<!-- Collection point. -->
+						<li>
+							<span class="trust-icon" aria-hidden="true"
+								><svg viewBox="0 0 24 24">
+									<path d="M3 11l9-7 9 7" />
+									<path d="M5 10v10h14V10" />
+									<path d="M10 20v-6h4v6" /></svg></span
+							><span
+								>Free collection at listed residence and campus points</span
+							>
+						</li>
+						<!-- Payment point. -->
+						<li>
+							<span class="trust-icon" aria-hidden="true"
+								><svg viewBox="0 0 24 24">
+									<rect x="3" y="6" width="18" height="12" rx="2" />
+									<path d="M3 10h18" /></svg></span
+							><span>Pay by EFT. Nothing is charged on this website</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Groups content that belongs to one topic or page section. The id "mission" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+			<section class="section" id="mission">
+				<!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="wrap">
+					<!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="section-head">
+						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+						<span class="eyebrow">Our mission</span>
+						<!-- Defines a second-level heading for a major section. -->
+						<h2>Affordable essentials, dignified student living</h2>
+						<!-- Creates a paragraph of text. -->
+						<p>
+							Too many students arrive at university with a bag and a bed frame.
+							We exist to close that gap: fair prices, a trusted second-hand
+							marketplace, and pricing that parents can plan around before
+							registration week.
+						</p>
+					</div>
+					<!-- Groups related content so it can be arranged or styled together. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="grid grid-3">
+						<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="card card-navy">
+							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="card-body">
+								<!-- Defines a third-level heading for a subsection or card. -->
+								<h3>Fair, visible prices</h3>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Every bundle lists its contents and a fixed price. No
+									surprises at the till.
+								</p>
+							</div>
+						</div>
+						<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="card card-navy">
+							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="card-body">
+								<!-- Defines a third-level heading for a subsection or card. -->
+								<h3>Reviewed listings</h3>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Second-hand items are manually reviewed by our team before
+									they appear on the site.
+								</p>
+							</div>
+						</div>
+						<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="card card-navy">
+							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="card-body">
+								<!-- Defines a third-level heading for a subsection or card. -->
+								<h3>Safe collection</h3>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Collect at residence desks, campus points or secure lockers —
+									never a random street corner.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Groups content that belongs to one topic or page section. The id "featured" lets CSS or JavaScript identify this element. The class "section alt" connects it to CSS styling or JavaScript behaviour. -->
+			<section class="section alt" id="featured">
+				<!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="wrap">
+					<!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="section-head">
+						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+						<span class="eyebrow">Featured</span>
+						<!-- Defines a second-level heading for a major section. -->
+						<h2>Starter bundles students actually use</h2>
+					</div>
+					<!-- Groups related content so it can be arranged or styled together. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="grid grid-3">
+						<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+						<article class="card">
+							<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+							<img
+								src="assets/images/bundles/bundle-basic.jpg"
+								alt="Four items from the Basic Starter Bundle: a duvet, an electric kettle, stacked mugs and a notebook"
+								loading="lazy"
+								width="1000"
+								height="1000"
+								decoding="async"
+							/>
+							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="card-body">
+								<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+								<!-- Row that holds the small status labels. -->
+								<div class="card-tags">
+									<span class="badge badge-new">New</span>
+									<!-- Defines a third-level heading for a subsection or card. -->
+								</div>
+								<h3>Basic Starter Bundle</h3>
+								<!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+								<p class="price">R1 499.00</p>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Bedding set, kettle, mug set and study basics for a first-year
+									res room.
+								</p>
+								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
+								<a class="btn btn-sm" href="pages/products.html#parent-hub"
+									>See contents</a
+								>
+							</div>
+						</article>
+						<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+						<article class="card">
+							<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+							<img
+								src="assets/images/bundles/bundle-standard.jpg"
+								alt="Four items from the Standard Starter Bundle: a duvet, an electric kettle, stacked mugs and a navy desk lamp"
+								loading="lazy"
+								width="1000"
+								height="1000"
+								decoding="async"
+							/>
+							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="card-body">
+								<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
+								<!-- Row that holds the small status labels. -->
+								<div class="card-tags">
+									<span class="badge badge-new">New</span>
+									<!-- Defines a third-level heading for a subsection or card. -->
+								</div>
+								<h3>Standard Starter Bundle</h3>
+								<!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+								<p class="price">R2 799.00</p>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Basic plus desk lamp, laundry set and a kitchen starter pack.
+								</p>
+								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
+								<a class="btn btn-sm" href="pages/products.html#parent-hub"
+									>See contents</a
+								>
+							</div>
+						</article>
+						<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
+						<article class="card">
+							<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+							<img
+								src="assets/images/second-hand/marketplace.jpg"
+								alt="Second-hand student items on display"
+								loading="lazy"
+								width="1200"
+								height="900"
+							/>
+							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
+							<div class="card-body">
+								<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-used" connects it to CSS styling or JavaScript behaviour. -->
+								<!-- Row that holds the small status labels. -->
+								<div class="card-tags">
+									<span class="badge badge-used">Second-hand</span>
+									<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
+									<!-- Row that holds the small status labels. -->
+									<div class="card-tags">
+										<span class="badge badge-verified">Verified Seller</span>
+										<!-- Defines a third-level heading for a subsection or card. -->
+									</div>
+								</div>
+								<h3>Marketplace Picks</h3>
+								<!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
+								<p class="price">From R180.00</p>
+								<!-- Creates a paragraph of text. -->
+								<p>
+									Reviewed fridges, desks, chairs and textbooks from graduating
+									students.
+								</p>
+								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
+								<a class="btn btn-sm" href="pages/products.html#shop"
+									>Browse marketplace</a
+								>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- Groups content that belongs to one topic or page section. The id "about-teaser" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
+			<section class="section" id="about-teaser">
+				<!-- Groups related content so it can be arranged or styled together. The class "wrap grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="wrap grid grid-2">
+					<!-- Groups related content so it can be arranged or styled together. -->
+					<div>
+						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+						<span class="eyebrow">About us</span>
+						<!-- Defines a second-level heading for a major section. -->
+						<h2>Started in a res corridor in 2021</h2>
+						<!-- Creates a paragraph of text. -->
+						<p>
+							Campus-Cart began when a group of students resold their res kit
+							instead of throwing it away. Today we serve students aged 19–30
+							and the parents and guardians who fund them, across major South
+							African campuses.
+						</p>
+						<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-outline" connects it to CSS styling or JavaScript behaviour. -->
+						<a class="btn btn-outline" href="pages/about.html"
+							>Read our story</a
+						>
+					</div>
+					<!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="info-box">
+						<!-- Defines a third-level heading for a subsection or card. -->
+						<h3>Who we serve</h3>
+						<!-- Creates a paragraph of text. -->
+						<p>
+							<strong>Primary:</strong> tertiary students aged 19–30 living in
+							residence, digs or at home.
+						</p>
+						<!-- Creates a paragraph of text. -->
+						<p>
+							<strong>Secondary:</strong> parents and guardians budgeting for
+							registration season.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- Groups content that belongs to one topic or page section. The id "get-in-touch" lets CSS or JavaScript identify this element. The class "section navy" connects it to CSS styling or JavaScript behaviour. -->
+			<section class="section navy" id="get-in-touch">
+				<!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
+				<div class="wrap">
+					<!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="section-head">
+						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
+						<span class="eyebrow">Get in touch</span>
+						<!-- Defines a second-level heading for a major section. -->
+						<h2>Questions before you buy?</h2>
+						<!-- Creates a paragraph of text. -->
+						<p>
+							Ask about a specific bundle, or reach the team about collection
+							points, payment plans and second-hand listings.
+						</p>
+					</div>
+					<!-- Groups related content so it can be arranged or styled together. The class "grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
+					<div class="grid grid-2">
+						<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="split-card">
+							<!-- Defines a third-level heading for a subsection or card. -->
+							<h3>Pre-purchase enquiry</h3>
+							<!-- Creates a paragraph of text. -->
+							<p>
+								Reference a bundle or product and we will confirm availability
+								and collection options.
+							</p>
+							<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
+							<a class="btn" href="pages/enquiry.html">Send an enquiry</a>
+						</div>
+						<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
+						<div class="split-card">
+							<!-- Defines a third-level heading for a subsection or card. -->
+							<h3>General contact</h3>
+							<!-- Creates a paragraph of text. -->
+							<p>
+								Email or WhatsApp us, or find your nearest collection and office
+								location.
+							</p>
+							<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-ghost-light" connects it to CSS styling or JavaScript behaviour. -->
+							<a class="btn btn-ghost-light" href="pages/contact.html"
+								>Contact us</a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- Groups footer information, contact details, and secondary navigation. -->
+		<footer>
+			<!-- Groups related content so it can be arranged or styled together. The class "wrap footer-grid" connects it to CSS styling or JavaScript behaviour. -->
+			<div class="wrap footer-grid">
+				<!-- Groups related content so it can be arranged or styled together. -->
+				<div>
+					<!-- Defines a fourth-level heading for a smaller subsection. -->
+					<h3>Campus-Cart</h3>
+					<!-- Creates a paragraph of text. -->
+					<p>
+						Affordable new and second-hand student essentials for South African
+						campuses.
+					</p>
+				</div>
+				<!-- Groups related content so it can be arranged or styled together. -->
+				<div>
+					<!-- Defines a fourth-level heading for a smaller subsection. -->
+					<h3>Shop</h3>
+					<!-- Starts an unordered (bulleted) list. -->
+					<ul>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/products.html">Shop New</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/products.html#shop">Second-Hand</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li>
+							<a href="pages/products.html#deals-gallery"
+								>Deals &amp; Gallery</a
+							>
+						</li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/products.html#sell-with-us">Sell With Us</a></li>
+					</ul>
+				</div>
+				<!-- Groups related content so it can be arranged or styled together. -->
+				<div>
+					<!-- Defines a fourth-level heading for a smaller subsection. -->
+					<h3>Company</h3>
+					<!-- Starts an unordered (bulleted) list. -->
+					<ul>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/about.html">About</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/products.html#parent-hub">Parent Hub</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/enquiry.html">Enquiry</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/coverage.html">Coverage</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/contact.html">Contact</a></li>
+						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
+						<li><a href="pages/account.html">Account</a></li>
+					</ul>
+				</div>
+				<!-- Groups related content so it can be arranged or styled together. -->
+				<div>
+					<!-- Defines a fourth-level heading for a smaller subsection. -->
+					<h3>Reach us</h3>
+					<!-- Starts an unordered (bulleted) list. -->
+					<ul>
+						<!-- Defines one item in a list. The href attribute points to an email address. -->
+						<li>
+							<a href="mailto:hello@campus-cart.co.za"
+								>hello@campus-cart.co.za</a
+							>
+						</li>
+						<!-- Defines one item in a list. The href attribute points to an external webpage. -->
+						<li>
+							<a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a>
+						</li>
+						<!-- Defines one item in a list. -->
+						<li>Mon–Fri, 09:00–17:00 SAST</li>
+					</ul>
+				</div>
+			</div>
+			<!-- Groups related content so it can be arranged or styled together. The class "wrap footer-bottom" connects it to CSS styling or JavaScript behaviour. -->
+			<div class="wrap footer-bottom">
+				<!-- Legal links and the button that reopens the cookie choices. -->
+				<p class="footer-legal">
+					<a href="pages/privacy.html">Privacy Policy</a>
+					|
+					<a href="pages/terms.html">Terms &amp; Conditions</a>
+					|
+					<a href="pages/cookies.html">Cookie Policy</a>
+					|
+					<a href="pages/returns.html">Returns &amp; Delivery</a>
+					|
+					<button type="button" class="link-button" data-cookie-settings>
+						Cookie settings
+					</button>
+				</p>
+				<!-- Head office address. -->
+				<p>
+					Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, 0083.
+				</p>
+				<!-- Creates a paragraph of text. The href attribute points to the specified page or resource. -->
+				<p>
+					<a href="pages/about.html#licence">Licence and credits</a> |
+					<a href="sitemap.xml">Sitemap.xml</a>
+				</p>
+				<!-- Creates a paragraph of text. -->
+				<p>
+					&copy; <span id="copyright-year"></span> Campus-Cart. Static demo site
+					— no payments are processed and no personal data is stored.
+				</p>
+			</div>
+		</footer>
+		<!-- Loads the cookie and privacy choices before the other scripts. -->
+		<script src="assets/js/consent.js"></script>
+		<!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+		<script src="assets/js/ui.js" defer></script>
+		<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+		<script src="assets/js/script.js"></script>
+		<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
+		<script src="assets/js/features.js"></script>
+	</body>
 </html>
