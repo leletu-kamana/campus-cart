@@ -6,28 +6,28 @@ This document describes the UI/UX upgrade. All of it is plain HTML5, CSS3 and va
 
 Dribbble (https://dribbble.com/) was searched for e-commerce inspiration. The search returned collection and profile listing pages. Their text gave shot titles and tags, for example "Product card + catalog", "E-commerce Product Page UX/UI Design", "eCommerce product card", "Day 002 - Product Card" and "Daily UI 002 Checkout form". **The shot images themselves could not be opened or viewed in the environment used to build this upgrade**, so no layout was copied or traced. Instead, the common patterns those titles describe were adapted to Campus-Cart's own brand and content:
 
-| Pattern seen in the listings | How it was adapted |
-|---|---|
+| Pattern seen in the listings                                         | How it was adapted                                                                                  |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | Product card with a clean photo, tag row, price and one clear action | `.card` with a 4:3 photo, a `.card-tags` row, a highlighter-style price and a full-width add button |
-| Catalogue with filter bar | `.toolbar` with search, category, condition and sort in one rounded panel |
-| Minimal sticky header with a cart counter | Sticky `.topbar`, pill menu links and a live `.cart-badge` that animates when an item is added |
-| Checkout form with a visible progress guide | `.checkout-steps` four-step guide above the order summary |
-| Trust points under a hero | `.trust-strip` with four facts that were already on the site |
+| Catalogue with filter bar                                            | `.toolbar` with search, category, condition and sort in one rounded panel                           |
+| Minimal sticky header with a cart counter                            | Sticky `.topbar`, pill menu links and a live `.cart-badge` that animates when an item is added      |
+| Checkout form with a visible progress guide                          | `.checkout-steps` four-step guide above the order summary                                           |
+| Trust points under a hero                                            | `.trust-strip` with four facts that were already on the site                                        |
 
 ## 2. Brand tokens
 
 The brand colours are unchanged: navy, yellow, light grey and white. The tokens at the start of "Design System v2" in `assets/css/styles.css` refine them.
 
-| Token | Value | Use |
-|---|---|---|
-| `--navy` | `#0d1b3e` | Text, header, footer, primary dark surfaces |
-| `--navy-light` / `--navy-dark` | `#17295c` / `#08142f` | Gradients and depth |
-| `--yellow` | `#ffd23f` | Primary buttons, highlights, focus rings |
-| `--yellow-soft` | `#fff7d6` | Notice boxes |
-| `--grey` / `--grey-light` | `#f2f3f5` / `#f8f9fb` | Section and panel backgrounds |
-| `--grey-mid` / `--line` | `#d5dae3` / `#dfe3ea` | Borders |
-| `--grey-dark` | `#4b5675` | Muted text |
-| `--success` / `--warning` / `--danger` | `#1b6e2d` / `#8a5a00` / `#b3261e` | Stock status and form errors |
+| Token                                  | Value                             | Use                                         |
+| -------------------------------------- | --------------------------------- | ------------------------------------------- |
+| `--navy`                               | `#0d1b3e`                         | Text, header, footer, primary dark surfaces |
+| `--navy-light` / `--navy-dark`         | `#17295c` / `#08142f`             | Gradients and depth                         |
+| `--yellow`                             | `#ffd23f`                         | Primary buttons, highlights, focus rings    |
+| `--yellow-soft`                        | `#fff7d6`                         | Notice boxes                                |
+| `--grey` / `--grey-light`              | `#f2f3f5` / `#f8f9fb`             | Section and panel backgrounds               |
+| `--grey-mid` / `--line`                | `#d5dae3` / `#dfe3ea`             | Borders                                     |
+| `--grey-dark`                          | `#4b5675`                         | Muted text                                  |
+| `--success` / `--warning` / `--danger` | `#1b6e2d` / `#8a5a00` / `#b3261e` | Stock status and form errors                |
 
 Yellow is never used as text on white. Where it used to be (labels, prices, links) the text is navy, and yellow is used as a background highlight instead.
 
