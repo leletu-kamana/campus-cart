@@ -1,108 +1,269 @@
 <!DOCTYPE html>
-<!-- Campus-Cart custom 404 page: a friendly, responsive page for missing URLs. -->
 <html lang="en">
 <head>
-    <!-- Defines the document character encoding. -->
-    <meta charset="utf-8">
-    <!-- Makes the layout responsive on phones, tablets, and desktops. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Sets the browser-tab title. -->
-    <title>Page not found | Campus-Cart</title>
-    <!-- Describes the page without encouraging search indexing. -->
-    <meta name="description" content="This Campus-Cart page could not be found. Head home, browse student essentials, or contact our team.">
-    <!-- Keeps this error page out of search results. -->
-    <meta name="robots" content="noindex, follow">
-    <!-- Matches the browser toolbar to the Campus-Cart brand. -->
-    <meta name="theme-color" content="#0d1b3e">
-    <!-- Loads the existing global stylesheet. -->
-    <link rel="stylesheet" href="https://campus-cart-olive.vercel.app/assets/css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Campus-Cart</title>
+  <meta name="description" content="This Campus-Cart page could not be found. Head home, browse student essentials, or contact our team.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0d1b3e">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
+
+  <!-- Tailwind v4 theme config: animations used on this page -->
+  <link rel="stylesheet" href="https://leletu-kamana.github.io/campus-cart/assets/css/style.css">
 </head>
-<body class="cc404">
-    <!-- Provides lightweight navigation back to the main site. -->
-    <header class="cc404-header">
-        <nav class="cc404-nav" aria-label="Main navigation">
-            <a class="cc404-brand" href="https://campus-cart-olive.vercel.app/" aria-label="Campus-Cart home">
-                <span class="cc404-brand-mark" aria-hidden="true">C</span>
-                <span>Campus-Cart</span>
-            </a>
-            <div class="cc404-nav-links">
-                <a href="https://campus-cart-olive.vercel.app/">Home</a>
-                <a href="https://campus-cart-olive.vercel.app/pages/products.html">Shop</a>
-                <a href="https://campus-cart-olive.vercel.app/pages/about.html">About</a>
-                <a href="https://campus-cart-olive.vercel.app/pages/contact.html">Contact</a>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Main landmark contains the error message, navigation shortcuts, and game. -->
-    <main class="cc404-main">
-        <section class="cc404-hero" aria-labelledby="cc404-title">
-            <div class="cc404-message">
-                <span class="cc404-eyebrow"><span class="cc404-eyebrow-dot" aria-hidden="true"></span> Error 404 · Page not found</span>
-                <p class="cc404-code" aria-hidden="true">404</p>
-                <h1 class="cc404-title" id="cc404-title">Oops! This page missed the campus bus.</h1>
-                <p class="cc404-copy">The page may have moved, the link may be outdated, or the address may have a typo. No stress — your student essentials are still just a few clicks away.</p>
-                <div class="cc404-actions">
-                    <a class="cc404-button" href="https://campus-cart-olive.vercel.app/"><span aria-hidden="true">←</span> Back to home</a>
-                    <a class="cc404-button cc404-button-secondary" href="https://campus-cart-olive.vercel.app/pages/products.html">Browse essentials <span aria-hidden="true">↗</span></a>
-                </div>
-            </div>
-            <div class="cc404-art" role="img" aria-label="Illustration of a yellow student backpack surrounded by small stars">
-                <span class="cc404-orbit" aria-hidden="true"></span>
-                <span class="cc404-star cc404-star-one" aria-hidden="true">✦</span>
-                <span class="cc404-star cc404-star-two" aria-hidden="true">✦</span>
-                <span class="cc404-tag" aria-hidden="true">READY FOR CAMPUS</span>
-                <div class="cc404-backpack" aria-hidden="true"><span class="cc404-pocket"></span></div>
-                <span class="cc404-art-caption" aria-hidden="true">A little detour. A fresh start.</span>
-            </div>
-        </section>
+<body class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]">
 
-        <!-- Offers three common destinations so visitors can recover quickly. -->
-        <section class="cc404-help" aria-labelledby="cc404-help-title">
-            <h2 class="cc404-section-heading" id="cc404-help-title">Where would you like to go?</h2>
-            <p class="cc404-section-copy">Choose a popular destination and keep moving.</p>
-            <div class="cc404-quick-links">
-                <a class="cc404-quick-link" href="https://campus-cart-olive.vercel.app/pages/products.html">
-                    <span class="cc404-link-icon" aria-hidden="true">▦</span>
-                    <strong>Student essentials</strong>
-                    <span>Browse supplies, furniture, appliances, and more.</span>
-                </a>
-                <a class="cc404-quick-link" href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub">
-                    <span class="cc404-link-icon" aria-hidden="true">⌂</span>
-                    <strong>Student &amp; parent hub</strong>
-                    <span>Find useful information for getting ready for campus.</span>
-                </a>
-                <a class="cc404-quick-link" href="https://campus-cart-olive.vercel.app/pages/contact.html">
-                    <span class="cc404-link-icon" aria-hidden="true">✉</span>
-                    <strong>Need a hand?</strong>
-                    <span>Visit our contact page if you need help finding something.</span>
-                </a>
-            </div>
-        </section>
+  <!-- Skip link for keyboard users -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white">
+    Skip to main content
+  </a>
 
-        <!-- Keeps the existing browser-only Campus Runner mini-game available. -->
-        <section class="cc404-game" aria-labelledby="cc404-game-title">
-            <div class="cc404-game-head">
-                <div>
-                    <h2 id="cc404-game-title">Waiting for your next stop?</h2>
-                    <p>Take a quick break with Campus Runner. Jump over the crates and see how far you can go.</p>
-                </div>
-                <span class="cc404-game-label">MINI GAME</span>
-            </div>
-            <canvas id="game-canvas" class="game-canvas" width="640" height="220" tabindex="0" aria-label="Campus Runner game. Press Space or the up arrow to jump over crates. You can also tap the game on a touchscreen.">Your browser cannot display this game.</canvas>
-            <div class="cc404-game-bottom">
-                <p id="game-status" class="hint" aria-live="polite">Ready when you are. Press Start game to begin.</p>
-                <button class="cc404-button" id="game-start" type="button">Start game <span aria-hidden="true">▶</span></button>
-            </div>
-        </section>
-    </main>
+  <!-- ===== Top utility bar ===== -->
+  <div class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block">
+    <div class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8">
+      <div class="flex items-center gap-5">
+        <a href="mailto:hello@campus-cart.co.za" class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]">
+          <img src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" alt="" class="h-3.5 w-3.5">
+          hello@campus-cart.co.za
+        </a>
+        <a href="https://wa.me/27123456789" class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex">
+          <img src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" alt="" class="h-3.5 w-3.5">
+          +27 12 345 6789
+        </a>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/account.html#student" class="transition hover:text-[#ffd23f]">Student path</a>
+        <span class="text-slate-600">|</span>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/account.html#parent" class="transition hover:text-[#ffd23f]">Parent path</a>
+        <span class="text-slate-600">|</span>
+        <span class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex">
+          <img src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" alt="" class="h-3.5 w-3.5">
+          Free collection at listed points
+        </span>
+      </div>
+    </div>
+  </div>
 
-    <!-- Adds a small footer without relying on the main page header or footer scripts. -->
-    <footer class="cc404-footer">
-        <p>Lost your way? <a href="https://campus-cart-olive.vercel.app/">Start again at Campus-Cart</a>.</p>
-    </footer>
+  <!-- ===== Header / Navigation ===== -->
+  <header id="siteHeader" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <a href="https://leletu-kamana.github.io/campus-cart/index.html" class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]">C</span>
+        <span>Campus<span class="text-[#c99700]">-Cart</span></span>
+      </a>
 
-    <!-- Loads the existing vanilla JavaScript game from the site's absolute path. -->
-    <script src="https://campus-cart-olive.vercel.app/assets/js/game.js" defer></script>
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
+        <a href="https://leletu-kamana.github.io/campus-cart/index.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Home</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Shop</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html#parent-hub" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Parent Hub</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/about.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">About</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/coverage.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Coverage</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/contact.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Contact</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/account.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Account</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="hidden text-right xl:block">
+          <p id="navTime" class="text-xs font-bold text-[#0d1b3e]">--:--:--</p>
+          <p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
+        </div>
+
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/account.html#order" class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" aria-label="Order / cart">
+          <img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-5 w-5">
+          <span id="cartCount" class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]">0</span>
+        </a>
+
+        <button id="navToggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <img id="navIcon" src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" alt="" class="h-5 w-5">
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
+        <a href="https://leletu-kamana.github.io/campus-cart/index.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Home</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Shop</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html#parent-hub" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Parent Hub</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/about.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">About</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/coverage.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Coverage</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/contact.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Contact</a>
+        <a href="https://leletu-kamana.github.io/campus-cart/pages/account.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ===== 404 hero ===== -->
+    <section class="relative overflow-hidden bg-[#0d1b3e] text-white" aria-labelledby="cc404-title">
+      <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"></div>
+      <div aria-hidden="true" class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"></div>
+
+      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div class="grid items-center gap-14 lg:grid-cols-2">
+
+          <!-- Message -->
+          <div class="animate-fade-up">
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]">
+              <span class="h-1.5 w-1.5 rounded-full bg-[#ffd23f] animate-pulse-soft"></span>
+              Error 404 · Page not found
+            </span>
+
+            <p class="mt-6 text-8xl font-black italic leading-none text-[#ffd23f] [font-family:'Playfair_Display',Georgia,serif] sm:text-9xl" aria-hidden="true">404</p>
+
+            <h1 id="cc404-title" class="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl">
+              Oops! This page missed the <span class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]">campus bus.</span>
+            </h1>
+
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
+              The page may have moved, the link may be outdated, or the address may have a typo. No stress — your
+              student essentials are still just a few clicks away.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="https://leletu-kamana.github.io/campus-cart/index.html" class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:bg-[#ffdf5e]">
+                <img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-left.svg" alt="" class="h-4 w-4 transition group-hover:-translate-x-0.5">
+                Back to home
+              </a>
+              <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10">
+                Browse essentials
+                <img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg" alt="" class="h-4 w-4">
+              </a>
+            </div>
+          </div>
+
+          <!-- Art: CSS-drawn backpack -->
+          <div class="relative mx-auto w-full max-w-[420px] animate-float" role="img" aria-label="Illustration of a yellow student backpack surrounded by small stars">
+            <div aria-hidden="true" class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/15 animate-spin-slow"></div>
+            <div aria-hidden="true" class="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffd23f]/15 blur-3xl"></div>
+
+            <span aria-hidden="true" class="absolute left-4 top-10 text-2xl text-[#ffd23f] animate-pulse-soft">✦</span>
+            <span aria-hidden="true" class="absolute right-8 top-20 text-lg text-white/50 animate-float-delay">✦</span>
+            <span aria-hidden="true" class="absolute bottom-20 left-8 text-sm text-white/40 animate-pulse-soft">✦</span>
+
+            <span aria-hidden="true" class="absolute left-1/2 top-2 -translate-x-1/2 -rotate-3 rounded-full bg-[#ffd23f] px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e] shadow-lg shadow-amber-500/30">
+              Ready for campus
+            </span>
+
+            <!-- Backpack body -->
+            <div class="relative mx-auto mt-16 h-40 w-36 rounded-[2rem] bg-[#ffd23f] shadow-2xl shadow-amber-500/30">
+              <div class="absolute -top-4 left-1/2 h-14 w-20 -translate-x-1/2 rounded-t-[1.6rem] bg-[#f5c518]"></div>
+              <div class="absolute top-2 left-1/2 h-20 w-20 -translate-x-1/2 rounded-2xl border-4 border-[#e6b300]"></div>
+              <div class="absolute bottom-3 left-1/2 h-3 w-16 -translate-x-1/2 rounded-full bg-[#e6b300]"></div>
+              <div class="absolute -left-3 top-16 h-16 w-6 rounded-l-2xl bg-[#f5c518]"></div>
+              <div class="absolute -right-3 top-16 h-16 w-6 rounded-r-2xl bg-[#f5c518]"></div>
+            </div>
+
+            <p class="mt-10 text-center text-sm italic text-slate-400 [font-family:'Playfair_Display',Georgia,serif]" aria-hidden="true">A little detour. A fresh start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Quick links ===== -->
+    <section class="py-20" aria-labelledby="cc404-help-title">
+      <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]">Keep moving</span>
+        <h2 id="cc404-help-title" class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl">Where would you like to go?</h2>
+        <p class="mt-4 text-slate-600">Choose a popular destination and keep moving.</p>
+
+        <div class="mt-10 grid gap-5 text-left md:grid-cols-3">
+          <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html" class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b3e]">
+              <img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-6 w-6 text-[#ffd23f]">
+            </span>
+            <strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]">Student essentials</strong>
+            <span class="mt-1 block text-sm text-slate-500">Browse supplies, furniture, appliances, and more.</span>
+          </a>
+
+          <a href="https://leletu-kamana.github.io/campus-cart/pages/products.html#parent-hub" class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]">
+              <img src="https://unpkg.com/lucide-static@1.44.0/icons/users.svg" alt="" class="h-6 w-6 text-[#0d1b3e]">
+            </span>
+            <strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]">Student &amp; parent hub</strong>
+            <span class="mt-1 block text-sm text-slate-500">Find useful information for getting ready for campus.</span>
+          </a>
+
+          <a href="https://leletu-kamana.github.io/campus-cart/pages/contact.html" class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#c2572f]">
+              <img src="https://unpkg.com/lucide-static@1.44.0/icons/headphones.svg" alt="" class="h-6 w-6 text-white">
+            </span>
+            <strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]">Need a hand?</strong>
+            <span class="mt-1 block text-sm text-slate-500">Visit our contact page if you need help finding something.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Campus Runner mini-game ===== -->
+    <section class="bg-white py-20" aria-labelledby="cc404-game-title">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-6 text-white shadow-xl sm:p-10">
+          <div aria-hidden="true" class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#ffd23f]/15 blur-3xl"></div>
+          <div aria-hidden="true" class="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-[#1e3a8a]/70 blur-3xl"></div>
+
+          <div class="relative">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <h2 id="cc404-game-title" class="text-2xl font-extrabold tracking-tight sm:text-3xl">Waiting for your next stop?</h2>
+                <p class="mt-2 text-sm text-slate-300">Take a quick break with Campus Runner. Jump over the crates and see how far you can go.</p>
+              </div>
+              <span class="w-max rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]">Mini game</span>
+            </div>
+
+            <!-- Game canvas -->
+            <div class="mt-6 overflow-hidden rounded-3xl border-2 border-white/10 bg-[#0a1533]">
+              <canvas id="game-canvas" class="game-canvas block w-full cursor-pointer" width="720" height="260" tabindex="0" aria-label="Campus Runner game. Press Space or the up arrow to jump over crates. You can also tap the game on a touchscreen.">Your browser cannot display this game.</canvas>
+            </div>
+
+            <div class="mt-5 flex flex-col items-center justify-between gap-4 sm:flex-row">
+              <p id="game-status" class="text-sm font-semibold text-slate-300" aria-live="polite">Ready when you are. Press Start game to begin.</p>
+              <div class="flex items-center gap-3">
+                <span id="game-score" class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-white">Score 0</span>
+                <span id="game-best" class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-[#ffd23f]">Best 0</span>
+                <button id="game-start" type="button" class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-2.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]">
+                  Start game
+                  <img src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg" alt="" class="h-4 w-4">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-[#09122e] text-slate-300">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
+        <p class="text-sm">
+          Lost your way? <a href="https://leletu-kamana.github.io/campus-cart/index.html" class="font-bold text-[#ffd23f] transition hover:text-[#ffdf5e]">Start again at Campus-Cart</a>.
+        </p>
+        <p class="text-xs text-slate-500">© <span id="copyright-year"></span> Campus-Cart. Static demo site — no payments are processed.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="toTop" type="button" class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]" aria-label="Back to top">
+    <img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg" alt="" class="h-5 w-5">
+  </button>
+
+  <!-- ===== Site script ===== -->
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/data.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/ui.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/consent.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/interactions.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/forms.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/game.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/features.js" defer></script>
+  <script src="https://leletu-kamana.github.io/campus-cart/assets/js/script.js" defer></script>
 </body>
 </html>
