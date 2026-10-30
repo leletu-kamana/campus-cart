@@ -1,98 +1,166 @@
 // ==========================================================
 // CAMPUS-CART
-// Interface helpers (UI/UX upgrade)
-// - Measures the sticky header so anchor links never hide behind it.
-// - Adds a shadow to the header once the page is scrolled.
-// - Adds a back-to-top button on long pages.
-// - Plays a small animation on the order count when an item is added.
-// - Lets the Escape key close the mobile menu.
-// Plain JavaScript, no libraries. The site still works if this file fails to load.
+// ui.js - shared interface code used on every page
+//   - shared helpers and the cart storage (window.CC)
+//   - live SAST clock, mobile menu, header shadow, Escape closes the menu
+//   - cart count badge, snack bar / toast messages
+//   - back to top button, newsletter forms, footer year
+// Loaded first, because the other files read window.CC.
 // ==========================================================
 
-(function () { // Wraps the code in a function so its variables stay private.
-    "use strict"; // Turns on stricter error checking.
+(function () {
+  'use strict';
 
-    var root = document.documentElement; // The <html> element, where the CSS variables are set.
-    var header = document.querySelector(".topbar"); // The sticky site header.
-    var subnav = document.querySelector(".subnav"); // The sticky sub-navigation bar, if the page has one.
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; // Whether the visitor asked for less motion.
+  /* ----- Helpers ----- */
+  const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+  const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
+  const formatRand = (n) => 'R' + Number(n).toLocaleString('en-US').replace(/,/g, ' ');
 
-    // ---------- Sticky offsets ----------
-    function measure() { // Stores the sticky bar heights as CSS variables.
-        var headerHeight = header ? Math.round(header.getBoundingClientRect().height) : 0; // Height of the header.
-        var subnavHeight = subnav ? Math.round(subnav.getBoundingClientRect().height) : 0; // Height of the sub-navigation.
-        root.style.setProperty("--header-h", headerHeight + "px"); // Lets the sub-navigation stick just under the header.
-        root.style.setProperty("--sticky-offset", (headerHeight + subnavHeight) + "px"); // Lets anchor links stop below both bars.
+  /* ----- Cart storage (localStorage wrapped so blocked storage never breaks the page) ----- */
+  const CART_KEY = 'cc_cart_v1';
+  function loadCart() {
+    try {
+      const raw = localStorage.getItem(CART_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(parsed)) return [];
+      // Keep only well-formed rows, so edited or corrupted storage can never break or inject into the page.
+      return parsed.filter((row) => row && typeof row.name === 'string' && Number.isFinite(Number(row.price)) && Number.isInteger(Number(row.qty)) && Number(row.qty) > 0)
+        .map((row) => ({ name: row.name, price: Number(row.price), qty: Number(row.qty) }));
+    } catch (e) { return []; }
+  }
+  const state = { cart: loadCart() };
+
+  function saveCart() {
+    try { localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); } catch (e) { /* storage blocked - keep in memory */ }
+  }
+
+  function cartCount() { return state.cart.reduce((sum, item) => sum + item.qty, 0); }
+  function cartTotal() { return state.cart.reduce((sum, item) => sum + item.price * item.qty, 0); }
+
+  function updateBadge() {
+    const badge = $('#cartCount');
+    if (badge) {
+      const before = badge.textContent;
+      badge.textContent = String(cartCount());
+      if (before !== badge.textContent && badge.animate) {
+        badge.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.35)' }, { transform: 'scale(1)' }], { duration: 300 });
+      }
     }
+  }
 
-    if (header) { // Only measures when the page has a header.
-        measure(); // Measures once straight away.
-        window.addEventListener("resize", measure); // Measures again when the window changes size.
-        if (window.ResizeObserver) { new ResizeObserver(measure).observe(header); } // Measures again when the header grows, for example when the mobile menu opens.
+  // Adds an item, saves, refreshes the badge and tells the other files (the cart drawer and the order summary).
+  function addToCart(name, price) {
+    const existing = state.cart.find((item) => item.name === name);
+    if (existing) { existing.qty += 1; } else { state.cart.push({ name: name, price: Number(price), qty: 1 }); }
+    saveCart();
+    updateBadge();
+    document.dispatchEvent(new CustomEvent('cc-cart-change'));
+  }
+
+  function changeCart() {
+    saveCart();
+    updateBadge();
+    document.dispatchEvent(new CustomEvent('cc-cart-change'));
+  }
+
+  /* ----- Snack bar (uses #snack when the page has it, otherwise a small toast) ----- */
+  let snackTimer;
+  function showSnack(message) {
+    const snack = $('#snack');
+    if (snack) {
+      snack.textContent = message;
+      snack.classList.remove('opacity-0', 'pointer-events-none');
+      clearTimeout(snackTimer);
+      snackTimer = setTimeout(() => snack.classList.add('opacity-0', 'pointer-events-none'), 2600);
+      return;
     }
-
-    // ---------- Header shadow and back-to-top button ----------
-    var toTop = document.createElement("button"); // Creates the back-to-top button.
-    toTop.type = "button"; // Makes it a plain button.
-    toTop.className = "to-top"; // Gives it the styling class.
-    toTop.setAttribute("aria-label", "Back to top"); // Gives it a name for screen readers.
-    toTop.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>'; // Draws an upward arrow.
-    toTop.addEventListener("click", function () { // Listens for a click on the button.
-        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); // Scrolls to the top, without animation if motion is reduced.
-        var logo = document.querySelector(".logo"); // Finds the logo at the start of the page.
-        if (logo) { logo.focus({ preventScroll: true }); } // Moves keyboard focus back to the start of the page.
-    });
-    document.body.appendChild(toTop); // Adds the button to the page.
-
-    var ticking = false; // Remembers whether a scroll update is already queued.
-    function onScroll() { // Updates the header and the button after scrolling.
-        var y = window.pageYOffset || root.scrollTop; // How far the page is scrolled.
-        if (header) { header.classList.toggle("is-scrolled", y > 8); } // Shows the header shadow after a small scroll.
-        toTop.classList.toggle("is-visible", y > 700); // Shows the button after a longer scroll.
-        ticking = false; // Allows the next update to be queued.
+    let toast = document.getElementById('toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'toast';
+      toast.className = 'toast';
+      toast.setAttribute('role', 'status');
+      document.body.appendChild(toast);
     }
-    window.addEventListener("scroll", function () { // Listens for scrolling.
-        if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); } // Runs the update once per frame.
-    }, { passive: true }); // Marks the listener as passive so scrolling stays smooth.
-    onScroll(); // Sets the correct state when the page first loads.
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => toast.classList.remove('show'), 2400);
+  }
 
-    // ---------- Cart count animation ----------
-    var counts = document.querySelectorAll("[data-cart-count]"); // Finds every order count on the page.
-    Array.prototype.forEach.call(counts, function (badge) { // Loops through the counts.
-        var last = badge.textContent; // Remembers the number shown now.
-        new MutationObserver(function () { // Watches the count for changes.
-            if (badge.textContent === last) { return; } // Ignores changes that do not alter the number.
-            last = badge.textContent; // Remembers the new number.
-            badge.classList.remove("is-bump"); // Resets the animation so it can play again.
-            void badge.offsetWidth; // Forces the browser to notice the reset.
-            badge.classList.add("is-bump"); // Plays the pop animation.
-        }).observe(badge, { childList: true, characterData: true, subtree: true }); // Watches for text changes.
-    });
+  window.CC = {
+    $: $, $$: $$, formatRand: formatRand, state: state, CART_KEY: CART_KEY,
+    saveCart: saveCart, cartCount: cartCount, cartTotal: cartTotal,
+    updateBadge: updateBadge, addToCart: addToCart, changeCart: changeCart, showSnack: showSnack
+  };
 
-    // ---------- Profile photo fallback ----------
-    // The About page photo is hosted by another site. If it cannot load, a round badge with the author's initials is shown instead.
-    function initialsBadge(img) { // Replaces a broken photo with an initials badge.
-        if (img.getAttribute("data-fallback")) { return; } // Does nothing if the badge is already showing.
-        var name = (img.getAttribute("alt") || "").split(",")[0]; // Takes the name from the alt text, before the first comma.
-        var initials = name.split(/\s+/).filter(Boolean).slice(0, 2).map(function (w) { return w.charAt(0).toUpperCase(); }).join("") || "CC"; // Builds up to two initials.
-        var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="#0d1b3e"/><text x="60" y="72" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" fill="#ffd23f">' + initials + '</text></svg>'; // Draws the badge as an SVG image.
-        img.setAttribute("data-fallback", "true"); // Marks the photo so this runs only once.
-        img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg); // Shows the badge.
-    }
-    document.addEventListener("error", function (e) { // Listens for images that fail to load (capture phase, because the error event does not bubble).
-        if (e.target && e.target.tagName === "IMG" && e.target.classList.contains("author")) { initialsBadge(e.target); } // Only handles the author photo.
-    }, true); // The true makes the listener work in the capture phase.
-    Array.prototype.forEach.call(document.querySelectorAll("img.author"), function (img) { // Checks photos that already failed before this script ran.
-        if (img.complete && img.naturalWidth === 0) { initialsBadge(img); } // Replaces a photo that has already failed.
-    });
+  /* ----- Live clock (header) ----- */
+  function tickClock() {
+    const now = new Date();
+    const t = $('#navTime');
+    const d = $('#navDate');
+    if (t) t.textContent = now.toLocaleTimeString('en-ZA', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    if (d) d.textContent = now.toLocaleDateString('en-ZA', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  tickClock();
+  setInterval(tickClock, 1000);
 
-    // ---------- Mobile menu ----------
-    document.addEventListener("keydown", function (e) { // Listens for key presses.
-        if (e.key !== "Escape") { return; } // Ignores every key except Escape.
-        var menu = document.querySelector(".nav-links.open, .nav-links.is-open"); // Finds the menu if it is open.
-        if (!menu) { return; } // Stops when the menu is closed.
-        menu.classList.remove("open", "is-open"); // Closes the menu.
-        var toggle = document.querySelector(".nav-toggle"); // Finds the Menu button.
-        if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.focus(); } // Updates the button state and returns focus to it.
+  /* ----- Mobile menu toggle ----- */
+  const navToggle = $('#navToggle');
+  const mobileMenu = $('#mobileMenu');
+  const navIcon = $('#navIcon');
+  const ICON_MENU = 'https://unpkg.com/lucide-static@1.44.0/icons/menu.svg';
+  const ICON_CLOSE = 'https://unpkg.com/lucide-static@1.44.0/icons/x.svg';
+
+  function setMenu(open) {
+    if (!navToggle || !mobileMenu) return;
+    mobileMenu.classList.toggle('hidden', !open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    if (navIcon) navIcon.src = open ? ICON_CLOSE : ICON_MENU;
+  }
+  if (navToggle && mobileMenu) {
+    navToggle.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    // Escape closes the menu and returns focus to its button
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) { setMenu(false); navToggle.focus(); }
     });
+    // Picking a link, or widening the window to desktop size, also closes it
+    $$('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    window.addEventListener('resize', () => { if (window.innerWidth >= 1024) setMenu(false); });
+  }
+
+  /* ----- Header shadow once the page is scrolled ----- */
+  const siteHeader = $('#siteHeader');
+  const toTop = $('#toTop');
+  function onScroll() {
+    if (siteHeader) siteHeader.classList.toggle('shadow-md', window.scrollY > 8);
+    if (toTop) toTop.classList.toggle('hidden', window.scrollY <= 400);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ----- Back to top ----- */
+  if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ----- Cart badge (shared localStorage, also follows other open tabs) ----- */
+  updateBadge();
+  window.addEventListener('storage', (e) => {
+    if (e.key === CART_KEY) { state.cart = loadCart(); updateBadge(); document.dispatchEvent(new CustomEvent('cc-cart-change')); }
+  });
+
+  /* ----- Newsletter forms (band + footer fallback) ----- */
+  $$('form[id^="newsletter"]').forEach((form) => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = 'Joined ✓';
+      form.reset();
+      setTimeout(() => { btn.textContent = original; }, 2200);
+    });
+  });
+
+  /* ----- Footer © year ----- */
+  const yearEl = $('#copyright-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
