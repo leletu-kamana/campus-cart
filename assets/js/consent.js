@@ -186,6 +186,11 @@
     // ---------- Start ----------
     function start() { // Runs once the page is ready.
         load(); // Reads the saved choices.
+        // The footer "Cookie settings" links on the pages are plain links, so mark them here
+        // instead of editing every page. Clicking one opens the settings panel.
+        Array.prototype.forEach.call(document.querySelectorAll("a"), function (a) {
+            if (/^\s*Cookie settings\s*$/i.test(a.textContent)) { a.setAttribute("data-cookie-settings", ""); }
+        });
         applyEmbeds(); // Loads or blocks the embedded maps.
         if (!state.decided) { showBanner(); } // Shows the banner when no choice has been made.
         document.addEventListener("click", function (e) { // Listens for clicks on the Cookie settings links.
