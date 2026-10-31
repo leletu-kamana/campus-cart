@@ -269,6 +269,8 @@
     showSnack: showSnack
   };
   setupWishlist();
+  updateBadge();
+  updateWishlistBadge();
 
   /* ----- Live clock (header) ----- */
   function tickClock() {
