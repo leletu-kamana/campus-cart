@@ -198,65 +198,6 @@ function clearErrorsOnInput(form) { // Begin this block of code.
 //   check - a function that returns an error message, or "" when the field is fine.
 // A field after an invalid one is locked (made inert, so it cannot be clicked or tabbed to),
 // and the submit button stays disabled until every field is valid.
-function setupFormGate(form, steps) { // Begin this block of code.
-
-    const submitButton = form.querySelector("[type=submit]"); // Find the form submit button.
-
-    // A short message above the button tells the visitor what to do next.
-    const status = document.createElement("p"); // Declare a constant for use in this operation.
-    status.className = "gate-status"; // Update or inspect the relevant form or page element.
-    status.setAttribute("aria-live", "polite"); // Announce status updates to assistive technology.
-    submitButton.parentNode.insertBefore(status, submitButton); // Update or inspect the relevant form or page element.
-
-    // Works out which fields are locked and whether the form can be submitted.
-    function refresh() { // Begin this block of code.
-        let blockedBy = null; // Store the first invalid step that blocks later fields.
-
-        steps.forEach(function (step) { // Begin this block of code.
-            const group = groupOf(step.input); // Declare a constant for use in this operation.
-
-            // Fields that are hidden right now (such as "Name of your institution") are not part of the path.
-            if (isHiddenGroup(group)) { // Begin this block of code.
-                group.inert = false; // Update or inspect the relevant form or page element.
-                return; // Execute this statement to update state or produce a result.
-            } // Close this block or callback.
-
-            // Everything after the first invalid field is locked.
-            const locked = blockedBy !== null; // Declare a constant for use in this operation.
-            group.inert = locked; // Prevent interaction with fields that are not ready yet.
-            group.classList.toggle("field-locked", locked); // Update or inspect the relevant form or page element.
-
-            if (!locked && step.check() !== "") { // Begin this block of code.
-                blockedBy = step; // Execute this statement to update state or produce a result.
-            } // Close this block or callback.
-        }); // Close this block or callback.
-
-        submitButton.disabled = blockedBy !== null; // Enable submit only when all visible steps pass.
-        status.textContent = blockedBy // Update or inspect the relevant form or page element.
-            ? "To continue, please complete \u201C" + blockedBy.label + "\u201D correctly." // This line contributes to the current expression or data structure.
-            : "All details look good. You can continue."; // Execute this statement to update state or produce a result.
-    } // Close this block or callback.
-
-    // Checks again whenever the visitor types, picks an option or the browser autofills.
-    form.addEventListener("input", refresh); // Register a callback for this event.
-    form.addEventListener("change", refresh); // Register a callback for this event.
-
-    // When the visitor leaves a field, its error appears straight away so they know what to fix.
-    steps.forEach(function (step) { // Begin this block of code.
-        step.input.addEventListener("blur", function () { // Begin this block of code.
-            const message = step.check(); // Declare a constant for use in this operation.
-            if (message !== "") { // Begin this block of code.
-                showError(step.input, message); // Execute this statement to update state or produce a result.
-            } else { // Begin this block of code.
-                clearError(step.input); // Execute this statement to update state or produce a result.
-            } // Close this block or callback.
-        }); // Close this block or callback.
-    }); // Close this block or callback.
-
-    refresh(); // Execute this statement to update state or produce a result.
-} // Close this block or callback.
-
-
 // ==========================================================
 // ENQUIRY FORM
 // ==========================================================
