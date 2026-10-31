@@ -192,94 +192,167 @@
   }
 
   /* ===== 3. Products page ===== */
-  // ----- Tabs (generic) -----
-  function bindTabs(root) {
-    root.querySelectorAll('[role="tab"]').forEach((tab) => {
-      tab.addEventListener('click', () => {
-        const panelId = tab.dataset.panel;
-        root.querySelectorAll('[role="tab"]').forEach((t) => {
-          const active = t === tab;
-          t.setAttribute('aria-selected', String(active));
-          t.className = active
-            ? 'tab-btn rounded-full bg-[#0d1b3e] px-6 py-2.5 text-sm font-bold text-white'
-            : 'tab-btn rounded-full px-6 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100';
-        });
-        root.querySelectorAll('[role="tabpanel"]').forEach((p) => p.classList.toggle('hidden', p.id !== panelId));
+  // ----- Tabs: bind each tab group to its own page section ----- 
+  function bindTabs(sectionSelector) {
+    const section = $(sectionSelector);
+    if (!section) return;
+    const tablist = section.querySelector('[role="tablist"]');
+    if (!tablist) return;
+    const tabs = Array.from(tablist.querySelectorAll('[role="tab"][data-panel]'));
+    const panels = Array.from(section.querySelectorAll('[role="tabpanel"]'));
+
+    const activateTab = (tab) => {
+      const panelId = tab.dataset.panel;
+      const targetPanel = panels.find((panel) => panel.id === panelId);
+      if (!targetPanel) return;
+
+      tabs.forEach((item) => {
+        const active = item === tab;
+        item.setAttribute('aria-selected', String(active));
+        item.tabIndex = active ? 0 : -1;
+        item.className = active
+          ? 'tab-btn rounded-full bg-[#0d1b3e] px-6 py-2.5 text-sm font-bold text-white'
+          : 'tab-btn rounded-full px-6 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100';
+      });
+
+      panels.forEach((panel) => {
+        const active = panel === targetPanel;
+        panel.classList.toggle('hidden', !active);
+        panel.setAttribute('aria-hidden', String(!active));
+      });
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => activateTab(tab));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        const current = tabs.indexOf(tab);
+        const direction = event.key === 'ArrowRight' ? 1 : -1;
+        const next = tabs[(current + direction + tabs.length) % tabs.length];
+        activateTab(next);
+        next.focus();
       });
     });
-  }
-  $$('[data-tabs]').forEach(bindTabs);
-  // The shop and Sell With Us tab groups are not wrapped in [data-tabs] on this build
-  const shopTabs = $('#shop .flex[role="tablist"]');
-  if (shopTabs) bindTabs(shopTabs.closest('.mt-10'));
-  const faqTabs = $('#sell-with-us .flex[role="tablist"]');
-  if (faqTabs) bindTabs(faqTabs.closest('.mt-6'));
 
-  // ----- Deals list: search, filter, sort, see more / see less -----
+    const initiallySelected = tabs.find((tab) => tab.getAttribute('aria-selected') === 'true') || tabs[0];
+    if (initiallySelected) activateTab(initiallySelected);
+  }
+
+  bindTabs('#shop');
+  bindTabs('#sell-with-us');
+
+  // ----- Product cards and Deals: search, category, condition and sorting -----
   const dealsResults = $('#deals-results');
-  if (dealsResults && window.CC_CATALOGUE) {
-    const DEALS = window.CC_CATALOGUE.DEALS;
-    const BASE = window.CC_CATALOGUE.BASE;
+  const catalogue = window.CC_CATALOGUE;
+  if (dealsResults && catalogue && Array.isArray(catalogue.DEALS)) {
+    const DEALS = catalogue.DEALS;
+    const BASE = catalogue.BASE || '../assets/';
     const dealsCount = $('#deals-count');
+    const searchInput = $('#product-search');
+    const categorySelect = $('#filter-category');
+    const conditionSelect = $('#filter-condition');
+    const sortSelect = $('#sort-by');
     const seeMore = $('#deals-see-more');
     const seeLess = $('#deals-see-less');
     const STEP = 6;
     let visibleCount = STEP;
 
-    const card = (d) =>
+    const card = (product) =>
       '<article class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl">' +
       '  <div class="relative overflow-hidden rounded-2xl bg-slate-100">' +
-      '    <img src="' + BASE + esc(d.img) + '" width="800" height="800" alt="' + esc(d.alt || d.name) + '" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">' +
-      '    <span class="absolute left-3 top-3 rounded-full ' + (d.condition === 'new' ? 'bg-[#0d1b3e] text-[#ffd23f]' : 'bg-[#c2572f] text-white') + ' px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider">' + (d.condition === 'new' ? 'New' : '2nd-hand') + '</span>' +
+      '    <img src="' + BASE + esc(product.img) + '" width="800" height="800" alt="' + esc(product.alt || product.name) + '" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">' +
+      '    <span class="absolute left-3 top-3 rounded-full ' + (product.condition === 'new' ? 'bg-[#0d1b3e] text-[#ffd23f]' : 'bg-[#c2572f] text-white') + ' px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider">' + (product.condition === 'new' ? 'New' : 'Second-hand') + '</span>' +
       '  </div>' +
       '  <div class="mt-4 flex flex-1 flex-col">' +
-      '    <div class="flex items-center justify-between gap-2"><h3 class="text-sm font-bold text-[#0d1b3e]">' + esc(d.name) + '</h3><span class="text-sm font-extrabold text-[#0d1b3e]">' + formatRand(d.price) + '</span></div>' +
-      '    <p class="mt-1 text-xs text-slate-500">' + esc(d.desc) + '</p>' +
+      '    <div class="flex items-center justify-between gap-2"><h3 class="text-sm font-bold text-[#0d1b3e]">' + esc(product.name) + '</h3><span class="shrink-0 text-sm font-extrabold text-[#0d1b3e]">' + formatRand(product.price) + '</span></div>' +
+      '    <p class="mt-1 text-xs text-slate-500">' + esc(product.desc) + '</p>' +
       '    <div class="mt-4 flex flex-wrap gap-2">' +
-      '      <button type="button" data-add="' + esc(d.name) + '" data-price="' + d.price + '" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]">Add to Order Summary</button>' +
-      '      <button type="button" data-quickview data-name="' + esc(d.name) + '" data-price="' + d.price + '" data-condition="' + d.condition + '" data-img="' + BASE + esc(d.img) + '" data-alt="' + esc(d.alt || d.name) + '" data-desc="' + esc(d.desc) + '" class="rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-[#0d1b3e] transition hover:border-[#0d1b3e]">Quick view</button>' +
+      '      <button type="button" data-add="' + esc(product.name) + '" data-price="' + Number(product.price) + '" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]">Add to Order Summary</button>' +
+      '      <button type="button" data-quickview data-name="' + esc(product.name) + '" data-price="' + Number(product.price) + '" data-condition="' + esc(product.condition) + '" data-img="' + BASE + esc(product.img) + '" data-alt="' + esc(product.alt || product.name) + '" data-desc="' + esc(product.desc) + '" class="rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-[#0d1b3e] transition hover:border-[#0d1b3e]">Quick view</button>' +
       '    </div>' +
       '  </div>' +
       '</article>';
 
-    const renderDeals = () => {
-      const q = ($('#product-search').value || '').trim().toLowerCase();
-      const cat = $('#filter-category').value;
-      const cond = $('#filter-condition').value;
-      const sort = $('#sort-by').value;
+    // Populate both shop tabs from the same catalogue used by Deals.
+    // This prevents the Second-Hand tab from showing only explanatory content.
+    const newGrid = $('#panel-new > .grid');
+    const usedGrid = $('#panel-used .mt-8.grid');
+    if (newGrid) {
+      const newProducts = DEALS.filter((product) => product.condition === 'new');
+      newGrid.innerHTML = newProducts.length
+        ? newProducts.map(card).join('')
+        : '<p class="col-span-full rounded-2xl bg-white p-6 text-sm text-slate-500">No new products are currently listed.</p>';
+    }
+    if (usedGrid) {
+      const usedProducts = DEALS.filter((product) => product.condition === 'used');
+      usedGrid.innerHTML = usedProducts.length
+        ? usedProducts.map(card).join('')
+        : '<p class="col-span-full rounded-2xl bg-white p-6 text-sm text-slate-500">No second-hand products are currently listed.</p>';
+    }
 
-      const items = DEALS.filter((d) => {
-        const matchesQ = !q || (d.name + ' ' + d.category + ' ' + d.desc).toLowerCase().includes(q);
-        return matchesQ && (cat === 'all' || d.category === cat) && (cond === 'all' || d.condition === cond);
+    // Build category options from the catalogue so every category can be selected.
+    if (categorySelect) {
+      const selectedCategory = categorySelect.value || 'all';
+      const categories = [...new Set(DEALS.map((product) => product.category).filter(Boolean))].sort();
+      const labels = {
+        bundles: 'Bundles',
+        appliances: 'Appliances',
+        furniture: 'Furniture',
+        bedding: 'Bedding',
+        textbooks: 'Textbooks',
+        stationery: 'Stationery'
+      };
+      categorySelect.innerHTML = '<option value="all">All categories</option>' +
+        categories.map((category) => '<option value="' + esc(category) + '">' + esc(labels[category] || category.replace(/-/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase())) + '</option>').join('');
+      categorySelect.value = categories.includes(selectedCategory) ? selectedCategory : 'all';
+    }
+
+    const renderDeals = () => {
+      const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      const category = categorySelect ? categorySelect.value : 'all';
+      const condition = conditionSelect ? conditionSelect.value : 'all';
+      const sort = sortSelect ? sortSelect.value : 'default';
+
+      const items = DEALS.filter((product) => {
+        const searchable = [product.name, product.category, product.desc, product.condition].join(' ').toLowerCase();
+        return (!q || searchable.includes(q)) &&
+          (category === 'all' || product.category === category) &&
+          (condition === 'all' || product.condition === condition);
       });
 
-      if (sort === 'price-asc') items.sort((a, b) => a.price - b.price);
-      else if (sort === 'price-desc') items.sort((a, b) => b.price - a.price);
+      if (sort === 'price-asc') items.sort((a, b) => Number(a.price) - Number(b.price));
+      else if (sort === 'price-desc') items.sort((a, b) => Number(b.price) - Number(a.price));
       else if (sort === 'name') items.sort((a, b) => a.name.localeCompare(b.name));
 
-      dealsCount.textContent = items.length + (items.length === 1 ? ' product' : ' products') + ' found';
+      if (dealsCount) dealsCount.textContent = items.length + (items.length === 1 ? ' product found' : ' products found');
       dealsResults.innerHTML = items.length
         ? items.slice(0, visibleCount).map(card).join('')
         : '<div class="col-span-full rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center"><h3 class="font-bold text-[#0d1b3e]">No matches</h3><p class="mt-1 text-sm text-slate-500">Try a different keyword, category or condition.</p></div>';
 
-      seeMore.hidden = items.length <= visibleCount;
-      seeLess.hidden = visibleCount <= STEP || items.length <= STEP;
+      if (seeMore) seeMore.hidden = items.length <= visibleCount;
+      if (seeLess) seeLess.hidden = visibleCount <= STEP || items.length <= STEP;
     };
 
-    $('#product-search').addEventListener('input', () => { visibleCount = STEP; renderDeals(); });
-    $('#filter-category').addEventListener('change', () => { visibleCount = STEP; renderDeals(); });
-    $('#filter-condition').addEventListener('change', () => { visibleCount = STEP; renderDeals(); });
-    $('#sort-by').addEventListener('change', renderDeals);
-    seeMore.addEventListener('click', () => { visibleCount += STEP; renderDeals(); if (seeMore.hidden) seeLess.focus(); });
-    seeLess.addEventListener('click', () => { visibleCount = STEP; renderDeals(); dealsResults.scrollIntoView({ block: 'start' }); });
+    if (searchInput) searchInput.addEventListener('input', () => { visibleCount = STEP; renderDeals(); });
+    if (categorySelect) categorySelect.addEventListener('change', () => { visibleCount = STEP; renderDeals(); });
+    if (conditionSelect) conditionSelect.addEventListener('change', () => { visibleCount = STEP; renderDeals(); });
+    if (sortSelect) sortSelect.addEventListener('change', renderDeals);
+    if (seeMore) seeMore.addEventListener('click', () => { visibleCount += STEP; renderDeals(); });
+    if (seeLess) seeLess.addEventListener('click', () => {
+      visibleCount = STEP;
+      renderDeals();
+      dealsResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
     renderDeals();
 
-    // Header search icon jumps to the deals list
+    // Header search icon jumps to the actual product search field.
     const searchFocus = $('#searchFocus');
-    if (searchFocus) {
+    if (searchFocus && searchInput) {
       searchFocus.addEventListener('click', () => {
-        $('#deals-gallery').scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => $('#product-search').focus(), 600);
+        const section = $('#deals-gallery');
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => searchInput.focus(), 600);
       });
     }
 
