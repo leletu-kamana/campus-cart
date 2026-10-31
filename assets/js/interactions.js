@@ -59,8 +59,8 @@
     if (cartTotalEl) cartTotalEl.textContent = formatRand(CC.cartTotal());
   }
 
-  function openCart() { cartDrawer.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
-  function closeCart() { cartDrawer.classList.add('hidden'); document.body.style.overflow = ''; }
+  function openCart() { cartDrawer.classList.remove('hidden'); document.body.style.overflow = 'hidden'; if (cartButton) cartButton.setAttribute('aria-expanded', 'true'); }
+  function closeCart() { cartDrawer.classList.add('hidden'); document.body.style.overflow = ''; if (cartButton) cartButton.setAttribute('aria-expanded', 'false'); }
 
   if (cartDrawer) {
     if (cartItemsEl) {
@@ -134,8 +134,7 @@
       showSnack('Order summary cleared.');
     });
 
-    // Header cart button scrolls to the order summary
-    if (cartButton) cartButton.addEventListener('click', () => $('#order').scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    // The shared header cart button opens the cart drawer on every page.
 
     $('#skip-to-address').addEventListener('click', () => {
       $('#step-address').scrollIntoView({ behavior: 'smooth', block: 'center' });
