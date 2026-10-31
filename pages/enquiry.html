@@ -152,11 +152,11 @@
               <h2 class="text-2xl font-extrabold text-[#0d1b3e] sm:text-3xl">Send your enquiry</h2>
               <p class="mt-2 text-sm text-slate-500">We check the item and show the estimated total and availability on this page. You can then email the enquiry to us.</p>
 
-              <form id="enquiry-form" class="mt-8 space-y-5" novalidate>
+              <form id="enquiry-form" class="mt-8 space-y-5">
 
                 <div>
                   <label for="enq-type" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">I am a *</label>
-                  <select id="enq-type" name="enquirerType" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                  <select id="enq-type" name="enquirerType" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <option value="Student">Student</option>
                     <option value="Parent/Guardian">Parent/Guardian</option>
                   </select>
@@ -166,19 +166,19 @@
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="enq-name" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Full name *</label>
-                    <input id="enq-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="e.g. Thandi Mokoena" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="enq-name" name="name" type="text" autocomplete="name" placeholder="e.g. Thandi Mokoena" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-name-error" role="alert"></span>
                   </div>
                   <div>
                     <label for="enq-email" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Email address *</label>
-                    <input id="enq-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.co.za" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="enq-email" name="email" type="email" autocomplete="email" placeholder="you@example.co.za" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-email-error" role="alert"></span>
                   </div>
                 </div>
 
                 <div>
                   <label for="enq-item" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Bundle or product *</label>
-                  <select id="enq-item" name="item" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                  <select id="enq-item" name="item" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <option value="">Choose an item...</option>
                     <optgroup label="Starter bundles">
                       <option>Basic Starter Bundle</option>
@@ -206,12 +206,12 @@
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="enq-qty" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Quantity *</label>
-                    <input id="enq-qty" name="quantity" type="number" min="1" max="10" step="1" value="1" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="enq-qty" name="quantity" type="number" value="1" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-qty-error" role="alert"></span>
                   </div>
                   <div>
                     <label for="enq-method" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">How do you want to get it? *</label>
-                    <select id="enq-method" name="method" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <select id="enq-method" name="method" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                       <option value="Delivery">Deliver to my institution</option>
                       <option value="Collection">Collect from the provincial hub</option>
                     </select>
@@ -222,14 +222,14 @@
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="enq-province" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Province *</label>
-                    <select id="enq-province" name="province" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <select id="enq-province" name="province" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                       <option value="">Choose a province...</option>
                     </select>
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-province-error" role="alert"></span>
                   </div>
                   <div>
                     <label for="enq-institution" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Institution *</label>
-                    <select id="enq-institution" name="institution" required disabled class="w-full rounded-full border border-slate-300 bg-slate-100 px-5 py-3 text-sm text-slate-400 focus:border-[#0d1b3e] focus:outline-none">
+                    <select id="enq-institution" name="institution" disabled class="w-full rounded-full border border-slate-300 bg-slate-100 px-5 py-3 text-sm text-slate-400 focus:border-[#0d1b3e] focus:outline-none">
                       <option value="">Choose a province first...</option>
                     </select>
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-institution-error" role="alert"></span>
@@ -238,7 +238,7 @@
 
                 <div id="enq-other-group" class="hidden">
                   <label for="enq-other" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Name of your institution *</label>
-                  <input id="enq-other" name="otherInstitution" type="text" minlength="3" maxlength="100" placeholder="e.g. Your private college or campus name" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                  <input id="enq-other" name="otherInstitution" type="text" placeholder="e.g. Your private college or campus name" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                   <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-other-error" role="alert"></span>
                 </div>
 
@@ -335,7 +335,7 @@
             <form id="newsletterBandForm" class="w-full">
               <div class="flex flex-col gap-3 sm:flex-row">
                 <label for="newsletterBandEmail" class="sr-only">Email address</label>
-                <input id="newsletterBandEmail" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none">
+                <input id="newsletterBandEmail" name="email" type="email" placeholder="you@example.com" class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none">
                 <button type="submit" class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]">
                   Join the list
                 </button>
