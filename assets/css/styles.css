@@ -1567,3 +1567,32 @@ footer .flex.flex-wrap {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================
+   CAMPUS-CART — FINAL VIEWPORT AND BUTTON SAFEGUARDS
+   Keep the desktop navigation out of the mobile layout.
+   ========================================================== */
+@media (max-width: 1023px) {
+  #siteHeader nav[aria-label="Main navigation"] {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) {
+  #siteHeader #navToggle,
+  #siteHeader #mobileMenu {
+    display: none !important;
+  }
+}
+
+/* Prevent narrow action rows and their buttons from widening the page. */
+main .flex > button,
+main .flex > a[class*="rounded-full"] {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+/* Clip horizontal overflow without disabling sticky positioning. */
+html,
+body {
+  overflow-x: clip;
+}
