@@ -427,9 +427,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
             // If the institution is not on the list, the user must type its name.
             return (institution.value === "My institution is not listed" && (other.value.trim().length < 3 || other.value.trim().length > 100)) ? "Please enter an institution name between 3 and 100 characters." : ""; // Return the result to the code that called this function.
         } } // Close the current code block.
-    ]; // Finish this array or object definition.
-
-    setupFormGate(form, steps); // Execute this statement to update state or produce a result.
+    ]; // Finish this array or object definition. // Execute this statement to update state or produce a result.
 
     // Runs when the user presses the submit button.
     form.addEventListener("submit", function (event) { // Begin this block of code.
@@ -672,9 +670,7 @@ function setupContactForm(form) { // Begin this block of code.
             // At least 10 characters so the message contains something useful.
             return message.value.trim().length < 10 || message.value.trim().length > 1000 ? "Please enter a message between 10 and 1,000 characters." : ""; // Return the result to the code that called this function.
         } } // Close the current code block.
-    ]; // Finish this array or object definition.
-
-    setupFormGate(form, steps); // Execute this statement to update state or produce a result.
+    ]; // Finish this array or object definition. // Execute this statement to update state or produce a result.
 
     // Runs when the user presses the submit button.
     form.addEventListener("submit", function (event) { // Begin this block of code.
