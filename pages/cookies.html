@@ -85,10 +85,12 @@
           <p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
         </div>
 
-        <a href="account.html#order" class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" aria-label="Order / cart">
+        <button id="cartButton" type="button" class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" aria-controls="cartDrawer" aria-expanded="false" aria-label="Open cart">
+
           <img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-5 w-5">
           <span id="cartCount" class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]">0</span>
-        </a>
+        
+</button>
 
         <button id="navToggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
           <img id="navIcon" src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" alt="" class="h-5 w-5">
