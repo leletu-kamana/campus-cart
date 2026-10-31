@@ -2554,24 +2554,15 @@ footer li {
    avoid motion sickness. This block respects that setting.
 */
 @media (prefers-reduced-motion: reduce) {
-
-    /* Disables the smooth-scroll behaviour, making anchor jumps instant instead of animated. */
     html {
-        scroll-behavior: auto; /* Controls whether scrolling happens instantly or smoothly. */
+        scroll-behavior: auto !important;
     }
 
-    /* Forces nearly every animation and transition on the page to happen almost instantly instead of visibly. */
     *,
     *::before,
     *::after {
-        /* Shortens all animations to effectively zero duration. */
-        animation-duration: 0.01ms !important; /* Sets how long one animation cycle takes. */
-
-        /* Ensures animations only run once instead of repeating. */
-        animation-iteration-count: 1 !important; /* Sets how many times the animation repeats. */
-
-        /* Shortens all transitions to effectively zero duration. */
-        transition-duration: 0.01ms !important; /* Sets how long a transition takes. */
+        animation: none !important;
+        transition-duration: 0.01ms !important;
     }
 }
 
@@ -2890,11 +2881,9 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(2) {
-    --color: #fe53bb; /* Defines a reusable CSS custom property. */
-    --color: #ffd23f; /* Defines a reusable CSS custom property. */
+    --color: #ffd23f; /* Uses the Campus-Cart yellow accent. */
     animation-name: rotate2; /* Selects the keyframes animation to run. */
-    box-shadow: 0 0 6px rgba(254, 83, 187, 0.45); /* Adds a shadow around the element. */
-    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45); /* Adds a shadow around the element. */
+    box-shadow: 0 0 6px rgba(255, 210, 63, 0.45); /* Adds a yellow accent glow. */
 }
 
 @keyframes rotate2 {
@@ -2908,11 +2897,9 @@ body.page-loading {
 }
 
 .page-loader-visual .ring:nth-child(3) {
-    --color: #8f51ea; /* Defines a reusable CSS custom property. */
-    --color: #ffffff; /* Defines a reusable CSS custom property. */
+    --color: #ffffff; /* Uses a neutral white accent. */
     animation-name: rotate3; /* Selects the keyframes animation to run. */
-    box-shadow: 0 0 6px rgba(143, 81, 234, 0.45); /* Adds a shadow around the element. */
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.45); /* Adds a shadow around the element. */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.45); /* Adds a white accent glow. */
 }
 
 @keyframes rotate3 {
@@ -2953,8 +2940,7 @@ body.page-loading {
     height: 380px; /* Sets the element's height. */
     border: 2px solid transparent; /* Sets the border width, style, and colour. */
     border-bottom: 16px solid var(--color); /* Sets the bottom border. */
-    box-shadow: 0 0 10px rgba(254, 83, 187, 0.4); /* Adds a shadow around the element. */
-    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4); /* Adds a shadow around the element. */
+    box-shadow: 0 0 10px rgba(255, 210, 63, 0.4); /* Adds a yellow accent glow. */
 }
 
 @keyframes rotate5 {
@@ -2975,8 +2961,7 @@ body.page-loading {
     height: 380px; /* Sets the element's height. */
     border: 2px solid transparent; /* Sets the border width, style, and colour. */
     border-bottom: 16px solid var(--color); /* Sets the bottom border. */
-    box-shadow: 0 0 10px rgba(143, 81, 234, 0.4); /* Adds a shadow around the element. */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Adds a shadow around the element. */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); /* Adds a white accent glow. */
 }
 
 @keyframes rotate6 {
@@ -2995,8 +2980,7 @@ body.page-loading {
     animation-name: rotate1; /* Selects the keyframes animation to run. */
     width: 190px; /* Sets the element's width. */
     height: 190px; /* Sets the element's height. */
-    box-shadow: 0 0 6px rgba(0, 68, 255, 0.45); /* Adds a shadow around the element. */
-    box-shadow: 0 0 6px rgba(13, 27, 62, 0.45); /* Adds a shadow around the element. */
+    box-shadow: 0 0 6px rgba(13, 27, 62, 0.45); /* Adds a navy accent glow. */
 }
 
 /* Pulsing nucleus animation */
@@ -3110,28 +3094,15 @@ body.page-loading {
     }
 }
 
-/* Accessibility: reduced-motion users keep a calm, slow loader instead of a frozen one.
-   The pulsing and scaling are removed, but the rings still turn slowly so the
-   loader clearly shows that the page is working. */
+/* The global reduced-motion rule above also disables loader motion.
+   The loader exits without a prolonged fade for users who request reduced motion. */
 @media (prefers-reduced-motion: reduce) {
     #page-loader {
-        transition: opacity 0.05s ease, visibility 0.05s ease; /* Animates changes to CSS properties over time. */
-    }
-
-    .page-loader-visual .loader,
-    .page-loader-visual .nucleus {
-        animation: none !important; /* Applies a named animation and its timing settings. */
+        transition-duration: 0.01ms !important;
     }
 
     .page-loader-visual .nucleus {
-        transform: translate(-50%, -50%) scale(1); /* Moves, rotates, scales, or skews the element. */
-    }
-
-    /* Section 30 forces every animation to run once for 0.01ms, so the loader rings
-       must override both values here or they would stop after a single turn. */
-    .page-loader-visual .ring {
-        animation-duration: 4s !important; /* Sets how long one animation cycle takes. */
-        animation-iteration-count: infinite !important; /* Sets how many times the animation repeats. */
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
