@@ -1056,3 +1056,196 @@ footer .cc-footer-legal > p {
 	margin-left: auto;
 	text-align: center;
 }
+
+
+/* ==========================================================
+   CAMPUS-CART PRODUCTS PAGE — RESPONSIVE LAYOUT
+   Mobile-first refinements for phones, tablets and desktops.
+   Scoped to the Products page so other pages remain unchanged.
+   ========================================================== */
+
+/* Prevent long labels and controls from forcing horizontal overflow. */
+#shop,
+#deals-gallery,
+#sell-with-us {
+  min-width: 0;
+  width: 100%;
+}
+#shop .tab-panel,
+#deals-gallery,
+#sell-with-us .tab-panel,
+#deals-results,
+#panel-new,
+#panel-used {
+  min-width: 0;
+}
+#shop [role="tablist"],
+#sell-with-us [role="tablist"] {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#shop [role="tablist"] [role="tab"],
+#sell-with-us [role="tablist"] [role="tab"] {
+  min-height: 44px;
+  white-space: normal;
+  text-align: center;
+}
+#deals-gallery #deals-results > article,
+#panel-new .grid > article,
+#panel-used .grid > article {
+  min-width: 0;
+  height: 100%;
+}
+#deals-gallery #deals-results img,
+#panel-new .grid > article img,
+#panel-used .grid > article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+#deals-gallery #deals-results button,
+#panel-new .grid > article button,
+#panel-used .grid > article button {
+  min-height: 44px;
+}
+#deals-gallery #deals-results h3,
+#panel-new .grid > article h3,
+#panel-used .grid > article h3 {
+  overflow-wrap: anywhere;
+}
+#deals-gallery #product-search,
+#deals-gallery #filter-category,
+#deals-gallery #filter-condition,
+#deals-gallery #sort-by {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+}
+#deals-gallery .mt-8.flex.w-max,
+#sell-with-us .mt-6 .flex.w-max {
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+#deals-gallery figure,
+#sell-with-us figure {
+  min-width: 0;
+}
+#deals-gallery img,
+#sell-with-us img {
+  max-width: 100%;
+}
+#sell-with-us .grid {
+  min-width: 0;
+}
+#sell-with-us form,
+#sell-with-us input,
+#sell-with-us select,
+#sell-with-us textarea {
+  max-width: 100%;
+}
+
+/* Small phones: single-column controls and cards, comfortable tap targets. */
+@media (max-width: 479px) {
+  #shop,
+  #deals-gallery,
+  #sell-with-us {
+    overflow-x: clip;
+  }
+  #shop [role="tablist"],
+  #sell-with-us [role="tablist"] {
+    align-items: stretch;
+  }
+  #shop [role="tablist"] [role="tab"],
+  #sell-with-us [role="tablist"] [role="tab"] {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  #deals-gallery .mt-8.grid,
+  #deals-gallery #deals-results,
+  #panel-new > .grid,
+  #panel-used .mt-8.grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  #deals-gallery .mt-8.flex.flex-wrap,
+  #deals-gallery .mt-8.flex:not(.w-max) {
+    align-items: stretch;
+  }
+  #deals-gallery #deals-see-more,
+  #deals-gallery #deals-see-less {
+    flex: 1 1 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+  #deals-gallery #deals-results article,
+  #panel-new > .grid > article {
+    padding: 0.75rem;
+  }
+  #deals-gallery #deals-results article > div:last-child > div:last-child,
+  #panel-new > .grid > article > div:last-child > div:last-child {
+    flex-direction: column;
+  }
+  #deals-gallery #deals-results article button,
+  #panel-new > .grid > article button {
+    width: 100%;
+  }
+  #deals-gallery .mt-8.grid figure,
+  #sell-with-us .mt-8.grid figure {
+    width: 100%;
+  }
+  #sell-with-us .mt-16.grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  #sell-with-us .rounded-\[3rem\] {
+    border-radius: 1.5rem;
+  }
+}
+
+/* Large phones and tablets: two product columns and compact filter grid. */
+@media (min-width: 480px) and (max-width: 1023px) {
+  #deals-gallery #deals-results,
+  #panel-new > .grid,
+  #panel-used .mt-8.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  #deals-gallery .mt-8.grid,
+  #sell-with-us .mt-8.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #deals-gallery .rounded-3xl.border.bg-\[\#faf8f4\].p-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #shop [role="tablist"] [role="tab"],
+  #sell-with-us [role="tablist"] [role="tab"] {
+    flex: 1 1 auto;
+  }
+}
+
+/* Desktop: restore wider catalogue grids and keep the toolbar aligned. */
+@media (min-width: 1024px) {
+  #deals-gallery #deals-results,
+  #panel-used .mt-8.grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  #panel-new > .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+  #shop [role="tablist"],
+  #sell-with-us [role="tablist"] {
+    width: max-content;
+  }
+}
+
+/* Respect reduced-motion preferences on touch devices too. */
+@media (prefers-reduced-motion: reduce) {
+  #deals-gallery #deals-results *,
+  #panel-new *,
+  #panel-used * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
