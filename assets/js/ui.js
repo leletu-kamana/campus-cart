@@ -148,15 +148,71 @@
     if (e.key === CART_KEY) { state.cart = loadCart(); updateBadge(); document.dispatchEvent(new CustomEvent('cc-cart-change')); }
   });
 
-  /* ----- Newsletter forms (band + footer fallback) ----- */
-  $$('form[id^="newsletter"]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
+  /* ----- Newsletter forms (Web3Forms delivery) ----- */
+  const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+  const WEB3FORMS_KEY = 'ce1abf2e-a2e8-46b7-b6a5-f9814d57b8aa';
+
+  $('form[id^="newsletter"]').forEach((form) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const emailInput = form.querySelector('input[type="email"]');
       const btn = form.querySelector('button[type="submit"]');
-      const original = btn.textContent;
-      btn.textContent = 'Joined ✓';
-      form.reset();
-      setTimeout(() => { btn.textContent = original; }, 2200);
+
+      if (!emailInput || !btn || !emailInput.checkValidity()) {
+        emailInput?.reportValidity();
+        return;
+      }
+
+      if (btn.disabled) return;
+
+      const originalText = btn.textContent.trim();
+      const email = emailInput.value.trim();
+      const formData = new FormData(form);
+
+      formData.set('access_key', WEB3FORMS_KEY);
+      formData.set('email', email);
+      formData.set('subject', 'New Campus-Cart Newsletter Subscription');
+      formData.set('from_name', 'Campus-Cart Newsletter');
+      formData.set('message', 'New newsletter subscription: ' + email);
+
+      let status = form.querySelector('.newsletter-status');
+      if (!status) {
+        status = document.createElement('p');
+        status.className = 'newsletter-status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        status.style.cssText = 'margin-top:.75rem;font-size:.875rem;font-weight:600;';
+        form.appendChild(status);
+      }
+
+      btn.textContent = 'Subscribing...';
+      btn.disabled = true;
+      status.textContent = 'Submitting your subscription...';
+      status.style.color = '#64748b';
+
+      try {
+        const response = await fetch(WEB3FORMS_URL, {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          status.textContent = 'Successfully subscribed! Thank you for joining us.';
+          status.style.color = '#047857';
+          form.reset();
+        } else {
+          status.textContent = 'Subscription failed: ' + (data.message || 'Please try again.');
+          status.style.color = '#b91c1c';
+        }
+      } catch (error) {
+        status.textContent = 'Something went wrong. Please check your connection and try again.';
+        status.style.color = '#b91c1c';
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     });
   });
 
