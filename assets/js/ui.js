@@ -261,7 +261,7 @@
   ensureCartDrawer();
 
   window.CC = {
-    $: $, $: $, formatRand: formatRand, state: state, CART_KEY: CART_KEY, WISHLIST_KEY: WISHLIST_KEY,
+    $: $, $$: $$, formatRand: formatRand, state: state, CART_KEY: CART_KEY, WISHLIST_KEY: WISHLIST_KEY,
     saveCart: saveCart, cartCount: cartCount, cartTotal: cartTotal,
     updateBadge: updateBadge, addToCart: addToCart, changeCart: changeCart,
     saveWishlist: saveWishlist, wishlistCount: wishlistCount, isWishlisted: isWishlisted,
