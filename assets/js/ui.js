@@ -241,6 +241,25 @@
     toast._t = setTimeout(() => toast.classList.remove('show'), 2400);
   }
 
+  /* ----- Shared cart drawer on every page ----- */
+  function ensureCartDrawer() {
+    if ($('#cartDrawer') || !$('#cartButton')) return;
+    const accountPath = window.location.pathname.indexOf('/pages/') > -1 ? 'account.html#order' : 'pages/account.html#order';
+    const drawer = document.createElement('div');
+    drawer.id = 'cartDrawer';
+    drawer.className = 'fixed inset-0 z-[80] hidden';
+    drawer.setAttribute('role', 'dialog');
+    drawer.setAttribute('aria-modal', 'true');
+    drawer.setAttribute('aria-labelledby', 'cartTitle');
+    drawer.innerHTML = '<div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" data-cart-close></div>' +
+      '<aside class="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl">' +
+      '<div class="flex items-center justify-between border-b border-slate-200 px-6 py-5"><h2 id="cartTitle" class="text-lg font-extrabold text-[#0d1b3e]">Your cart</h2><button type="button" data-cart-close class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 text-slate-500 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]" aria-label="Close cart"><span aria-hidden="true">×</span></button></div>' +
+      '<div id="cartItems" class="flex-1 overflow-y-auto px-6 py-4"></div>' +
+      '<div class="border-t border-slate-200 px-6 py-5"><div class="flex items-center justify-between"><span class="text-sm font-medium text-slate-500">Total</span><span id="cartTotal" class="text-xl font-extrabold text-[#0d1b3e]">R0</span></div><p class="mt-1 text-xs text-slate-400">No payment is processed on this demo site.</p><a href="' + accountPath + '" class="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]">Go to order form <span aria-hidden="true">→</span></a></div></aside>';
+    document.body.appendChild(drawer);
+  }
+  ensureCartDrawer();
+
   window.CC = {
     $: $, $: $, formatRand: formatRand, state: state, CART_KEY: CART_KEY, WISHLIST_KEY: WISHLIST_KEY,
     saveCart: saveCart, cartCount: cartCount, cartTotal: cartTotal,
