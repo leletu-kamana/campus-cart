@@ -858,7 +858,87 @@ main img[alt=""] {
 		--loader-scale: 0.52;
 	}
 }
+/* ----- Shared wishlist and centred legal information ----- */
+.cc-footer-legal {
+	text-align: center;
+}
+.cc-footer-legal > p {
+	margin-left: auto;
+	margin-right: auto;
+}
+[data-add-to-wishlist].is-wishlisted {
+	border-color: #0d1b3e;
+	background: #0d1b3e;
+	color: #ffd23f;
+}
+
+/* ----- Parent Hub checklist print layout ----- */
+.cc-print-header,
+.cc-print-footer {
+	display: none;
+}
+
 @media print {
+	@page {
+		size: A4;
+		margin: 16mm;
+	}
+	body * {
+		visibility: hidden !important;
+	}
+	#parent-checklist-print,
+	#parent-checklist-print * {
+		visibility: visible !important;
+	}
+	#parent-checklist-print {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		max-width: none !important;
+		padding: 0 !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		box-shadow: none !important;
+		background: #fff !important;
+		color: #0d1b3e !important;
+	}
+	#parent-checklist-print .cc-print-header,
+	#parent-checklist-print .cc-print-footer {
+		display: block !important;
+	}
+	#parent-checklist-print .cc-checklist-screen-title,
+	#parent-checklist-print #print-checklist {
+		display: none !important;
+	}
+	#parent-checklist-print ul {
+		margin-top: 1.25rem !important;
+		padding: 0 !important;
+	}
+	#parent-checklist-print .cc-checklist-item {
+		break-inside: avoid;
+		margin-bottom: 0.8rem !important;
+		color: #1e293b !important;
+		font-size: 11pt !important;
+		line-height: 1.45 !important;
+	}
+	#parent-checklist-print input[type="checkbox"] {
+		appearance: none;
+		width: 15px;
+		height: 15px;
+		min-width: 15px;
+		margin: 2px 10px 0 0;
+		border: 1.5px solid #0d1b3e;
+		border-radius: 3px;
+		background: #fff;
+		print-color-adjust: exact;
+	}
+	#parent-checklist-print .cc-print-footer {
+		margin-top: 2rem;
+		padding-top: 1rem;
+		border-top: 1px solid #cbd5e1;
+		text-align: center;
+	}
 	.cookie-banner {
 		display: none !important;
 	}
