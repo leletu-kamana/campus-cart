@@ -97,11 +97,11 @@ async function sendViaWeb3Forms(form, fields, box) {
     try {
         const response = await fetch(WEB3FORMS_URL, { method: "POST", body: formData });
         const data = await response.json();
-        if (response.ok) {
+        if (response.ok && data.success) {
             status("Success! Your message has been sent.", true);
             form.reset();
         } else {
-            status("Error: " + data.message + " You can still send it from your email app below.", false);
+            status("Error: " + (data.message || "Your message could not be sent.") + " You can still send it from your email app below.", false);
         }
     } catch (error) {
         status("Something went wrong. Please try again, or send it from your email app below.", false);
