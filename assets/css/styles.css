@@ -889,3 +889,15 @@ main img[alt=""] {
 		animation-iteration-count: infinite !important;
 	}
 }
+
+/* ---------- 12. Icon Contrast on Dark Surfaces ---------- */
+/* Lucide SVG files loaded through <img> do not inherit Tailwind text colours.
+   Recolour only icons inside known dark UI areas; leave white/light cards alone. */
+header img[src*="/icons/"],
+footer a img[src*="/icons/"],
+body > div[class*="bg-[#0d1b3e]"] a img[src*="/icons/"],
+button[class*="bg-[#0d1b3e]"] img[src*="/icons/"],
+a[class*="bg-[#0d1b3e]"] img[src*="/icons/"],
+.cookie-banner img[src*="/icons/"] {
+	filter: brightness(0) invert(1);
+}
