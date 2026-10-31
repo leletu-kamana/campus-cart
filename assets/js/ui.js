@@ -152,22 +152,40 @@
   const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
   const WEB3FORMS_KEY = 'ce1abf2e-a2e8-46b7-b6a5-f9814d57b8aa';
 
-  $$('form[id^="newsletter"]').forEach((form) => {
+  $('form[id^="newsletter"]').forEach((form) => {
+    // Use JavaScript validation instead of the browser's native validation UI.
+    form.noValidate = true;
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const emailInput = form.querySelector('input[type="email"]');
       const btn = form.querySelector('button[type="submit"]');
 
-      if (!emailInput || !btn || !emailInput.checkValidity()) {
-        emailInput?.reportValidity();
+      if (!emailInput || !btn) return;
+
+      const email = emailInput.value.trim();
+      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailPattern.test(email) || email.length > 254) {
+        let error = form.querySelector('.newsletter-status');
+        if (!error) {
+          error = document.createElement('p');
+          error.className = 'newsletter-status';
+          error.setAttribute('role', 'alert');
+          error.setAttribute('aria-live', 'polite');
+          error.style.cssText = 'margin-top:.75rem;font-size:.875rem;font-weight:600;';
+          form.appendChild(error);
+        }
+        error.textContent = 'Please enter a valid email address (maximum 254 characters).';
+        error.style.color = '#b91c1c';
+        emailInput.setAttribute('aria-invalid', 'true');
+        emailInput.focus();
         return;
       }
+      emailInput.removeAttribute('aria-invalid');
 
       if (btn.disabled) return;
 
       const originalText = btn.textContent.trim();
-      const email = emailInput.value.trim();
       const formData = new FormData(form);
 
       formData.set('access_key', WEB3FORMS_KEY);
