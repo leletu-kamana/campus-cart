@@ -157,15 +157,17 @@
 
   function setupWishlist() {
     const cartButton = $('#cartButton');
-    if (cartButton && !$('#wishlistButton')) {
+    const menuButton = $('#navToggle');
+    const wishlistAnchor = cartButton || menuButton;
+    if (wishlistAnchor && !$('#wishlistButton')) {
       const button = document.createElement('button');
       button.id = 'wishlistButton';
       button.type = 'button';
-      button.className = cartButton.className;
+      button.className = 'relative grid h-10 w-10 shrink-0 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]';
       button.setAttribute('aria-label', 'Open wishlist');
       button.setAttribute('aria-expanded', 'false');
       button.innerHTML = '<span aria-hidden="true" class="text-xl leading-none">♡</span><span id="wishlistCount" class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]">0</span>';
-      cartButton.parentNode.insertBefore(button, cartButton);
+      wishlistAnchor.parentNode.insertBefore(button, wishlistAnchor);
 
       const panel = document.createElement('section');
       panel.id = 'wishlistPanel';
