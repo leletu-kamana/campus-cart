@@ -307,7 +307,7 @@
   const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
   const WEB3FORMS_KEY = 'ce1abf2e-a2e8-46b7-b6a5-f9814d57b8aa';
 
-  $('form[id^="newsletter"]').forEach((form) => {
+  document.querySelectorAll('form[id^="newsletter"]').forEach((form) => {
     // Use JavaScript validation instead of the browser's native validation UI.
     form.noValidate = true;
     form.addEventListener('submit', async (e) => {
