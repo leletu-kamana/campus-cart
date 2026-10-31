@@ -268,8 +268,8 @@
       '    <div class="flex items-center justify-between gap-2"><h3 class="text-sm font-bold text-[#0d1b3e]">' + esc(product.name) + '</h3><span class="shrink-0 text-sm font-extrabold text-[#0d1b3e]">' + formatRand(product.price) + '</span></div>' +
       '    <p class="mt-1 text-xs text-slate-500">' + esc(product.desc) + '</p>' +
       '    <div class="mt-4 flex flex-wrap gap-2">' +
-      '      <button type="button" data-add="' + esc(product.name) + '" data-price="' + Number(product.price) + '" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]">Add to Order Summary</button>' +
-      '      <button type="button" data-quickview data-name="' + esc(product.name) + '" data-price="' + Number(product.price) + '" data-condition="' + esc(product.condition) + '" data-img="' + BASE + esc(product.img) + '" data-alt="' + esc(product.alt || product.name) + '" data-desc="' + esc(product.desc) + '" class="rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-[#0d1b3e] transition hover:border-[#0d1b3e]">Quick view</button>' +
+      '      <button type="button" data-add="' + esc(product.name) + '" data-price="' + Number(product.price) + '" aria-label="Add ' + esc(product.name) + ' to order summary" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"><img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-cart.svg" alt="" aria-hidden="true" class="h-4 w-4">Add to Order Summary</button>' +
+      '      <button type="button" data-quickview data-name="' + esc(product.name) + '" data-price="' + Number(product.price) + '" data-condition="' + esc(product.condition) + '" data-img="' + BASE + esc(product.img) + '" data-alt="' + esc(product.alt || product.name) + '" data-desc="' + esc(product.desc) + '" aria-label="View details for ' + esc(product.name) + '" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-[#0d1b3e] transition hover:border-[#0d1b3e]"><img src="https://unpkg.com/lucide-static@1.44.0/icons/microscope.svg" alt="" aria-hidden="true" class="h-4 w-4">Quick view</button>' +
       '    </div>' +
       '  </div>' +
       '</article>';
@@ -300,7 +300,7 @@
       if (products.length <= 6) return;
 
       const controls = document.createElement('div');
-      controls.className = 'mt-8 flex flex-wrap items-center justify-center gap-3';
+      controls.className = 'mt-8 flex flex-wrap items-center justify-start gap-3';
       controls.setAttribute('data-shop-pagination', label);
 
       const moreButton = document.createElement('button');
