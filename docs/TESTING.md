@@ -4,15 +4,15 @@ Testing of the UI/UX upgrade was carried out on 13 October 2026 against the buil
 
 ## 1. Automated checks and results
 
-| Check | Scope | Result |
-|---|---|---|
-| JavaScript syntax (`node --check`) | all 7 files in `assets/js/` | Pass |
-| JavaScript lint (ESLint recommended rules) | `script.js`, `forms.js`, `features.js`, `game.js`, `consent.js`, `ui.js` | No errors |
-| CSS lint (unknown properties, units, invalid hex colours, unknown at-rules, duplicate declarations in one block) | `styles.css` | No errors |
-| HTML validation (html-validate) | 12 pages (home, 404 and 10 inner pages) | 0 errors, 3 warnings (`role="region"` on a `div` where `<section>` could be used) |
-| Structure audit | 12 pages | No mismatched or unclosed tags, no duplicate ids, no broken internal links or anchors, no missing scripts, styles or images |
-| Accessibility (axe-core, WCAG 2.0 and 2.1 A and AA plus best practices) | 11 pages (all except the 404 game page) at desktop (1280px) and phone (375px) widths, 22 runs | 0 violations in all 22 runs |
-| End-to-end browser tests | 65 checks | 65 passed, 0 failed |
+| Check                                                                                                            | Scope                                                                                         | Result                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| JavaScript syntax (`node --check`)                                                                               | all 7 files in `assets/js/`                                                                   | Pass                                                                                                                        |
+| JavaScript lint (ESLint recommended rules)                                                                       | `script.js`, `forms.js`, `features.js`, `game.js`, `consent.js`, `ui.js`                      | No errors                                                                                                                   |
+| CSS lint (unknown properties, units, invalid hex colours, unknown at-rules, duplicate declarations in one block) | `styles.css`                                                                                  | No errors                                                                                                                   |
+| HTML validation (html-validate)                                                                                  | 12 pages (home, 404 and 10 inner pages)                                                       | 0 errors, 3 warnings (`role="region"` on a `div` where `<section>` could be used)                                           |
+| Structure audit                                                                                                  | 12 pages                                                                                      | No mismatched or unclosed tags, no duplicate ids, no broken internal links or anchors, no missing scripts, styles or images |
+| Accessibility (axe-core, WCAG 2.0 and 2.1 A and AA plus best practices)                                          | 11 pages (all except the 404 game page) at desktop (1280px) and phone (375px) widths, 22 runs | 0 violations in all 22 runs                                                                                                 |
+| End-to-end browser tests                                                                                         | 65 checks                                                                                     | 65 passed, 0 failed                                                                                                         |
 
 ### What the 65 end-to-end checks cover
 
@@ -73,17 +73,17 @@ Open the site (see the README for how) and check each item on a desktop browser,
 
 Carried out on 13 October 2026 after the supplied photographs were added.
 
-| Check | Result |
-|---|---|
-| Every image path in the HTML (`src`, `srcset`, link-preview images), in `script.js` and in the CSS points to a real file | 28 of 28 paths exist |
-| Byte-identical duplicate image files | None |
-| Files in `assets/images/` that no page references | 2, both existing files left in place (`static-map.jpg`, `study-essentials.jpg`) |
-| Every image element loaded, 12 pages at 375px, 820px and 1280px, with all 48 shop cards shown | 201 image elements, 0 broken |
-| Every image has non-empty alt text | Yes (the About page photo is covered by its fallback badge) |
-| Sideways scrolling or failed local requests on any page at any width | None |
-| Quick view window, product detail view and search results show the new photos and descriptions | Pass |
-| Accessibility audit (axe-core), 11 pages at 2 widths | 0 violations in 22 runs |
-| End-to-end browser checks | 65 of 65 passed |
-| Syntax and lint (JavaScript, CSS, HTML) | No errors |
+| Check                                                                                                                    | Result                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Every image path in the HTML (`src`, `srcset`, link-preview images), in `script.js` and in the CSS points to a real file | 28 of 28 paths exist                                                            |
+| Byte-identical duplicate image files                                                                                     | None                                                                            |
+| Files in `assets/images/` that no page references                                                                        | 2, both existing files left in place (`static-map.jpg`, `study-essentials.jpg`) |
+| Every image element loaded, 12 pages at 375px, 820px and 1280px, with all 48 shop cards shown                            | 201 image elements, 0 broken                                                    |
+| Every image has non-empty alt text                                                                                       | Yes (the About page photo is covered by its fallback badge)                     |
+| Sideways scrolling or failed local requests on any page at any width                                                     | None                                                                            |
+| Quick view window, product detail view and search results show the new photos and descriptions                           | Pass                                                                            |
+| Accessibility audit (axe-core), 11 pages at 2 widths                                                                     | 0 violations in 22 runs                                                         |
+| End-to-end browser checks                                                                                                | 65 of 65 passed                                                                 |
+| Syntax and lint (JavaScript, CSS, HTML)                                                                                  | No errors                                                                       |
 
 Image sizes: the supplied photos total 10,076 KB and the 23 optimised files shipped for them total 1,086 KB. The 2,127 KB `hero-campus.jpg` is now 139 KB.
