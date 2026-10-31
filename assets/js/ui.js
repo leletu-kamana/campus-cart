@@ -18,6 +18,7 @@
 
   /* ----- Cart storage (localStorage wrapped so blocked storage never breaks the page) ----- */
   const CART_KEY = 'cc_cart_v1';
+  const WISHLIST_KEY = 'cc_wishlist_v1';
   function loadCart() {
     try {
       const raw = localStorage.getItem(CART_KEY);
@@ -28,14 +29,29 @@
         .map((row) => ({ name: row.name, price: Number(row.price), qty: Number(row.qty) }));
     } catch (e) { return []; }
   }
-  const state = { cart: loadCart() };
+  function loadWishlist() {
+    try {
+      const raw = localStorage.getItem(WISHLIST_KEY);
+      const parsed = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(parsed)) return [];
+      return parsed.filter((row) => row && typeof row.name === 'string' && Number.isFinite(Number(row.price)))
+        .map((row) => ({ name: row.name, price: Number(row.price) }));
+    } catch (e) { return []; }
+  }
+  const state = { cart: loadCart(), wishlist: loadWishlist() };
 
   function saveCart() {
     try { localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); } catch (e) { /* storage blocked - keep in memory */ }
   }
 
+  function saveWishlist() {
+    try { localStorage.setItem(WISHLIST_KEY, JSON.stringify(state.wishlist)); } catch (e) { /* storage blocked - keep in memory */ }
+  }
+
   function cartCount() { return state.cart.reduce((sum, item) => sum + item.qty, 0); }
   function cartTotal() { return state.cart.reduce((sum, item) => sum + item.price * item.qty, 0); }
+  function wishlistCount() { return state.wishlist.length; }
+  function isWishlisted(name) { return state.wishlist.some((item) => item.name === name); }
 
   function updateBadge() {
     const badge = $('#cartCount');
@@ -61,6 +77,138 @@
     saveCart();
     updateBadge();
     document.dispatchEvent(new CustomEvent('cc-cart-change'));
+  }
+
+  function updateWishlistBadge() {
+    const badge = $('#wishlistCount');
+    if (badge) badge.textContent = String(wishlistCount());
+    $('[data-add-to-wishlist]').forEach((button) => {
+      const active = isWishlisted(button.dataset.name);
+      button.setAttribute('aria-pressed', String(active));
+      button.setAttribute('aria-label', active ? 'Remove ' + button.dataset.name + ' from wishlist' : 'Add ' + button.dataset.name + ' to wishlist');
+      const icon = button.querySelector('[data-wishlist-icon]');
+      if (icon) icon.textContent = active ? '♥' : '♡';
+      button.classList.toggle('is-wishlisted', active);
+    });
+  }
+
+  function toggleWishlist(name, price) {
+    const index = state.wishlist.findIndex((item) => item.name === name);
+    if (index >= 0) {
+      state.wishlist.splice(index, 1);
+      showSnack(name + ' removed from your wishlist.');
+    } else {
+      state.wishlist.push({ name: name, price: Number(price) || 0 });
+      showSnack(name + ' added to your wishlist.');
+    }
+    saveWishlist();
+    updateWishlistBadge();
+    renderWishlist();
+    document.dispatchEvent(new CustomEvent('cc-wishlist-change'));
+    return index < 0;
+  }
+
+  function removeFromWishlist(name) {
+    state.wishlist = state.wishlist.filter((item) => item.name !== name);
+    saveWishlist();
+    updateWishlistBadge();
+    renderWishlist();
+    document.dispatchEvent(new CustomEvent('cc-wishlist-change'));
+  }
+
+  function renderWishlist() {
+    const list = $('#wishlistItems');
+    const empty = $('#wishlistEmpty');
+    if (!list || !empty) return;
+    list.replaceChildren();
+    empty.classList.toggle('hidden', state.wishlist.length > 0);
+    state.wishlist.forEach((item) => {
+      const row = document.createElement('div');
+      row.className = 'flex items-center justify-between gap-3 border-b border-slate-100 py-3';
+      const details = document.createElement('div');
+      details.className = 'min-w-0';
+      const name = document.createElement('p');
+      name.className = 'truncate text-sm font-bold text-[#0d1b3e]';
+      name.textContent = item.name;
+      const price = document.createElement('p');
+      price.className = 'text-xs text-slate-500';
+      price.textContent = item.price > 0 ? formatRand(item.price) : 'Price to be confirmed';
+      details.append(name, price);
+      const actions = document.createElement('div');
+      actions.className = 'flex shrink-0 items-center gap-2';
+      const add = document.createElement('button');
+      add.type = 'button';
+      add.className = 'rounded-full bg-[#0d1b3e] px-3 py-2 text-xs font-bold text-white';
+      add.textContent = 'Add to cart';
+      add.addEventListener('click', () => {
+        if (item.price > 0) addToCart(item.name, item.price);
+        removeFromWishlist(item.name);
+      });
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'rounded-full border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-600';
+      remove.textContent = 'Remove';
+      remove.addEventListener('click', () => removeFromWishlist(item.name));
+      actions.append(add, remove);
+      row.append(details, actions);
+      list.appendChild(row);
+    });
+  }
+
+  function setupWishlist() {
+    const cartButton = $('#cartButton');
+    if (cartButton && !$('#wishlistButton')) {
+      const button = document.createElement('button');
+      button.id = 'wishlistButton';
+      button.type = 'button';
+      button.className = cartButton.className;
+      button.setAttribute('aria-label', 'Open wishlist');
+      button.setAttribute('aria-expanded', 'false');
+      button.innerHTML = '<span aria-hidden="true" class="text-xl leading-none">♡</span><span id="wishlistCount" class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]">0</span>';
+      cartButton.parentNode.insertBefore(button, cartButton);
+
+      const panel = document.createElement('section');
+      panel.id = 'wishlistPanel';
+      panel.className = 'fixed right-4 top-20 z-[85] hidden w-[min(92vw,26rem)] rounded-3xl border border-slate-200 bg-white p-5 shadow-2xl';
+      panel.setAttribute('role', 'dialog');
+      panel.setAttribute('aria-modal', 'false');
+      panel.setAttribute('aria-labelledby', 'wishlistTitle');
+      panel.innerHTML = '<div class="flex items-center justify-between gap-3"><h2 id="wishlistTitle" class="text-lg font-extrabold text-[#0d1b3e]">Your wishlist</h2><button type="button" id="wishlistClose" class="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-600" aria-label="Close wishlist">Close</button></div><p class="mt-1 text-xs text-slate-500">Saved on this device and shared across Campus-Cart pages.</p><p id="wishlistEmpty" class="py-8 text-center text-sm text-slate-500">Your wishlist is empty. Save products using the heart buttons.</p><div id="wishlistItems" class="mt-3 max-h-[55vh] overflow-y-auto"></div>';
+      document.body.appendChild(panel);
+      button.addEventListener('click', () => {
+        const opening = panel.classList.contains('hidden');
+        panel.classList.toggle('hidden', !opening);
+        button.setAttribute('aria-expanded', String(opening));
+        if (opening) renderWishlist();
+      });
+      $('#wishlistClose').addEventListener('click', () => {
+        panel.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+      });
+      document.addEventListener('click', (event) => {
+        if (!panel.classList.contains('hidden') && !panel.contains(event.target) && !button.contains(event.target)) {
+          panel.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    $('[data-add-to-cart]').forEach((cartBtn) => {
+      const name = cartBtn.dataset.name;
+      const price = Number(cartBtn.dataset.price);
+      if (!name || cartBtn.parentElement.querySelector('[data-add-to-wishlist]')) return;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.dataset.addToWishlist = '';
+      button.dataset.name = name;
+      button.dataset.price = String(price || 0);
+      button.className = 'grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[#0d1b3e]/25 bg-white text-xl text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5';
+      button.innerHTML = '<span data-wishlist-icon aria-hidden="true">♡</span>';
+      button.addEventListener('click', () => toggleWishlist(name, price));
+      cartBtn.insertAdjacentElement('beforebegin', button);
+    });
+    updateWishlistBadge();
+    renderWishlist();
   }
 
   /* ----- Snack bar (uses #snack when the page has it, otherwise a small toast) ----- */
@@ -89,10 +237,14 @@
   }
 
   window.CC = {
-    $: $, $$: $$, formatRand: formatRand, state: state, CART_KEY: CART_KEY,
+    $: $, $: $, formatRand: formatRand, state: state, CART_KEY: CART_KEY, WISHLIST_KEY: WISHLIST_KEY,
     saveCart: saveCart, cartCount: cartCount, cartTotal: cartTotal,
-    updateBadge: updateBadge, addToCart: addToCart, changeCart: changeCart, showSnack: showSnack
+    updateBadge: updateBadge, addToCart: addToCart, changeCart: changeCart,
+    saveWishlist: saveWishlist, wishlistCount: wishlistCount, isWishlisted: isWishlisted,
+    toggleWishlist: toggleWishlist, removeFromWishlist: removeFromWishlist, updateWishlistBadge: updateWishlistBadge,
+    showSnack: showSnack
   };
+  setupWishlist();
 
   /* ----- Live clock (header) ----- */
   function tickClock() {
@@ -146,6 +298,7 @@
   updateBadge();
   window.addEventListener('storage', (e) => {
     if (e.key === CART_KEY) { state.cart = loadCart(); updateBadge(); document.dispatchEvent(new CustomEvent('cc-cart-change')); }
+    if (e.key === WISHLIST_KEY) { state.wishlist = loadWishlist(); updateWishlistBadge(); renderWishlist(); document.dispatchEvent(new CustomEvent('cc-wishlist-change')); }
   });
 
   /* ----- Newsletter forms (Web3Forms delivery) ----- */
@@ -158,13 +311,13 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const emailInput = form.querySelector('input[type="email"]');
+      const emailInput = form.querySelector('input[name="email"]');
       const btn = form.querySelector('button[type="submit"]');
 
       if (!emailInput || !btn) return;
 
       const email = emailInput.value.trim();
-      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(email) || email.length > 254) {
         let error = form.querySelector('.newsletter-status');
         if (!error) {
