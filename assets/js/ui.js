@@ -17,7 +17,7 @@
   const formatRand = (n) => 'R' + Number(n).toLocaleString('en-US').replace(/,/g, ' ');
 
   /* ----- Disable native browser validation on all forms ----- */
-  $('form').forEach((form) => { form.noValidate = true; });
+  $$('form').forEach((form) => { form.noValidate = true; });
 
   /* ----- Cart storage (localStorage wrapped so blocked storage never breaks the page) ----- */
   const CART_KEY = 'cc_cart_v1';
@@ -85,7 +85,7 @@
   function updateWishlistBadge() {
     const badge = $('#wishlistCount');
     if (badge) badge.textContent = String(wishlistCount());
-    $$('[data-add-to-wishlist]').forEach((button) => {
+    $$$('[data-add-to-wishlist]').forEach((button) => {
       const active = isWishlisted(button.dataset.name);
       button.setAttribute('aria-pressed', String(active));
       button.setAttribute('aria-label', active ? 'Remove ' + button.dataset.name + ' from wishlist' : 'Add ' + button.dataset.name + ' to wishlist');
@@ -198,7 +198,7 @@
       });
     }
 
-    $$('[data-add-to-cart]').forEach((cartBtn) => {
+    $$$('[data-add-to-cart]').forEach((cartBtn) => {
       const name = cartBtn.dataset.name;
       const price = Number(cartBtn.dataset.price);
       if (!name || cartBtn.parentElement.querySelector('[data-add-to-wishlist]')) return;
@@ -282,7 +282,7 @@
       if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) { setMenu(false); navToggle.focus(); }
     });
     // Picking a link, or widening the window to desktop size, also closes it
-    $$$('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
+    $$$$('a', mobileMenu).forEach((a) => a.addEventListener('click', () => setMenu(false)));
     window.addEventListener('resize', () => { if (window.innerWidth >= 1024) setMenu(false); });
   }
 
@@ -393,7 +393,7 @@
   });
 
   /* ----- FAQ accordions: keep one answer open per FAQ group ----- */
-  $$('details').forEach((detail) => {
+  $$$('details').forEach((detail) => {
     detail.addEventListener('toggle', () => {
       if (!detail.open) return;
       const parent = detail.parentElement;
