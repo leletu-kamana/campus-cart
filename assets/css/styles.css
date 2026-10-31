@@ -900,3 +900,19 @@ footer img[src*="/icons/"],
 .cookie-banner img[src*="/icons/"] {
 	filter: brightness(0) invert(1);
 }
+
+/* ---------- 10. Lucide icons on dark surfaces ---------- */
+/* External Lucide SVG files do not inherit Tailwind text colours.
+   Recolour only icons placed directly inside dark controls or icon holders.
+   Icons on white/light backgrounds are intentionally left unchanged. */
+[class~="bg-[#0d1b3e]"] > img[src*="lucide-static"],
+[class~="bg-[#0d1b3e]"] > span > img[src*="lucide-static"],
+[class~="bg-[#09122e]"] > img[src*="lucide-static"],
+[class~="bg-[#09122e]"] > span > img[src*="lucide-static"],
+[class~="bg-[#08142f]"] > img[src*="lucide-static"],
+[class~="bg-[#08142f]"] > span > img[src*="lucide-static"],
+[class~="bg-[#1c3268]"] > img[src*="lucide-static"],
+[class~="bg-[#1c3268]"] > span > img[src*="lucide-static"],
+footer img[src*="lucide-static"] {
+	filter: brightness(0) invert(1);
+}
