@@ -576,21 +576,7 @@ body.lightbox-open {
 	animation: ccReveal 0.5s ease backwards;
 }
 
-/* ---------- 8. Forms, Errors & Gate ---------- */
-.form-group.field-locked,
-.field-locked {
-	opacity: 0.5;
-	cursor: not-allowed;
-}
-.gate-status {
-	margin: 0 0 0.75rem;
-	padding: 10px 14px;
-	font-size: 0.8125rem;
-	font-weight: 600;
-	color: #475569;
-	background: var(--yellow-soft);
-	border-radius: var(--radius-small);
-}
+/* ---------- 8. Forms & Validation Errors ---------- */
 .form-group input.input-error,
 .form-group select.input-error,
 .form-group textarea.input-error,
