@@ -152,16 +152,16 @@
               <h2 class="text-2xl font-extrabold text-[#0d1b3e] sm:text-3xl">General contact form</h2>
               <p class="mt-2 text-sm text-slate-500">We build the email from your answers. You then send it from your own email app.</p>
 
-              <form id="contact-form" class="mt-8 space-y-5" novalidate>
+              <form id="contact-form" class="mt-8 space-y-5">
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="c-name" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Full name *</label>
-                    <input id="c-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="e.g. Thandi Nkosi" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="c-name" name="name" type="text" autocomplete="name" placeholder="e.g. Thandi Nkosi" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="c-name-error" role="alert"></span>
                   </div>
                   <div>
                     <label for="c-email" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Email address *</label>
-                    <input id="c-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@example.com" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="c-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="c-email-error" role="alert"></span>
                   </div>
                 </div>
@@ -169,7 +169,7 @@
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="c-topic" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Topic *</label>
-                    <select id="c-topic" name="topic" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <select id="c-topic" name="topic" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                       <option>Order or collection question</option>
                       <option>Complaint or problem with an order</option>
                       <option>Selling second-hand items</option>
@@ -180,7 +180,7 @@
                   </div>
                   <div>
                     <label for="c-order" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Order reference (optional)</label>
-                    <input id="c-order" name="orderReference" type="text" pattern="[A-Za-z0-9#\- ]{3,30}" title="3 to 30 letters, numbers, # or dashes, for example CC-1025" maxlength="30" placeholder="e.g. CC-1025" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="c-order" name="orderReference" type="text" title="3 to 30 letters, numbers, # or dashes, for example CC-1025" placeholder="e.g. CC-1025" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="c-order-error" role="alert"></span>
                   </div>
                 </div>
@@ -188,7 +188,7 @@
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
                     <label for="c-outcome" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">What would you like us to do? *</label>
-                    <select id="c-outcome" name="outcome" required class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <select id="c-outcome" name="outcome" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                       <option>Reply by email</option>
                       <option>Call or WhatsApp me</option>
                       <option>Arrange a refund</option>
@@ -199,14 +199,14 @@
                   </div>
                   <div>
                     <label for="c-phone" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Phone / WhatsApp (needed for a call back)</label>
-                    <input id="c-phone" name="phone" type="tel" pattern="(\+27|0)[0-9 \-]{8,13}" title="A South African number such as 082 000 0000 or +27 82 000 0000" maxlength="20" autocomplete="tel" placeholder="082 000 0000" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
+                    <input id="c-phone" name="phone" type="tel" title="A South African number such as 082 000 0000 or +27 82 000 0000" autocomplete="tel" placeholder="082 000 0000" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
                     <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="c-phone-error" role="alert"></span>
                   </div>
                 </div>
 
                 <div>
                   <label for="c-message" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Message *</label>
-                  <textarea id="c-message" name="message" required minlength="10" maxlength="1000" rows="5" placeholder="Tell us a bit more…" class="w-full resize-none rounded-3xl border border-slate-300 bg-white px-5 py-3.5 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"></textarea>
+                  <textarea id="c-message" name="message" rows="5" placeholder="Tell us a bit more…" class="w-full resize-none rounded-3xl border border-slate-300 bg-white px-5 py-3.5 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"></textarea>
                   <span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="c-message-error" role="alert"></span>
                 </div>
 
@@ -489,7 +489,7 @@
             <form id="newsletterBandForm" class="w-full">
               <div class="flex flex-col gap-3 sm:flex-row">
                 <label for="newsletterBandEmail" class="sr-only">Email address</label>
-                <input id="newsletterBandEmail" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none">
+                <input id="newsletterBandEmail" name="email" type="email" placeholder="you@example.com" class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none">
                 <button type="submit" class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]">
                   Join the list
                 </button>
