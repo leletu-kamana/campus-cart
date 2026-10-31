@@ -1249,3 +1249,321 @@ footer .cc-footer-legal > p {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ==========================================================
+   CAMPUS-CART — SITE-WIDE RESPONSIVE REPAIR
+   Shared rules for the home page and every page under /pages.
+   Mobile navigation must not be overridden by desktop nav rules.
+   ========================================================== */
+
+/* Keep sizing predictable and prevent wide children from stretching the page. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  scroll-padding-top: 5rem;
+}
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: clip;
+}
+main,
+main > *,
+section,
+article,
+aside,
+footer,
+header {
+  min-width: 0;
+}
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+img,
+video {
+  height: auto;
+}
+iframe {
+  width: 100%;
+}
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  font: inherit;
+}
+input,
+select,
+textarea {
+  min-width: 0;
+}
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+label {
+  overflow-wrap: anywhere;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Header: show one navigation system at a time. */
+#siteHeader > div:first-child {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+#siteHeader nav[aria-label="Main navigation"] {
+  display: none !important;
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+#siteHeader nav[aria-label="Main navigation"] > a {
+  flex: 0 0 auto;
+  padding-inline: clamp(0.45rem, 0.8vw, 0.9rem);
+  font-size: clamp(0.72rem, 0.82vw, 0.875rem);
+}
+#siteHeader #navToggle {
+  flex: 0 0 2.5rem;
+}
+#siteHeader #mobileMenu {
+  width: 100%;
+  max-width: 100%;
+}
+#siteHeader nav[aria-label="Mobile navigation"] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+#siteHeader nav[aria-label="Mobile navigation"] > a {
+  width: 100%;
+  min-height: 2.75rem;
+}
+@media (min-width: 1024px) {
+  #siteHeader nav[aria-label="Main navigation"] {
+    display: flex !important;
+    align-items: center;
+  }
+  #siteHeader #navToggle,
+  #siteHeader #mobileMenu {
+    display: none !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #siteHeader > div:first-child {
+    gap: 0.5rem;
+    padding-inline: 1rem;
+  }
+  #siteHeader nav[aria-label="Main navigation"] {
+    gap: 0 !important;
+  }
+  #siteHeader nav[aria-label="Main navigation"] > a {
+    padding-inline: 0.45rem;
+    font-size: 0.72rem;
+  }
+}
+
+/* General page gutters and content widths. */
+main > section,
+main > div,
+main > article {
+  min-width: 0;
+  max-width: 100%;
+}
+main .max-w-7xl,
+footer .max-w-7xl {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+main .grid,
+footer .grid {
+  min-width: 0;
+}
+main .grid > *,
+footer .grid > * {
+  min-width: 0;
+}
+main .overflow-x-auto,
+main nav[aria-label="Section navigation"] > div {
+  max-width: 100%;
+  overscroll-behavior-inline: contain;
+}
+main table {
+  width: 100%;
+  max-width: 100%;
+}
+main pre,
+main code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Forms and action groups should wrap instead of forcing horizontal scrolling. */
+main form {
+  width: 100%;
+  max-width: 100%;
+}
+main form input,
+main form select,
+main form textarea {
+  width: 100%;
+  min-width: 0;
+}
+main form button,
+main button,
+main a[class*="rounded-full"] {
+  max-width: 100%;
+}
+main .flex:not(.flex-col) {
+  min-width: 0;
+}
+main .flex.flex-wrap,
+footer .flex.flex-wrap {
+  row-gap: 0.65rem;
+}
+
+/* The Section 1 Shop controls use the same centred, consistent button layout. */
+#shop [data-shop-pagination] {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+#shop [data-shop-pagination] button {
+  display: inline-flex;
+  min-width: 9rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+#shop [data-shop-pagination] button[hidden] {
+  display: none !important;
+}
+
+/* Tablet and phone layouts. */
+@media (max-width: 1023px) {
+  #siteHeader > div:first-child {
+    gap: 0.5rem;
+  }
+  #siteHeader > div:first-child > a:first-child {
+    min-width: 0;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+  }
+  #siteHeader > div:first-child > div:last-child {
+    flex: 0 0 auto;
+    gap: 0.35rem;
+  }
+  main .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  main .flex {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  main > section,
+  main > div,
+  main > article {
+    scroll-margin-top: 5rem;
+  }
+  main .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  main h1 {
+    font-size: clamp(1.9rem, 8vw, 3rem);
+    line-height: 1.12;
+  }
+  main h2 {
+    font-size: clamp(1.45rem, 6vw, 2.15rem);
+    line-height: 1.2;
+  }
+  main .flex:not(.flex-col) {
+    flex-wrap: wrap;
+  }
+  main .flex > button,
+  main .flex > a[class*="rounded-full"] {
+    max-width: 100%;
+  }
+  footer .max-w-7xl {
+    padding-block: 2.75rem;
+  }
+  footer .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+  .cookie-banner {
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    max-height: 82dvh;
+    padding: 1rem;
+  }
+}
+@media (max-width: 479px) {
+  #siteHeader > div:first-child {
+    padding-inline: 0.75rem;
+  }
+  #siteHeader > div:first-child > a:first-child {
+    gap: 0.4rem;
+    font-size: 0.95rem;
+  }
+  #siteHeader > div:first-child > a:first-child > span:first-child {
+    width: 2rem;
+    height: 2rem;
+  }
+  #siteHeader > div:first-child > div:last-child {
+    gap: 0.25rem;
+  }
+  #siteHeader #navToggle,
+  #siteHeader #cartButton,
+  #siteHeader #wishlistButton {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  #shop [data-shop-pagination] {
+    align-items: stretch;
+  }
+  #shop [data-shop-pagination] button {
+    width: 100%;
+    min-width: 0;
+  }
+  .hub-map {
+    min-height: 18rem;
+    height: 18rem;
+  }
+  .lightbox {
+    padding-inline: 0.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+}
