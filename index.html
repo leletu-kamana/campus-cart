@@ -1,682 +1,2301 @@
 <!doctype html>
-<!-- Sets the root HTML element and the page language. -->
 <html lang="en">
-	<!-- Groups page metadata, the title, and linked resources. -->
 	<head>
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
 		<meta charset="utf-8" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- Sets the title shown in the browser tab. -->
-		<!-- <title> sets the name shown on the browser tab and helps identify the webpage.
-     It also provides useful information for search engines and accessibility. -->
-		<!-- Sets the webpage title displayed in the browser tab and used as the document title. -->
 		<title>Campus-Cart | Affordable Student Essentials in South Africa</title>
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
 		<meta
 			name="description"
 			content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa."
 		/>
-		<!-- Links this page to an external resource or identifies a related URL. The href attribute points to an external webpage. -->
-		<link rel="canonical" href="https://campus-cart-olive.vercel.app/" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta name="robots" content="index, follow" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
 		<meta name="theme-color" content="#0d1b3e" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta property="og:type" content="website" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta property="og:site_name" content="Campus-Cart" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta property="og:locale" content="en_ZA" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta
-			property="og:description"
-			content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa."
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
 		/>
-		<meta property="og:url" content="https://campus-cart-olive.vercel.app/" />
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta
-			property="og:image"
-			content="https://campus-cart-olive.vercel.app/assets/images/bundles/hero-campus.jpg"
-		/>
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta
-			property="og:image:alt"
-			content="South African students on a university campus carrying study essentials"
-		/>
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
 		<link
 			rel="icon"
 			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
 		/>
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta
-			name="keywords"
-			content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery"
-		/>
-		<!-- Provides metadata such as character encoding, responsive viewport settings, or search and sharing information. -->
-		<meta
-			name="google-site-verification"
-			content="di4kLr7p6lnsq7pWPac5IblIaONzTPNySdib4Xm5D6w"
-		/>
-		<meta
-			name="google-site-verification"
-			content="zmfWZjO-hFulB-7N7pr2L-zWFYL5ptPBfwohr0NXcNg"
-		/>
-		<!-- Provides structured data in JSON-LD format for search engines. -->
-		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org",
-				"@type": "Organization",
-				"name": "Campus-Cart",
-				"url": "https://campus-cart-olive.vercel.app/",
-				"description": "Campus-Cart sells new and second-hand student essentials and delivers to universities and TVET colleges across South Africa.",
-				"email": "hello@campus-cart.co.za",
-				"areaServed": { "@type": "Country", "name": "South Africa" }
-			}
-		</script>
-		<!-- Links this page to an external resource or identifies a related URL. The href attribute points to the specified page or resource. -->
-		<link rel="stylesheet" href="assets/css/styles.css" />
+
+		<!-- Tailwind v4 theme config: animations used across hero, cards and marquee -->
+		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-	<!-- Contains the content displayed in the browser window. The class "page-loading" connects it to CSS styling or JavaScript behaviour. -->
-	<body class="page-loading">
-		<!-- Lets keyboard users jump past the menu to the main content. -->
-		<a class="skip-link" href="#main">Skip to main content</a>
-		<!-- Groups related content so it can be arranged or styled together. The id "page-loader" lets CSS or JavaScript identify this element. The class "page-loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-		<div
-			id="page-loader"
-			class="page-loader"
-			role="status"
-			aria-live="polite"
-			aria-label="Loading Campus-Cart"
+
+	<body
+		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
+	>
+		<!-- Skip link for keyboard users -->
+		<a
+			href="#main"
+			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
 		>
-			<!-- Groups related content so it can be arranged or styled together. The class "page-loader-content" connects it to CSS styling or JavaScript behaviour. -->
-			<div class="page-loader-content">
-				<!-- Groups related content so it can be arranged or styled together. The class "page-loader-visual" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="page-loader-visual">
-					<!-- Groups related content so it can be arranged or styled together. The class "loader" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-					<div class="loader" aria-hidden="true">
-						<!-- Groups related content so it can be arranged or styled together. The class "nucleus" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="nucleus"></div>
-						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="ring"></div>
-						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="ring"></div>
-						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="ring"></div>
-						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="ring"></div>
-						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="ring"></div>
-						<!-- Groups related content so it can be arranged or styled together. The class "ring" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="ring"></div>
-					</div>
+			Skip to main content
+		</a>
+
+		<!-- ===== Top utility bar (SoleStyle-style strip) ===== -->
+		<div
+			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
+		>
+			<div
+				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
+			>
+				<div class="flex items-center gap-5">
+					<a
+						href="mailto:hello@campus-cart.co.za"
+						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
+					>
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						hello@campus-cart.co.za
+					</a>
+					<a
+						href="https://wa.me/27123456789"
+						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
+					>
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						+27 12 345 6789
+					</a>
 				</div>
-				<!-- Groups related content so it can be arranged or styled together. The class "page-loader-brand" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-				<div class="page-loader-brand" aria-hidden="true">
-					<!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-title" connects it to CSS styling or JavaScript behaviour. -->
-					<span class="page-loader-title">Campus<span>-Cart</span></span>
-					<!-- Groups a short piece of inline text for styling or scripting. The class "page-loader-text" connects it to CSS styling or JavaScript behaviour. -->
-					<span class="page-loader-text">Loading Campus-Cart...</span>
+				<div class="flex items-center gap-5">
+					<a
+						href="pages/account.html#student"
+						class="transition hover:text-[#ffd23f]"
+						>Student path</a
+					>
+					<span class="text-slate-600">|</span>
+					<a
+						href="pages/account.html#parent"
+						class="transition hover:text-[#ffd23f]"
+						>Parent path</a
+					>
+					<span class="text-slate-600">|</span>
+					<span
+						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
+					>
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						Delivery to every campus
+					</span>
 				</div>
 			</div>
 		</div>
-		<!-- Groups introductory content and the main navigation area. The class "topbar" connects it to CSS styling or JavaScript behaviour. -->
-		<header class="topbar">
-			<!-- Groups navigation links and identifies the menu for accessibility. The class "nav" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-			<nav class="nav" aria-label="Main navigation">
-				<!-- Groups the logo and the live clock so the clock sits directly under the Campus-Cart name. The class "brand" connects it to CSS styling. -->
-				<div class="brand">
-					<!-- Creates a hyperlink to the home page. The class "logo" connects it to CSS styling. -->
-					<a class="logo" href="index.html">Campus<span>-Cart</span></a>
-					<!-- Live South African time and date, filled in every second by updateNavDateTime() in script.js. -->
-					<div
-						class="nav-clock"
-						role="group"
-						aria-label="Current South African date and time"
-					>
-						<!-- Shows the current time, updated by script.js. -->
-						<span id="navTime">00:00:00</span>
-						<!-- Separator between the time and the date. -->
-						<span class="clock-divider">|</span>
-						<!-- Shows the current date, updated by script.js. -->
-						<span id="navDate">Loading...</span>
-					</div>
-				</div>
-				<!-- Creates a button for an action or interactive control. The class "nav-toggle" connects it to CSS styling or JavaScript behaviour. Accessibility attributes describe this element's purpose or state to assistive technology. -->
-				<button
-					type="button"
-					class="nav-toggle"
-					aria-expanded="false"
-					aria-label="Menu"
+
+		<!-- ===== Header / Navigation ===== -->
+		<header
+			id="siteHeader"
+			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300"
+		>
+			<div
+				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+			>
+				<a
+					href="index.html"
+					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
 				>
-					Menu
-				</button>
-				<!-- Groups related content so it can be arranged or styled together. The class "nav-links" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="nav-links">
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="index.html">Home</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/about.html">About</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/products.html">Shop</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/products.html#parent-hub">Parent Hub</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/enquiry.html">Enquiry</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/coverage.html">Coverage</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/contact.html">Contact</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. -->
-					<a href="pages/account.html">Account</a>
-					<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "nav-cart" connects it to CSS styling or JavaScript behaviour. -->
-					<a class="nav-cart" href="pages/account.html#order"
-						>Order <span class="cart-badge" data-cart-count>0</span></a
+					<span
+						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
+						>C</span
 					>
-				</div>
-			</nav>
-		</header>
-		<!-- Contains the page's main content. -->
-		<main id="main" tabindex="-1">
-			<!-- Groups content that belongs to one topic or page section. The class "hero" connects it to CSS styling or JavaScript behaviour. -->
-			<section class="hero">
-				<!-- Groups related content so it can be arranged or styled together. The class "wrap hero-grid" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="wrap hero-grid">
-					<!-- Groups related content so it can be arranged or styled together. -->
-					<div>
-						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
-						<span class="eyebrow">Proudly South African</span>
-						<!-- Defines the main heading of the page. -->
-						<h1>Kit out res without <em>breaking the budget</em></h1>
-						<!-- Creates a paragraph of text. The class "lead" connects it to CSS styling or JavaScript behaviour. -->
-						<p class="lead">
-							Campus-Cart brings new and carefully reviewed second-hand student
-							essentials together in one place — bedding, appliances, textbooks
-							and full starter bundles, delivered to every province and
-							collected on campus or at a hub near you. We cover all 26 public
-							universities, all 50 public TVET colleges and the major private
-							institutions.
-						</p>
-						<!-- Groups related content so it can be arranged or styled together. The class "split" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="split">
-							<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="split-card">
-								<!-- Defines a third-level heading for a subsection or card. -->
-								<h2>I am a Student</h2>
-								<!-- Creates a paragraph of text. -->
-								<p>
-									Shop deals, browse the second-hand marketplace and sell what
-									you no longer need.
-								</p>
-								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
-								<a class="btn" href="pages/account.html#student"
-									>Student path</a
-								>
-							</div>
-							<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="split-card">
-								<!-- Defines a third-level heading for a subsection or card. -->
-								<h2>I am a Parent/Guardian</h2>
-								<!-- Creates a paragraph of text. -->
-								<p>
-									Use the First Year Checklist and fixed-price starter bundles
-									to plan spend with confidence.
-								</p>
-								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-ghost-light" connects it to CSS styling or JavaScript behaviour. -->
-								<a class="btn btn-ghost-light" href="pages/account.html#parent"
-									>Parent path</a
-								>
-							</div>
-						</div>
-					</div>
-					<!-- Groups related content so it can be arranged or styled together. The class "hero-img" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="hero-img">
-						<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+					<span>Campus<span class="text-[#c99700]">-Cart</span></span>
+				</a>
+
+				<nav
+					class="hidden items-center gap-1 lg:flex"
+					aria-label="Main navigation"
+				>
+					<a
+						href="index.html"
+						aria-current="page"
+						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
+						>Home</a
+					>
+					<a
+						href="pages/about.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>About</a
+					>
+					<a
+						href="pages/products.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Shop</a
+					>
+					<a
+						href="pages/products.html#parent-hub"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Parent Hub</a
+					>
+					<a
+						href="pages/enquiry.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Enquiry</a
+					>
+					<a
+						href="pages/coverage.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Coverage</a
+					>
+					<a
+						href="pages/contact.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Contact</a
+					>
+					<a
+						href="pages/account.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Account</a
+					>
+				</nav>
+
+				<div class="flex items-center gap-2 sm:gap-3">
+					<a
+						href="pages/products.html"
+						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid"
+						aria-label="Search products"
+					>
 						<img
-							src="assets/images/bundles/hero-banner.jpg"
-							srcset="
-								assets/images/bundles/hero-banner-640.jpg  640w,
-								assets/images/bundles/hero-banner.jpg     1200w
-							"
-							sizes="(max-width: 1000px) 100vw, 580px"
-							alt="A student desk set up with a navy desk lamp, an open laptop, notebooks, a pen holder and a navy backpack beside a sunny window"
-							width="1200"
-							height="670"
-							fetchpriority="high"
-							decoding="async"
+							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg"
+							alt=""
+							class="h-5 w-5"
 						/>
+					</a>
+
+					<div class="hidden text-right xl:block">
+						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
+							--:--:--
+						</p>
+						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
+					</div>
+
+					<button
+						id="cartButton"
+						type="button"
+						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
+						aria-label="Open cart"
+					>
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+						<span
+							id="cartCount"
+							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
+							>0</span
+						>
+					</button>
+
+					<button
+						id="navToggle"
+						type="button"
+						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden"
+						aria-expanded="false"
+						aria-controls="mobileMenu"
+						aria-label="Menu"
+					>
+						<img
+							id="navIcon"
+							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+					</button>
+				</div>
+			</div>
+
+			<div
+				id="mobileMenu"
+				class="hidden border-t border-slate-200 bg-white lg:hidden"
+			>
+				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
+					<a
+						href="index.html"
+						aria-current="page"
+						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]"
+						>Home</a
+					>
+					<a
+						href="pages/about.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>About</a
+					>
+					<a
+						href="pages/products.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Shop</a
+					>
+					<a
+						href="pages/products.html#parent-hub"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Parent Hub</a
+					>
+					<a
+						href="pages/enquiry.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Enquiry</a
+					>
+					<a
+						href="pages/coverage.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Coverage</a
+					>
+					<a
+						href="pages/contact.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Contact</a
+					>
+					<a
+						href="pages/account.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Account</a
+					>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main" tabindex="-1">
+			<!-- ===== Hero — color-block composition ===== -->
+			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
+				<div
+					aria-hidden="true"
+					class="absolute inset-0 bg-[radial-gradient(circle_at_78%_16%,rgba(255,210,63,0.16),transparent_46%),radial-gradient(circle_at_8%_90%,rgba(56,89,196,0.40),transparent_52%)]"
+				></div>
+				<div
+					aria-hidden="true"
+					class="absolute right-[-18%] top-[-30%] h-[150%] w-[62%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
+				></div>
+				<div
+					aria-hidden="true"
+					class="absolute left-8 top-20 hidden opacity-40 lg:block"
+				>
+					<svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+						<g fill="#ffffff" fill-opacity="0.35">
+							<circle cx="10" cy="10" r="2" />
+							<circle cx="40" cy="10" r="2" />
+							<circle cx="70" cy="10" r="2" />
+							<circle cx="100" cy="10" r="2" />
+							<circle cx="10" cy="40" r="2" />
+							<circle cx="40" cy="40" r="2" />
+							<circle cx="70" cy="40" r="2" />
+							<circle cx="100" cy="40" r="2" />
+							<circle cx="10" cy="70" r="2" />
+							<circle cx="40" cy="70" r="2" />
+							<circle cx="70" cy="70" r="2" />
+							<circle cx="100" cy="70" r="2" />
+						</g>
+					</svg>
+				</div>
+
+				<div
+					class="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24 lg:pt-20"
+				>
+					<div class="grid items-center gap-16 lg:grid-cols-2">
+						<div class="animate-fade-up">
+							<span
+								class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
+							>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg"
+									alt=""
+									class="h-3.5 w-3.5"
+								/>
+								Proudly South African
+							</span>
+
+							<h1
+								class="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl xl:text-6xl"
+							>
+								Kit out your res room
+								<span class="relative inline-block whitespace-nowrap">
+									<span class="relative z-10 text-[#ffd23f]"
+										>without breaking</span
+									>
+									<span
+										aria-hidden="true"
+										class="absolute inset-x-0 bottom-1 z-0 h-4 -rotate-1 rounded-sm bg-[#ffd23f]/25"
+									></span>
+								</span>
+								<span class="text-[#ffd23f]">the budget</span>
+							</h1>
+
+							<p
+								class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+							>
+								Campus-Cart brings new and carefully reviewed second-hand
+								student essentials together in one place — bedding, appliances,
+								textbooks and full starter bundles — delivered to every province
+								and collected on campus or at a hub near you.
+							</p>
+
+							<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+								<a
+									href="pages/account.html#student"
+									class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:bg-[#ffdf5e]"
+								>
+									Student path
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+										alt=""
+										class="h-4 w-4 transition group-hover:translate-x-0.5"
+									/>
+								</a>
+								<a
+									href="pages/account.html#parent"
+									class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+								>
+									Parent path
+								</a>
+							</div>
+
+							<div class="mt-7 flex flex-wrap gap-2">
+								<span
+									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/bed-double.svg"
+										alt=""
+										class="h-3.5 w-3.5"
+									/>
+									Bedding
+								</span>
+								<span
+									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/coffee.svg"
+										alt=""
+										class="h-3.5 w-3.5"
+									/>
+									Kitchen
+								</span>
+								<span
+									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/book-open.svg"
+										alt=""
+										class="h-3.5 w-3.5"
+									/>
+									Textbooks
+								</span>
+								<span
+									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/refresh-cw.svg"
+										alt=""
+										class="h-3.5 w-3.5"
+									/>
+									Second-hand
+								</span>
+							</div>
+
+							<dl
+								class="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-7"
+							>
+								<div>
+									<dt class="text-3xl font-extrabold text-[#ffd23f]">26</dt>
+									<dd
+										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
+									>
+										Public universities
+									</dd>
+								</div>
+								<div>
+									<dt class="text-3xl font-extrabold text-[#ffd23f]">50</dt>
+									<dd
+										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
+									>
+										TVET colleges
+									</dd>
+								</div>
+								<div>
+									<dt class="text-3xl font-extrabold text-[#ffd23f]">R180</dt>
+									<dd
+										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
+									>
+										From, second-hand
+									</dd>
+								</div>
+							</dl>
+						</div>
+
+						<div class="relative mx-auto w-full max-w-[520px]">
+							<div
+								aria-hidden="true"
+								class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffd23f]/25 blur-3xl animate-float"
+							></div>
+							<div
+								aria-hidden="true"
+								class="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/25 animate-spin-slow"
+							></div>
+							<div
+								aria-hidden="true"
+								class="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
+							></div>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+								alt=""
+								aria-hidden="true"
+								class="absolute left-2 top-10 h-6 w-6 text-[#ffd23f] animate-pulse"
+							/>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkle.svg"
+								alt=""
+								aria-hidden="true"
+								class="absolute right-4 top-16 h-5 w-5 text-white/60 animate-float"
+							/>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+								alt=""
+								aria-hidden="true"
+								class="absolute bottom-16 left-6 h-4 w-4 text-white/40 animate-pulse"
+							/>
+
+							<img
+								src="https://picsum.photos/seed/cc-studio-look/640/640"
+								alt="A student desk styled with a desk lamp, open laptop, notebooks and a navy backpack"
+								width="640"
+								height="640"
+								fetchpriority="high"
+								class="relative mx-auto aspect-square w-72 rounded-full object-cover shadow-2xl ring-8 ring-white/10 lg:w-80"
+							/>
+
+							<img
+								src="https://picsum.photos/seed/cc-res-corner/320/320"
+								alt="A cosy residence room corner with bedding and a laundry basket"
+								width="320"
+								height="320"
+								loading="lazy"
+								class="absolute -bottom-4 -left-4 aspect-square w-28 rounded-full border-4 border-[#0d1b3e] object-cover shadow-xl animate-float lg:w-32"
+							/>
+
+							<div
+								class="absolute -right-2 top-8 flex items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur animate-float"
+							>
+								<span
+									class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#ffd23f]/20"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
+										alt=""
+										class="h-5 w-5 text-[#0d1b3e]"
+									/>
+								</span>
+								<div>
+									<p class="text-sm font-bold text-[#0d1b3e]">From R180</p>
+									<p class="text-xs text-slate-500">Second-hand picks</p>
+								</div>
+							</div>
+
+							<div
+								class="absolute -bottom-2 right-2 flex items-center gap-3 rounded-2xl bg-[#eef3ff] p-4 text-[#0d1b3e] shadow-xl animate-float-delay"
+							>
+								<span
+									class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#0d1b3e]"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+										alt=""
+										class="h-5 w-5 text-[#ffd23f]"
+									/>
+								</span>
+								<div>
+									<p class="text-sm font-bold">Reviewed by our team</p>
+									<p class="text-xs text-slate-500">Before it goes live</p>
+								</div>
+							</div>
+
+							<span
+								class="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-[#ffd23f] px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e] shadow-lg shadow-amber-500/30 -rotate-3"
+							>
+								New season
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Brand / need marquee (SoleStyle-inspired ticker) -->
+				<div class="relative border-t border-white/10 bg-white/5 backdrop-blur">
+					<div class="overflow-hidden py-4" aria-hidden="true">
+						<div class="flex w-max animate-marquee items-center gap-8 pr-8">
+							<div class="flex items-center gap-8 pr-8">
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Bedding</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Appliances</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Textbooks</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Starter bundles</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Second-hand</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Desk setups</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Laundry</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Kitchen starter</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+							</div>
+							<div class="flex items-center gap-8 pr-8">
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Bedding</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Appliances</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Textbooks</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Starter bundles</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Second-hand</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Desk setups</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Laundry</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+								<span
+									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
+									>Kitchen starter</span
+								>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+									alt=""
+									class="h-3 w-3 text-[#ffd23f]"
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-			<!-- Quick reasons to trust the shop. -->
-			<section class="trust-strip" aria-label="Why shop with Campus-Cart">
-				<!-- Keeps the content centred. -->
-				<div class="wrap">
-					<!-- List of trust points. -->
-					<ul>
-						<!-- Coverage point. -->
-						<li>
-							<span class="trust-icon" aria-hidden="true"
-								><svg viewBox="0 0 24 24">
-									<path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
-									<circle cx="12" cy="10" r="2.5" /></svg></span
-							><span>26 public universities and 50 TVET colleges covered</span>
-						</li>
-						<!-- New and second-hand point. -->
-						<li>
-							<span class="trust-icon" aria-hidden="true"
-								><svg viewBox="0 0 24 24">
-									<path d="M20 7l-8-4-8 4 8 4 8-4z" />
-									<path d="M4 7v10l8 4 8-4V7" /></svg></span
-							><span>New stock and reviewed second-hand deals</span>
-						</li>
-						<!-- Collection point. -->
-						<li>
-							<span class="trust-icon" aria-hidden="true"
-								><svg viewBox="0 0 24 24">
-									<path d="M3 11l9-7 9 7" />
-									<path d="M5 10v10h14V10" />
-									<path d="M10 20v-6h4v6" /></svg></span
-							><span
-								>Free collection at listed residence and campus points</span
+
+			<!-- ===== Trust strip (service icons) ===== -->
+			<section
+				class="relative z-10 mx-auto -mt-10 max-w-7xl px-4 sm:px-6 lg:px-8"
+				aria-label="Why shop with Campus-Cart"
+			>
+				<div
+					class="grid gap-px overflow-hidden rounded-3xl border border-slate-200 bg-slate-200 shadow-xl shadow-slate-200/50 sm:grid-cols-2 lg:grid-cols-4"
+				>
+					<div class="flex items-start gap-3 bg-white p-5">
+						<span
+							class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#0d1b3e]/5"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/map-pin.svg"
+								alt=""
+								class="h-5 w-5 text-[#0d1b3e]"
+							/>
+						</span>
+						<p class="text-sm text-slate-600">
+							<span class="block font-bold text-[#0d1b3e]"
+								>National coverage</span
 							>
-						</li>
-						<!-- Payment point. -->
-						<li>
-							<span class="trust-icon" aria-hidden="true"
-								><svg viewBox="0 0 24 24">
-									<rect x="3" y="6" width="18" height="12" rx="2" />
-									<path d="M3 10h18" /></svg></span
-							><span>Pay by EFT. Nothing is charged on this website</span>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<!-- Groups content that belongs to one topic or page section. The id "mission" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
-			<section class="section" id="mission">
-				<!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="wrap">
-					<!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="section-head">
-						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
-						<span class="eyebrow">Our mission</span>
-						<!-- Defines a second-level heading for a major section. -->
-						<h2>Affordable essentials, dignified student living</h2>
-						<!-- Creates a paragraph of text. -->
-						<p>
-							Too many students arrive at university with a bag and a bed frame.
-							We exist to close that gap: fair prices, a trusted second-hand
-							marketplace, and pricing that parents can plan around before
-							registration week.
+							26 public universities &amp; 50 TVET colleges
 						</p>
 					</div>
-					<!-- Groups related content so it can be arranged or styled together. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="grid grid-3">
-						<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="card card-navy">
-							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="card-body">
-								<!-- Defines a third-level heading for a subsection or card. -->
-								<h3>Fair, visible prices</h3>
-								<!-- Creates a paragraph of text. -->
-								<p>
-									Every bundle lists its contents and a fixed price. No
-									surprises at the till.
-								</p>
-							</div>
-						</div>
-						<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="card card-navy">
-							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="card-body">
-								<!-- Defines a third-level heading for a subsection or card. -->
-								<h3>Reviewed listings</h3>
-								<!-- Creates a paragraph of text. -->
-								<p>
-									Second-hand items are manually reviewed by our team before
-									they appear on the site.
-								</p>
-							</div>
-						</div>
-						<!-- Groups related content so it can be arranged or styled together. The class "card card-navy" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="card card-navy">
-							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="card-body">
-								<!-- Defines a third-level heading for a subsection or card. -->
-								<h3>Safe collection</h3>
-								<!-- Creates a paragraph of text. -->
-								<p>
-									Collect at residence desks, campus points or secure lockers —
-									never a random street corner.
-								</p>
-							</div>
-						</div>
+					<div class="flex items-start gap-3 bg-white p-5">
+						<span
+							class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#0d1b3e]/5"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg"
+								alt=""
+								class="h-5 w-5 text-[#0d1b3e]"
+							/>
+						</span>
+						<p class="text-sm text-slate-600">
+							<span class="block font-bold text-[#0d1b3e]"
+								>New + reviewed used</span
+							>
+							Every second-hand item is checked first
+						</p>
+					</div>
+					<div class="flex items-start gap-3 bg-white p-5">
+						<span
+							class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#0d1b3e]/5"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+								alt=""
+								class="h-5 w-5 text-[#0d1b3e]"
+							/>
+						</span>
+						<p class="text-sm text-slate-600">
+							<span class="block font-bold text-[#0d1b3e]"
+								>Safe collection</span
+							>
+							Residence desks, campus points or lockers
+						</p>
+					</div>
+					<div class="flex items-start gap-3 bg-white p-5">
+						<span
+							class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#0d1b3e]/5"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
+								alt=""
+								class="h-5 w-5 text-[#0d1b3e]"
+							/>
+						</span>
+						<p class="text-sm text-slate-600">
+							<span class="block font-bold text-[#0d1b3e]">Pay by EFT</span>
+							Nothing is charged on this website
+						</p>
 					</div>
 				</div>
 			</section>
-			<!-- Groups content that belongs to one topic or page section. The id "featured" lets CSS or JavaScript identify this element. The class "section alt" connects it to CSS styling or JavaScript behaviour. -->
-			<section class="section alt" id="featured">
-				<!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="wrap">
-					<!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="section-head">
-						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
-						<span class="eyebrow">Featured</span>
-						<!-- Defines a second-level heading for a major section. -->
-						<h2>Starter bundles students actually use</h2>
-					</div>
-					<!-- Groups related content so it can be arranged or styled together. The class "grid grid-3" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="grid grid-3">
-						<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
-						<article class="card">
-							<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
+
+			<!-- ===== Shop by category (SoleStyle category tiles) ===== -->
+			<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+				<div class="max-w-2xl">
+					<span
+						class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+						>Shop by need</span
+					>
+					<h2
+						class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+					>
+						Everything for the res room
+					</h2>
+				</div>
+
+				<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+					<a
+						href="pages/products.html"
+						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
+					>
+						<img
+							src="https://picsum.photos/seed/cc-new-arrivals/800/600"
+							alt="New student arrivals on a desk"
+							width="800"
+							height="600"
+							loading="lazy"
+							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
+						></div>
+						<span
+							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
+						>
 							<img
-								src="assets/images/bundles/bundle-basic.jpg"
-								alt="Four items from the Basic Starter Bundle: a duvet, an electric kettle, stacked mugs and a notebook"
-								loading="lazy"
-								width="1000"
-								height="1000"
-								decoding="async"
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
+								alt=""
+								class="h-4 w-4"
 							/>
-							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="card-body">
-								<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-								<!-- Row that holds the small status labels. -->
-								<div class="card-tags">
-									<span class="badge badge-new">New</span>
-									<!-- Defines a third-level heading for a subsection or card. -->
+						</span>
+						<div class="absolute inset-x-0 bottom-0 p-5">
+							<p class="text-sm font-bold text-white">New arrivals</p>
+							<p class="text-xs text-slate-300">
+								Fresh bundles for first-years
+							</p>
+						</div>
+					</a>
+
+					<a
+						href="pages/products.html#shop"
+						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
+					>
+						<img
+							src="https://picsum.photos/seed/cc-marketplace/800/600"
+							alt="Second-hand marketplace items laid out"
+							width="800"
+							height="600"
+							loading="lazy"
+							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
+						></div>
+						<span
+							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</span>
+						<div class="absolute inset-x-0 bottom-0 p-5">
+							<p class="text-sm font-bold text-white">Second-hand</p>
+							<p class="text-xs text-slate-300">Reviewed marketplace deals</p>
+						</div>
+					</a>
+
+					<a
+						href="pages/products.html#parent-hub"
+						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
+					>
+						<img
+							src="https://picsum.photos/seed/cc-parent-hub/800/600"
+							alt="A parent and student reviewing a checklist together"
+							width="800"
+							height="600"
+							loading="lazy"
+							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
+						></div>
+						<span
+							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</span>
+						<div class="absolute inset-x-0 bottom-0 p-5">
+							<p class="text-sm font-bold text-white">Parent Hub</p>
+							<p class="text-xs text-slate-300">
+								Plan spend before registration
+							</p>
+						</div>
+					</a>
+
+					<a
+						href="pages/products.html#sell-with-us"
+						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
+					>
+						<img
+							src="https://picsum.photos/seed/cc-sell/800/600"
+							alt="A student selling old textbooks"
+							width="800"
+							height="600"
+							loading="lazy"
+							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
+						/>
+						<div
+							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
+						></div>
+						<span
+							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
+						>
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</span>
+						<div class="absolute inset-x-0 bottom-0 p-5">
+							<p class="text-sm font-bold text-white">Sell with us</p>
+							<p class="text-xs text-slate-300">Turn old kit into cash</p>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- ===== New arrivals product grid (SoleStyle product cards) ===== -->
+			<section class="bg-white py-20">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div
+						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+					>
+						<div class="max-w-2xl">
+							<span
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+								>Fresh finds</span
+							>
+							<h2
+								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+							>
+								New this week
+							</h2>
+						</div>
+						<a
+							href="pages/products.html"
+							class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
+						>
+							Browse all products
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</a>
+					</div>
+
+					<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+						<!-- Product 01 -->
+						<article
+							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+								<img
+									src="https://picsum.photos/seed/cc-prod-kettle/600/600"
+									width="600"
+									height="600"
+									alt="1.8 litre stainless steel kettle"
+									loading="lazy"
+									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+								/>
+								<span
+									class="absolute left-3 top-3 rounded-full bg-[#0d1b3e] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#ffd23f]"
+									>New</span
+								>
+								<button
+									type="button"
+									data-add-to-cart
+									data-name="1.8 L Kettle"
+									data-price="349"
+									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
+									aria-label="Add 1.8 L Kettle to cart"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+								</button>
+							</div>
+							<div class="mt-4 flex flex-1 flex-col">
+								<div class="flex items-center justify-between gap-2">
+									<h3 class="text-sm font-bold text-[#0d1b3e]">1.8 L Kettle</h3>
+									<span class="text-sm font-extrabold text-[#0d1b3e]"
+										>R349</span
+									>
 								</div>
-								<h3>Basic Starter Bundle</h3>
-								<!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
-								<p class="price">R1 499.00</p>
-								<!-- Creates a paragraph of text. -->
-								<p>
+								<p class="mt-1 text-xs text-slate-500">
+									Rapid boil, cool-touch handle.
+								</p>
+								<div
+									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
+									role="img"
+									aria-label="Rated 5 out of 5"
+								>
+									★★★★★
+								</div>
+							</div>
+						</article>
+
+						<!-- Product 02 -->
+						<article
+							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+								<img
+									src="https://picsum.photos/seed/cc-prod-duvet/600/600"
+									width="600"
+									height="600"
+									alt="Single duvet and linen set in navy"
+									loading="lazy"
+									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+								/>
+								<span
+									class="absolute left-3 top-3 rounded-full bg-[#0d1b3e] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#ffd23f]"
+									>New</span
+								>
+								<button
+									type="button"
+									data-add-to-cart
+									data-name="Duvet &amp; Linen Set"
+									data-price="599"
+									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
+									aria-label="Add Duvet and Linen Set to cart"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+								</button>
+							</div>
+							<div class="mt-4 flex flex-1 flex-col">
+								<div class="flex items-center justify-between gap-2">
+									<h3 class="text-sm font-bold text-[#0d1b3e]">
+										Duvet &amp; Linen Set
+									</h3>
+									<span class="text-sm font-extrabold text-[#0d1b3e]"
+										>R599</span
+									>
+								</div>
+								<p class="mt-1 text-xs text-slate-500">
+									Single bed, 4.5 tog, machine washable.
+								</p>
+								<div
+									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
+									role="img"
+									aria-label="Rated 5 out of 5"
+								>
+									★★★★★
+								</div>
+							</div>
+						</article>
+
+						<!-- Product 03 -->
+						<article
+							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+								<img
+									src="https://picsum.photos/seed/cc-prod-lamp/600/600"
+									width="600"
+									height="600"
+									alt="LED desk lamp with adjustable arm"
+									loading="lazy"
+									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+								/>
+								<span
+									class="absolute left-3 top-3 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white"
+									>Sale</span
+								>
+								<button
+									type="button"
+									data-add-to-cart
+									data-name="LED Desk Lamp"
+									data-price="249"
+									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
+									aria-label="Add LED Desk Lamp to cart"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+								</button>
+							</div>
+							<div class="mt-4 flex flex-1 flex-col">
+								<div class="flex items-center justify-between gap-2">
+									<h3 class="text-sm font-bold text-[#0d1b3e]">
+										LED Desk Lamp
+									</h3>
+									<span class="text-sm font-extrabold text-[#0d1b3e]"
+										>R249</span
+									>
+								</div>
+								<p class="mt-1 text-xs text-slate-500">
+									<s class="text-slate-400">R329</s> · USB-C, 3 brightness
+									modes.
+								</p>
+								<div
+									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
+									role="img"
+									aria-label="Rated 4 out of 5"
+								>
+									★★★★☆
+								</div>
+							</div>
+						</article>
+
+						<!-- Product 04 -->
+						<article
+							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+								<img
+									src="https://picsum.photos/seed/cc-prod-textbooks/600/600"
+									width="600"
+									height="600"
+									alt="A stack of first-year BCom textbooks"
+									loading="lazy"
+									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+								/>
+								<span
+									class="absolute left-3 top-3 rounded-full bg-[#c2572f] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white"
+									>2nd-hand</span
+								>
+								<button
+									type="button"
+									data-add-to-cart
+									data-name="BCom Year 1 Textbook Bundle"
+									data-price="780"
+									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
+									aria-label="Add BCom Year 1 Textbook Bundle to cart"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+								</button>
+							</div>
+							<div class="mt-4 flex flex-1 flex-col">
+								<div class="flex items-center justify-between gap-2">
+									<h3 class="text-sm font-bold text-[#0d1b3e]">
+										BCom Year 1 Textbooks
+									</h3>
+									<span class="text-sm font-extrabold text-[#0d1b3e]"
+										>R780</span
+									>
+								</div>
+								<p class="mt-1 text-xs text-slate-500">
+									Reviewed set of 5 core modules.
+								</p>
+								<div
+									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
+									role="img"
+									aria-label="Rated 5 out of 5"
+								>
+									★★★★★
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== Featured bundles — SoleStyle-inspired color-block grid ===== -->
+			<section class="bg-[#f7f5f1] py-20">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Section heading -->
+					<div
+						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+					>
+						<div class="max-w-2xl">
+							<span
+								class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+							>
+								<span
+									class="h-2.5 w-2.5 rounded-full bg-[#ffd23f] ring-4 ring-amber-100"
+								></span>
+								Featured
+							</span>
+							<h2
+								class="mt-3 text-3xl font-black tracking-tight text-[#0d1b3e] sm:text-4xl"
+							>
+								Starter bundles
+								<span
+									class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#c99700]"
+									>students actually use</span
+								>
+							</h2>
+						</div>
+						<a
+							href="pages/products.html"
+							class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
+						>
+							Browse all products
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</a>
+					</div>
+
+					<!-- ---- Color-block cards ---- -->
+					<div class="mt-12 grid gap-6 lg:grid-cols-3">
+						<!-- Card 01 — Navy block -->
+						<article
+							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#0d1b3e] p-7 text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
+						>
+							<div
+								aria-hidden="true"
+								class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl"
+							></div>
+							<div
+								aria-hidden="true"
+								class="absolute -left-10 bottom-24 h-28 w-28 rounded-full bg-[#1e3a8a]/60 blur-2xl"
+							></div>
+							<div
+								aria-hidden="true"
+								class="absolute bottom-8 right-6 h-16 w-16 rounded-full border border-white/10"
+							></div>
+
+							<div class="relative flex items-center justify-between">
+								<span
+									class="rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]"
+									>New</span
+								>
+								<span
+									class="text-5xl font-black italic leading-none text-white/15 [font-family:'Playfair_Display',Georgia,serif]"
+									>01</span
+								>
+							</div>
+
+							<div
+								class="relative mx-auto mt-6 grid aspect-square w-44 place-items-center sm:w-52"
+							>
+								<div
+									aria-hidden="true"
+									class="absolute inset-0 rounded-full border-2 border-dashed border-white/25 animate-spin-slow"
+								></div>
+								<div
+									aria-hidden="true"
+									class="absolute inset-4 rounded-full border border-white/10"
+								></div>
+								<img
+									src="https://picsum.photos/seed/cc-bundle-basic/480/480"
+									width="480"
+									height="480"
+									alt="Basic Starter Bundle contents: duvet, kettle, mugs and notebooks"
+									loading="lazy"
+									class="absolute inset-6 aspect-square rounded-full object-cover ring-4 ring-white/10"
+								/>
+							</div>
+
+							<div class="relative mt-7 flex-1">
+								<h3
+									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
+								>
+									Basic Starter Bundle
+								</h3>
+								<p class="mt-2 text-sm leading-relaxed text-slate-300">
 									Bedding set, kettle, mug set and study basics for a first-year
 									res room.
 								</p>
-								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
-								<a class="btn btn-sm" href="pages/products.html#parent-hub"
-									>See contents</a
-								>
+							</div>
+
+							<div class="relative mt-6 flex items-end justify-between gap-4">
+								<p class="text-2xl font-extrabold text-[#ffd23f]">R1 499</p>
+								<div class="flex items-center gap-2">
+									<a
+										href="pages/products.html#parent-hub"
+										aria-label="See Basic Bundle contents"
+										class="grid h-11 w-11 place-items-center rounded-full border border-white/25 text-white transition hover:bg-white/10"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</a>
+									<button
+										type="button"
+										data-add-to-cart
+										data-name="Basic Starter Bundle"
+										data-price="1499"
+										class="grid h-11 w-11 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
+										aria-label="Add Basic Starter Bundle to cart"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</button>
+								</div>
 							</div>
 						</article>
-						<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
-						<article class="card">
-							<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-							<img
-								src="assets/images/bundles/bundle-standard.jpg"
-								alt="Four items from the Standard Starter Bundle: a duvet, an electric kettle, stacked mugs and a navy desk lamp"
-								loading="lazy"
-								width="1000"
-								height="1000"
-								decoding="async"
-							/>
-							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="card-body">
-								<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-new" connects it to CSS styling or JavaScript behaviour. -->
-								<!-- Row that holds the small status labels. -->
-								<div class="card-tags">
-									<span class="badge badge-new">New</span>
-									<!-- Defines a third-level heading for a subsection or card. -->
-								</div>
-								<h3>Standard Starter Bundle</h3>
-								<!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
-								<p class="price">R2 799.00</p>
-								<!-- Creates a paragraph of text. -->
-								<p>
+
+						<!-- Card 02 — Amber block -->
+						<article
+							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-7 text-[#0d1b3e] shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
+						>
+							<div
+								aria-hidden="true"
+								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl"
+							></div>
+							<div aria-hidden="true" class="absolute left-6 top-8 opacity-40">
+								<svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+									<g fill="#0d1b3e">
+										<circle cx="8" cy="8" r="2" />
+										<circle cx="32" cy="8" r="2" />
+										<circle cx="56" cy="8" r="2" />
+										<circle cx="8" cy="32" r="2" />
+										<circle cx="32" cy="32" r="2" />
+										<circle cx="56" cy="32" r="2" />
+										<circle cx="8" cy="56" r="2" />
+										<circle cx="32" cy="56" r="2" />
+										<circle cx="56" cy="56" r="2" />
+									</g>
+								</svg>
+							</div>
+
+							<div class="relative flex items-center justify-between">
+								<span
+									class="rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]"
+									>Popular</span
+								>
+								<span
+									class="text-5xl font-black italic leading-none text-white/50 [font-family:'Playfair_Display',Georgia,serif]"
+									>02</span
+								>
+							</div>
+
+							<div class="relative mt-6">
+								<div
+									aria-hidden="true"
+									class="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0d1b3e]/15 blur-2xl"
+								></div>
+								<img
+									src="https://picsum.photos/seed/cc-bundle-standard/560/560"
+									width="560"
+									height="560"
+									alt="Standard Starter Bundle contents: duvet, kettle, mugs, lamp and laundry set"
+									loading="lazy"
+									class="relative mx-auto aspect-square w-48 rotate-3 rounded-[2rem] object-cover shadow-lg ring-4 ring-white/60 transition duration-500 group-hover:rotate-0 sm:w-56"
+								/>
+							</div>
+
+							<div class="relative mt-8 flex-1">
+								<h3
+									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
+								>
+									Standard Starter Bundle
+								</h3>
+								<p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70">
 									Basic plus desk lamp, laundry set and a kitchen starter pack.
 								</p>
-								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
-								<a class="btn btn-sm" href="pages/products.html#parent-hub"
-									>See contents</a
-								>
+							</div>
+
+							<div class="relative mt-6 flex items-end justify-between gap-4">
+								<p class="text-2xl font-extrabold">R2 799</p>
+								<div class="flex items-center gap-2">
+									<a
+										href="pages/products.html#parent-hub"
+										aria-label="See Standard Bundle contents"
+										class="grid h-11 w-11 place-items-center rounded-full border border-[#0d1b3e]/25 text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</a>
+									<button
+										type="button"
+										data-add-to-cart
+										data-name="Standard Starter Bundle"
+										data-price="2799"
+										class="grid h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] transition hover:bg-[#1c3268]"
+										aria-label="Add Standard Starter Bundle to cart"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</button>
+								</div>
 							</div>
 						</article>
-						<!-- Creates the <article> HTML element. The class "card" connects it to CSS styling or JavaScript behaviour. -->
-						<article class="card">
-							<!-- Embeds an image; alt supplies a text alternative. The src attribute identifies the resource to load. The alt attribute describes the image for people using assistive technology or when the image cannot load. -->
-							<img
-								src="assets/images/second-hand/marketplace.jpg"
-								alt="Second-hand student items on display"
-								loading="lazy"
-								width="1200"
-								height="900"
-							/>
-							<!-- Groups related content so it can be arranged or styled together. The class "card-body" connects it to CSS styling or JavaScript behaviour. -->
-							<div class="card-body">
-								<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-used" connects it to CSS styling or JavaScript behaviour. -->
-								<!-- Row that holds the small status labels. -->
-								<div class="card-tags">
-									<span class="badge badge-used">Second-hand</span>
-									<!-- Groups a short piece of inline text for styling or scripting. The class "badge badge-verified" connects it to CSS styling or JavaScript behaviour. -->
-									<!-- Row that holds the small status labels. -->
-									<div class="card-tags">
-										<span class="badge badge-verified">Verified Seller</span>
-										<!-- Defines a third-level heading for a subsection or card. -->
-									</div>
-								</div>
-								<h3>Marketplace Picks</h3>
-								<!-- Creates a paragraph of text. The class "price" connects it to CSS styling or JavaScript behaviour. -->
-								<p class="price">From R180.00</p>
-								<!-- Creates a paragraph of text. -->
-								<p>
+
+						<!-- Card 03 — Warm cream / terracotta block -->
+						<article
+							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#f7eede] p-7 text-[#0d1b3e] shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
+						>
+							<div
+								aria-hidden="true"
+								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#c2572f]/15 blur-2xl"
+							></div>
+							<div
+								aria-hidden="true"
+								class="absolute -right-10 bottom-20 h-32 w-32 rounded-full border-2 border-dashed border-[#c2572f]/25"
+							></div>
+
+							<div class="relative flex items-center justify-between">
+								<span
+									class="rounded-full bg-[#c2572f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-white"
+									>Second-hand</span
+								>
+								<span
+									class="text-5xl font-black italic leading-none text-[#c2572f]/20 [font-family:'Playfair_Display',Georgia,serif]"
+									>03</span
+								>
+							</div>
+
+							<div class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56">
+								<img
+									src="https://picsum.photos/seed/cc-marketplace-pick1/480/480"
+									width="480"
+									height="480"
+									alt="A reviewed second-hand desk and chair"
+									loading="lazy"
+									class="absolute inset-0 aspect-square rounded-full object-cover ring-4 ring-white/70 shadow-lg"
+								/>
+								<img
+									src="https://picsum.photos/seed/cc-marketplace-pick2/320/320"
+									width="320"
+									height="320"
+									alt="A second-hand fridge in a residence kitchen"
+									loading="lazy"
+									class="absolute -bottom-2 -right-2 aspect-square w-24 rounded-full border-4 border-[#f7eede] object-cover shadow-lg animate-float sm:w-28"
+								/>
+								<span
+									class="absolute -left-1 top-3 grid h-10 w-10 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] shadow-md"
+								>
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+								</span>
+							</div>
+
+							<div class="relative mt-8 flex-1">
+								<h3
+									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
+								>
+									Marketplace Picks
+								</h3>
+								<p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70">
 									Reviewed fridges, desks, chairs and textbooks from graduating
 									students.
 								</p>
-								<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-sm" connects it to CSS styling or JavaScript behaviour. -->
-								<a class="btn btn-sm" href="pages/products.html#shop"
-									>Browse marketplace</a
-								>
+							</div>
+
+							<div class="relative mt-6 flex items-end justify-between gap-4">
+								<div>
+									<p
+										class="text-[11px] font-bold uppercase tracking-wider text-[#c2572f]"
+									>
+										Starting at
+									</p>
+									<p class="text-2xl font-extrabold">R180</p>
+								</div>
+								<div class="flex items-center gap-2">
+									<a
+										href="pages/products.html#shop"
+										aria-label="Browse marketplace"
+										class="grid h-11 w-11 place-items-center rounded-full border border-[#0d1b3e]/25 text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</a>
+									<button
+										type="button"
+										data-add-to-cart
+										data-name="Marketplace Pick"
+										data-price="180"
+										class="grid h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] transition hover:bg-[#1c3268]"
+										aria-label="Add a marketplace pick to cart"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</button>
+								</div>
 							</div>
 						</article>
 					</div>
-				</div>
-			</section>
-			<!-- Groups content that belongs to one topic or page section. The id "about-teaser" lets CSS or JavaScript identify this element. The class "section" connects it to CSS styling or JavaScript behaviour. -->
-			<section class="section" id="about-teaser">
-				<!-- Groups related content so it can be arranged or styled together. The class "wrap grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="wrap grid grid-2">
-					<!-- Groups related content so it can be arranged or styled together. -->
-					<div>
-						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
-						<span class="eyebrow">About us</span>
-						<!-- Defines a second-level heading for a major section. -->
-						<h2>Started in a res corridor in 2021</h2>
-						<!-- Creates a paragraph of text. -->
-						<p>
-							Campus-Cart began when a group of students resold their res kit
-							instead of throwing it away. Today we serve students aged 19–30
-							and the parents and guardians who fund them, across major South
-							African campuses.
-						</p>
-						<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-outline" connects it to CSS styling or JavaScript behaviour. -->
-						<a class="btn btn-outline" href="pages/about.html"
-							>Read our story</a
-						>
-					</div>
-					<!-- Groups related content so it can be arranged or styled together. The class "info-box" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="info-box">
-						<!-- Defines a third-level heading for a subsection or card. -->
-						<h3>Who we serve</h3>
-						<!-- Creates a paragraph of text. -->
-						<p>
-							<strong>Primary:</strong> tertiary students aged 19–30 living in
-							residence, digs or at home.
-						</p>
-						<!-- Creates a paragraph of text. -->
-						<p>
-							<strong>Secondary:</strong> parents and guardians budgeting for
-							registration season.
-						</p>
-					</div>
-				</div>
-			</section>
-			<!-- Groups content that belongs to one topic or page section. The id "get-in-touch" lets CSS or JavaScript identify this element. The class "section navy" connects it to CSS styling or JavaScript behaviour. -->
-			<section class="section navy" id="get-in-touch">
-				<!-- Groups related content so it can be arranged or styled together. The class "wrap" connects it to CSS styling or JavaScript behaviour. -->
-				<div class="wrap">
-					<!-- Groups related content so it can be arranged or styled together. The class "section-head" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="section-head">
-						<!-- Groups a short piece of inline text for styling or scripting. The class "eyebrow" connects it to CSS styling or JavaScript behaviour. -->
-						<span class="eyebrow">Get in touch</span>
-						<!-- Defines a second-level heading for a major section. -->
-						<h2>Questions before you buy?</h2>
-						<!-- Creates a paragraph of text. -->
-						<p>
-							Ask about a specific bundle, or reach the team about collection
-							points, payment plans and second-hand listings.
-						</p>
-					</div>
-					<!-- Groups related content so it can be arranged or styled together. The class "grid grid-2" connects it to CSS styling or JavaScript behaviour. -->
-					<div class="grid grid-2">
-						<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="split-card">
-							<!-- Defines a third-level heading for a subsection or card. -->
-							<h3>Pre-purchase enquiry</h3>
-							<!-- Creates a paragraph of text. -->
-							<p>
-								Reference a bundle or product and we will confirm availability
-								and collection options.
-							</p>
-							<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn" connects it to CSS styling or JavaScript behaviour. -->
-							<a class="btn" href="pages/enquiry.html">Send an enquiry</a>
-						</div>
-						<!-- Groups related content so it can be arranged or styled together. The class "split-card" connects it to CSS styling or JavaScript behaviour. -->
-						<div class="split-card">
-							<!-- Defines a third-level heading for a subsection or card. -->
-							<h3>General contact</h3>
-							<!-- Creates a paragraph of text. -->
-							<p>
-								Email or WhatsApp us, or find your nearest collection and office
-								location.
-							</p>
-							<!-- Creates a hyperlink; href sets the destination. The href attribute points to the specified page or resource. The class "btn btn-ghost-light" connects it to CSS styling or JavaScript behaviour. -->
-							<a class="btn btn-ghost-light" href="pages/contact.html"
-								>Contact us</a
+
+					<!-- Slim color-bar strip under the grid -->
+					<div
+						class="mt-8 flex flex-col items-center justify-between gap-4 rounded-full bg-[#0d1b3e] px-8 py-4 text-center sm:flex-row sm:text-left"
+					>
+						<p class="text-sm text-slate-300">
+							<span class="font-bold text-[#ffd23f]"
+								>Every second-hand item</span
 							>
+							is manually reviewed before it goes live.
+						</p>
+						<a
+							href="pages/products.html#sell-with-us"
+							class="inline-flex items-center gap-2 whitespace-nowrap text-sm font-bold text-white transition hover:text-[#ffd23f]"
+						>
+							Sell your kit
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== Parent Hub — full-bleed navy banner ===== -->
+			<section class="bg-[#0d1b3e] py-20 text-white">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div class="grid items-center gap-12 lg:grid-cols-2">
+						<div class="relative order-2 lg:order-1">
+							<div
+								aria-hidden="true"
+								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/20 blur-2xl"
+							></div>
+							<img
+								src="https://picsum.photos/seed/cc-checklist/900/1125"
+								alt="A first-year checklist on a desk next to study supplies"
+								width="900"
+								height="1125"
+								loading="lazy"
+								class="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-xl ring-8 ring-white/10"
+							/>
+							<div
+								class="absolute -bottom-5 left-6 rounded-2xl bg-[#ffd23f] p-4 text-[#0d1b3e] shadow-xl"
+							>
+								<p class="text-sm font-bold">Fixed-price bundles</p>
+								<p class="text-xs text-[#0d1b3e]/70">
+									No surprises at the till
+								</p>
+							</div>
+						</div>
+
+						<div class="order-1 lg:order-2">
+							<span
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
+								>Parent Hub</span
+							>
+							<h2
+								class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
+							>
+								Know exactly what you’re getting
+							</h2>
+							<p class="mt-4 text-slate-300">
+								The same way SoleStyle gives shoe shoppers fit confidence,
+								Campus-Cart gives parents and guardians item-level confidence
+								before registration week.
+							</p>
+
+							<ul class="mt-8 space-y-4">
+								<li class="flex items-start gap-3">
+									<span
+										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="h-3.5 w-3.5 text-[#0d1b3e]"
+										/>
+									</span>
+									<p class="text-sm text-slate-200">
+										<strong class="text-white">Fixed contents.</strong> Every
+										bundle lists each item and its total price before you order.
+									</p>
+								</li>
+								<li class="flex items-start gap-3">
+									<span
+										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="h-3.5 w-3.5 text-[#0d1b3e]"
+										/>
+									</span>
+									<p class="text-sm text-slate-200">
+										<strong class="text-white">Reviewed listings.</strong>
+										Second-hand items are manually checked by our team before
+										they go live.
+									</p>
+								</li>
+								<li class="flex items-start gap-3">
+									<span
+										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="h-3.5 w-3.5 text-[#0d1b3e]"
+										/>
+									</span>
+									<p class="text-sm text-slate-200">
+										<strong class="text-white">Safe collection.</strong>
+										Residence desks, campus points or secure lockers — never a
+										random street corner.
+									</p>
+								</li>
+								<li class="flex items-start gap-3">
+									<span
+										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
+									>
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="h-3.5 w-3.5 text-[#0d1b3e]"
+										/>
+									</span>
+									<p class="text-sm text-slate-200">
+										<strong class="text-white">EFT only.</strong> No card
+										details are ever handled on this site.
+									</p>
+								</li>
+							</ul>
+
+							<a
+								href="pages/products.html#parent-hub"
+								class="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:bg-[#ffdf5e]"
+							>
+								Open the Parent Hub
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== Brand story ===== -->
+			<section class="bg-white py-20">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div class="grid items-center gap-12 lg:grid-cols-2">
+						<div>
+							<span
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+								>Our story</span
+							>
+							<h2
+								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+							>
+								Started in a res corridor in 2021
+							</h2>
+							<p class="mt-4 text-slate-600">
+								Campus-Cart began when a group of students resold their res kit
+								instead of throwing it away. Today we serve students aged 19–30
+								and the parents and guardians who fund them, across major South
+								African campuses.
+							</p>
+							<a
+								href="pages/about.html"
+								class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0d1b3e] transition hover:text-[#c99700]"
+							>
+								Read our story
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+						</div>
+
+						<div class="grid grid-cols-2 gap-4">
+							<img
+								src="https://picsum.photos/seed/cc-students-corridor/600/750"
+								alt="Students talking in a university residence corridor"
+								width="600"
+								height="750"
+								loading="lazy"
+								class="aspect-[3/4] w-full rounded-3xl object-cover"
+							/>
+							<img
+								src="https://picsum.photos/seed/cc-students-campus/600/750"
+								alt="Students walking across a sunny campus"
+								width="600"
+								height="750"
+								loading="lazy"
+								class="mt-8 aspect-[3/4] w-full rounded-3xl object-cover"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== Lookbook gallery ===== -->
+			<section class="py-20">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div
+						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+					>
+						<div class="max-w-2xl">
+							<span
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+								>Lookbook</span
+							>
+							<h2
+								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+							>
+								Life on campus
+							</h2>
+						</div>
+						<a
+							href="pages/products.html#deals-gallery"
+							class="inline-flex items-center gap-2 text-sm font-bold text-[#0d1b3e] transition hover:text-[#c99700]"
+						>
+							View the gallery
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+								alt=""
+								class="h-4 w-4"
+							/>
+						</a>
+					</div>
+
+					<div
+						class="mt-10 grid auto-rows-[150px] grid-cols-2 gap-4 md:auto-rows-[180px] md:grid-cols-4"
+					>
+						<a
+							href="pages/products.html"
+							class="group relative col-span-2 row-span-2 overflow-hidden rounded-3xl"
+						>
+							<img
+								src="https://picsum.photos/seed/cc-res-living/1000/900"
+								alt="A cosy student residence room"
+								width="1000"
+								height="900"
+								loading="lazy"
+								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/70 to-transparent"
+							></div>
+							<span
+								class="absolute bottom-5 left-5 text-lg font-bold text-white"
+								>Res living</span
+							>
+						</a>
+
+						<a
+							href="pages/products.html"
+							class="group relative overflow-hidden rounded-3xl"
+						>
+							<img
+								src="https://picsum.photos/seed/cc-cafe/600/600"
+								alt="Students studying together in a campus cafe"
+								width="600"
+								height="600"
+								loading="lazy"
+								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
+							></div>
+							<span
+								class="absolute bottom-4 left-4 text-sm font-bold text-white"
+								>Campus crew</span
+							>
+						</a>
+
+						<a
+							href="pages/products.html"
+							class="group relative overflow-hidden rounded-3xl"
+						>
+							<img
+								src="https://picsum.photos/seed/cc-library/600/600"
+								alt="A student studying late in the library"
+								width="600"
+								height="600"
+								loading="lazy"
+								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
+							></div>
+							<span
+								class="absolute bottom-4 left-4 text-sm font-bold text-white"
+								>Late-night study</span
+							>
+						</a>
+
+						<a
+							href="pages/products.html#parent-hub"
+							class="group relative overflow-hidden rounded-3xl"
+						>
+							<img
+								src="https://picsum.photos/seed/cc-locker/600/600"
+								alt="A student collecting an order from a secure locker"
+								width="600"
+								height="600"
+								loading="lazy"
+								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
+							></div>
+							<span
+								class="absolute bottom-4 left-4 text-sm font-bold text-white"
+								>Locker drop</span
+							>
+						</a>
+
+						<a
+							href="pages/products.html#shop"
+							class="group relative overflow-hidden rounded-3xl"
+						>
+							<img
+								src="https://picsum.photos/seed/cc-moving-day/600/600"
+								alt="Students moving boxes into a residence on move-in day"
+								width="600"
+								height="600"
+								loading="lazy"
+								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
+							></div>
+							<span
+								class="absolute bottom-4 left-4 text-sm font-bold text-white"
+								>Moving day</span
+							>
+						</a>
+
+						<a
+							href="pages/products.html#sell-with-us"
+							class="group relative col-span-2 overflow-hidden rounded-3xl md:col-span-4"
+						>
+							<img
+								src="https://picsum.photos/seed/cc-graduation/1600/500"
+								alt="Graduation caps in the air on a campus lawn"
+								width="1600"
+								height="500"
+								loading="lazy"
+								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+							/>
+							<div
+								class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e]/80 via-[#0d1b3e]/40 to-transparent"
+							></div>
+							<span
+								class="absolute bottom-5 left-5 text-lg font-bold text-white"
+								>Graduation hand-me-downs — sell with us</span
+							>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== Testimonials ===== -->
+			<section class="bg-[#faf8f4] py-20">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div class="max-w-2xl">
+						<span
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+							>Student &amp; parent reviews</span
+						>
+						<h2
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+						>
+							Trusted on campus and at home
+						</h2>
+					</div>
+
+					<div class="mt-10 grid gap-6 md:grid-cols-3">
+						<figure
+							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+						>
+							<div
+								class="text-amber-400"
+								role="img"
+								aria-label="Rated 5 out of 5"
+							>
+								★★★★★
+							</div>
+							<blockquote class="mt-4 flex-1 text-slate-700">
+								“I sent the bundle list to my mom before registration — she
+								could see exactly what was included and what it cost. No awkward
+								‘how much was that?’ phone call.”
+							</blockquote>
+							<figcaption class="mt-6 flex items-center gap-3">
+								<img
+									src="https://i.pravatar.cc/80?u=naledi"
+									alt="Portrait of Naledi M."
+									class="h-11 w-11 rounded-full object-cover"
+								/>
+								<div>
+									<p class="font-bold text-[#0d1b3e]">Naledi M.</p>
+									<p class="text-sm text-slate-500">
+										Wits University, Johannesburg
+									</p>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure
+							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+						>
+							<div
+								class="text-amber-400"
+								role="img"
+								aria-label="Rated 5 out of 5"
+							>
+								★★★★★
+							</div>
+							<blockquote class="mt-4 flex-1 text-slate-700">
+								“The second-hand desk and fridge were exactly as described.
+								Collecting from the residence desk felt safe, and I saved almost
+								R2 000 compared to buying new.”
+							</blockquote>
+							<figcaption class="mt-6 flex items-center gap-3">
+								<img
+									src="https://i.pravatar.cc/80?u=pieter"
+									alt="Portrait of Pieter V."
+									class="h-11 w-11 rounded-full object-cover"
+								/>
+								<div>
+									<p class="font-bold text-[#0d1b3e]">Pieter V.</p>
+									<p class="text-sm text-slate-500">Stellenbosch University</p>
+								</div>
+							</figcaption>
+						</figure>
+
+						<figure
+							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
+						>
+							<div
+								class="text-amber-400"
+								role="img"
+								aria-label="Rated 5 out of 5"
+							>
+								★★★★★
+							</div>
+							<blockquote class="mt-4 flex-1 text-slate-700">
+								“As a parent, the fixed-price starter bundle took the guesswork
+								out of first-year budgeting. Delivery was on time and
+								communication was excellent.”
+							</blockquote>
+							<figcaption class="mt-6 flex items-center gap-3">
+								<img
+									src="https://i.pravatar.cc/80?u=amanda"
+									alt="Portrait of Amanda K."
+									class="h-11 w-11 rounded-full object-cover"
+								/>
+								<div>
+									<p class="font-bold text-[#0d1b3e]">Amanda K.</p>
+									<p class="text-sm text-slate-500">Parent, Pretoria</p>
+								</div>
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== Newsletter band (SoleStyle-style subscribe strip) ===== -->
+			<section class="bg-[#f7f5f1] pb-20">
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<div
+						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
+					>
+						<div
+							aria-hidden="true"
+							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"
+						></div>
+						<div
+							aria-hidden="true"
+							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
+						></div>
+
+						<div class="relative grid items-center gap-8 lg:grid-cols-2">
+							<div>
+								<span
+									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
+									>Stay in the loop</span
+								>
+								<h2
+									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
+								>
+									Get first dibs on
+									<span
+										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
+										>new season kit</span
+									>
+								</h2>
+								<p class="mt-3 text-sm text-slate-300">
+									One short email a month: new bundles, second-hand drops and
+									collection updates near your campus.
+								</p>
+							</div>
+
+							<form id="newsletterBandForm" class="w-full">
+								<div class="flex flex-col gap-3 sm:flex-row">
+									<label for="newsletterBandEmail" class="sr-only"
+										>Email address</label
+									>
+									<input
+										id="newsletterBandEmail"
+										type="email"
+										required
+										placeholder="you@example.com"
+										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
+									/>
+									<button
+										type="submit"
+										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
+									>
+										Join the list
+									</button>
+								</div>
+								<p class="mt-3 text-xs text-slate-400">
+									No spam. Unsubscribe any time.
+								</p>
+							</form>
 						</div>
 					</div>
 				</div>
 			</section>
 		</main>
-		<!-- Groups footer information, contact details, and secondary navigation. -->
-		<footer>
-			<!-- Groups related content so it can be arranged or styled together. The class "wrap footer-grid" connects it to CSS styling or JavaScript behaviour. -->
-			<div class="wrap footer-grid">
-				<!-- Groups related content so it can be arranged or styled together. -->
-				<div>
-					<!-- Defines a fourth-level heading for a smaller subsection. -->
-					<h3>Campus-Cart</h3>
-					<!-- Creates a paragraph of text. -->
-					<p>
-						Affordable new and second-hand student essentials for South African
-						campuses.
+
+		<!-- ===== Footer ===== -->
+		<footer class="bg-[#09122e] text-slate-300">
+			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+					<div>
+						<a
+							href="index.html"
+							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
+						>
+							<span
+								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]"
+								>C</span
+							>
+							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span>
+						</a>
+						<p class="mt-4 text-sm text-slate-400">
+							Affordable new and second-hand student essentials for South
+							African campuses.
+						</p>
+						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
+
+						<div class="mt-5 flex items-center gap-2">
+							<a
+								href="mailto:hello@campus-cart.co.za"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="Email Campus-Cart"
+							>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+							<a
+								href="https://wa.me/27123456789"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="WhatsApp Campus-Cart"
+							>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+							<a
+								href="pages/coverage.html"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="Coverage map"
+							>
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+						</div>
+					</div>
+
+					<div>
+						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+							Shop
+						</h3>
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<li>
+								<a
+									href="pages/products.html"
+									class="transition hover:text-[#ffd23f]"
+									>Shop New</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/products.html#shop"
+									class="transition hover:text-[#ffd23f]"
+									>Second-Hand</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/products.html#deals-gallery"
+									class="transition hover:text-[#ffd23f]"
+									>Deals &amp; Gallery</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/products.html#sell-with-us"
+									class="transition hover:text-[#ffd23f]"
+									>Sell With Us</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+							Company
+						</h3>
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<li>
+								<a
+									href="pages/about.html"
+									class="transition hover:text-[#ffd23f]"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/products.html#parent-hub"
+									class="transition hover:text-[#ffd23f]"
+									>Parent Hub</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/enquiry.html"
+									class="transition hover:text-[#ffd23f]"
+									>Enquiry</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/coverage.html"
+									class="transition hover:text-[#ffd23f]"
+									>Coverage</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/contact.html"
+									class="transition hover:text-[#ffd23f]"
+									>Contact</a
+								>
+							</li>
+							<li>
+								<a
+									href="pages/account.html"
+									class="transition hover:text-[#ffd23f]"
+									>Account</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+							Reach us
+						</h3>
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<li>
+								<a
+									href="mailto:hello@campus-cart.co.za"
+									class="transition hover:text-[#ffd23f]"
+									>hello@campus-cart.co.za</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://wa.me/27123456789"
+									class="transition hover:text-[#ffd23f]"
+									>WhatsApp: 012 345 6789</a
+								>
+							</li>
+							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="mt-12 border-t border-white/10 pt-8">
+					<p class="text-sm text-slate-400">
+						&copy; <span id="copyright-year"></span> Campus-Cart. Static demo
+						site — no payments are processed and no personal data is stored.
+					</p>
+					<p class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
+						<a href="pages/privacy.html" class="transition hover:text-[#ffd23f]"
+							>Privacy Policy</a
+						>
+						<span class="text-slate-600">|</span>
+						<a href="pages/terms.html" class="transition hover:text-[#ffd23f]"
+							>Terms &amp; Conditions</a
+						>
+						<span class="text-slate-600">|</span>
+						<a href="pages/cookies.html" class="transition hover:text-[#ffd23f]"
+							>Cookie Policy</a
+						>
+						<span class="text-slate-600">|</span>
+						<a href="pages/returns.html" class="transition hover:text-[#ffd23f]"
+							>Returns &amp; Delivery</a
+						>
 					</p>
 				</div>
-				<!-- Groups related content so it can be arranged or styled together. -->
-				<div>
-					<!-- Defines a fourth-level heading for a smaller subsection. -->
-					<h3>Shop</h3>
-					<!-- Starts an unordered (bulleted) list. -->
-					<ul>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/products.html">Shop New</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/products.html#shop">Second-Hand</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li>
-							<a href="pages/products.html#deals-gallery"
-								>Deals &amp; Gallery</a
-							>
-						</li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/products.html#sell-with-us">Sell With Us</a></li>
-					</ul>
-				</div>
-				<!-- Groups related content so it can be arranged or styled together. -->
-				<div>
-					<!-- Defines a fourth-level heading for a smaller subsection. -->
-					<h3>Company</h3>
-					<!-- Starts an unordered (bulleted) list. -->
-					<ul>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/about.html">About</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/products.html#parent-hub">Parent Hub</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/enquiry.html">Enquiry</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/coverage.html">Coverage</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/contact.html">Contact</a></li>
-						<!-- Defines one item in a list. The href attribute points to the specified page or resource. -->
-						<li><a href="pages/account.html">Account</a></li>
-					</ul>
-				</div>
-				<!-- Groups related content so it can be arranged or styled together. -->
-				<div>
-					<!-- Defines a fourth-level heading for a smaller subsection. -->
-					<h3>Reach us</h3>
-					<!-- Starts an unordered (bulleted) list. -->
-					<ul>
-						<!-- Defines one item in a list. The href attribute points to an email address. -->
-						<li>
-							<a href="mailto:hello@campus-cart.co.za"
-								>hello@campus-cart.co.za</a
-							>
-						</li>
-						<!-- Defines one item in a list. The href attribute points to an external webpage. -->
-						<li>
-							<a href="https://wa.me/27123456789">WhatsApp: 012 345 6789</a>
-						</li>
-						<!-- Defines one item in a list. -->
-						<li>Mon–Fri, 09:00–17:00 SAST</li>
-					</ul>
-				</div>
-			</div>
-			<!-- Groups related content so it can be arranged or styled together. The class "wrap footer-bottom" connects it to CSS styling or JavaScript behaviour. -->
-			<div class="wrap footer-bottom">
-				<!-- Legal links and the button that reopens the cookie choices. -->
-				<p class="footer-legal">
-					<a href="pages/privacy.html">Privacy Policy</a>
-					|
-					<a href="pages/terms.html">Terms &amp; Conditions</a>
-					|
-					<a href="pages/cookies.html">Cookie Policy</a>
-					|
-					<a href="pages/returns.html">Returns &amp; Delivery</a>
-					|
-					<button type="button" class="link-button" data-cookie-settings>
-						Cookie settings
-					</button>
-				</p>
-				<!-- Head office address. -->
-				<p>
-					Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, 0083.
-				</p>
-				<!-- Creates a paragraph of text. The href attribute points to the specified page or resource. -->
-				<p>
-					<a href="pages/about.html#licence">Licence and credits</a> |
-					<a href="sitemap.xml">Sitemap.xml</a>
-				</p>
-				<!-- Creates a paragraph of text. -->
-				<p>
-					&copy; <span id="copyright-year"></span> Campus-Cart. Static demo site
-					— no payments are processed and no personal data is stored.
-				</p>
 			</div>
 		</footer>
-		<!-- Loads the cookie and privacy choices before the other scripts. -->
-		<script src="assets/js/consent.js"></script>
-		<!-- Loads the interface helpers: sticky header shadow, back-to-top button and cart badge animation. -->
+
+		<!-- ===== Cart drawer ===== -->
+		<div
+			id="cartDrawer"
+			class="fixed inset-0 z-[80] hidden"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="cartTitle"
+		>
+			<div
+				class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm"
+				data-cart-close
+			></div>
+			<aside
+				class="absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-white shadow-2xl"
+			>
+				<div
+					class="flex items-center justify-between border-b border-slate-200 px-6 py-5"
+				>
+					<h2 id="cartTitle" class="text-lg font-extrabold text-[#0d1b3e]">
+						Your cart
+					</h2>
+					<button
+						type="button"
+						data-cart-close
+						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 text-slate-500 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]"
+						aria-label="Close cart"
+					>
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/x.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+					</button>
+				</div>
+
+				<div id="cartItems" class="flex-1 overflow-y-auto px-6 py-4"></div>
+
+				<div class="border-t border-slate-200 px-6 py-5">
+					<div class="flex items-center justify-between">
+						<span class="text-sm font-medium text-slate-500">Total</span>
+						<span id="cartTotal" class="text-xl font-extrabold text-[#0d1b3e]"
+							>R0</span
+						>
+					</div>
+					<p class="mt-1 text-xs text-slate-400">
+						No payment is processed on this demo site.
+					</p>
+					<a
+						href="pages/account.html#order"
+						class="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"
+					>
+						Go to order form
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+							alt=""
+							class="h-4 w-4"
+						/>
+					</a>
+				</div>
+			</aside>
+		</div>
+
+		<!-- Back to top -->
+		<button
+			id="toTop"
+			type="button"
+			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
+			aria-label="Back to top"
+		>
+			<img
+				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
+				alt=""
+				class="h-5 w-5"
+			/>
+		</button>
+
+		<!-- ===== Site script ===== -->
+		<script src="assets/js/data.js" defer></script>
 		<script src="assets/js/ui.js" defer></script>
-		<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
-		<script src="assets/js/script.js"></script>
-		<!-- Loads or contains JavaScript used by the webpage. The src attribute identifies the resource to load. -->
-		<script src="assets/js/features.js"></script>
+		<script src="assets/js/consent.js" defer></script>
+		<script src="assets/js/interactions.js" defer></script>
+		<script src="assets/js/forms.js" defer></script>
+		<script src="assets/js/features.js" defer></script>
+		<script src="assets/js/script.js" defer></script>
 	</body>
 </html>
