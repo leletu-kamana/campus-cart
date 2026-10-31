@@ -1646,3 +1646,138 @@ body {
     flex: 0 0 auto;
   }
 }
+
+
+/* ==========================================================
+   PRODUCTS PAGE — FINAL CARD AND CONTROL REFINEMENT
+   Consistent product cards and responsive action controls.
+   ========================================================== */
+
+/* Align the Shop tab pagination with the left edge of its product grid. */
+#shop [data-shop-pagination] {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+  margin-inline: 0;
+}
+#shop [data-shop-pagination] button {
+  display: inline-flex;
+  width: auto;
+  min-width: 9rem;
+  min-height: 2.75rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Give Shop New, Second-Hand and Deals cards the same sizing behaviour. */
+#panel-new .grid > article,
+#panel-used .mt-8.grid > article,
+#deals-gallery #deals-results > article {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  align-self: stretch;
+}
+#panel-new .grid > article > div:first-child,
+#panel-used .mt-8.grid > article > div:first-child,
+#deals-gallery #deals-results > article > div:first-child {
+  width: 100%;
+  overflow: hidden;
+}
+#panel-new .grid > article > div:first-child img,
+#panel-used .mt-8.grid > article > div:first-child img,
+#deals-gallery #deals-results > article > div:first-child img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+#panel-new .grid > article > div:last-child,
+#panel-used .mt-8.grid > article > div:last-child,
+#deals-gallery #deals-results > article > div:last-child {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+#panel-new .grid > article > div:last-child > div:last-child,
+#panel-used .mt-8.grid > article > div:last-child > div:last-child,
+#deals-gallery #deals-results > article > div:last-child > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+#panel-new .grid > article button,
+#panel-used .mt-8.grid > article button,
+#deals-gallery #deals-results > article button {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: normal;
+  text-align: center;
+}
+#panel-new .grid > article button img,
+#panel-used .mt-8.grid > article button img,
+#deals-gallery #deals-results > article button img {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;
+  object-fit: contain;
+}
+
+/* Phones: stack card actions for comfortable tapping and prevent overflow. */
+@media (max-width: 479px) {
+  #shop [data-shop-pagination] {
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  #shop [data-shop-pagination] button {
+    width: auto;
+    min-width: 8.5rem;
+    max-width: 100%;
+    flex: 0 1 auto;
+  }
+  #panel-new .grid > article > div:last-child > div:last-child,
+  #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+  #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #panel-new .grid > article button,
+  #panel-used .mt-8.grid > article button,
+  #deals-gallery #deals-results > article button {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+/* Tablets and desktops: keep action buttons side by side where space permits. */
+@media (min-width: 480px) {
+  #panel-new .grid > article > div:last-child > div:last-child,
+  #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+  #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #panel-new .grid > article button[data-add],
+  #panel-used .mt-8.grid > article button[data-add],
+  #deals-gallery #deals-results > article button[data-add] {
+    flex: 1 1 8rem;
+  }
+  #panel-new .grid > article button[data-quickview],
+  #panel-used .mt-8.grid > article button[data-quickview],
+  #deals-gallery #deals-results > article button[data-quickview] {
+    flex: 0 1 auto;
+  }
+}
