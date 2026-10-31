@@ -400,6 +400,9 @@
   });
 
   /* ----- Footer © year ----- */
+  const currentYear = new Date().getFullYear();
   const yearEl = $('#copyright-year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  const checklistYear = $('#checklist-copyright-year');
+  if (yearEl) yearEl.textContent = currentYear;
+  if (checklistYear) checklistYear.textContent = currentYear;
 })();
