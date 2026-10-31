@@ -387,6 +387,18 @@
     });
   });
 
+  /* ----- FAQ accordions: keep one answer open per FAQ group ----- */
+  $('details').forEach((detail) => {
+    detail.addEventListener('toggle', () => {
+      if (!detail.open) return;
+      const parent = detail.parentElement;
+      if (!parent) return;
+      Array.from(parent.children).forEach((sibling) => {
+        if (sibling !== detail && sibling.tagName === 'DETAILS' && sibling.open) sibling.open = false;
+      });
+    });
+  });
+
   /* ----- Footer © year ----- */
   const yearEl = $('#copyright-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
