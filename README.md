@@ -859,3 +859,11 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 - World Wide Web Consortium (n.d.) *Modal Dialog Pattern, ARIA Authoring Practices Guide*. Available at: https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/ (Accessed: 9 October 2026).
 
 - Dribbble (2026) *E-commerce and product card design collections*. Available at: https://dribbble.com/ (Accessed: 13 October 2026). Only listing text was readable; no designs were copied.
+
+
+## Changelog: external CSS and JavaScript
+
+- Every page's inline `<style type="text/tailwindcss">` block moved to `assets/css/style.css` (plain CSS, same `animate-*` class names).
+- Every page's inline `<script>` moved into `assets/js/`: `data.js`, `ui.js`, `consent.js`, `interactions.js`, `forms.js`, `features.js`, `game.js` (404 only), `script.js`. Load order matters (see any page's end of `<body>`).
+- Added from the earlier code, with matching styles in `assets/css/style.css`: cookie consent banner, page loader and transitions, Leaflet hub map (contact page), lightbox, product quick view, scroll reveal, step-by-step form gate, professional email format, stock.json availability, real product catalogue and photos.
+- Leaflet CSS and JS are linked on `pages/contact.html` only. The old `assets/css/styles.css` is no longer linked.
