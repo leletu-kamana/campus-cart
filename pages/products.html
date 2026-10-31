@@ -193,10 +193,13 @@
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
 					</div>
 
-					<a
-						href="account.html#order"
+					<button
+						id="cartButton"
+						type="button"
 						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
-						aria-label="Order / cart"
+						aria-label="Open shopping cart"
+						aria-controls="cartDrawer"
+						aria-expanded="false"
 					>
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
@@ -208,7 +211,7 @@
 							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
 							>0</span
 						>
-					</a>
+					</button>
 
 					<button
 						id="navToggle"
@@ -2008,7 +2011,7 @@
 						No payment is processed on this demo site.
 					</p>
 					<a
-						href="pages/account.html#order"
+						href="account.html#order"
 						class="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 					>
 						Go to order form
@@ -2042,19 +2045,7 @@
 			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300"
 		></div>
 
-		<!-- Back to top -->
-		<button
-			id="toTop"
-			type="button"
-			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
-			aria-label="Back to top"
-		>
-			<img
-				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
-				alt=""
-				class="h-5 w-5"
-			/>
-		</button>
+
 
 		<!-- ===== Site script ===== -->
 		<script src="../assets/js/data.js" defer></script>
