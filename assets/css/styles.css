@@ -1596,3 +1596,53 @@ html,
 body {
   overflow-x: clip;
 }
+
+
+/* ----- Products: left-aligned pagination and consistent card actions ----- */
+#shop [data-shop-pagination] {
+  justify-content: flex-start;
+}
+#shop [data-shop-pagination] button {
+  width: auto;
+  min-width: 9rem;
+}
+#panel-new .grid > article,
+#panel-used .mt-8.grid > article,
+#deals-gallery #deals-results > article {
+  display: flex;
+  height: 100%;
+  min-width: 0;
+  flex-direction: column;
+}
+#panel-new .grid > article > div:last-child,
+#panel-used .mt-8.grid > article > div:last-child,
+#deals-gallery #deals-results > article > div:last-child {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+#panel-new .grid > article > div:last-child > div:last-child,
+#panel-used .mt-8.grid > article > div:last-child > div:last-child,
+#deals-gallery #deals-results > article > div:last-child > div:last-child {
+  margin-top: auto;
+}
+#panel-new .grid > article button img,
+#panel-used .mt-8.grid > article button img,
+#deals-gallery #deals-results > article button img {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;
+  object-fit: contain;
+}
+@media (max-width: 479px) {
+  #shop [data-shop-pagination] {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #shop [data-shop-pagination] button {
+    width: auto;
+    min-width: 8.5rem;
+    flex: 0 0 auto;
+  }
+}
