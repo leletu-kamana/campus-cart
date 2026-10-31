@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () { // Run setup after t
     const enquiryForm = document.getElementById("enquiry-form"); // Get the enquiry form, or null if this page has none.
     const contactForm = document.getElementById("contact-form"); // Get the contact form, or null if this page has none.
 
+    // Disable browser pop-up validation; the custom JavaScript checks below control all errors.
+    if (enquiryForm) { enquiryForm.noValidate = true; }
+    if (contactForm) { contactForm.noValidate = true; }
+
     // Starts the enquiry code only if the enquiry form is on this page.
     if (enquiryForm) { // Begin this block of code.
         loadStockFromFile(); // Execute this statement to update state or produce a result.
@@ -398,10 +402,10 @@ function setupEnquiryForm(form) { // Begin this block of code.
             return enquirerType.value === "" ? "Please choose whether you are a student or a parent." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: name, label: "Full name", check: function () { // Begin this block of code.
-            return name.value.trim().length < 2 ? "Please enter your full name (at least 2 characters)." : ""; // Return the result to the code that called this function.
+            return name.value.trim().length < 2 || name.value.trim().length > 80 ? "Please enter a name between 2 and 80 characters." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: email, label: "Email address", check: function () { // Begin this block of code.
-            return !isValidEmail(email.value.trim()) ? "Please enter a valid email address, e.g. you@example.co.za." : ""; // Return the result to the code that called this function.
+            return email.value.trim().length > 120 || !isValidEmail(email.value.trim()) ? "Please enter a valid email address (maximum 120 characters)." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: item, label: "Bundle or product", check: function () { // Begin this block of code.
             return item.value === "" ? "Please choose a bundle or product." : ""; // Return the result to the code that called this function.
@@ -421,7 +425,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
         } }, // Close the current code block.
         { input: other, label: "Name of your institution", check: function () { // Begin this block of code.
             // If the institution is not on the list, the user must type its name.
-            return (institution.value === "My institution is not listed" && other.value.trim().length < 3) ? "Please type the name of your institution." : ""; // Return the result to the code that called this function.
+            return (institution.value === "My institution is not listed" && (other.value.trim().length < 3 || other.value.trim().length > 100)) ? "Please enter an institution name between 3 and 100 characters." : ""; // Return the result to the code that called this function.
         } } // Close the current code block.
     ]; // Finish this array or object definition.
 
@@ -639,17 +643,17 @@ function setupContactForm(form) { // Begin this block of code.
     // The fields in the order the visitor fills them in (see setupFormGate for how this list is used).
     const steps = [ // Declare a constant for use in this operation.
         { input: name, label: "Full name", check: function () { // Begin this block of code.
-            return name.value.trim().length < 2 ? "Please enter your full name (at least 2 characters)." : ""; // Return the result to the code that called this function.
+            return name.value.trim().length < 2 || name.value.trim().length > 80 ? "Please enter a name between 2 and 80 characters." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: email, label: "Email address", check: function () { // Begin this block of code.
-            return !isValidEmail(email.value.trim()) ? "Please enter a valid email address, e.g. you@example.co.za." : ""; // Return the result to the code that called this function.
+            return email.value.trim().length > 120 || !isValidEmail(email.value.trim()) ? "Please enter a valid email address (maximum 120 characters)." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: topic, label: "Topic", check: function () { // Begin this block of code.
             return topic.value === "" ? "Please choose a topic." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: order, label: "Order reference", check: function () { // Begin this block of code.
             // Optional, but if something is typed it must look like an order reference.
-            return (order.value.trim() !== "" && !/^[A-Za-z0-9#\- ]{3,30}$/.test(order.value.trim())) // Return the result to the code that called this function.
+            return (order.value.trim() !== "" && (order.value.trim().length > 30 || !/^[A-Za-z0-9#\- ]{3,30}$/.test(order.value.trim()))) // Return the result to the code that called this function.
                 ? "Use 3 to 30 letters, numbers, # or dashes, e.g. CC-1025." : ""; // Execute this statement to update state or produce a result.
         } }, // Close the current code block.
         { input: outcome, label: "What would you like us to do?", check: function () { // Begin this block of code.
@@ -661,12 +665,12 @@ function setupContactForm(form) { // Begin this block of code.
                 return "Please enter your phone number so we can call or WhatsApp you."; // Return the result to the code that called this function.
             } // Close this block or callback.
             // Otherwise optional, but if something is typed it must look like a valid number.
-            return (phone.value.trim() !== "" && !isValidPhone(phone.value.trim())) // Return the result to the code that called this function.
+            return (phone.value.trim() !== "" && (phone.value.trim().length > 20 || !isValidPhone(phone.value.trim()))) // Return the result to the code that called this function.
                 ? "Please enter a valid number, e.g. 082 000 0000 or +27 82 000 0000." : ""; // Execute this statement to update state or produce a result.
         } }, // Close the current code block.
         { input: message, label: "Message", check: function () { // Begin this block of code.
             // At least 10 characters so the message contains something useful.
-            return message.value.trim().length < 10 ? "Please type a message of at least 10 characters." : ""; // Return the result to the code that called this function.
+            return message.value.trim().length < 10 || message.value.trim().length > 1000 ? "Please enter a message between 10 and 1,000 characters." : ""; // Return the result to the code that called this function.
         } } // Close the current code block.
     ]; // Finish this array or object definition.
 
