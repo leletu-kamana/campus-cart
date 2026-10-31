@@ -291,6 +291,60 @@
         : '<p class="col-span-full rounded-2xl bg-white p-6 text-sm text-slate-500">No second-hand products are currently listed.</p>';
     }
 
+    // Add independent See More / See Less controls to both Section 1 shop tabs.
+    // Each tab starts with six products and reveals six more with every click.
+    const setupShopPagination = (grid, label) => {
+      if (!grid) return;
+
+      const products = Array.from(grid.children).filter((item) => item.tagName === 'ARTICLE');
+      if (products.length <= 6) return;
+
+      const controls = document.createElement('div');
+      controls.className = 'mt-8 flex flex-wrap items-center justify-center gap-3';
+      controls.setAttribute('data-shop-pagination', label);
+
+      const moreButton = document.createElement('button');
+      moreButton.type = 'button';
+      moreButton.className = 'inline-flex min-h-11 items-center justify-center rounded-full bg-[#0d1b3e] px-7 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]';
+      moreButton.textContent = 'See More';
+      moreButton.setAttribute('aria-label', 'See more ' + label + ' products');
+
+      const lessButton = document.createElement('button');
+      lessButton.type = 'button';
+      lessButton.className = 'inline-flex min-h-11 items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-bold text-[#0d1b3e] transition hover:border-[#0d1b3e]';
+      lessButton.textContent = 'See Less';
+      lessButton.setAttribute('aria-label', 'See fewer ' + label + ' products');
+      lessButton.hidden = true;
+
+      controls.append(moreButton, lessButton);
+      grid.insertAdjacentElement('afterend', controls);
+
+      let visibleCount = 6;
+      const renderShopProducts = () => {
+        products.forEach((product, index) => {
+          product.hidden = index >= visibleCount;
+        });
+        moreButton.hidden = visibleCount >= products.length;
+        lessButton.hidden = visibleCount <= 6;
+      };
+
+      moreButton.addEventListener('click', () => {
+        visibleCount = Math.min(visibleCount + 6, products.length);
+        renderShopProducts();
+      });
+
+      lessButton.addEventListener('click', () => {
+        visibleCount = 6;
+        renderShopProducts();
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      renderShopProducts();
+    };
+
+    setupShopPagination(newGrid, 'new');
+    setupShopPagination(usedGrid, 'second-hand');
+
     // Build category options from the catalogue so every category can be selected.
     if (categorySelect) {
       const selectedCategory = categorySelect.value || 'all';
