@@ -320,12 +320,17 @@
       grid.insertAdjacentElement('afterend', controls);
 
       let visibleCount = 6;
+      const setShopElementHidden = (element, shouldHide) => {
+        element.hidden = shouldHide;
+        element.classList.toggle('hidden', shouldHide);
+      };
+
       const renderShopProducts = () => {
         products.forEach((product, index) => {
-          product.hidden = index >= visibleCount;
+          setShopElementHidden(product, index >= visibleCount);
         });
-        moreButton.hidden = visibleCount >= products.length;
-        lessButton.hidden = visibleCount <= 6;
+        setShopElementHidden(moreButton, visibleCount >= products.length);
+        setShopElementHidden(lessButton, visibleCount <= 6);
       };
 
       moreButton.addEventListener('click', () => {
