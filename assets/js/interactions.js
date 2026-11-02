@@ -267,8 +267,9 @@
       '  <div class="mt-4 flex flex-1 flex-col">' +
       '    <div class="flex items-center justify-between gap-2"><h3 class="text-sm font-bold text-[#0d1b3e]">' + esc(product.name) + '</h3><span class="shrink-0 text-sm font-extrabold text-[#0d1b3e]">' + formatRand(product.price) + '</span></div>' +
       '    <p class="mt-1 text-xs text-slate-500">' + esc(product.desc) + '</p>' +
-      '    <div class="mt-4 flex flex-wrap gap-2">' +
-      '      <button type="button" data-add="' + esc(product.name) + '" data-price="' + Number(product.price) + '" aria-label="Add ' + esc(product.name) + ' to order summary" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"><img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-cart.svg" alt="" aria-hidden="true" class="h-4 w-4">Add to Order Summary</button>' +
+      '    <div class="mt-4 flex flex-wrap items-center gap-2">' +
+      '      <button type="button" data-add="' + esc(product.name) + '" data-price="' + Number(product.price) + '" aria-label="Add ' + esc(product.name) + ' to order summary" class="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"><img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-cart.svg" alt="" aria-hidden="true" class="h-4 w-4">Add to Order Summary</button>' +
+      '      <button type="button" data-add-to-wishlist data-name="' + esc(product.name) + '" data-price="' + Number(product.price) + '" aria-label="Add ' + esc(product.name) + ' to wishlist" aria-pressed="false" class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#0d1b3e]/25 bg-white text-xl text-[#0d1b3e] transition hover:border-[#0d1b3e] hover:bg-[#ffd23f]" ><span data-wishlist-icon aria-hidden="true">♡</span></button>' +
       '      <button type="button" data-quickview data-name="' + esc(product.name) + '" data-price="' + Number(product.price) + '" data-condition="' + esc(product.condition) + '" data-img="' + BASE + esc(product.img) + '" data-alt="' + esc(product.alt || product.name) + '" data-desc="' + esc(product.desc) + '" aria-label="View details for ' + esc(product.name) + '" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-4 py-2.5 text-sm font-semibold text-[#0d1b3e] transition hover:border-[#0d1b3e]"><img src="https://unpkg.com/lucide-static@1.44.0/icons/microscope.svg" alt="" aria-hidden="true" class="h-4 w-4">Quick view</button>' +
       '    </div>' +
       '  </div>' +
@@ -279,7 +280,10 @@
     const newGrid = $('#panel-new > .grid');
     const usedGrid = $('#panel-used .mt-8.grid');
     if (newGrid) {
-      const newProducts = DEALS.filter((product) => product.condition === 'new');
+      const newProducts = DEALS.filter((product) => product.condition === 'new').slice(0, 10);
+      newGrid.classList.add('cc-shop-new-marquee');
+      newGrid.setAttribute('tabindex', '0');
+      newGrid.setAttribute('aria-label', 'Shop New products. Scroll horizontally to browse up to ten products.');
       newGrid.innerHTML = newProducts.length
         ? newProducts.map(card).join('')
         : '<p class="col-span-full rounded-2xl bg-white p-6 text-sm text-slate-500">No new products are currently listed.</p>';
@@ -347,7 +351,7 @@
       renderShopProducts();
     };
 
-    setupShopPagination(newGrid, 'new');
+    // Shop New is a manual horizontal marquee (maximum ten products), not a See More list.
     setupShopPagination(usedGrid, 'second-hand');
 
     // Build category options from the catalogue so every category can be selected.
