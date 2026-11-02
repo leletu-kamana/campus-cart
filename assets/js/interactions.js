@@ -673,11 +673,21 @@
     });
   });
 
-  // ----- Print checklist -----
-  // undefined
+  // ----- Print checklist only -----
+  // Finds the checklist print control on the products page.
   const printBtn = $('#print-checklist');
-  // undefined
-  if (printBtn) printBtn.addEventListener('click', () => window.print());
+  // Adds a temporary print-mode class so the print stylesheet isolates the checklist.
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      document.body.classList.add('cc-print-checklist');
+      // Starts printing after the browser has applied the checklist-only print mode.
+      window.print();
+    });
+    // Removes the temporary print mode after the print dialog closes.
+    window.addEventListener('afterprint', () => {
+      document.body.classList.remove('cc-print-checklist');
+    });
+  }
 
   /* ===== 4. Coverage search ===== */
   // undefined
