@@ -65,6 +65,7 @@
         <span>Campus<span class="text-[#c99700]">-Cart</span></span>
       </a>
 
+      <!-- Provides navigation links for moving between pages or page sections. -->
       <nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
         <a href="../index.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Home</a>
         <a href="about.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">About</a>
@@ -100,6 +101,7 @@
     </div>
 
     <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+      <!-- Provides navigation links for moving between pages or page sections. -->
       <nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
         <a href="../index.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Home</a>
         <a href="about.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">About</a>
@@ -113,6 +115,7 @@
     </div>
   </header>
 
+  <!-- Contains the primary content of this page, separate from shared navigation and footer content. -->
   <main id="main" tabindex="-1">
 
     <!-- ===== Page hero ===== -->
@@ -121,6 +124,7 @@
       <div aria-hidden="true" class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"></div>
 
       <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <!-- Provides navigation links for moving between pages or page sections. -->
         <nav class="mb-6" aria-label="Breadcrumb">
           <ol class="flex items-center gap-2 text-sm text-slate-400">
             <li><a href="../index.html" class="transition hover:text-[#ffd23f]">Home</a></li>
@@ -154,6 +158,7 @@
               <h2 class="text-2xl font-extrabold text-[#0d1b3e] sm:text-3xl">General contact form</h2>
               <p class="mt-2 text-sm text-slate-500">We build the email from your answers. You then send it from your own email app.</p>
 
+              <!-- Form "contact-form": collects visitor input; associated JavaScript handles validation and submission behaviour. -->
               <form id="contact-form" class="mt-8 space-y-5">
                 <div class="grid gap-5 md:grid-cols-2">
                   <div>
@@ -488,6 +493,7 @@
               </p>
             </div>
 
+            <!-- Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. -->
             <form id="newsletterBandForm" class="w-full">
               <div class="flex flex-col gap-3 sm:flex-row">
                 <label for="newsletterBandEmail" class="sr-only">Email address</label>
