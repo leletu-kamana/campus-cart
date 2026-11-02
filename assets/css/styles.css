@@ -1986,7 +1986,8 @@ body {
   max-width: none;
   flex-wrap: nowrap !important;
   align-items: center;
-  animation: cc-brand-marquee-scroll 32s linear infinite;
+  animation: cc-brand-marquee-scroll 28s linear infinite;
+  animation-play-state: running;
   will-change: transform;
 }
 .cc-brand-marquee-group {
@@ -2001,9 +2002,7 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-@media (hover: hover) {
-  .cc-brand-marquee:hover .cc-brand-marquee-track { animation-play-state: paused; }
-}
+/* The brand / need ticker keeps moving automatically, including on hover. */
 @media (prefers-reduced-motion: reduce) {
   .cc-brand-marquee-track { animation: none !important; transform: none !important; }
   .cc-brand-marquee-viewport { overflow-x: auto; }
