@@ -9,100 +9,160 @@
 .leaflet-pane > canvas,
 .leaflet-zoom-box,
 .leaflet-image-layer,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-layer {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Sets the horizontal offset used to position the map layer. */
 	left: 0;
+	/* Sets the vertical offset used to position the map layer. */
 	top: 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container {
+	/* Controls how map content is clipped at the container boundary. */
 	overflow: hidden;
 	}
 .leaflet-tile,
 .leaflet-marker-icon,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-marker-shadow {
+	/* Sets the -webkit-user-select CSS property for this Leaflet map rule. */
 	-webkit-user-select: none;
+	/* Sets the -moz-user-select CSS property for this Leaflet map rule. */
 	   -moz-user-select: none;
+	/* Controls whether map content can be selected by the user. */
 	        user-select: none;
+	/* Sets the -webkit-user-drag CSS property for this Leaflet map rule. */
 	  -webkit-user-drag: none;
 	}
 /* Prevents IE11 from highlighting tiles in blue */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tile::selection {
+	/* Sets the background appearance behind map tiles or controls. */
 	background: transparent;
 }
 /* Safari renders non-retina tile on retina better with this, but Chrome is worse */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-safari .leaflet-tile {
+	/* Sets the image-rendering CSS property for this Leaflet map rule. */
 	image-rendering: -webkit-optimize-contrast;
 	}
 /* hack that prevents hw layers "stretching" when loading new tiles */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-safari .leaflet-tile-container {
+	/* Sets the width required by this map element or control. */
 	width: 1600px;
+	/* Sets the height required by this map element or control. */
 	height: 1600px;
+	/* Sets the -webkit-transform-origin CSS property for this Leaflet map rule. */
 	-webkit-transform-origin: 0 0;
+	/* Sets the origin around which the map element is transformed. */
 	transform-origin: 0 0;
 	}
 .leaflet-marker-icon,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-marker-shadow {
+	/* Controls whether and how the map element participates in layout. */
 	display: block;
 	}
 /* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
 /* .leaflet-container img: map is broken in FF if you have max-width: 100% on tiles */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container .leaflet-overlay-pane svg {
+	/* Sets the max-width CSS property for this Leaflet map rule. */
 	max-width: none !important;
+	/* Sets the max-height CSS property for this Leaflet map rule. */
 	max-height: none !important;
 	}
 .leaflet-container .leaflet-marker-pane img,
 .leaflet-container .leaflet-shadow-pane img,
 .leaflet-container .leaflet-tile-pane img,
 .leaflet-container img.leaflet-image-layer,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container .leaflet-tile {
+	/* Sets the max-width CSS property for this Leaflet map rule. */
 	max-width: none !important;
+	/* Sets the max-height CSS property for this Leaflet map rule. */
 	max-height: none !important;
+	/* Sets the width required by this map element or control. */
 	width: auto;
+	/* Sets inner spacing within the map element. */
 	padding: 0;
 	}
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container img.leaflet-tile {
 	/* See: https://bugs.chromium.org/p/chromium/issues/detail?id=600120 */
+	/* Sets the mix-blend-mode CSS property for this Leaflet map rule. */
 	mix-blend-mode: plus-lighter;
 }
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container.leaflet-touch-zoom {
+	/* Sets the -ms-touch-action CSS property for this Leaflet map rule. */
 	-ms-touch-action: pan-x pan-y;
+	/* Sets the touch-action CSS property for this Leaflet map rule. */
 	touch-action: pan-x pan-y;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container.leaflet-touch-drag {
+	/* Sets the -ms-touch-action CSS property for this Leaflet map rule. */
 	-ms-touch-action: pinch-zoom;
 	/* Fallback for FF which doesn't support pinch-zoom */
+	/* Sets the touch-action CSS property for this Leaflet map rule. */
 	touch-action: none;
+	/* Sets the touch-action CSS property for this Leaflet map rule. */
 	touch-action: pinch-zoom;
 }
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+	/* Sets the -ms-touch-action CSS property for this Leaflet map rule. */
 	-ms-touch-action: none;
+	/* Sets the touch-action CSS property for this Leaflet map rule. */
 	touch-action: none;
 }
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container {
+	/* Sets the -webkit-tap-highlight-color CSS property for this Leaflet map rule. */
 	-webkit-tap-highlight-color: transparent;
 }
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container a {
+	/* Sets the -webkit-tap-highlight-color CSS property for this Leaflet map rule. */
 	-webkit-tap-highlight-color: rgba(51, 181, 229, 0.4);
 }
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tile {
+	/* Sets the filter CSS property for this Leaflet map rule. */
 	filter: inherit;
+	/* Sets the visibility CSS property for this Leaflet map rule. */
 	visibility: hidden;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tile-loaded {
+	/* Sets the visibility CSS property for this Leaflet map rule. */
 	visibility: inherit;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-zoom-box {
+	/* Sets the width required by this map element or control. */
 	width: 0;
+	/* Sets the height required by this map element or control. */
 	height: 0;
+	/* Sets the -moz-box-sizing CSS property for this Leaflet map rule. */
 	-moz-box-sizing: border-box;
+	/* Controls how the element's dimensions include padding and borders. */
 	     box-sizing: border-box;
+	/* Controls the stacking order of map panes, tiles, markers and controls. */
 	z-index: 800;
 	}
 /* workaround for https://bugzilla.mozilla.org/show_bug.cgi?id=888319 */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-overlay-pane svg {
+	/* Sets the -moz-user-select CSS property for this Leaflet map rule. */
 	-moz-user-select: none;
+	/* Controls whether map content can be selected by the user. */
 	user-select: none;
 	}
 
@@ -118,125 +178,199 @@
 .leaflet-map-pane canvas { z-index: 100; }
 .leaflet-map-pane svg    { z-index: 200; }
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-vml-shape {
+	/* Sets the width required by this map element or control. */
 	width: 1px;
+	/* Sets the height required by this map element or control. */
 	height: 1px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .lvml {
+	/* Sets the behavior CSS property for this Leaflet map rule. */
 	behavior: url(#default#VML);
+	/* Controls whether and how the map element participates in layout. */
 	display: inline-block;
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
 	}
 
 
 /* control positioning */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: relative;
+	/* Controls the stacking order of map panes, tiles, markers and controls. */
 	z-index: 800;
 	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: auto;
 	}
 .leaflet-top,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bottom {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Controls the stacking order of map panes, tiles, markers and controls. */
 	z-index: 1000;
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: none;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-top {
+	/* Sets the vertical offset used to position the map layer. */
 	top: 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-right {
+	/* Sets the right-side offset used to align the map control or layer. */
 	right: 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bottom {
+	/* Sets the bottom offset used to align the map control or layer. */
 	bottom: 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-left {
+	/* Sets the horizontal offset used to position the map layer. */
 	left: 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control {
+	/* Sets the float CSS property for this Leaflet map rule. */
 	float: left;
+	/* Sets the clear CSS property for this Leaflet map rule. */
 	clear: both;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-right .leaflet-control {
+	/* Sets the float CSS property for this Leaflet map rule. */
 	float: right;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-top .leaflet-control {
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: 10px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bottom .leaflet-control {
+	/* Sets the margin-bottom CSS property for this Leaflet map rule. */
 	margin-bottom: 10px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-left .leaflet-control {
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: 10px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-right .leaflet-control {
+	/* Sets the margin-right CSS property for this Leaflet map rule. */
 	margin-right: 10px;
 	}
 
 
 /* zoom and fade animations */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-fade-anim .leaflet-popup {
+	/* Controls the transparency of the map layer or control. */
 	opacity: 0;
+	/* Sets the -webkit-transition CSS property for this Leaflet map rule. */
 	-webkit-transition: opacity 0.2s linear;
+	/* Sets the -moz-transition CSS property for this Leaflet map rule. */
 	   -moz-transition: opacity 0.2s linear;
+	/* Defines the visual transition used when map UI state changes. */
 	        transition: opacity 0.2s linear;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-fade-anim .leaflet-map-pane .leaflet-popup {
+	/* Controls the transparency of the map layer or control. */
 	opacity: 1;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-zoom-animated {
+	/* Sets the -webkit-transform-origin CSS property for this Leaflet map rule. */
 	-webkit-transform-origin: 0 0;
+	/* Sets the -ms-transform-origin CSS property for this Leaflet map rule. */
 	    -ms-transform-origin: 0 0;
+	/* Sets the origin around which the map element is transformed. */
 	        transform-origin: 0 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 svg.leaflet-zoom-animated {
+	/* Sets the will-change CSS property for this Leaflet map rule. */
 	will-change: transform;
 }
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-zoom-anim .leaflet-zoom-animated {
+	/* Sets the -webkit-transition CSS property for this Leaflet map rule. */
 	-webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1);
+	/* Sets the -moz-transition CSS property for this Leaflet map rule. */
 	   -moz-transition:    -moz-transform 0.25s cubic-bezier(0,0,0.25,1);
+	/* Defines the visual transition used when map UI state changes. */
 	        transition:         transform 0.25s cubic-bezier(0,0,0.25,1);
 	}
 .leaflet-zoom-anim .leaflet-tile,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-pan-anim .leaflet-tile {
+	/* Sets the -webkit-transition CSS property for this Leaflet map rule. */
 	-webkit-transition: none;
+	/* Sets the -moz-transition CSS property for this Leaflet map rule. */
 	   -moz-transition: none;
+	/* Defines the visual transition used when map UI state changes. */
 	        transition: none;
 	}
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-zoom-anim .leaflet-zoom-hide {
+	/* Sets the visibility CSS property for this Leaflet map rule. */
 	visibility: hidden;
 	}
 
 
 /* cursors */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-interactive {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: pointer;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-grab {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: -webkit-grab;
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor:    -moz-grab;
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor:         grab;
 	}
 .leaflet-crosshair,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-crosshair .leaflet-interactive {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: crosshair;
 	}
 .leaflet-popup-pane,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: auto;
 	}
 .leaflet-dragging .leaflet-grab,
 .leaflet-dragging .leaflet-grab .leaflet-interactive,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-dragging .leaflet-marker-draggable {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: move;
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: -webkit-grabbing;
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor:    -moz-grabbing;
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor:         grabbing;
 	}
 
@@ -245,411 +379,678 @@ svg.leaflet-zoom-animated {
 .leaflet-marker-shadow,
 .leaflet-image-layer,
 .leaflet-pane > svg path,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tile-container {
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: none;
 	}
 
 .leaflet-marker-icon.leaflet-interactive,
 .leaflet-image-layer.leaflet-interactive,
 .leaflet-pane > svg path.leaflet-interactive,
+/* Leaflet rule: applies the following map styling to the selector group. */
 svg.leaflet-image-layer.leaflet-interactive path {
 	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: auto;
 	}
 
 /* visual tweaks */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container {
+	/* Sets the background appearance behind map tiles or controls. */
 	background: #ddd;
+	/* Sets the outline-offset CSS property for this Leaflet map rule. */
 	outline-offset: 1px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container a {
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #0078A8;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-zoom-box {
+	/* Sets the boundary styling around the map element. */
 	border: 2px dotted #38f;
+	/* Sets the background appearance behind map tiles or controls. */
 	background: rgba(255,255,255,0.5);
 	}
 
 
 /* general typography */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container {
+	/* Sets the font-family CSS property for this Leaflet map rule. */
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+	/* Sets the text size used by the map control. */
 	font-size: 12px;
+	/* Sets the text size used by the map control. */
 	font-size: 0.75rem;
+	/* Controls vertical spacing of text in the map control. */
 	line-height: 1.5;
 	}
 
 
 /* general toolbar styles */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bar {
+	/* Adds depth around the map control or overlay. */
 	box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+	/* Rounds the corners of the map element. */
 	border-radius: 4px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bar a {
+	/* Sets the background colour of the map element. */
 	background-color: #fff;
+	/* Sets the border-bottom CSS property for this Leaflet map rule. */
 	border-bottom: 1px solid #ccc;
+	/* Sets the width required by this map element or control. */
 	width: 26px;
+	/* Sets the height required by this map element or control. */
 	height: 26px;
+	/* Controls vertical spacing of text in the map control. */
 	line-height: 26px;
+	/* Controls whether and how the map element participates in layout. */
 	display: block;
+	/* Aligns text within the map control. */
 	text-align: center;
+	/* Sets the text-decoration CSS property for this Leaflet map rule. */
 	text-decoration: none;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: black;
 	}
 .leaflet-bar a,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-toggle {
+	/* Sets the background-position CSS property for this Leaflet map rule. */
 	background-position: 50% 50%;
+	/* Sets the background-repeat CSS property for this Leaflet map rule. */
 	background-repeat: no-repeat;
+	/* Controls whether and how the map element participates in layout. */
 	display: block;
 	}
 .leaflet-bar a:hover,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bar a:focus {
+	/* Sets the background colour of the map element. */
 	background-color: #f4f4f4;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bar a:first-child {
+	/* Sets the border-top-left-radius CSS property for this Leaflet map rule. */
 	border-top-left-radius: 4px;
+	/* Sets the border-top-right-radius CSS property for this Leaflet map rule. */
 	border-top-right-radius: 4px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bar a:last-child {
+	/* Sets the border-bottom-left-radius CSS property for this Leaflet map rule. */
 	border-bottom-left-radius: 4px;
+	/* Sets the border-bottom-right-radius CSS property for this Leaflet map rule. */
 	border-bottom-right-radius: 4px;
+	/* Sets the border-bottom CSS property for this Leaflet map rule. */
 	border-bottom: none;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bar a.leaflet-disabled {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: default;
+	/* Sets the background colour of the map element. */
 	background-color: #f4f4f4;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #bbb;
 	}
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-bar a {
+	/* Sets the width required by this map element or control. */
 	width: 30px;
+	/* Sets the height required by this map element or control. */
 	height: 30px;
+	/* Controls vertical spacing of text in the map control. */
 	line-height: 30px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-bar a:first-child {
+	/* Sets the border-top-left-radius CSS property for this Leaflet map rule. */
 	border-top-left-radius: 2px;
+	/* Sets the border-top-right-radius CSS property for this Leaflet map rule. */
 	border-top-right-radius: 2px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-bar a:last-child {
+	/* Sets the border-bottom-left-radius CSS property for this Leaflet map rule. */
 	border-bottom-left-radius: 2px;
+	/* Sets the border-bottom-right-radius CSS property for this Leaflet map rule. */
 	border-bottom-right-radius: 2px;
 	}
 
 /* zoom control */
 
 .leaflet-control-zoom-in,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-zoom-out {
+	/* Sets the font CSS property for this Leaflet map rule. */
 	font: bold 18px 'Lucida Console', Monaco, monospace;
+	/* Sets the text-indent CSS property for this Leaflet map rule. */
 	text-indent: 1px;
 	}
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out  {
+	/* Sets the text size used by the map control. */
 	font-size: 22px;
 	}
 
 
 /* layers control */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers {
+	/* Adds depth around the map control or overlay. */
 	box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+	/* Sets the background appearance behind map tiles or controls. */
 	background: #fff;
+	/* Rounds the corners of the map element. */
 	border-radius: 5px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-toggle {
+	/* Sets the background-image CSS property for this Leaflet map rule. */
 	background-image: url(images/layers.png);
+	/* Sets the width required by this map element or control. */
 	width: 36px;
+	/* Sets the height required by this map element or control. */
 	height: 36px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-retina .leaflet-control-layers-toggle {
+	/* Sets the background-image CSS property for this Leaflet map rule. */
 	background-image: url(images/layers-2x.png);
+	/* Sets the background-size CSS property for this Leaflet map rule. */
 	background-size: 26px 26px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-control-layers-toggle {
+	/* Sets the width required by this map element or control. */
 	width: 44px;
+	/* Sets the height required by this map element or control. */
 	height: 44px;
 	}
 .leaflet-control-layers .leaflet-control-layers-list,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
+	/* Controls whether and how the map element participates in layout. */
 	display: none;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
+	/* Controls whether and how the map element participates in layout. */
 	display: block;
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: relative;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-expanded {
+	/* Sets inner spacing within the map element. */
 	padding: 6px 10px 6px 6px;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #333;
+	/* Sets the background appearance behind map tiles or controls. */
 	background: #fff;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-scrollbar {
+	/* Sets the overflow-y CSS property for this Leaflet map rule. */
 	overflow-y: scroll;
+	/* Sets the overflow-x CSS property for this Leaflet map rule. */
 	overflow-x: hidden;
+	/* Sets the padding-right CSS property for this Leaflet map rule. */
 	padding-right: 5px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-selector {
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: 2px;
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: relative;
+	/* Sets the vertical offset used to position the map layer. */
 	top: 1px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers label {
+	/* Controls whether and how the map element participates in layout. */
 	display: block;
+	/* Sets the text size used by the map control. */
 	font-size: 13px;
+	/* Sets the text size used by the map control. */
 	font-size: 1.08333em;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-layers-separator {
+	/* Sets the height required by this map element or control. */
 	height: 0;
+	/* Sets the border-top CSS property for this Leaflet map rule. */
 	border-top: 1px solid #ddd;
+	/* Sets outer spacing around the map element. */
 	margin: 5px -10px 5px -6px;
 	}
 
 /* Default icon URLs */
 .leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+	/* Sets the background-image CSS property for this Leaflet map rule. */
 	background-image: url(images/marker-icon.png);
 	}
 
 
 /* attribution and scale controls */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container .leaflet-control-attribution {
+	/* Sets the background appearance behind map tiles or controls. */
 	background: #fff;
+	/* Sets the background appearance behind map tiles or controls. */
 	background: rgba(255, 255, 255, 0.8);
+	/* Sets outer spacing around the map element. */
 	margin: 0;
 	}
 .leaflet-control-attribution,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-scale-line {
+	/* Sets inner spacing within the map element. */
 	padding: 0 5px;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #333;
+	/* Controls vertical spacing of text in the map control. */
 	line-height: 1.4;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-attribution a {
+	/* Sets the text-decoration CSS property for this Leaflet map rule. */
 	text-decoration: none;
 	}
 .leaflet-control-attribution a:hover,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-attribution a:focus {
+	/* Sets the text-decoration CSS property for this Leaflet map rule. */
 	text-decoration: underline;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-attribution-flag {
+	/* Controls whether and how the map element participates in layout. */
 	display: inline !important;
+	/* Aligns inline map content vertically. */
 	vertical-align: baseline !important;
+	/* Sets the width required by this map element or control. */
 	width: 1em;
+	/* Sets the height required by this map element or control. */
 	height: 0.6669em;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-left .leaflet-control-scale {
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: 5px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-bottom .leaflet-control-scale {
+	/* Sets the margin-bottom CSS property for this Leaflet map rule. */
 	margin-bottom: 5px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-scale-line {
+	/* Sets the boundary styling around the map element. */
 	border: 2px solid #777;
+	/* Sets the border-top CSS property for this Leaflet map rule. */
 	border-top: none;
+	/* Controls vertical spacing of text in the map control. */
 	line-height: 1.1;
+	/* Sets inner spacing within the map element. */
 	padding: 2px 5px 1px;
+	/* Controls wrapping of text in the map control. */
 	white-space: nowrap;
+	/* Sets the -moz-box-sizing CSS property for this Leaflet map rule. */
 	-moz-box-sizing: border-box;
+	/* Controls how the element's dimensions include padding and borders. */
 	     box-sizing: border-box;
+	/* Sets the background appearance behind map tiles or controls. */
 	background: rgba(255, 255, 255, 0.8);
+	/* Sets the text-shadow CSS property for this Leaflet map rule. */
 	text-shadow: 1px 1px #fff;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-scale-line:not(:first-child) {
+	/* Sets the border-top CSS property for this Leaflet map rule. */
 	border-top: 2px solid #777;
+	/* Sets the border-bottom CSS property for this Leaflet map rule. */
 	border-bottom: none;
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: -2px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-control-scale-line:not(:first-child):not(:last-child) {
+	/* Sets the border-bottom CSS property for this Leaflet map rule. */
 	border-bottom: 2px solid #777;
 	}
 
 .leaflet-touch .leaflet-control-attribution,
 .leaflet-touch .leaflet-control-layers,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-bar {
+	/* Adds depth around the map control or overlay. */
 	box-shadow: none;
 	}
 .leaflet-touch .leaflet-control-layers,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-touch .leaflet-bar {
+	/* Sets the boundary styling around the map element. */
 	border: 2px solid rgba(0,0,0,0.2);
+	/* Sets the background-clip CSS property for this Leaflet map rule. */
 	background-clip: padding-box;
 	}
 
 
 /* popup */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Aligns text within the map control. */
 	text-align: center;
+	/* Sets the margin-bottom CSS property for this Leaflet map rule. */
 	margin-bottom: 20px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-content-wrapper {
+	/* Sets inner spacing within the map element. */
 	padding: 1px;
+	/* Aligns text within the map control. */
 	text-align: left;
+	/* Rounds the corners of the map element. */
 	border-radius: 12px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-content {
+	/* Sets outer spacing around the map element. */
 	margin: 13px 24px 13px 20px;
+	/* Controls vertical spacing of text in the map control. */
 	line-height: 1.3;
+	/* Sets the text size used by the map control. */
 	font-size: 13px;
+	/* Sets the text size used by the map control. */
 	font-size: 1.08333em;
+	/* Sets the min-height CSS property for this Leaflet map rule. */
 	min-height: 1px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-content p {
+	/* Sets outer spacing around the map element. */
 	margin: 17px 0;
+	/* Sets outer spacing around the map element. */
 	margin: 1.3em 0;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-tip-container {
+	/* Sets the width required by this map element or control. */
 	width: 40px;
+	/* Sets the height required by this map element or control. */
 	height: 20px;
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Sets the horizontal offset used to position the map layer. */
 	left: 50%;
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: -1px;
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: -20px;
+	/* Controls how map content is clipped at the container boundary. */
 	overflow: hidden;
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: none;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-tip {
+	/* Sets the width required by this map element or control. */
 	width: 17px;
+	/* Sets the height required by this map element or control. */
 	height: 17px;
+	/* Sets inner spacing within the map element. */
 	padding: 1px;
 
+	/* Sets outer spacing around the map element. */
 	margin: -10px auto 0;
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: auto;
 
+	/* Sets the -webkit-transform CSS property for this Leaflet map rule. */
 	-webkit-transform: rotate(45deg);
+	/* Sets the -moz-transform CSS property for this Leaflet map rule. */
 	   -moz-transform: rotate(45deg);
+	/* Sets the -ms-transform CSS property for this Leaflet map rule. */
 	    -ms-transform: rotate(45deg);
+	/* Applies the coordinate or visual transformation used for map positioning. */
 	        transform: rotate(45deg);
 	}
 .leaflet-popup-content-wrapper,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-tip {
+	/* Sets the background appearance behind map tiles or controls. */
 	background: white;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #333;
+	/* Adds depth around the map control or overlay. */
 	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container a.leaflet-popup-close-button {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Sets the vertical offset used to position the map layer. */
 	top: 0;
+	/* Sets the right-side offset used to align the map control or layer. */
 	right: 0;
+	/* Sets the boundary styling around the map element. */
 	border: none;
+	/* Aligns text within the map control. */
 	text-align: center;
+	/* Sets the width required by this map element or control. */
 	width: 24px;
+	/* Sets the height required by this map element or control. */
 	height: 24px;
+	/* Sets the font CSS property for this Leaflet map rule. */
 	font: 16px/24px Tahoma, Verdana, sans-serif;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #757575;
+	/* Sets the text-decoration CSS property for this Leaflet map rule. */
 	text-decoration: none;
+	/* Sets the background appearance behind map tiles or controls. */
 	background: transparent;
 	}
 .leaflet-container a.leaflet-popup-close-button:hover,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-container a.leaflet-popup-close-button:focus {
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #585858;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-popup-scrolled {
+	/* Controls how map content is clipped at the container boundary. */
 	overflow: auto;
 	}
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-oldie .leaflet-popup-content-wrapper {
+	/* Sets the -ms-zoom CSS property for this Leaflet map rule. */
 	-ms-zoom: 1;
+	/* Sets the zoom CSS property for this Leaflet map rule. */
 	zoom: 1;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-oldie .leaflet-popup-tip {
+	/* Sets the width required by this map element or control. */
 	width: 24px;
+	/* Sets outer spacing around the map element. */
 	margin: 0 auto;
 
+	/* Sets the -ms-filter CSS property for this Leaflet map rule. */
 	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)";
+	/* Sets the filter CSS property for this Leaflet map rule. */
 	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678);
 	}
 
 .leaflet-oldie .leaflet-control-zoom,
 .leaflet-oldie .leaflet-control-layers,
 .leaflet-oldie .leaflet-popup-content-wrapper,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-oldie .leaflet-popup-tip {
+	/* Sets the boundary styling around the map element. */
 	border: 1px solid #999;
 	}
 
 
 /* div icon */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-div-icon {
+	/* Sets the background appearance behind map tiles or controls. */
 	background: #fff;
+	/* Sets the boundary styling around the map element. */
 	border: 1px solid #666;
 	}
 
 
 /* Tooltip */
 /* Base styles for the element that has a tooltip */
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Sets inner spacing within the map element. */
 	padding: 6px;
+	/* Sets the background colour of the map element. */
 	background-color: #fff;
+	/* Sets the boundary styling around the map element. */
 	border: 1px solid #fff;
+	/* Rounds the corners of the map element. */
 	border-radius: 3px;
+	/* Sets the color CSS property for this Leaflet map rule. */
 	color: #222;
+	/* Controls wrapping of text in the map control. */
 	white-space: nowrap;
+	/* Sets the -webkit-user-select CSS property for this Leaflet map rule. */
 	-webkit-user-select: none;
+	/* Sets the -moz-user-select CSS property for this Leaflet map rule. */
 	-moz-user-select: none;
+	/* Sets the -ms-user-select CSS property for this Leaflet map rule. */
 	-ms-user-select: none;
+	/* Controls whether map content can be selected by the user. */
 	user-select: none;
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: none;
+	/* Adds depth around the map control or overlay. */
 	box-shadow: 0 1px 3px rgba(0,0,0,0.4);
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip.leaflet-interactive {
+	/* Sets the pointer appearance for the map interaction target. */
 	cursor: pointer;
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: auto;
 	}
 .leaflet-tooltip-top:before,
 .leaflet-tooltip-bottom:before,
 .leaflet-tooltip-left:before,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-right:before {
+	/* Controls how this map layer is positioned within its containing pane. */
 	position: absolute;
+	/* Controls whether the element receives pointer interaction. */
 	pointer-events: none;
+	/* Sets the boundary styling around the map element. */
 	border: 6px solid transparent;
+	/* Sets the background appearance behind map tiles or controls. */
 	background: transparent;
+	/* Provides generated content used by a map control or marker decoration. */
 	content: "";
 	}
 
 /* Directions */
 
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-bottom {
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: 6px;
 }
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-top {
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: -6px;
 }
 .leaflet-tooltip-bottom:before,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-top:before {
+	/* Sets the horizontal offset used to position the map layer. */
 	left: 50%;
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: -6px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-top:before {
+	/* Sets the bottom offset used to align the map control or layer. */
 	bottom: 0;
+	/* Sets the margin-bottom CSS property for this Leaflet map rule. */
 	margin-bottom: -12px;
+	/* Sets the border-top-color CSS property for this Leaflet map rule. */
 	border-top-color: #fff;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-bottom:before {
+	/* Sets the vertical offset used to position the map layer. */
 	top: 0;
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: -12px;
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: -6px;
+	/* Sets the border-bottom-color CSS property for this Leaflet map rule. */
 	border-bottom-color: #fff;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-left {
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: -6px;
 }
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-right {
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: 6px;
 }
 .leaflet-tooltip-left:before,
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-right:before {
+	/* Sets the vertical offset used to position the map layer. */
 	top: 50%;
+	/* Sets the margin-top CSS property for this Leaflet map rule. */
 	margin-top: -6px;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-left:before {
+	/* Sets the right-side offset used to align the map control or layer. */
 	right: 0;
+	/* Sets the margin-right CSS property for this Leaflet map rule. */
 	margin-right: -12px;
+	/* Sets the border-left-color CSS property for this Leaflet map rule. */
 	border-left-color: #fff;
 	}
+/* Leaflet rule: applies the following map styling to the selector group. */
 .leaflet-tooltip-right:before {
+	/* Sets the horizontal offset used to position the map layer. */
 	left: 0;
+	/* Sets the margin-left CSS property for this Leaflet map rule. */
 	margin-left: -12px;
+	/* Sets the border-right-color CSS property for this Leaflet map rule. */
 	border-right-color: #fff;
 	}
 
@@ -657,8 +1058,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 @media print {
 	/* Prevent printers from removing background-images of controls. */
+/* Leaflet rule: applies the following map styling to the selector group. */
 	.leaflet-control {
+	/* Sets the -webkit-print-color-adjust CSS property for this Leaflet map rule. */
 		-webkit-print-color-adjust: exact;
+	/* Sets the print-color-adjust CSS property for this Leaflet map rule. */
 		print-color-adjust: exact;
 		}
 	}
