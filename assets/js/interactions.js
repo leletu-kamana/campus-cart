@@ -297,64 +297,42 @@
     // Apply saved wishlist state to cards that were just rendered.
     CC.updateWishlistBadge();
 
-    // Add independent See More / See Less controls to both Section 1 shop tabs.
-    // Each tab starts with six products and reveals six more with every click.
-    const setupShopPagination = (grid, label) => {
+    // Give Shop New and Second-Hand the same manually controlled horizontal carousel.
+    const setupShopCarousel = (grid, label) => {
       if (!grid) return;
 
-      const products = Array.from(grid.children).filter((item) => item.tagName === 'ARTICLE');
-      if (products.length <= 6) return;
+      grid.classList.add('cc-shop-carousel');
+      grid.setAttribute('tabindex', '0');
+      grid.setAttribute('aria-label', label + ' products. Use the arrow buttons or horizontal scrolling to browse.');
 
       const controls = document.createElement('div');
-      controls.className = 'mt-8 flex flex-wrap items-center justify-start gap-3';
-      controls.setAttribute('data-shop-pagination', label);
+      controls.className = 'cc-shop-carousel-controls';
+      controls.setAttribute('role', 'group');
+      controls.setAttribute('aria-label', label + ' carousel controls');
 
-      const moreButton = document.createElement('button');
-      moreButton.type = 'button';
-      moreButton.className = 'inline-flex min-h-11 items-center justify-center rounded-full bg-[#0d1b3e] px-7 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]';
-      moreButton.textContent = 'See More';
-      moreButton.setAttribute('aria-label', 'See more ' + label + ' products');
-
-      const lessButton = document.createElement('button');
-      lessButton.type = 'button';
-      lessButton.className = 'inline-flex min-h-11 items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-bold text-[#0d1b3e] transition hover:border-[#0d1b3e]';
-      lessButton.textContent = 'See Less';
-      lessButton.setAttribute('aria-label', 'See fewer ' + label + ' products');
-      lessButton.hidden = true;
-
-      controls.append(moreButton, lessButton);
-      grid.insertAdjacentElement('afterend', controls);
-
-      let visibleCount = 6;
-      const setShopElementHidden = (element, shouldHide) => {
-        element.hidden = shouldHide;
-        element.classList.toggle('hidden', shouldHide);
-      };
-
-      const renderShopProducts = () => {
-        products.forEach((product, index) => {
-          setShopElementHidden(product, index >= visibleCount);
+      const makeArrow = (direction, icon, accessibleLabel) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'cc-shop-carousel-arrow';
+        button.setAttribute('aria-label', accessibleLabel);
+        button.innerHTML = '<img src="https://unpkg.com/lucide-static@1.44.0/icons/' + icon + '.svg" alt="" aria-hidden="true">';
+        button.addEventListener('click', () => {
+          const firstCard = grid.querySelector('article');
+          const distance = firstCard ? firstCard.getBoundingClientRect().width + 16 : grid.clientWidth * 0.8;
+          grid.scrollBy({ left: direction * distance, behavior: 'smooth' });
         });
-        setShopElementHidden(moreButton, visibleCount >= products.length);
-        setShopElementHidden(lessButton, visibleCount <= 6);
+        return button;
       };
 
-      moreButton.addEventListener('click', () => {
-        visibleCount = Math.min(visibleCount + 6, products.length);
-        renderShopProducts();
-      });
-
-      lessButton.addEventListener('click', () => {
-        visibleCount = 6;
-        renderShopProducts();
-        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-
-      renderShopProducts();
+      controls.append(
+        makeArrow(-1, 'chevron-left', 'Scroll ' + label + ' products left'),
+        makeArrow(1, 'chevron-right', 'Scroll ' + label + ' products right')
+      );
+      grid.insertAdjacentElement('beforebegin', controls);
     };
 
-    // Shop New is a manual horizontal marquee (maximum ten products), not a See More list.
-    setupShopPagination(usedGrid, 'second-hand');
+    setupShopCarousel(newGrid, 'Shop New');
+    setupShopCarousel(usedGrid, 'Second-Hand Marketplace');
 
     // Build category options from the catalogue so every category can be selected.
     if (categorySelect) {
