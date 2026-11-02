@@ -8,6 +8,7 @@
 //   5. Scroll reveal animation for cards
 // Every feature checks that its elements exist first, so this one
 // file can be loaded safely on every page.
+// INLINE COMMENTING GUIDE: Explanatory comments identify the purpose of the main logic blocks, state changes, DOM operations and event handling.
 // ==========================================================
 
 (function () { // Wraps the features in a function so their variables stay private.
@@ -61,6 +62,8 @@
         "Potchefstroom": [-26.7145, 27.0970], // Position of the Potchefstroom hub.
         "Cape Town": [-33.9575, 18.4764] // Position of the Cape Town hub.
     };
+
+    // initHubMap: handles the init hub map operation used by this feature.
 
     function initHubMap() { // Defines the function that builds the hub map.
         var box = document.getElementById("hub-map"); // Finds the map box on the page.
@@ -158,6 +161,8 @@
         return img.getAttribute("alt") !== null && img.getAttribute("alt").trim() !== ""; // Only allows images that have meaningful alt text.
     }
 
+    // initLightbox: handles the init lightbox operation used by this feature.
+
     function initLightbox() { // Defines the function that builds the lightbox.
         if (!document.querySelector("main img")) { return; } // Stops when the page has no content images.
 
@@ -217,6 +222,8 @@
             return heading ? heading.textContent : img.alt; // Falls back to the image's alt text.
         }
 
+        // show: handles the show operation used by this feature.
+
         function show(index) { // Defines the function that shows one image.
             position = (index + current.length) % current.length; // Wraps around at both ends of the group.
             var img = current[position]; // Gets the image to show.
@@ -228,6 +235,8 @@
             prevBtn.hidden = nextBtn.hidden = current.length < 2; // Hides the arrow buttons when there is only one image.
         }
 
+        // open: handles the open operation used by this feature.
+
         function open(img) { // Defines the function that opens the lightbox.
             opener = img; // Remembers which image opened it so focus can return later.
             current = groupFor(img); // Builds the group of images to browse.
@@ -236,6 +245,8 @@
             document.body.classList.add("lightbox-open"); // Stops the page behind from scrolling.
             closeBtn.focus(); // Moves focus to the close button.
         }
+
+        // close: handles the close operation used by this feature.
 
         function close() { // Defines the function that closes the lightbox.
             overlay.hidden = true; // Hides the overlay.
@@ -465,6 +476,8 @@
             '<div id="hub-map" class="hub-map mt-4" role="region" aria-label="Map of Campus-Cart collection hubs"></div>';
         grid.parentElement.insertBefore(wrap, grid);
     }
+
+    // gateHubMap: handles the gate hub map operation used by this feature.
 
     function gateHubMap() { // Waits for permission before loading the map.
         var box = document.getElementById("hub-map"); // Finds the map box on the page.

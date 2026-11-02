@@ -4,6 +4,7 @@
 // - Enquiry form: validates, then shows a cost and availability response
 // - Contact form: validates, then compiles an email the user can send
 // ==========================================================
+// INLINE COMMENTING GUIDE: Explanatory comments identify the purpose of the main logic blocks, state changes, DOM operations and event handling.
 
 // Waits until the HTML page has finished loading before running the code.
 document.addEventListener("DOMContentLoaded", function () { // Run setup after the HTML has been parsed.
@@ -41,23 +42,28 @@ document.addEventListener("DOMContentLoaded", function () { // Run setup after t
 function groupOf(input) { // The wrapper that holds a field, its label and its error message.
     return input.closest("#enq-other-group") || input.closest(".form-group") || input.parentElement;
 }
+// isHiddenGroup: handles the is hidden group operation used by this feature.
 function isHiddenGroup(group) { // True when the wrapper is hidden by either method.
     return group.hidden || group.classList.contains("hidden");
 }
+// setHidden: handles the set hidden operation used by this feature.
 function setHidden(el, hide) { // Hides or shows an element using both methods.
     el.hidden = hide;
     el.classList.toggle("hidden", hide);
 }
+// showBox: handles the show box operation used by this feature.
 function showBox(box, visible) { // Shows or hides a result box (enquiry result, email preview).
     box.classList.add("cc-result");
     box.classList.toggle("show", visible);
     box.classList.toggle("hidden", !visible);
     if (!visible) { box.innerHTML = ""; }
 }
+// showBox2: handles the show box2 operation used by this feature.
 function showBox2(box) { // Shows a result box that already has its content.
     box.classList.add("cc-result", "show");
     box.classList.remove("hidden");
 }
+// productFor: handles the product for operation used by this feature.
 function productFor(name) { // Finds price and stock for an item, even if the stock table has no entry for it.
     if (STOCK[name]) { return STOCK[name]; }
     const found = (window.CC_CATALOGUE ? window.CC_CATALOGUE.DEALS : []).find(function (d) { return d.name === name; });
@@ -73,6 +79,8 @@ function productFor(name) { // Finds price and stock for an item, even if the st
 // ==========================================================
 const WEB3FORMS_URL = "https://api.web3forms.com/submit";
 const WEB3FORMS_KEY = "ce1abf2e-a2e8-46b7-b6a5-f9814d57b8aa";
+
+// sendViaWeb3Forms: handles the send via web3 forms operation used by this feature.
 
 async function sendViaWeb3Forms(form, fields, box) {
     const submitBtn = form.querySelector('button[type="submit"]');

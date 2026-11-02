@@ -7,6 +7,7 @@
 //   - back to top button, newsletter forms, footer year
 // Loaded first, because the other files read window.CC.
 // ==========================================================
+// INLINE COMMENTING GUIDE: Explanatory comments identify the purpose of the main logic blocks, state changes, DOM operations and event handling.
 
 (function () {
   'use strict';
@@ -22,6 +23,7 @@
   /* ----- Cart storage (localStorage wrapped so blocked storage never breaks the page) ----- */
   const CART_KEY = 'cc_cart_v1';
   const WISHLIST_KEY = 'cc_wishlist_v1';
+  // loadCart: handles the load cart operation used by this feature.
   function loadCart() {
     try {
       const raw = localStorage.getItem(CART_KEY);
@@ -32,6 +34,7 @@
         .map((row) => ({ name: row.name, price: Number(row.price), qty: Number(row.qty) }));
     } catch (e) { return []; }
   }
+  // loadWishlist: handles the load wishlist operation used by this feature.
   function loadWishlist() {
     try {
       const raw = localStorage.getItem(WISHLIST_KEY);
@@ -43,18 +46,29 @@
   }
   const state = { cart: loadCart(), wishlist: loadWishlist() };
 
+  // saveCart: handles the save cart operation used by this feature.
+
   function saveCart() {
     try { localStorage.setItem(CART_KEY, JSON.stringify(state.cart)); } catch (e) { /* storage blocked - keep in memory */ }
   }
+
+  // saveWishlist: handles the save wishlist operation used by this feature.
 
   function saveWishlist() {
     try { localStorage.setItem(WISHLIST_KEY, JSON.stringify(state.wishlist)); } catch (e) { /* storage blocked - keep in memory */ }
   }
 
+  // cartCount: handles the cart count operation used by this feature.
+
   function cartCount() { return state.cart.reduce((sum, item) => sum + item.qty, 0); }
+  // cartTotal: handles the cart total operation used by this feature.
   function cartTotal() { return state.cart.reduce((sum, item) => sum + item.price * item.qty, 0); }
+  // wishlistCount: handles the wishlist count operation used by this feature.
   function wishlistCount() { return state.wishlist.length; }
+  // isWishlisted: handles the is wishlisted operation used by this feature.
   function isWishlisted(name) { return state.wishlist.some((item) => item.name === name); }
+
+  // updateBadge: handles the update badge operation used by this feature.
 
   function updateBadge() {
     const badge = $('#cartCount');
@@ -76,11 +90,15 @@
     document.dispatchEvent(new CustomEvent('cc-cart-change'));
   }
 
+  // changeCart: handles the change cart operation used by this feature.
+
   function changeCart() {
     saveCart();
     updateBadge();
     document.dispatchEvent(new CustomEvent('cc-cart-change'));
   }
+
+  // updateWishlistBadge: handles the update wishlist badge operation used by this feature.
 
   function updateWishlistBadge() {
     const badge = $('#wishlistCount');
@@ -94,6 +112,8 @@
       button.classList.toggle('is-wishlisted', active);
     });
   }
+
+  // toggleWishlist: handles the toggle wishlist operation used by this feature.
 
   function toggleWishlist(name, price) {
     const index = state.wishlist.findIndex((item) => item.name === name);
@@ -111,6 +131,8 @@
     return index < 0;
   }
 
+  // removeFromWishlist: handles the remove from wishlist operation used by this feature.
+
   function removeFromWishlist(name) {
     state.wishlist = state.wishlist.filter((item) => item.name !== name);
     saveWishlist();
@@ -118,6 +140,8 @@
     renderWishlist();
     document.dispatchEvent(new CustomEvent('cc-wishlist-change'));
   }
+
+  // renderWishlist: handles the render wishlist operation used by this feature.
 
   function renderWishlist() {
     const list = $('#wishlistItems');
@@ -157,6 +181,8 @@
       list.appendChild(row);
     });
   }
+
+  // setupWishlist: handles the setup wishlist operation used by this feature.
 
   function setupWishlist() {
     const cartButton = $('#cartButton');
@@ -231,6 +257,7 @@
 
   /* ----- Snack bar (uses #snack when the page has it, otherwise a small toast) ----- */
   let snackTimer;
+  // showSnack: handles the show snack operation used by this feature.
   function showSnack(message) {
     const snack = $('#snack');
     if (snack) {
@@ -323,6 +350,7 @@
   /* ----- Header shadow once the page is scrolled ----- */
   const siteHeader = $('#siteHeader');
   const toTop = $('#toTop');
+  // onScroll: handles the on scroll operation used by this feature.
   function onScroll() {
     if (siteHeader) siteHeader.classList.toggle('shadow-md', window.scrollY > 8);
     if (toTop) toTop.classList.toggle('hidden', window.scrollY <= 400);

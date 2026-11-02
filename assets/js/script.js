@@ -6,6 +6,7 @@
 // (The product, cart and form code that used to share this file now
 // lives in data.js, interactions.js and forms.js.)
 // ==========================================================
+// INLINE COMMENTING GUIDE: Explanatory comments identify the purpose of the main logic blocks, state changes, DOM operations and event handling.
 
 (function () { // Performs the next step in the current Campus-Cart operation.
     // Enables JavaScript strict mode so unsafe or undeclared code is caught instead of silently continuing.

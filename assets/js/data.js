@@ -4,6 +4,7 @@
 // Used by forms.js (enquiry form) so the dropdowns and delivery
 // estimates always match the Coverage page.
 // ==========================================================
+// INLINE COMMENTING GUIDE: The comments below describe the purpose of the main logic blocks, state changes, DOM operations and event handling.
 
 // leadDays = typical courier time to a campus in that province, in working days.
 // A campus in the same city as a hub is always 1 working day.

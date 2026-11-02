@@ -7,6 +7,7 @@
 // (Replaces the older game.js: the 404 page now shows a live score and
 // a saved best score, so this version updates those two badges too.)
 // ==========================================================
+// INLINE COMMENTING GUIDE: Explanatory comments identify the purpose of the main logic blocks, state changes, DOM operations and event handling.
 
 (function () {
   'use strict';
@@ -47,6 +48,8 @@
       } catch (e) { best = 0; }
       bestEl.textContent = 'Best ' + best;
 
+      // resetGame: handles the reset game operation used by this feature.
+
       function resetGame() {
         running = true;
         over = false;
@@ -65,6 +68,8 @@
         statusEl.textContent = 'Go! Press Space or tap to jump.';
       }
 
+      // endGame: handles the end game operation used by this feature.
+
       function endGame() {
         running = false;
         over = true;
@@ -77,6 +82,8 @@
         }
       }
 
+      // spawnCrate: handles the spawn crate operation used by this feature.
+
       function spawnCrate() {
         crates.push({
           x: canvas.width + 20,
@@ -87,6 +94,8 @@
           speed: 5.2 + Math.min(score * 0.12, 4)
         });
       }
+
+      // update: handles the update operation used by this feature.
 
       function update(dt) {
         if (!running || over) return;
@@ -134,6 +143,8 @@
         // Remove off-screen crates
         crates = crates.filter((crate) => crate.x + crate.w > -30);
       }
+
+      // draw: handles the draw operation used by this feature.
 
       function draw() {
         // Clear
@@ -204,6 +215,8 @@
         }
       }
 
+      // roundRect: handles the round rect operation used by this feature.
+
       function roundRect(ctx, x, y, w, h, r) {
         ctx.beginPath();
         ctx.moveTo(x + r, y);
@@ -213,6 +226,8 @@
         ctx.arcTo(x, y, x + w, y, r);
         ctx.closePath();
       }
+
+      // loop: handles the loop operation used by this feature.
 
       function loop(time) {
         if (!lastTime) lastTime = time;
@@ -230,6 +245,8 @@
           frameId = null;
         }
       }
+
+      // startGame: handles the start game operation used by this feature.
 
       function startGame() {
         if (frameId) cancelAnimationFrame(frameId);

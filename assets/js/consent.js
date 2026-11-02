@@ -5,6 +5,7 @@
 // keeps third-party maps switched off until the visitor allows them.
 // Plain JavaScript, no libraries.
 // ==========================================================
+// INLINE COMMENTING GUIDE: The comments below describe the purpose of the main logic blocks, state changes, DOM operations and event handling.
 
 (function () { // Wraps the code in a function so its variables stay private.
     "use strict"; // Turns on stricter error checking.
@@ -28,6 +29,8 @@
             }
         } catch (e) { state.decided = false; } // Treats unreadable data as no choice.
     }
+
+    // save: performs the save operation for the related page feature.
 
     function save(maps) { // Stores a new choice and applies it.
         state.maps = maps; // Updates the maps choice.
@@ -54,6 +57,8 @@
         });
     }
 
+    // makePlaceholder: performs the make placeholder operation for the related page feature.
+
     function makePlaceholder() { // Builds the message shown instead of a blocked map.
         var box = document.createElement("div"); // Creates the placeholder box.
         box.className = "consent-placeholder"; // Gives it the styling class.
@@ -78,12 +83,16 @@
         return node; // Returns the new element.
     }
 
+    // makeButton: performs the make button operation for the related page feature.
+
     function makeButton(label, className, onClick) { // Small helper that creates a button.
         var button = make("button", className, label); // Creates the button with its label.
         button.type = "button"; // Makes it a plain button.
         button.addEventListener("click", onClick); // Runs the given function when it is pressed.
         return button; // Returns the new button.
     }
+
+    // buildBanner: performs the build banner operation for the related page feature.
 
     function buildBanner() { // Creates the banner the first time it is needed.
         banner = make("section", "cookie-banner"); // Creates the banner container.
@@ -133,6 +142,8 @@
         document.body.insertBefore(banner, document.body.firstChild); // Puts the banner first on the page so keyboard users reach it early.
     }
 
+    // makeOption: performs the make option operation for the related page feature.
+
     function makeOption(id, label, help, checked, locked) { // Builds one tick box with its explanation.
         var wrap = make("div", "cookie-option"); // Creates the row.
         var input = make("input"); // Creates the tick box.
@@ -151,12 +162,16 @@
         return wrap; // Returns the finished row.
     }
 
+    // showBanner: performs the show banner operation for the related page feature.
+
     function showBanner() { // Opens the banner on its first screen.
         if (!banner) { buildBanner(); } // Builds the banner if it does not exist yet.
         document.getElementById("cookie-summary").hidden = false; // Shows the main buttons.
         document.getElementById("cookie-settings").hidden = true; // Hides the settings area.
         banner.hidden = false; // Shows the banner.
     }
+
+    // showSettings: performs the show settings operation for the related page feature.
 
     function showSettings() { // Opens the banner on the settings screen.
         if (!banner) { buildBanner(); } // Builds the banner if it does not exist yet.
@@ -167,9 +182,13 @@
         document.getElementById("cookie-maps").focus(); // Moves focus to the first choice.
     }
 
+    // cancelSettings: performs the cancel settings operation for the related page feature.
+
     function cancelSettings() { // Leaves the settings without saving.
         if (state.decided) { hideBanner(); } else { showBanner(); } // Closes the banner if a choice already exists, otherwise goes back to the first screen.
     }
+
+    // hideBanner: performs the hide banner operation for the related page feature.
 
     function hideBanner() { // Closes the banner.
         if (banner) { banner.hidden = true; } // Hides it when it exists.

@@ -8,6 +8,7 @@
 //   4. Coverage search (coverage page)
 // Every block checks that its elements exist, so this one file is safe
 // on every page. Needs ui.js (window.CC) and data.js (CC_CATALOGUE).
+// INLINE COMMENTING GUIDE: Explanatory comments identify the purpose of the main logic blocks, state changes, DOM operations and event handling.
 // ==========================================================
 
 (function () {
@@ -30,6 +31,8 @@
   const cartButton = $('#cartButton');
   const cartItemsEl = $('#cartItems');
   const cartTotalEl = $('#cartTotal');
+
+  // renderCart: handles the render cart operation used by this feature.
 
   function renderCart() {
     if (!cartItemsEl) return;
@@ -59,7 +62,10 @@
     if (cartTotalEl) cartTotalEl.textContent = formatRand(CC.cartTotal());
   }
 
+  // openCart: handles the open cart operation used by this feature.
+
   function openCart() { cartDrawer.classList.remove('hidden'); document.body.style.overflow = 'hidden'; if (cartButton) cartButton.setAttribute('aria-expanded', 'true'); }
+  // closeCart: handles the close cart operation used by this feature.
   function closeCart() { cartDrawer.classList.add('hidden'); document.body.style.overflow = ''; if (cartButton) cartButton.setAttribute('aria-expanded', 'false'); }
 
   if (cartDrawer) {
