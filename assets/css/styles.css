@@ -5687,11 +5687,6 @@ object {
     -webkit-tap-highlight-color: transparent;
   }
 
-  .group:hover .group-hover\\:opacity-100,
-  .group:hover .group-hover\\:visible {
-    opacity: 1;
-    visibility: visible;
-  }
 }
 
 /* Keyboard users receive a clear focus indicator on controls
