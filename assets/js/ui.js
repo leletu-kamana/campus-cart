@@ -207,11 +207,24 @@
       button.dataset.addToWishlist = '';
       button.dataset.name = name;
       button.dataset.price = String(price || 0);
-      button.className = 'grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[#0d1b3e]/25 bg-white text-xl text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5';
+      const productImage = cartBtn.closest('.relative.overflow-hidden');
+      button.className = productImage
+        ? 'absolute bottom-3 right-16 z-10 grid h-10 w-10 place-items-center rounded-full border border-white/80 bg-white text-xl text-[#0d1b3e] shadow-lg transition duration-300 hover:scale-110 hover:bg-[#ffd23f] sm:opacity-0 sm:group-hover:opacity-100'
+        : 'grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[#0d1b3e]/25 bg-white text-xl text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5';
       button.innerHTML = '<span data-wishlist-icon aria-hidden="true">♡</span>';
-      button.addEventListener('click', () => toggleWishlist(name, price));
       cartBtn.insertAdjacentElement('beforebegin', button);
     });
+    // Event delegation also supports wishlist buttons rendered later by the product catalogue.
+    if (!document.documentElement.dataset.ccWishlistListener) {
+      document.documentElement.dataset.ccWishlistListener = 'true';
+      document.addEventListener('click', (event) => {
+        const wishlistButton = event.target.closest('[data-add-to-wishlist]');
+        if (!wishlistButton) return;
+        event.preventDefault();
+        event.stopPropagation();
+        toggleWishlist(wishlistButton.dataset.name, wishlistButton.dataset.price);
+      });
+    }
     updateWishlistBadge();
     renderWishlist();
   }
