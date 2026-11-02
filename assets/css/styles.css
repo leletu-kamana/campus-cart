@@ -2279,13 +2279,6 @@ main img[src^="../assets/images/"] {
     object-position: center center;
 }
 
-/* Homepage feature cards, starter bundles and campus-life imagery. */
-#home img[src*="/assets/images/"],
-#hero img[src*="/assets/images/"],
-main section img[src*="/assets/images/"] {
-    height: 100%;
-}
-
 /* Keep the hero's circular feature images inside their designed shape. */
 main img.rounded-full[src*="/assets/images/"] {
     width: auto;
@@ -2325,8 +2318,3 @@ main img.w-full[src*="/assets/images/second-hand/"] {
     background: #f8fafc;
 }
 
-/* Prevent image zoom effects from escaping rounded image frames. */
-main figure,
-main .overflow-hidden {
-    overflow: hidden;
-}
