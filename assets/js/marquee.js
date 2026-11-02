@@ -51,7 +51,7 @@
                 if (!cycleDistance || !Number.isFinite(cycleDistance)) return;
 
                 position = direction === "right" ? -cycleDistance : 0;
-                track.style.transform = `translate3d(${position}px, 0, 0)`;
+                track.style.setProperty("transform", `translate3d(${position}px, 0, 0)`, "important");
             };
 
             const animate = (timestamp) => {
@@ -90,16 +90,22 @@
                 animationFrame = window.requestAnimationFrame(animate);
             };
 
-            const resizeObserver = new ResizeObserver(measure);
-            resizeObserver.observe(viewport);
-            resizeObserver.observe(originalGroup);
+            if ("ResizeObserver" in window) {
+                const resizeObserver = new ResizeObserver(measure);
+                resizeObserver.observe(viewport);
+                resizeObserver.observe(originalGroup);
+            } else {
+                window.addEventListener("resize", measure);
+            }
 
             if (document.fonts?.ready) {
                 document.fonts.ready.then(measure);
             }
 
-            measure();
-            start();
+            window.requestAnimationFrame(() => {
+                measure();
+                start();
+            });
         });
     };
 
