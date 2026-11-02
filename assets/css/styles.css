@@ -2322,3 +2322,566 @@ main img.w-full[src*="/assets/images/second-hand/"] {
     background: #f8fafc;
 }
 
+
+
+/* ==========================================================
+   CAMPUS-CART — RESPONSIVE EXPERIENCE HARDENING
+   These shared rules keep every page and interactive component
+   usable across narrow phones, tablets, laptops and wide desktops.
+   Existing feature selectors and JavaScript hooks remain unchanged.
+   ========================================================== */
+
+/* Establish a predictable sizing model and prevent page-level overflow
+   while allowing intentionally scrollable carousels, maps and tables. */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+main,
+header,
+footer,
+section,
+article,
+aside,
+nav,
+form,
+fieldset {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  font: inherit;
+}
+
+button,
+[role="button"],
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea,
+summary {
+  touch-action: manipulation;
+}
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid #d49f00;
+  outline-offset: 3px;
+}
+
+/* Keep long labels, product names, addresses and user-entered text
+   from forcing cards or grid columns wider than their parent. */
+:where(h1, h2, h3, h4, p, a, button, label, small, span, li, address, code) {
+  overflow-wrap: anywhere;
+}
+
+pre,
+code {
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+:where(.overflow-x-auto, [data-table-scroll], .table-responsive) {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Media and embedded content retain their aspect ratio without
+   stretching beyond the available content width. */
+main iframe,
+main video,
+main canvas {
+  display: block;
+  width: 100%;
+}
+
+main iframe {
+  min-height: 16rem;
+  border: 0;
+}
+
+main img {
+  max-inline-size: 100%;
+}
+
+/* Shared interactive controls remain large enough for touch input.
+   Navigation links are excluded from this blanket rule and sized below. */
+@media (hover: none), (pointer: coarse) {
+  main button,
+  main [role="button"],
+  main input[type="button"],
+  main input[type="submit"],
+  main input[type="reset"],
+  .cookie-banner button,
+  .modal button,
+  .lightbox button {
+    min-height: 44px;
+  }
+
+  main input:not([type="checkbox"]):not([type="radio"]),
+  main select,
+  main textarea {
+    min-height: 44px;
+    font-size: 16px;
+  }
+
+  main input[type="checkbox"],
+  main input[type="radio"] {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* ==========================================================
+   DESKTOP — 1024px AND WIDER
+   Uses available space for multi-column content while keeping
+   shared content containers centred and comfortably readable.
+   ========================================================== */
+@media (min-width: 1024px) {
+  main {
+    width: 100%;
+  }
+
+  .hub-map {
+    height: clamp(420px, 42vw, 560px);
+  }
+
+  .modal {
+    max-width: min(900px, calc(100vw - 48px));
+  }
+
+  .cookie-banner {
+    max-width: min(880px, calc(100vw - 48px));
+  }
+}
+
+/* ==========================================================
+   TABLETS — 768px TO 1023px
+   Reduces oversized spacing, preserves two-column layouts where
+   practical and keeps sticky section navigation scrollable.
+   ========================================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    padding-inline: clamp(1rem, 3vw, 2rem);
+  }
+
+  main section {
+    scroll-margin-top: 6rem;
+  }
+
+  .hub-map {
+    height: 400px;
+    min-height: 320px;
+  }
+
+  .modal {
+    width: min(720px, calc(100vw - 32px));
+    max-height: 88dvh;
+  }
+
+  .cookie-banner {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    max-width: 760px;
+    max-height: 82dvh;
+  }
+
+  nav[aria-label="Section navigation"],
+  nav[aria-label="Province navigation"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav[aria-label="Section navigation"] > *,
+  nav[aria-label="Province navigation"] > * {
+    flex: 0 0 auto;
+  }
+}
+
+/* ==========================================================
+   MOBILE — 767px AND NARROWER
+   Reflows content into a single readable column, prevents
+   clipped controls and keeps every interaction tap-accessible.
+   ========================================================== */
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  main {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  main > section,
+  main > .container,
+  main > .max-w-7xl,
+  main > .max-w-6xl,
+  main > .max-w-5xl,
+  main > .max-w-4xl {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Ensure the mobile navigation and its links fit the viewport. */
+  nav[aria-label="Mobile navigation"] {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+
+  nav[aria-label="Mobile navigation"] a,
+  nav[aria-label="Mobile navigation"] button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    text-align: left;
+  }
+
+  nav[aria-label="Section navigation"],
+  nav[aria-label="Province navigation"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  nav[aria-label="Section navigation"] > *,
+  nav[aria-label="Province navigation"] > * {
+    flex: 0 0 auto;
+  }
+
+  /* Common two-column content blocks become stacked on phones.
+     Explicit product and gallery carousels retain their own scrolling. */
+  main .grid:not(.cc-shop-carousel):not(.cc-brand-marquee-track) {
+    min-width: 0;
+  }
+
+  main .grid > *,
+  main .flex > *,
+  main .flex-wrap > * {
+    min-width: 0;
+  }
+
+  /* Inputs and text areas use the full available width and avoid
+     iOS zoom-on-focus caused by text smaller than 16px. */
+  main form,
+  main fieldset,
+  main .form-group {
+    width: 100%;
+    min-width: 0;
+  }
+
+  main input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  main select,
+  main textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  main textarea {
+    min-height: 8rem;
+    resize: vertical;
+  }
+
+  main form button[type="submit"],
+  main form input[type="submit"] {
+    width: 100%;
+  }
+
+  /* Product actions wrap instead of becoming compressed or clipped.
+     Wishlist and quick-view controls keep a stable tap target. */
+  #shop #panel-new article > div:nth-child(2) > div:last-child,
+  #shop #panel-used article > div:nth-child(2) > div:last-child,
+  #deals-gallery #deals-results article > div:nth-child(2) > div:last-child {
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  #shop #panel-new article button[data-add],
+  #shop #panel-used article button[data-add],
+  #deals-gallery #deals-results article button[data-add] {
+    min-height: 44px;
+    white-space: normal;
+  }
+
+  #shop #panel-new article button[data-add-to-wishlist],
+  #shop #panel-used article button[data-add-to-wishlist],
+  #deals-gallery #deals-results article button[data-add-to-wishlist],
+  #shop #panel-new article button[data-quickview],
+  #shop #panel-used article button[data-quickview],
+  #deals-gallery #deals-results article button[data-quickview] {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    flex-basis: 44px;
+  }
+
+  /* Cart, search, account and utility popovers stay within the screen.
+     Their existing open/close behaviour remains controlled by JavaScript. */
+  [role="dialog"],
+  [role="menu"],
+  [data-cart-popover],
+  [data-search-panel],
+  [data-wishlist-panel],
+  .cart-popover,
+  .search-panel,
+  .wishlist-panel {
+    max-width: calc(100vw - 24px);
+  }
+
+  /* Keep dialogs and image viewers usable in portrait orientation. */
+  .modal-backdrop,
+  .lightbox {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .modal {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 560px;
+    max-height: 88dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .modal-image {
+    width: 100%;
+    max-height: 220px;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .modal-body {
+    min-width: 0;
+    padding: 20px 16px;
+  }
+
+  .lightbox {
+    padding: 56px 12px 76px;
+  }
+
+  .lb-image {
+    max-width: 100%;
+    max-height: 66dvh;
+    object-fit: contain;
+  }
+
+  .lb-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .lb-prev {
+    top: auto;
+    bottom: 12px;
+    left: calc(50% - 54px);
+    transform: none;
+  }
+
+  .lb-next {
+    top: auto;
+    right: calc(50% - 54px);
+    bottom: 12px;
+    transform: none;
+  }
+
+  .lb-close {
+    top: 8px;
+    right: 8px;
+  }
+
+  /* Consent controls and notifications remain visible without
+     covering the full page or overflowing the device width. */
+  .cookie-banner {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: auto;
+    max-width: none;
+    max-height: 78dvh;
+    padding: 16px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .cookie-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cookie-actions .btn {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 10px;
+    white-space: normal;
+  }
+
+  .toast {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: auto;
+    max-width: none;
+    padding: 12px 14px;
+  }
+
+  .hub-map {
+    width: 100%;
+    height: clamp(280px, 65vw, 380px);
+    min-height: 260px;
+  }
+
+  /* Print checklist and other dense panels must not create page overflow. */
+  #parent-checklist-print,
+  #parent-checklist-print * {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Keep horizontal carousels touch-scrollable without forcing the page
+     itself to scroll sideways. */
+  .cc-shop-carousel,
+  .cc-brand-marquee-viewport,
+  [data-carousel],
+  [data-horizontal-scroll] {
+    max-width: 100%;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cc-shop-carousel {
+    scroll-snap-type: x mandatory;
+  }
+
+  .cc-shop-carousel > article {
+    scroll-snap-align: start;
+  }
+}
+
+/* ==========================================================
+   SMALL PHONES — 420px AND NARROWER
+   Tightens spacing and stacks action groups while preserving
+   readable text and practical touch target dimensions.
+   ========================================================== */
+@media (max-width: 420px) {
+  main h1 {
+    font-size: clamp(1.7rem, 8vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  main h2 {
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    line-height: 1.2;
+  }
+
+  main section {
+    scroll-margin-top: 5rem;
+  }
+
+  .cookie-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cookie-actions .btn {
+    width: 100%;
+  }
+
+  .page-loader-visual {
+    max-width: 100%;
+  }
+
+  .cc-shop-carousel > article {
+    flex-basis: min(84vw, 290px);
+  }
+
+  .cc-shop-carousel-controls {
+    gap: 0.4rem;
+  }
+
+  .cc-shop-carousel-arrow {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Honour reduced-motion preferences for carousels and decorative
+   transitions while leaving essential controls and content available. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
