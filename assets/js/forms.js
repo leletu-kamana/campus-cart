@@ -242,7 +242,7 @@ function loadStockFromFile() { // Begin this block of code.
             }); // Close this block or callback.
         }) // Close the current code block.
         .catch(function () { // Begin this block of code.
-            // Keep the built-in table. The enquiry form still works.
+        // Keep the built-in table. The enquiry form still works.
         }); // Close this block or callback.
 } // Close this block or callback.
 
