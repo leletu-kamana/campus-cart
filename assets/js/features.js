@@ -10,23 +10,35 @@
     // Creates an element, sets its class and text, and returns it.
     // Using textContent (not innerHTML) means text can never be read as HTML.
     function make(tag, className, text) { // Defines a helper that creates an element with a class and text.
+        // Declares the setting, state value or DOM reference used by this module.
         var node = document.createElement(tag); // Creates the element.
+        // Checks the condition before executing the following branch.
         if (className) { node.className = className; } // Sets the class name when one is given.
+        // Checks the condition before executing the following branch.
         if (text) { node.textContent = text; } // Sets the text when one is given.
+        // Returns the result or exits the current function path.
         return node; // Returns the new element.
     }
 
     // Keeps Tab and Shift+Tab inside a dialog while it is open.
     function trapFocus(event, container) { // Defines a helper that keeps Tab focus inside a dialog.
+        // Checks the condition before executing the following branch.
         if (event.key !== "Tab") { return; } // Ignores every key except Tab.
+        // Declares the setting, state value or DOM reference used by this module.
         var items = container.querySelectorAll("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"); // Finds everything inside the dialog that can take focus.
+        // Declares the setting, state value or DOM reference used by this module.
         var visible = Array.prototype.filter.call(items, function (item) { return !item.disabled && !item.hidden; }); // Keeps only the items that are enabled and visible.
+        // Checks the condition before executing the following branch.
         if (!visible.length) { return; } // Stops if nothing can take focus.
+        // Declares the setting, state value or DOM reference used by this module.
         var first = visible[0]; // Stores the first focusable item.
+        // Declares the setting, state value or DOM reference used by this module.
         var last = visible[visible.length - 1]; // Stores the last focusable item.
+        // Checks the condition before executing the following branch.
         if (event.shiftKey && document.activeElement === first) { // Checks for Shift+Tab on the first item.
             event.preventDefault(); // Stops the browser from moving focus out of the dialog.
             last.focus(); // Moves focus to the last item instead.
+        // Uses a browser API to access the DOM, storage or timing facility.
         } else if (!event.shiftKey && document.activeElement === last) { // Checks for Tab on the last item.
             event.preventDefault(); // Stops the browser from moving focus out of the dialog.
             first.focus(); // Moves focus to the first item instead.
@@ -52,14 +64,19 @@
         "Cape Town": [-33.9575, 18.4764] // Position of the Cape Town hub.
     };
 
+    // Defines a reusable operation or callback for this module.
     function initHubMap() { // Defines the function that builds the hub map.
+        // Declares the setting, state value or DOM reference used by this module.
         var box = document.getElementById("hub-map"); // Finds the map box on the page.
+        // Checks the condition before executing the following branch.
         if (!box) { return; } // Stops when the page has no map box.
 
         // If Leaflet or the hub data did not load, show a plain message instead of a blank box.
         if (typeof L === "undefined" || typeof PROVINCES === "undefined") { // Checks that the map library and the hub data have loaded.
+            // Updates the selected element's content or visual presentation.
             box.textContent = "The map could not be loaded. Please use the collection hub cards below."; // Shows a message when the map cannot be loaded.
             box.classList.add("map-unavailable"); // Adds the class that styles the message box.
+            // Returns the result or exits the current function path.
             return; // Stops here.
         }
 
@@ -67,6 +84,7 @@
         var hubs = []; // Creates a list to hold the hubs.
         PROVINCES.forEach(function (province) { // Loops through every province.
             province.hubs.forEach(function (hub) { // Loops through every hub in that province.
+                // Checks the condition before executing the following branch.
                 if (HUB_COORDS[hub.city]) { // Only uses hubs that have map coordinates.
                     hubs.push({ // Adds a hub record to the list.
                         city: hub.city, // Stores the city name.
@@ -79,6 +97,7 @@
             });
         });
 
+        // Declares the setting, state value or DOM reference used by this module.
         var map = L.map(box, { scrollWheelZoom: false }); // Creates the map inside the box with scroll-wheel zoom switched off.
         L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { // Loads the map tiles from OpenStreetMap.
             maxZoom: 18, // Sets the furthest zoom level.
@@ -89,7 +108,9 @@
         map.on("focus", function () { map.scrollWheelZoom.enable(); }); // Turns on scroll-wheel zoom when the map has keyboard focus.
         map.on("blur", function () { map.scrollWheelZoom.disable(); }); // Turns it off again when focus leaves the map.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var markers = []; // Creates a list for the markers.
+        // Declares the setting, state value or DOM reference used by this module.
         var bounds = []; // Creates a list for the marker positions.
         hubs.forEach(function (hub, index) { // Loops through every hub.
             // Popup content is built with DOM methods so no text is treated as HTML.
@@ -98,6 +119,7 @@
             popup.appendChild(make("p", "", hub.address)); // Adds the address.
             popup.appendChild(make("p", "", hub.hours)); // Adds the opening hours.
 
+            // Declares the setting, state value or DOM reference used by this module.
             var marker = L.marker(hub.coords, { title: hub.city + " collection hub", alt: hub.city + " collection hub" }) // Creates a marker with a title and alt text for accessibility.
                 .addTo(map) // Adds the marker to the map.
                 .bindPopup(popup); // Attaches the popup to the marker.
@@ -106,9 +128,13 @@
 
             // Fills the "jump to a hub" dropdown at the same time.
             var select = document.getElementById("hub-select"); // Finds the hub dropdown.
+            // Checks the condition before executing the following branch.
             if (select) { // Checks that the dropdown exists.
+                // Declares the setting, state value or DOM reference used by this module.
                 var option = document.createElement("option"); // Creates a dropdown option.
+                // Updates the module state used by the surrounding feature.
                 option.value = String(index); // Sets the option value to the hub number.
+                // Updates the selected element's content or visual presentation.
                 option.textContent = hub.city + ", " + hub.province; // Sets the option text.
                 select.appendChild(option); // Adds the option to the dropdown.
             }
@@ -118,13 +144,18 @@
 
         // The dropdown gives keyboard and screen-reader users another way to reach each hub.
         var picker = document.getElementById("hub-select"); // Finds the hub dropdown again.
+        // Checks the condition before executing the following branch.
         if (picker) { // Checks that the dropdown exists.
+            // Registers an event handler for the specified browser or user interaction.
             picker.addEventListener("change", function () { // Listens for a new choice in the dropdown.
+                // Checks the condition before executing the following branch.
                 if (picker.value === "") { // Checks whether the empty first option was chosen.
                     map.fitBounds(bounds, { padding: [30, 30] }); // Shows every hub again.
                     map.closePopup(); // Closes any open popup.
+                    // Returns the result or exits the current function path.
                     return; // Stops here.
                 }
+                // Declares the setting, state value or DOM reference used by this module.
                 var chosen = hubs[Number(picker.value)]; // Finds the hub that was chosen.
                 map.setView(chosen.coords, 11); // Moves the map to that hub.
                 markers[Number(picker.value)].openPopup(); // Opens that hub's popup.
@@ -143,36 +174,52 @@
     // Logos, icons and other images that are links or buttons, map tiles, the viewer's own image
     // and purely decorative images (empty alt text) are left alone.
     function isViewable(img) { // Defines a helper that decides whether an image can open in the lightbox.
+        // Checks the condition before executing the following branch.
         if (!img.closest("main")) { return false; } // Ignores images outside the main content.
+        // Checks the condition before executing the following branch.
         if (img.closest("a, button, .lightbox, .modal, .leaflet-container, [data-no-lightbox]")) { return false; } // Ignores images inside links, buttons, the viewers, the map, or marked images.
+        // Returns the result or exits the current function path.
         return img.getAttribute("alt") !== null && img.getAttribute("alt").trim() !== ""; // Only allows images that have meaningful alt text.
     }
 
+    // Defines a reusable operation or callback for this module.
     function initLightbox() { // Defines the function that builds the lightbox.
+        // Checks the condition before executing the following branch.
         if (!document.querySelector("main img")) { return; } // Stops when the page has no content images.
 
         // Builds the lightbox once and hides it until an image is chosen.
         var overlay = make("div", "lightbox"); // Creates the dark overlay.
+        // Updates the module state used by the surrounding feature.
         overlay.hidden = true; // Hides it to start with.
         overlay.setAttribute("role", "dialog"); // Tells assistive technology it is a dialog.
         overlay.setAttribute("aria-modal", "true"); // Tells assistive technology the page behind is inactive.
         overlay.setAttribute("aria-label", "Image viewer"); // Gives the dialog a name.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var closeBtn = make("button", "lb-btn lb-close", "\u00D7"); // Creates the close button.
+        // Updates the module state used by the surrounding feature.
         closeBtn.type = "button"; // Makes it a plain button, not a form submit.
         closeBtn.setAttribute("aria-label", "Close image viewer"); // Gives it a text label for screen readers.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var prevBtn = make("button", "lb-btn lb-prev", "\u2039"); // Creates the previous button.
+        // Updates the module state used by the surrounding feature.
         prevBtn.type = "button"; // Makes it a plain button.
         prevBtn.setAttribute("aria-label", "Previous image"); // Gives it a text label for screen readers.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var nextBtn = make("button", "lb-btn lb-next", "\u203A"); // Creates the next button.
+        // Updates the module state used by the surrounding feature.
         nextBtn.type = "button"; // Makes it a plain button.
         nextBtn.setAttribute("aria-label", "Next image"); // Gives it a text label for screen readers.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var figure = make("figure", "lb-figure"); // Creates the figure that holds the large image.
+        // Declares the setting, state value or DOM reference used by this module.
         var bigImage = make("img", "lb-image"); // Creates the large image.
+        // Declares the setting, state value or DOM reference used by this module.
         var caption = make("figcaption", "lb-caption"); // Creates the caption.
+        // Declares the setting, state value or DOM reference used by this module.
         var counter = make("p", "lb-count"); // Creates the image counter.
         figure.appendChild(bigImage); // Adds the image to the figure.
         figure.appendChild(caption); // Adds the caption.
@@ -182,65 +229,96 @@
         overlay.appendChild(prevBtn); // Adds the previous button.
         overlay.appendChild(figure); // Adds the figure.
         overlay.appendChild(nextBtn); // Adds the next button.
+        // Uses a browser API to access the DOM, storage or timing facility.
         document.body.appendChild(overlay); // Adds the overlay to the page.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var current = [];   // the images the viewer can move between
+        // Declares the setting, state value or DOM reference used by this module.
         var position = 0;   // which one is showing
+        // Declares the setting, state value or DOM reference used by this module.
         var opener = null;  // the thumbnail to return focus to
 
         // Next and previous move between the images that sit together: the same gallery,
         // card grid or section. Only images the visitor can currently see are included
         // (the gallery filter and the tabs hide some of them).
         function groupFor(img) { // Defines a helper that finds the images in the same group as a clicked image.
+            // Declares the setting, state value or DOM reference used by this module.
             var container = img.closest(".gallery, .grid, section") || document.querySelector("main"); // Looks for the nearest gallery, grid or section, or falls back to the main content.
+            // Returns the result or exits the current function path.
             return Array.prototype.filter.call(container.querySelectorAll("img"), function (candidate) { // Returns the images in that group that can open in the lightbox.
+                // Returns the result or exits the current function path.
                 return isViewable(candidate) && !candidate.closest("[hidden]"); // Keeps an image only if it is viewable and not inside a hidden element.
             });
         }
 
         // The caption is the figure caption, or the heading of the card the image sits in, or the alt text.
         function captionFor(img) { // Defines a helper that finds the caption text for an image.
+            // Declares the setting, state value or DOM reference used by this module.
             var figcaption = img.closest("figure") ? img.closest("figure").querySelector("figcaption") : null; // Looks for a figcaption next to the image.
+            // Checks the condition before executing the following branch.
             if (figcaption) { return figcaption.textContent; } // Uses the figcaption text when there is one.
+            // Declares the setting, state value or DOM reference used by this module.
             var card = img.closest(".card"); // Otherwise looks for a product card.
+            // Declares the setting, state value or DOM reference used by this module.
             var heading = card ? card.querySelector("h3") : null; // Uses the card heading when there is one.
+            // Returns the result or exits the current function path.
             return heading ? heading.textContent : img.alt; // Falls back to the image's alt text.
         }
 
+        // Defines a reusable operation or callback for this module.
         function show(index) { // Defines the function that shows one image.
+            // Updates the module state used by the surrounding feature.
             position = (index + current.length) % current.length; // Wraps around at both ends of the group.
+            // Declares the setting, state value or DOM reference used by this module.
             var img = current[position]; // Gets the image to show.
+            // Updates the module state used by the surrounding feature.
             bigImage.src = img.currentSrc || img.src; // Shows the sharpest source of that image.
+            // Updates the module state used by the surrounding feature.
             bigImage.alt = img.alt; // Copies the alt text.
+            // Updates the selected element's content or visual presentation.
             caption.textContent = captionFor(img); // Sets the caption.
+            // Updates the selected element's content or visual presentation.
             counter.textContent = "Image " + (position + 1) + " of " + current.length; // Sets the counter text.
             // Next and previous make no sense with a single image.
             prevBtn.hidden = nextBtn.hidden = current.length < 2; // Hides the arrow buttons when there is only one image.
         }
 
+        // Defines a reusable operation or callback for this module.
         function open(img) { // Defines the function that opens the lightbox.
+            // Updates the module state used by the surrounding feature.
             opener = img; // Remembers which image opened it so focus can return later.
+            // Updates the module state used by the surrounding feature.
             current = groupFor(img); // Builds the group of images to browse.
             show(current.indexOf(img)); // Shows the clicked image.
+            // Updates the module state used by the surrounding feature.
             overlay.hidden = false; // Reveals the overlay.
+            // Uses a browser API to access the DOM, storage or timing facility.
             document.body.classList.add("lightbox-open"); // Stops the page behind from scrolling.
             closeBtn.focus(); // Moves focus to the close button.
         }
 
+        // Defines a reusable operation or callback for this module.
         function close() { // Defines the function that closes the lightbox.
+            // Updates the module state used by the surrounding feature.
             overlay.hidden = true; // Hides the overlay.
+            // Uses a browser API to access the DOM, storage or timing facility.
             document.body.classList.remove("lightbox-open"); // Lets the page scroll again.
+            // Checks the condition before executing the following branch.
             if (opener) { opener.focus(); } // Returns focus to the image that opened the lightbox.
         }
 
         // Makes an image behave like a button for mouse, touch and keyboard users.
         function prepare(img) { // Defines a helper that makes one image behave like a button.
+            // Checks the condition before executing the following branch.
             if (!isViewable(img) || img.getAttribute("role") === "button") { return; } // Skips images that cannot open or are already set up.
+            // Updates the module state used by the surrounding feature.
             img.tabIndex = 0; // Lets keyboard users reach the image with Tab.
             img.setAttribute("role", "button"); // Tells assistive technology it acts as a button.
             img.setAttribute("aria-label", "View larger image: " + img.alt); // Gives it a label that describes the action.
         }
 
+        // Uses a browser API to access the DOM, storage or timing facility.
         Array.prototype.forEach.call(document.querySelectorAll("main img"), prepare); // Sets up every image that is already on the page.
 
         // Product cards are added by JavaScript after the page loads (and rebuilt when the filters change),
@@ -248,20 +326,28 @@
         new MutationObserver(function (changes) { // Starts watching the page for images added later, such as product cards.
             changes.forEach(function (change) { // Loops through each change.
                 Array.prototype.forEach.call(change.addedNodes, function (node) { // Loops through each node that was added.
+                    // Checks the condition before executing the following branch.
                     if (node.nodeType !== 1) { return; } // Skips nodes that are not elements.
+                    // Checks the condition before executing the following branch.
                     if (node.tagName === "IMG") { prepare(node); } // Sets up the node if it is an image.
                     Array.prototype.forEach.call(node.querySelectorAll("img"), prepare); // Sets up any images inside the node.
                 });
             });
+        // Uses a browser API to access the DOM, storage or timing facility.
         }).observe(document.querySelector("main"), { childList: true, subtree: true }); // Watches the whole main area, including nested elements.
 
         // One click and one key listener on the page handle every image, including ones added later.
         document.addEventListener("click", function (event) { // Listens for clicks anywhere on the page.
+            // Declares the setting, state value or DOM reference used by this module.
             var img = event.target.closest ? event.target.closest("img") : null; // Finds the image that was clicked, if any.
+            // Checks the condition before executing the following branch.
             if (img && img.getAttribute("role") === "button" && isViewable(img)) { open(img); } // Opens the lightbox when a viewable image button is clicked.
         });
+        // Registers an event handler for the specified browser or user interaction.
         document.addEventListener("keydown", function (event) { // Listens for key presses anywhere on the page.
+            // Declares the setting, state value or DOM reference used by this module.
             var img = event.target; // Gets the element that has focus.
+            // Checks the condition before executing the following branch.
             if (img && img.tagName === "IMG" && img.getAttribute("role") === "button" && // Checks that it is an image button.
                 (event.key === "Enter" || event.key === " ")) { // Checks that Enter or Space was pressed.
                 event.preventDefault(); // Stops Space from scrolling the page.
@@ -269,31 +355,46 @@
             }
         });
 
+        // Registers an event handler for the specified browser or user interaction.
         closeBtn.addEventListener("click", close); // Closes the lightbox when the close button is clicked.
+        // Registers an event handler for the specified browser or user interaction.
         prevBtn.addEventListener("click", function () { show(position - 1); }); // Shows the previous image.
+        // Registers an event handler for the specified browser or user interaction.
         nextBtn.addEventListener("click", function () { show(position + 1); }); // Shows the next image.
 
         // Clicking the dark area around the picture closes the viewer.
         overlay.addEventListener("click", function (event) { // Listens for clicks on the overlay.
+            // Checks the condition before executing the following branch.
             if (event.target === overlay) { close(); } // Closes when the dark area, not the image, is clicked.
         });
 
+        // Registers an event handler for the specified browser or user interaction.
         overlay.addEventListener("keydown", function (event) { // Listens for key presses inside the lightbox.
+            // Checks the condition before executing the following branch.
             if (event.key === "Escape") { close(); } // Closes on Escape.
+            // Checks the condition before executing the following branch.
             if (event.key === "ArrowLeft" && current.length > 1) { show(position - 1); } // Shows the previous image on the left arrow.
+            // Checks the condition before executing the following branch.
             if (event.key === "ArrowRight" && current.length > 1) { show(position + 1); } // Shows the next image on the right arrow.
             trapFocus(event, overlay); // Keeps Tab focus inside the lightbox.
         });
 
         // Swiping left or right changes image on phones.
         var touchStartX = null; // Remembers where a swipe started.
+        // Registers an event handler for the specified browser or user interaction.
         overlay.addEventListener("touchstart", function (event) { // Listens for the start of a touch.
+            // Updates the module state used by the surrounding feature.
             touchStartX = event.changedTouches[0].clientX; // Stores the horizontal start position.
         }, { passive: true }); // Marks the listener as passive so scrolling stays smooth.
+        // Registers an event handler for the specified browser or user interaction.
         overlay.addEventListener("touchend", function (event) { // Listens for the end of a touch.
+            // Checks the condition before executing the following branch.
             if (touchStartX === null || current.length < 2) { return; } // Ignores the touch if there was no start or only one image.
+            // Declares the setting, state value or DOM reference used by this module.
             var distance = event.changedTouches[0].clientX - touchStartX; // Works out how far the finger moved.
+            // Checks the condition before executing the following branch.
             if (Math.abs(distance) > 50) { show(distance > 0 ? position - 1 : position + 1); } // Treats a move of more than 50 pixels as a swipe and shows the previous or next image.
+            // Updates the module state used by the surrounding feature.
             touchStartX = null; // Resets the start position.
         }, { passive: true }); // Marks the listener as passive so scrolling stays smooth.
     }
@@ -302,30 +403,45 @@
     // 3. PRODUCT QUICK-VIEW MODAL
     // ------------------------------------------------------
 
+    // Defines a reusable operation or callback for this module.
     function initQuickView() { // Defines the function that builds the product quick-view window.
         // Only pages that show deal cards need the modal.
         if (!document.getElementById("deals-results")) { return; } // Stops when the page has no product list.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var backdrop = make("div", "modal-backdrop"); // Creates the dark background.
+        // Updates the module state used by the surrounding feature.
         backdrop.hidden = true; // Hides it to start with.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var dialog = make("div", "modal"); // Creates the window.
         dialog.setAttribute("role", "dialog"); // Tells assistive technology it is a dialog.
         dialog.setAttribute("aria-modal", "true"); // Tells assistive technology the page behind is inactive.
         dialog.setAttribute("aria-labelledby", "modal-title"); // Links the window to its title.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var closeBtn = make("button", "modal-close", "\u00D7"); // Creates the close button.
+        // Updates the module state used by the surrounding feature.
         closeBtn.type = "button"; // Makes it a plain button.
         closeBtn.setAttribute("aria-label", "Close product details"); // Gives it a text label for screen readers.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var picture = make("img", "modal-image"); // Creates the product image.
+        // Declares the setting, state value or DOM reference used by this module.
         var body = make("div", "modal-body"); // Creates the details area.
+        // Declares the setting, state value or DOM reference used by this module.
         var badge = make("span", "badge"); // Creates the New or Second-hand badge.
+        // Declares the setting, state value or DOM reference used by this module.
         var title = make("h2", "", ""); // Creates the product title.
+        // Updates the module state used by the surrounding feature.
         title.id = "modal-title"; // Gives the title an ID that the window refers to.
+        // Declares the setting, state value or DOM reference used by this module.
         var price = make("p", "price"); // Creates the price line.
+        // Declares the setting, state value or DOM reference used by this module.
         var description = make("p"); // Creates the description paragraph.
+        // Declares the setting, state value or DOM reference used by this module.
         var addBtn = make("button", "btn", "Add to Order Summary"); // Creates the add button.
+        // Updates the module state used by the surrounding feature.
         addBtn.type = "button"; // Makes it a plain button.
 
         body.appendChild(badge); // Adds the badge to the details.
@@ -333,33 +449,50 @@
         body.appendChild(price); // Adds the price.
         body.appendChild(description); // Adds the description.
         body.appendChild(addBtn); // Adds the add button.
+        // Uses a browser API to access the DOM, storage or timing facility.
         dialog.appendChild(closeBtn); // Adds the close button to the window.
         dialog.appendChild(picture); // Adds the image.
         dialog.appendChild(body); // Adds the details.
         backdrop.appendChild(dialog); // Adds the window to the dark background.
+        // Uses a browser API to access the DOM, storage or timing facility.
         document.body.appendChild(backdrop); // Adds the background to the page.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var opener = null; // Remembers which button opened the window.
 
+        // Defines a reusable operation or callback for this module.
         function close() { // Defines the function that closes the window.
+            // Uses a browser API to access the DOM, storage or timing facility.
             backdrop.hidden = true; // Hides the window.
+            // Uses a browser API to access the DOM, storage or timing facility.
             document.body.classList.remove("lightbox-open"); // Lets the page scroll again.
+            // Checks the condition before executing the following branch.
             if (opener) { opener.focus(); } // Returns focus to the button that opened the window.
         }
 
         // The deal cards are rebuilt every time the filters change,
         // so one click listener on the document handles every Quick view button.
         document.addEventListener("click", function (event) { // Listens for clicks anywhere on the page.
+            // Declares the setting, state value or DOM reference used by this module.
             var button = event.target.closest ? event.target.closest("[data-quickview]") : null; // Finds the Quick view button that was clicked, if any.
+            // Checks the condition before executing the following branch.
             if (!button) { return; } // Ignores clicks that were not on a Quick view button.
+            // Updates the module state used by the surrounding feature.
             opener = button; // Remembers the button.
 
+            // Updates the module state used by the surrounding feature.
             picture.src = button.getAttribute("data-img"); // Shows the product photo.
+            // Updates the module state used by the surrounding feature.
             picture.alt = button.getAttribute("data-alt") || button.getAttribute("data-name"); // Sets the image description, using the full description when there is one.
+            // Updates the selected element's content or visual presentation.
             title.textContent = button.getAttribute("data-name"); // Sets the title.
+            // Updates the selected element's content or visual presentation.
             description.textContent = button.getAttribute("data-desc"); // Sets the description.
+            // Updates the selected element's content or visual presentation.
             price.textContent = "R" + Number(button.getAttribute("data-price")).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Formats the price as Rand with spaces between thousands.
+            // Updates the selected element's content or visual presentation.
             badge.textContent = button.getAttribute("data-condition") === "new" ? "New" : "Second-hand"; // Sets the badge text.
+            // Updates the module state used by the surrounding feature.
             badge.className = "badge " + (button.getAttribute("data-condition") === "new" ? "badge-new" : "badge-used"); // Sets the badge colour class.
 
             // The existing Order Summary code listens for data-add on the whole document,
@@ -367,19 +500,27 @@
             addBtn.setAttribute("data-add", button.getAttribute("data-name")); // Passes the product name to the add button.
             addBtn.setAttribute("data-price", button.getAttribute("data-price")); // Passes the price to the add button.
 
+            // Uses a browser API to access the DOM, storage or timing facility.
             backdrop.hidden = false; // Shows the window.
+            // Uses a browser API to access the DOM, storage or timing facility.
             document.body.classList.add("lightbox-open"); // Stops the page behind from scrolling.
             closeBtn.focus(); // Moves focus to the close button.
         });
 
         // Adding an item closes the modal so the visitor sees the confirmation message.
         addBtn.addEventListener("click", function () { window.setTimeout(close, 0); }); // Closes the window shortly after the product is added.
+        // Registers an event handler for the specified browser or user interaction.
         closeBtn.addEventListener("click", close); // Closes the window when the close button is clicked.
+        // Registers an event handler for the specified browser or user interaction.
         backdrop.addEventListener("click", function (event) { // Listens for clicks on the dark background.
+            // Checks the condition before executing the following branch.
             if (event.target === backdrop) { close(); } // Closes when the background, not the window, is clicked.
         });
+        // Registers an event handler for the specified browser or user interaction.
         backdrop.addEventListener("keydown", function (event) { // Listens for key presses in the window.
+            // Checks the condition before executing the following branch.
             if (event.key === "Escape") { close(); } // Closes on Escape.
+            // Uses a browser API to access the DOM, storage or timing facility.
             trapFocus(event, dialog); // Keeps Tab focus inside the window.
         });
     }
@@ -388,14 +529,19 @@
     // 4. FAQ ACCORDION
     // ------------------------------------------------------
 
+    // Defines a reusable operation or callback for this module.
     function initAccordion() { // Defines the function that sets up the FAQ accordions.
+        // Uses a browser API to access the DOM, storage or timing facility.
         Array.prototype.forEach.call(document.querySelectorAll(".accordion"), function (group) { // Loops through every accordion on the page.
+            // Declares the setting, state value or DOM reference used by this module.
             var items = group.querySelectorAll("details"); // Finds all the questions in the accordion.
             Array.prototype.forEach.call(items, function (item) { // Loops through each question.
                 // When one answer opens, the others in the same group close.
                 item.addEventListener("toggle", function () { // Listens for the question being opened or closed.
+                    // Checks the condition before executing the following branch.
                     if (!item.open) { return; } // Ignores the event when the question closed.
                     Array.prototype.forEach.call(items, function (other) { // Loops through all the questions.
+                        // Checks the condition before executing the following branch.
                         if (other !== item) { other.open = false; } // Closes every other question.
                     });
                 });
@@ -407,17 +553,23 @@
     // 5. SCROLL REVEAL ANIMATION
     // ------------------------------------------------------
 
+    // Defines a reusable operation or callback for this module.
     function initReveal() { // Defines the function that sets up the scroll reveal.
         // Older browsers simply show everything straight away.
         if (!("IntersectionObserver" in window)) { return; } // Stops when the browser does not support IntersectionObserver.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var targets = document.querySelectorAll("main article, main figure"); // Finds the elements to reveal.
+        // Checks the condition before executing the following branch.
         if (!targets.length) { return; } // Stops when there are none.
 
+        // Uses a browser API to access the DOM, storage or timing facility.
         document.documentElement.classList.add("js-reveal"); // Adds a class that tells the CSS the effect is running.
 
+        // Declares the setting, state value or DOM reference used by this module.
         var observer = new IntersectionObserver(function (entries) { // Creates the observer that watches which elements are on screen.
             entries.forEach(function (entry) { // Loops through the changes.
+                // Checks the condition before executing the following branch.
                 if (entry.isIntersecting) { // Checks whether the element has scrolled into view.
                     entry.target.classList.add("is-visible"); // Makes it visible.
                     observer.unobserve(entry.target); // Stops watching it once revealed.
@@ -440,13 +592,20 @@
     // The contact page lists the collection hubs as cards but has no map box, so this builds one
     // above the cards: a short heading, a "jump to a hub" dropdown and the empty map area.
     function injectHubMap() {
+        // Checks the condition before executing the following branch.
         if (document.getElementById("hub-map")) { return; } // The page already has its own map box.
+        // Declares the setting, state value or DOM reference used by this module.
         var cards = Array.prototype.filter.call(document.querySelectorAll("main article"), function (a) {
+            // Returns the result or exits the current function path.
             return /Collection hub/i.test(a.textContent);
         });
+        // Checks the condition before executing the following branch.
         if (!cards.length) { return; } // Not a page that lists hubs.
+        // Declares the setting, state value or DOM reference used by this module.
         var grid = cards[0].parentElement;
+        // Declares the setting, state value or DOM reference used by this module.
         var wrap = make("div", "cc-hub-map-wrap");
+        // Updates the selected element's content or visual presentation.
         wrap.innerHTML =
             '<h3 class="text-xl font-extrabold text-[#0d1b3e]">Find a hub on the map</h3>' +
             '<p class="mt-1 text-sm text-slate-600">Pick a hub to zoom to it, or tap a marker for the address and opening hours.</p>' +
@@ -456,24 +615,39 @@
         grid.parentElement.insertBefore(wrap, grid);
     }
 
+    // Defines a reusable operation or callback for this module.
     function gateHubMap() { // Waits for permission before loading the map.
+        // Declares the setting, state value or DOM reference used by this module.
         var box = document.getElementById("hub-map"); // Finds the map box on the page.
+        // Checks the condition before executing the following branch.
         if (!box) { return; } // Stops when the page has no map box.
+        // Checks the condition before executing the following branch.
         if (!window.CCConsent || window.CCConsent.allowed("maps")) { initHubMap(); return; } // Builds the map straight away when maps are allowed.
         box.classList.add("map-unavailable"); // Reuses the message box styling.
+        // Declares the setting, state value or DOM reference used by this module.
         var text = document.createElement("p"); // Creates the message.
+        // Updates the selected element's content or visual presentation.
         text.textContent = "The map uses OpenStreetMap, which receives your IP address when it loads, so it stays off until you allow it. You can still use the collection hub cards below."; // Explains why the map is blocked.
+        // Declares the setting, state value or DOM reference used by this module.
         var button = document.createElement("button"); // Creates the button.
+        // Updates the module state used by the surrounding feature.
         button.type = "button"; // Makes it a plain button.
+        // Updates the module state used by the surrounding feature.
         button.className = "btn btn-sm"; // Gives it the button styling.
+        // Updates the selected element's content or visual presentation.
         button.textContent = "Allow maps and show the map"; // Sets the label.
+        // Registers an event handler for the specified browser or user interaction.
         button.addEventListener("click", function () { window.CCConsent.grant("maps"); }); // Records the visitor's permission.
         box.appendChild(text); // Adds the message to the map box.
         box.appendChild(button); // Adds the button to the map box.
+        // Registers an event handler for the specified browser or user interaction.
         document.addEventListener("cc-consent-change", function onChange() { // Listens for the visitor changing their choices.
+            // Checks the condition before executing the following branch.
             if (!window.CCConsent.allowed("maps")) { return; } // Waits until maps are allowed.
+            // Uses a browser API to access the DOM, storage or timing facility.
             document.removeEventListener("cc-consent-change", onChange); // Stops listening.
             box.classList.remove("map-unavailable"); // Removes the message styling.
+            // Updates the selected element's content or visual presentation.
             box.textContent = ""; // Clears the message.
             initHubMap(); // Builds the map.
         });
@@ -483,6 +657,7 @@
     // START
     // ------------------------------------------------------
 
+    // Registers an event handler for the specified browser or user interaction.
     document.addEventListener("DOMContentLoaded", function () { // Runs when the page has finished loading.
         injectHubMap(); // Builds the map box on pages that list hubs but have no map.
         gateHubMap(); // Builds the hub map once maps are allowed.
