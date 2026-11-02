@@ -1,14 +1,4 @@
-// ==========================================================
-// CAMPUS-CART
-// interactions.js - what visitors click, search and filter
-//   1. Cart drawer and add-to-cart buttons (home page)
-//   2. Order summary, hand-off messages and EFT details (account page)
-//   3. Shop tabs, deals list (search, filter, sort, see more / less),
-//      gallery filter, product detail picker, print checklist (products page)
-//   4. Coverage search (coverage page)
-// Every block checks that its elements exist, so this one file is safe
-// on every page. Needs ui.js (window.CC) and data.js (CC_CATALOGUE).
-// ==========================================================
+// INTERACTION LAYER — Connects visitor actions to the shared cart and wishlist, order summary, product browsing controls, gallery filters, product-detail selection and coverage search. Each page-specific section checks for its required elements before registering handlers, and shared cart state comes from ui.js.
 
 (function () {
   'use strict';
