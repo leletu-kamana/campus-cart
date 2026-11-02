@@ -245,7 +245,7 @@
             event.preventDefault(); // Stops the browser's default action so the custom handling can run.
             handleInternalNavigation(url.href); // Calls the function or method needed for this operation.
         } catch (e) { // Performs the next step in the current Campus-Cart operation.
-            // If URL parsing fails, allow standard browser navigation
+        // If URL parsing fails, allow standard browser navigation
         } // Closes the current block, expression, or function call.
     }); // Closes the current block, expression, or function call.
 
@@ -256,9 +256,9 @@
     } else { // Runs the alternative branch when the preceding condition is false.
         // Runs the initial loader hide logic once page resources have finished loading.
         window.addEventListener("load", scheduleInitialHide, { once: true }); // Registers a window event handler for this browser event.
-        // Also ensure hide fires if load event was delayed by third-party frames
-        // Provides an additional fallback based on DOM readiness.
-        // Waits until the HTML has been parsed before initializing features that depend on page elements.
+    // Also ensure hide fires if load event was delayed by third-party frames
+    // Provides an additional fallback based on DOM readiness.
+    // Waits until the HTML has been parsed before initializing features that depend on page elements.
     document.addEventListener("DOMContentLoaded", function () { // Registers a document-level event handler for this interaction.
             setTimeout(scheduleInitialHide, 500); // Schedules this callback to run after the specified delay.
         }, { once: true }); // Performs the next step in the current Campus-Cart operation.
