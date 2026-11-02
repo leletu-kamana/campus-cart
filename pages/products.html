@@ -1517,7 +1517,10 @@
 								class="tab-btn rounded-full bg-[#0d1b3e] px-6 py-2.5 text-sm font-bold text-white"
 								role="tab"
 								aria-selected="true"
+								aria-controls="faq-student"
+								tabindex="0"
 								data-panel="faq-student"
+								id="faq-student-tab"
 							>
 								Student FAQ
 							</button>
@@ -1526,7 +1529,10 @@
 								class="tab-btn rounded-full px-6 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
 								role="tab"
 								aria-selected="false"
+								aria-controls="faq-parent"
+								tabindex="-1"
 								data-panel="faq-parent"
+								id="faq-parent-tab"
 							>
 								Parent FAQ
 							</button>
@@ -1536,7 +1542,12 @@
 							class="tab-panel mt-8 grid grid-cols-1 gap-4"
 							id="faq-student"
 							role="tabpanel"
+							aria-labelledby="faq-student-tab"
 						>
+							<div class="col-span-full mb-2 rounded-2xl bg-slate-50 px-5 py-4">
+								<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[#c99700]">For students</p>
+								<p class="mt-1 text-sm leading-relaxed text-slate-600">Answers about shopping, payments, second-hand items, delivery and selling on Campus-Cart.</p>
+							</div>
 							<details
 								class="group rounded-3xl border border-slate-200 bg-white p-6"
 							>
@@ -1619,7 +1630,12 @@
 							class="tab-panel mt-8 grid grid-cols-1 gap-4 hidden"
 							id="faq-parent"
 							role="tabpanel"
+							aria-labelledby="faq-parent-tab"
 						>
+							<div class="col-span-full mb-2 rounded-2xl bg-slate-50 px-5 py-4">
+								<p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[#c99700]">For parents and guardians</p>
+								<p class="mt-1 text-sm leading-relaxed text-slate-600">Answers about bundle prices, paying for a student, returns, stock and seller checks.</p>
+							</div>
 							<details
 								class="group rounded-3xl border border-slate-200 bg-white p-6"
 							>
