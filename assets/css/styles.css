@@ -1889,3 +1889,34 @@ body {
     white-space: nowrap;
   }
 }
+
+
+/* Keep the wishlist icon beside Add to Order Summary on narrow screens. */
+@media (max-width: 479px) {
+  #panel-new .grid > article > div:last-child > div:last-child,
+  #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+  #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  #panel-new article button[data-add],
+  #panel-used article button[data-add],
+  #deals-gallery #deals-results article button[data-add] {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 calc(100% - 3.25rem);
+  }
+  #panel-new article button[data-add-to-wishlist],
+  #panel-used article button[data-add-to-wishlist],
+  #deals-gallery #deals-results article button[data-add-to-wishlist] {
+    width: 2.75rem;
+    flex: 0 0 2.75rem;
+  }
+  #panel-new article button[data-quickview],
+  #panel-used article button[data-quickview],
+  #deals-gallery #deals-results article button[data-quickview] {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
