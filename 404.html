@@ -1,449 +1,962 @@
-<!DOCTYPE html> <!-- Declares the document as HTML5 so browsers use standards mode -->
+<!doctype html>
+<!-- Declares the document as HTML5 so browsers use standards mode -->
 <!--
   This document renders the Campus-Cart not-found page, including recovery links, the shared navigation and footer, and the CSS backpack illustration. It loads the shared stylesheet and deferred site scripts; the visible error state is informational and does not perform a server-side route repair.
 -->
 <!-- html element: Root document element; lang declares the language used by the 404 page. Attributes: lang="en" sets the lang property used by the browser, assistive technology or site scripts. -->
-<html lang="en"> <!-- Root element; lang="en" tells screen readers and search engines the page is in English -->
-<!-- head element: Contains metadata and resources loaded before the page content is displayed. Attributes: No explicit attributes; native HTML semantics apply. -->
-<head> <!-- Head holds metadata, styles and scripts that are not rendered directly -->
-  <!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: charset="utf-8" declares the document character encoding. -->
-  <meta charset="utf-8"> <!-- UTF-8 encoding supports all characters and the rand sign -->
-  <!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="viewport" sets the form-field or metadata name; content="width=device-width, initial-scale=1" sets the value associated with its metadata name. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport: width follows the device, no zoom lock -->
-  <!-- title element: Sets the browser-tab and search-result title. Attributes: No explicit attributes; native HTML semantics apply. -->
-  <title>Page not found | Campus-Cart</title> <!-- Browser tab title for the 404 page -->
-  <!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="description" sets the form-field or metadata name; content="This Campus-Cart page could not be found. Head home, br…" sets the value associated with its metadata name. -->
-  <meta name="description" content="This Campus-Cart page could not be found. Head home, browse student essentials, or contact our team."> <!-- Meta description summarising the 404 page for search engines -->
-  <!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="robots" sets the form-field or metadata name; content="noindex, follow" sets the value associated with its metadata name. -->
-  <meta name="robots" content="noindex, follow"> <!-- Tells crawlers not to index this error page but still follow its links -->
-  <!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="theme-color" sets the form-field or metadata name; content="#0d1b3e" sets the value associated with its metadata name. -->
-  <meta name="theme-color" content="#0d1b3e"> <!-- Tints the browser UI with Campus-Cart navy -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://unpkg.com/@tailwindcss/browser@4" selects the image, script or other resource loaded by this element. -->
-  <script src="https://unpkg.com/@tailwindcss/browser@4"></script> <!-- Tailwind CSS v4 browser build: supplies the utility classes used on this page -->
-  <!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="preconnect" describes the relationship to the linked resource; href="https://fonts.googleapis.com" sets the link destination or in-page target. -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Opens an early connection to Google Fonts for faster loading -->
-  <!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="preconnect" describes the relationship to the linked resource; href="https://fonts.gstatic.com" sets the link destination or in-page target; crossorigin sets cross-origin resource handling. -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Opens an early CORS connection to the font files themselves -->
-  <!-- link element: References an external resource such as a stylesheet or icon. Attributes: href="https://fonts.googleapis.com/css2?family=Inter:wght@400…" sets the link destination or in-page target; rel="stylesheet" describes the relationship to the linked resource. -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" rel="stylesheet"> <!-- Loads Inter and Playfair Display italic for headings -->
-  <!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="icon" describes the relationship to the linked resource; href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000…" sets the link destination or in-page target. -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"> <!-- Inline SVG favicon: yellow "C" on a navy rounded square -->
+<html lang="en">
+	<!-- Root element; lang="en" tells screen readers and search engines the page is in English -->
+	<!-- head element: Contains metadata and resources loaded before the page content is displayed. Attributes: No explicit attributes; native HTML semantics apply. -->
+	<head>
+		<!-- Head holds metadata, styles and scripts that are not rendered directly -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: charset="utf-8" declares the document character encoding. -->
+		<meta charset="utf-8" />
+		<!-- UTF-8 encoding supports all characters and the rand sign -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="viewport" sets the form-field or metadata name; content="width=device-width, initial-scale=1" sets the value associated with its metadata name. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Responsive viewport: width follows the device, no zoom lock -->
+		<!-- title element: Sets the browser-tab and search-result title. Attributes: No explicit attributes; native HTML semantics apply. -->
+		<title>Page not found | Campus-Cart</title>
+		<!-- Browser tab title for the 404 page -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="description" sets the form-field or metadata name; content="This Campus-Cart page could not be found. Head home, br…" sets the value associated with its metadata name. -->
+		<meta
+			name="description"
+			content="This Campus-Cart page could not be found. Head home, browse student essentials, or contact our team."
+		/>
+		<!-- Meta description summarising the 404 page for search engines -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="robots" sets the form-field or metadata name; content="noindex, follow" sets the value associated with its metadata name. -->
+		<meta name="robots" content="noindex, follow" />
+		<!-- Tells crawlers not to index this error page but still follow its links -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="theme-color" sets the form-field or metadata name; content="#0d1b3e" sets the value associated with its metadata name. -->
+		<meta name="theme-color" content="#0d1b3e" />
+		<!-- Tints the browser UI with Campus-Cart navy -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://unpkg.com/@tailwindcss/browser@4" selects the image, script or other resource loaded by this element. -->
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<!-- Tailwind CSS v4 browser build: supplies the utility classes used on this page -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="preconnect" describes the relationship to the linked resource; href="https://fonts.googleapis.com" sets the link destination or in-page target. -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- Opens an early connection to Google Fonts for faster loading -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="preconnect" describes the relationship to the linked resource; href="https://fonts.gstatic.com" sets the link destination or in-page target; crossorigin sets cross-origin resource handling. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Opens an early CORS connection to the font files themselves -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: href="https://fonts.googleapis.com/css2?family=Inter:wght@400…" sets the link destination or in-page target; rel="stylesheet" describes the relationship to the linked resource. -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Loads Inter and Playfair Display italic for headings -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="icon" describes the relationship to the linked resource; href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000…" sets the link destination or in-page target. -->
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
+		/>
+		<!-- Inline SVG favicon: yellow "C" on a navy rounded square -->
 
-  <!-- Tailwind v4 theme config: animations used on this page -->
-  <!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="stylesheet" describes the relationship to the linked resource; href="assets/css/styles.css" sets the link destination or in-page target. -->
-  <link rel="stylesheet" href="assets/css/styles.css"> <!-- Site stylesheet: custom animations and component overrides -->
-</head>
+		<!-- Tailwind v4 theme config: animations used on this page -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="stylesheet" describes the relationship to the linked resource; href="assets/css/styles.css" sets the link destination or in-page target. -->
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<!-- Site stylesheet: custom animations and component overrides -->
+	</head>
 
-<!-- body element: Contains the visible not-found page and its interactive elements. Attributes: class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font…" applies the listed styling, layout, responsive and state classes. -->
-<body class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"> <!-- Warm off-white background, Inter font, smooth anti-aliased rendering -->
+	<!-- body element: Contains the visible not-found page and its interactive elements. Attributes: class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font…" applies the listed styling, layout, responsive and state classes. -->
+	<body
+		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
+	>
+		<!-- Warm off-white background, Inter font, smooth anti-aliased rendering -->
 
-  <!-- Skip link for keyboard users -->
-  <!-- Hidden until focused: lets keyboard users jump straight past the navigation to <main> -->
-  <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="#main" sets the link destination or in-page target; class="sr-only focus:not-sr-only focus:fixed focus:left-4 focu…" applies the listed styling, layout, responsive and state classes. -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white">
-    Skip to main content <!-- Visible label when the skip link receives focus -->
-  </a>
+		<!-- Skip link for keyboard users -->
+		<!-- Hidden until focused: lets keyboard users jump straight past the navigation to <main> -->
+		<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="#main" sets the link destination or in-page target; class="sr-only focus:not-sr-only focus:fixed focus:left-4 focu…" applies the listed styling, layout, responsive and state classes. -->
+		<a
+			href="#main"
+			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
+		>
+			Skip to main content
+			<!-- Visible label when the skip link receives focus -->
+		</a>
 
-  <!-- ===== Top utility bar ===== -->
-  <!-- Thin navy strip above the header: contact details, audience paths and a trust badge. Hidden below md to save mobile space. -->
-  <!-- div element: Groups related elements for layout and styling. Attributes: class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate…" applies the listed styling, layout, responsive and state classes. -->
-  <div class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block">
-    <!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto flex h-9 max-w-7xl items-center justify-between…" applies the listed styling, layout, responsive and state classes. -->
-    <div class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8">
-      <!-- Left cluster: email link (always visible) and WhatsApp link (large screens only) -->
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-5" applies the listed styling, layout, responsive and state classes. -->
-      <div class="flex items-center gap-5">
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="mailto:hello@campus-cart.co.za" sets the link destination or in-page target; class="inline-flex items-center gap-1.5 transition hover:text-…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="mailto:hello@campus-cart.co.za" class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"> <!-- Opens the visitor's email client pre-addressed to support -->
-          <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-3.5 w-3.5" applies the listed styling, layout, responsive and state classes. -->
-          <img src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" alt="" class="h-3.5 w-3.5"> <!-- Decorative mail icon, empty alt so screen readers skip it -->
-          hello@campus-cart.co.za <!-- Visible support email address -->
-        </a>
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://wa.me/27123456789" sets the link destination or in-page target; class="hidden items-center gap-1.5 transition hover:text-[#ffd…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://wa.me/27123456789" class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"> <!-- WhatsApp deep link, hidden below lg -->
-          <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/message-ci…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-3.5 w-3.5" applies the listed styling, layout, responsive and state classes. -->
-          <img src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" alt="" class="h-3.5 w-3.5"> <!-- Decorative message-circle icon -->
-          +27 12 345 6789 <!-- Visible WhatsApp number -->
-        </a>
-      </div>
-      <!-- Right cluster: audience entry points and a delivery promise -->
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-5" applies the listed styling, layout, responsive and state classes. -->
-      <div class="flex items-center gap-5">
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html…" sets the link destination or in-page target; class="transition hover:text-[#ffd23f]" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/account.html#student" class="transition hover:text-[#ffd23f]">Student path</a> <!-- Deep link to the student section of the account page -->
-        <!-- span element: Groups inline text or icon content. Attributes: class="text-slate-600" applies the listed styling, layout, responsive and state classes. -->
-        <span class="text-slate-600">|</span> <!-- Dimmed pipe divider -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html…" sets the link destination or in-page target; class="transition hover:text-[#ffd23f]" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/account.html#parent" class="transition hover:text-[#ffd23f]">Parent path</a> <!-- Deep link to the parent section of the account page -->
-        <!-- span element: Groups inline text or icon content. Attributes: class="text-slate-600" applies the listed styling, layout, responsive and state classes. -->
-        <span class="text-slate-600">|</span> <!-- Dimmed pipe divider -->
-        <!-- span element: Groups inline text or icon content. Attributes: class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-fl…" applies the listed styling, layout, responsive and state classes. -->
-        <span class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"> <!-- Trust badge, hidden on mobile -->
-          <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/shield-che…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-3.5 w-3.5" applies the listed styling, layout, responsive and state classes. -->
-          <img src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" alt="" class="h-3.5 w-3.5"> <!-- Shield-check icon implying safety -->
-          Free collection at listed points <!-- Trust message -->
-        </span>
-      </div>
-    </div>
-  </div>
+		<!-- ===== Top utility bar ===== -->
+		<!-- Thin navy strip above the header: contact details, audience paths and a trust badge. Hidden below md to save mobile space. -->
+		<!-- div element: Groups related elements for layout and styling. Attributes: class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate…" applies the listed styling, layout, responsive and state classes. -->
+		<div
+			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
+		>
+			<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto flex h-9 max-w-7xl items-center justify-between…" applies the listed styling, layout, responsive and state classes. -->
+			<div
+				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
+			>
+				<!-- Left cluster: email link (always visible) and WhatsApp link (large screens only) -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-5" applies the listed styling, layout, responsive and state classes. -->
+				<div class="flex items-center gap-5">
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="mailto:hello@campus-cart.co.za" sets the link destination or in-page target; class="inline-flex items-center gap-1.5 transition hover:text-…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="mailto:hello@campus-cart.co.za"
+						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
+					>
+						<!-- Opens the visitor's email client pre-addressed to support -->
+						<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-3.5 w-3.5" applies the listed styling, layout, responsive and state classes. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						<!-- Decorative mail icon, empty alt so screen readers skip it -->
+						hello@campus-cart.co.za
+						<!-- Visible support email address -->
+					</a>
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://wa.me/27123456789" sets the link destination or in-page target; class="hidden items-center gap-1.5 transition hover:text-[#ffd…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://wa.me/27123456789"
+						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
+					>
+						<!-- WhatsApp deep link, hidden below lg -->
+						<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/message-ci…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-3.5 w-3.5" applies the listed styling, layout, responsive and state classes. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						<!-- Decorative message-circle icon -->
+						+27 12 345 6789
+						<!-- Visible WhatsApp number -->
+					</a>
+				</div>
+				<!-- Right cluster: audience entry points and a delivery promise -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-5" applies the listed styling, layout, responsive and state classes. -->
+				<div class="flex items-center gap-5">
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html…" sets the link destination or in-page target; class="transition hover:text-[#ffd23f]" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/account.html#student"
+						class="transition hover:text-[#ffd23f]"
+						>Student path</a
+					>
+					<!-- Deep link to the student section of the account page -->
+					<!-- span element: Groups inline text or icon content. Attributes: class="text-slate-600" applies the listed styling, layout, responsive and state classes. -->
+					<span class="text-slate-600">|</span>
+					<!-- Dimmed pipe divider -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html…" sets the link destination or in-page target; class="transition hover:text-[#ffd23f]" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/account.html#parent"
+						class="transition hover:text-[#ffd23f]"
+						>Parent path</a
+					>
+					<!-- Deep link to the parent section of the account page -->
+					<!-- span element: Groups inline text or icon content. Attributes: class="text-slate-600" applies the listed styling, layout, responsive and state classes. -->
+					<span class="text-slate-600">|</span>
+					<!-- Dimmed pipe divider -->
+					<!-- span element: Groups inline text or icon content. Attributes: class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-fl…" applies the listed styling, layout, responsive and state classes. -->
+					<span
+						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
+					>
+						<!-- Trust badge, hidden on mobile -->
+						<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/shield-che…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-3.5 w-3.5" applies the listed styling, layout, responsive and state classes. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						<!-- Shield-check icon implying safety -->
+						Free collection at listed points
+						<!-- Trust message -->
+					</span>
+				</div>
+			</div>
+		</div>
 
-  <!-- ===== Header / Navigation ===== -->
-  <!-- Sticky header: stays pinned to the top with a translucent blurred background -->
-  <!-- header element: Defines the page header landmark. Attributes: id="siteHeader" uniquely identifies this element for CSS, scripts or fragment navigation; class="sticky top-0 z-50 border-b border-slate-200/70 bg-white…" applies the listed styling, layout, responsive and state classes. -->
-  <header id="siteHeader" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300">
-    <!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto flex h-16 max-w-7xl items-center justify-betwee…" applies the listed styling, layout, responsive and state classes. -->
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <!-- Brand logo: links back to the homepage with a navy "C" tile and wordmark -->
-      <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="flex items-center gap-2.5 text-xl font-extrabold tracki…" applies the listed styling, layout, responsive and state classes. -->
-      <a href="https://campus-cart-olive.vercel.app/index.html" class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]">
-        <!-- span element: Groups inline text or icon content. Attributes: class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e]…" applies the listed styling, layout, responsive and state classes. -->
-        <span class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]">C</span> <!-- 36px navy rounded tile with centred gold C -->
-        <!-- span element: Groups inline text or icon content. Attributes: No explicit attributes; native HTML semantics apply. -->
-        <span>Campus<span class="text-[#c99700]">-Cart</span></span> <!-- Wordmark: "Campus" in navy, "-Cart" in gold -->
-      </a>
+		<!-- ===== Header / Navigation ===== -->
+		<!-- Sticky header: stays pinned to the top with a translucent blurred background -->
+		<!-- header element: Defines the page header landmark. Attributes: id="siteHeader" uniquely identifies this element for CSS, scripts or fragment navigation; class="sticky top-0 z-50 border-b border-slate-200/70 bg-white…" applies the listed styling, layout, responsive and state classes. -->
+		<header
+			id="siteHeader"
+			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300"
+		>
+			<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto flex h-16 max-w-7xl items-center justify-betwee…" applies the listed styling, layout, responsive and state classes. -->
+			<div
+				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+			>
+				<!-- Brand logo: links back to the homepage with a navy "C" tile and wordmark -->
+				<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="flex items-center gap-2.5 text-xl font-extrabold tracki…" applies the listed styling, layout, responsive and state classes. -->
+				<a
+					href="https://campus-cart-olive.vercel.app/index.html"
+					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
+				>
+					<!-- span element: Groups inline text or icon content. Attributes: class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e]…" applies the listed styling, layout, responsive and state classes. -->
+					<span
+						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
+						>C</span
+					>
+					<!-- 36px navy rounded tile with centred gold C -->
+					<!-- span element: Groups inline text or icon content. Attributes: No explicit attributes; native HTML semantics apply. -->
+					<span>Campus<span class="text-[#c99700]">-Cart</span></span>
+					<!-- Wordmark: "Campus" in navy, "-Cart" in gold -->
+				</a>
 
-      <!-- Provides navigation links for moving between pages or page sections. -->
-      <!-- nav element: Groups navigation links to other site destinations. Attributes: class="hidden items-center gap-1 lg:flex" applies the listed styling, layout, responsive and state classes; aria-label="Main navigation" provides an accessible name for assistive technology. -->
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation"> <!-- Desktop nav, hidden below lg -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/index.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Home</a> <!-- Home link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/products.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Shop</a> <!-- Products page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Parent Hub</a> <!-- Anchor to the Parent Hub section -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/about.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/about.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">About</a> <!-- About page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/coverage.htm…" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/coverage.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Coverage</a> <!-- Delivery coverage page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/contact.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/contact.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Contact</a> <!-- Contact page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/account.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Account</a> <!-- Account page link -->
-      </nav>
+				<!-- Provides navigation links for moving between pages or page sections. -->
+				<!-- nav element: Groups navigation links to other site destinations. Attributes: class="hidden items-center gap-1 lg:flex" applies the listed styling, layout, responsive and state classes; aria-label="Main navigation" provides an accessible name for assistive technology. -->
+				<nav
+					class="hidden items-center gap-1 lg:flex"
+					aria-label="Main navigation"
+				>
+					<!-- Desktop nav, hidden below lg -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/index.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Home</a
+					>
+					<!-- Home link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/products.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Shop</a
+					>
+					<!-- Products page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Parent Hub</a
+					>
+					<!-- Anchor to the Parent Hub section -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/about.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/about.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>About</a
+					>
+					<!-- About page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/coverage.htm…" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/coverage.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Coverage</a
+					>
+					<!-- Delivery coverage page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/contact.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/contact.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Contact</a
+					>
+					<!-- Contact page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html" sets the link destination or in-page target; class="rounded-full px-4 py-2 text-sm font-medium text-slate-6…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/account.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Account</a
+					>
+					<!-- Account page link -->
+				</nav>
 
-      <!-- Right-hand action cluster: live clock, cart link and mobile menu toggle -->
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-2 sm:gap-3" applies the listed styling, layout, responsive and state classes. -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Live clock block: time and date are injected by JavaScript (xl screens only) -->
-        <!-- div element: Groups related elements for layout and styling. Attributes: class="hidden text-right xl:block" applies the listed styling, layout, responsive and state classes. -->
-        <div class="hidden text-right xl:block">
-          <!-- p element: Defines a paragraph of explanatory text. Attributes: id="navTime" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-xs font-bold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
-          <p id="navTime" class="text-xs font-bold text-[#0d1b3e]">--:--:--</p> <!-- Digital time placeholder, updated by script -->
-          <!-- p element: Defines a paragraph of explanatory text. Attributes: id="navDate" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-[11px] text-slate-500" applies the listed styling, layout, responsive and state classes. -->
-          <p id="navDate" class="text-[11px] text-slate-500">Loading…</p> <!-- Date placeholder, replaced once loaded -->
-        </div>
+				<!-- Right-hand action cluster: live clock, cart link and mobile menu toggle -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-2 sm:gap-3" applies the listed styling, layout, responsive and state classes. -->
+				<div class="flex items-center gap-2 sm:gap-3">
+					<!-- Live clock block: time and date are injected by JavaScript (xl screens only) -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="hidden text-right xl:block" applies the listed styling, layout, responsive and state classes. -->
+					<div class="hidden text-right xl:block">
+						<!-- p element: Defines a paragraph of explanatory text. Attributes: id="navTime" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-xs font-bold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
+						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
+							--:--:--
+						</p>
+						<!-- Digital time placeholder, updated by script -->
+						<!-- p element: Defines a paragraph of explanatory text. Attributes: id="navDate" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-[11px] text-slate-500" applies the listed styling, layout, responsive and state classes. -->
+						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
+						<!-- Date placeholder, replaced once loaded -->
+					</div>
 
-        <!-- Cart / order shortcut: icon-only circular link with a live count badge -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html…" sets the link destination or in-page target; class="relative grid h-10 w-10 place-items-center rounded-full…" applies the listed styling, layout, responsive and state classes; aria-label="Order / cart" provides an accessible name for assistive technology. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/account.html#order" class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" aria-label="Order / cart"> <!-- Deep link to the order section on the account page -->
-          <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-b…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-5 w-5" applies the listed styling, layout, responsive and state classes. -->
-          <img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-5 w-5"> <!-- Decorative shopping bag icon -->
-          <!-- span element: Groups inline text or icon content. Attributes: id="cartCount" uniquely identifies this element for CSS, scripts or fragment navigation; class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-c…" applies the listed styling, layout, responsive and state classes. -->
-          <span id="cartCount" class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]">0</span> <!-- Gold badge pinned to the top-right of the bag -->
-        </a>
+					<!-- Cart / order shortcut: icon-only circular link with a live count badge -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html…" sets the link destination or in-page target; class="relative grid h-10 w-10 place-items-center rounded-full…" applies the listed styling, layout, responsive and state classes; aria-label="Order / cart" provides an accessible name for assistive technology. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/account.html#order"
+						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
+						aria-label="Order / cart"
+					>
+						<!-- Deep link to the order section on the account page -->
+						<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-b…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-5 w-5" applies the listed styling, layout, responsive and state classes. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+						<!-- Decorative shopping bag icon -->
+						<!-- span element: Groups inline text or icon content. Attributes: id="cartCount" uniquely identifies this element for CSS, scripts or fragment navigation; class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-c…" applies the listed styling, layout, responsive and state classes. -->
+						<span
+							id="cartCount"
+							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
+							>0</span
+						>
+						<!-- Gold badge pinned to the top-right of the bag -->
+					</a>
 
-        <!-- Mobile menu toggle: visible only below lg; swaps between menu and close icons -->
-        <!-- button element: Creates an interactive control for a visitor action. Attributes: id="navToggle" uniquely identifies this element for CSS, scripts or fragment navigation; type="button" sets the control or resource type and its browser behaviour; class="grid h-10 w-10 place-items-center rounded-full border b…" applies the listed styling, layout, responsive and state classes; aria-expanded="false" sets the aria expanded property used by the browser, assistive technology or site scripts; aria-controls="mobileMenu" identifies the element controlled by this element; aria-label="Menu" provides an accessible name for assistive technology. -->
-        <button id="navToggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
-          <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: id="navIcon" uniquely identifies this element for CSS, scripts or fragment navigation; src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-5 w-5" applies the listed styling, layout, responsive and state classes. -->
-          <img id="navIcon" src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" alt="" class="h-5 w-5"> <!-- Icon whose src is swapped by JavaScript when the menu opens/closes -->
-        </button>
-      </div>
-    </div>
+					<!-- Mobile menu toggle: visible only below lg; swaps between menu and close icons -->
+					<!-- button element: Creates an interactive control for a visitor action. Attributes: id="navToggle" uniquely identifies this element for CSS, scripts or fragment navigation; type="button" sets the control or resource type and its browser behaviour; class="grid h-10 w-10 place-items-center rounded-full border b…" applies the listed styling, layout, responsive and state classes; aria-expanded="false" sets the aria expanded property used by the browser, assistive technology or site scripts; aria-controls="mobileMenu" identifies the element controlled by this element; aria-label="Menu" provides an accessible name for assistive technology. -->
+					<button
+						id="navToggle"
+						type="button"
+						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden"
+						aria-expanded="false"
+						aria-controls="mobileMenu"
+						aria-label="Menu"
+					>
+						<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: id="navIcon" uniquely identifies this element for CSS, scripts or fragment navigation; src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-5 w-5" applies the listed styling, layout, responsive and state classes. -->
+						<img
+							id="navIcon"
+							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+						<!-- Icon whose src is swapped by JavaScript when the menu opens/closes -->
+					</button>
+				</div>
+			</div>
 
-    <!-- Mobile navigation panel: hidden by default, toggled open by #navToggle -->
-    <!-- div element: Groups related elements for layout and styling. Attributes: id="mobileMenu" uniquely identifies this element for CSS, scripts or fragment navigation; class="hidden border-t border-slate-200 bg-white lg:hidden" applies the listed styling, layout, responsive and state classes. -->
-    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
-      <!-- Provides navigation links for moving between pages or page sections. -->
-      <!-- nav element: Groups navigation links to other site destinations. Attributes: class="space-y-1 px-4 py-4" applies the listed styling, layout, responsive and state classes; aria-label="Mobile navigation" provides an accessible name for assistive technology. -->
-      <nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation"> <!-- Stacked mobile links with a distinct accessible name -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/index.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Home</a> <!-- Home link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/products.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Shop</a> <!-- Products link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Parent Hub</a> <!-- Parent Hub anchor -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/about.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/about.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">About</a> <!-- About page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/coverage.htm…" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/coverage.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Coverage</a> <!-- Coverage page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/contact.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/contact.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Contact</a> <!-- Contact page link -->
-        <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
-        <a href="https://campus-cart-olive.vercel.app/pages/account.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Account</a> <!-- Account page link -->
-      </nav>
-    </div>
-  </header>
+			<!-- Mobile navigation panel: hidden by default, toggled open by #navToggle -->
+			<!-- div element: Groups related elements for layout and styling. Attributes: id="mobileMenu" uniquely identifies this element for CSS, scripts or fragment navigation; class="hidden border-t border-slate-200 bg-white lg:hidden" applies the listed styling, layout, responsive and state classes. -->
+			<div
+				id="mobileMenu"
+				class="hidden border-t border-slate-200 bg-white lg:hidden"
+			>
+				<!-- Provides navigation links for moving between pages or page sections. -->
+				<!-- nav element: Groups navigation links to other site destinations. Attributes: class="space-y-1 px-4 py-4" applies the listed styling, layout, responsive and state classes; aria-label="Mobile navigation" provides an accessible name for assistive technology. -->
+				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
+					<!-- Stacked mobile links with a distinct accessible name -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/index.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Home</a
+					>
+					<!-- Home link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/products.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Shop</a
+					>
+					<!-- Products link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Parent Hub</a
+					>
+					<!-- Parent Hub anchor -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/about.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/about.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>About</a
+					>
+					<!-- About page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/coverage.htm…" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/coverage.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Coverage</a
+					>
+					<!-- Coverage page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/contact.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/contact.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Contact</a
+					>
+					<!-- Contact page link -->
+					<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/account.html" sets the link destination or in-page target; class="block rounded-2xl px-4 py-3 text-sm font-medium text-sl…" applies the listed styling, layout, responsive and state classes. -->
+					<a
+						href="https://campus-cart-olive.vercel.app/pages/account.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Account</a
+					>
+					<!-- Account page link -->
+				</nav>
+			</div>
+		</header>
 
-  <!-- Contains the primary content of this page, separate from shared navigation and footer content. -->
-  <!-- main element: Identifies the primary not-found message and recovery actions. Attributes: id="main" uniquely identifies this element for CSS, scripts or fragment navigation; tabindex="-1" sets keyboard focus behaviour or order. -->
-  <main id="main" tabindex="-1"> <!-- Main landmark with a focusable ID for the skip link -->
+		<!-- Contains the primary content of this page, separate from shared navigation and footer content. -->
+		<!-- main element: Identifies the primary not-found message and recovery actions. Attributes: id="main" uniquely identifies this element for CSS, scripts or fragment navigation; tabindex="-1" sets keyboard focus behaviour or order. -->
+		<main id="main" tabindex="-1">
+			<!-- Main landmark with a focusable ID for the skip link -->
 
-    <!-- ===== 404 hero ===== -->
-    <!-- Full-width navy hero with the error message, two recovery CTAs and a CSS-drawn backpack illustration -->
-    <!-- section element: Groups related not-found page content. Attributes: class="relative overflow-hidden bg-[#0d1b3e] text-white" applies the listed styling, layout, responsive and state classes; aria-labelledby="cc404-title" references the element that supplies this element's accessible name. -->
-    <section class="relative overflow-hidden bg-[#0d1b3e] text-white" aria-labelledby="cc404-title">
-      <!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,…" applies the listed styling, layout, responsive and state classes. -->
-      <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"></div> <!-- Decorative radial glows behind the content -->
-      <!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rota…" applies the listed styling, layout, responsive and state classes. -->
-      <div aria-hidden="true" class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"></div> <!-- Decorative diagonal gold blur band on the right -->
+			<!-- ===== 404 hero ===== -->
+			<!-- Full-width navy hero with the error message, two recovery CTAs and a CSS-drawn backpack illustration -->
+			<!-- section element: Groups related not-found page content. Attributes: class="relative overflow-hidden bg-[#0d1b3e] text-white" applies the listed styling, layout, responsive and state classes; aria-labelledby="cc404-title" references the element that supplies this element's accessible name. -->
+			<section
+				class="relative overflow-hidden bg-[#0d1b3e] text-white"
+				aria-labelledby="cc404-title"
+			>
+				<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,…" applies the listed styling, layout, responsive and state classes. -->
+				<div
+					aria-hidden="true"
+					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"
+				></div>
+				<!-- Decorative radial glows behind the content -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rota…" applies the listed styling, layout, responsive and state classes. -->
+				<div
+					aria-hidden="true"
+					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
+				></div>
+				<!-- Decorative diagonal gold blur band on the right -->
 
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 l…" applies the listed styling, layout, responsive and state classes. -->
-      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24"> <!-- Centred max-width wrapper with responsive padding -->
-        <!-- div element: Groups related elements for layout and styling. Attributes: class="grid items-center gap-14 lg:grid-cols-2" applies the listed styling, layout, responsive and state classes. -->
-        <div class="grid items-center gap-14 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 l…" applies the listed styling, layout, responsive and state classes. -->
+				<div
+					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+				>
+					<!-- Centred max-width wrapper with responsive padding -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="grid items-center gap-14 lg:grid-cols-2" applies the listed styling, layout, responsive and state classes. -->
+					<div class="grid items-center gap-14 lg:grid-cols-2">
+						<!-- Single column on mobile, two equal columns at lg -->
 
-          <!-- Message -->
-          <!-- div element: Groups related elements for layout and styling. Attributes: class="animate-fade-up" applies the listed styling, layout, responsive and state classes. -->
-          <div class="animate-fade-up"> <!-- Runs the custom fade-up entrance animation -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="inline-flex items-center gap-2 rounded-full border bord…" applies the listed styling, layout, responsive and state classes. -->
-            <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"> <!-- Pill badge labelling the 404 error -->
-              <!-- span element: Groups inline text or icon content. Attributes: class="h-1.5 w-1.5 rounded-full bg-[#ffd23f] animate-pulse-sof…" applies the listed styling, layout, responsive and state classes. -->
-              <span class="h-1.5 w-1.5 rounded-full bg-[#ffd23f] animate-pulse-soft"></span> <!-- Small pulsing gold dot -->
-              Error 404 · Page not found <!-- Badge text -->
-            </span>
+						<!-- Message -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="animate-fade-up" applies the listed styling, layout, responsive and state classes. -->
+						<div class="animate-fade-up">
+							<!-- Runs the custom fade-up entrance animation -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="inline-flex items-center gap-2 rounded-full border bord…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
+							>
+								<!-- Pill badge labelling the 404 error -->
+								<!-- span element: Groups inline text or icon content. Attributes: class="h-1.5 w-1.5 rounded-full bg-[#ffd23f] animate-pulse-sof…" applies the listed styling, layout, responsive and state classes. -->
+								<span
+									class="h-1.5 w-1.5 rounded-full bg-[#ffd23f] animate-pulse-soft"
+								></span>
+								<!-- Small pulsing gold dot -->
+								Error 404 · Page not found
+								<!-- Badge text -->
+							</span>
 
-            <!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-6 text-8xl font-black italic leading-none text-[#ffd…" applies the listed styling, layout, responsive and state classes; aria-hidden="true" controls whether assistive technology ignores this element. -->
-            <p class="mt-6 text-8xl font-black italic leading-none text-[#ffd23f] [font-family:'Playfair_Display',Georgia,serif] sm:text-9xl" aria-hidden="true">404</p> <!-- Oversized decorative 404 numeral, hidden from AT since the heading already says "Page not found" -->
+							<!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-6 text-8xl font-black italic leading-none text-[#ffd…" applies the listed styling, layout, responsive and state classes; aria-hidden="true" controls whether assistive technology ignores this element. -->
+							<p
+								class="mt-6 text-8xl font-black italic leading-none text-[#ffd23f] [font-family:'Playfair_Display',Georgia,serif] sm:text-9xl"
+								aria-hidden="true"
+							>
+								404
+							</p>
+							<!-- Oversized decorative 404 numeral, hidden from AT since the heading already says "Page not found" -->
 
-            <!-- h1 element: Defines the main not-found heading. Attributes: id="cc404-title" uniquely identifies this element for CSS, scripts or fragment navigation; class="mt-4 text-4xl font-extrabold leading-[1.05] tracking-ti…" applies the listed styling, layout, responsive and state classes. -->
-            <h1 id="cc404-title" class="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl"> <!-- Main heading, connected to the section via aria-labelledby -->
-              Oops! This page missed the <span class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]">campus bus.</span> <!-- Heading with an italic serif accent -->
-            </h1>
+							<!-- h1 element: Defines the main not-found heading. Attributes: id="cc404-title" uniquely identifies this element for CSS, scripts or fragment navigation; class="mt-4 text-4xl font-extrabold leading-[1.05] tracking-ti…" applies the listed styling, layout, responsive and state classes. -->
+							<h1
+								id="cc404-title"
+								class="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl"
+							>
+								<!-- Main heading, connected to the section via aria-labelledby -->
+								Oops! This page missed the
+								<span
+									class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
+									>campus bus.</span
+								>
+								<!-- Heading with an italic serif accent -->
+							</h1>
 
-            <!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 …" applies the listed styling, layout, responsive and state classes. -->
-            <p class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"> <!-- Lead paragraph explaining the error in plain language -->
-              The page may have moved, the link may be outdated, or the address may have a typo. No stress — your
-              student essentials are still just a few clicks away.
-            </p>
+							<!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 …" applies the listed styling, layout, responsive and state classes. -->
+							<p
+								class="mt-5 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+							>
+								<!-- Lead paragraph explaining the error in plain language -->
+								The page may have moved, the link may be outdated, or the
+								address may have a typo. No stress — your student essentials are
+								still just a few clicks away.
+							</p>
 
-            <!-- Two recovery CTAs: primary "back home" and secondary "browse essentials" -->
-            <!-- div element: Groups related elements for layout and styling. Attributes: class="mt-8 flex flex-col gap-3 sm:flex-row" applies the listed styling, layout, responsive and state classes. -->
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-              <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="group inline-flex items-center justify-center gap-2 rou…" applies the listed styling, layout, responsive and state classes. -->
-              <a href="https://campus-cart-olive.vercel.app/index.html" class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:bg-[#ffdf5e]"> <!-- Solid gold pill that lifts on hover -->
-                <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-left…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-4 w-4 transition group-hover:-translate-x-0.5" applies the listed styling, layout, responsive and state classes. -->
-                <img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-left.svg" alt="" class="h-4 w-4 transition group-hover:-translate-x-0.5"> <!-- Arrow nudges left on hover -->
-                Back to home <!-- Button label -->
-              </a>
-              <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="inline-flex items-center justify-center gap-2 rounded-f…" applies the listed styling, layout, responsive and state classes. -->
-              <a href="https://campus-cart-olive.vercel.app/pages/products.html" class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"> <!-- Outlined glass button -->
-                Browse essentials <!-- Button label -->
-                <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-r…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-4 w-4" applies the listed styling, layout, responsive and state classes. -->
-                <img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg" alt="" class="h-4 w-4"> <!-- Up-right arrow icon -->
-              </a>
-            </div>
-          </div>
+							<!-- Two recovery CTAs: primary "back home" and secondary "browse essentials" -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-8 flex flex-col gap-3 sm:flex-row" applies the listed styling, layout, responsive and state classes. -->
+							<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+								<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/index.html" sets the link destination or in-page target; class="group inline-flex items-center justify-center gap-2 rou…" applies the listed styling, layout, responsive and state classes. -->
+								<a
+									href="https://campus-cart-olive.vercel.app/index.html"
+									class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:bg-[#ffdf5e]"
+								>
+									<!-- Solid gold pill that lifts on hover -->
+									<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-left…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-4 w-4 transition group-hover:-translate-x-0.5" applies the listed styling, layout, responsive and state classes. -->
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-left.svg"
+										alt=""
+										class="h-4 w-4 transition group-hover:-translate-x-0.5"
+									/>
+									<!-- Arrow nudges left on hover -->
+									Back to home
+									<!-- Button label -->
+								</a>
+								<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="inline-flex items-center justify-center gap-2 rounded-f…" applies the listed styling, layout, responsive and state classes. -->
+								<a
+									href="https://campus-cart-olive.vercel.app/pages/products.html"
+									class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
+								>
+									<!-- Outlined glass button -->
+									Browse essentials
+									<!-- Button label -->
+									<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-r…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-4 w-4" applies the listed styling, layout, responsive and state classes. -->
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+									<!-- Up-right arrow icon -->
+								</a>
+							</div>
+						</div>
 
-          <!-- Art: CSS-drawn backpack -->
-          <!-- Decorative illustration made entirely from CSS shapes; aria-label describes it for screen readers -->
-          <!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto w-full max-w-[420px] animate-float" applies the listed styling, layout, responsive and state classes; role="img" sets the accessibility role exposed to assistive technology; aria-label="Illustration of a yellow student backpack surrounded by…" provides an accessible name for assistive technology. -->
-          <div class="relative mx-auto w-full max-w-[420px] animate-float" role="img" aria-label="Illustration of a yellow student backpack surrounded by small stars">
-            <!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -t…" applies the listed styling, layout, responsive and state classes. -->
-            <div aria-hidden="true" class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/15 animate-spin-slow"></div> <!-- Slowly rotating dashed ring -->
-            <!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -t…" applies the listed styling, layout, responsive and state classes. -->
-            <div aria-hidden="true" class="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffd23f]/15 blur-3xl"></div> <!-- Soft gold glow behind the backpack -->
+						<!-- Art: CSS-drawn backpack -->
+						<!-- Decorative illustration made entirely from CSS shapes; aria-label describes it for screen readers -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto w-full max-w-[420px] animate-float" applies the listed styling, layout, responsive and state classes; role="img" sets the accessibility role exposed to assistive technology; aria-label="Illustration of a yellow student backpack surrounded by…" provides an accessible name for assistive technology. -->
+						<div
+							class="relative mx-auto w-full max-w-[420px] animate-float"
+							role="img"
+							aria-label="Illustration of a yellow student backpack surrounded by small stars"
+						>
+							<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -t…" applies the listed styling, layout, responsive and state classes. -->
+							<div
+								aria-hidden="true"
+								class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/15 animate-spin-slow"
+							></div>
+							<!-- Slowly rotating dashed ring -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -t…" applies the listed styling, layout, responsive and state classes. -->
+							<div
+								aria-hidden="true"
+								class="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffd23f]/15 blur-3xl"
+							></div>
+							<!-- Soft gold glow behind the backpack -->
 
-            <!-- Small floating sparkle characters -->
-            <!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-4 top-10 text-2xl text-[#ffd23f] animate-…" applies the listed styling, layout, responsive and state classes. -->
-            <span aria-hidden="true" class="absolute left-4 top-10 text-2xl text-[#ffd23f] animate-pulse-soft">✦</span> <!-- Pulsing gold sparkle, top-left -->
-            <!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute right-8 top-20 text-lg text-white/50 animate-f…" applies the listed styling, layout, responsive and state classes. -->
-            <span aria-hidden="true" class="absolute right-8 top-20 text-lg text-white/50 animate-float-delay">✦</span> <!-- Floating white sparkle, top-right -->
-            <!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute bottom-20 left-8 text-sm text-white/40 animate…" applies the listed styling, layout, responsive and state classes. -->
-            <span aria-hidden="true" class="absolute bottom-20 left-8 text-sm text-white/40 animate-pulse-soft">✦</span> <!-- Dim pulsing sparkle, bottom-left -->
+							<!-- Small floating sparkle characters -->
+							<!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-4 top-10 text-2xl text-[#ffd23f] animate-…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								aria-hidden="true"
+								class="absolute left-4 top-10 text-2xl text-[#ffd23f] animate-pulse-soft"
+								>✦</span
+							>
+							<!-- Pulsing gold sparkle, top-left -->
+							<!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute right-8 top-20 text-lg text-white/50 animate-f…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								aria-hidden="true"
+								class="absolute right-8 top-20 text-lg text-white/50 animate-float-delay"
+								>✦</span
+							>
+							<!-- Floating white sparkle, top-right -->
+							<!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute bottom-20 left-8 text-sm text-white/40 animate…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								aria-hidden="true"
+								class="absolute bottom-20 left-8 text-sm text-white/40 animate-pulse-soft"
+								>✦</span
+							>
+							<!-- Dim pulsing sparkle, bottom-left -->
 
-            <!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-1/2 top-2 -translate-x-1/2 -rotate-3 roun…" applies the listed styling, layout, responsive and state classes. -->
-            <span aria-hidden="true" class="absolute left-1/2 top-2 -translate-x-1/2 -rotate-3 rounded-full bg-[#ffd23f] px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e] shadow-lg shadow-amber-500/30">
-              Ready for campus <!-- Decorative gold ribbon above the backpack -->
-            </span>
+							<!-- span element: Groups inline text or icon content. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-1/2 top-2 -translate-x-1/2 -rotate-3 roun…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								aria-hidden="true"
+								class="absolute left-1/2 top-2 -translate-x-1/2 -rotate-3 rounded-full bg-[#ffd23f] px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e] shadow-lg shadow-amber-500/30"
+							>
+								Ready for campus
+								<!-- Decorative gold ribbon above the backpack -->
+							</span>
 
-            <!-- Backpack body -->
-            <!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto mt-16 h-40 w-36 rounded-[2rem] bg-[#ff…" applies the listed styling, layout, responsive and state classes. -->
-            <div class="relative mx-auto mt-16 h-40 w-36 rounded-[2rem] bg-[#ffd23f] shadow-2xl shadow-amber-500/30"> <!-- Main yellow rounded rectangle -->
-              <!-- div element: Groups related elements for layout and styling. Attributes: class="absolute -top-4 left-1/2 h-14 w-20 -translate-x-1/2 rou…" applies the listed styling, layout, responsive and state classes. -->
-              <div class="absolute -top-4 left-1/2 h-14 w-20 -translate-x-1/2 rounded-t-[1.6rem] bg-[#f5c518]"></div> <!-- Top flap of the backpack -->
-              <!-- div element: Groups related elements for layout and styling. Attributes: class="absolute top-2 left-1/2 h-20 w-20 -translate-x-1/2 roun…" applies the listed styling, layout, responsive and state classes. -->
-              <div class="absolute top-2 left-1/2 h-20 w-20 -translate-x-1/2 rounded-2xl border-4 border-[#e6b300]"></div> <!-- Front pocket outline -->
-              <!-- div element: Groups related elements for layout and styling. Attributes: class="absolute bottom-3 left-1/2 h-3 w-16 -translate-x-1/2 ro…" applies the listed styling, layout, responsive and state classes. -->
-              <div class="absolute bottom-3 left-1/2 h-3 w-16 -translate-x-1/2 rounded-full bg-[#e6b300]"></div> <!-- Horizontal strap detail -->
-              <!-- div element: Groups related elements for layout and styling. Attributes: class="absolute -left-3 top-16 h-16 w-6 rounded-l-2xl bg-[#f5c…" applies the listed styling, layout, responsive and state classes. -->
-              <div class="absolute -left-3 top-16 h-16 w-6 rounded-l-2xl bg-[#f5c518]"></div> <!-- Left shoulder strap -->
-              <!-- div element: Groups related elements for layout and styling. Attributes: class="absolute -right-3 top-16 h-16 w-6 rounded-r-2xl bg-[#f5…" applies the listed styling, layout, responsive and state classes. -->
-              <div class="absolute -right-3 top-16 h-16 w-6 rounded-r-2xl bg-[#f5c518]"></div> <!-- Right shoulder strap -->
-            </div>
+							<!-- Backpack body -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto mt-16 h-40 w-36 rounded-[2rem] bg-[#ff…" applies the listed styling, layout, responsive and state classes. -->
+							<div
+								class="relative mx-auto mt-16 h-40 w-36 rounded-[2rem] bg-[#ffd23f] shadow-2xl shadow-amber-500/30"
+							>
+								<!-- Main yellow rounded rectangle -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute -top-4 left-1/2 h-14 w-20 -translate-x-1/2 rou…" applies the listed styling, layout, responsive and state classes. -->
+								<div
+									class="absolute -top-4 left-1/2 h-14 w-20 -translate-x-1/2 rounded-t-[1.6rem] bg-[#f5c518]"
+								></div>
+								<!-- Top flap of the backpack -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute top-2 left-1/2 h-20 w-20 -translate-x-1/2 roun…" applies the listed styling, layout, responsive and state classes. -->
+								<div
+									class="absolute top-2 left-1/2 h-20 w-20 -translate-x-1/2 rounded-2xl border-4 border-[#e6b300]"
+								></div>
+								<!-- Front pocket outline -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute bottom-3 left-1/2 h-3 w-16 -translate-x-1/2 ro…" applies the listed styling, layout, responsive and state classes. -->
+								<div
+									class="absolute bottom-3 left-1/2 h-3 w-16 -translate-x-1/2 rounded-full bg-[#e6b300]"
+								></div>
+								<!-- Horizontal strap detail -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute -left-3 top-16 h-16 w-6 rounded-l-2xl bg-[#f5c…" applies the listed styling, layout, responsive and state classes. -->
+								<div
+									class="absolute -left-3 top-16 h-16 w-6 rounded-l-2xl bg-[#f5c518]"
+								></div>
+								<!-- Left shoulder strap -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute -right-3 top-16 h-16 w-6 rounded-r-2xl bg-[#f5…" applies the listed styling, layout, responsive and state classes. -->
+								<div
+									class="absolute -right-3 top-16 h-16 w-6 rounded-r-2xl bg-[#f5c518]"
+								></div>
+								<!-- Right shoulder strap -->
+							</div>
 
-            <!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-10 text-center text-sm italic text-slate-400 [font-f…" applies the listed styling, layout, responsive and state classes; aria-hidden="true" controls whether assistive technology ignores this element. -->
-            <p class="mt-10 text-center text-sm italic text-slate-400 [font-family:'Playfair_Display',Georgia,serif]" aria-hidden="true">A little detour. A fresh start.</p> <!-- Decorative tagline under the backpack -->
-          </div>
-        </div>
-      </div>
-    </section>
+							<!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-10 text-center text-sm italic text-slate-400 [font-f…" applies the listed styling, layout, responsive and state classes; aria-hidden="true" controls whether assistive technology ignores this element. -->
+							<p
+								class="mt-10 text-center text-sm italic text-slate-400 [font-family:'Playfair_Display',Georgia,serif]"
+								aria-hidden="true"
+							>
+								A little detour. A fresh start.
+							</p>
+							<!-- Decorative tagline under the backpack -->
+						</div>
+					</div>
+				</div>
+			</section>
 
-    <!-- ===== Quick links ===== -->
-    <!-- Three destination cards offering the most useful ways out of the 404 page -->
-    <!-- section element: Groups related not-found page content. Attributes: class="py-20" applies the listed styling, layout, responsive and state classes; aria-labelledby="cc404-help-title" references the element that supplies this element's accessible name. -->
-    <section class="py-20" aria-labelledby="cc404-help-title">
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8" applies the listed styling, layout, responsive and state classes. -->
-      <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8"> <!-- Centred max-width wrapper with centred text -->
-        <!-- span element: Groups inline text or icon content. Attributes: class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99…" applies the listed styling, layout, responsive and state classes. -->
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]">Keep moving</span> <!-- Small gold uppercase eyebrow -->
-        <!-- h2 element: Introduces a secondary recovery or information heading. Attributes: id="cc404-help-title" uniquely identifies this element for CSS, scripts or fragment navigation; class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b…" applies the listed styling, layout, responsive and state classes. -->
-        <h2 id="cc404-help-title" class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl">Where would you like to go?</h2> <!-- Section heading, connected via aria-labelledby -->
-        <!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-4 text-slate-600" applies the listed styling, layout, responsive and state classes. -->
-        <p class="mt-4 text-slate-600">Choose a popular destination and keep moving.</p> <!-- Short supporting sentence -->
+			<!-- ===== Quick links ===== -->
+			<!-- Three destination cards offering the most useful ways out of the 404 page -->
+			<!-- section element: Groups related not-found page content. Attributes: class="py-20" applies the listed styling, layout, responsive and state classes; aria-labelledby="cc404-help-title" references the element that supplies this element's accessible name. -->
+			<section class="py-20" aria-labelledby="cc404-help-title">
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8" applies the listed styling, layout, responsive and state classes. -->
+				<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper with centred text -->
+					<!-- span element: Groups inline text or icon content. Attributes: class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99…" applies the listed styling, layout, responsive and state classes. -->
+					<span
+						class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
+						>Keep moving</span
+					>
+					<!-- Small gold uppercase eyebrow -->
+					<!-- h2 element: Introduces a secondary recovery or information heading. Attributes: id="cc404-help-title" uniquely identifies this element for CSS, scripts or fragment navigation; class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b…" applies the listed styling, layout, responsive and state classes. -->
+					<h2
+						id="cc404-help-title"
+						class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+					>
+						Where would you like to go?
+					</h2>
+					<!-- Section heading, connected via aria-labelledby -->
+					<!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-4 text-slate-600" applies the listed styling, layout, responsive and state classes. -->
+					<p class="mt-4 text-slate-600">
+						Choose a popular destination and keep moving.
+					</p>
+					<!-- Short supporting sentence -->
 
-        <!-- div element: Groups related elements for layout and styling. Attributes: class="mt-10 grid gap-5 text-left md:grid-cols-3" applies the listed styling, layout, responsive and state classes. -->
-        <div class="mt-10 grid gap-5 text-left md:grid-cols-3"> <!-- Responsive 1/3 column grid with left-aligned cards -->
-          <!-- Card 1: student essentials -->
-          <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="group rounded-[2rem] border border-slate-200 bg-white p…" applies the listed styling, layout, responsive and state classes. -->
-          <a href="https://campus-cart-olive.vercel.app/pages/products.html" class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"> <!-- White bordered card that lifts on hover -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b…" applies the listed styling, layout, responsive and state classes. -->
-            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b3e]"> <!-- Navy icon tile -->
-              <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-b…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-6 w-6 text-[#ffd23f]" applies the listed styling, layout, responsive and state classes. -->
-              <img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-6 w-6 text-[#ffd23f]"> <!-- Shopping bag icon in gold -->
-            </span>
-            <!-- strong element: Marks text as strongly important. Attributes: class="mt-4 block text-lg font-extrabold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
-            <strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]">Student essentials</strong> <!-- Card title -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="mt-1 block text-sm text-slate-500" applies the listed styling, layout, responsive and state classes. -->
-            <span class="mt-1 block text-sm text-slate-500">Browse supplies, furniture, appliances, and more.</span> <!-- Card description -->
-          </a>
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-10 grid gap-5 text-left md:grid-cols-3" applies the listed styling, layout, responsive and state classes. -->
+					<div class="mt-10 grid gap-5 text-left md:grid-cols-3">
+						<!-- Responsive 1/3 column grid with left-aligned cards -->
+						<!-- Card 1: student essentials -->
+						<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="group rounded-[2rem] border border-slate-200 bg-white p…" applies the listed styling, layout, responsive and state classes. -->
+						<a
+							href="https://campus-cart-olive.vercel.app/pages/products.html"
+							class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<!-- White bordered card that lifts on hover -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b3e]"
+							>
+								<!-- Navy icon tile -->
+								<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-b…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-6 w-6 text-[#ffd23f]" applies the listed styling, layout, responsive and state classes. -->
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+									alt=""
+									class="h-6 w-6 text-[#ffd23f]"
+								/>
+								<!-- Shopping bag icon in gold -->
+							</span>
+							<!-- strong element: Marks text as strongly important. Attributes: class="mt-4 block text-lg font-extrabold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
+							<strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]"
+								>Student essentials</strong
+							>
+							<!-- Card title -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="mt-1 block text-sm text-slate-500" applies the listed styling, layout, responsive and state classes. -->
+							<span class="mt-1 block text-sm text-slate-500"
+								>Browse supplies, furniture, appliances, and more.</span
+							>
+							<!-- Card description -->
+						</a>
 
-          <!-- Card 2: student and parent hub -->
-          <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="group rounded-[2rem] border border-slate-200 bg-white p…" applies the listed styling, layout, responsive and state classes. -->
-          <a href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub" class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"> <!-- White bordered card that lifts on hover -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd2…" applies the listed styling, layout, responsive and state classes. -->
-            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"> <!-- Gold icon tile -->
-              <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/users.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-6 w-6 text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
-              <img src="https://unpkg.com/lucide-static@1.44.0/icons/users.svg" alt="" class="h-6 w-6 text-[#0d1b3e]"> <!-- Users icon in navy -->
-            </span>
-            <!-- strong element: Marks text as strongly important. Attributes: class="mt-4 block text-lg font-extrabold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
-            <strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]">Student &amp; parent hub</strong> <!-- Card title -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="mt-1 block text-sm text-slate-500" applies the listed styling, layout, responsive and state classes. -->
-            <span class="mt-1 block text-sm text-slate-500">Find useful information for getting ready for campus.</span> <!-- Card description -->
-          </a>
+						<!-- Card 2: student and parent hub -->
+						<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/products.htm…" sets the link destination or in-page target; class="group rounded-[2rem] border border-slate-200 bg-white p…" applies the listed styling, layout, responsive and state classes. -->
+						<a
+							href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub"
+							class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<!-- White bordered card that lifts on hover -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd2…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"
+							>
+								<!-- Gold icon tile -->
+								<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/users.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-6 w-6 text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/users.svg"
+									alt=""
+									class="h-6 w-6 text-[#0d1b3e]"
+								/>
+								<!-- Users icon in navy -->
+							</span>
+							<!-- strong element: Marks text as strongly important. Attributes: class="mt-4 block text-lg font-extrabold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
+							<strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]"
+								>Student &amp; parent hub</strong
+							>
+							<!-- Card title -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="mt-1 block text-sm text-slate-500" applies the listed styling, layout, responsive and state classes. -->
+							<span class="mt-1 block text-sm text-slate-500"
+								>Find useful information for getting ready for campus.</span
+							>
+							<!-- Card description -->
+						</a>
 
-          <!-- Card 3: contact / help -->
-          <!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/contact.html" sets the link destination or in-page target; class="group rounded-[2rem] border border-slate-200 bg-white p…" applies the listed styling, layout, responsive and state classes. -->
-          <a href="https://campus-cart-olive.vercel.app/pages/contact.html" class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"> <!-- White bordered card that lifts on hover -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="grid h-12 w-12 place-items-center rounded-2xl bg-[#c257…" applies the listed styling, layout, responsive and state classes. -->
-            <span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#c2572f]"> <!-- Terracotta icon tile -->
-              <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/headphones…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-6 w-6 text-white" applies the listed styling, layout, responsive and state classes. -->
-              <img src="https://unpkg.com/lucide-static@1.44.0/icons/headphones.svg" alt="" class="h-6 w-6 text-white"> <!-- Headphones icon in white -->
-            </span>
-            <!-- strong element: Marks text as strongly important. Attributes: class="mt-4 block text-lg font-extrabold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
-            <strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]">Need a hand?</strong> <!-- Card title -->
-            <!-- span element: Groups inline text or icon content. Attributes: class="mt-1 block text-sm text-slate-500" applies the listed styling, layout, responsive and state classes. -->
-            <span class="mt-1 block text-sm text-slate-500">Visit our contact page if you need help finding something.</span> <!-- Card description -->
-          </a>
-        </div>
-      </div>
-    </section>
+						<!-- Card 3: contact / help -->
+						<!-- a element: Creates a navigation link; href determines the destination. Attributes: href="https://campus-cart-olive.vercel.app/pages/contact.html" sets the link destination or in-page target; class="group rounded-[2rem] border border-slate-200 bg-white p…" applies the listed styling, layout, responsive and state classes. -->
+						<a
+							href="https://campus-cart-olive.vercel.app/pages/contact.html"
+							class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
+						>
+							<!-- White bordered card that lifts on hover -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="grid h-12 w-12 place-items-center rounded-2xl bg-[#c257…" applies the listed styling, layout, responsive and state classes. -->
+							<span
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#c2572f]"
+							>
+								<!-- Terracotta icon tile -->
+								<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/headphones…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-6 w-6 text-white" applies the listed styling, layout, responsive and state classes. -->
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/headphones.svg"
+									alt=""
+									class="h-6 w-6 text-white"
+								/>
+								<!-- Headphones icon in white -->
+							</span>
+							<!-- strong element: Marks text as strongly important. Attributes: class="mt-4 block text-lg font-extrabold text-[#0d1b3e]" applies the listed styling, layout, responsive and state classes. -->
+							<strong class="mt-4 block text-lg font-extrabold text-[#0d1b3e]"
+								>Need a hand?</strong
+							>
+							<!-- Card title -->
+							<!-- span element: Groups inline text or icon content. Attributes: class="mt-1 block text-sm text-slate-500" applies the listed styling, layout, responsive and state classes. -->
+							<span class="mt-1 block text-sm text-slate-500"
+								>Visit our contact page if you need help finding
+								something.</span
+							>
+							<!-- Card description -->
+						</a>
+					</div>
+				</div>
+			</section>
 
-    <!-- ===== Campus Runner mini-game ===== -->
-    <!-- Optional mini-game to keep visitors engaged while they decide where to go -->
-    <!-- section element: Groups related not-found page content. Attributes: class="bg-white py-20" applies the listed styling, layout, responsive and state classes; aria-labelledby="cc404-game-title" references the element that supplies this element's accessible name. -->
-    <section class="bg-white py-20" aria-labelledby="cc404-game-title">
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8" applies the listed styling, layout, responsive and state classes. -->
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
-        <!-- div element: Groups related elements for layout and styling. Attributes: class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-…" applies the listed styling, layout, responsive and state classes. -->
-        <div class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-6 text-white shadow-xl sm:p-10"> <!-- Very rounded navy panel with generous padding -->
-          <!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#…" applies the listed styling, layout, responsive and state classes. -->
-          <div aria-hidden="true" class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#ffd23f]/15 blur-3xl"></div> <!-- Decorative gold glow, top-right -->
-          <!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-…" applies the listed styling, layout, responsive and state classes. -->
-          <div aria-hidden="true" class="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-[#1e3a8a]/70 blur-3xl"></div> <!-- Decorative blue glow, bottom-left -->
+			<!-- ===== Campus Runner mini-game ===== -->
+			<!-- Optional mini-game to keep visitors engaged while they decide where to go -->
+			<!-- section element: Groups related not-found page content. Attributes: class="bg-white py-20" applies the listed styling, layout, responsive and state classes; aria-labelledby="cc404-game-title" references the element that supplies this element's accessible name. -->
+			<section class="bg-white py-20" aria-labelledby="cc404-game-title">
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8" applies the listed styling, layout, responsive and state classes. -->
+				<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-…" applies the listed styling, layout, responsive and state classes. -->
+					<div
+						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-6 text-white shadow-xl sm:p-10"
+					>
+						<!-- Very rounded navy panel with generous padding -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#…" applies the listed styling, layout, responsive and state classes. -->
+						<div
+							aria-hidden="true"
+							class="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#ffd23f]/15 blur-3xl"
+						></div>
+						<!-- Decorative gold glow, top-right -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-…" applies the listed styling, layout, responsive and state classes. -->
+						<div
+							aria-hidden="true"
+							class="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-[#1e3a8a]/70 blur-3xl"
+						></div>
+						<!-- Decorative blue glow, bottom-left -->
 
-          <!-- div element: Groups related elements for layout and styling. Attributes: class="relative" applies the listed styling, layout, responsive and state classes. -->
-          <div class="relative">
-            <!-- Header row: title and supporting line on the left, mini-game badge on the right -->
-            <!-- div element: Groups related elements for layout and styling. Attributes: class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justi…" applies the listed styling, layout, responsive and state classes. -->
-            <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
-              <div>
-                <!-- h2 element: Introduces a secondary recovery or information heading. Attributes: id="cc404-game-title" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-2xl font-extrabold tracking-tight sm:text-3xl" applies the listed styling, layout, responsive and state classes. -->
-                <h2 id="cc404-game-title" class="text-2xl font-extrabold tracking-tight sm:text-3xl">Waiting for your next stop?</h2> <!-- Game section heading -->
-                <!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-2 text-sm text-slate-300" applies the listed styling, layout, responsive and state classes. -->
-                <p class="mt-2 text-sm text-slate-300">Take a quick break with Campus Runner. Jump over the crates and see how far you can go.</p> <!-- Short game description -->
-              </div>
-              <!-- span element: Groups inline text or icon content. Attributes: class="w-max rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs f…" applies the listed styling, layout, responsive and state classes. -->
-              <span class="w-max rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]">Mini game</span> <!-- Gold pill labelling the section as a mini-game -->
-            </div>
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="relative" applies the listed styling, layout, responsive and state classes. -->
+						<div class="relative">
+							<!-- Header row: title and supporting line on the left, mini-game badge on the right -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justi…" applies the listed styling, layout, responsive and state classes. -->
+							<div
+								class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"
+							>
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
+								<div>
+									<!-- h2 element: Introduces a secondary recovery or information heading. Attributes: id="cc404-game-title" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-2xl font-extrabold tracking-tight sm:text-3xl" applies the listed styling, layout, responsive and state classes. -->
+									<h2
+										id="cc404-game-title"
+										class="text-2xl font-extrabold tracking-tight sm:text-3xl"
+									>
+										Waiting for your next stop?
+									</h2>
+									<!-- Game section heading -->
+									<!-- p element: Defines a paragraph of explanatory text. Attributes: class="mt-2 text-sm text-slate-300" applies the listed styling, layout, responsive and state classes. -->
+									<p class="mt-2 text-sm text-slate-300">
+										Take a quick break with Campus Runner. Jump over the crates
+										and see how far you can go.
+									</p>
+									<!-- Short game description -->
+								</div>
+								<!-- span element: Groups inline text or icon content. Attributes: class="w-max rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs f…" applies the listed styling, layout, responsive and state classes. -->
+								<span
+									class="w-max rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]"
+									>Mini game</span
+								>
+								<!-- Gold pill labelling the section as a mini-game -->
+							</div>
 
-            <!-- Game canvas -->
-            <!-- The canvas is focusable and labelled for keyboard and screen-reader users -->
-            <!-- div element: Groups related elements for layout and styling. Attributes: class="mt-6 overflow-hidden rounded-3xl border-2 border-white/…" applies the listed styling, layout, responsive and state classes. -->
-            <div class="mt-6 overflow-hidden rounded-3xl border-2 border-white/10 bg-[#0a1533]">
-              <!-- canvas element: Structures the not-found page or provides a browser feature Attributes: id="game-canvas" uniquely identifies this element for CSS, scripts or fragment navigation; class="game-canvas block w-full cursor-pointer" applies the listed styling, layout, responsive and state classes; width="720" sets the image or graphic width; height="260" sets the image or graphic height; tabindex="0" sets keyboard focus behaviour or order; aria-label="Campus Runner game. Press Space or the up arrow to jump…" provides an accessible name for assistive technology. -->
-              <canvas id="game-canvas" class="game-canvas block w-full cursor-pointer" width="720" height="260" tabindex="0" aria-label="Campus Runner game. Press Space or the up arrow to jump over crates. You can also tap the game on a touchscreen.">Your browser cannot display this game.</canvas> <!-- Fallback text for browsers without canvas support -->
-            </div>
+							<!-- Game canvas -->
+							<!-- The canvas is focusable and labelled for keyboard and screen-reader users -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-6 overflow-hidden rounded-3xl border-2 border-white/…" applies the listed styling, layout, responsive and state classes. -->
+							<div
+								class="mt-6 overflow-hidden rounded-3xl border-2 border-white/10 bg-[#0a1533]"
+							>
+								<!-- canvas element: Structures the not-found page or provides a browser feature Attributes: id="game-canvas" uniquely identifies this element for CSS, scripts or fragment navigation; class="game-canvas block w-full cursor-pointer" applies the listed styling, layout, responsive and state classes; width="720" sets the image or graphic width; height="260" sets the image or graphic height; tabindex="0" sets keyboard focus behaviour or order; aria-label="Campus Runner game. Press Space or the up arrow to jump…" provides an accessible name for assistive technology. -->
+								<canvas
+									id="game-canvas"
+									class="game-canvas block w-full cursor-pointer"
+									width="720"
+									height="260"
+									tabindex="0"
+									aria-label="Campus Runner game. Press Space or the up arrow to jump over crates. You can also tap the game on a touchscreen."
+									>Your browser cannot display this game.</canvas
+								>
+								<!-- Fallback text for browsers without canvas support -->
+							</div>
 
-            <!-- Status line and score badges on the left, Start button on the right -->
-            <!-- div element: Groups related elements for layout and styling. Attributes: class="mt-5 flex flex-col items-center justify-between gap-4 s…" applies the listed styling, layout, responsive and state classes. -->
-            <div class="mt-5 flex flex-col items-center justify-between gap-4 sm:flex-row">
-              <!-- p element: Defines a paragraph of explanatory text. Attributes: id="game-status" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-sm font-semibold text-slate-300" applies the listed styling, layout, responsive and state classes; aria-live="polite" sets how dynamic content changes are announced. -->
-              <p id="game-status" class="text-sm font-semibold text-slate-300" aria-live="polite">Ready when you are. Press Start game to begin.</p> <!-- Live region announcing game state changes -->
-              <!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-3" applies the listed styling, layout, responsive and state classes. -->
-              <div class="flex items-center gap-3">
-                <!-- span element: Groups inline text or icon content. Attributes: id="game-score" uniquely identifies this element for CSS, scripts or fragment navigation; class="rounded-full border border-white/15 bg-white/5 px-4 py-…" applies the listed styling, layout, responsive and state classes. -->
-                <span id="game-score" class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-white">Score 0</span> <!-- Current score badge -->
-                <!-- span element: Groups inline text or icon content. Attributes: id="game-best" uniquely identifies this element for CSS, scripts or fragment navigation; class="rounded-full border border-white/15 bg-white/5 px-4 py-…" applies the listed styling, layout, responsive and state classes. -->
-                <span id="game-best" class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-[#ffd23f]">Best 0</span> <!-- Best score badge -->
-                <!-- button element: Creates an interactive control for a visitor action. Attributes: id="game-start" uniquely identifies this element for CSS, scripts or fragment navigation; type="button" sets the control or resource type and its browser behaviour; class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f…" applies the listed styling, layout, responsive and state classes. -->
-                <button id="game-start" type="button" class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-2.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"> <!-- Gold start button -->
-                  Start game <!-- Button label -->
-                  <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-4 w-4" applies the listed styling, layout, responsive and state classes. -->
-                  <img src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg" alt="" class="h-4 w-4"> <!-- Play icon -->
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+							<!-- Status line and score badges on the left, Start button on the right -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-5 flex flex-col items-center justify-between gap-4 s…" applies the listed styling, layout, responsive and state classes. -->
+							<div
+								class="mt-5 flex flex-col items-center justify-between gap-4 sm:flex-row"
+							>
+								<!-- p element: Defines a paragraph of explanatory text. Attributes: id="game-status" uniquely identifies this element for CSS, scripts or fragment navigation; class="text-sm font-semibold text-slate-300" applies the listed styling, layout, responsive and state classes; aria-live="polite" sets how dynamic content changes are announced. -->
+								<p
+									id="game-status"
+									class="text-sm font-semibold text-slate-300"
+									aria-live="polite"
+								>
+									Ready when you are. Press Start game to begin.
+								</p>
+								<!-- Live region announcing game state changes -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-3" applies the listed styling, layout, responsive and state classes. -->
+								<div class="flex items-center gap-3">
+									<!-- span element: Groups inline text or icon content. Attributes: id="game-score" uniquely identifies this element for CSS, scripts or fragment navigation; class="rounded-full border border-white/15 bg-white/5 px-4 py-…" applies the listed styling, layout, responsive and state classes. -->
+									<span
+										id="game-score"
+										class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-white"
+										>Score 0</span
+									>
+									<!-- Current score badge -->
+									<!-- span element: Groups inline text or icon content. Attributes: id="game-best" uniquely identifies this element for CSS, scripts or fragment navigation; class="rounded-full border border-white/15 bg-white/5 px-4 py-…" applies the listed styling, layout, responsive and state classes. -->
+									<span
+										id="game-best"
+										class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-[#ffd23f]"
+										>Best 0</span
+									>
+									<!-- Best score badge -->
+									<!-- button element: Creates an interactive control for a visitor action. Attributes: id="game-start" uniquely identifies this element for CSS, scripts or fragment navigation; type="button" sets the control or resource type and its browser behaviour; class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f…" applies the listed styling, layout, responsive and state classes. -->
+									<button
+										id="game-start"
+										type="button"
+										class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-2.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
+									>
+										<!-- Gold start button -->
+										Start game
+										<!-- Button label -->
+										<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-4 w-4" applies the listed styling, layout, responsive and state classes. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/play.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+										<!-- Play icon -->
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-  <!-- ===== Footer ===== -->
-  <!-- Compact footer with a recovery link and a copyright line -->
-  <!-- footer element: Defines the closing site information and navigation landmark. Attributes: class="bg-[#09122e] text-slate-300" applies the listed styling, layout, responsive and state classes. -->
-  <footer class="bg-[#09122e] text-slate-300">
-    <!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" applies the listed styling, layout, responsive and state classes. -->
-    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper with 48px vertical padding -->
-      <!-- div element: Groups related elements for layout and styling. Attributes: class="flex flex-col items-center justify-between gap-4 text-c…" applies the listed styling, layout, responsive and state classes. -->
-      <div class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left"> <!-- Stacked on mobile, spread row at sm+ -->
-        <!-- p element: Defines a paragraph of explanatory text. Attributes: class="text-sm" applies the listed styling, layout, responsive and state classes. -->
-        <p class="text-sm">
-          Lost your way? <a href="https://campus-cart-olive.vercel.app/index.html" class="font-bold text-[#ffd23f] transition hover:text-[#ffdf5e]">Start again at Campus-Cart</a>. <!-- Recovery link back to the homepage -->
-        </p>
-        <!-- p element: Defines a paragraph of explanatory text. Attributes: class="text-xs text-slate-500" applies the listed styling, layout, responsive and state classes. -->
-        <p class="text-xs text-slate-500">© <span id="copyright-year"></span> Campus-Cart. Static demo site — no payments are processed.</p> <!-- Copyright line; the year span is auto-updated by JavaScript -->
-      </div>
-    </div>
-  </footer>
+		<!-- ===== Footer ===== -->
+		<!-- Compact footer with a recovery link and a copyright line -->
+		<!-- footer element: Defines the closing site information and navigation landmark. Attributes: class="bg-[#09122e] text-slate-300" applies the listed styling, layout, responsive and state classes. -->
+		<footer class="bg-[#09122e] text-slate-300">
+			<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8" applies the listed styling, layout, responsive and state classes. -->
+			<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+				<!-- Centred max-width wrapper with 48px vertical padding -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex flex-col items-center justify-between gap-4 text-c…" applies the listed styling, layout, responsive and state classes. -->
+				<div
+					class="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left"
+				>
+					<!-- Stacked on mobile, spread row at sm+ -->
+					<!-- p element: Defines a paragraph of explanatory text. Attributes: class="text-sm" applies the listed styling, layout, responsive and state classes. -->
+					<p class="text-sm">
+						Lost your way?
+						<a
+							href="https://campus-cart-olive.vercel.app/index.html"
+							class="font-bold text-[#ffd23f] transition hover:text-[#ffdf5e]"
+							>Start again at Campus-Cart</a
+						>.
+						<!-- Recovery link back to the homepage -->
+					</p>
+					<!-- p element: Defines a paragraph of explanatory text. Attributes: class="text-xs text-slate-500" applies the listed styling, layout, responsive and state classes. -->
+					<p class="text-xs text-slate-500">
+						© <span id="copyright-year"></span> Campus-Cart. Static demo site —
+						no payments are processed.
+					</p>
+					<!-- Copyright line; the year span is auto-updated by JavaScript -->
+				</div>
+			</div>
+		</footer>
 
-  <!-- Back to top -->
-  <!-- Floating scroll-to-top button: starts hidden and is revealed by JavaScript -->
-  <!-- button element: Creates an interactive control for a visitor action. Attributes: id="toTop" uniquely identifies this element for CSS, scripts or fragment navigation; type="button" sets the control or resource type and its browser behaviour; class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-item…" applies the listed styling, layout, responsive and state classes; aria-label="Back to top" provides an accessible name for assistive technology. -->
-  <button id="toTop" type="button" class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]" aria-label="Back to top"> <!-- Fixed navy circle in the bottom-right -->
-    <!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.s…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-5 w-5" applies the listed styling, layout, responsive and state classes. -->
-    <img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg" alt="" class="h-5 w-5"> <!-- Up-arrow icon -->
-  </button>
+		<!-- Back to top -->
+		<!-- Floating scroll-to-top button: starts hidden and is revealed by JavaScript -->
+		<!-- button element: Creates an interactive control for a visitor action. Attributes: id="toTop" uniquely identifies this element for CSS, scripts or fragment navigation; type="button" sets the control or resource type and its browser behaviour; class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-item…" applies the listed styling, layout, responsive and state classes; aria-label="Back to top" provides an accessible name for assistive technology. -->
+		<button
+			id="toTop"
+			type="button"
+			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
+			aria-label="Back to top"
+		>
+			<!-- Fixed navy circle in the bottom-right -->
+			<!-- img element: Embeds an image; src selects the image and alt provides its accessible text alternative. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.s…" selects the image, script or other resource loaded by this element; alt="" provides an accessible text alternative for an image; class="h-5 w-5" applies the listed styling, layout, responsive and state classes. -->
+			<img
+				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
+				alt=""
+				class="h-5 w-5"
+			/>
+			<!-- Up-arrow icon -->
+		</button>
 
-  <!-- ===== Site script ===== -->
-  <!-- All scripts use defer so they download in parallel and execute in order after parsing -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/data.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/data.js" defer></script> <!-- Shared product, bundle and campus data -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/ui.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/ui.js" defer></script> <!-- Header, menu and general UI behaviours -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/consent.…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/consent.js" defer></script> <!-- Cookie consent banner logic -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/interact…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/interactions.js" defer></script> <!-- Hover, reveal and other micro-interactions -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/forms.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/forms.js" defer></script> <!-- Newsletter, enquiry and contact form validation/submission -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/game.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/game.js" defer></script> <!-- Campus Runner mini-game logic -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/features…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/features.js" defer></script> <!-- Wishlist, back-to-top, clock and page-level features -->
-  <!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/script.j…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
-  <script src="https://campus-cart-olive.vercel.app/assets/js/script.js" defer></script> <!-- Page bootstrap and shared helpers -->
-</body>
+		<!-- ===== Site script ===== -->
+		<!-- All scripts use defer so they download in parallel and execute in order after parsing -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/data.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/data.js"
+			defer
+		></script>
+		<!-- Shared product, bundle and campus data -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/ui.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/ui.js"
+			defer
+		></script>
+		<!-- Header, menu and general UI behaviours -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/consent.…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/consent.js"
+			defer
+		></script>
+		<!-- Cookie consent banner logic -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/interact…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/interactions.js"
+			defer
+		></script>
+		<!-- Hover, reveal and other micro-interactions -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/forms.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/forms.js"
+			defer
+		></script>
+		<!-- Newsletter, enquiry and contact form validation/submission -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/game.js" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/game.js"
+			defer
+		></script>
+		<!-- Campus Runner mini-game logic -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/features…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/features.js"
+			defer
+		></script>
+		<!-- Wishlist, back-to-top, clock and page-level features -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://campus-cart-olive.vercel.app/assets/js/script.j…" selects the image, script or other resource loaded by this element; defer sets the defer property used by the browser, assistive technology or site scripts. -->
+		<script
+			src="https://campus-cart-olive.vercel.app/assets/js/script.js"
+			defer
+		></script>
+		<!-- Page bootstrap and shared helpers -->
+	</body>
 </html>
