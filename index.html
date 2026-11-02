@@ -1,74 +1,74 @@
 <!doctype html>
-<!--
+	<!--
 		Campus-Cart homepage: document structure, accessible content, navigation, and shared assets. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
-<!--
+	-->
+	<!--
 		Root element: declares the document language as English for screen readers and search engines. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
+	-->
 <html lang="en">
 	<head>
-		<!--
-		Character encoding: UTF-8 supports all South African language characters and currency symbols. This resource or setting helps the browser present the page correctly and supports usability, consistency or discoverability.
-		-->
+			<!--
+				Character encoding: UTF-8 supports all South African language characters and currency symbols. This resource or setting helps the browser present the page correctly and supports usability, consistency or discoverability.
+			-->
 		<meta charset="utf-8" />
-		<!--
-		Viewport: makes the layout responsive on mobile devices (width follows device, no zoom lock). The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+			<!--
+				Viewport: makes the layout responsive on mobile devices (width follows device, no zoom lock). The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+			-->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--
-		Page title: shown in browser tabs and used as the search result headline. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+			<!--
+				Page title: shown in browser tabs and used as the search result headline. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+			-->
 		<title>Campus-Cart | Affordable Student Essentials in South Africa</title>
-		<!--
-		Meta description: short summary used by search engines and social previews. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+			<!--
+				Meta description: short summary used by search engines and social previews. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
 		<meta
 			name="description"
 			content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa."
 		/>
-		<!--
-		Theme colour: tints the browser UI (e.g. mobile address bar) in Campus-Cart navy. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				Theme colour: tints the browser UI (e.g. mobile address bar) in Campus-Cart navy. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<meta name="theme-color" content="#0d1b3e" />
-		<!--
-		Tailwind CSS v4 browser build: provides the utility classes used throughout this page. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+			<!--
+				Tailwind CSS v4 browser build: provides the utility classes used throughout this page. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+			-->
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-		<!--
-		Preconnect hints: open early connections to Google Fonts for faster font loading. This resource or setting helps the browser present the page correctly and supports usability, consistency or discoverability.
-		-->
+			<!--
+				Preconnect hints: open early connections to Google Fonts for faster font loading. This resource or setting helps the browser present the page correctly and supports usability, consistency or discoverability.
+			-->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<!--
-		Google Fonts: Inter for body text, Playfair Display italic for decorative headings. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+			<!--
+				Google Fonts: Inter for body text, Playfair Display italic for decorative headings. It provides visual styling rather than essential information, so the main content remains understandable without it.
+			-->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
 			rel="stylesheet"
 		/>
-		<!--
-		Favicon: inline SVG data URI showing a yellow "C" on a navy rounded square (no extra file request). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				Favicon: inline SVG data URI showing a yellow "C" on a navy rounded square (no extra file request). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<link
 			rel="icon"
 			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
 		/>
 
-		<!--
-		Site stylesheet: custom animations, marquee styles and component overrides. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+			<!--
+				Site stylesheet: custom animations, marquee styles and component overrides. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+			-->
 		<link rel="stylesheet" href="assets/css/styles.css" />
 	</head>
 
-	<!--
-		Body: warm off-white background, Inter font, slate text colour and antialiased rendering. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+		<!--
+			Body: warm off-white background, Inter font, slate text colour and antialiased rendering. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
 		-->
 	<body
 		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
 	>
-		<!--
-		Hidden until focused: lets keyboard users jump straight past the navigation to <main>. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				Hidden until focused: lets keyboard users jump straight past the navigation to <main>. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<a
 			href="#main"
 			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
@@ -76,32 +76,32 @@
 			Skip to main content
 		</a>
 
-		<!--
-		Section: Top utility bar (SoleStyle-style strip). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-		<!--
-		Thin navy strip above the header: contact details, audience paths and a delivery promise. Hidden on small screens (md:block) to save vertical space on…. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				Section: Top utility bar (SoleStyle-style strip). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+			-->
+			<!--
+				Thin navy strip above the header: contact details, audience paths and a delivery promise. Hidden on small screens (md:block) to save vertical space on…. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<div
 			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
 		>
 			<div
 				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
 			>
-				<!--
-		Left cluster: email link (always visible) and WhatsApp link (large screens only). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
-				<div class="flex items-center gap-5">
 					<!--
-		Clickable mailto link with a small mail icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						Left cluster: email link (always visible) and WhatsApp link (large screens only). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+					-->
+				<div class="flex items-center gap-5">
+						<!--
+							Clickable mailto link with a small mail icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="mailto:hello@campus-cart.co.za"
 						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
 					>
-						<!--
-		Decorative icon: empty alt so screen readers skip it. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+							<!--
+								Decorative icon: empty alt so screen readers skip it. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+							-->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
 							alt=""
@@ -109,9 +109,9 @@
 						/>
 						hello@campus-cart.co.za
 					</a>
-					<!--
-		WhatsApp deep link, hidden until the lg breakpoint. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							WhatsApp deep link, hidden until the lg breakpoint. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="https://wa.me/27123456789"
 						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
@@ -124,34 +124,34 @@
 						+27 12 345 6789
 					</a>
 				</div>
-				<!--
-		Right cluster: two audience entry points (student/parent) plus a trust badge. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
-				<div class="flex items-center gap-5">
 					<!--
-		Student path: deep-links to the student section of the account page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						Right cluster: two audience entry points (student/parent) plus a trust badge. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+					-->
+				<div class="flex items-center gap-5">
+						<!--
+							Student path: deep-links to the student section of the account page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/account.html#student"
 						class="transition hover:text-[#ffd23f]"
 						>Student path</a
 					>
-					<!--
-		Visual divider between the two path links. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Visual divider between the two path links. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<span class="text-slate-600">|</span>
-					<!--
-		Parent path: deep-links to the parent section of the account page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Parent path: deep-links to the parent section of the account page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/account.html#parent"
 						class="transition hover:text-[#ffd23f]"
 						>Parent path</a
 					>
 					<span class="text-slate-600">|</span>
-					<!--
-		Trust badge: hidden on the smallest screens, shown from sm upward. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+						<!--
+							Trust badge: hidden on the smallest screens, shown from sm upward. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+						-->
 					<span
 						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
 					>
@@ -166,12 +166,12 @@
 			</div>
 		</div>
 
-		<!--
-		Section: Header / Navigation. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-		<!--
-		Sticky header: stays pinned to the top with a translucent blurred background. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+			<!--
+				Section: Header / Navigation. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+			-->
+			<!--
+				Sticky header: stays pinned to the top with a translucent blurred background. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+			-->
 		<header
 			id="siteHeader"
 			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300"
@@ -179,93 +179,93 @@
 			<div
 				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
-				<!--
-		Brand logo: clickable link back to the homepage, with a navy "C" tile and wordmark. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+					<!--
+						Brand logo: clickable link back to the homepage, with a navy "C" tile and wordmark. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+					-->
 				<a
 					href="index.html"
 					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
 				>
-					<!--
-		Logo tile containing the letter C. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+						<!--
+							Logo tile containing the letter C. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+						-->
 					<span
 						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
 						>C</span
 					>
-					<!--
-		Wordmark: "Campus" in navy, "-Cart" in gold. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Wordmark: "Campus" in navy, "-Cart" in gold. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<span>Campus<span class="text-[#c99700]">-Cart</span></span>
 				</a>
 
-				<!--
-		Desktop navigation: hidden below lg, where the mobile menu takes over. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+					<!--
+						Desktop navigation: hidden below lg, where the mobile menu takes over. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+					-->
 				<nav
 					class="hidden items-center gap-1 lg:flex"
 					aria-label="Main navigation"
 				>
-					<!--
-		Home is the current page: styled as active with aria-current="page". This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Home is the current page: styled as active with aria-current="page". This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="index.html"
 						aria-current="page"
 						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
 						>Home</a
 					>
-					<!--
-		About page link. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							About page link. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/about.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>About</a
 					>
-					<!--
-		Shop / products listing page. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+						<!--
+							Shop / products listing page. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+						-->
 					<a
 						href="pages/products.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Shop</a
 					>
-					<!--
-		Parent Hub: anchor within the products page aimed at parents/guardians. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Parent Hub: anchor within the products page aimed at parents/guardians. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/products.html#parent-hub"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Parent Hub</a
 					>
-					<!--
-		Enquiry form page. The associated form controls and script determine how visitor input is collected, checked and handled.
-		-->
+						<!--
+							Enquiry form page. The associated form controls and script determine how visitor input is collected, checked and handled.
+						-->
 					<a
 						href="pages/enquiry.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Enquiry</a
 					>
-					<!--
-		Delivery coverage page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Delivery coverage page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/coverage.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Coverage</a
 					>
-					<!--
-		Contact page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Contact page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/contact.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Contact</a
 					>
-					<!--
-		Account / login page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Account / login page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/account.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
@@ -273,13 +273,13 @@
 					>
 				</nav>
 
-				<!--
-		Right-hand action cluster: search, live clock, cart and mobile menu toggle. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
-				<div class="flex items-center gap-2 sm:gap-3">
 					<!--
-		Search shortcut: icon-only circular button linking to the products page (desktop only). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						Right-hand action cluster: search, live clock, cart and mobile menu toggle. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+					-->
+				<div class="flex items-center gap-2 sm:gap-3">
+						<!--
+							Search shortcut: icon-only circular button linking to the products page (desktop only). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/products.html"
 						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid"
@@ -292,25 +292,25 @@
 						/>
 					</a>
 
-					<!--
-		Live clock block: time and date are injected by JavaScript (xl screens only). The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
-					<div class="hidden text-right xl:block">
 						<!--
-		Digital time placeholder, updated by script. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+							Live clock block: time and date are injected by JavaScript (xl screens only). The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+						-->
+					<div class="hidden text-right xl:block">
+							<!--
+								Digital time placeholder, updated by script. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+							-->
 						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
 							--:--:--
 						</p>
-						<!--
-		Date placeholder, replaced with the current date once loaded. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+							<!--
+								Date placeholder, replaced with the current date once loaded. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+							-->
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
 					</div>
 
-					<!--
-		Cart trigger: opens the cart drawer; aria-expanded reflects open/closed state. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+						<!--
+							Cart trigger: opens the cart drawer; aria-expanded reflects open/closed state. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+						-->
 					<button
 						id="cartButton"
 						type="button"
@@ -319,17 +319,17 @@
 						aria-controls="cartDrawer"
 						aria-expanded="false"
 					>
-						<!--
-		Shopping bag icon (decorative). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+							<!--
+								Shopping bag icon (decorative). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+							-->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
-						<!--
-		Cart badge: item count, kept in sync by the cart JavaScript. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+							<!--
+								Cart badge: item count, kept in sync by the cart JavaScript. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+							-->
 						<span
 							id="cartCount"
 							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
@@ -337,9 +337,9 @@
 						>
 					</button>
 
-					<!--
-		Mobile menu toggle: visible only below lg; swaps between menu and close icons. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Mobile menu toggle: visible only below lg; swaps between menu and close icons. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<button
 						id="navToggle"
 						type="button"
@@ -348,9 +348,9 @@
 						aria-controls="mobileMenu"
 						aria-label="Menu"
 					>
-						<!--
-		Icon whose src is swapped by JavaScript when the menu opens/closes. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+							<!--
+								Icon whose src is swapped by JavaScript when the menu opens/closes. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
 						<img
 							id="navIcon"
 							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
@@ -361,74 +361,74 @@
 				</div>
 			</div>
 
-			<!--
-		Mobile navigation panel: hidden by default, toggled open by #navToggle. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+				<!--
+					Mobile navigation panel: hidden by default, toggled open by #navToggle. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+				-->
 			<div
 				id="mobileMenu"
 				class="hidden border-t border-slate-200 bg-white lg:hidden"
 			>
 				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
-					<!--
-		Home: highlighted as the active page on mobile too. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Home: highlighted as the active page on mobile too. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="index.html"
 						aria-current="page"
 						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]"
 						>Home</a
 					>
-					<!--
-		About page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							About page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/about.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>About</a
 					>
-					<!--
-		Shop / products. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+						<!--
+							Shop / products. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+						-->
 					<a
 						href="pages/products.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Shop</a
 					>
-					<!--
-		Parent Hub anchor. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Parent Hub anchor. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/products.html#parent-hub"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Parent Hub</a
 					>
-					<!--
-		Enquiry page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Enquiry page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/enquiry.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Enquiry</a
 					>
-					<!--
-		Coverage page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Coverage page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/coverage.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Coverage</a
 					>
-					<!--
-		Contact page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Contact page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/contact.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Contact</a
 					>
-					<!--
-		Account page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Account page. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<a
 						href="pages/account.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
@@ -438,37 +438,37 @@
 			</div>
 		</header>
 
-		<!--
-		Contains the primary content of this page, separate from shared navigation and footer content. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-		<!--
-		tabindex="-1" allows the skip link to move keyboard focus here programmatically. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				Contains the primary content of this page, separate from shared navigation and footer content. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+			-->
+			<!--
+				tabindex="-1" allows the skip link to move keyboard focus here programmatically. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<main id="main" tabindex="-1">
-			<!--
-		Section: Hero — color-block composition. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Full-width navy hero: headline, dual CTAs, category chips, stats and a floating image cluster. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
-			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
 				<!--
-		Decorative radial glows (two soft light spots) — aria-hidden so they're ignored by AT. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+					Section: Hero — color-block composition. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Full-width navy hero: headline, dual CTAs, category chips, stats and a floating image cluster. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+				-->
+			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
+					<!--
+						Decorative radial glows (two soft light spots) — aria-hidden so they're ignored by AT. It provides visual styling rather than essential information, so the main content remains understandable without it.
+					-->
 				<div
 					aria-hidden="true"
 					class="absolute inset-0 bg-[radial-gradient(circle_at_78%_16%,rgba(255,210,63,0.16),transparent_46%),radial-gradient(circle_at_8%_90%,rgba(56,89,196,0.40),transparent_52%)]"
 				></div>
-				<!--
-		Decorative diagonal gold blur band on the right side of the hero. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+					<!--
+						Decorative diagonal gold blur band on the right side of the hero. It provides visual styling rather than essential information, so the main content remains understandable without it.
+					-->
 				<div
 					aria-hidden="true"
 					class="absolute right-[-18%] top-[-30%] h-[150%] w-[62%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
 				></div>
-				<!--
-		Decorative dotted grid pattern, shown only on large screens. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+					<!--
+						Decorative dotted grid pattern, shown only on large screens. It provides visual styling rather than essential information, so the main content remains understandable without it.
+					-->
 				<div
 					aria-hidden="true"
 					class="absolute left-8 top-20 hidden opacity-40 lg:block"
@@ -491,20 +491,20 @@
 					</svg>
 				</div>
 
-				<!--
-		Hero content container: two-column grid on large screens. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+					<!--
+						Hero content container: two-column grid on large screens. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+					-->
 				<div
 					class="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24 lg:pt-20"
 				>
 					<div class="grid items-center gap-16 lg:grid-cols-2">
-						<!--
-		Left column: copy block, animate-fade-up plays on load. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
-						<div class="animate-fade-up">
 							<!--
-		Eyebrow badge with sparkle icon. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								Left column: copy block, animate-fade-up plays on load. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+							-->
+						<div class="animate-fade-up">
+								<!--
+									Eyebrow badge with sparkle icon. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<span
 								class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
 							>
@@ -516,23 +516,23 @@
 								Proudly South African
 							</span>
 
-							<!--
-		Main H1: the highlighted phrase sits above a rotated gold underline for emphasis. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+								<!--
+									Main H1: the highlighted phrase sits above a rotated gold underline for emphasis. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+								-->
 							<h1
 								class="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl xl:text-6xl"
 							>
 								Kit out your res room
 								<span class="relative inline-block whitespace-nowrap">
-									<!--
-		Highlighted phrase in gold. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+										<!--
+											Highlighted phrase in gold. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+										-->
 									<span class="relative z-10 text-[#ffd23f]"
 										>without breaking</span
 									>
-									<!--
-		Decorative rotated gold bar behind the phrase (z-0 sits below the text). It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+										<!--
+											Decorative rotated gold bar behind the phrase (z-0 sits below the text). It provides visual styling rather than essential information, so the main content remains understandable without it.
+										-->
 									<span
 										aria-hidden="true"
 										class="absolute inset-x-0 bottom-1 z-0 h-4 -rotate-1 rounded-sm bg-[#ffd23f]/25"
@@ -541,9 +541,9 @@
 								<span class="text-[#ffd23f]">the budget</span>
 							</h1>
 
-							<!--
-		Lead paragraph: explains the value proposition in plain language. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+								<!--
+									Lead paragraph: explains the value proposition in plain language. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<p
 								class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
 							>
@@ -553,30 +553,30 @@
 								and collected on campus or at a hub near you.
 							</p>
 
-							<!--
-		Primary and secondary calls to action, stacked on mobile and side-by-side from sm. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
-							<div class="mt-8 flex flex-col gap-3 sm:flex-row">
 								<!--
-		Primary CTA: solid gold button linking to the student account path. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+									Primary and secondary calls to action, stacked on mobile and side-by-side from sm. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
+							<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+									<!--
+										Primary CTA: solid gold button linking to the student account path. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+									-->
 								<a
 									href="pages/account.html#student"
 									class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:bg-[#ffdf5e]"
 								>
 									Student path
-									<!--
-		Arrow icon nudges right on hover via the group-hover variant. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+										<!--
+											Arrow icon nudges right on hover via the group-hover variant. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+										-->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 										alt=""
 										class="h-4 w-4 transition group-hover:translate-x-0.5"
 									/>
 								</a>
-								<!--
-		Secondary CTA: outlined glass button linking to the parent account path. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+									<!--
+										Secondary CTA: outlined glass button linking to the parent account path. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+									-->
 								<a
 									href="pages/account.html#parent"
 									class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
@@ -585,13 +585,13 @@
 								</a>
 							</div>
 
-							<!--
-		Category chips: quick visual summary of what Campus-Cart sells. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
-							<div class="mt-7 flex flex-wrap gap-2">
 								<!--
-		Bedding chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									Category chips: quick visual summary of what Campus-Cart sells. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+								-->
+							<div class="mt-7 flex flex-wrap gap-2">
+									<!--
+										Bedding chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
@@ -602,9 +602,9 @@
 									/>
 									Bedding
 								</span>
-								<!--
-		Kitchen chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									<!--
+										Kitchen chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
@@ -615,9 +615,9 @@
 									/>
 									Kitchen
 								</span>
-								<!--
-		Textbooks chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									<!--
+										Textbooks chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
@@ -628,9 +628,9 @@
 									/>
 									Textbooks
 								</span>
-								<!--
-		Second-hand chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									<!--
+										Second-hand chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
@@ -643,20 +643,20 @@
 								</span>
 							</div>
 
-							<!--
-		Key figures: a description list of three headline stats (universities, colleges, price). The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+								<!--
+									Key figures: a description list of three headline stats (universities, colleges, price). The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+								-->
 							<dl
 								class="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-7"
 							>
 								<div>
-									<!--
-		Stat value. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+										<!--
+											Stat value. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+										-->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">26</dt>
-									<!--
-		Stat label. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+										<!--
+											Stat label. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+										-->
 									<dd
 										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
 									>
@@ -682,52 +682,52 @@
 							</dl>
 						</div>
 
-						<!--
-		Right column: circular image collage with floating badges and decorative rings. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
-						<div class="relative mx-auto w-full max-w-[520px]">
 							<!--
-		Decorative soft gold glow behind the main image. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								Right column: circular image collage with floating badges and decorative rings. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+							-->
+						<div class="relative mx-auto w-full max-w-[520px]">
+								<!--
+									Decorative soft gold glow behind the main image. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffd23f]/25 blur-3xl animate-float"
 							></div>
-							<!--
-		Decorative dashed ring that rotates slowly. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative dashed ring that rotates slowly. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/25 animate-spin-slow"
 							></div>
-							<!--
-		Decorative thin solid ring. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative thin solid ring. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
 							></div>
-							<!--
-		Small floating star icon (pulsing). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									Small floating star icon (pulsing). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 								alt=""
 								aria-hidden="true"
 								class="absolute left-2 top-10 h-6 w-6 text-[#ffd23f] animate-pulse"
 							/>
-							<!--
-		Small floating sparkle icon. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									Small floating sparkle icon. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkle.svg"
 								alt=""
 								aria-hidden="true"
 								class="absolute right-4 top-16 h-5 w-5 text-white/60 animate-float"
 							/>
-							<!--
-		Small floating star icon near the bottom-left. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									Small floating star icon near the bottom-left. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 								alt=""
@@ -735,9 +735,9 @@
 								class="absolute bottom-16 left-6 h-4 w-4 text-white/40 animate-pulse"
 							/>
 
-							<!--
-		Main hero image: a styled student desk, loaded eagerly for LCP performance. The associated form controls and script determine how visitor input is collected, checked and handled.
-		-->
+								<!--
+									Main hero image: a styled student desk, loaded eagerly for LCP performance. The associated form controls and script determine how visitor input is collected, checked and handled.
+								-->
 							<img
 								src="assets/images/bundles/student-lifestyle.jpg"
 								alt="A student desk styled with a desk lamp, open laptop, notebooks and a navy backpack"
@@ -747,9 +747,9 @@
 								class="relative mx-auto aspect-square w-72 rounded-full object-cover shadow-2xl ring-8 ring-white/10 lg:w-80"
 							/>
 
-							<!--
-		Secondary inset image: residence room corner, overlapping the bottom-left edge. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								<!--
+									Secondary inset image: residence room corner, overlapping the bottom-left edge. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="A cosy residence room corner with bedding and a laundry basket"
@@ -759,15 +759,15 @@
 								class="absolute -bottom-4 -left-4 aspect-square w-28 rounded-full border-4 border-[#0d1b3e] object-cover shadow-xl animate-float lg:w-32"
 							/>
 
-							<!--
-		Floating "From R180" price badge, top-right. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									Floating "From R180" price badge, top-right. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<div
 								class="absolute -right-2 top-8 flex items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur animate-float"
 							>
-								<!--
-		Circular icon holder. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+									<!--
+										Circular icon holder. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+									-->
 								<span
 									class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#ffd23f]/20"
 								>
@@ -783,15 +783,15 @@
 								</div>
 							</div>
 
-							<!--
-		Floating "Reviewed by our team" trust badge, bottom-right (delayed float animation). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									Floating "Reviewed by our team" trust badge, bottom-right (delayed float animation). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<div
 								class="absolute -bottom-2 right-2 flex items-center gap-3 rounded-2xl bg-[#eef3ff] p-4 text-[#0d1b3e] shadow-xl animate-float-delay"
 							>
-								<!--
-		Navy circular icon holder with gold shield icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+									<!--
+										Navy circular icon holder with gold shield icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+									-->
 								<span
 									class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#0d1b3e]"
 								>
@@ -807,9 +807,9 @@
 								</div>
 							</div>
 
-							<!--
-		Decorative rotated "New season" ribbon sitting above the collage. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative rotated "New season" ribbon sitting above the collage. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<span
 								class="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-[#ffd23f] px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e] shadow-lg shadow-amber-500/30 -rotate-3"
 							>
@@ -819,40 +819,40 @@
 					</div>
 				</div>
 
-				<!--
-		Brand / need marquee (SoleStyle-inspired ticker). The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
-				<!--
-		Infinite horizontal ticker of product categories; JS (marquee.js) animates the track. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+					<!--
+						Brand / need marquee (SoleStyle-inspired ticker). The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+					-->
+					<!--
+						Infinite horizontal ticker of product categories; JS (marquee.js) animates the track. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+					-->
 				<div
 					class="cc-brand-marquee relative border-t border-white/10 bg-white/5 backdrop-blur"
 					aria-label="Campus-Cart product categories"
 				>
-					<!--
-		Viewport clips the overflowing track. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
-					<div class="cc-brand-marquee-viewport overflow-hidden py-4">
 						<!--
-		Track: data attributes control speed, direction and hover-pause behaviour. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+							Viewport clips the overflowing track. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+						-->
+					<div class="cc-brand-marquee-viewport overflow-hidden py-4">
+							<!--
+								Track: data attributes control speed, direction and hover-pause behaviour. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+							-->
 						<div
 							class="cc-brand-marquee-track flex w-max items-center gap-8 pr-8"
 							data-speed="0.65"
 							data-direction="left"
 							data-pause-hover="true"
 						>
-							<!--
-		First group of category labels (visible copy). It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+								<!--
+									First group of category labels (visible copy). It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+								-->
 							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Bedding</span
 								>
-								<!--
-		Gold star separator. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+									<!--
+										Gold star separator. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+									-->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
@@ -922,9 +922,9 @@
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
 							</div>
-							<!--
-		Duplicate group (aria-hidden): creates the seamless loop illusion. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+								<!--
+									Duplicate group (aria-hidden): creates the seamless loop illusion. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
@@ -1004,36 +1004,36 @@
 				</div>
 			</section>
 
-			<!--
-		Section: Trust marquee: key Campus-Cart services. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Second ticker: icon + label pairs highlighting the four core service promises. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+				<!--
+					Section: Trust marquee: key Campus-Cart services. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Second ticker: icon + label pairs highlighting the four core service promises. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+				-->
 			<section
 				class="cc-trust-marquee"
 				aria-label="Campus-Cart service highlights"
 			>
-				<!--
-		Clipping viewport for the trust ticker. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
-				<div class="cc-marquee-viewport">
 					<!--
-		Animated track; speed/direction/pause configured via data attributes. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+						Clipping viewport for the trust ticker. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+					-->
+				<div class="cc-marquee-viewport">
+						<!--
+							Animated track; speed/direction/pause configured via data attributes. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+						-->
 					<div
 						class="cc-marquee-track"
 						data-speed="0.8"
 						data-direction="left"
 						data-pause-hover="true"
 					>
-						<!--
-		Visible group of service items. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
-						<div class="cc-marquee-group">
 							<!--
-		Item 1: new + reviewed used stock. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+								Visible group of service items. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+							-->
+						<div class="cc-marquee-group">
+								<!--
+									Item 1: new + reviewed used stock. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+								-->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg"
@@ -1042,9 +1042,9 @@
 								<strong>New + reviewed used</strong
 								><span>Every second-hand item is checked first</span></span
 							>
-							<!--
-		Item 2: safe collection points. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+								<!--
+									Item 2: safe collection points. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
@@ -1053,9 +1053,9 @@
 								<strong>Safe collection</strong
 								><span>Residence desks, campus points or lockers</span></span
 							>
-							<!--
-		Item 3: EFT payment note. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+								<!--
+									Item 3: EFT payment note. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
@@ -1064,9 +1064,9 @@
 								<strong>Pay by EFT</strong
 								><span>Nothing is charged on this website</span></span
 							>
-							<!--
-		Item 4: national delivery coverage. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+								<!--
+									Item 4: national delivery coverage. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
@@ -1076,9 +1076,9 @@
 								><span>All 9 South African provinces</span></span
 							>
 						</div>
-						<!--
-		Duplicate group (aria-hidden): keeps the loop seamless and hides repetition from AT. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+							<!--
+								Duplicate group (aria-hidden): keeps the loop seamless and hides repetition from AT. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+							-->
 						<div class="cc-marquee-group" aria-hidden="true">
 							<span class="cc-marquee-item"
 								><img
@@ -1117,16 +1117,16 @@
 				</div>
 			</section>
 
-			<!--
-		Section: Shop by category (SoleStyle category tiles). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Four large image tiles acting as shortcuts into the shop, second-hand, parent and selling flows. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
-			<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
 				<!--
-		Section heading block. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+					Section: Shop by category (SoleStyle category tiles). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Four large image tiles acting as shortcuts into the shop, second-hand, parent and selling flows. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+				-->
+			<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+					<!--
+						Section heading block. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+					-->
 				<div class="max-w-2xl">
 					<span
 						class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -1139,20 +1139,20 @@
 					</h2>
 				</div>
 
-				<!--
-		Tile grid: 1 column on mobile, 2 on small screens, 4 on large. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
-				<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 					<!--
-		Tile 1: new arrivals. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+						Tile grid: 1 column on mobile, 2 on small screens, 4 on large. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+					-->
+				<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+						<!--
+							Tile 1: new arrivals. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+						-->
 					<a
 						href="pages/products.html"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
 					>
-						<!--
-		Tile image: dimmed by default, zooms and brightens on hover. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+							<!--
+								Tile image: dimmed by default, zooms and brightens on hover. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+							-->
 						<img
 							src="assets/images/products/study-essentials.jpg"
 							alt="New student arrivals on a desk"
@@ -1161,15 +1161,15 @@
 							loading="lazy"
 							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
 						/>
-						<!--
-		Dark gradient overlay so white text stays readable. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+							<!--
+								Dark gradient overlay so white text stays readable. It provides visual styling rather than essential information, so the main content remains understandable without it.
+							-->
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
 						></div>
-						<!--
-		Arrow badge: fades in on hover, top-right corner. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+							<!--
+								Arrow badge: fades in on hover, top-right corner. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+							-->
 						<span
 							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
 						>
@@ -1179,9 +1179,9 @@
 								class="h-4 w-4"
 							/>
 						</span>
-						<!--
-		Tile caption text, pinned to the bottom. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+							<!--
+								Tile caption text, pinned to the bottom. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<div class="absolute inset-x-0 bottom-0 p-5">
 							<p class="text-sm font-bold text-white">New arrivals</p>
 							<p class="text-xs text-slate-300">
@@ -1190,9 +1190,9 @@
 						</div>
 					</a>
 
-					<!--
-		Tile 2: second-hand marketplace (anchors to #shop on the products page). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Tile 2: second-hand marketplace (anchors to #shop on the products page). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/products.html#shop"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
@@ -1223,9 +1223,9 @@
 						</div>
 					</a>
 
-					<!--
-		Tile 3: Parent Hub (anchors to #parent-hub). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Tile 3: Parent Hub (anchors to #parent-hub). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/products.html#parent-hub"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
@@ -1258,9 +1258,9 @@
 						</div>
 					</a>
 
-					<!--
-		Tile 4: sell with us (anchors to #sell-with-us). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Tile 4: sell with us (anchors to #sell-with-us). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<a
 						href="pages/products.html#sell-with-us"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
@@ -1293,17 +1293,17 @@
 				</div>
 			</section>
 
-			<!--
-		Section: New arrivals product grid (SoleStyle product cards). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		White band containing a four-card product grid with add-to-cart buttons. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+				<!--
+					Section: New arrivals product grid (SoleStyle product cards). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					White band containing a four-card product grid with add-to-cart buttons. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+				-->
 			<section class="bg-white py-20">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<!--
-		Header row: section title on the left, "browse all" button on the right. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Header row: section title on the left, "browse all" button on the right. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
@@ -1331,22 +1331,22 @@
 						</a>
 					</div>
 
-					<!--
-		Product card grid: 1 / 2 / 4 columns depending on breakpoint. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+						<!--
+							Product card grid: 1 / 2 / 4 columns depending on breakpoint. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+						-->
 					<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-						<!--
-		Product 01. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
-						<!--
-		Card lifts and gains shadow on hover; each card is a self-contained <article>. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+							<!--
+								Product 01. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
+							<!--
+								Card lifts and gains shadow on hover; each card is a self-contained <article>. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+							-->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
-							<!--
-		Image wrapper (relative so badges/buttons can be absolutely positioned). Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								<!--
+									Image wrapper (relative so badges/buttons can be absolutely positioned). Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
 								<img
 									src="assets/images/products/kettle.jpg"
@@ -1356,16 +1356,16 @@
 									loading="lazy"
 									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
 								/>
-								<!--
-		"New" badge, top-left. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+									<!--
+										"New" badge, top-left. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+									-->
 								<span
 									class="absolute left-3 top-3 rounded-full bg-[#0d1b3e] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#ffd23f]"
 									>New</span
 								>
-								<!--
-		Add-to-cart button: data-name/data-price are read by the cart JS. Hidden on desktop until hover (sm:opacity-0 sm:group-hover:opacity-100). The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+									<!--
+										Add-to-cart button: data-name/data-price are read by the cart JS. Hidden on desktop until hover (sm:opacity-0 sm:group-hover:opacity-100). The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+									-->
 								<button
 									type="button"
 									data-add-to-cart
@@ -1381,9 +1381,9 @@
 									/>
 								</button>
 							</div>
-							<!--
-		Card text body: name, price, short description and star rating. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									Card text body: name, price, short description and star rating. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<div class="mt-4 flex flex-1 flex-col">
 								<div class="flex items-center justify-between gap-2">
 									<h3 class="text-sm font-bold text-[#0d1b3e]">1.8 L Kettle</h3>
@@ -1394,9 +1394,9 @@
 								<p class="mt-1 text-xs text-slate-500">
 									Rapid boil, cool-touch handle.
 								</p>
-								<!--
-		Star rating: role="img" + aria-label gives screen readers the numeric rating. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+									<!--
+										Star rating: role="img" + aria-label gives screen readers the numeric rating. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+									-->
 								<div
 									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
 									role="img"
@@ -1407,9 +1407,9 @@
 							</div>
 						</article>
 
-						<!--
-		Product 02. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+							<!--
+								Product 02. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
@@ -1426,9 +1426,9 @@
 									class="absolute left-3 top-3 rounded-full bg-[#0d1b3e] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#ffd23f]"
 									>New</span
 								>
-								<!--
-		Add-to-cart: HTML entity &amp; keeps the data attribute valid. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+									<!--
+										Add-to-cart: HTML entity &amp; keeps the data attribute valid. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+									-->
 								<button
 									type="button"
 									data-add-to-cart
@@ -1466,9 +1466,9 @@
 							</div>
 						</article>
 
-						<!--
-		Product 03 (on sale: red badge + struck-through original price). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+							<!--
+								Product 03 (on sale: red badge + struck-through original price). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+							-->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
@@ -1481,9 +1481,9 @@
 									loading="lazy"
 									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
 								/>
-								<!--
-		Sale badge, styled in red to stand out from the "New" badges. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+									<!--
+										Sale badge, styled in red to stand out from the "New" badges. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+									-->
 								<span
 									class="absolute left-3 top-3 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white"
 									>Sale</span
@@ -1512,16 +1512,16 @@
 										>R249</span
 									>
 								</div>
-								<!--
-		Description includes the original price inside <s> to show the discount. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+									<!--
+										Description includes the original price inside <s> to show the discount. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+									-->
 								<p class="mt-1 text-xs text-slate-500">
 									<s class="text-slate-400">R329</s> · USB-C, 3 brightness
 									modes.
 								</p>
-								<!--
-		Partial rating (4 of 5). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+									<!--
+										Partial rating (4 of 5). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+									-->
 								<div
 									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
 									role="img"
@@ -1532,9 +1532,9 @@
 							</div>
 						</article>
 
-						<!--
-		Product 04 (second-hand: terracotta badge). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+							<!--
+								Product 04 (second-hand: terracotta badge). This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+							-->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
@@ -1591,24 +1591,24 @@
 				</div>
 			</section>
 
-			<!--
-		Section: Featured bundles — SoleStyle-inspired color-block grid. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Three visually distinct cards (navy, amber, cream) presenting the starter bundles. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+				<!--
+					Section: Featured bundles — SoleStyle-inspired color-block grid. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Three visually distinct cards (navy, amber, cream) presenting the starter bundles. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+				-->
 			<section class="bg-[#f7f5f1] py-20">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<!--
-		Section heading. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+						<!--
+							Section heading. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
 						<div class="max-w-2xl">
-							<!--
-		Eyebrow label with a gold dot ringed in amber. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Eyebrow label with a gold dot ringed in amber. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<span
 								class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>
@@ -1617,9 +1617,9 @@
 								></span>
 								Featured
 							</span>
-							<!--
-		Heading mixes a sans-serif line with an italic Playfair Display accent. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+								<!--
+									Heading mixes a sans-serif line with an italic Playfair Display accent. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<h2
 								class="mt-3 text-3xl font-black tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
@@ -1643,44 +1643,44 @@
 						</a>
 					</div>
 
-					<!--
-		Section: Color-block cards. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
+						<!--
+							Section: Color-block cards. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+						-->
 					<div class="mt-12 grid gap-6 lg:grid-cols-3">
-						<!--
-		Card 01 — Navy block. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
-						<!--
-		Each card shares the hover lift + shadow but uses its own background palette. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+							<!--
+								Card 01 — Navy block. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
+							<!--
+								Each card shares the hover lift + shadow but uses its own background palette. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+							-->
 						<article
 							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#0d1b3e] p-7 text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
 						>
-							<!--
-		Decorative gold glow, top-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative gold glow, top-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl"
 							></div>
-							<!--
-		Decorative blue glow, bottom-left. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative blue glow, bottom-left. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute -left-10 bottom-24 h-28 w-28 rounded-full bg-[#1e3a8a]/60 blur-2xl"
 							></div>
-							<!--
-		Decorative outlined circle, bottom-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative outlined circle, bottom-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute bottom-8 right-6 h-16 w-16 rounded-full border border-white/10"
 							></div>
 
-							<!--
-		Top row: status pill on the left, large italic card number on the right. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+								<!--
+									Top row: status pill on the left, large italic card number on the right. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+								-->
 							<div class="relative flex items-center justify-between">
 								<span
 									class="rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]"
@@ -1692,29 +1692,29 @@
 								>
 							</div>
 
-							<!--
-		Circular product image inside decorative rings. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								<!--
+									Circular product image inside decorative rings. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<div
 								class="relative mx-auto mt-6 grid aspect-square w-44 place-items-center sm:w-52"
 							>
-								<!--
-		Slowly rotating dashed ring. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+									<!--
+										Slowly rotating dashed ring. It provides visual styling rather than essential information, so the main content remains understandable without it.
+									-->
 								<div
 									aria-hidden="true"
 									class="absolute inset-0 rounded-full border-2 border-dashed border-white/25 animate-spin-slow"
 								></div>
-								<!--
-		Static inner ring. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+									<!--
+										Static inner ring. It provides visual styling rather than essential information, so the main content remains understandable without it.
+									-->
 								<div
 									aria-hidden="true"
 									class="absolute inset-4 rounded-full border border-white/10"
 								></div>
-								<!--
-		Bundle photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+									<!--
+										Bundle photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+									-->
 								<img
 									src="assets/images/bundles/bundle-basic.jpg"
 									width="480"
@@ -1725,9 +1725,9 @@
 								/>
 							</div>
 
-							<!--
-		Bundle name and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+								<!--
+									Bundle name and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+								-->
 							<div class="relative mt-7 flex-1">
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
@@ -1740,15 +1740,15 @@
 								</p>
 							</div>
 
-							<!--
-		Price + three actions: details link, wishlist toggle, add to cart. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+								<!--
+									Price + three actions: details link, wishlist toggle, add to cart. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+								-->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
 								<p class="text-2xl font-extrabold text-[#ffd23f]">R1 499</p>
 								<div class="flex items-center gap-2">
-									<!--
-		Link to the Parent Hub bundle breakdown. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+										<!--
+											Link to the Parent Hub bundle breakdown. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+										-->
 									<a
 										href="pages/products.html#parent-hub"
 										aria-label="See Basic Bundle contents"
@@ -1760,9 +1760,9 @@
 											class="h-4 w-4"
 										/>
 									</a>
-									<!--
-		Wishlist toggle: aria-pressed flips and the heart glyph swaps via JS. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+										<!--
+											Wishlist toggle: aria-pressed flips and the heart glyph swaps via JS. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+										-->
 									<button
 										type="button"
 										data-add-to-wishlist
@@ -1774,9 +1774,9 @@
 									>
 										<span data-wishlist-icon aria-hidden="true">♡</span>
 									</button>
-									<!--
-		Add bundle to cart. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+										<!--
+											Add bundle to cart. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+										-->
 									<button
 										type="button"
 										data-add-to-cart
@@ -1795,22 +1795,22 @@
 							</div>
 						</article>
 
-						<!--
-		Card 02 — Amber block. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+							<!--
+								Card 02 — Amber block. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<article
 							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-7 text-[#0d1b3e] shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
 						>
-							<!--
-		Soft white glow decoration, top-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Soft white glow decoration, top-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl"
 							></div>
-							<!--
-		Decorative navy dot-grid SVG, top-left. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+								<!--
+									Decorative navy dot-grid SVG, top-left. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+								-->
 							<div aria-hidden="true" class="absolute left-6 top-8 opacity-40">
 								<svg width="64" height="64" viewBox="0 0 64 64" fill="none">
 									<g fill="#0d1b3e">
@@ -1827,9 +1827,9 @@
 								</svg>
 							</div>
 
-							<!--
-		Top row: inverted "Popular" pill and card number. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+								<!--
+									Top row: inverted "Popular" pill and card number. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+								-->
 							<div class="relative flex items-center justify-between">
 								<span
 									class="rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]"
@@ -1841,17 +1841,17 @@
 								>
 							</div>
 
-							<!--
-		Image block: single rounded-square image with a navy glow behind it. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+								<!--
+									Image block: single rounded-square image with a navy glow behind it. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+								-->
 							<div class="relative mt-6">
 								<div
 									aria-hidden="true"
 									class="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0d1b3e]/15 blur-2xl"
 								></div>
-								<!--
-		Image is slightly rotated by default and straightens on card hover. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+									<!--
+										Image is slightly rotated by default and straightens on card hover. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+									-->
 								<img
 									src="assets/images/bundles/bundle-standard.jpg"
 									width="560"
@@ -1862,9 +1862,9 @@
 								/>
 							</div>
 
-							<!--
-		Bundle name and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+								<!--
+									Bundle name and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+								-->
 							<div class="relative mt-8 flex-1">
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
@@ -1876,9 +1876,9 @@
 								</p>
 							</div>
 
-							<!--
-		Price + actions (navy buttons for contrast against the amber card). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+								<!--
+									Price + actions (navy buttons for contrast against the amber card). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+								-->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
 								<p class="text-2xl font-extrabold">R2 799</p>
 								<div class="flex items-center gap-2">
@@ -1922,30 +1922,30 @@
 							</div>
 						</article>
 
-						<!--
-		Card 03 — Warm cream / terracotta block. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+							<!--
+								Card 03 — Warm cream / terracotta block. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<article
 							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#f7eede] p-7 text-[#0d1b3e] shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
 						>
-							<!--
-		Terracotta glow, top-left. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Terracotta glow, top-left. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#c2572f]/15 blur-2xl"
 							></div>
-							<!--
-		Decorative dashed terracotta ring, bottom-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Decorative dashed terracotta ring, bottom-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute -right-10 bottom-20 h-32 w-32 rounded-full border-2 border-dashed border-[#c2572f]/25"
 							></div>
 
-							<!--
-		Top row: "Second-hand" pill and card number. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+								<!--
+									Top row: "Second-hand" pill and card number. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+								-->
 							<div class="relative flex items-center justify-between">
 								<span
 									class="rounded-full bg-[#c2572f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-white"
@@ -1957,13 +1957,13 @@
 								>
 							</div>
 
-							<!--
-		Layered circular images: main desk photo plus a small inset kettle photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
-							<div class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56">
 								<!--
-		Main circular image. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+									Layered circular images: main desk photo plus a small inset kettle photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
+							<div class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56">
+									<!--
+										Main circular image. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+									-->
 								<img
 									src="assets/images/products/study-funiture.jpg"
 									width="480"
@@ -1972,9 +1972,9 @@
 									loading="lazy"
 									class="absolute inset-0 aspect-square rounded-full object-cover ring-4 ring-white/70 shadow-lg"
 								/>
-								<!--
-		Inset circular image with a cream border, gently floating. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+									<!--
+										Inset circular image with a cream border, gently floating. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+									-->
 								<img
 									src="assets/images/products/kettle.jpg"
 									width="320"
@@ -1983,9 +1983,9 @@
 									loading="lazy"
 									class="absolute -bottom-2 -right-2 aspect-square w-24 rounded-full border-4 border-[#f7eede] object-cover shadow-lg animate-float sm:w-28"
 								/>
-								<!--
-		Small navy badge with a gold star icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+									<!--
+										Small navy badge with a gold star icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+									-->
 								<span
 									class="absolute -left-1 top-3 grid h-10 w-10 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] shadow-md"
 								>
@@ -1997,9 +1997,9 @@
 								</span>
 							</div>
 
-							<!--
-		Card title and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+								<!--
+									Card title and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+								-->
 							<div class="relative mt-8 flex-1">
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
@@ -2012,9 +2012,9 @@
 								</p>
 							</div>
 
-							<!--
-		"Starting at" price block plus the same three actions. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+								<!--
+									"Starting at" price block plus the same three actions. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
 								<div>
 									<p
@@ -2066,9 +2066,9 @@
 						</article>
 					</div>
 
-					<!--
-		Slim color-bar strip under the grid: reinforcement message + seller CTA. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Slim color-bar strip under the grid: reinforcement message + seller CTA. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<div
 						class="mt-8 flex flex-col items-center justify-between gap-4 rounded-full bg-[#0d1b3e] px-8 py-4 text-center sm:flex-row sm:text-left"
 					>
@@ -2093,29 +2093,29 @@
 				</div>
 			</section>
 
-			<!--
-		Section: Parent Hub — full-bleed navy banner. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Two-column banner: photo + floating price badge on the left, reassurance list on the right. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+				<!--
+					Section: Parent Hub — full-bleed navy banner. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Two-column banner: photo + floating price badge on the left, reassurance list on the right. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+				-->
 			<section class="bg-[#0d1b3e] py-20 text-white">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div class="grid items-center gap-12 lg:grid-cols-2">
-						<!--
-		Image column: order-2 on mobile so the text reads first. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
-						<div class="relative order-2 lg:order-1">
 							<!--
-		Soft gold glow behind the photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								Image column: order-2 on mobile so the text reads first. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+							-->
+						<div class="relative order-2 lg:order-1">
+								<!--
+									Soft gold glow behind the photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<div
 								aria-hidden="true"
 								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/20 blur-2xl"
 							></div>
-							<!--
-		Portrait photo of a first-year checklist. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								<!--
+									Portrait photo of a first-year checklist. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<img
 								src="assets/images/bundles/starter-bundle.jpg"
 								alt="A first-year checklist on a desk next to study supplies"
@@ -2124,9 +2124,9 @@
 								loading="lazy"
 								class="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-xl ring-8 ring-white/10"
 							/>
-							<!--
-		Floating gold badge overlapping the bottom-left of the photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								<!--
+									Floating gold badge overlapping the bottom-left of the photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<div
 								class="absolute -bottom-5 left-6 rounded-2xl bg-[#ffd23f] p-4 text-[#0d1b3e] shadow-xl"
 							>
@@ -2137,9 +2137,9 @@
 							</div>
 						</div>
 
-						<!--
-		Text column: heading, intro and a checklist of four reassurances. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-		-->
+							<!--
+								Text column: heading, intro and a checklist of four reassurances. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+							-->
 						<div class="order-1 lg:order-2">
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
@@ -2156,13 +2156,13 @@
 								before registration week.
 							</p>
 
-							<!--
-		Reassurance checklist: each item pairs a gold check badge with text. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
-							<ul class="mt-8 space-y-4">
 								<!--
-		Point 1: fixed, itemised bundle contents. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									Reassurance checklist: each item pairs a gold check badge with text. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+								-->
+							<ul class="mt-8 space-y-4">
+									<!--
+										Point 1: fixed, itemised bundle contents. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2178,9 +2178,9 @@
 										bundle lists each item and its total price before you order.
 									</p>
 								</li>
-								<!--
-		Point 2: manual review of second-hand listings. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									<!--
+										Point 2: manual review of second-hand listings. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2197,9 +2197,9 @@
 										they go live.
 									</p>
 								</li>
-								<!--
-		Point 3: safe, campus-based collection. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-		-->
+									<!--
+										Point 3: safe, campus-based collection. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+									-->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2216,9 +2216,9 @@
 										random street corner.
 									</p>
 								</li>
-								<!--
-		Point 4: EFT-only payments, no card data on site. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+									<!--
+										Point 4: EFT-only payments, no card data on site. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+									-->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2236,9 +2236,9 @@
 								</li>
 							</ul>
 
-							<!--
-		CTA into the full Parent Hub section on the products page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+								<!--
+									CTA into the full Parent Hub section on the products page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+								-->
 							<a
 								href="pages/products.html#parent-hub"
 								class="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:bg-[#ffdf5e]"
@@ -2255,18 +2255,18 @@
 				</div>
 			</section>
 
-			<!--
-		Section: Brand story. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Short origin story with two staggered lifestyle photos. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+				<!--
+					Section: Brand story. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Short origin story with two staggered lifestyle photos. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+				-->
 			<section class="bg-white py-20">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div class="grid items-center gap-12 lg:grid-cols-2">
-						<!--
-		Text column: origin story copy and a link to the About page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+							<!--
+								Text column: origin story copy and a link to the About page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
 						<div>
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -2296,9 +2296,9 @@
 							</a>
 						</div>
 
-						<!--
-		Photo pair: second image offset downward with mt-8 for a staggered look. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+							<!--
+								Photo pair: second image offset downward with mt-8 for a staggered look. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+							-->
 						<div class="grid grid-cols-2 gap-4">
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
@@ -2321,17 +2321,17 @@
 				</div>
 			</section>
 
-			<!--
-		Section: Lookbook gallery. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-			<!--
-		Masonry-style photo grid using explicit row/column spans. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+				<!--
+					Section: Lookbook gallery. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Masonry-style photo grid using explicit row/column spans. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+				-->
 			<section class="py-20">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<!--
-		Header row with title and gallery link. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+						<!--
+							Header row with title and gallery link. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
@@ -2359,22 +2359,22 @@
 						</a>
 					</div>
 
-					<!--
-		Gallery grid: 2 columns on mobile, 4 on md+; rows are 150px/180px tall. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+						<!--
+							Gallery grid: 2 columns on mobile, 4 on md+; rows are 150px/180px tall. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+						-->
 					<div
 						class="mt-10 grid auto-rows-[150px] grid-cols-2 gap-4 md:auto-rows-[180px] md:grid-cols-4"
 					>
-						<!--
-		Feature tile: spans 2 columns and 2 rows (the largest photo). Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+							<!--
+								Feature tile: spans 2 columns and 2 rows (the largest photo). Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+							-->
 						<a
 							href="pages/products.html"
 							class="group relative col-span-2 row-span-2 overflow-hidden rounded-3xl"
 						>
-							<!--
-		Absolutely filled image so it crops neatly to the tile. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-		-->
+								<!--
+									Absolutely filled image so it crops neatly to the tile. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="A cosy student residence room"
@@ -2383,9 +2383,9 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
-							<!--
-		Bottom-up gradient for caption legibility. It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+								<!--
+									Bottom-up gradient for caption legibility. It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/70 to-transparent"
 							></div>
@@ -2395,9 +2395,9 @@
 							>
 						</a>
 
-						<!--
-		Single-cell tile: campus study. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+							<!--
+								Single-cell tile: campus study. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<a
 							href="pages/products.html"
 							class="group relative overflow-hidden rounded-3xl"
@@ -2419,9 +2419,9 @@
 							>
 						</a>
 
-						<!--
-		Single-cell tile: library at night. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-		-->
+							<!--
+								Single-cell tile: library at night. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<a
 							href="pages/products.html"
 							class="group relative overflow-hidden rounded-3xl"
@@ -2443,9 +2443,9 @@
 							>
 						</a>
 
-						<!--
-		Single-cell tile: locker collection (links to the Parent Hub). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+							<!--
+								Single-cell tile: locker collection (links to the Parent Hub). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
 						<a
 							href="pages/products.html#parent-hub"
 							class="group relative overflow-hidden rounded-3xl"
@@ -2467,9 +2467,9 @@
 							>
 						</a>
 
-						<!--
-							Single-cell tile: move-in day (links to the shop anchor). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-						-->
+							<!--
+								Single-cell tile: move-in day (links to the shop anchor). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
 						<a
 							href="pages/products.html#shop"
 							class="group relative overflow-hidden rounded-3xl"
@@ -2491,9 +2491,9 @@
 							>
 						</a>
 
-						<!--
-							Wide banner tile: spans the full row, links to the seller section. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-						-->
+							<!--
+								Wide banner tile: spans the full row, links to the seller section. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
 						<a
 							href="pages/products.html#sell-with-us"
 							class="group relative col-span-2 overflow-hidden rounded-3xl md:col-span-4"
@@ -2506,9 +2506,9 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
-							<!--
-								Left-to-right gradient (text sits on the left, so the fade runs that way). It provides visual styling rather than essential information, so the main content remains understandable without it.
-							-->
+								<!--
+									Left-to-right gradient (text sits on the left, so the fade runs that way). It provides visual styling rather than essential information, so the main content remains understandable without it.
+								-->
 							<div
 								class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e]/80 via-[#0d1b3e]/40 to-transparent"
 							></div>
@@ -2521,17 +2521,17 @@
 				</div>
 			</section>
 
-			<!--
-			Section: Testimonials. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-			-->
-			<!--
-			Three review cards from a student, a res student and a parent. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-			-->
+				<!--
+					Section: Testimonials. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Three review cards from a student, a res student and a parent. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+				-->
 			<section class="bg-[#faf8f4] py-20">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<!--
-					Section heading. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-					-->
+						<!--
+							Section heading. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+						-->
 					<div class="max-w-2xl">
 						<span
 							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -2544,19 +2544,19 @@
 						</h2>
 					</div>
 
-					<!--
-					Review grid: single column on mobile, three across on md+. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-					-->
-					<div class="mt-10 grid gap-6 md:grid-cols-3">
 						<!--
-						Review 1: student perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							Review grid: single column on mobile, three across on md+. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 						-->
+					<div class="mt-10 grid gap-6 md:grid-cols-3">
+							<!--
+								Review 1: student perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<figure
 							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
 						>
-							<!--
-							Five-star rating exposed as an image label to AT. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-							-->
+								<!--
+									Five-star rating exposed as an image label to AT. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<div
 								class="text-amber-400"
 								role="img"
@@ -2564,17 +2564,17 @@
 							>
 								★★★★★
 							</div>
-							<!--
-							Quote text; flex-1 pushes the caption to the card bottom for equal heights. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-							-->
+								<!--
+									Quote text; flex-1 pushes the caption to the card bottom for equal heights. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+								-->
 							<blockquote class="mt-4 flex-1 text-slate-700">
 								“I sent the bundle list to my mom before registration — she
 								could see exactly what was included and what it cost. No awkward
 								‘how much was that?’ phone call.”
 							</blockquote>
-							<!--
-							Reviewer identity: avatar, name and campus. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
-							-->
+								<!--
+									Reviewer identity: avatar, name and campus. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
+								-->
 							<figcaption class="mt-6 flex items-center gap-3">
 								<img
 									src="https://i.pravatar.cc/80?u=naledi"
@@ -2590,9 +2590,9 @@
 							</figcaption>
 						</figure>
 
-						<!--
-						Review 2: second-hand buyer perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-						-->
+							<!--
+								Review 2: second-hand buyer perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<figure
 							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
 						>
@@ -2621,9 +2621,9 @@
 							</figcaption>
 						</figure>
 
-						<!--
-						Review 3: parent perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
-						-->
+							<!--
+								Review 3: parent perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
+							-->
 						<figure
 							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
 						>
@@ -2655,36 +2655,36 @@
 				</div>
 			</section>
 
-			<!--
-			Section: Newsletter band (SoleStyle-style subscribe strip). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-			-->
-			<!--
-			Rounded navy panel with decorative glows and a single-field email sign-up form. The associated form controls and script determine how visitor input is collected, checked and handled.
-			-->
+				<!--
+					Section: Newsletter band (SoleStyle-style subscribe strip). It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+				-->
+				<!--
+					Rounded navy panel with decorative glows and a single-field email sign-up form. The associated form controls and script determine how visitor input is collected, checked and handled.
+				-->
 			<section class="bg-[#f7f5f1] pb-20">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div
 						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
 					>
-						<!--
-						Decorative gold glow, top-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
-						-->
+							<!--
+								Decorative gold glow, top-right. It provides visual styling rather than essential information, so the main content remains understandable without it.
+							-->
 						<div
 							aria-hidden="true"
 							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"
 						></div>
-						<!--
-						Decorative blue glow, bottom-left. It provides visual styling rather than essential information, so the main content remains understandable without it.
-						-->
+							<!--
+								Decorative blue glow, bottom-left. It provides visual styling rather than essential information, so the main content remains understandable without it.
+							-->
 						<div
 							aria-hidden="true"
 							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
 						></div>
 
 						<div class="relative grid items-center gap-8 lg:grid-cols-2">
-							<!--
-							Copy column: eyebrow, headline with italic accent, supporting line. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-							-->
+								<!--
+									Copy column: eyebrow, headline with italic accent, supporting line. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+								-->
 							<div>
 								<span
 									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
@@ -2705,23 +2705,23 @@
 								</p>
 							</div>
 
-							<!--
-							Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. The associated form controls and script determine how visitor input is collected, checked and handled.
-							-->
-							<form id="newsletterBandForm" class="w-full">
 								<!--
-								Input + submit button: stacked on mobile, side-by-side from sm. The associated form controls and script determine how visitor input is collected, checked and handled.
+									Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. The associated form controls and script determine how visitor input is collected, checked and handled.
 								-->
-								<div class="flex flex-col gap-3 sm:flex-row">
+							<form id="newsletterBandForm" class="w-full">
 									<!--
-									Visually hidden label keeps the field accessible without adding visual clutter. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+										Input + submit button: stacked on mobile, side-by-side from sm. The associated form controls and script determine how visitor input is collected, checked and handled.
 									-->
+								<div class="flex flex-col gap-3 sm:flex-row">
+										<!--
+											Visually hidden label keeps the field accessible without adding visual clutter. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+										-->
 									<label for="newsletterBandEmail" class="sr-only"
 										>Email address</label
 									>
-									<!--
-									Email field: type="text" + inputmode="email" so JS can validate it while mobile keyboards still show the @ key. The associated form controls and script determine how visitor input is collected, checked and handled.
-									-->
+										<!--
+											Email field: type="text" + inputmode="email" so JS can validate it while mobile keyboards still show the @ key. The associated form controls and script determine how visitor input is collected, checked and handled.
+										-->
 									<input
 										id="newsletterBandEmail"
 										name="email"
@@ -2730,9 +2730,9 @@
 										placeholder="you@example.com"
 										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
 									/>
-									<!--
-									Submit button: gold pill, does not shrink inside the flex row. The associated form controls and script determine how visitor input is collected, checked and handled.
-									-->
+										<!--
+											Submit button: gold pill, does not shrink inside the flex row. The associated form controls and script determine how visitor input is collected, checked and handled.
+										-->
 									<button
 										type="submit"
 										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
@@ -2740,9 +2740,9 @@
 										Join the list
 									</button>
 								</div>
-								<!--
-		Reassurance microcopy under the form. The associated form controls and script determine how visitor input is collected, checked and handled.
-		-->
+									<!--
+										Reassurance microcopy under the form. The associated form controls and script determine how visitor input is collected, checked and handled.
+									-->
 								<p class="mt-3 text-xs text-slate-400">
 									No spam. Unsubscribe any time.
 								</p>
@@ -2753,25 +2753,25 @@
 			</section>
 		</main>
 
-		<!--
-		Section: Footer. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-		<!--
-		Dark footer: brand block, link columns, legal links and copyright. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				Section: Footer. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+			-->
+			<!--
+				Dark footer: brand block, link columns, legal links and copyright. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<footer class="bg-[#09122e] text-slate-300">
 			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-				<!--
-				Four-column layout: brand (wide on lg) plus three link lists. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-				-->
-				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 					<!--
-					Column 1: brand mark, blurb, opening hours and social/contact icon buttons. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+						Four-column layout: brand (wide on lg) plus three link lists. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
-					<div>
+				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 						<!--
-						Footer logo: gold "C" tile on a navy circle, links back to the homepage. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							Column 1: brand mark, blurb, opening hours and social/contact icon buttons. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 						-->
+					<div>
+							<!--
+								Footer logo: gold "C" tile on a navy circle, links back to the homepage. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+							-->
 						<a
 							href="../index.html"
 							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
@@ -2782,25 +2782,25 @@
 							>
 							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span>
 						</a>
-						<!--
-						Short brand description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-						-->
+							<!--
+								Short brand description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+							-->
 						<p class="mt-4 text-sm text-slate-400">
 							Affordable new and second-hand student essentials for South
 							African campuses.
 						</p>
-						<!--
-						Support hours. It keeps important support, navigation or site information available to visitors at the bottom of the homepage.
-						-->
+							<!--
+								Support hours. It keeps important support, navigation or site information available to visitors at the bottom of the homepage.
+							-->
 						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
 
-						<!--
-						Icon-only contact buttons: each has an aria-label for screen readers. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-						-->
-						<div class="mt-5 flex items-center gap-2">
 							<!--
-							Email. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								Icon-only contact buttons: each has an aria-label for screen readers. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 							-->
+						<div class="mt-5 flex items-center gap-2">
+								<!--
+									Email. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<a
 								href="mailto:hello@campus-cart.co.za"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
@@ -2812,9 +2812,9 @@
 									class="h-4 w-4"
 								/>
 							</a>
-							<!--
-							WhatsApp. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-							-->
+								<!--
+									WhatsApp. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<a
 								href="https://wa.me/27123456789"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
@@ -2826,9 +2826,9 @@
 									class="h-4 w-4"
 								/>
 							</a>
-							<!--
-							Coverage map. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
-							-->
+								<!--
+									Coverage map. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
+								-->
 							<a
 								href="coverage.html"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
@@ -2843,9 +2843,9 @@
 						</div>
 					</div>
 
-					<!--
-					Column 2: shopping-related links. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-					-->
+						<!--
+							Column 2: shopping-related links. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<div>
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
 							Shop
@@ -2880,9 +2880,9 @@
 						</ul>
 					</div>
 
-					<!--
-					Column 3: company / informational links. The associated form controls and script determine how visitor input is collected, checked and handled.
-					-->
+						<!--
+							Column 3: company / informational links. The associated form controls and script determine how visitor input is collected, checked and handled.
+						-->
 					<div>
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
 							Company
@@ -2923,9 +2923,9 @@
 						</ul>
 					</div>
 
-					<!--
-					Column 4: direct contact details. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
-					-->
+						<!--
+							Column 4: direct contact details. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
+						-->
 					<div>
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
 							Reach us
@@ -2950,13 +2950,13 @@
 					</div>
 				</div>
 
-				<!--
-				Legal block: policy links, physical address, credits/sitemap and copyright. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-				-->
-				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
 					<!--
-					Policy links separated by pipe characters. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						Legal block: policy links, physical address, credits/sitemap and copyright. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
+				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
+						<!--
+							Policy links separated by pipe characters. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<p class="text-sm text-slate-400">
 						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
 							>Privacy Policy</a
@@ -2978,16 +2978,16 @@
 							>Cookie settings</a
 						>
 					</p>
-					<!--
-					Registered head office address. It keeps important support, navigation or site information available to visitors at the bottom of the homepage.
-					-->
+						<!--
+							Registered head office address. It keeps important support, navigation or site information available to visitors at the bottom of the homepage.
+						-->
 					<p class="mt-3 text-sm text-slate-400">
 						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
 						0083.
 					</p>
-					<!--
-					Licence/credits link plus XML sitemap for crawlers. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-					-->
+						<!--
+							Licence/credits link plus XML sitemap for crawlers. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+						-->
 					<p class="mt-3 text-sm text-slate-400">
 						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
 							>Licence and credits</a
@@ -2997,9 +2997,9 @@
 							>Sitemap.xml</a
 						>
 					</p>
-					<!--
-					Copyright line; the year span is auto-updated by JavaScript. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-					-->
+						<!--
+							Copyright line; the year span is auto-updated by JavaScript. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+						-->
 					<p class="mt-3 text-sm text-slate-400">
 						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static
 						demo site — no payments are processed and no personal data is
@@ -3009,23 +3009,23 @@
 			</div>
 		</footer>
 
-		<!--
-		Snack bar for inline feedback. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
-		<!--
-		Toast element: pointer-events-none so it never blocks clicks; JS fades it in/out via opacity. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+			<!--
+				Snack bar for inline feedback. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
+			<!--
+				Toast element: pointer-events-none so it never blocks clicks; JS fades it in/out via opacity. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
 		<div
 			id="snack"
 			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300"
 		></div>
 
-		<!--
-		Back to top. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
-		<!--
-		Floating scroll-to-top button: starts hidden (hidden) and is revealed by JavaScript. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
-		-->
+			<!--
+				Back to top. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
+			<!--
+				Floating scroll-to-top button: starts hidden (hidden) and is revealed by JavaScript. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
+			-->
 		<button
 			id="toTop"
 			type="button"
@@ -3039,43 +3039,43 @@
 			/>
 		</button>
 
-		<!--
-		Section: Site script. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
-		-->
-		<!--
-		All scripts use defer so they download in parallel and execute in order after parsing. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
-		<!--
-		data.js: shared product, bundle and campus data. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+			<!--
+				Section: Site script. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
+			-->
+			<!--
+				All scripts use defer so they download in parallel and execute in order after parsing. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
+			<!--
+				data.js: shared product, bundle and campus data. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
 		<script src="assets/js/data.js" defer></script>
-		<!--
-		ui.js: header, menu, cart drawer and general UI behaviours. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
-		-->
+			<!--
+				ui.js: header, menu, cart drawer and general UI behaviours. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
+			-->
 		<script src="assets/js/ui.js" defer></script>
-		<!--
-		consent.js: cookie consent banner logic. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+			<!--
+				consent.js: cookie consent banner logic. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
 		<script src="assets/js/consent.js" defer></script>
-		<!--
-		interactions.js: hover, reveal and other micro-interactions. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
-		-->
+			<!--
+				interactions.js: hover, reveal and other micro-interactions. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
+			-->
 		<script src="assets/js/interactions.js" defer></script>
-		<!--
-		marquee.js: animates the brand and trust tickers (versioned query string busts the cache). It provides visual styling rather than essential information, so the main content remains understandable without it.
-		-->
+			<!--
+				marquee.js: animates the brand and trust tickers (versioned query string busts the cache). It provides visual styling rather than essential information, so the main content remains understandable without it.
+			-->
 		<script src="assets/js/marquee.js?v=20261102-4" defer></script>
-		<!--
-		forms.js: newsletter, enquiry and contact form validation/submission. The associated form controls and script determine how visitor input is collected, checked and handled.
-		-->
+			<!--
+				forms.js: newsletter, enquiry and contact form validation/submission. The associated form controls and script determine how visitor input is collected, checked and handled.
+			-->
 		<script src="assets/js/forms.js" defer></script>
-		<!--
-		features.js: wishlist, back-to-top, clock and page-level features. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+			<!--
+				features.js: wishlist, back-to-top, clock and page-level features. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
 		<script src="assets/js/features.js" defer></script>
-		<!--
-		script.js: page bootstrap and shared helpers. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
-		-->
+			<!--
+				script.js: page bootstrap and shared helpers. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
+			-->
 		<script src="assets/js/script.js" defer></script>
 	</body>
 </html>
