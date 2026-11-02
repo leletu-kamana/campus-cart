@@ -1,12 +1,4 @@
-// ==========================================================
-// CAMPUS-CART
-// ui.js - shared interface code used on every page
-//   - shared helpers and the cart storage (window.CC)
-//   - live SAST clock, mobile menu, header shadow, Escape closes the menu
-//   - cart count badge, snack bar / toast messages
-//   - back to top button, newsletter forms, footer year
-// Loaded first, because the other files read window.CC.
-// ==========================================================
+// SHARED UI LAYER — Creates the window.CC interface used by the other scripts, including safe browser-storage access, cart and wishlist state, formatting helpers and reusable page controls. It also updates shared navigation elements, notifications and footer details when their matching HTML elements exist.
 
 (function () {
   'use strict';
