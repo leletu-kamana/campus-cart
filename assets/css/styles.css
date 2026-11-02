@@ -1920,3 +1920,68 @@ body {
     flex: 1 1 100%;
   }
 }
+
+
+/* ==========================================================
+   HOMEPAGE — BRAND / NEED MARQUEE
+   Dedicated no-wrap track with a seamless duplicated loop.
+   ========================================================== */
+.cc-brand-marquee { width: 100%; overflow: hidden; }
+.cc-brand-marquee-viewport { width: 100%; overflow: hidden; }
+.cc-brand-marquee-track {
+  display: flex !important;
+  width: max-content;
+  max-width: none;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  animation: cc-brand-marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+.cc-brand-marquee-group {
+  display: flex !important;
+  flex: 0 0 auto;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  white-space: nowrap;
+}
+.cc-brand-marquee-group > * { flex: 0 0 auto; white-space: nowrap; }
+@keyframes cc-brand-marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (hover: hover) {
+  .cc-brand-marquee:hover .cc-brand-marquee-track { animation-play-state: paused; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cc-brand-marquee-track { animation: none !important; transform: none !important; }
+  .cc-brand-marquee-viewport { overflow-x: auto; }
+}
+
+/* Featured starter bundle wishlist controls must remain distinct from cart controls. */
+.cc-featured-wishlist {
+  width: 2.75rem;
+  min-width: 2.75rem;
+  height: 2.75rem;
+  min-height: 2.75rem;
+  flex: 0 0 2.75rem;
+  padding: 0;
+  color: #ffd23f;
+  border-color: rgba(255,255,255,.35);
+  background: rgba(255,255,255,.08);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+.cc-featured-wishlist.is-wishlisted {
+  color: #ffd23f;
+  border-color: #ffd23f;
+  background: #0d1b3e;
+}
+.cc-featured-wishlist [data-wishlist-icon] { display: block; line-height: 1; }
+@media (max-width: 479px) {
+  #main .cc-featured-wishlist,
+  #main .cc-featured-wishlist + button[data-add-to-cart] {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    flex: 0 0 2.75rem;
+  }
+}
