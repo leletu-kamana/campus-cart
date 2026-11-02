@@ -12,9 +12,9 @@
 
 ## Live Website
 
-**View Campus-Cart:** [https://campus-cart-olive.vercel.app/](https://campus-cart-olive.vercel.app/)/ [https://leletu-kamana.github.io/campus-cart/](https://leletu-kamana.github.io/campus-cart/)
+**View Campus-Cart:** [https://leletu-kamana.github.io/campus-cart/](https://leletu-kamana.github.io/campus-cart/)
 
-The website is published using GitHub Pages and Vercel Pages. It is a front-end demonstration and does not process real payments or use real user accounts.
+The website is published using GitHub Pages. It is a front-end demonstration and does not process real payments or use real user accounts.
 
 ## Project Overview
 Campus-Cart is a fictional South African organisation created as a website project. The idea is to make it easier for students and families to find common tertiary-study essentials such as bedding, appliances, stationery, furniture, textbooks and starter bundles.
@@ -406,13 +406,13 @@ The root-level `sitemap.xml` contains the seven public HTML pages currently publ
 
 | Sitemap URL | Repository Page |
 |---|---|
-| `https://campus-cart-olive.vercel.app/` | `index.html` |
-| `https://campus-cart-olive.vercel.app/pages/about.html` | `pages/about.html` |
-| `https://campus-cart-olive.vercel.app/pages/products.html` | `pages/products.html` |
-| `https://campus-cart-olive.vercel.app/pages/enquiry.html` | `pages/enquiry.html` |
-| `https://campus-cart-olive.vercel.app/pages/coverage.html` | `pages/coverage.html` |
-| `https://campus-cart-olive.vercel.app/pages/contact.html` | `pages/contact.html` |
-| `https://campus-cart-olive.vercel.app/pages/account.html` | `pages/account.html` |
+| `https://leletu-kamana.github.io/campus-cart/` | `index.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/about.html` | `pages/about.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/products.html` | `pages/products.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/enquiry.html` | `pages/enquiry.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/coverage.html` | `pages/coverage.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/contact.html` | `pages/contact.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/account.html` | `pages/account.html` |
 
 The XML sitemap is intentionally limited to the public HTML pages. Assets such as CSS, JavaScript, images and screenshots are not listed as individual sitemap URLs because they are supporting resources rather than standalone pages intended for search-engine indexing.
 
