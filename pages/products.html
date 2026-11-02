@@ -39,6 +39,177 @@
 
 		<!-- Tailwind v4 theme config: animations used across this page -->
 		<link rel="stylesheet" href="../assets/css/styles.css" />
+
+		<!-- Products-page-only product card presentation -->
+		<style>
+			/* Match the reference product-card layout without changing other pages. */
+			#shop #panel-new article,
+			#shop #panel-used article,
+			#deals-gallery #deals-results article {
+				display: flex;
+				min-width: 0;
+				height: 100%;
+				flex-direction: column;
+				overflow: hidden;
+				border: 1px solid #e2e8f0;
+				border-radius: 1.65rem;
+				background: #fff;
+				padding: 0.85rem;
+				box-shadow: 0 8px 22px rgb(13 27 62 / 6%);
+				transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+			}
+
+			#shop #panel-new article:hover,
+			#shop #panel-used article:hover,
+			#deals-gallery #deals-results article:hover {
+				transform: translateY(-4px);
+				border-color: #cbd5e1;
+				box-shadow: 0 16px 32px rgb(13 27 62 / 12%);
+			}
+
+			#shop #panel-new article > div:first-child,
+			#shop #panel-used article > div:first-child,
+			#deals-gallery #deals-results article > div:first-child {
+				position: relative;
+				overflow: hidden;
+				border-radius: 1.2rem;
+				background: #f1f5f9;
+			}
+
+			#shop #panel-new article > div:first-child img,
+			#shop #panel-used article > div:first-child img,
+			#deals-gallery #deals-results article > div:first-child img {
+				display: block;
+				width: 100%;
+				aspect-ratio: 1 / 1;
+				object-fit: cover;
+			}
+
+			#shop #panel-new article > div:nth-child(2),
+			#shop #panel-used article > div:nth-child(2),
+			#deals-gallery #deals-results article > div:nth-child(2) {
+				display: flex;
+				flex: 1 1 auto;
+				flex-direction: column;
+				padding: 0.15rem 0.1rem 0.1rem;
+			}
+
+			#shop #panel-new article > div:nth-child(2) > div:first-child,
+			#shop #panel-used article > div:nth-child(2) > div:first-child,
+			#deals-gallery #deals-results article > div:nth-child(2) > div:first-child {
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				gap: 0.6rem;
+			}
+
+			#shop #panel-new article h3,
+			#shop #panel-used article h3,
+			#deals-gallery #deals-results article h3 {
+				min-width: 0;
+				font-size: 0.9rem;
+				font-weight: 800;
+				line-height: 1.35;
+				color: #0d1b3e;
+			}
+
+			#shop #panel-new article > div:nth-child(2) > div:first-child span,
+			#shop #panel-used article > div:nth-child(2) > div:first-child span,
+			#deals-gallery #deals-results article > div:nth-child(2) > div:first-child span {
+				flex-shrink: 0;
+				white-space: nowrap;
+				font-size: 0.9rem;
+				font-weight: 800;
+				color: #0d1b3e;
+			}
+
+			#shop #panel-new article > div:nth-child(2) > p,
+			#shop #panel-used article > div:nth-child(2) > p,
+			#deals-gallery #deals-results article > div:nth-child(2) > p {
+				display: -webkit-box;
+				overflow: hidden;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 2;
+				min-height: 2.5em;
+				margin-top: 0.4rem;
+				font-size: 0.72rem;
+				line-height: 1.35;
+				color: #64748b;
+			}
+
+			#shop #panel-new article > div:nth-child(2) > div:last-child,
+			#shop #panel-used article > div:nth-child(2) > div:last-child,
+			#deals-gallery #deals-results article > div:nth-child(2) > div:last-child {
+				display: flex;
+				align-items: center;
+				gap: 0.55rem;
+				margin-top: auto;
+				padding-top: 1rem;
+			}
+
+			#shop #panel-new article button[data-add],
+			#shop #panel-used article button[data-add],
+			#deals-gallery #deals-results article button[data-add] {
+				display: inline-flex;
+				min-width: 0;
+				min-height: 2.8rem;
+				flex: 1 1 auto;
+				align-items: center;
+				justify-content: center;
+				gap: 0.55rem;
+				border-radius: 999px;
+				padding: 0.7rem 1rem;
+				font-size: 0.78rem;
+				font-weight: 800;
+				white-space: nowrap;
+			}
+
+			#shop #panel-new article button[data-add-to-wishlist],
+			#shop #panel-used article button[data-add-to-wishlist],
+			#deals-gallery #deals-results article button[data-add-to-wishlist],
+			#shop #panel-new article button[data-quickview],
+			#shop #panel-used article button[data-quickview],
+			#deals-gallery #deals-results article button[data-quickview] {
+				display: inline-flex;
+				width: 2.8rem;
+				min-width: 2.8rem;
+				height: 2.8rem;
+				min-height: 2.8rem;
+				flex: 0 0 2.8rem;
+				align-items: center;
+				justify-content: center;
+				border-radius: 999px;
+				padding: 0;
+			}
+
+			#shop #panel-new article button[data-quickview],
+			#shop #panel-used article button[data-quickview],
+			#deals-gallery #deals-results article button[data-quickview] {
+				font-size: 0;
+			}
+
+			#shop #panel-new article button[data-quickview] img,
+			#shop #panel-used article button[data-quickview] img,
+			#deals-gallery #deals-results article button[data-quickview] img {
+				width: 1rem;
+				height: 1rem;
+			}
+
+			@media (max-width: 479px) {
+				#shop #panel-new article,
+				#shop #panel-used article,
+				#deals-gallery #deals-results article {
+					padding: 0.7rem;
+				}
+
+				#shop #panel-new article button[data-add],
+				#shop #panel-used article button[data-add],
+				#deals-gallery #deals-results article button[data-add] {
+					padding-inline: 0.65rem;
+					font-size: 0.72rem;
+				}
+			}
+		</style>
 	</head>
 
 	<body
