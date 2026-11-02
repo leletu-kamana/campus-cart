@@ -176,8 +176,14 @@
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
 					</div>
 
-					<button id="cartButton" type="button" class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" aria-controls="cartDrawer" aria-expanded="false" aria-label="Open cart">
-
+					<button
+						id="cartButton"
+						type="button"
+						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
+						aria-controls="cartDrawer"
+						aria-expanded="false"
+						aria-label="Open cart"
+					>
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 							alt=""
@@ -188,8 +194,7 @@
 							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
 							>0</span
 						>
-					
-</button>
+					</button>
 
 					<button
 						id="navToggle"
@@ -904,8 +909,10 @@
 										>Email address</label
 									>
 									<input
-										id="newsletterBandEmail" name="email"
-										type="text" inputmode="email"
+										id="newsletterBandEmail"
+										name="email"
+										type="text"
+										inputmode="email"
 										placeholder="you@example.com"
 										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
 									/>
@@ -996,16 +1003,16 @@
 							</li>
 							<li>
 								<a
-									href="products.html#shop"
+									href="products.html#deals-gallery"
 									class="transition hover:text-[#ffd23f]"
-									>Second-Hand</a
+									>Deals &amp; Gallery</a
 								>
 							</li>
 							<li>
 								<a
-									href="products.html#deals-gallery"
+									href="products.html#product-detail"
 									class="transition hover:text-[#ffd23f]"
-									>Deals &amp; Gallery</a
+									>Product Detail</a
 								>
 							</li>
 							<li>
@@ -1084,38 +1091,53 @@
 
 				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
 					<p class="text-sm text-slate-400">
-						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static demo
-						site — no payments are processed and no personal data is stored.
-					</p>
-					<p class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm">
 						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
 							>Privacy Policy</a
 						>
-						<span class="text-slate-600">|</span>
+						<span class="text-slate-600"> | </span>
 						<a href="terms.html" class="transition hover:text-[#ffd23f]"
 							>Terms &amp; Conditions</a
 						>
-						<span class="text-slate-600">|</span>
+						<span class="text-slate-600"> | </span>
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie Policy</a
 						>
-						<span class="text-slate-600">|</span>
+						<span class="text-slate-600"> | </span>
 						<a href="returns.html" class="transition hover:text-[#ffd23f]"
 							>Returns &amp; Delivery</a
 						>
+						<span class="text-slate-600"> | </span>
+						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
+							>Cookie settings</a
+						>
+					</p>
+					<p class="mt-3 text-sm text-slate-400">
+						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
+						0083.
 					</p>
 					<p class="mt-3 text-sm text-slate-400">
 						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
 							>Licence and credits</a
 						>
-						|
+						<span class="text-slate-600"> | </span>
 						<a href="../sitemap.xml" class="transition hover:text-[#ffd23f]"
 							>Sitemap.xml</a
 						>
 					</p>
+					<p class="mt-3 text-sm text-slate-400">
+						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static
+						demo site — no payments are processed and no personal data is
+						stored.
+					</p>
 				</div>
 			</div>
 		</footer>
+
+		<!-- Snack bar for inline feedback -->
+		<div
+			id="snack"
+			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300"
+		></div>
 
 		<!-- Back to top -->
 		<button
