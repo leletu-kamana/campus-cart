@@ -2028,7 +2028,7 @@ body {
 /* ==========================================================
    PRODUCTS PAGE — PRODUCT CARDS AND SECTION 1 SHOP CONTROLS
    ========================================================== */
-/* Match the reference product-card layout without changing other pages. */
+            /* Match the reference product-card layout without changing other pages. */
             #shop #panel-new article,
             #shop #panel-used article,
             #deals-gallery #deals-results article {
