@@ -12,7 +12,7 @@
    The older assets/css/styles.css is a separate, unlinked design system.
    ========================================================== */
 
-/* ---------- 1. Design Tokens ---------- */
+/* DESIGN TOKENS — Centralises the site's reusable colour, spacing, radius and typography values so components share a consistent visual system. Change these variables when a global design adjustment is required rather than repeating values across individual selectors. */
 :root {
 	--yellow-soft: #fff7d6;
 	--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -27,7 +27,7 @@
 	--yellow: #ffd23f;
 }
 
-/* ---------- 2. Shared Animations ---------- */
+/* SHARED ANIMATIONS — Defines reusable keyframes and motion classes for page entrances, floating details and other decorative transitions. Components opt into these effects through their classes; reduced-motion rules later in the stylesheet limit animation for visitors who request it. */
 @keyframes cc-spin {
 	to {
 		transform: rotate(360deg);
@@ -201,7 +201,7 @@
 	animation: cc-pulseSoft 2.4s ease-in-out infinite;
 }
 
-/* ---------- 3. Toast Notifications ---------- */
+/* TOAST NOTIFICATIONS — Styles temporary status messages displayed by the JavaScript interface layer. The rules control the notification container, message appearance and transition states; JavaScript remains responsible for creating, updating and dismissing each message. */
 .toast {
 	position: fixed;
 	left: 50%;
@@ -233,7 +233,7 @@
 	transform: translate(-50%, 0);
 }
 
-/* ---------- 4. Page Loader ---------- */
+/* PAGE LOADER — Styles the full-page loading overlay and its visual indicator used by the page-transition script. These declarations define presentation only; loader timing, visibility and navigation are controlled by JavaScript. */
 #page-loader {
 	position: fixed;
 	inset: 0;
@@ -384,7 +384,7 @@
 	letter-spacing: 0.015em;
 }
 
-/* ---------- 5. Lightbox & Modal ---------- */
+/* LIGHTBOX AND MODALS — Provides the overlay, dialog surface, image presentation and close-control styling used by image viewing and product quick-view features. Keyboard handling, selected content and open or close state are managed by the relevant JavaScript feature. */
 .lightbox[hidden],
 .modal-backdrop[hidden],
 .lb-btn[hidden] {
@@ -545,7 +545,7 @@ body.lightbox-open {
 	margin: 0.25rem 0;
 }
 
-/* ---------- 6. Hub Map ---------- */
+/* HUB MAP — Defines the dimensions and visual layout of the collection-hub map and its supporting controls. The map itself is rendered by the Leaflet integration when the required map container and library are available. */
 .hub-map {
 	width: 100%;
 	min-height: 380px;
@@ -571,7 +571,7 @@ body.lightbox-open {
 	font-size: 0.9rem;
 }
 
-/* ---------- 7. Scroll Reveal ---------- */
+/* SCROLL REVEAL — Sets the initial and revealed presentation for elements animated into view as visitors scroll. JavaScript applies the relevant state classes when supported elements enter the observer threshold. */
 .js-reveal .reveal:not(.is-visible) {
 	opacity: 0 !important;
 }
@@ -580,7 +580,7 @@ body.lightbox-open {
 	animation: ccReveal 0.5s ease backwards;
 }
 
-/* ---------- 8. Forms & Validation Errors ---------- */
+/* FORMS AND VALIDATION — Styles form controls, focus states, helper text and validation feedback so input errors remain visible and consistent. The stylesheet does not validate values or submit data; those operations belong to the form JavaScript and configured submission service. */
 .form-group input.input-error,
 .form-group select.input-error,
 .form-group textarea.input-error,
@@ -593,7 +593,7 @@ form button[type="submit"]:disabled {
 	cursor: not-allowed;
 }
 
-/* ---------- 9. Cookie Banner & Consent ---------- */
+/* COOKIE BANNER AND CONSENT — Defines the appearance, layout and responsive behaviour of the consent interface and its preference controls. The consent script creates or updates the interface and stores the visitor's selections; these rules only present that state. */
 .cookie-banner {
 	position: fixed;
 	right: 12px;
@@ -686,7 +686,7 @@ form button[type="submit"]:disabled {
 	max-width: 520px;
 }
 
-/* ---------- 10. Tailwind Page Overrides & Components ---------- */
+/* PAGE OVERRIDES AND SHARED COMPONENTS — Adds targeted rules for site components and utility-class combinations that need consistent behaviour across pages. Keep selectors scoped to their component or page purpose so shared overrides do not unintentionally alter unrelated layouts. */
 .cc-result h3 {
 	font-size: 1.125rem;
 	font-weight: 800;
@@ -789,7 +789,7 @@ main img[alt=""] {
 	cursor: inherit;
 }
 
-/* ---------- 11. Responsive & Accessibility ---------- */
+/* RESPONSIVE AND ACCESSIBILITY RULES — Adjusts layout, spacing, visibility, focus presentation and motion behaviour at different viewport sizes and for accessibility preferences. These media queries complement the responsive classes in the HTML rather than replacing their layout responsibilities. */
 @media (max-width: 640px) {
 	.modal {
 		grid-template-columns: 1fr;
@@ -960,7 +960,7 @@ main img[alt=""] {
 	}
 }
 
-/* ---------- 12. Icon Contrast on Dark Surfaces ---------- */
+/* ICON CONTRAST — Corrects the visibility of externally loaded SVG icons when they appear on dark interface surfaces. External SVG assets may carry their own stroke values, so these targeted rules improve contrast without changing the icon files themselves. */
 /* External Lucide SVGs use their own stroke colour and do not inherit
    Tailwind text colours. Match exact solid background utility classes only.
    Do not match translucent navy backgrounds such as bg-[#0d1b3e]/5:
