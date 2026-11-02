@@ -2244,3 +2244,33 @@ body {
     }
 }
 
+
+/* FAQ tabs: ensure only the selected Student or Parent panel is visible. */
+#sell-with-us #faq-student.hidden,
+#sell-with-us #faq-parent.hidden {
+    display: none !important;
+}
+
+#sell-with-us #faq-student.is-active,
+#sell-with-us #faq-parent.is-active {
+    animation: cc-faq-panel-enter 260ms ease both;
+}
+
+@keyframes cc-faq-panel-enter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #sell-with-us #faq-student.is-active,
+    #sell-with-us #faq-parent.is-active {
+        animation: none;
+    }
+}
+
