@@ -1,6 +1,6 @@
 /* ==========================================================
    CAMPUS-CART — HOMEPAGE MARQUEE MOTION
-   requestAnimationFrame-driven, responsive and hover-pausable.
+   requestAnimationFrame-driven, responsive and always running.
    ========================================================== */
 (() => {
     "use strict";
@@ -40,7 +40,6 @@
             let position = 0;
             let previousTimestamp = 0;
             let animationFrame = null;
-            let isVisible = true;
 
             const measure = () => {
                 const groupWidth = originalGroup.getBoundingClientRect().width;
@@ -61,7 +60,7 @@
                 const elapsed = Math.min(timestamp - previousTimestamp, 50);
                 previousTimestamp = timestamp;
 
-                if (isVisible && cycleDistance > 0) {
+                if (cycleDistance > 0) {
                     /* data-speed is measured in pixels per 60Hz frame. */
                     const frameScale = elapsed / (1000 / 60);
                     const distance = speed * frameScale;
@@ -91,26 +90,9 @@
                 animationFrame = window.requestAnimationFrame(animate);
             };
 
-            const stop = () => {
-                if (animationFrame !== null) {
-                    window.cancelAnimationFrame(animationFrame);
-                    animationFrame = null;
-                }
-                previousTimestamp = 0;
-            };
-
             const resizeObserver = new ResizeObserver(measure);
             resizeObserver.observe(viewport);
             resizeObserver.observe(originalGroup);
-
-            if ("IntersectionObserver" in window) {
-                const visibilityObserver = new IntersectionObserver(([entry]) => {
-                    isVisible = entry.isIntersecting;
-                    if (isVisible) start();
-                    else stop();
-                });
-                visibilityObserver.observe(marquee);
-            }
 
             if (document.fonts?.ready) {
                 document.fonts.ready.then(measure);
