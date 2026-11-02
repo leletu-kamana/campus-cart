@@ -13,7 +13,7 @@
   const $ = (sel) => document.querySelector(sel);
   if (!$('#game-canvas')) return;
 
-  /* ===== Campus Runner mini-game ===== */
+      /* ===== Campus Runner mini-game ===== */
 
       const canvas = $('#game-canvas');
       const ctx = canvas.getContext('2d');
