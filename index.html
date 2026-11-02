@@ -8,24 +8,24 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 <!--
 	Root element: declares the document language as English for screen readers and search engines. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
 -->
-<!-- html element: identifies this part of the page structure or content. Attributes used here: lang. -->
+<!-- html element: Root document element; lang declares the page language. Attributes: lang="en" declares the language of this content. -->
 <html lang="en">
-	<!-- head element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+	<!-- head element: Contains metadata and resources loaded before the visible page. Attributes: No explicit attributes; native HTML semantics apply. -->
 	<head>
 		<!--
 			Character encoding: UTF-8 supports all South African language characters and currency symbols. This resource or setting helps the browser present the page correctly and supports usability, consistency or discoverability.
 		-->
-		<!-- meta element: identifies this part of the page structure or content. Attributes used here: charset. -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: charset="utf-8" declares the document character encoding. -->
 		<meta charset="utf-8" />
 		<!--
 			Viewport: makes the layout responsive on mobile devices (width follows device, no zoom lock). The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 		-->
-		<!-- meta element: identifies this part of the page structure or content. Attributes used here: name, content, initial-scale. -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="viewport" sets the submitted form-field or metadata name; content="width=device-width, initial-scale=1" sets the value associated with its metadata name. -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--
 			Page title: shown in browser tabs and used as the search result headline. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 		-->
-		<!-- title element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+		<!-- title element: Sets the title displayed in browser tabs and search listings. Attributes: Campus-Cart sets the Campus Cart property used by the browser, assistive technology or site scripts; Affordable sets the Affordable property used by the browser, assistive technology or site scripts; Student sets the Student property used by the browser, assistive technology or site scripts; Essentials sets the Essentials property used by the browser, assistive technology or site scripts; in sets the in property used by the browser, assistive technology or site scripts; South sets the South property used by the browser, assistive technology or site scripts; Africa sets the Africa property used by the browser, assistive technology or site scripts. -->
 		<title>Campus-Cart | Affordable Student Essentials in South Africa</title>
 		<!--
 			Meta description: short summary used by search engines and social previews. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
@@ -37,19 +37,19 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 		<!--
 			Theme colour: tints the browser UI (e.g. mobile address bar) in Campus-Cart navy. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 		-->
-		<!-- meta element: identifies this part of the page structure or content. Attributes used here: name, content. -->
+		<!-- meta element: Provides document metadata such as encoding, viewport or description. Attributes: name="theme-color" sets the submitted form-field or metadata name; content="#0d1b3e" sets the value associated with its metadata name. -->
 		<meta name="theme-color" content="#0d1b3e" />
 		<!--
 			Tailwind CSS v4 browser build: provides the utility classes used throughout this page. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="https://unpkg.com/@tailwindcss/browser@4" selects the image, script or embedded resource. -->
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 		<!--
 			Preconnect hints: open early connections to Google Fonts for faster font loading. This resource or setting helps the browser present the page correctly and supports usability, consistency or discoverability.
 		-->
-		<!-- link element: identifies this part of the page structure or content. Attributes used here: rel, href. -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="preconnect" describes the relationship to the linked resource; href="https://fonts.googleapis.com" sets the navigation, email, telephone or in-page destination. -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<!-- link element: identifies this part of the page structure or content. Attributes used here: rel, href. -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="preconnect" describes the relationship to the linked resource; href="https://fonts.gstatic.com" sets the navigation, email, telephone or in-page destination; crossorigin sets cross-origin resource handling. -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<!--
 			Google Fonts: Inter for body text, Playfair Display italic for decorative headings. It provides visual styling rather than essential information, so the main content remains understandable without it.
@@ -69,7 +69,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 		<!--
 			Site stylesheet: custom animations, marquee styles and component overrides. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 		-->
-		<!-- link element: identifies this part of the page structure or content. Attributes used here: rel, href. -->
+		<!-- link element: References an external resource such as a stylesheet or icon. Attributes: rel="stylesheet" describes the relationship to the linked resource; href="assets/css/styles.css" sets the navigation, email, telephone or in-page destination. -->
 		<link rel="stylesheet" href="assets/css/styles.css" />
 	</head>
 
@@ -104,7 +104,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<!--
 					Left cluster: email link (always visible) and WhatsApp link (large screens only). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-5" applies styling, layout, responsive and state classes. -->
 				<div class="flex items-center gap-5">
 					<!--
 						Clickable mailto link with a small mail icon. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -141,7 +141,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<!--
 					Right cluster: two audience entry points (student/parent) plus a trust badge. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-5" applies styling, layout, responsive and state classes. -->
 				<div class="flex items-center gap-5">
 					<!--
 						Student path: deep-links to the student section of the account page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -154,7 +154,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Visual divider between the two path links. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
-					<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 					<span class="text-slate-600">|</span>
 					<!--
 						Parent path: deep-links to the parent section of the account page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -164,7 +164,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						class="transition hover:text-[#ffd23f]"
 						>Parent path</a
 					>
-					<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 					<span class="text-slate-600">|</span>
 					<!--
 						Trust badge: hidden on the smallest screens, shown from sm upward. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
@@ -213,7 +213,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Wordmark: "Campus" in navy, "-Cart" in gold. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
-					<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- span element: Groups a short inline piece of text or an icon. Attributes: Campus sets the Campus property used by the browser, assistive technology or site scripts; class="text-[#c99700]" applies styling, layout, responsive and state classes; Cart sets the Cart property used by the browser, assistive technology or site scripts. -->
 					<span>Campus<span class="text-[#c99700]">-Cart</span></span>
 				</a>
 
@@ -294,7 +294,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<!--
 					Right-hand action cluster: search, live clock, cart and mobile menu toggle. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-2 sm:gap-3" applies styling, layout, responsive and state classes. -->
 				<div class="flex items-center gap-2 sm:gap-3">
 					<!--
 						Search shortcut: icon-only circular button linking to the products page (desktop only). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -314,19 +314,19 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Live clock block: time and date are injected by JavaScript (xl screens only). The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 					-->
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="hidden text-right xl:block" applies styling, layout, responsive and state classes. -->
 					<div class="hidden text-right xl:block">
 						<!--
 							Digital time placeholder, updated by script. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 						-->
-						<!-- p element: identifies this part of the page structure or content. Attributes used here: id, class. -->
+						<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: id="navTime" provides a unique identifier for scripts, CSS or fragment links; class="text-xs font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes. -->
 						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
 							--:--:--
 						</p>
 						<!--
 							Date placeholder, replaced with the current date once loaded. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 						-->
-						<!-- p element: identifies this part of the page structure or content. Attributes used here: id, class. -->
+						<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: id="navDate" provides a unique identifier for scripts, CSS or fragment links; class="text-[11px] text-slate-500" applies styling, layout, responsive and state classes; Loading sets the Loading property used by the browser, assistive technology or site scripts. -->
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
 					</div>
 
@@ -390,7 +390,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				id="mobileMenu"
 				class="hidden border-t border-slate-200 bg-white lg:hidden"
 			>
-				<!-- nav element: identifies this part of the page structure or content. Attributes used here: class, aria-label. -->
+				<!-- nav element: Groups navigation links to related destinations. Attributes: class="space-y-1 px-4 py-4" applies styling, layout, responsive and state classes; aria-label="Mobile navigation" provides an accessible name for assistive technology. -->
 				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
 					<!--
 						Home: highlighted as the active page on mobile too. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
@@ -467,7 +467,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 		<!--
 			tabindex="-1" allows the skip link to move keyboard focus here programmatically. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 		-->
-		<!-- main element: identifies this part of the page structure or content. Attributes used here: id, tabindex. -->
+		<!-- main element: Identifies the primary content of the page. Attributes: id="main" provides a unique identifier for scripts, CSS or fragment links; tabindex="-1" sets the tabindex property used by the browser, assistive technology or site scripts. -->
 		<main id="main" tabindex="-1">
 			<!--
 				Section: Hero — color-block composition. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
@@ -475,7 +475,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Full-width navy hero: headline, dual CTAs, category chips, stats and a floating image cluster. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="relative overflow-hidden bg-[#0d1b3e] text-white" applies styling, layout, responsive and state classes. -->
 			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
 				<!--
 					Decorative radial glows (two soft light spots) — aria-hidden so they're ignored by AT. It provides visual styling rather than essential information, so the main content remains understandable without it.
@@ -498,33 +498,33 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					aria-hidden="true"
 					class="absolute left-8 top-20 hidden opacity-40 lg:block"
 				>
-					<!-- svg element: identifies this part of the page structure or content. Attributes used here: width, height, viewBox, fill. -->
+					<!-- svg element: Defines a scalable vector graphic. Attributes: width="120" sets the resource's intrinsic or displayed dimensions; height="120" sets the resource's intrinsic or displayed dimensions; viewBox="0 0 120 120" sets the viewBox property used by the browser, assistive technology or site scripts; fill="none" sets the fill property used by the browser, assistive technology or site scripts. -->
 					<svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-						<!-- g element: identifies this part of the page structure or content. Attributes used here: fill, fill-opacity. -->
+						<!-- g element: HTML element used to structure homepage content or provide a browser feature Attributes: fill="#ffffff" sets the fill property used by the browser, assistive technology or site scripts; fill-opacity="0.35" sets the fill opacity property used by the browser, assistive technology or site scripts. -->
 						<g fill="#ffffff" fill-opacity="0.35">
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="10" sets the cx property used by the browser, assistive technology or site scripts; cy="10" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="10" cy="10" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="40" sets the cx property used by the browser, assistive technology or site scripts; cy="10" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="40" cy="10" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="70" sets the cx property used by the browser, assistive technology or site scripts; cy="10" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="70" cy="10" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="100" sets the cx property used by the browser, assistive technology or site scripts; cy="10" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="100" cy="10" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="10" sets the cx property used by the browser, assistive technology or site scripts; cy="40" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="10" cy="40" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="40" sets the cx property used by the browser, assistive technology or site scripts; cy="40" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="40" cy="40" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="70" sets the cx property used by the browser, assistive technology or site scripts; cy="40" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="70" cy="40" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="100" sets the cx property used by the browser, assistive technology or site scripts; cy="40" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="100" cy="40" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="10" sets the cx property used by the browser, assistive technology or site scripts; cy="70" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="10" cy="70" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="40" sets the cx property used by the browser, assistive technology or site scripts; cy="70" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="40" cy="70" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="70" sets the cx property used by the browser, assistive technology or site scripts; cy="70" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="70" cy="70" r="2" />
-							<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+							<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="100" sets the cx property used by the browser, assistive technology or site scripts; cy="70" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 							<circle cx="100" cy="70" r="2" />
 						</g>
 					</svg>
@@ -536,12 +536,12 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<div
 					class="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24 lg:pt-20"
 				>
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="grid items-center gap-16 lg:grid-cols-2" applies styling, layout, responsive and state classes. -->
 					<div class="grid items-center gap-16 lg:grid-cols-2">
 						<!--
 							Left column: copy block, animate-fade-up plays on load. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="animate-fade-up" applies styling, layout, responsive and state classes. -->
 						<div class="animate-fade-up">
 							<!--
 								Eyebrow badge with sparkle icon. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
@@ -564,12 +564,12 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								class="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl xl:text-6xl"
 							>
 								Kit out your res room
-								<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="relative inline-block whitespace-nowrap" applies styling, layout, responsive and state classes. -->
 								<span class="relative inline-block whitespace-nowrap">
 									<!--
 										Highlighted phrase in gold. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 									-->
-									<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="relative z-10 text-[#ffd23f]" applies styling, layout, responsive and state classes; without sets the without property used by the browser, assistive technology or site scripts; breaking sets the breaking property used by the browser, assistive technology or site scripts. -->
 									<span class="relative z-10 text-[#ffd23f]"
 										>without breaking</span
 									>
@@ -581,7 +581,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										class="absolute inset-x-0 bottom-1 z-0 h-4 -rotate-1 rounded-sm bg-[#ffd23f]/25"
 									></span>
 								</span>
-								<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-[#ffd23f]" applies styling, layout, responsive and state classes; the sets the the property used by the browser, assistive technology or site scripts; budget sets the budget property used by the browser, assistive technology or site scripts. -->
 								<span class="text-[#ffd23f]">the budget</span>
 							</h1>
 
@@ -600,7 +600,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Primary and secondary calls to action, stacked on mobile and side-by-side from sm. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-8 flex flex-col gap-3 sm:flex-row" applies styling, layout, responsive and state classes. -->
 							<div class="mt-8 flex flex-col gap-3 sm:flex-row">
 								<!--
 									Primary CTA: solid gold button linking to the student account path. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -633,7 +633,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Category chips: quick visual summary of what Campus-Cart sells. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-7 flex flex-wrap gap-2" applies styling, layout, responsive and state classes. -->
 							<div class="mt-7 flex flex-wrap gap-2">
 								<!--
 									Bedding chip. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
@@ -695,12 +695,12 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<dl
 								class="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-7"
 							>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
 									<!--
 										Stat value. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 									-->
-									<!-- dt element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- dt element: HTML element used to structure homepage content or provide a browser feature Attributes: class="text-3xl font-extrabold text-[#ffd23f]" applies styling, layout, responsive and state classes. -->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">26</dt>
 									<!--
 										Stat label. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
@@ -711,9 +711,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										Public universities
 									</dd>
 								</div>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- dt element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- dt element: HTML element used to structure homepage content or provide a browser feature Attributes: class="text-3xl font-extrabold text-[#ffd23f]" applies styling, layout, responsive and state classes. -->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">50</dt>
 									<dd
 										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
@@ -721,9 +721,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										TVET colleges
 									</dd>
 								</div>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- dt element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- dt element: HTML element used to structure homepage content or provide a browser feature Attributes: class="text-3xl font-extrabold text-[#ffd23f]" applies styling, layout, responsive and state classes; R180 sets the R180 property used by the browser, assistive technology or site scripts. -->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">R180</dt>
 									<dd
 										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
@@ -737,7 +737,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Right column: circular image collage with floating badges and decorative rings. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto w-full max-w-[520px]" applies styling, layout, responsive and state classes. -->
 						<div class="relative mx-auto w-full max-w-[520px]">
 							<!--
 								Decorative soft gold glow behind the main image. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
@@ -830,11 +830,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										class="h-5 w-5 text-[#0d1b3e]"
 									/>
 								</span>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes; From sets the From property used by the browser, assistive technology or site scripts; R180 sets the R180 property used by the browser, assistive technology or site scripts. -->
 									<p class="text-sm font-bold text-[#0d1b3e]">From R180</p>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-slate-500" applies styling, layout, responsive and state classes; Second-hand sets the Second hand property used by the browser, assistive technology or site scripts; picks sets the picks property used by the browser, assistive technology or site scripts. -->
 									<p class="text-xs text-slate-500">Second-hand picks</p>
 								</div>
 							</div>
@@ -857,11 +857,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										class="h-5 w-5 text-[#ffd23f]"
 									/>
 								</span>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold" applies styling, layout, responsive and state classes; Reviewed sets the Reviewed property used by the browser, assistive technology or site scripts; by sets the by property used by the browser, assistive technology or site scripts; our sets the our property used by the browser, assistive technology or site scripts; team sets the team property used by the browser, assistive technology or site scripts. -->
 									<p class="text-sm font-bold">Reviewed by our team</p>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-slate-500" applies styling, layout, responsive and state classes; Before sets the Before property used by the browser, assistive technology or site scripts; it sets the it property used by the browser, assistive technology or site scripts; goes sets the goes property used by the browser, assistive technology or site scripts; live sets the live property used by the browser, assistive technology or site scripts. -->
 									<p class="text-xs text-slate-500">Before it goes live</p>
 								</div>
 							</div>
@@ -891,7 +891,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Viewport clips the overflowing track. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 					-->
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-brand-marquee-viewport overflow-hidden py-4" applies styling, layout, responsive and state classes. -->
 					<div class="cc-brand-marquee-viewport overflow-hidden py-4">
 						<!--
 							Track: data attributes control speed, direction and hover-pause behaviour. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
@@ -905,7 +905,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								First group of category labels (visible copy). It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-brand-marquee-group flex items-center gap-8 pr-8" applies styling, layout, responsive and state classes. -->
 							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
@@ -986,7 +986,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Duplicate group (aria-hidden): creates the seamless loop illusion. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-brand-marquee-group flex items-center gap-8 pr-8" applies styling, layout, responsive and state classes. -->
 							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
@@ -1079,7 +1079,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<!--
 					Clipping viewport for the trust ticker. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-marquee-viewport" applies styling, layout, responsive and state classes. -->
 				<div class="cc-marquee-viewport">
 					<!--
 						Animated track; speed/direction/pause configured via data attributes. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
@@ -1093,57 +1093,57 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Visible group of service items. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-marquee-group" applies styling, layout, responsive and state classes. -->
 						<div class="cc-marquee-group">
 							<!--
 								Item 1: new + reviewed used stock. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 							-->
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: New sets the New property used by the browser, assistive technology or site scripts; reviewed sets the reviewed property used by the browser, assistive technology or site scripts; used sets the used property used by the browser, assistive technology or site scripts. -->
 								<strong>New + reviewed used</strong
 								><span>Every second-hand item is checked first</span></span
 							>
 							<!--
 								Item 2: safe collection points. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 							-->
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: Safe sets the Safe property used by the browser, assistive technology or site scripts; collection sets the collection property used by the browser, assistive technology or site scripts. -->
 								<strong>Safe collection</strong
 								><span>Residence desks, campus points or lockers</span></span
 							>
 							<!--
 								Item 3: EFT payment note. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 							-->
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: Pay sets the Pay property used by the browser, assistive technology or site scripts; by sets the by property used by the browser, assistive technology or site scripts; EFT sets the EFT property used by the browser, assistive technology or site scripts. -->
 								<strong>Pay by EFT</strong
 								><span>Nothing is charged on this website</span></span
 							>
 							<!--
 								Item 4: national delivery coverage. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 							-->
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: National sets the National property used by the browser, assistive technology or site scripts; coverage sets the coverage property used by the browser, assistive technology or site scripts. -->
 								<strong>National coverage</strong
 								><span>All 9 South African provinces</span></span
 							>
@@ -1151,45 +1151,45 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Duplicate group (aria-hidden): keeps the loop seamless and hides repetition from AT. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class, aria-hidden. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-marquee-group" applies styling, layout, responsive and state classes; aria-hidden="true" controls whether assistive technology ignores this element. -->
 						<div class="cc-marquee-group" aria-hidden="true">
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: New sets the New property used by the browser, assistive technology or site scripts; reviewed sets the reviewed property used by the browser, assistive technology or site scripts; used sets the used property used by the browser, assistive technology or site scripts. -->
 								<strong>New + reviewed used</strong
 								><span>Every second-hand item is checked first</span></span
 							>
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: Safe sets the Safe property used by the browser, assistive technology or site scripts; collection sets the collection property used by the browser, assistive technology or site scripts. -->
 								<strong>Safe collection</strong
 								><span>Residence desks, campus points or lockers</span></span
 							>
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: Pay sets the Pay property used by the browser, assistive technology or site scripts; by sets the by property used by the browser, assistive technology or site scripts; EFT sets the EFT property used by the browser, assistive technology or site scripts. -->
 								<strong>Pay by EFT</strong
 								><span>Nothing is charged on this website</span></span
 							>
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="cc-marquee-item" applies styling, layout, responsive and state classes; img sets the img property used by the browser, assistive technology or site scripts. -->
 							<span class="cc-marquee-item"
 								><img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
 									alt=""
 								/>
-								<!-- strong element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- strong element: Marks text as strongly important. Attributes: National sets the National property used by the browser, assistive technology or site scripts; coverage sets the coverage property used by the browser, assistive technology or site scripts. -->
 								<strong>National coverage</strong
 								><span>All 9 South African provinces</span></span
 							>
@@ -1204,12 +1204,12 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Four large image tiles acting as shortcuts into the shop, second-hand, parent and selling flows. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 			<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
 				<!--
 					Section heading block. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="max-w-2xl" applies styling, layout, responsive and state classes. -->
 				<div class="max-w-2xl">
 					<span
 						class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -1225,7 +1225,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<!--
 					Tile grid: 1 column on mobile, 2 on small screens, 4 on large. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4" applies styling, layout, responsive and state classes. -->
 				<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 					<!--
 						Tile 1: new arrivals. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
@@ -1266,11 +1266,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Tile caption text, pinned to the bottom. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute inset-x-0 bottom-0 p-5" applies styling, layout, responsive and state classes. -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold text-white" applies styling, layout, responsive and state classes; New sets the New property used by the browser, assistive technology or site scripts; arrivals sets the arrivals property used by the browser, assistive technology or site scripts. -->
 							<p class="text-sm font-bold text-white">New arrivals</p>
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-slate-300" applies styling, layout, responsive and state classes. -->
 							<p class="text-xs text-slate-300">
 								Fresh bundles for first-years
 							</p>
@@ -1304,11 +1304,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								class="h-4 w-4"
 							/>
 						</span>
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute inset-x-0 bottom-0 p-5" applies styling, layout, responsive and state classes. -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold text-white" applies styling, layout, responsive and state classes; Second-hand sets the Second hand property used by the browser, assistive technology or site scripts. -->
 							<p class="text-sm font-bold text-white">Second-hand</p>
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-slate-300" applies styling, layout, responsive and state classes; Reviewed sets the Reviewed property used by the browser, assistive technology or site scripts; marketplace sets the marketplace property used by the browser, assistive technology or site scripts; deals sets the deals property used by the browser, assistive technology or site scripts. -->
 							<p class="text-xs text-slate-300">Reviewed marketplace deals</p>
 						</div>
 					</a>
@@ -1340,11 +1340,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								class="h-4 w-4"
 							/>
 						</span>
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute inset-x-0 bottom-0 p-5" applies styling, layout, responsive and state classes. -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold text-white" applies styling, layout, responsive and state classes; Parent sets the Parent property used by the browser, assistive technology or site scripts; Hub sets the Hub property used by the browser, assistive technology or site scripts. -->
 							<p class="text-sm font-bold text-white">Parent Hub</p>
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-slate-300" applies styling, layout, responsive and state classes. -->
 							<p class="text-xs text-slate-300">
 								Plan spend before registration
 							</p>
@@ -1378,11 +1378,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								class="h-4 w-4"
 							/>
 						</span>
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="absolute inset-x-0 bottom-0 p-5" applies styling, layout, responsive and state classes. -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold text-white" applies styling, layout, responsive and state classes; Sell sets the Sell property used by the browser, assistive technology or site scripts; with sets the with property used by the browser, assistive technology or site scripts; us sets the us property used by the browser, assistive technology or site scripts. -->
 							<p class="text-sm font-bold text-white">Sell with us</p>
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-slate-300" applies styling, layout, responsive and state classes; Turn sets the Turn property used by the browser, assistive technology or site scripts; old sets the old property used by the browser, assistive technology or site scripts; kit sets the kit property used by the browser, assistive technology or site scripts; into sets the into property used by the browser, assistive technology or site scripts; cash sets the cash property used by the browser, assistive technology or site scripts. -->
 							<p class="text-xs text-slate-300">Turn old kit into cash</p>
 						</div>
 					</a>
@@ -1395,9 +1395,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				White band containing a four-card product grid with add-to-cart buttons. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="bg-white py-20" applies styling, layout, responsive and state classes. -->
 			<section class="bg-white py-20">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<!--
 						Header row: section title on the left, "browse all" button on the right. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -1405,7 +1405,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="max-w-2xl" applies styling, layout, responsive and state classes. -->
 						<div class="max-w-2xl">
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -1433,7 +1433,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Product card grid: 1 / 2 / 4 columns depending on breakpoint. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 					-->
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" applies styling, layout, responsive and state classes. -->
 					<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 						<!--
 							Product 01. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
@@ -1447,7 +1447,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Image wrapper (relative so badges/buttons can be absolutely positioned). Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative overflow-hidden rounded-2xl bg-slate-100" applies styling, layout, responsive and state classes. -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
 								<img
 									src="assets/images/products/kettle.jpg"
@@ -1485,18 +1485,18 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Card text body: name, price, short description and star rating. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-4 flex flex-1 flex-col" applies styling, layout, responsive and state classes. -->
 							<div class="mt-4 flex flex-1 flex-col">
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center justify-between gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center justify-between gap-2">
-									<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes; L sets the L property used by the browser, assistive technology or site scripts; Kettle sets the Kettle property used by the browser, assistive technology or site scripts. -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">1.8 L Kettle</h3>
-									<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-sm font-extrabold text-[#0d1b3e]" applies styling, layout, responsive and state classes; R349 sets the R349 property used by the browser, assistive technology or site scripts. -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R349</span
 									>
 								</div>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-1 text-xs text-slate-500" applies styling, layout, responsive and state classes. -->
 								<p class="mt-1 text-xs text-slate-500">
 									Rapid boil, cool-touch handle.
 								</p>
@@ -1519,7 +1519,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative overflow-hidden rounded-2xl bg-slate-100" applies styling, layout, responsive and state classes. -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
 								<img
 									src="assets/images/products/duvet.jpg"
@@ -1551,20 +1551,20 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									/>
 								</button>
 							</div>
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-4 flex flex-1 flex-col" applies styling, layout, responsive and state classes. -->
 							<div class="mt-4 flex flex-1 flex-col">
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center justify-between gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center justify-between gap-2">
-									<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes. -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">
 										Duvet &amp; Linen Set
 									</h3>
-									<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-sm font-extrabold text-[#0d1b3e]" applies styling, layout, responsive and state classes; R599 sets the R599 property used by the browser, assistive technology or site scripts. -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R599</span
 									>
 								</div>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-1 text-xs text-slate-500" applies styling, layout, responsive and state classes. -->
 								<p class="mt-1 text-xs text-slate-500">
 									Single bed, 4.5 tog, machine washable.
 								</p>
@@ -1584,7 +1584,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative overflow-hidden rounded-2xl bg-slate-100" applies styling, layout, responsive and state classes. -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
 								<img
 									src="assets/images/products/table-lap.jpg"
@@ -1616,15 +1616,15 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									/>
 								</button>
 							</div>
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-4 flex flex-1 flex-col" applies styling, layout, responsive and state classes. -->
 							<div class="mt-4 flex flex-1 flex-col">
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center justify-between gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center justify-between gap-2">
-									<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes. -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">
 										LED Desk Lamp
 									</h3>
-									<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-sm font-extrabold text-[#0d1b3e]" applies styling, layout, responsive and state classes; R249 sets the R249 property used by the browser, assistive technology or site scripts. -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R249</span
 									>
@@ -1632,9 +1632,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								<!--
 									Description includes the original price inside <s> to show the discount. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 								-->
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-1 text-xs text-slate-500" applies styling, layout, responsive and state classes. -->
 								<p class="mt-1 text-xs text-slate-500">
-									<!-- s element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- s element: HTML element used to structure homepage content or provide a browser feature Attributes: class="text-slate-400" applies styling, layout, responsive and state classes; R329 sets the R329 property used by the browser, assistive technology or site scripts; USB-C sets the USB C property used by the browser, assistive technology or site scripts; brightness sets the brightness property used by the browser, assistive technology or site scripts. -->
 									<s class="text-slate-400">R329</s> · USB-C, 3 brightness
 									modes.
 								</p>
@@ -1657,7 +1657,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative overflow-hidden rounded-2xl bg-slate-100" applies styling, layout, responsive and state classes. -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
 								<img
 									src="assets/images/products/textbook.jpg"
@@ -1686,20 +1686,20 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									/>
 								</button>
 							</div>
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-4 flex flex-1 flex-col" applies styling, layout, responsive and state classes. -->
 							<div class="mt-4 flex flex-1 flex-col">
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center justify-between gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center justify-between gap-2">
-									<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes. -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">
 										BCom Year 1 Textbooks
 									</h3>
-									<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-sm font-extrabold text-[#0d1b3e]" applies styling, layout, responsive and state classes; R780 sets the R780 property used by the browser, assistive technology or site scripts. -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R780</span
 									>
 								</div>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-1 text-xs text-slate-500" applies styling, layout, responsive and state classes. -->
 								<p class="mt-1 text-xs text-slate-500">
 									Reviewed set of 5 core modules.
 								</p>
@@ -1722,9 +1722,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Three visually distinct cards (navy, amber, cream) presenting the starter bundles. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="bg-[#f7f5f1] py-20" applies styling, layout, responsive and state classes. -->
 			<section class="bg-[#f7f5f1] py-20">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<!--
 						Section heading. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
@@ -1732,7 +1732,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="max-w-2xl" applies styling, layout, responsive and state classes. -->
 						<div class="max-w-2xl">
 							<!--
 								Eyebrow label with a gold dot ringed in amber. It provides visual styling rather than essential information, so the main content remains understandable without it.
@@ -1774,7 +1774,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Section: Color-block cards. It groups or identifies related page content, making the homepage structure easier to navigate, understand and maintain.
 					-->
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-12 grid gap-6 lg:grid-cols-3" applies styling, layout, responsive and state classes. -->
 					<div class="mt-12 grid gap-6 lg:grid-cols-3">
 						<!--
 							Card 01 — Navy block. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -1810,7 +1810,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Top row: status pill on the left, large italic card number on the right. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative flex items-center justify-between" applies styling, layout, responsive and state classes. -->
 							<div class="relative flex items-center justify-between">
 								<span
 									class="rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]"
@@ -1858,14 +1858,14 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Bundle name and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-7 flex-1" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-7 flex-1">
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
 								>
 									Basic Starter Bundle
 								</h3>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-2 text-sm leading-relaxed text-slate-300" applies styling, layout, responsive and state classes. -->
 								<p class="mt-2 text-sm leading-relaxed text-slate-300">
 									Bedding set, kettle, mug set and study basics for a first-year
 									res room.
@@ -1875,11 +1875,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Price + three actions: details link, wishlist toggle, add to cart. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-6 flex items-end justify-between gap-4" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-2xl font-extrabold text-[#ffd23f]" applies styling, layout, responsive and state classes; R1 sets the R1 property used by the browser, assistive technology or site scripts. -->
 								<p class="text-2xl font-extrabold text-[#ffd23f]">R1 499</p>
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center gap-2">
 									<!--
 										Link to the Parent Hub bundle breakdown. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -1907,7 +1907,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										aria-label="Add Basic Starter Bundle to wishlist"
 										aria-pressed="false"
 									>
-										<!-- span element: identifies this part of the page structure or content. Attributes used here: aria-hidden. -->
+										<!-- span element: Groups a short inline piece of text or an icon. Attributes: data-wishlist-icon stores a custom value read by the site's JavaScript; aria-hidden="true" controls whether assistive technology ignores this element. -->
 										<span data-wishlist-icon aria-hidden="true">♡</span>
 									</button>
 									<!--
@@ -1947,29 +1947,29 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Decorative navy dot-grid SVG, top-left. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: aria-hidden, class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: aria-hidden="true" controls whether assistive technology ignores this element; class="absolute left-6 top-8 opacity-40" applies styling, layout, responsive and state classes. -->
 							<div aria-hidden="true" class="absolute left-6 top-8 opacity-40">
-								<!-- svg element: identifies this part of the page structure or content. Attributes used here: width, height, viewBox, fill. -->
+								<!-- svg element: Defines a scalable vector graphic. Attributes: width="64" sets the resource's intrinsic or displayed dimensions; height="64" sets the resource's intrinsic or displayed dimensions; viewBox="0 0 64 64" sets the viewBox property used by the browser, assistive technology or site scripts; fill="none" sets the fill property used by the browser, assistive technology or site scripts. -->
 								<svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-									<!-- g element: identifies this part of the page structure or content. Attributes used here: fill. -->
+									<!-- g element: HTML element used to structure homepage content or provide a browser feature Attributes: fill="#0d1b3e" sets the fill property used by the browser, assistive technology or site scripts. -->
 									<g fill="#0d1b3e">
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="8" sets the cx property used by the browser, assistive technology or site scripts; cy="8" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="8" cy="8" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="32" sets the cx property used by the browser, assistive technology or site scripts; cy="8" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="32" cy="8" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="56" sets the cx property used by the browser, assistive technology or site scripts; cy="8" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="56" cy="8" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="8" sets the cx property used by the browser, assistive technology or site scripts; cy="32" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="8" cy="32" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="32" sets the cx property used by the browser, assistive technology or site scripts; cy="32" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="32" cy="32" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="56" sets the cx property used by the browser, assistive technology or site scripts; cy="32" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="56" cy="32" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="8" sets the cx property used by the browser, assistive technology or site scripts; cy="56" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="8" cy="56" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="32" sets the cx property used by the browser, assistive technology or site scripts; cy="56" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="32" cy="56" r="2" />
-										<!-- circle element: identifies this part of the page structure or content. Attributes used here: cx, cy, r. -->
+										<!-- circle element: HTML element used to structure homepage content or provide a browser feature Attributes: cx="56" sets the cx property used by the browser, assistive technology or site scripts; cy="56" sets the cy property used by the browser, assistive technology or site scripts; r="2" sets the r property used by the browser, assistive technology or site scripts. -->
 										<circle cx="56" cy="56" r="2" />
 									</g>
 								</svg>
@@ -1978,7 +1978,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Top row: inverted "Popular" pill and card number. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative flex items-center justify-between" applies styling, layout, responsive and state classes. -->
 							<div class="relative flex items-center justify-between">
 								<span
 									class="rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]"
@@ -1993,7 +1993,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Image block: single rounded-square image with a navy glow behind it. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-6" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-6">
 								<div
 									aria-hidden="true"
@@ -2015,14 +2015,14 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Bundle name and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-8 flex-1" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-8 flex-1">
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
 								>
 									Standard Starter Bundle
 								</h3>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70" applies styling, layout, responsive and state classes. -->
 								<p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70">
 									Basic plus desk lamp, laundry set and a kitchen starter pack.
 								</p>
@@ -2031,11 +2031,11 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Price + actions (navy buttons for contrast against the amber card). It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-6 flex items-end justify-between gap-4" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-2xl font-extrabold" applies styling, layout, responsive and state classes; R2 sets the R2 property used by the browser, assistive technology or site scripts. -->
 								<p class="text-2xl font-extrabold">R2 799</p>
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center gap-2">
 									<a
 										href="pages/products.html#parent-hub"
@@ -2057,7 +2057,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										aria-label="Add Standard Starter Bundle to wishlist"
 										aria-pressed="false"
 									>
-										<!-- span element: identifies this part of the page structure or content. Attributes used here: aria-hidden. -->
+										<!-- span element: Groups a short inline piece of text or an icon. Attributes: data-wishlist-icon stores a custom value read by the site's JavaScript; aria-hidden="true" controls whether assistive technology ignores this element. -->
 										<span data-wishlist-icon aria-hidden="true">♡</span>
 									</button>
 									<button
@@ -2102,7 +2102,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Top row: "Second-hand" pill and card number. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative flex items-center justify-between" applies styling, layout, responsive and state classes. -->
 							<div class="relative flex items-center justify-between">
 								<span
 									class="rounded-full bg-[#c2572f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-white"
@@ -2117,7 +2117,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Layered circular images: main desk photo plus a small inset kettle photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56" applies styling, layout, responsive and state classes. -->
 							<div class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56">
 								<!--
 									Main circular image. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
@@ -2158,14 +2158,14 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Card title and description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-8 flex-1" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-8 flex-1">
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
 								>
 									Marketplace Picks
 								</h3>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70" applies styling, layout, responsive and state classes. -->
 								<p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70">
 									Reviewed fridges, desks, chairs and textbooks from graduating
 									students.
@@ -2175,19 +2175,19 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								"Starting at" price block plus the same three actions. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 							-->
-							<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: class="relative mt-6 flex items-end justify-between gap-4" applies styling, layout, responsive and state classes. -->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
 									<p
 										class="text-[11px] font-bold uppercase tracking-wider text-[#c2572f]"
 									>
 										Starting at
 									</p>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-2xl font-extrabold" applies styling, layout, responsive and state classes; R180 sets the R180 property used by the browser, assistive technology or site scripts. -->
 									<p class="text-2xl font-extrabold">R180</p>
 								</div>
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex items-center gap-2" applies styling, layout, responsive and state classes. -->
 								<div class="flex items-center gap-2">
 									<a
 										href="pages/products.html#shop"
@@ -2209,7 +2209,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										aria-label="Add Marketplace Pick to wishlist"
 										aria-pressed="false"
 									>
-										<!-- span element: identifies this part of the page structure or content. Attributes used here: aria-hidden. -->
+										<!-- span element: Groups a short inline piece of text or an icon. Attributes: data-wishlist-icon stores a custom value read by the site's JavaScript; aria-hidden="true" controls whether assistive technology ignores this element. -->
 										<span data-wishlist-icon aria-hidden="true">♡</span>
 									</button>
 									<button
@@ -2237,9 +2237,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<div
 						class="mt-8 flex flex-col items-center justify-between gap-4 rounded-full bg-[#0d1b3e] px-8 py-4 text-center sm:flex-row sm:text-left"
 					>
-						<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-300" applies styling, layout, responsive and state classes. -->
 						<p class="text-sm text-slate-300">
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="font-bold text-[#ffd23f]" applies styling, layout, responsive and state classes; Every sets the Every property used by the browser, assistive technology or site scripts; second-hand sets the second hand property used by the browser, assistive technology or site scripts; item sets the item property used by the browser, assistive technology or site scripts. -->
 							<span class="font-bold text-[#ffd23f]"
 								>Every second-hand item</span
 							>
@@ -2266,16 +2266,16 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Two-column banner: photo + floating price badge on the left, reassurance list on the right. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="bg-[#0d1b3e] py-20 text-white" applies styling, layout, responsive and state classes. -->
 			<section class="bg-[#0d1b3e] py-20 text-white">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="grid items-center gap-12 lg:grid-cols-2" applies styling, layout, responsive and state classes. -->
 					<div class="grid items-center gap-12 lg:grid-cols-2">
 						<!--
 							Image column: order-2 on mobile so the text reads first. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="relative order-2 lg:order-1" applies styling, layout, responsive and state classes. -->
 						<div class="relative order-2 lg:order-1">
 							<!--
 								Soft gold glow behind the photo. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
@@ -2301,9 +2301,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<div
 								class="absolute -bottom-5 left-6 rounded-2xl bg-[#ffd23f] p-4 text-[#0d1b3e] shadow-xl"
 							>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm font-bold" applies styling, layout, responsive and state classes; Fixed-price sets the Fixed price property used by the browser, assistive technology or site scripts; bundles sets the bundles property used by the browser, assistive technology or site scripts. -->
 								<p class="text-sm font-bold">Fixed-price bundles</p>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-xs text-[#0d1b3e]/70" applies styling, layout, responsive and state classes. -->
 								<p class="text-xs text-[#0d1b3e]/70">
 									No surprises at the till
 								</p>
@@ -2313,7 +2313,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Text column: heading, intro and a checklist of four reassurances. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="order-1 lg:order-2" applies styling, layout, responsive and state classes. -->
 						<div class="order-1 lg:order-2">
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
@@ -2324,7 +2324,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							>
 								Know exactly what you’re getting
 							</h2>
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-4 text-slate-300" applies styling, layout, responsive and state classes. -->
 							<p class="mt-4 text-slate-300">
 								The same way SoleStyle gives shoe shoppers fit confidence,
 								Campus-Cart gives parents and guardians item-level confidence
@@ -2334,12 +2334,12 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Reassurance checklist: each item pairs a gold check badge with text. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 							-->
-							<!-- ul element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- ul element: Groups list items without a numbered sequence. Attributes: class="mt-8 space-y-4" applies styling, layout, responsive and state classes. -->
 							<ul class="mt-8 space-y-4">
 								<!--
 									Point 1: fixed, itemised bundle contents. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 								-->
-								<!-- li element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- li element: Defines one item in its parent list. Attributes: class="flex items-start gap-3" applies styling, layout, responsive and state classes. -->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2350,9 +2350,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
 									</span>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-200" applies styling, layout, responsive and state classes. -->
 									<p class="text-sm text-slate-200">
-										<!-- strong element: identifies this part of the page structure or content. Attributes used here: class. -->
+										<!-- strong element: Marks text as strongly important. Attributes: class="text-white" applies styling, layout, responsive and state classes; Fixed sets the Fixed property used by the browser, assistive technology or site scripts; contents. sets the contents. property used by the browser, assistive technology or site scripts; Every sets the Every property used by the browser, assistive technology or site scripts. -->
 										<strong class="text-white">Fixed contents.</strong> Every
 										bundle lists each item and its total price before you order.
 									</p>
@@ -2360,7 +2360,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								<!--
 									Point 2: manual review of second-hand listings. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 								-->
-								<!-- li element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- li element: Defines one item in its parent list. Attributes: class="flex items-start gap-3" applies styling, layout, responsive and state classes. -->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2371,9 +2371,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
 									</span>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-200" applies styling, layout, responsive and state classes. -->
 									<p class="text-sm text-slate-200">
-										<!-- strong element: identifies this part of the page structure or content. Attributes used here: class. -->
+										<!-- strong element: Marks text as strongly important. Attributes: class="text-white" applies styling, layout, responsive and state classes; Reviewed sets the Reviewed property used by the browser, assistive technology or site scripts; listings. sets the listings. property used by the browser, assistive technology or site scripts. -->
 										<strong class="text-white">Reviewed listings.</strong>
 										Second-hand items are manually checked by our team before
 										they go live.
@@ -2382,7 +2382,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								<!--
 									Point 3: safe, campus-based collection. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 								-->
-								<!-- li element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- li element: Defines one item in its parent list. Attributes: class="flex items-start gap-3" applies styling, layout, responsive and state classes. -->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2393,9 +2393,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
 									</span>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-200" applies styling, layout, responsive and state classes. -->
 									<p class="text-sm text-slate-200">
-										<!-- strong element: identifies this part of the page structure or content. Attributes used here: class. -->
+										<!-- strong element: Marks text as strongly important. Attributes: class="text-white" applies styling, layout, responsive and state classes; Safe sets the Safe property used by the browser, assistive technology or site scripts; collection. sets the collection. property used by the browser, assistive technology or site scripts. -->
 										<strong class="text-white">Safe collection.</strong>
 										Residence desks, campus points or secure lockers — never a
 										random street corner.
@@ -2404,7 +2404,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								<!--
 									Point 4: EFT-only payments, no card data on site. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 								-->
-								<!-- li element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- li element: Defines one item in its parent list. Attributes: class="flex items-start gap-3" applies styling, layout, responsive and state classes. -->
 								<li class="flex items-start gap-3">
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
@@ -2415,9 +2415,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
 									</span>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-200" applies styling, layout, responsive and state classes. -->
 									<p class="text-sm text-slate-200">
-										<!-- strong element: identifies this part of the page structure or content. Attributes used here: class. -->
+										<!-- strong element: Marks text as strongly important. Attributes: class="text-white" applies styling, layout, responsive and state classes; EFT sets the EFT property used by the browser, assistive technology or site scripts; only. sets the only. property used by the browser, assistive technology or site scripts; No sets the No property used by the browser, assistive technology or site scripts; card sets the card property used by the browser, assistive technology or site scripts. -->
 										<strong class="text-white">EFT only.</strong> No card
 										details are ever handled on this site.
 									</p>
@@ -2449,16 +2449,16 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Short origin story with two staggered lifestyle photos. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="bg-white py-20" applies styling, layout, responsive and state classes. -->
 			<section class="bg-white py-20">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="grid items-center gap-12 lg:grid-cols-2" applies styling, layout, responsive and state classes. -->
 					<div class="grid items-center gap-12 lg:grid-cols-2">
 						<!--
 							Text column: origin story copy and a link to the About page. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 						-->
-						<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 						<div>
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -2469,7 +2469,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							>
 								Started in a res corridor in 2021
 							</h2>
-							<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-4 text-slate-600" applies styling, layout, responsive and state classes. -->
 							<p class="mt-4 text-slate-600">
 								Campus-Cart began when a group of students resold their res kit
 								instead of throwing it away. Today we serve students aged 19–30
@@ -2492,7 +2492,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Photo pair: second image offset downward with mt-8 for a staggered look. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="grid grid-cols-2 gap-4" applies styling, layout, responsive and state classes. -->
 						<div class="grid grid-cols-2 gap-4">
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
@@ -2521,9 +2521,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Masonry-style photo grid using explicit row/column spans. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="py-20" applies styling, layout, responsive and state classes. -->
 			<section class="py-20">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<!--
 						Header row with title and gallery link. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -2531,7 +2531,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="max-w-2xl" applies styling, layout, responsive and state classes. -->
 						<div class="max-w-2xl">
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -2724,14 +2724,14 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Three review cards from a student, a res student and a parent. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="bg-[#faf8f4] py-20" applies styling, layout, responsive and state classes. -->
 			<section class="bg-[#faf8f4] py-20">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<!--
 						Section heading. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 					-->
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="max-w-2xl" applies styling, layout, responsive and state classes. -->
 					<div class="max-w-2xl">
 						<span
 							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
@@ -2747,7 +2747,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Review grid: single column on mobile, three across on md+. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 					-->
-					<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-10 grid gap-6 md:grid-cols-3" applies styling, layout, responsive and state classes. -->
 					<div class="mt-10 grid gap-6 md:grid-cols-3">
 						<!--
 							Review 1: student perspective. It presents related information in a compact component so visitors can compare options and identify relevant next steps.
@@ -2768,7 +2768,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Quote text; flex-1 pushes the caption to the card bottom for equal heights. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 							-->
-							<!-- blockquote element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- blockquote element: HTML element used to structure homepage content or provide a browser feature Attributes: class="mt-4 flex-1 text-slate-700" applies styling, layout, responsive and state classes. -->
 							<blockquote class="mt-4 flex-1 text-slate-700">
 								“I sent the bundle list to my mom before registration — she
 								could see exactly what was included and what it cost. No awkward
@@ -2777,18 +2777,18 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Reviewer identity: avatar, name and campus. Its presentation supports the surrounding content, while the image sizing and crop are controlled by the page layout.
 							-->
-							<!-- figcaption element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- figcaption element: HTML element used to structure homepage content or provide a browser feature Attributes: class="mt-6 flex items-center gap-3" applies styling, layout, responsive and state classes. -->
 							<figcaption class="mt-6 flex items-center gap-3">
 								<img
 									src="https://i.pravatar.cc/80?u=naledi"
 									alt="Portrait of Naledi M."
 									class="h-11 w-11 rounded-full object-cover"
 								/>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes; Naledi sets the Naledi property used by the browser, assistive technology or site scripts; M. sets the M. property used by the browser, assistive technology or site scripts. -->
 									<p class="font-bold text-[#0d1b3e]">Naledi M.</p>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-500" applies styling, layout, responsive and state classes. -->
 									<p class="text-sm text-slate-500">
 										Wits University, Johannesburg
 									</p>
@@ -2809,24 +2809,24 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							>
 								★★★★★
 							</div>
-							<!-- blockquote element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- blockquote element: HTML element used to structure homepage content or provide a browser feature Attributes: class="mt-4 flex-1 text-slate-700" applies styling, layout, responsive and state classes. -->
 							<blockquote class="mt-4 flex-1 text-slate-700">
 								“The second-hand desk and fridge were exactly as described.
 								Collecting from the residence desk felt safe, and I saved almost
 								R2 000 compared to buying new.”
 							</blockquote>
-							<!-- figcaption element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- figcaption element: HTML element used to structure homepage content or provide a browser feature Attributes: class="mt-6 flex items-center gap-3" applies styling, layout, responsive and state classes. -->
 							<figcaption class="mt-6 flex items-center gap-3">
 								<img
 									src="https://i.pravatar.cc/80?u=pieter"
 									alt="Portrait of Pieter V."
 									class="h-11 w-11 rounded-full object-cover"
 								/>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes; Pieter sets the Pieter property used by the browser, assistive technology or site scripts; V. sets the V. property used by the browser, assistive technology or site scripts. -->
 									<p class="font-bold text-[#0d1b3e]">Pieter V.</p>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-500" applies styling, layout, responsive and state classes; Stellenbosch sets the Stellenbosch property used by the browser, assistive technology or site scripts; University sets the University property used by the browser, assistive technology or site scripts. -->
 									<p class="text-sm text-slate-500">Stellenbosch University</p>
 								</div>
 							</figcaption>
@@ -2845,24 +2845,24 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							>
 								★★★★★
 							</div>
-							<!-- blockquote element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- blockquote element: HTML element used to structure homepage content or provide a browser feature Attributes: class="mt-4 flex-1 text-slate-700" applies styling, layout, responsive and state classes. -->
 							<blockquote class="mt-4 flex-1 text-slate-700">
 								“As a parent, the fixed-price starter bundle took the guesswork
 								out of first-year budgeting. Delivery was on time and
 								communication was excellent.”
 							</blockquote>
-							<!-- figcaption element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- figcaption element: HTML element used to structure homepage content or provide a browser feature Attributes: class="mt-6 flex items-center gap-3" applies styling, layout, responsive and state classes. -->
 							<figcaption class="mt-6 flex items-center gap-3">
 								<img
 									src="https://i.pravatar.cc/80?u=amanda"
 									alt="Portrait of Amanda K."
 									class="h-11 w-11 rounded-full object-cover"
 								/>
-								<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 								<div>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="font-bold text-[#0d1b3e]" applies styling, layout, responsive and state classes; Amanda sets the Amanda property used by the browser, assistive technology or site scripts; K. sets the K. property used by the browser, assistive technology or site scripts. -->
 									<p class="font-bold text-[#0d1b3e]">Amanda K.</p>
-									<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+									<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-500" applies styling, layout, responsive and state classes; Parent sets the Parent property used by the browser, assistive technology or site scripts; Pretoria sets the Pretoria property used by the browser, assistive technology or site scripts. -->
 									<p class="text-sm text-slate-500">Parent, Pretoria</p>
 								</div>
 							</figcaption>
@@ -2877,9 +2877,9 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 			<!--
 				Rounded navy panel with decorative glows and a single-field email sign-up form. The associated form controls and script determine how visitor input is collected, checked and handled.
 			-->
-			<!-- section element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- section element: Groups content that belongs to one meaningful page section. Attributes: class="bg-[#f7f5f1] pb-20" applies styling, layout, responsive and state classes. -->
 			<section class="bg-[#f7f5f1] pb-20">
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div
 						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
@@ -2899,12 +2899,12 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
 						></div>
 
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="relative grid items-center gap-8 lg:grid-cols-2" applies styling, layout, responsive and state classes. -->
 						<div class="relative grid items-center gap-8 lg:grid-cols-2">
 							<!--
 								Copy column: eyebrow, headline with italic accent, supporting line. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 							-->
-							<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<div>
 								<span
 									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
@@ -2919,7 +2919,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 										>new season kit</span
 									>
 								</h2>
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-3 text-sm text-slate-300" applies styling, layout, responsive and state classes. -->
 								<p class="mt-3 text-sm text-slate-300">
 									One short email a month: new bundles, second-hand drops and
 									collection updates near your campus.
@@ -2929,17 +2929,17 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							<!--
 								Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. The associated form controls and script determine how visitor input is collected, checked and handled.
 							-->
-							<!-- form element: identifies this part of the page structure or content. Attributes used here: id, class. -->
+							<!-- form element: Groups form controls and defines the visitor-input workflow. Attributes: id="newsletterBandForm" provides a unique identifier for scripts, CSS or fragment links; class="w-full" applies styling, layout, responsive and state classes. -->
 							<form id="newsletterBandForm" class="w-full">
 								<!--
 									Input + submit button: stacked on mobile, side-by-side from sm. The associated form controls and script determine how visitor input is collected, checked and handled.
 								-->
-								<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- div element: Groups related elements for layout and styling. Attributes: class="flex flex-col gap-3 sm:flex-row" applies styling, layout, responsive and state classes. -->
 								<div class="flex flex-col gap-3 sm:flex-row">
 									<!--
 										Visually hidden label keeps the field accessible without adding visual clutter. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
 									-->
-									<!-- label element: identifies this part of the page structure or content. Attributes used here: for, class. -->
+									<!-- label element: Names a form control and improves its accessibility. Attributes: for="newsletterBandEmail" associates this label with the matching control id; class="sr-only" applies styling, layout, responsive and state classes; Email sets the Email property used by the browser, assistive technology or site scripts; address sets the address property used by the browser, assistive technology or site scripts. -->
 									<label for="newsletterBandEmail" class="sr-only"
 										>Email address</label
 									>
@@ -2967,7 +2967,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								<!--
 									Reassurance microcopy under the form. The associated form controls and script determine how visitor input is collected, checked and handled.
 								-->
-								<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+								<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-3 text-xs text-slate-400" applies styling, layout, responsive and state classes. -->
 								<p class="mt-3 text-xs text-slate-400">
 									No spam. Unsubscribe any time.
 								</p>
@@ -2984,19 +2984,19 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 		<!--
 			Dark footer: brand block, link columns, legal links and copyright. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 		-->
-		<!-- footer element: identifies this part of the page structure or content. Attributes used here: class. -->
+		<!-- footer element: Defines the closing site information and navigation landmark. Attributes: class="bg-[#09122e] text-slate-300" applies styling, layout, responsive and state classes. -->
 		<footer class="bg-[#09122e] text-slate-300">
-			<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+			<!-- div element: Groups related elements for layout and styling. Attributes: class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8" applies styling, layout, responsive and state classes. -->
 			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
 				<!--
 					Four-column layout: brand (wide on lg) plus three link lists. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="grid gap-10 md:grid-cols-2 lg:grid-cols-4" applies styling, layout, responsive and state classes. -->
 				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
 					<!--
 						Column 1: brand mark, blurb, opening hours and social/contact icon buttons. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 					-->
-					<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 					<div>
 						<!--
 							Footer logo: gold "C" tile on a navy circle, links back to the homepage. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
@@ -3009,13 +3009,13 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]"
 								>C</span
 							>
-							<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- span element: Groups a short inline piece of text or an icon. Attributes: Campus sets the Campus property used by the browser, assistive technology or site scripts; class="text-[#ffd23f]" applies styling, layout, responsive and state classes; Cart sets the Cart property used by the browser, assistive technology or site scripts. -->
 							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span>
 						</a>
 						<!--
 							Short brand description. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 						-->
-						<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-4 text-sm text-slate-400" applies styling, layout, responsive and state classes. -->
 						<p class="mt-4 text-sm text-slate-400">
 							Affordable new and second-hand student essentials for South
 							African campuses.
@@ -3023,13 +3023,13 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						<!--
 							Support hours. It keeps important support, navigation or site information available to visitors at the bottom of the homepage.
 						-->
-						<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-4 text-sm text-slate-400" applies styling, layout, responsive and state classes; Mon sets the Mon property used by the browser, assistive technology or site scripts; Fri sets the Fri property used by the browser, assistive technology or site scripts; :00 sets the :00 property used by the browser, assistive technology or site scripts; SAST sets the SAST property used by the browser, assistive technology or site scripts. -->
 						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
 
 						<!--
 							Icon-only contact buttons: each has an aria-label for screen readers. This visual cue helps visitors recognise the related action or information without replacing the meaning supplied by its text.
 						-->
-						<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- div element: Groups related elements for layout and styling. Attributes: class="mt-5 flex items-center gap-2" applies styling, layout, responsive and state classes. -->
 						<div class="mt-5 flex items-center gap-2">
 							<!--
 								Email. This explanation records the element's purpose and how it contributes to the organisation and visitor experience of the homepage.
@@ -3079,22 +3079,22 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Column 2: shopping-related links. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
-					<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 					<div>
-						<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold uppercase tracking-wider text-white" applies styling, layout, responsive and state classes. -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
 							Shop
 						</h3>
-						<!-- ul element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- ul element: Groups list items without a numbered sequence. Attributes: class="mt-4 space-y-2.5 text-sm" applies styling, layout, responsive and state classes. -->
 						<ul class="mt-4 space-y-2.5 text-sm">
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
-								<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+								<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="products.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Shop sets the Shop property used by the browser, assistive technology or site scripts; New sets the New property used by the browser, assistive technology or site scripts. -->
 								<a href="products.html" class="transition hover:text-[#ffd23f]"
 									>Shop New</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
 								<a
 									href="products.html#deals-gallery"
@@ -3102,7 +3102,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									>Deals &amp; Gallery</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
 								<a
 									href="products.html#product-detail"
@@ -3110,7 +3110,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									>Product Detail</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
 								<a
 									href="products.html#sell-with-us"
@@ -3124,22 +3124,22 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Column 3: company / informational links. The associated form controls and script determine how visitor input is collected, checked and handled.
 					-->
-					<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 					<div>
-						<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold uppercase tracking-wider text-white" applies styling, layout, responsive and state classes. -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
 							Company
 						</h3>
-						<!-- ul element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- ul element: Groups list items without a numbered sequence. Attributes: class="mt-4 space-y-2.5 text-sm" applies styling, layout, responsive and state classes. -->
 						<ul class="mt-4 space-y-2.5 text-sm">
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
-								<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+								<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="about.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; About sets the About property used by the browser, assistive technology or site scripts. -->
 								<a href="about.html" class="transition hover:text-[#ffd23f]"
 									>About</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
 								<a
 									href="products.html#parent-hub"
@@ -3147,30 +3147,30 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									>Parent Hub</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
-								<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+								<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="enquiry.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Enquiry sets the Enquiry property used by the browser, assistive technology or site scripts. -->
 								<a href="enquiry.html" class="transition hover:text-[#ffd23f]"
 									>Enquiry</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
-								<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+								<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="coverage.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Coverage sets the Coverage property used by the browser, assistive technology or site scripts. -->
 								<a href="coverage.html" class="transition hover:text-[#ffd23f]"
 									>Coverage</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
-								<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+								<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="contact.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Contact sets the Contact property used by the browser, assistive technology or site scripts. -->
 								<a href="contact.html" class="transition hover:text-[#ffd23f]"
 									>Contact</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
-								<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+								<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="account.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Account sets the Account property used by the browser, assistive technology or site scripts. -->
 								<a href="account.html" class="transition hover:text-[#ffd23f]"
 									>Account</a
 								>
@@ -3181,15 +3181,15 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Column 4: direct contact details. The responsive layout rules adjust spacing and alignment to keep the content usable across different screen sizes.
 					-->
-					<!-- div element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+					<!-- div element: Groups related elements for layout and styling. Attributes: No explicit attributes; native HTML semantics apply. -->
 					<div>
-						<!-- h3 element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- h3 element: Introduces a subsection heading. Attributes: class="text-sm font-bold uppercase tracking-wider text-white" applies styling, layout, responsive and state classes. -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
 							Reach us
 						</h3>
-						<!-- ul element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- ul element: Groups list items without a numbered sequence. Attributes: class="mt-4 space-y-2.5 text-sm" applies styling, layout, responsive and state classes. -->
 						<ul class="mt-4 space-y-2.5 text-sm">
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
 								<a
 									href="mailto:hello@campus-cart.co.za"
@@ -3197,7 +3197,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									>hello@campus-cart.co.za</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. This element has no explicit attributes. -->
+							<!-- li element: Defines one item in its parent list. Attributes: No explicit attributes; native HTML semantics apply. -->
 							<li>
 								<a
 									href="https://wa.me/27123456789"
@@ -3205,7 +3205,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 									>WhatsApp: 012 345 6789</a
 								>
 							</li>
-							<!-- li element: identifies this part of the page structure or content. Attributes used here: class. -->
+							<!-- li element: Defines one item in its parent list. Attributes: class="text-slate-400" applies styling, layout, responsive and state classes; Mon sets the Mon property used by the browser, assistive technology or site scripts; Fri sets the Fri property used by the browser, assistive technology or site scripts; :00 sets the :00 property used by the browser, assistive technology or site scripts; SAST sets the SAST property used by the browser, assistive technology or site scripts. -->
 							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
 						</ul>
 					</div>
@@ -3214,38 +3214,38 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				<!--
 					Legal block: policy links, physical address, credits/sitemap and copyright. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 				-->
-				<!-- div element: identifies this part of the page structure or content. Attributes used here: class. -->
+				<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-footer-legal mt-12 border-t border-white/10 pt-8" applies styling, layout, responsive and state classes. -->
 				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
 					<!--
 						Policy links separated by pipe characters. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
-					<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="text-sm text-slate-400" applies styling, layout, responsive and state classes. -->
 					<p class="text-sm text-slate-400">
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="privacy.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Privacy sets the Privacy property used by the browser, assistive technology or site scripts; Policy sets the Policy property used by the browser, assistive technology or site scripts. -->
 						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
 							>Privacy Policy</a
 						>
-						<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 						<span class="text-slate-600"> | </span>
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="terms.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Terms sets the Terms property used by the browser, assistive technology or site scripts; amp sets the amp property used by the browser, assistive technology or site scripts; Conditions sets the Conditions property used by the browser, assistive technology or site scripts. -->
 						<a href="terms.html" class="transition hover:text-[#ffd23f]"
 							>Terms &amp; Conditions</a
 						>
-						<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 						<span class="text-slate-600"> | </span>
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="cookies.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Cookie sets the Cookie property used by the browser, assistive technology or site scripts; Policy sets the Policy property used by the browser, assistive technology or site scripts. -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie Policy</a
 						>
-						<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 						<span class="text-slate-600"> | </span>
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="returns.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Returns sets the Returns property used by the browser, assistive technology or site scripts; amp sets the amp property used by the browser, assistive technology or site scripts; Delivery sets the Delivery property used by the browser, assistive technology or site scripts. -->
 						<a href="returns.html" class="transition hover:text-[#ffd23f]"
 							>Returns &amp; Delivery</a
 						>
-						<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 						<span class="text-slate-600"> | </span>
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="cookies.html" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Cookie sets the Cookie property used by the browser, assistive technology or site scripts; settings sets the settings property used by the browser, assistive technology or site scripts. -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie settings</a
 						>
@@ -3253,7 +3253,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Registered head office address. It keeps important support, navigation or site information available to visitors at the bottom of the homepage.
 					-->
-					<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-3 text-sm text-slate-400" applies styling, layout, responsive and state classes. -->
 					<p class="mt-3 text-sm text-slate-400">
 						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
 						0083.
@@ -3261,15 +3261,15 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Licence/credits link plus XML sitemap for crawlers. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 					-->
-					<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-3 text-sm text-slate-400" applies styling, layout, responsive and state classes. -->
 					<p class="mt-3 text-sm text-slate-400">
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="about.html#licence" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Licence sets the Licence property used by the browser, assistive technology or site scripts; and sets the and property used by the browser, assistive technology or site scripts; credits sets the credits property used by the browser, assistive technology or site scripts. -->
 						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
 							>Licence and credits</a
 						>
-						<!-- span element: identifies this part of the page structure or content. Attributes used here: class. -->
+						<!-- span element: Groups a short inline piece of text or an icon. Attributes: class="text-slate-600" applies styling, layout, responsive and state classes. -->
 						<span class="text-slate-600"> | </span>
-						<!-- a element: identifies this part of the page structure or content. Attributes used here: href, class. -->
+						<!-- a element: Creates a link; href sets its destination or in-page target. Attributes: href="../sitemap.xml" sets the navigation, email, telephone or in-page destination; class="transition hover:text-[#ffd23f]" applies styling, layout, responsive and state classes; Sitemap.xml sets the Sitemap.xml property used by the browser, assistive technology or site scripts. -->
 						<a href="../sitemap.xml" class="transition hover:text-[#ffd23f]"
 							>Sitemap.xml</a
 						>
@@ -3277,7 +3277,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					<!--
 						Copyright line; the year span is auto-updated by JavaScript. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 					-->
-					<!-- p element: identifies this part of the page structure or content. Attributes used here: class. -->
+					<!-- p element: Defines a paragraph of descriptive or explanatory text. Attributes: class="mt-3 text-sm text-slate-400" applies styling, layout, responsive and state classes. -->
 					<p class="mt-3 text-sm text-slate-400">
 						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static
 						demo site — no payments are processed and no personal data is
@@ -3326,42 +3326,42 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 		<!--
 			data.js: shared product, bundle and campus data. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/data.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/data.js" defer></script>
 		<!--
 			ui.js: header, menu, cart drawer and general UI behaviours. It gives visitors a clear route to the relevant page or section and supports straightforward movement around the site.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/ui.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/ui.js" defer></script>
 		<!--
 			consent.js: cookie consent banner logic. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/consent.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/consent.js" defer></script>
 		<!--
 			interactions.js: hover, reveal and other micro-interactions. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/interactions.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/interactions.js" defer></script>
 		<!--
 			marquee.js: animates the brand and trust tickers (versioned query string busts the cache). It provides visual styling rather than essential information, so the main content remains understandable without it.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/marquee.js?v=20261102-4" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/marquee.js?v=20261102-4" defer></script>
 		<!--
 			forms.js: newsletter, enquiry and contact form validation/submission. The associated form controls and script determine how visitor input is collected, checked and handled.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/forms.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/forms.js" defer></script>
 		<!--
 			features.js: wishlist, back-to-top, clock and page-level features. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/features.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/features.js" defer></script>
 		<!--
 			script.js: page bootstrap and shared helpers. The related JavaScript updates this interface when the page loads or when a visitor performs the corresponding action.
 		-->
-		<!-- script element: identifies this part of the page structure or content. Attributes used here: src. -->
+		<!-- script element: Loads or executes JavaScript; src identifies an external script. Attributes: src="assets/js/script.js" selects the image, script or embedded resource; defer delays external script execution until HTML parsing finishes. -->
 		<script src="assets/js/script.js" defer></script>
 	</body>
 </html>
