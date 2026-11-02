@@ -531,10 +531,10 @@
 				</div>
 
 				<!-- Brand / need marquee (SoleStyle-inspired ticker) -->
-				<div class="relative border-t border-white/10 bg-white/5 backdrop-blur">
-					<div class="overflow-hidden py-4" aria-hidden="true">
-						<div class="flex w-max animate-marquee items-center gap-8 pr-8">
-							<div class="flex items-center gap-8 pr-8">
+				<div class="cc-brand-marquee relative border-t border-white/10 bg-white/5 backdrop-blur" aria-label="Campus-Cart product categories">
+					<div class="cc-brand-marquee-viewport overflow-hidden py-4">
+						<div class="cc-brand-marquee-track flex w-max items-center gap-8 pr-8">
+							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Bedding</span
@@ -608,7 +608,7 @@
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
 							</div>
-							<div class="flex items-center gap-8 pr-8">
+							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Bedding</span
@@ -1274,6 +1274,17 @@
 									</a>
 									<button
 										type="button"
+										data-add-to-wishlist
+										data-name="Basic Starter Bundle"
+										data-price="1499"
+										class="cc-featured-wishlist grid h-11 w-11 place-items-center rounded-full border border-current/25 bg-white/10 text-xl transition hover:bg-white/20"
+										aria-label="Add Basic Starter Bundle to wishlist"
+										aria-pressed="false"
+									>
+										<span data-wishlist-icon aria-hidden="true">♡</span>
+									</button>
+									<button
+										type="button"
 										data-add-to-cart
 										data-name="Basic Starter Bundle"
 										data-price="1499"
@@ -1365,6 +1376,17 @@
 											class="h-4 w-4"
 										/>
 									</a>
+									<button
+										type="button"
+										data-add-to-wishlist
+										data-name="Standard Starter Bundle"
+										data-price="2799"
+										class="cc-featured-wishlist grid h-11 w-11 place-items-center rounded-full border border-current/25 bg-white/10 text-xl transition hover:bg-white/20"
+										aria-label="Add Standard Starter Bundle to wishlist"
+										aria-pressed="false"
+									>
+										<span data-wishlist-icon aria-hidden="true">♡</span>
+									</button>
 									<button
 										type="button"
 										data-add-to-cart
@@ -1468,6 +1490,17 @@
 											class="h-4 w-4"
 										/>
 									</a>
+									<button
+										type="button"
+										data-add-to-wishlist
+										data-name="Marketplace Pick"
+										data-price="180"
+										class="cc-featured-wishlist grid h-11 w-11 place-items-center rounded-full border border-current/25 bg-white/10 text-xl transition hover:bg-white/20"
+										aria-label="Add Marketplace Pick to wishlist"
+										aria-pressed="false"
+									>
+										<span data-wishlist-icon aria-hidden="true">♡</span>
+									</button>
 									<button
 										type="button"
 										data-add-to-cart
