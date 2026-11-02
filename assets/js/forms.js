@@ -1,11 +1,5 @@
-// ==========================================================
-// CAMPUS-CART
-// Forms JavaScript (ICE Task 4 / Part 3)
-// - Enquiry form: validates, then shows a cost and availability response
-// - Contact form: validates, then compiles an email the user can send
-// ==========================================================
+// FORM LAYER — Handles the enquiry and contact forms, including field validation, product and stock lookups, delivery estimates and the configured message-submission workflow. The page displays client-side results and any configured Web3Forms response; it does not independently process payments or confirm fulfilment.
 
-// Waits until the HTML page has finished loading before running the code.
 document.addEventListener("DOMContentLoaded", function () { // Run setup after the HTML has been parsed.
 
     // Looks for each form on the current page. Only one of them exists on each page.
