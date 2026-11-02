@@ -141,8 +141,10 @@
 			#shop #panel-used article > div:nth-child(2) > div:last-child,
 			#deals-gallery #deals-results article > div:nth-child(2) > div:last-child {
 				display: flex;
+				flex-wrap: nowrap;
 				align-items: center;
-				gap: 0.55rem;
+				gap: 0.45rem;
+				width: 100%;
 				margin-top: auto;
 				padding-top: 1rem;
 			}
@@ -152,14 +154,15 @@
 			#deals-gallery #deals-results article button[data-add] {
 				display: inline-flex;
 				min-width: 0;
-				min-height: 2.8rem;
-				flex: 1 1 auto;
+				min-height: 2.65rem;
+				min-width: 0;
+				flex: 1 1 0;
 				align-items: center;
 				justify-content: center;
 				gap: 0.55rem;
 				border-radius: 999px;
-				padding: 0.7rem 1rem;
-				font-size: 0.78rem;
+				padding: 0.6rem 0.55rem;
+				font-size: 0.72rem;
 				font-weight: 800;
 				white-space: nowrap;
 			}
@@ -171,11 +174,11 @@
 			#shop #panel-used article button[data-quickview],
 			#deals-gallery #deals-results article button[data-quickview] {
 				display: inline-flex;
-				width: 2.8rem;
-				min-width: 2.8rem;
-				height: 2.8rem;
-				min-height: 2.8rem;
-				flex: 0 0 2.8rem;
+				width: 2.55rem;
+				min-width: 2.55rem;
+				height: 2.55rem;
+				min-height: 2.55rem;
+				flex: 0 0 2.55rem;
 				align-items: center;
 				justify-content: center;
 				border-radius: 999px;
