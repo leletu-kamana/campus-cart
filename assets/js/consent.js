@@ -1,10 +1,4 @@
-// ==========================================================
-// CAMPUS-CART
-// Cookie and privacy choices
-// Shows the consent banner, remembers the visitor's choices and
-// keeps third-party maps switched off until the visitor allows them.
-// Plain JavaScript, no libraries.
-// ==========================================================
+// CONSENT LAYER — Builds and manages the visitor-facing cookie and embedded-map preference interface, saving the selected choices in browser storage when available. Map embeds remain blocked until the relevant permission is granted; this script does not provide a complete legal consent-management platform.
 
 (function () { // Wraps the code in a function so its variables stay private.
     "use strict"; // Turns on stricter error checking.
