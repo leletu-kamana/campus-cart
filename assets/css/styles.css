@@ -2261,3 +2261,72 @@ body {
     }
 }
 
+
+
+/* ==========================================================
+   CAMPUS-CART — LOCAL CONTENT IMAGE FIT
+   Keep repository photography fitted to its assigned media
+   frames without stretching or affecting interface icons.
+   ========================================================== */
+
+/* Shared rule for Campus-Cart content photography only. */
+main img[src*="/assets/images/"],
+main img[src^="assets/images/"],
+main img[src^="../assets/images/"] {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* Homepage feature cards, starter bundles and campus-life imagery. */
+#home img[src*="/assets/images/"],
+#hero img[src*="/assets/images/"],
+main section img[src*="/assets/images/"] {
+    height: 100%;
+}
+
+/* Keep the hero's circular feature images inside their designed shape. */
+main img.rounded-full[src*="/assets/images/"] {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Product listings use consistent square image frames. */
+#shop article img[src*="/assets/images/"],
+#deals-gallery article img[src*="/assets/images/"],
+#panel-new article img[src*="/assets/images/"],
+#panel-used article img[src*="/assets/images/"] {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Wide banners and editorial/gallery cards fill their own frames. */
+main img.w-full[src*="/assets/images/bundles/"],
+main img.w-full[src*="/assets/images/second-hand/"] {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Detail and quick-view product photos remain square and responsive. */
+#detail-img,
+#product-detail img[src*="/assets/images/"] {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    background: #f8fafc;
+}
+
+/* Prevent image zoom effects from escaping rounded image frames. */
+main figure,
+main .overflow-hidden {
+    overflow: hidden;
+}
