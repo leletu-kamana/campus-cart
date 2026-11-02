@@ -1,3 +1,7 @@
+/*
+ * Campus-Cart shared stylesheet: defines the reusable visual presentation used across the site's HTML pages.
+ * Rules cover layout, typography, responsive behaviour, reusable components, interactive states and motion; page-specific utility classes may still be supplied by the linked utility CSS build.
+ */
 /* ==========================================================
    CAMPUS-CART
    style.css - the single external stylesheet for the Tailwind pages.
