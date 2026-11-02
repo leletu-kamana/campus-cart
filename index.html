@@ -1,191 +1,275 @@
 <!doctype html>
 <!-- ==========================================================
+     <!-- HTML content: CAMPUS-CART | INDEX PAGE -->
      CAMPUS-CART | INDEX PAGE
+     <!-- HTML content: This document defines the page structure, accessible content, -->
      This document defines the page structure, accessible content,
+     <!-- HTML content: navigation, interactive controls and links to shared assets. -->
      navigation, interactive controls and links to shared assets.
+     <!-- HTML content: ========================================================== --&gt; -->
      ========================================================== -->
+<!-- HTML: <html lang="en"> -->
 <html lang="en">
+ <!-- HTML: <head> -->
 	<head>
+  <!-- HTML: <meta charset="utf-8" /> -->
 		<meta charset="utf-8" />
+  <!-- HTML: <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- HTML: <title>Campus-Cart | Affordable Student Essentials in South Africa</title> -->
 		<title>Campus-Cart | Affordable Student Essentials in South Africa</title>
+  <!-- HTML: <meta -->
 		<meta
 			name="description"
 			content="Campus-Cart sells new and second-hand student essentials and delivers to every public university and TVET college in South Africa."
 		/>
+  <!-- HTML: <meta name="theme-color" content="#0d1b3e" /> -->
 		<meta name="theme-color" content="#0d1b3e" />
+  <!-- HTML: <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- HTML: <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- HTML: <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- HTML: <link -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
 			rel="stylesheet"
 		/>
+  <!-- HTML: <link -->
 		<link
 			rel="icon"
 			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
 		/>
 
 		<!-- Tailwind v4 theme config: animations used across hero, cards and marquee -->
+  <!-- HTML: <link rel="stylesheet" href="assets/css/styles.css" /> -->
 		<link rel="stylesheet" href="assets/css/styles.css" />
+ <!-- HTML: </head> -->
 	</head>
 
+ <!-- HTML: <body -->
 	<body
 		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
 	>
 		<!-- Skip link for keyboard users -->
+  <!-- HTML: <a -->
 		<a
 			href="#main"
 			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
 		>
+   <!-- HTML content: Skip to main content -->
 			Skip to main content
+  <!-- HTML: </a> -->
 		</a>
 
 		<!-- ===== Top utility bar (SoleStyle-style strip) ===== -->
+  <!-- HTML: <div -->
 		<div
 			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
 		>
+   <!-- HTML: <div -->
 			<div
 				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
 			>
+    <!-- HTML: <div class="flex items-center gap-5"> -->
 				<div class="flex items-center gap-5">
+     <!-- HTML: <a -->
 					<a
 						href="mailto:hello@campus-cart.co.za"
 						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
 							alt=""
 							class="h-3.5 w-3.5"
 						/>
+      <!-- HTML content: hello@campus-cart.co.za -->
 						hello@campus-cart.co.za
+     <!-- HTML: </a> -->
 					</a>
+     <!-- HTML: <a -->
 					<a
 						href="https://wa.me/27123456789"
 						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
 							alt=""
 							class="h-3.5 w-3.5"
 						/>
+      <!-- HTML content: +27 12 345 6789 -->
 						+27 12 345 6789
+     <!-- HTML: </a> -->
 					</a>
+    <!-- HTML: </div> -->
 				</div>
+    <!-- HTML: <div class="flex items-center gap-5"> -->
 				<div class="flex items-center gap-5">
+     <!-- HTML: <a -->
 					<a
 						href="pages/account.html#student"
 						class="transition hover:text-[#ffd23f]"
 						>Student path</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <span class="text-slate-600">|</span> -->
 					<span class="text-slate-600">|</span>
+     <!-- HTML: <a -->
 					<a
 						href="pages/account.html#parent"
 						class="transition hover:text-[#ffd23f]"
 						>Parent path</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <span class="text-slate-600">|</span> -->
 					<span class="text-slate-600">|</span>
+     <!-- HTML: <span -->
 					<span
 						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
 							alt=""
 							class="h-3.5 w-3.5"
 						/>
+      <!-- HTML content: Delivery to every campus -->
 						Delivery to every campus
+     <!-- HTML: </span> -->
 					</span>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </div> -->
 			</div>
+  <!-- HTML: </div> -->
 		</div>
 
 		<!-- ===== Header / Navigation ===== -->
+  <!-- HTML: <header -->
 		<header
 			id="siteHeader"
 			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300"
 		>
+   <!-- HTML: <div -->
 			<div
 				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
+    <!-- HTML: <a -->
 				<a
 					href="index.html"
 					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
 				>
+     <!-- HTML: <span -->
 					<span
 						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
 						>C</span
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <span>Campus<span class="text-[#c99700]">-Cart</span></span> -->
 					<span>Campus<span class="text-[#c99700]">-Cart</span></span>
+    <!-- HTML: </a> -->
 				</a>
 
 				<!-- Provides navigation links for moving between pages or page sections. -->
+    <!-- HTML: <nav -->
 				<nav
 					class="hidden items-center gap-1 lg:flex"
 					aria-label="Main navigation"
 				>
+     <!-- HTML: <a -->
 					<a
 						href="index.html"
 						aria-current="page"
 						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
 						>Home</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/about.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>About</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Shop</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html#parent-hub"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Parent Hub</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/enquiry.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Enquiry</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/coverage.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Coverage</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/contact.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Contact</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/account.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Account</a
+     <!-- HTML content: > -->
 					>
+    <!-- HTML: </nav> -->
 				</nav>
 
+    <!-- HTML: <div class="flex items-center gap-2 sm:gap-3"> -->
 				<div class="flex items-center gap-2 sm:gap-3">
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html"
 						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid"
 						aria-label="Search products"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
+     <!-- HTML: </a> -->
 					</a>
 
+     <!-- HTML: <div class="hidden text-right xl:block"> -->
 					<div class="hidden text-right xl:block">
+      <!-- HTML: <p id="navTime" class="text-xs font-bold text-[#0d1b3e]"> -->
 						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
+       <!-- HTML content: --:--:-- -->
 							--:--:--
+      <!-- HTML: </p> -->
 						</p>
+      <!-- HTML: <p id="navDate" class="text-[11px] text-slate-500">Loading…</p> -->
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <button -->
 					<button
 						id="cartButton"
 						type="button"
@@ -194,18 +278,23 @@
 						aria-controls="cartDrawer"
 						aria-expanded="false"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
+      <!-- HTML: <span -->
 						<span
 							id="cartCount"
 							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
 							>0</span
+      <!-- HTML content: > -->
 						>
+     <!-- HTML: </button> -->
 					</button>
 
+     <!-- HTML: <button -->
 					<button
 						id="navToggle"
 						type="button"
@@ -214,260 +303,384 @@
 						aria-controls="mobileMenu"
 						aria-label="Menu"
 					>
+      <!-- HTML: <img -->
 						<img
 							id="navIcon"
 							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
+     <!-- HTML: </button> -->
 					</button>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </div> -->
 			</div>
 
+   <!-- HTML: <div -->
 			<div
 				id="mobileMenu"
 				class="hidden border-t border-slate-200 bg-white lg:hidden"
 			>
 				<!-- Provides navigation links for moving between pages or page sections. -->
+    <!-- HTML: <nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation"> -->
 				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
+     <!-- HTML: <a -->
 					<a
 						href="index.html"
 						aria-current="page"
 						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]"
 						>Home</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/about.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>About</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Shop</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html#parent-hub"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Parent Hub</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/enquiry.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Enquiry</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/coverage.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Coverage</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/contact.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Contact</a
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <a -->
 					<a
 						href="pages/account.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Account</a
+     <!-- HTML content: > -->
 					>
+    <!-- HTML: </nav> -->
 				</nav>
+   <!-- HTML: </div> -->
 			</div>
+  <!-- HTML: </header> -->
 		</header>
 
 		<!-- Contains the primary content of this page, separate from shared navigation and footer content. -->
+  <!-- HTML: <main id="main" tabindex="-1"> -->
 		<main id="main" tabindex="-1">
 			<!-- ===== Hero — color-block composition ===== -->
+   <!-- HTML: <section class="relative overflow-hidden bg-[#0d1b3e] text-white"> -->
 			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
+    <!-- HTML: <div -->
 				<div
 					aria-hidden="true"
 					class="absolute inset-0 bg-[radial-gradient(circle_at_78%_16%,rgba(255,210,63,0.16),transparent_46%),radial-gradient(circle_at_8%_90%,rgba(56,89,196,0.40),transparent_52%)]"
 				></div>
+    <!-- HTML: <div -->
 				<div
 					aria-hidden="true"
 					class="absolute right-[-18%] top-[-30%] h-[150%] w-[62%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
 				></div>
+    <!-- HTML: <div -->
 				<div
 					aria-hidden="true"
 					class="absolute left-8 top-20 hidden opacity-40 lg:block"
 				>
+     <!-- HTML: <svg width="120" height="120" viewBox="0 0 120 120" fill="none"> -->
 					<svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+      <!-- HTML: <g fill="#ffffff" fill-opacity="0.35"> -->
 						<g fill="#ffffff" fill-opacity="0.35">
+       <!-- HTML: <circle cx="10" cy="10" r="2" /> -->
 							<circle cx="10" cy="10" r="2" />
+       <!-- HTML: <circle cx="40" cy="10" r="2" /> -->
 							<circle cx="40" cy="10" r="2" />
+       <!-- HTML: <circle cx="70" cy="10" r="2" /> -->
 							<circle cx="70" cy="10" r="2" />
+       <!-- HTML: <circle cx="100" cy="10" r="2" /> -->
 							<circle cx="100" cy="10" r="2" />
+       <!-- HTML: <circle cx="10" cy="40" r="2" /> -->
 							<circle cx="10" cy="40" r="2" />
+       <!-- HTML: <circle cx="40" cy="40" r="2" /> -->
 							<circle cx="40" cy="40" r="2" />
+       <!-- HTML: <circle cx="70" cy="40" r="2" /> -->
 							<circle cx="70" cy="40" r="2" />
+       <!-- HTML: <circle cx="100" cy="40" r="2" /> -->
 							<circle cx="100" cy="40" r="2" />
+       <!-- HTML: <circle cx="10" cy="70" r="2" /> -->
 							<circle cx="10" cy="70" r="2" />
+       <!-- HTML: <circle cx="40" cy="70" r="2" /> -->
 							<circle cx="40" cy="70" r="2" />
+       <!-- HTML: <circle cx="70" cy="70" r="2" /> -->
 							<circle cx="70" cy="70" r="2" />
+       <!-- HTML: <circle cx="100" cy="70" r="2" /> -->
 							<circle cx="100" cy="70" r="2" />
+      <!-- HTML: </g> -->
 						</g>
+     <!-- HTML: </svg> -->
 					</svg>
+    <!-- HTML: </div> -->
 				</div>
 
+    <!-- HTML: <div -->
 				<div
 					class="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 lg:px-8 lg:pb-24 lg:pt-20"
 				>
+     <!-- HTML: <div class="grid items-center gap-16 lg:grid-cols-2"> -->
 					<div class="grid items-center gap-16 lg:grid-cols-2">
+      <!-- HTML: <div class="animate-fade-up"> -->
 						<div class="animate-fade-up">
+       <!-- HTML: <span -->
 							<span
 								class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
 							>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg"
 									alt=""
 									class="h-3.5 w-3.5"
 								/>
+        <!-- HTML content: Proudly South African -->
 								Proudly South African
+       <!-- HTML: </span> -->
 							</span>
 
+       <!-- HTML: <h1 -->
 							<h1
 								class="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl xl:text-6xl"
 							>
+        <!-- HTML content: Kit out your res room -->
 								Kit out your res room
+        <!-- HTML: <span class="relative inline-block whitespace-nowrap"> -->
 								<span class="relative inline-block whitespace-nowrap">
+         <!-- HTML: <span class="relative z-10 text-[#ffd23f]" -->
 									<span class="relative z-10 text-[#ffd23f]"
 										>without breaking</span
+         <!-- HTML content: > -->
 									>
+         <!-- HTML: <span -->
 									<span
 										aria-hidden="true"
 										class="absolute inset-x-0 bottom-1 z-0 h-4 -rotate-1 rounded-sm bg-[#ffd23f]/25"
 									></span>
+        <!-- HTML: </span> -->
 								</span>
+        <!-- HTML: <span class="text-[#ffd23f]">the budget</span> -->
 								<span class="text-[#ffd23f]">the budget</span>
+       <!-- HTML: </h1> -->
 							</h1>
 
+       <!-- HTML: <p -->
 							<p
 								class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
 							>
+        <!-- HTML content: Campus-Cart brings new and carefully reviewed second-hand -->
 								Campus-Cart brings new and carefully reviewed second-hand
+        <!-- HTML content: student essentials together in one place — bedding, appliances, -->
 								student essentials together in one place — bedding, appliances,
+        <!-- HTML content: textbooks and full starter bundles — delivered to every province -->
 								textbooks and full starter bundles — delivered to every province
+        <!-- HTML content: and collected on campus or at a hub near you. -->
 								and collected on campus or at a hub near you.
+       <!-- HTML: </p> -->
 							</p>
 
+       <!-- HTML: <div class="mt-8 flex flex-col gap-3 sm:flex-row"> -->
 							<div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <!-- HTML: <a -->
 								<a
 									href="pages/account.html#student"
 									class="group inline-flex items-center justify-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:-translate-y-0.5 hover:bg-[#ffdf5e]"
 								>
+         <!-- HTML content: Student path -->
 									Student path
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 										alt=""
 										class="h-4 w-4 transition group-hover:translate-x-0.5"
 									/>
+        <!-- HTML: </a> -->
 								</a>
+        <!-- HTML: <a -->
 								<a
 									href="pages/account.html#parent"
 									class="inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10"
 								>
+         <!-- HTML content: Parent path -->
 									Parent path
+        <!-- HTML: </a> -->
 								</a>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="mt-7 flex flex-wrap gap-2"> -->
 							<div class="mt-7 flex flex-wrap gap-2">
+        <!-- HTML: <span -->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/bed-double.svg"
 										alt=""
 										class="h-3.5 w-3.5"
 									/>
+         <!-- HTML content: Bedding -->
 									Bedding
+        <!-- HTML: </span> -->
 								</span>
+        <!-- HTML: <span -->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/coffee.svg"
 										alt=""
 										class="h-3.5 w-3.5"
 									/>
+         <!-- HTML content: Kitchen -->
 									Kitchen
+        <!-- HTML: </span> -->
 								</span>
+        <!-- HTML: <span -->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/book-open.svg"
 										alt=""
 										class="h-3.5 w-3.5"
 									/>
+         <!-- HTML content: Textbooks -->
 									Textbooks
+        <!-- HTML: </span> -->
 								</span>
+        <!-- HTML: <span -->
 								<span
 									class="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/refresh-cw.svg"
 										alt=""
 										class="h-3.5 w-3.5"
 									/>
+         <!-- HTML content: Second-hand -->
 									Second-hand
+        <!-- HTML: </span> -->
 								</span>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <dl -->
 							<dl
 								class="mt-10 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-7"
 							>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <dt class="text-3xl font-extrabold text-[#ffd23f]">26</dt> -->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">26</dt>
+         <!-- HTML: <dd -->
 									<dd
 										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
 									>
+          <!-- HTML content: Public universities -->
 										Public universities
+         <!-- HTML: </dd> -->
 									</dd>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <dt class="text-3xl font-extrabold text-[#ffd23f]">50</dt> -->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">50</dt>
+         <!-- HTML: <dd -->
 									<dd
 										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
 									>
+          <!-- HTML content: TVET colleges -->
 										TVET colleges
+         <!-- HTML: </dd> -->
 									</dd>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <dt class="text-3xl font-extrabold text-[#ffd23f]">R180</dt> -->
 									<dt class="text-3xl font-extrabold text-[#ffd23f]">R180</dt>
+         <!-- HTML: <dd -->
 									<dd
 										class="mt-1 text-xs uppercase tracking-wider text-slate-400"
 									>
+          <!-- HTML content: From, second-hand -->
 										From, second-hand
+         <!-- HTML: </dd> -->
 									</dd>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </dl> -->
 							</dl>
+      <!-- HTML: </div> -->
 						</div>
 
+      <!-- HTML: <div class="relative mx-auto w-full max-w-[520px]"> -->
 						<div class="relative mx-auto w-full max-w-[520px]">
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffd23f]/25 blur-3xl animate-float"
 							></div>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute left-1/2 top-1/2 h-[30rem] w-[30rem] -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/25 animate-spin-slow"
 							></div>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/10"
 							></div>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 								alt=""
 								aria-hidden="true"
 								class="absolute left-2 top-10 h-6 w-6 text-[#ffd23f] animate-pulse"
 							/>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkle.svg"
 								alt=""
 								aria-hidden="true"
 								class="absolute right-4 top-16 h-5 w-5 text-white/60 animate-float"
 							/>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 								alt=""
@@ -475,6 +688,7 @@
 								class="absolute bottom-16 left-6 h-4 w-4 text-white/40 animate-pulse"
 							/>
 
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/student-lifestyle.jpg"
 								alt="A student desk styled with a desk lamp, open laptop, notebooks and a navy backpack"
@@ -484,6 +698,7 @@
 								class="relative mx-auto aspect-square w-72 rounded-full object-cover shadow-2xl ring-8 ring-white/10 lg:w-80"
 							/>
 
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="A cosy residence room corner with bedding and a laundry basket"
@@ -493,306 +708,466 @@
 								class="absolute -bottom-4 -left-4 aspect-square w-28 rounded-full border-4 border-[#0d1b3e] object-cover shadow-xl animate-float lg:w-32"
 							/>
 
+       <!-- HTML: <div -->
 							<div
 								class="absolute -right-2 top-8 flex items-center gap-3 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur animate-float"
 							>
+        <!-- HTML: <span -->
 								<span
 									class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#ffd23f]/20"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
 										alt=""
 										class="h-5 w-5 text-[#0d1b3e]"
 									/>
+        <!-- HTML: </span> -->
 								</span>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <p class="text-sm font-bold text-[#0d1b3e]">From R180</p> -->
 									<p class="text-sm font-bold text-[#0d1b3e]">From R180</p>
+         <!-- HTML: <p class="text-xs text-slate-500">Second-hand picks</p> -->
 									<p class="text-xs text-slate-500">Second-hand picks</p>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div -->
 							<div
 								class="absolute -bottom-2 right-2 flex items-center gap-3 rounded-2xl bg-[#eef3ff] p-4 text-[#0d1b3e] shadow-xl animate-float-delay"
 							>
+        <!-- HTML: <span -->
 								<span
 									class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#0d1b3e]"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
 										alt=""
 										class="h-5 w-5 text-[#ffd23f]"
 									/>
+        <!-- HTML: </span> -->
 								</span>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <p class="text-sm font-bold">Reviewed by our team</p> -->
 									<p class="text-sm font-bold">Reviewed by our team</p>
+         <!-- HTML: <p class="text-xs text-slate-500">Before it goes live</p> -->
 									<p class="text-xs text-slate-500">Before it goes live</p>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <span -->
 							<span
 								class="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-[#ffd23f] px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e] shadow-lg shadow-amber-500/30 -rotate-3"
 							>
+        <!-- HTML content: New season -->
 								New season
+       <!-- HTML: </span> -->
 							</span>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
 
 				<!-- Brand / need marquee (SoleStyle-inspired ticker) -->
+    <!-- HTML: <div class="cc-brand-marquee relative border-t border-white/10 bg-white/5 backdrop-blur" aria-label= -->
 				<div class="cc-brand-marquee relative border-t border-white/10 bg-white/5 backdrop-blur" aria-label="Campus-Cart product categories">
+     <!-- HTML: <div class="cc-brand-marquee-viewport overflow-hidden py-4"> -->
 					<div class="cc-brand-marquee-viewport overflow-hidden py-4">
+      <!-- HTML: <div class="cc-brand-marquee-track flex w-max items-center gap-8 pr-8" data-speed="0.65" data-direct -->
 						<div class="cc-brand-marquee-track flex w-max items-center gap-8 pr-8" data-speed="0.65" data-direction="left" data-pause-hover="true">
+       <!-- HTML: <div class="cc-brand-marquee-group flex items-center gap-8 pr-8"> -->
 							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Bedding</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Appliances</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Textbooks</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Starter bundles</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Second-hand</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Desk setups</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Laundry</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Kitchen starter</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <div class="cc-brand-marquee-group flex items-center gap-8 pr-8"> -->
 							<div class="cc-brand-marquee-group flex items-center gap-8 pr-8">
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Bedding</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Appliances</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Textbooks</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Starter bundles</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Second-hand</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Desk setups</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Laundry</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="text-sm font-semibold uppercase tracking-wider text-slate-300"
 									>Kitchen starter</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 									alt=""
 									class="h-3 w-3 text-[#ffd23f]"
 								/>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Trust marquee: key Campus-Cart services ===== -->
+   <!-- HTML: <section -->
 			<section
 				class="cc-trust-marquee"
 				aria-label="Campus-Cart service highlights"
 			>
+    <!-- HTML: <div class="cc-marquee-viewport"> -->
 				<div class="cc-marquee-viewport">
+     <!-- HTML: <div class="cc-marquee-track" data-speed="0.8" data-direction="left" data-pause-hover="true"> -->
 					<div class="cc-marquee-track" data-speed="0.8" data-direction="left" data-pause-hover="true">
+      <!-- HTML: <div class="cc-marquee-group"> -->
 						<div class="cc-marquee-group">
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>New + reviewed used</strong -->
 								<strong>New + reviewed used</strong
+        <!-- HTML content: ><span>Every second-hand item is checked first</span></span -->
 								><span>Every second-hand item is checked first</span></span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>Safe collection</strong -->
 								<strong>Safe collection</strong
+        <!-- HTML content: ><span>Residence desks, campus points or lockers</span></span -->
 								><span>Residence desks, campus points or lockers</span></span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>Pay by EFT</strong -->
 								<strong>Pay by EFT</strong
+        <!-- HTML content: ><span>Nothing is charged on this website</span></span -->
 								><span>Nothing is charged on this website</span></span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>National coverage</strong -->
 								<strong>National coverage</strong
+        <!-- HTML content: ><span>All 9 South African provinces</span></span -->
 								><span>All 9 South African provinces</span></span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </div> -->
 						</div>
+      <!-- HTML: <div class="cc-marquee-group" aria-hidden="true"> -->
 						<div class="cc-marquee-group" aria-hidden="true">
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/package.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>New + reviewed used</strong -->
 								<strong>New + reviewed used</strong
+        <!-- HTML content: ><span>Every second-hand item is checked first</span></span -->
 								><span>Every second-hand item is checked first</span></span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>Safe collection</strong -->
 								<strong>Safe collection</strong
+        <!-- HTML content: ><span>Residence desks, campus points or lockers</span></span -->
 								><span>Residence desks, campus points or lockers</span></span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/credit-card.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>Pay by EFT</strong -->
 								<strong>Pay by EFT</strong
+        <!-- HTML content: ><span>Nothing is charged on this website</span></span -->
 								><span>Nothing is charged on this website</span></span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span class="cc-marquee-item" -->
 							<span class="cc-marquee-item"
 								><img
+         <!-- HTML content: src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" -->
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
+         <!-- HTML content: alt="" -->
 									alt=""
+        <!-- HTML content: /> -->
 								/>
+        <!-- HTML: <strong>National coverage</strong -->
 								<strong>National coverage</strong
+        <!-- HTML content: ><span>All 9 South African provinces</span></span -->
 								><span>All 9 South African provinces</span></span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Shop by category (SoleStyle category tiles) ===== -->
+   <!-- HTML: <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8"> -->
 			<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <!-- HTML: <div class="max-w-2xl"> -->
 				<div class="max-w-2xl">
+     <!-- HTML: <span -->
 					<span
 						class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 						>Shop by need</span
+     <!-- HTML content: > -->
 					>
+     <!-- HTML: <h2 -->
 					<h2
 						class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 					>
+      <!-- HTML content: Everything for the res room -->
 						Everything for the res room
+     <!-- HTML: </h2> -->
 					</h2>
+    <!-- HTML: </div> -->
 				</div>
 
+    <!-- HTML: <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"> -->
 				<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="assets/images/products/study-essentials.jpg"
 							alt="New student arrivals on a desk"
@@ -801,30 +1176,43 @@
 							loading="lazy"
 							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
 						/>
+      <!-- HTML: <div -->
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
 						></div>
+      <!-- HTML: <span -->
 						<span
 							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </span> -->
 						</span>
+      <!-- HTML: <div class="absolute inset-x-0 bottom-0 p-5"> -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
+       <!-- HTML: <p class="text-sm font-bold text-white">New arrivals</p> -->
 							<p class="text-sm font-bold text-white">New arrivals</p>
+       <!-- HTML: <p class="text-xs text-slate-300"> -->
 							<p class="text-xs text-slate-300">
+        <!-- HTML content: Fresh bundles for first-years -->
 								Fresh bundles for first-years
+       <!-- HTML: </p> -->
 							</p>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </a> -->
 					</a>
 
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html#shop"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="assets/images/second-hand/marketplace.jpg"
 							alt="Second-hand marketplace items laid out"
@@ -833,28 +1221,39 @@
 							loading="lazy"
 							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
 						/>
+      <!-- HTML: <div -->
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
 						></div>
+      <!-- HTML: <span -->
 						<span
 							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </span> -->
 						</span>
+      <!-- HTML: <div class="absolute inset-x-0 bottom-0 p-5"> -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
+       <!-- HTML: <p class="text-sm font-bold text-white">Second-hand</p> -->
 							<p class="text-sm font-bold text-white">Second-hand</p>
+       <!-- HTML: <p class="text-xs text-slate-300">Reviewed marketplace deals</p> -->
 							<p class="text-xs text-slate-300">Reviewed marketplace deals</p>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </a> -->
 					</a>
 
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html#parent-hub"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="assets/images/bundles/student-lifestyle.jpg"
 							alt="A parent and student reviewing a checklist together"
@@ -863,30 +1262,43 @@
 							loading="lazy"
 							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
 						/>
+      <!-- HTML: <div -->
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
 						></div>
+      <!-- HTML: <span -->
 						<span
 							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </span> -->
 						</span>
+      <!-- HTML: <div class="absolute inset-x-0 bottom-0 p-5"> -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
+       <!-- HTML: <p class="text-sm font-bold text-white">Parent Hub</p> -->
 							<p class="text-sm font-bold text-white">Parent Hub</p>
+       <!-- HTML: <p class="text-xs text-slate-300"> -->
 							<p class="text-xs text-slate-300">
+        <!-- HTML content: Plan spend before registration -->
 								Plan spend before registration
+       <!-- HTML: </p> -->
 							</p>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </a> -->
 					</a>
 
+     <!-- HTML: <a -->
 					<a
 						href="pages/products.html#sell-with-us"
 						class="group relative overflow-hidden rounded-3xl bg-[#0d1b3e]"
 					>
+      <!-- HTML: <img -->
 						<img
 							src="assets/images/products/textbook.jpg"
 							alt="A student selling old textbooks"
@@ -895,62 +1307,92 @@
 							loading="lazy"
 							class="h-72 w-full object-cover opacity-80 transition duration-500 group-hover:scale-105 group-hover:opacity-100"
 						/>
+      <!-- HTML: <div -->
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/90 via-transparent to-transparent"
 						></div>
+      <!-- HTML: <span -->
 						<span
 							class="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition group-hover:opacity-100"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </span> -->
 						</span>
+      <!-- HTML: <div class="absolute inset-x-0 bottom-0 p-5"> -->
 						<div class="absolute inset-x-0 bottom-0 p-5">
+       <!-- HTML: <p class="text-sm font-bold text-white">Sell with us</p> -->
 							<p class="text-sm font-bold text-white">Sell with us</p>
+       <!-- HTML: <p class="text-xs text-slate-300">Turn old kit into cash</p> -->
 							<p class="text-xs text-slate-300">Turn old kit into cash</p>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </a> -->
 					</a>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== New arrivals product grid (SoleStyle product cards) ===== -->
+   <!-- HTML: <section class="bg-white py-20"> -->
 			<section class="bg-white py-20">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <!-- HTML: <div -->
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
+      <!-- HTML: <div class="max-w-2xl"> -->
 						<div class="max-w-2xl">
+       <!-- HTML: <span -->
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 								>Fresh finds</span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <h2 -->
 							<h2
 								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
+        <!-- HTML content: New this week -->
 								New this week
+       <!-- HTML: </h2> -->
 							</h2>
+      <!-- HTML: </div> -->
 						</div>
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html"
 							class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 						>
+       <!-- HTML content: Browse all products -->
 							Browse all products
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </a> -->
 						</a>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"> -->
 					<div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 						<!-- Product 01 -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
+       <!-- HTML: <div class="relative overflow-hidden rounded-2xl bg-slate-100"> -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/products/kettle.jpg"
 									width="600"
@@ -959,10 +1401,13 @@
 									loading="lazy"
 									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="absolute left-3 top-3 rounded-full bg-[#0d1b3e] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#ffd23f]"
 									>New</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <button -->
 								<button
 									type="button"
 									data-add-to-cart
@@ -971,38 +1416,58 @@
 									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
 									aria-label="Add 1.8 L Kettle to cart"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 										alt=""
 										class="h-4 w-4"
 									/>
+        <!-- HTML: </button> -->
 								</button>
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <div class="mt-4 flex flex-1 flex-col"> -->
 							<div class="mt-4 flex flex-1 flex-col">
+        <!-- HTML: <div class="flex items-center justify-between gap-2"> -->
 								<div class="flex items-center justify-between gap-2">
+         <!-- HTML: <h3 class="text-sm font-bold text-[#0d1b3e]">1.8 L Kettle</h3> -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">1.8 L Kettle</h3>
+         <!-- HTML: <span class="text-sm font-extrabold text-[#0d1b3e]" -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R349</span
+         <!-- HTML content: > -->
 									>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 								<p class="mt-1 text-xs text-slate-500">
+         <!-- HTML content: Rapid boil, cool-touch handle. -->
 									Rapid boil, cool-touch handle.
+        <!-- HTML: </p> -->
 								</p>
+        <!-- HTML: <div -->
 								<div
 									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
 									role="img"
 									aria-label="Rated 5 out of 5"
 								>
+         <!-- HTML content: ★★★★★ -->
 									★★★★★
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
 
 						<!-- Product 02 -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
+       <!-- HTML: <div class="relative overflow-hidden rounded-2xl bg-slate-100"> -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/products/duvet.jpg"
 									width="600"
@@ -1011,10 +1476,13 @@
 									loading="lazy"
 									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="absolute left-3 top-3 rounded-full bg-[#0d1b3e] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-[#ffd23f]"
 									>New</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <button -->
 								<button
 									type="button"
 									data-add-to-cart
@@ -1023,40 +1491,62 @@
 									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
 									aria-label="Add Duvet and Linen Set to cart"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 										alt=""
 										class="h-4 w-4"
 									/>
+        <!-- HTML: </button> -->
 								</button>
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <div class="mt-4 flex flex-1 flex-col"> -->
 							<div class="mt-4 flex flex-1 flex-col">
+        <!-- HTML: <div class="flex items-center justify-between gap-2"> -->
 								<div class="flex items-center justify-between gap-2">
+         <!-- HTML: <h3 class="text-sm font-bold text-[#0d1b3e]"> -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">
+          <!-- HTML content: Duvet &amp; Linen Set -->
 										Duvet &amp; Linen Set
+         <!-- HTML: </h3> -->
 									</h3>
+         <!-- HTML: <span class="text-sm font-extrabold text-[#0d1b3e]" -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R599</span
+         <!-- HTML content: > -->
 									>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 								<p class="mt-1 text-xs text-slate-500">
+         <!-- HTML content: Single bed, 4.5 tog, machine washable. -->
 									Single bed, 4.5 tog, machine washable.
+        <!-- HTML: </p> -->
 								</p>
+        <!-- HTML: <div -->
 								<div
 									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
 									role="img"
 									aria-label="Rated 5 out of 5"
 								>
+         <!-- HTML content: ★★★★★ -->
 									★★★★★
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
 
 						<!-- Product 03 -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
+       <!-- HTML: <div class="relative overflow-hidden rounded-2xl bg-slate-100"> -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/products/table-lap.jpg"
 									width="600"
@@ -1065,10 +1555,13 @@
 									loading="lazy"
 									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="absolute left-3 top-3 rounded-full bg-red-600 px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white"
 									>Sale</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <button -->
 								<button
 									type="button"
 									data-add-to-cart
@@ -1077,41 +1570,64 @@
 									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
 									aria-label="Add LED Desk Lamp to cart"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 										alt=""
 										class="h-4 w-4"
 									/>
+        <!-- HTML: </button> -->
 								</button>
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <div class="mt-4 flex flex-1 flex-col"> -->
 							<div class="mt-4 flex flex-1 flex-col">
+        <!-- HTML: <div class="flex items-center justify-between gap-2"> -->
 								<div class="flex items-center justify-between gap-2">
+         <!-- HTML: <h3 class="text-sm font-bold text-[#0d1b3e]"> -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">
+          <!-- HTML content: LED Desk Lamp -->
 										LED Desk Lamp
+         <!-- HTML: </h3> -->
 									</h3>
+         <!-- HTML: <span class="text-sm font-extrabold text-[#0d1b3e]" -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R249</span
+         <!-- HTML content: > -->
 									>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 								<p class="mt-1 text-xs text-slate-500">
+         <!-- HTML: <s class="text-slate-400">R329</s> · USB-C, 3 brightness -->
 									<s class="text-slate-400">R329</s> · USB-C, 3 brightness
+         <!-- HTML content: modes. -->
 									modes.
+        <!-- HTML: </p> -->
 								</p>
+        <!-- HTML: <div -->
 								<div
 									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
 									role="img"
 									aria-label="Rated 4 out of 5"
 								>
+         <!-- HTML content: ★★★★☆ -->
 									★★★★☆
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
 
 						<!-- Product 04 -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col rounded-3xl border border-slate-200 bg-white p-4 transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:shadow-xl"
 						>
+       <!-- HTML: <div class="relative overflow-hidden rounded-2xl bg-slate-100"> -->
 							<div class="relative overflow-hidden rounded-2xl bg-slate-100">
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/products/textbook.jpg"
 									width="600"
@@ -1120,10 +1636,13 @@
 									loading="lazy"
 									class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="absolute left-3 top-3 rounded-full bg-[#c2572f] px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white"
 									>2nd-hand</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <button -->
 								<button
 									type="button"
 									data-add-to-cart
@@ -1132,118 +1651,174 @@
 									class="absolute bottom-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] shadow-lg transition hover:bg-[#ffdf5e] sm:opacity-0 sm:group-hover:opacity-100"
 									aria-label="Add BCom Year 1 Textbook Bundle to cart"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 										alt=""
 										class="h-4 w-4"
 									/>
+        <!-- HTML: </button> -->
 								</button>
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <div class="mt-4 flex flex-1 flex-col"> -->
 							<div class="mt-4 flex flex-1 flex-col">
+        <!-- HTML: <div class="flex items-center justify-between gap-2"> -->
 								<div class="flex items-center justify-between gap-2">
+         <!-- HTML: <h3 class="text-sm font-bold text-[#0d1b3e]"> -->
 									<h3 class="text-sm font-bold text-[#0d1b3e]">
+          <!-- HTML content: BCom Year 1 Textbooks -->
 										BCom Year 1 Textbooks
+         <!-- HTML: </h3> -->
 									</h3>
+         <!-- HTML: <span class="text-sm font-extrabold text-[#0d1b3e]" -->
 									<span class="text-sm font-extrabold text-[#0d1b3e]"
 										>R780</span
+         <!-- HTML content: > -->
 									>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 								<p class="mt-1 text-xs text-slate-500">
+         <!-- HTML content: Reviewed set of 5 core modules. -->
 									Reviewed set of 5 core modules.
+        <!-- HTML: </p> -->
 								</p>
+        <!-- HTML: <div -->
 								<div
 									class="mt-2 flex items-center gap-1 text-xs text-amber-400"
 									role="img"
 									aria-label="Rated 5 out of 5"
 								>
+         <!-- HTML content: ★★★★★ -->
 									★★★★★
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Featured bundles — SoleStyle-inspired color-block grid ===== -->
+   <!-- HTML: <section class="bg-[#f7f5f1] py-20"> -->
 			<section class="bg-[#f7f5f1] py-20">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<!-- Section heading -->
+     <!-- HTML: <div -->
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
+      <!-- HTML: <div class="max-w-2xl"> -->
 						<div class="max-w-2xl">
+       <!-- HTML: <span -->
 							<span
 								class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>
+        <!-- HTML: <span -->
 								<span
 									class="h-2.5 w-2.5 rounded-full bg-[#ffd23f] ring-4 ring-amber-100"
 								></span>
+        <!-- HTML content: Featured -->
 								Featured
+       <!-- HTML: </span> -->
 							</span>
+       <!-- HTML: <h2 -->
 							<h2
 								class="mt-3 text-3xl font-black tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
+        <!-- HTML content: Starter bundles -->
 								Starter bundles
+        <!-- HTML: <span -->
 								<span
 									class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#c99700]"
 									>students actually use</span
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </h2> -->
 							</h2>
+      <!-- HTML: </div> -->
 						</div>
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html"
 							class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 						>
+       <!-- HTML content: Browse all products -->
 							Browse all products
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </a> -->
 						</a>
+     <!-- HTML: </div> -->
 					</div>
 
 					<!-- ---- Color-block cards ---- -->
+     <!-- HTML: <div class="mt-12 grid gap-6 lg:grid-cols-3"> -->
 					<div class="mt-12 grid gap-6 lg:grid-cols-3">
 						<!-- Card 01 — Navy block -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#0d1b3e] p-7 text-white shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
 						>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl"
 							></div>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -left-10 bottom-24 h-28 w-28 rounded-full bg-[#1e3a8a]/60 blur-2xl"
 							></div>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute bottom-8 right-6 h-16 w-16 rounded-full border border-white/10"
 							></div>
 
+       <!-- HTML: <div class="relative flex items-center justify-between"> -->
 							<div class="relative flex items-center justify-between">
+        <!-- HTML: <span -->
 								<span
 									class="rounded-full bg-[#ffd23f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#0d1b3e]"
 									>New</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <span -->
 								<span
 									class="text-5xl font-black italic leading-none text-white/15 [font-family:'Playfair_Display',Georgia,serif]"
 									>01</span
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div -->
 							<div
 								class="relative mx-auto mt-6 grid aspect-square w-44 place-items-center sm:w-52"
 							>
+        <!-- HTML: <div -->
 								<div
 									aria-hidden="true"
 									class="absolute inset-0 rounded-full border-2 border-dashed border-white/25 animate-spin-slow"
 								></div>
+        <!-- HTML: <div -->
 								<div
 									aria-hidden="true"
 									class="absolute inset-4 rounded-full border border-white/10"
 								></div>
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/bundles/bundle-basic.jpg"
 									width="480"
@@ -1252,34 +1827,51 @@
 									loading="lazy"
 									class="absolute inset-6 aspect-square rounded-full object-cover ring-4 ring-white/10"
 								/>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-7 flex-1"> -->
 							<div class="relative mt-7 flex-1">
+        <!-- HTML: <h3 -->
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
 								>
+         <!-- HTML content: Basic Starter Bundle -->
 									Basic Starter Bundle
+        <!-- HTML: </h3> -->
 								</h3>
+        <!-- HTML: <p class="mt-2 text-sm leading-relaxed text-slate-300"> -->
 								<p class="mt-2 text-sm leading-relaxed text-slate-300">
+         <!-- HTML content: Bedding set, kettle, mug set and study basics for a first-year -->
 									Bedding set, kettle, mug set and study basics for a first-year
+         <!-- HTML content: res room. -->
 									res room.
+        <!-- HTML: </p> -->
 								</p>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-6 flex items-end justify-between gap-4"> -->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
+        <!-- HTML: <p class="text-2xl font-extrabold text-[#ffd23f]">R1 499</p> -->
 								<p class="text-2xl font-extrabold text-[#ffd23f]">R1 499</p>
+        <!-- HTML: <div class="flex items-center gap-2"> -->
 								<div class="flex items-center gap-2">
+         <!-- HTML: <a -->
 									<a
 										href="pages/products.html#parent-hub"
 										aria-label="See Basic Bundle contents"
 										class="grid h-11 w-11 place-items-center rounded-full border border-white/25 text-white transition hover:bg-white/10"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
+         <!-- HTML: </a> -->
 									</a>
+         <!-- HTML: <button -->
 									<button
 										type="button"
 										data-add-to-wishlist
@@ -1289,8 +1881,11 @@
 										aria-label="Add Basic Starter Bundle to wishlist"
 										aria-pressed="false"
 									>
+          <!-- HTML: <span data-wishlist-icon aria-hidden="true">♡</span> -->
 										<span data-wishlist-icon aria-hidden="true">♡</span>
+         <!-- HTML: </button> -->
 									</button>
+         <!-- HTML: <button -->
 									<button
 										type="button"
 										data-add-to-cart
@@ -1299,56 +1894,87 @@
 										class="grid h-11 w-11 place-items-center rounded-full bg-[#ffd23f] text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 										aria-label="Add Basic Starter Bundle to cart"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
+         <!-- HTML: </button> -->
 									</button>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
 
 						<!-- Card 02 — Amber block -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-7 text-[#0d1b3e] shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
 						>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl"
 							></div>
+       <!-- HTML: <div aria-hidden="true" class="absolute left-6 top-8 opacity-40"> -->
 							<div aria-hidden="true" class="absolute left-6 top-8 opacity-40">
+        <!-- HTML: <svg width="64" height="64" viewBox="0 0 64 64" fill="none"> -->
 								<svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+         <!-- HTML: <g fill="#0d1b3e"> -->
 									<g fill="#0d1b3e">
+          <!-- HTML: <circle cx="8" cy="8" r="2" /> -->
 										<circle cx="8" cy="8" r="2" />
+          <!-- HTML: <circle cx="32" cy="8" r="2" /> -->
 										<circle cx="32" cy="8" r="2" />
+          <!-- HTML: <circle cx="56" cy="8" r="2" /> -->
 										<circle cx="56" cy="8" r="2" />
+          <!-- HTML: <circle cx="8" cy="32" r="2" /> -->
 										<circle cx="8" cy="32" r="2" />
+          <!-- HTML: <circle cx="32" cy="32" r="2" /> -->
 										<circle cx="32" cy="32" r="2" />
+          <!-- HTML: <circle cx="56" cy="32" r="2" /> -->
 										<circle cx="56" cy="32" r="2" />
+          <!-- HTML: <circle cx="8" cy="56" r="2" /> -->
 										<circle cx="8" cy="56" r="2" />
+          <!-- HTML: <circle cx="32" cy="56" r="2" /> -->
 										<circle cx="32" cy="56" r="2" />
+          <!-- HTML: <circle cx="56" cy="56" r="2" /> -->
 										<circle cx="56" cy="56" r="2" />
+         <!-- HTML: </g> -->
 									</g>
+        <!-- HTML: </svg> -->
 								</svg>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative flex items-center justify-between"> -->
 							<div class="relative flex items-center justify-between">
+        <!-- HTML: <span -->
 								<span
 									class="rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]"
 									>Popular</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <span -->
 								<span
 									class="text-5xl font-black italic leading-none text-white/50 [font-family:'Playfair_Display',Georgia,serif]"
 									>02</span
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-6"> -->
 							<div class="relative mt-6">
+        <!-- HTML: <div -->
 								<div
 									aria-hidden="true"
 									class="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0d1b3e]/15 blur-2xl"
 								></div>
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/bundles/bundle-standard.jpg"
 									width="560"
@@ -1357,33 +1983,49 @@
 									loading="lazy"
 									class="relative mx-auto aspect-square w-48 rotate-3 rounded-[2rem] object-cover shadow-lg ring-4 ring-white/60 transition duration-500 group-hover:rotate-0 sm:w-56"
 								/>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-8 flex-1"> -->
 							<div class="relative mt-8 flex-1">
+        <!-- HTML: <h3 -->
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
 								>
+         <!-- HTML content: Standard Starter Bundle -->
 									Standard Starter Bundle
+        <!-- HTML: </h3> -->
 								</h3>
+        <!-- HTML: <p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70"> -->
 								<p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70">
+         <!-- HTML content: Basic plus desk lamp, laundry set and a kitchen starter pack. -->
 									Basic plus desk lamp, laundry set and a kitchen starter pack.
+        <!-- HTML: </p> -->
 								</p>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-6 flex items-end justify-between gap-4"> -->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
+        <!-- HTML: <p class="text-2xl font-extrabold">R2 799</p> -->
 								<p class="text-2xl font-extrabold">R2 799</p>
+        <!-- HTML: <div class="flex items-center gap-2"> -->
 								<div class="flex items-center gap-2">
+         <!-- HTML: <a -->
 									<a
 										href="pages/products.html#parent-hub"
 										aria-label="See Standard Bundle contents"
 										class="grid h-11 w-11 place-items-center rounded-full border border-[#0d1b3e]/25 text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
+         <!-- HTML: </a> -->
 									</a>
+         <!-- HTML: <button -->
 									<button
 										type="button"
 										data-add-to-wishlist
@@ -1393,8 +2035,11 @@
 										aria-label="Add Standard Starter Bundle to wishlist"
 										aria-pressed="false"
 									>
+          <!-- HTML: <span data-wishlist-icon aria-hidden="true">♡</span> -->
 										<span data-wishlist-icon aria-hidden="true">♡</span>
+         <!-- HTML: </button> -->
 									</button>
+         <!-- HTML: <button -->
 									<button
 										type="button"
 										data-add-to-cart
@@ -1403,41 +2048,57 @@
 										class="grid h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] transition hover:bg-[#1c3268]"
 										aria-label="Add Standard Starter Bundle to cart"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
+         <!-- HTML: </button> -->
 									</button>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
 
 						<!-- Card 03 — Warm cream / terracotta block -->
+      <!-- HTML: <article -->
 						<article
 							class="group relative flex flex-col overflow-hidden rounded-[2.5rem] bg-[#f7eede] p-7 text-[#0d1b3e] shadow-xl transition duration-300 hover:-translate-y-1.5 hover:shadow-2xl sm:p-8"
 						>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#c2572f]/15 blur-2xl"
 							></div>
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -right-10 bottom-20 h-32 w-32 rounded-full border-2 border-dashed border-[#c2572f]/25"
 							></div>
 
+       <!-- HTML: <div class="relative flex items-center justify-between"> -->
 							<div class="relative flex items-center justify-between">
+        <!-- HTML: <span -->
 								<span
 									class="rounded-full bg-[#c2572f] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-white"
 									>Second-hand</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <span -->
 								<span
 									class="text-5xl font-black italic leading-none text-[#c2572f]/20 [font-family:'Playfair_Display',Georgia,serif]"
 									>03</span
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56"> -->
 							<div class="relative mx-auto mt-6 h-48 w-48 sm:h-56 sm:w-56">
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/products/study-funiture.jpg"
 									width="480"
@@ -1446,6 +2107,7 @@
 									loading="lazy"
 									class="absolute inset-0 aspect-square rounded-full object-cover ring-4 ring-white/70 shadow-lg"
 								/>
+        <!-- HTML: <img -->
 								<img
 									src="assets/images/products/kettle.jpg"
 									width="320"
@@ -1454,50 +2116,75 @@
 									loading="lazy"
 									class="absolute -bottom-2 -right-2 aspect-square w-24 rounded-full border-4 border-[#f7eede] object-cover shadow-lg animate-float sm:w-28"
 								/>
+        <!-- HTML: <span -->
 								<span
 									class="absolute -left-1 top-3 grid h-10 w-10 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] shadow-md"
 								>
+         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/star.svg"
 										alt=""
 										class="h-4 w-4"
 									/>
+        <!-- HTML: </span> -->
 								</span>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-8 flex-1"> -->
 							<div class="relative mt-8 flex-1">
+        <!-- HTML: <h3 -->
 								<h3
 									class="text-2xl font-bold italic [font-family:'Playfair_Display',Georgia,serif]"
 								>
+         <!-- HTML content: Marketplace Picks -->
 									Marketplace Picks
+        <!-- HTML: </h3> -->
 								</h3>
+        <!-- HTML: <p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70"> -->
 								<p class="mt-2 text-sm leading-relaxed text-[#0d1b3e]/70">
+         <!-- HTML content: Reviewed fridges, desks, chairs and textbooks from graduating -->
 									Reviewed fridges, desks, chairs and textbooks from graduating
+         <!-- HTML content: students. -->
 									students.
+        <!-- HTML: </p> -->
 								</p>
+       <!-- HTML: </div> -->
 							</div>
 
+       <!-- HTML: <div class="relative mt-6 flex items-end justify-between gap-4"> -->
 							<div class="relative mt-6 flex items-end justify-between gap-4">
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <p -->
 									<p
 										class="text-[11px] font-bold uppercase tracking-wider text-[#c2572f]"
 									>
+          <!-- HTML content: Starting at -->
 										Starting at
+         <!-- HTML: </p> -->
 									</p>
+         <!-- HTML: <p class="text-2xl font-extrabold">R180</p> -->
 									<p class="text-2xl font-extrabold">R180</p>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <div class="flex items-center gap-2"> -->
 								<div class="flex items-center gap-2">
+         <!-- HTML: <a -->
 									<a
 										href="pages/products.html#shop"
 										aria-label="Browse marketplace"
 										class="grid h-11 w-11 place-items-center rounded-full border border-[#0d1b3e]/25 text-[#0d1b3e] transition hover:bg-[#0d1b3e]/5"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
+         <!-- HTML: </a> -->
 									</a>
+         <!-- HTML: <button -->
 									<button
 										type="button"
 										data-add-to-wishlist
@@ -1507,8 +2194,11 @@
 										aria-label="Add Marketplace Pick to wishlist"
 										aria-pressed="false"
 									>
+          <!-- HTML: <span data-wishlist-icon aria-hidden="true">♡</span> -->
 										<span data-wishlist-icon aria-hidden="true">♡</span>
+         <!-- HTML: </button> -->
 									</button>
+         <!-- HTML: <button -->
 									<button
 										type="button"
 										data-add-to-cart
@@ -1517,51 +2207,76 @@
 										class="grid h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-[#ffd23f] transition hover:bg-[#1c3268]"
 										aria-label="Add a marketplace pick to cart"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
+         <!-- HTML: </button> -->
 									</button>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </article> -->
 						</article>
+     <!-- HTML: </div> -->
 					</div>
 
 					<!-- Slim color-bar strip under the grid -->
+     <!-- HTML: <div -->
 					<div
 						class="mt-8 flex flex-col items-center justify-between gap-4 rounded-full bg-[#0d1b3e] px-8 py-4 text-center sm:flex-row sm:text-left"
 					>
+      <!-- HTML: <p class="text-sm text-slate-300"> -->
 						<p class="text-sm text-slate-300">
+       <!-- HTML: <span class="font-bold text-[#ffd23f]" -->
 							<span class="font-bold text-[#ffd23f]"
 								>Every second-hand item</span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML content: is manually reviewed before it goes live. -->
 							is manually reviewed before it goes live.
+      <!-- HTML: </p> -->
 						</p>
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html#sell-with-us"
 							class="inline-flex items-center gap-2 whitespace-nowrap text-sm font-bold text-white transition hover:text-[#ffd23f]"
 						>
+       <!-- HTML content: Sell your kit -->
 							Sell your kit
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </a> -->
 						</a>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Parent Hub — full-bleed navy banner ===== -->
+   <!-- HTML: <section class="bg-[#0d1b3e] py-20 text-white"> -->
 			<section class="bg-[#0d1b3e] py-20 text-white">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <!-- HTML: <div class="grid items-center gap-12 lg:grid-cols-2"> -->
 					<div class="grid items-center gap-12 lg:grid-cols-2">
+      <!-- HTML: <div class="relative order-2 lg:order-1"> -->
 						<div class="relative order-2 lg:order-1">
+       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/20 blur-2xl"
 							></div>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/starter-bundle.jpg"
 								alt="A first-year checklist on a desk next to study supplies"
@@ -1570,147 +2285,235 @@
 								loading="lazy"
 								class="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-xl ring-8 ring-white/10"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute -bottom-5 left-6 rounded-2xl bg-[#ffd23f] p-4 text-[#0d1b3e] shadow-xl"
 							>
+        <!-- HTML: <p class="text-sm font-bold">Fixed-price bundles</p> -->
 								<p class="text-sm font-bold">Fixed-price bundles</p>
+        <!-- HTML: <p class="text-xs text-[#0d1b3e]/70"> -->
 								<p class="text-xs text-[#0d1b3e]/70">
+         <!-- HTML content: No surprises at the till -->
 									No surprises at the till
+        <!-- HTML: </p> -->
 								</p>
+       <!-- HTML: </div> -->
 							</div>
+      <!-- HTML: </div> -->
 						</div>
 
+      <!-- HTML: <div class="order-1 lg:order-2"> -->
 						<div class="order-1 lg:order-2">
+       <!-- HTML: <span -->
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
 								>Parent Hub</span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <h2 -->
 							<h2
 								class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
 							>
+        <!-- HTML content: Know exactly what you’re getting -->
 								Know exactly what you’re getting
+       <!-- HTML: </h2> -->
 							</h2>
+       <!-- HTML: <p class="mt-4 text-slate-300"> -->
 							<p class="mt-4 text-slate-300">
+        <!-- HTML content: The same way SoleStyle gives shoe shoppers fit confidence, -->
 								The same way SoleStyle gives shoe shoppers fit confidence,
+        <!-- HTML content: Campus-Cart gives parents and guardians item-level confidence -->
 								Campus-Cart gives parents and guardians item-level confidence
+        <!-- HTML content: before registration week. -->
 								before registration week.
+       <!-- HTML: </p> -->
 							</p>
 
+       <!-- HTML: <ul class="mt-8 space-y-4"> -->
 							<ul class="mt-8 space-y-4">
+        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
+         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
 											alt=""
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
+         <!-- HTML: </span> -->
 									</span>
+         <!-- HTML: <p class="text-sm text-slate-200"> -->
 									<p class="text-sm text-slate-200">
+          <!-- HTML: <strong class="text-white">Fixed contents.</strong> Every -->
 										<strong class="text-white">Fixed contents.</strong> Every
+          <!-- HTML content: bundle lists each item and its total price before you order. -->
 										bundle lists each item and its total price before you order.
+         <!-- HTML: </p> -->
 									</p>
+        <!-- HTML: </li> -->
 								</li>
+        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
+         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
 											alt=""
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
+         <!-- HTML: </span> -->
 									</span>
+         <!-- HTML: <p class="text-sm text-slate-200"> -->
 									<p class="text-sm text-slate-200">
+          <!-- HTML: <strong class="text-white">Reviewed listings.</strong> -->
 										<strong class="text-white">Reviewed listings.</strong>
+          <!-- HTML content: Second-hand items are manually checked by our team before -->
 										Second-hand items are manually checked by our team before
+          <!-- HTML content: they go live. -->
 										they go live.
+         <!-- HTML: </p> -->
 									</p>
+        <!-- HTML: </li> -->
 								</li>
+        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
+         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
 											alt=""
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
+         <!-- HTML: </span> -->
 									</span>
+         <!-- HTML: <p class="text-sm text-slate-200"> -->
 									<p class="text-sm text-slate-200">
+          <!-- HTML: <strong class="text-white">Safe collection.</strong> -->
 										<strong class="text-white">Safe collection.</strong>
+          <!-- HTML content: Residence desks, campus points or secure lockers — never a -->
 										Residence desks, campus points or secure lockers — never a
+          <!-- HTML content: random street corner. -->
 										random street corner.
+         <!-- HTML: </p> -->
 									</p>
+        <!-- HTML: </li> -->
 								</li>
+        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
+         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f]"
 									>
+          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
 											alt=""
 											class="h-3.5 w-3.5 text-[#0d1b3e]"
 										/>
+         <!-- HTML: </span> -->
 									</span>
+         <!-- HTML: <p class="text-sm text-slate-200"> -->
 									<p class="text-sm text-slate-200">
+          <!-- HTML: <strong class="text-white">EFT only.</strong> No card -->
 										<strong class="text-white">EFT only.</strong> No card
+          <!-- HTML content: details are ever handled on this site. -->
 										details are ever handled on this site.
+         <!-- HTML: </p> -->
 									</p>
+        <!-- HTML: </li> -->
 								</li>
+       <!-- HTML: </ul> -->
 							</ul>
 
+       <!-- HTML: <a -->
 							<a
 								href="pages/products.html#parent-hub"
 								class="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] shadow-lg shadow-amber-500/20 transition hover:bg-[#ffdf5e]"
 							>
+        <!-- HTML content: Open the Parent Hub -->
 								Open the Parent Hub
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
+       <!-- HTML: </a> -->
 							</a>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Brand story ===== -->
+   <!-- HTML: <section class="bg-white py-20"> -->
 			<section class="bg-white py-20">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <!-- HTML: <div class="grid items-center gap-12 lg:grid-cols-2"> -->
 					<div class="grid items-center gap-12 lg:grid-cols-2">
+      <!-- HTML: <div> -->
 						<div>
+       <!-- HTML: <span -->
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 								>Our story</span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <h2 -->
 							<h2
 								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
+        <!-- HTML content: Started in a res corridor in 2021 -->
 								Started in a res corridor in 2021
+       <!-- HTML: </h2> -->
 							</h2>
+       <!-- HTML: <p class="mt-4 text-slate-600"> -->
 							<p class="mt-4 text-slate-600">
+        <!-- HTML content: Campus-Cart began when a group of students resold their res kit -->
 								Campus-Cart began when a group of students resold their res kit
+        <!-- HTML content: instead of throwing it away. Today we serve students aged 19–30 -->
 								instead of throwing it away. Today we serve students aged 19–30
+        <!-- HTML content: and the parents and guardians who fund them, across major South -->
 								and the parents and guardians who fund them, across major South
+        <!-- HTML content: African campuses. -->
 								African campuses.
+       <!-- HTML: </p> -->
 							</p>
+       <!-- HTML: <a -->
 							<a
 								href="pages/about.html"
 								class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0d1b3e] transition hover:text-[#c99700]"
 							>
+        <!-- HTML content: Read our story -->
 								Read our story
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
+       <!-- HTML: </a> -->
 							</a>
+      <!-- HTML: </div> -->
 						</div>
 
+      <!-- HTML: <div class="grid grid-cols-2 gap-4"> -->
 						<div class="grid grid-cols-2 gap-4">
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="Students talking in a university residence corridor"
@@ -1719,6 +2522,7 @@
 								loading="lazy"
 								class="aspect-[3/4] w-full rounded-3xl object-cover"
 							/>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/student-lifestyle.jpg"
 								alt="Students walking across a sunny campus"
@@ -1727,48 +2531,70 @@
 								loading="lazy"
 								class="mt-8 aspect-[3/4] w-full rounded-3xl object-cover"
 							/>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Lookbook gallery ===== -->
+   <!-- HTML: <section class="py-20"> -->
 			<section class="py-20">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <!-- HTML: <div -->
 					<div
 						class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
 					>
+      <!-- HTML: <div class="max-w-2xl"> -->
 						<div class="max-w-2xl">
+       <!-- HTML: <span -->
 							<span
 								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 								>Lookbook</span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <h2 -->
 							<h2
 								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
+        <!-- HTML content: Life on campus -->
 								Life on campus
+       <!-- HTML: </h2> -->
 							</h2>
+      <!-- HTML: </div> -->
 						</div>
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html#deals-gallery"
 							class="inline-flex items-center gap-2 text-sm font-bold text-[#0d1b3e] transition hover:text-[#c99700]"
 						>
+       <!-- HTML content: View the gallery -->
 							View the gallery
+       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 								alt=""
 								class="h-4 w-4"
 							/>
+      <!-- HTML: </a> -->
 						</a>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <div -->
 					<div
 						class="mt-10 grid auto-rows-[150px] grid-cols-2 gap-4 md:auto-rows-[180px] md:grid-cols-4"
 					>
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html"
 							class="group relative col-span-2 row-span-2 overflow-hidden rounded-3xl"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="A cosy student residence room"
@@ -1777,19 +2603,25 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/70 to-transparent"
 							></div>
+       <!-- HTML: <span -->
 							<span
 								class="absolute bottom-5 left-5 text-lg font-bold text-white"
 								>Res living</span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </a> -->
 						</a>
 
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html"
 							class="group relative overflow-hidden rounded-3xl"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/products/study-essentials.jpg"
 								alt="Students studying together in a campus cafe"
@@ -1798,19 +2630,25 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
 							></div>
+       <!-- HTML: <span -->
 							<span
 								class="absolute bottom-4 left-4 text-sm font-bold text-white"
 								>Campus crew</span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </a> -->
 						</a>
 
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html"
 							class="group relative overflow-hidden rounded-3xl"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/products/textbook.jpg"
 								alt="A student studying late in the library"
@@ -1819,19 +2657,25 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
 							></div>
+       <!-- HTML: <span -->
 							<span
 								class="absolute bottom-4 left-4 text-sm font-bold text-white"
 								>Late-night study</span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </a> -->
 						</a>
 
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html#parent-hub"
 							class="group relative overflow-hidden rounded-3xl"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="A student collecting an order from a secure locker"
@@ -1840,19 +2684,25 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
 							></div>
+       <!-- HTML: <span -->
 							<span
 								class="absolute bottom-4 left-4 text-sm font-bold text-white"
 								>Locker drop</span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </a> -->
 						</a>
 
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html#shop"
 							class="group relative overflow-hidden rounded-3xl"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/student-lifestyle.jpg"
 								alt="Students moving boxes into a residence on move-in day"
@@ -1861,19 +2711,25 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute inset-0 bg-gradient-to-t from-[#0d1b3e]/60 to-transparent"
 							></div>
+       <!-- HTML: <span -->
 							<span
 								class="absolute bottom-4 left-4 text-sm font-bold text-white"
 								>Moving day</span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </a> -->
 						</a>
 
+      <!-- HTML: <a -->
 						<a
 							href="pages/products.html#sell-with-us"
 							class="group relative col-span-2 overflow-hidden rounded-3xl md:col-span-4"
 						>
+       <!-- HTML: <img -->
 							<img
 								src="assets/images/bundles/hero-campus.jpg"
 								alt="Graduation caps in the air on a campus lawn"
@@ -1882,165 +2738,262 @@
 								loading="lazy"
 								class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
 							/>
+       <!-- HTML: <div -->
 							<div
 								class="absolute inset-0 bg-gradient-to-r from-[#0d1b3e]/80 via-[#0d1b3e]/40 to-transparent"
 							></div>
+       <!-- HTML: <span -->
 							<span
 								class="absolute bottom-5 left-5 text-lg font-bold text-white"
 								>Graduation hand-me-downs — sell with us</span
+       <!-- HTML content: > -->
 							>
+      <!-- HTML: </a> -->
 						</a>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Testimonials ===== -->
+   <!-- HTML: <section class="bg-[#faf8f4] py-20"> -->
 			<section class="bg-[#faf8f4] py-20">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <!-- HTML: <div class="max-w-2xl"> -->
 					<div class="max-w-2xl">
+      <!-- HTML: <span -->
 						<span
 							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>Student &amp; parent reviews</span
+      <!-- HTML content: > -->
 						>
+      <!-- HTML: <h2 -->
 						<h2
 							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 						>
+       <!-- HTML content: Trusted on campus and at home -->
 							Trusted on campus and at home
+      <!-- HTML: </h2> -->
 						</h2>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <div class="mt-10 grid gap-6 md:grid-cols-3"> -->
 					<div class="mt-10 grid gap-6 md:grid-cols-3">
+      <!-- HTML: <figure -->
 						<figure
 							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
 						>
+       <!-- HTML: <div -->
 							<div
 								class="text-amber-400"
 								role="img"
 								aria-label="Rated 5 out of 5"
 							>
+        <!-- HTML content: ★★★★★ -->
 								★★★★★
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <blockquote class="mt-4 flex-1 text-slate-700"> -->
 							<blockquote class="mt-4 flex-1 text-slate-700">
+        <!-- HTML content: “I sent the bundle list to my mom before registration — she -->
 								“I sent the bundle list to my mom before registration — she
+        <!-- HTML content: could see exactly what was included and what it cost. No awkward -->
 								could see exactly what was included and what it cost. No awkward
+        <!-- HTML content: ‘how much was that?’ phone call.” -->
 								‘how much was that?’ phone call.”
+       <!-- HTML: </blockquote> -->
 							</blockquote>
+       <!-- HTML: <figcaption class="mt-6 flex items-center gap-3"> -->
 							<figcaption class="mt-6 flex items-center gap-3">
+        <!-- HTML: <img -->
 								<img
 									src="https://i.pravatar.cc/80?u=naledi"
 									alt="Portrait of Naledi M."
 									class="h-11 w-11 rounded-full object-cover"
 								/>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <p class="font-bold text-[#0d1b3e]">Naledi M.</p> -->
 									<p class="font-bold text-[#0d1b3e]">Naledi M.</p>
+         <!-- HTML: <p class="text-sm text-slate-500"> -->
 									<p class="text-sm text-slate-500">
+          <!-- HTML content: Wits University, Johannesburg -->
 										Wits University, Johannesburg
+         <!-- HTML: </p> -->
 									</p>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </figcaption> -->
 							</figcaption>
+      <!-- HTML: </figure> -->
 						</figure>
 
+      <!-- HTML: <figure -->
 						<figure
 							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
 						>
+       <!-- HTML: <div -->
 							<div
 								class="text-amber-400"
 								role="img"
 								aria-label="Rated 5 out of 5"
 							>
+        <!-- HTML content: ★★★★★ -->
 								★★★★★
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <blockquote class="mt-4 flex-1 text-slate-700"> -->
 							<blockquote class="mt-4 flex-1 text-slate-700">
+        <!-- HTML content: “The second-hand desk and fridge were exactly as described. -->
 								“The second-hand desk and fridge were exactly as described.
+        <!-- HTML content: Collecting from the residence desk felt safe, and I saved almost -->
 								Collecting from the residence desk felt safe, and I saved almost
+        <!-- HTML content: R2 000 compared to buying new.” -->
 								R2 000 compared to buying new.”
+       <!-- HTML: </blockquote> -->
 							</blockquote>
+       <!-- HTML: <figcaption class="mt-6 flex items-center gap-3"> -->
 							<figcaption class="mt-6 flex items-center gap-3">
+        <!-- HTML: <img -->
 								<img
 									src="https://i.pravatar.cc/80?u=pieter"
 									alt="Portrait of Pieter V."
 									class="h-11 w-11 rounded-full object-cover"
 								/>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <p class="font-bold text-[#0d1b3e]">Pieter V.</p> -->
 									<p class="font-bold text-[#0d1b3e]">Pieter V.</p>
+         <!-- HTML: <p class="text-sm text-slate-500">Stellenbosch University</p> -->
 									<p class="text-sm text-slate-500">Stellenbosch University</p>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </figcaption> -->
 							</figcaption>
+      <!-- HTML: </figure> -->
 						</figure>
 
+      <!-- HTML: <figure -->
 						<figure
 							class="flex flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm"
 						>
+       <!-- HTML: <div -->
 							<div
 								class="text-amber-400"
 								role="img"
 								aria-label="Rated 5 out of 5"
 							>
+        <!-- HTML content: ★★★★★ -->
 								★★★★★
+       <!-- HTML: </div> -->
 							</div>
+       <!-- HTML: <blockquote class="mt-4 flex-1 text-slate-700"> -->
 							<blockquote class="mt-4 flex-1 text-slate-700">
+        <!-- HTML content: “As a parent, the fixed-price starter bundle took the guesswork -->
 								“As a parent, the fixed-price starter bundle took the guesswork
+        <!-- HTML content: out of first-year budgeting. Delivery was on time and -->
 								out of first-year budgeting. Delivery was on time and
+        <!-- HTML content: communication was excellent.” -->
 								communication was excellent.”
+       <!-- HTML: </blockquote> -->
 							</blockquote>
+       <!-- HTML: <figcaption class="mt-6 flex items-center gap-3"> -->
 							<figcaption class="mt-6 flex items-center gap-3">
+        <!-- HTML: <img -->
 								<img
 									src="https://i.pravatar.cc/80?u=amanda"
 									alt="Portrait of Amanda K."
 									class="h-11 w-11 rounded-full object-cover"
 								/>
+        <!-- HTML: <div> -->
 								<div>
+         <!-- HTML: <p class="font-bold text-[#0d1b3e]">Amanda K.</p> -->
 									<p class="font-bold text-[#0d1b3e]">Amanda K.</p>
+         <!-- HTML: <p class="text-sm text-slate-500">Parent, Pretoria</p> -->
 									<p class="text-sm text-slate-500">Parent, Pretoria</p>
+        <!-- HTML: </div> -->
 								</div>
+       <!-- HTML: </figcaption> -->
 							</figcaption>
+      <!-- HTML: </figure> -->
 						</figure>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Newsletter band (SoleStyle-style subscribe strip) ===== -->
+   <!-- HTML: <section class="bg-[#f7f5f1] pb-20"> -->
 			<section class="bg-[#f7f5f1] pb-20">
+    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+     <!-- HTML: <div -->
 					<div
 						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
 					>
+      <!-- HTML: <div -->
 						<div
 							aria-hidden="true"
 							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"
 						></div>
+      <!-- HTML: <div -->
 						<div
 							aria-hidden="true"
 							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
 						></div>
 
+      <!-- HTML: <div class="relative grid items-center gap-8 lg:grid-cols-2"> -->
 						<div class="relative grid items-center gap-8 lg:grid-cols-2">
+       <!-- HTML: <div> -->
 							<div>
+        <!-- HTML: <span -->
 								<span
 									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
 									>Stay in the loop</span
+        <!-- HTML content: > -->
 								>
+        <!-- HTML: <h2 -->
 								<h2
 									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
 								>
+         <!-- HTML content: Get first dibs on -->
 									Get first dibs on
+         <!-- HTML: <span -->
 									<span
 										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
 										>new season kit</span
+         <!-- HTML content: > -->
 									>
+        <!-- HTML: </h2> -->
 								</h2>
+        <!-- HTML: <p class="mt-3 text-sm text-slate-300"> -->
 								<p class="mt-3 text-sm text-slate-300">
+         <!-- HTML content: One short email a month: new bundles, second-hand drops and -->
 									One short email a month: new bundles, second-hand drops and
+         <!-- HTML content: collection updates near your campus. -->
 									collection updates near your campus.
+        <!-- HTML: </p> -->
 								</p>
+       <!-- HTML: </div> -->
 							</div>
 
 							<!-- Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. -->
+       <!-- HTML: <form id="newsletterBandForm" class="w-full"> -->
 							<form id="newsletterBandForm" class="w-full">
+        <!-- HTML: <div class="flex flex-col gap-3 sm:flex-row"> -->
 								<div class="flex flex-col gap-3 sm:flex-row">
+         <!-- HTML: <label for="newsletterBandEmail" class="sr-only" -->
 									<label for="newsletterBandEmail" class="sr-only"
 										>Email address</label
+         <!-- HTML content: > -->
 									>
+         <!-- HTML: <input -->
 									<input
 										id="newsletterBandEmail"
 										name="email"
@@ -2049,251 +3002,411 @@
 										placeholder="you@example.com"
 										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
 									/>
+         <!-- HTML: <button -->
 									<button
 										type="submit"
 										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 									>
+          <!-- HTML content: Join the list -->
 										Join the list
+         <!-- HTML: </button> -->
 									</button>
+        <!-- HTML: </div> -->
 								</div>
+        <!-- HTML: <p class="mt-3 text-xs text-slate-400"> -->
 								<p class="mt-3 text-xs text-slate-400">
+         <!-- HTML content: No spam. Unsubscribe any time. -->
 									No spam. Unsubscribe any time.
+        <!-- HTML: </p> -->
 								</p>
+       <!-- HTML: </form> -->
 							</form>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </section> -->
 			</section>
+  <!-- HTML: </main> -->
 		</main>
 
 		<!-- ===== Footer ===== -->
+  <!-- HTML: <footer class="bg-[#09122e] text-slate-300"> -->
 		<footer class="bg-[#09122e] text-slate-300">
+   <!-- HTML: <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"> -->
 			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- HTML: <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4"> -->
 				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+     <!-- HTML: <div> -->
 					<div>
+      <!-- HTML: <a -->
 						<a
 							href="../index.html"
 							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
 						>
+       <!-- HTML: <span -->
 							<span
 								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]"
 								>C</span
+       <!-- HTML content: > -->
 							>
+       <!-- HTML: <span>Campus<span class="text-[#ffd23f]">-Cart</span></span> -->
 							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span>
+      <!-- HTML: </a> -->
 						</a>
+      <!-- HTML: <p class="mt-4 text-sm text-slate-400"> -->
 						<p class="mt-4 text-sm text-slate-400">
+       <!-- HTML content: Affordable new and second-hand student essentials for South -->
 							Affordable new and second-hand student essentials for South
+       <!-- HTML content: African campuses. -->
 							African campuses.
+      <!-- HTML: </p> -->
 						</p>
+      <!-- HTML: <p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p> -->
 						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
 
+      <!-- HTML: <div class="mt-5 flex items-center gap-2"> -->
 						<div class="mt-5 flex items-center gap-2">
+       <!-- HTML: <a -->
 							<a
 								href="mailto:hello@campus-cart.co.za"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
 								aria-label="Email Campus-Cart"
 							>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
+       <!-- HTML: </a> -->
 							</a>
+       <!-- HTML: <a -->
 							<a
 								href="https://wa.me/27123456789"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
 								aria-label="WhatsApp Campus-Cart"
 							>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
+       <!-- HTML: </a> -->
 							</a>
+       <!-- HTML: <a -->
 							<a
 								href="coverage.html"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
 								aria-label="Coverage map"
 							>
+        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
+       <!-- HTML: </a> -->
 							</a>
+      <!-- HTML: </div> -->
 						</div>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <div> -->
 					<div>
+      <!-- HTML: <h3 class="text-sm font-bold uppercase tracking-wider text-white"> -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+       <!-- HTML content: Shop -->
 							Shop
+      <!-- HTML: </h3> -->
 						</h3>
+      <!-- HTML: <ul class="mt-4 space-y-2.5 text-sm"> -->
 						<ul class="mt-4 space-y-2.5 text-sm">
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a href="products.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="products.html" class="transition hover:text-[#ffd23f]"
 									>Shop New</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a -->
 								<a
 									href="products.html#deals-gallery"
 									class="transition hover:text-[#ffd23f]"
 									>Deals &amp; Gallery</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a -->
 								<a
 									href="products.html#product-detail"
 									class="transition hover:text-[#ffd23f]"
 									>Product Detail</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a -->
 								<a
 									href="products.html#sell-with-us"
 									class="transition hover:text-[#ffd23f]"
 									>Sell With Us</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+      <!-- HTML: </ul> -->
 						</ul>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <div> -->
 					<div>
+      <!-- HTML: <h3 class="text-sm font-bold uppercase tracking-wider text-white"> -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+       <!-- HTML content: Company -->
 							Company
+      <!-- HTML: </h3> -->
 						</h3>
+      <!-- HTML: <ul class="mt-4 space-y-2.5 text-sm"> -->
 						<ul class="mt-4 space-y-2.5 text-sm">
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a href="about.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="about.html" class="transition hover:text-[#ffd23f]"
 									>About</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a -->
 								<a
 									href="products.html#parent-hub"
 									class="transition hover:text-[#ffd23f]"
 									>Parent Hub</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a href="enquiry.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="enquiry.html" class="transition hover:text-[#ffd23f]"
 									>Enquiry</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a href="coverage.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="coverage.html" class="transition hover:text-[#ffd23f]"
 									>Coverage</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a href="contact.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="contact.html" class="transition hover:text-[#ffd23f]"
 									>Contact</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a href="account.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="account.html" class="transition hover:text-[#ffd23f]"
 									>Account</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+      <!-- HTML: </ul> -->
 						</ul>
+     <!-- HTML: </div> -->
 					</div>
 
+     <!-- HTML: <div> -->
 					<div>
+      <!-- HTML: <h3 class="text-sm font-bold uppercase tracking-wider text-white"> -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+       <!-- HTML content: Reach us -->
 							Reach us
+      <!-- HTML: </h3> -->
 						</h3>
+      <!-- HTML: <ul class="mt-4 space-y-2.5 text-sm"> -->
 						<ul class="mt-4 space-y-2.5 text-sm">
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a -->
 								<a
 									href="mailto:hello@campus-cart.co.za"
 									class="transition hover:text-[#ffd23f]"
 									>hello@campus-cart.co.za</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li> -->
 							<li>
+        <!-- HTML: <a -->
 								<a
 									href="https://wa.me/27123456789"
 									class="transition hover:text-[#ffd23f]"
 									>WhatsApp: 012 345 6789</a
+        <!-- HTML content: > -->
 								>
+       <!-- HTML: </li> -->
 							</li>
+       <!-- HTML: <li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li> -->
 							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
+      <!-- HTML: </ul> -->
 						</ul>
+     <!-- HTML: </div> -->
 					</div>
+    <!-- HTML: </div> -->
 				</div>
 
+    <!-- HTML: <div class="cc-footer-legal mt-12 border-t border-white/10 pt-8"> -->
 				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
+     <!-- HTML: <p class="text-sm text-slate-400"> -->
 					<p class="text-sm text-slate-400">
+      <!-- HTML: <a href="privacy.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
 							>Privacy Policy</a
+      <!-- HTML content: > -->
 						>
+      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
+      <!-- HTML: <a href="terms.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="terms.html" class="transition hover:text-[#ffd23f]"
 							>Terms &amp; Conditions</a
+      <!-- HTML content: > -->
 						>
+      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
+      <!-- HTML: <a href="cookies.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie Policy</a
+      <!-- HTML content: > -->
 						>
+      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
+      <!-- HTML: <a href="returns.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="returns.html" class="transition hover:text-[#ffd23f]"
 							>Returns &amp; Delivery</a
+      <!-- HTML content: > -->
 						>
+      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
+      <!-- HTML: <a href="cookies.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie settings</a
+      <!-- HTML content: > -->
 						>
+     <!-- HTML: </p> -->
 					</p>
+     <!-- HTML: <p class="mt-3 text-sm text-slate-400"> -->
 					<p class="mt-3 text-sm text-slate-400">
+      <!-- HTML content: Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, -->
 						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
+      <!-- HTML content: 0083. -->
 						0083.
+     <!-- HTML: </p> -->
 					</p>
+     <!-- HTML: <p class="mt-3 text-sm text-slate-400"> -->
 					<p class="mt-3 text-sm text-slate-400">
+      <!-- HTML: <a href="about.html#licence" class="transition hover:text-[#ffd23f]" -->
 						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
 							>Licence and credits</a
+      <!-- HTML content: > -->
 						>
+      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
+      <!-- HTML: <a href="../sitemap.xml" class="transition hover:text-[#ffd23f]" -->
 						<a href="../sitemap.xml" class="transition hover:text-[#ffd23f]"
 							>Sitemap.xml</a
+      <!-- HTML content: > -->
 						>
+     <!-- HTML: </p> -->
 					</p>
+     <!-- HTML: <p class="mt-3 text-sm text-slate-400"> -->
 					<p class="mt-3 text-sm text-slate-400">
+      <!-- HTML content: &copy; <span id="copyright-year">2026</span> Campus-Cart. Static -->
 						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static
+      <!-- HTML content: demo site — no payments are processed and no personal data is -->
 						demo site — no payments are processed and no personal data is
+      <!-- HTML content: stored. -->
 						stored.
+     <!-- HTML: </p> -->
 					</p>
+    <!-- HTML: </div> -->
 				</div>
+   <!-- HTML: </div> -->
 			</div>
+  <!-- HTML: </footer> -->
 		</footer>
 
 		<!-- Snack bar for inline feedback -->
+  <!-- HTML: <div -->
 		<div
 			id="snack"
 			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300"
 		></div>
 
 		<!-- Back to top -->
+  <!-- HTML: <button -->
 		<button
 			id="toTop"
 			type="button"
 			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
 			aria-label="Back to top"
 		>
+   <!-- HTML: <img -->
 			<img
 				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
 				alt=""
 				class="h-5 w-5"
 			/>
+  <!-- HTML: </button> -->
 		</button>
 
 		<!-- ===== Site script ===== -->
+  <!-- HTML: <script src="assets/js/data.js" defer></script> -->
 		<script src="assets/js/data.js" defer></script>
+  <!-- HTML: <script src="assets/js/ui.js" defer></script> -->
 		<script src="assets/js/ui.js" defer></script>
+  <!-- HTML: <script src="assets/js/consent.js" defer></script> -->
 		<script src="assets/js/consent.js" defer></script>
+  <!-- HTML: <script src="assets/js/interactions.js" defer></script> -->
 		<script src="assets/js/interactions.js" defer></script>
+  <!-- HTML: <script src="assets/js/marquee.js?v=20261102-4" defer></script> -->
 		<script src="assets/js/marquee.js?v=20261102-4" defer></script>
+  <!-- HTML: <script src="assets/js/forms.js" defer></script> -->
 		<script src="assets/js/forms.js" defer></script>
+  <!-- HTML: <script src="assets/js/features.js" defer></script> -->
 		<script src="assets/js/features.js" defer></script>
+  <!-- HTML: <script src="assets/js/script.js" defer></script> -->
 		<script src="assets/js/script.js" defer></script>
+ <!-- HTML: </body> -->
 	</body>
+<!-- HTML: </html> -->
 </html>

@@ -10,951 +10,1864 @@
    ========================================================== */
 
 /* ---------- 1. Design Tokens ---------- */
+/* CSS rule/declaration: :root { */
 :root {
+ /* CSS rule/declaration: --yellow-soft: #fff7d6; */
 	--yellow-soft: #fff7d6;
+ /* CSS rule/declaration: --ease: cubic-bezier(0.22, 0.61, 0.36, 1); */
 	--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+ /* CSS rule/declaration: --danger: #b3261e; /* Fixed: was #0d1b3e (navy), changed to red for errors * / */
 	--danger: #b3261e; /* Fixed: was #0d1b3e (navy), changed to red for errors */
+ /* CSS rule/declaration: --grey: #f2f3f5; */
 	--grey: #f2f3f5;
+ /* CSS rule/declaration: --navy: #0d1b3e; */
 	--navy: #0d1b3e;
+ /* CSS rule/declaration: --radius: 14px; */
 	--radius: 14px;
+ /* CSS rule/declaration: --radius-pill: 999px; */
 	--radius-pill: 999px;
+ /* CSS rule/declaration: --radius-small: 8px; */
 	--radius-small: 8px;
+ /* CSS rule/declaration: --shadow: 0 4px 16px rgba(13, 27, 62, 0.1); */
 	--shadow: 0 4px 16px rgba(13, 27, 62, 0.1);
+ /* CSS rule/declaration: --white: #ffffff; */
 	--white: #ffffff;
+ /* CSS rule/declaration: --yellow: #ffd23f; */
 	--yellow: #ffd23f;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 2. Shared Animations ---------- */
+/* CSS rule/declaration: @keyframes cc-spin { */
 @keyframes cc-spin {
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotate(360deg); */
 		transform: rotate(360deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes cc-float { */
 @keyframes cc-float {
+ /* CSS rule/declaration: 0%, */
 	0%,
+ /* CSS rule/declaration: 100% { */
 	100% {
+  /* CSS rule/declaration: transform: translateY(0); */
 		transform: translateY(0);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: 50% { */
 	50% {
+  /* CSS rule/declaration: transform: translateY(-12px); */
 		transform: translateY(-12px);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes cc-marquee { */
 @keyframes cc-marquee {
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: translateX(-50%); */
 		transform: translateX(-50%);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes cc-fadeUp { */
 @keyframes cc-fadeUp {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: opacity: 0; */
 		opacity: 0;
+  /* CSS rule/declaration: transform: translateY(16px); */
 		transform: translateY(16px);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: opacity: 1; */
 		opacity: 1;
+  /* CSS rule/declaration: transform: translateY(0); */
 		transform: translateY(0);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes cc-pulseSoft { */
 @keyframes cc-pulseSoft {
+ /* CSS rule/declaration: 0%, */
 	0%,
+ /* CSS rule/declaration: 100% { */
 	100% {
+  /* CSS rule/declaration: opacity: 0.4; */
 		opacity: 0.4;
+  /* CSS rule/declaration: transform: scale(1); */
 		transform: scale(1);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: 50% { */
 	50% {
+  /* CSS rule/declaration: opacity: 1; */
 		opacity: 1;
+  /* CSS rule/declaration: transform: scale(1.12); */
 		transform: scale(1.12);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes ccLoaderBreathe { */
 @keyframes ccLoaderBreathe {
+ /* CSS rule/declaration: 0%, */
 	0%,
+ /* CSS rule/declaration: 100% { */
 	100% {
+  /* CSS rule/declaration: transform: scale(var(--loader-scale)); */
 		transform: scale(var(--loader-scale));
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: 50% { */
 	50% {
+  /* CSS rule/declaration: transform: scale(calc(var(--loader-scale) * 1.06)); */
 		transform: scale(calc(var(--loader-scale) * 1.06));
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes rotate1 { */
 @keyframes rotate1 {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: transform: rotateX(50deg) rotateZ(110deg); */
 		transform: rotateX(50deg) rotateZ(110deg);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotateX(50deg) rotateZ(470deg); */
 		transform: rotateX(50deg) rotateZ(470deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes rotate2 { */
 @keyframes rotate2 {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg); */
 		transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg); */
 		transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes rotate3 { */
 @keyframes rotate3 {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg); */
 		transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg); */
 		transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes rotate4 { */
 @keyframes rotate4 {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: transform: rotateX(50deg) rotateZ(470deg); */
 		transform: rotateX(50deg) rotateZ(470deg);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotateX(50deg) rotateZ(110deg); */
 		transform: rotateX(50deg) rotateZ(110deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes rotate5 { */
 @keyframes rotate5 {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg); */
 		transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg); */
 		transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes rotate6 { */
 @keyframes rotate6 {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg); */
 		transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg); */
 		transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes ccPulse { */
 @keyframes ccPulse {
+ /* CSS rule/declaration: 0%, */
 	0%,
+ /* CSS rule/declaration: 100% { */
 	100% {
+  /* CSS rule/declaration: transform: translate(-50%, -50%) scale(1); */
 		transform: translate(-50%, -50%) scale(1);
+  /* CSS rule/declaration: box-shadow: */
 		box-shadow:
+   /* CSS rule/declaration: 0 0 20px rgba(255, 210, 63, 0.8), */
 			0 0 20px rgba(255, 210, 63, 0.8),
+   /* CSS rule/declaration: 0 0 40px rgba(254, 83, 187, 0.6), */
 			0 0 40px rgba(254, 83, 187, 0.6),
+   /* CSS rule/declaration: 0 0 40px rgba(255, 210, 63, 0.6); */
 			0 0 40px rgba(255, 210, 63, 0.6);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: 50% { */
 	50% {
+  /* CSS rule/declaration: transform: translate(-50%, -50%) scale(1.22); */
 		transform: translate(-50%, -50%) scale(1.22);
+  /* CSS rule/declaration: box-shadow: */
 		box-shadow:
+   /* CSS rule/declaration: 0 0 30px rgba(255, 210, 63, 1), */
 			0 0 30px rgba(255, 210, 63, 1),
+   /* CSS rule/declaration: 0 0 60px rgba(254, 83, 187, 0.85), */
 			0 0 60px rgba(254, 83, 187, 0.85),
+   /* CSS rule/declaration: 0 0 60px rgba(255, 210, 63, 0.85); */
 			0 0 60px rgba(255, 210, 63, 0.85);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes ccReveal { */
 @keyframes ccReveal {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: opacity: 0; */
 		opacity: 0;
+  /* CSS rule/declaration: transform: translateY(16px); */
 		transform: translateY(16px);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: opacity: 1; */
 		opacity: 1;
+  /* CSS rule/declaration: transform: none; */
 		transform: none;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes ccFadeIn { */
 @keyframes ccFadeIn {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: opacity: 0; */
 		opacity: 0;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: opacity: 1; */
 		opacity: 1;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes ccPopIn { */
 @keyframes ccPopIn {
+ /* CSS rule/declaration: from { */
 	from {
+  /* CSS rule/declaration: opacity: 0; */
 		opacity: 0;
+  /* CSS rule/declaration: transform: translateY(12px) scale(0.97); */
 		transform: translateY(12px) scale(0.97);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: to { */
 	to {
+  /* CSS rule/declaration: opacity: 1; */
 		opacity: 1;
+  /* CSS rule/declaration: transform: none; */
 		transform: none;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @keyframes ccBump { */
 @keyframes ccBump {
+ /* CSS rule/declaration: 0% { */
 	0% {
+  /* CSS rule/declaration: transform: scale(1); */
 		transform: scale(1);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: 40% { */
 	40% {
+  /* CSS rule/declaration: transform: scale(1.35); */
 		transform: scale(1.35);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: 100% { */
 	100% {
+  /* CSS rule/declaration: transform: scale(1); */
 		transform: scale(1);
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: .animate-spin-slow { */
 .animate-spin-slow {
+ /* CSS rule/declaration: animation: cc-spin 26s linear infinite; */
 	animation: cc-spin 26s linear infinite;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .animate-float { */
 .animate-float {
+ /* CSS rule/declaration: animation: cc-float 6s ease-in-out infinite; */
 	animation: cc-float 6s ease-in-out infinite;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .animate-float-delay { */
 .animate-float-delay {
+ /* CSS rule/declaration: animation: cc-float 6s ease-in-out 1.4s infinite; */
 	animation: cc-float 6s ease-in-out 1.4s infinite;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .animate-marquee { */
 .animate-marquee {
+ /* CSS rule/declaration: animation: cc-marquee 30s linear infinite; */
 	animation: cc-marquee 30s linear infinite;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .animate-fade-up { */
 .animate-fade-up {
+ /* CSS rule/declaration: animation: cc-fadeUp 0.7s ease-out both; */
 	animation: cc-fadeUp 0.7s ease-out both;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .animate-pulse-soft { */
 .animate-pulse-soft {
+ /* CSS rule/declaration: animation: cc-pulseSoft 2.4s ease-in-out infinite; */
 	animation: cc-pulseSoft 2.4s ease-in-out infinite;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 3. Toast Notifications ---------- */
+/* CSS rule/declaration: .toast { */
 .toast {
+ /* CSS rule/declaration: position: fixed; */
 	position: fixed;
+ /* CSS rule/declaration: left: 50%; */
 	left: 50%;
+ /* CSS rule/declaration: bottom: 24px; */
 	bottom: 24px;
+ /* CSS rule/declaration: z-index: 2000; */
 	z-index: 2000;
+ /* CSS rule/declaration: max-width: calc(100% - 30px); */
 	max-width: calc(100% - 30px);
+ /* CSS rule/declaration: padding: 14px 22px; */
 	padding: 14px 22px;
+ /* CSS rule/declaration: color: var(--yellow); */
 	color: var(--yellow);
+ /* CSS rule/declaration: background: var(--navy); */
 	background: var(--navy);
+ /* CSS rule/declaration: border: 1px solid rgba(255, 210, 63, 0.55); */
 	border: 1px solid rgba(255, 210, 63, 0.55);
+ /* CSS rule/declaration: border-radius: 14px; */
 	border-radius: 14px;
+ /* CSS rule/declaration: box-shadow: var(--shadow); */
 	box-shadow: var(--shadow);
+ /* CSS rule/declaration: font-weight: 700; */
 	font-weight: 700;
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+ /* CSS rule/declaration: opacity: 0; */
 	opacity: 0;
+ /* CSS rule/declaration: pointer-events: none; */
 	pointer-events: none;
+ /* CSS rule/declaration: transform: translate(-50%, 14px); */
 	transform: translate(-50%, 14px);
+ /* CSS rule/declaration: transition: */
 	transition:
+  /* CSS rule/declaration: opacity 0.25s var(--ease), */
 		opacity 0.25s var(--ease),
+  /* CSS rule/declaration: transform 0.25s var(--ease); */
 		transform 0.25s var(--ease);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .toast::before { */
 .toast::before {
+ /* CSS rule/declaration: content: "\2713"; */
 	content: "\2713";
+ /* CSS rule/declaration: margin-right: 10px; */
 	margin-right: 10px;
+ /* CSS rule/declaration: font-weight: 900; */
 	font-weight: 900;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .toast.show { */
 .toast.show {
+ /* CSS rule/declaration: opacity: 1; */
 	opacity: 1;
+ /* CSS rule/declaration: transform: translate(-50%, 0); */
 	transform: translate(-50%, 0);
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 4. Page Loader ---------- */
+/* CSS rule/declaration: #page-loader { */
 #page-loader {
+ /* CSS rule/declaration: position: fixed; */
 	position: fixed;
+ /* CSS rule/declaration: inset: 0; */
 	inset: 0;
+ /* CSS rule/declaration: width: 100vw; */
 	width: 100vw;
+ /* CSS rule/declaration: height: 100vh; */
 	height: 100vh;
+ /* CSS rule/declaration: height: 100dvh; */
 	height: 100dvh;
+ /* CSS rule/declaration: z-index: 999999; */
 	z-index: 999999;
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: background: radial-gradient( */
 	background: radial-gradient(
+  /* CSS rule/declaration: circle at center, */
 		circle at center,
+  /* CSS rule/declaration: #0d1b3e 0%, */
 		#0d1b3e 0%,
+  /* CSS rule/declaration: #0d1b3e 65%, */
 		#0d1b3e 65%,
+  /* CSS rule/declaration: #0d1b3e 100% */
 		#0d1b3e 100%
+ /* CSS rule/declaration: ); */
 	);
+ /* CSS rule/declaration: opacity: 1; */
 	opacity: 1;
+ /* CSS rule/declaration: visibility: visible; */
 	visibility: visible;
+ /* CSS rule/declaration: pointer-events: auto; */
 	pointer-events: auto;
+ /* CSS rule/declaration: transition: */
 	transition:
+  /* CSS rule/declaration: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), */
 		opacity 350ms cubic-bezier(0.4, 0, 0.2, 1),
+  /* CSS rule/declaration: visibility 350ms ease; */
 		visibility 350ms ease;
+ /* CSS rule/declaration: overflow: hidden; */
 	overflow: hidden;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #page-loader.is-hidden { */
 #page-loader.is-hidden {
+ /* CSS rule/declaration: opacity: 0; */
 	opacity: 0;
+ /* CSS rule/declaration: visibility: hidden; */
 	visibility: hidden;
+ /* CSS rule/declaration: pointer-events: none; */
 	pointer-events: none;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-content { */
 .page-loader-content {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: flex-direction: column; */
 	flex-direction: column;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+ /* CSS rule/declaration: padding: 16px; */
 	padding: 16px;
+ /* CSS rule/declaration: max-width: 90vw; */
 	max-width: 90vw;
+ /* CSS rule/declaration: box-sizing: border-box; */
 	box-sizing: border-box;
+ /* CSS rule/declaration: user-select: none; */
 	user-select: none;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual { */
 .page-loader-visual {
+ /* CSS rule/declaration: position: relative; */
 	position: relative;
+ /* CSS rule/declaration: width: 320px; */
 	width: 320px;
+ /* CSS rule/declaration: height: 320px; */
 	height: 320px;
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .loader { */
 .page-loader-visual .loader {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: position: relative; */
 	position: relative;
+ /* CSS rule/declaration: --loader-scale: 0.82; */
 	--loader-scale: 0.82;
+ /* CSS rule/declaration: animation: ccLoaderBreathe 2s infinite ease-in-out; */
 	animation: ccLoaderBreathe 2s infinite ease-in-out;
+ /* CSS rule/declaration: transform: scale(var(--loader-scale)); */
 	transform: scale(var(--loader-scale));
+ /* CSS rule/declaration: transform-origin: center center; */
 	transform-origin: center center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring { */
 .page-loader-visual .ring {
+ /* CSS rule/declaration: position: absolute; */
 	position: absolute;
+ /* CSS rule/declaration: width: 190px; */
 	width: 190px;
+ /* CSS rule/declaration: height: 190px; */
 	height: 190px;
+ /* CSS rule/declaration: border: 2px solid transparent; */
 	border: 2px solid transparent;
+ /* CSS rule/declaration: border-radius: 50%; */
 	border-radius: 50%;
+ /* CSS rule/declaration: --color: var(--yellow); */
 	--color: var(--yellow);
+ /* CSS rule/declaration: border-bottom: 8px solid var(--color); */
 	border-bottom: 8px solid var(--color);
+ /* CSS rule/declaration: animation: rotate1 1s ease-in-out infinite; */
 	animation: rotate1 1s ease-in-out infinite;
+ /* CSS rule/declaration: box-shadow: 0 0 6px rgba(255, 210, 63, 0.45); */
 	box-shadow: 0 0 6px rgba(255, 210, 63, 0.45);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring:nth-child(2) { */
 .page-loader-visual .ring:nth-child(2) {
+ /* CSS rule/declaration: --color: #ffd23f; */
 	--color: #ffd23f;
+ /* CSS rule/declaration: animation-name: rotate2; */
 	animation-name: rotate2;
+ /* CSS rule/declaration: box-shadow: 0 0 6px rgba(255, 210, 63, 0.45); */
 	box-shadow: 0 0 6px rgba(255, 210, 63, 0.45);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring:nth-child(3) { */
 .page-loader-visual .ring:nth-child(3) {
+ /* CSS rule/declaration: --color: #ffffff; */
 	--color: #ffffff;
+ /* CSS rule/declaration: animation-name: rotate3; */
 	animation-name: rotate3;
+ /* CSS rule/declaration: box-shadow: 0 0 6px rgba(255, 255, 255, 0.45); */
 	box-shadow: 0 0 6px rgba(255, 255, 255, 0.45);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring:nth-child(4) { */
 .page-loader-visual .ring:nth-child(4) {
+ /* CSS rule/declaration: --color: var(--yellow); */
 	--color: var(--yellow);
+ /* CSS rule/declaration: animation-name: rotate4; */
 	animation-name: rotate4;
+ /* CSS rule/declaration: width: 380px; */
 	width: 380px;
+ /* CSS rule/declaration: height: 380px; */
 	height: 380px;
+ /* CSS rule/declaration: border-bottom: 16px solid var(--color); */
 	border-bottom: 16px solid var(--color);
+ /* CSS rule/declaration: box-shadow: 0 0 10px rgba(255, 210, 63, 0.4); */
 	box-shadow: 0 0 10px rgba(255, 210, 63, 0.4);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring:nth-child(5) { */
 .page-loader-visual .ring:nth-child(5) {
+ /* CSS rule/declaration: --color: #ffd23f; */
 	--color: #ffd23f;
+ /* CSS rule/declaration: animation-name: rotate5; */
 	animation-name: rotate5;
+ /* CSS rule/declaration: width: 380px; */
 	width: 380px;
+ /* CSS rule/declaration: height: 380px; */
 	height: 380px;
+ /* CSS rule/declaration: border-bottom: 16px solid var(--color); */
 	border-bottom: 16px solid var(--color);
+ /* CSS rule/declaration: box-shadow: 0 0 10px rgba(255, 210, 63, 0.4); */
 	box-shadow: 0 0 10px rgba(255, 210, 63, 0.4);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring:nth-child(6) { */
 .page-loader-visual .ring:nth-child(6) {
+ /* CSS rule/declaration: --color: #ffffff; */
 	--color: #ffffff;
+ /* CSS rule/declaration: animation-name: rotate6; */
 	animation-name: rotate6;
+ /* CSS rule/declaration: width: 380px; */
 	width: 380px;
+ /* CSS rule/declaration: height: 380px; */
 	height: 380px;
+ /* CSS rule/declaration: border-bottom: 16px solid var(--color); */
 	border-bottom: 16px solid var(--color);
+ /* CSS rule/declaration: box-shadow: 0 0 10px rgba(255, 255, 255, 0.4); */
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-visual .ring:nth-child(7) { */
 .page-loader-visual .ring:nth-child(7) {
+ /* CSS rule/declaration: --color: #0d1b3e; */
 	--color: #0d1b3e;
+ /* CSS rule/declaration: animation-name: rotate1; */
 	animation-name: rotate1;
+ /* CSS rule/declaration: width: 190px; */
 	width: 190px;
+ /* CSS rule/declaration: height: 190px; */
 	height: 190px;
+ /* CSS rule/declaration: box-shadow: 0 0 6px rgba(13, 27, 62, 0.45); */
 	box-shadow: 0 0 6px rgba(13, 27, 62, 0.45);
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: .page-loader-visual .nucleus { */
 .page-loader-visual .nucleus {
+ /* CSS rule/declaration: width: 22px; */
 	width: 22px;
+ /* CSS rule/declaration: height: 22px; */
 	height: 22px;
+ /* CSS rule/declaration: background: radial-gradient(circle, var(--yellow), #ffd23f); */
 	background: radial-gradient(circle, var(--yellow), #ffd23f);
+ /* CSS rule/declaration: border-radius: 50%; */
 	border-radius: 50%;
+ /* CSS rule/declaration: box-shadow: */
 	box-shadow:
+  /* CSS rule/declaration: 0 0 20px rgba(255, 210, 63, 0.8), */
 		0 0 20px rgba(255, 210, 63, 0.8),
+  /* CSS rule/declaration: 0 0 40px rgba(254, 83, 187, 0.6), */
 		0 0 40px rgba(254, 83, 187, 0.6),
+  /* CSS rule/declaration: 0 0 40px rgba(255, 210, 63, 0.6); */
 		0 0 40px rgba(255, 210, 63, 0.6);
+ /* CSS rule/declaration: position: absolute; */
 	position: absolute;
+ /* CSS rule/declaration: top: 50%; */
 	top: 50%;
+ /* CSS rule/declaration: left: 50%; */
 	left: 50%;
+ /* CSS rule/declaration: transform: translate(-50%, -50%); */
 	transform: translate(-50%, -50%);
+ /* CSS rule/declaration: animation: ccPulse 1s ease-in-out infinite; */
 	animation: ccPulse 1s ease-in-out infinite;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-brand { */
 .page-loader-brand {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: flex-direction: column; */
 	flex-direction: column;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: gap: 6px; */
 	gap: 6px;
+ /* CSS rule/declaration: margin-top: 14px; */
 	margin-top: 14px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-title { */
 .page-loader-title {
+ /* CSS rule/declaration: color: var(--yellow); */
 	color: var(--yellow);
+ /* CSS rule/declaration: font-size: clamp(1.4rem, 4vw, 1.85rem); */
 	font-size: clamp(1.4rem, 4vw, 1.85rem);
+ /* CSS rule/declaration: font-weight: 800; */
 	font-weight: 800;
+ /* CSS rule/declaration: letter-spacing: -0.01em; */
 	letter-spacing: -0.01em;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-title span { */
 .page-loader-title span {
+ /* CSS rule/declaration: color: var(--white); */
 	color: var(--white);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .page-loader-text { */
 .page-loader-text {
+ /* CSS rule/declaration: margin: 0; */
 	margin: 0;
+ /* CSS rule/declaration: color: rgba(255, 255, 255, 0.88); */
 	color: rgba(255, 255, 255, 0.88);
+ /* CSS rule/declaration: font-size: 0.95rem; */
 	font-size: 0.95rem;
+ /* CSS rule/declaration: font-weight: 500; */
 	font-weight: 500;
+ /* CSS rule/declaration: letter-spacing: 0.015em; */
 	letter-spacing: 0.015em;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 5. Lightbox & Modal ---------- */
+/* CSS rule/declaration: .lightbox[hidden], */
 .lightbox[hidden],
+/* CSS rule/declaration: .modal-backdrop[hidden], */
 .modal-backdrop[hidden],
+/* CSS rule/declaration: .lb-btn[hidden] { */
 .lb-btn[hidden] {
+ /* CSS rule/declaration: display: none !important; */
 	display: none !important;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: body.lightbox-open { */
 body.lightbox-open {
+ /* CSS rule/declaration: overflow: hidden; */
 	overflow: hidden;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: .lightbox { */
 .lightbox {
+ /* CSS rule/declaration: position: fixed; */
 	position: fixed;
+ /* CSS rule/declaration: inset: 0; */
 	inset: 0;
+ /* CSS rule/declaration: z-index: 99990; */
 	z-index: 99990;
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: padding: 56px 64px; */
 	padding: 56px 64px;
+ /* CSS rule/declaration: background: rgba(8, 20, 47, 0.92); */
 	background: rgba(8, 20, 47, 0.92);
+ /* CSS rule/declaration: animation: ccFadeIn 0.2s ease; */
 	animation: ccFadeIn 0.2s ease;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-figure { */
 .lb-figure {
+ /* CSS rule/declaration: max-width: min(1000px, 100%); */
 	max-width: min(1000px, 100%);
+ /* CSS rule/declaration: margin: 0; */
 	margin: 0;
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+ /* CSS rule/declaration: color: var(--white); */
 	color: var(--white);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-image { */
 .lb-image {
+ /* CSS rule/declaration: display: block; */
 	display: block;
+ /* CSS rule/declaration: margin: 0 auto; */
 	margin: 0 auto;
+ /* CSS rule/declaration: max-width: 100%; */
 	max-width: 100%;
+ /* CSS rule/declaration: max-height: 72vh; */
 	max-height: 72vh;
+ /* CSS rule/declaration: border-radius: 10px; */
 	border-radius: 10px;
+ /* CSS rule/declaration: background: var(--navy); */
 	background: var(--navy);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-caption { */
 .lb-caption {
+ /* CSS rule/declaration: margin-top: 12px; */
 	margin-top: 12px;
+ /* CSS rule/declaration: font-size: 1rem; */
 	font-size: 1rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-count { */
 .lb-count {
+ /* CSS rule/declaration: margin: 4px 0 0; */
 	margin: 4px 0 0;
+ /* CSS rule/declaration: font-size: 0.85rem; */
 	font-size: 0.85rem;
+ /* CSS rule/declaration: opacity: 0.8; */
 	opacity: 0.8;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-btn { */
 .lb-btn {
+ /* CSS rule/declaration: position: absolute; */
 	position: absolute;
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: width: 48px; */
 	width: 48px;
+ /* CSS rule/declaration: height: 48px; */
 	height: 48px;
+ /* CSS rule/declaration: border: 2px solid var(--yellow); */
 	border: 2px solid var(--yellow);
+ /* CSS rule/declaration: border-radius: 50%; */
 	border-radius: 50%;
+ /* CSS rule/declaration: background: var(--navy); */
 	background: var(--navy);
+ /* CSS rule/declaration: color: var(--yellow); */
 	color: var(--yellow);
+ /* CSS rule/declaration: font-size: 1.8rem; */
 	font-size: 1.8rem;
+ /* CSS rule/declaration: line-height: 1; */
 	line-height: 1;
+ /* CSS rule/declaration: cursor: pointer; */
 	cursor: pointer;
+ /* CSS rule/declaration: transition: */
 	transition:
+  /* CSS rule/declaration: background 0.2s ease, */
 		background 0.2s ease,
+  /* CSS rule/declaration: color 0.2s ease; */
 		color 0.2s ease;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-btn:hover, */
 .lb-btn:hover,
+/* CSS rule/declaration: .lb-btn:focus-visible { */
 .lb-btn:focus-visible {
+ /* CSS rule/declaration: background: var(--yellow); */
 	background: var(--yellow);
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-close { */
 .lb-close {
+ /* CSS rule/declaration: top: 12px; */
 	top: 12px;
+ /* CSS rule/declaration: right: 12px; */
 	right: 12px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-prev { */
 .lb-prev {
+ /* CSS rule/declaration: left: 8px; */
 	left: 8px;
+ /* CSS rule/declaration: top: 50%; */
 	top: 50%;
+ /* CSS rule/declaration: transform: translateY(-50%); */
 	transform: translateY(-50%);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .lb-next { */
 .lb-next {
+ /* CSS rule/declaration: right: 8px; */
 	right: 8px;
+ /* CSS rule/declaration: top: 50%; */
 	top: 50%;
+ /* CSS rule/declaration: transform: translateY(-50%); */
 	transform: translateY(-50%);
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: .modal-backdrop { */
 .modal-backdrop {
+ /* CSS rule/declaration: position: fixed; */
 	position: fixed;
+ /* CSS rule/declaration: inset: 0; */
 	inset: 0;
+ /* CSS rule/declaration: z-index: 99990; */
 	z-index: 99990;
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: padding: 16px; */
 	padding: 16px;
+ /* CSS rule/declaration: background: rgba(8, 20, 47, 0.8); */
 	background: rgba(8, 20, 47, 0.8);
+ /* CSS rule/declaration: animation: ccFadeIn 0.2s ease; */
 	animation: ccFadeIn 0.2s ease;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal { */
 .modal {
+ /* CSS rule/declaration: position: relative; */
 	position: relative;
+ /* CSS rule/declaration: display: grid; */
 	display: grid;
+ /* CSS rule/declaration: grid-template-columns: 1fr 1fr; */
 	grid-template-columns: 1fr 1fr;
+ /* CSS rule/declaration: width: min(760px, 100%); */
 	width: min(760px, 100%);
+ /* CSS rule/declaration: max-height: 92vh; */
 	max-height: 92vh;
+ /* CSS rule/declaration: overflow: auto; */
 	overflow: auto;
+ /* CSS rule/declaration: border-radius: var(--radius); */
 	border-radius: var(--radius);
+ /* CSS rule/declaration: background: var(--white); */
 	background: var(--white);
+ /* CSS rule/declaration: box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); */
 	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+ /* CSS rule/declaration: animation: ccPopIn 0.25s ease; */
 	animation: ccPopIn 0.25s ease;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal-image { */
 .modal-image {
+ /* CSS rule/declaration: width: 100%; */
 	width: 100%;
+ /* CSS rule/declaration: height: 100%; */
 	height: 100%;
+ /* CSS rule/declaration: min-height: 220px; */
 	min-height: 220px;
+ /* CSS rule/declaration: object-fit: cover; */
 	object-fit: cover;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal-body { */
 .modal-body {
+ /* CSS rule/declaration: padding: 28px 24px; */
 	padding: 28px 24px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal-body h2 { */
 .modal-body h2 {
+ /* CSS rule/declaration: margin: 10px 0 6px; */
 	margin: 10px 0 6px;
+ /* CSS rule/declaration: font-size: 1.5rem; */
 	font-size: 1.5rem;
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal-close { */
 .modal-close {
+ /* CSS rule/declaration: position: absolute; */
 	position: absolute;
+ /* CSS rule/declaration: top: 8px; */
 	top: 8px;
+ /* CSS rule/declaration: right: 8px; */
 	right: 8px;
+ /* CSS rule/declaration: width: 44px; */
 	width: 44px;
+ /* CSS rule/declaration: height: 44px; */
 	height: 44px;
+ /* CSS rule/declaration: border: 2px solid var(--navy); */
 	border: 2px solid var(--navy);
+ /* CSS rule/declaration: border-radius: 50%; */
 	border-radius: 50%;
+ /* CSS rule/declaration: background: var(--white); */
 	background: var(--white);
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+ /* CSS rule/declaration: font-size: 1.6rem; */
 	font-size: 1.6rem;
+ /* CSS rule/declaration: line-height: 1; */
 	line-height: 1;
+ /* CSS rule/declaration: cursor: pointer; */
 	cursor: pointer;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal-close:hover, */
 .modal-close:hover,
+/* CSS rule/declaration: .modal-close:focus-visible { */
 .modal-close:focus-visible {
+ /* CSS rule/declaration: background: var(--yellow); */
 	background: var(--yellow);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal .badge { */
 .modal .badge {
+ /* CSS rule/declaration: display: inline-block; */
 	display: inline-block;
+ /* CSS rule/declaration: border-radius: 999px; */
 	border-radius: 999px;
+ /* CSS rule/declaration: padding: 3px 12px; */
 	padding: 3px 12px;
+ /* CSS rule/declaration: font-size: 0.7rem; */
 	font-size: 0.7rem;
+ /* CSS rule/declaration: font-weight: 800; */
 	font-weight: 800;
+ /* CSS rule/declaration: text-transform: uppercase; */
 	text-transform: uppercase;
+ /* CSS rule/declaration: letter-spacing: 0.06em; */
 	letter-spacing: 0.06em;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal .badge-new { */
 .modal .badge-new {
+ /* CSS rule/declaration: background: #ffe9a8; */
 	background: #ffe9a8;
+ /* CSS rule/declaration: color: #7a5800; */
 	color: #7a5800;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal .badge-used { */
 .modal .badge-used {
+ /* CSS rule/declaration: background: rgb(194 87 47 / 0.15); */
 	background: rgb(194 87 47 / 0.15);
+ /* CSS rule/declaration: color: #c2572f; */
 	color: #c2572f;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .modal .price { */
 .modal .price {
+ /* CSS rule/declaration: font-size: 1.5rem; */
 	font-size: 1.5rem;
+ /* CSS rule/declaration: font-weight: 800; */
 	font-weight: 800;
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+ /* CSS rule/declaration: margin: 0.25rem 0; */
 	margin: 0.25rem 0;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 6. Hub Map ---------- */
+/* CSS rule/declaration: .hub-map { */
 .hub-map {
+ /* CSS rule/declaration: width: 100%; */
 	width: 100%;
+ /* CSS rule/declaration: min-height: 380px; */
 	min-height: 380px;
+ /* CSS rule/declaration: height: 460px; */
 	height: 460px;
+ /* CSS rule/declaration: border: 1px solid #e2e8f0; */
 	border: 1px solid #e2e8f0;
+ /* CSS rule/declaration: border-radius: 1.5rem; */
 	border-radius: 1.5rem;
+ /* CSS rule/declaration: overflow: hidden; */
 	overflow: hidden;
+ /* CSS rule/declaration: background: var(--grey); */
 	background: var(--grey);
+ /* CSS rule/declaration: z-index: 0; */
 	z-index: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .hub-map.map-unavailable { */
 .hub-map.map-unavailable {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: padding: 24px; */
 	padding: 24px;
+ /* CSS rule/declaration: height: auto; */
 	height: auto;
+ /* CSS rule/declaration: min-height: 120px; */
 	min-height: 120px;
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .map-popup p { */
 .map-popup p {
+ /* CSS rule/declaration: margin: 4px 0 0; */
 	margin: 4px 0 0;
+ /* CSS rule/declaration: font-size: 0.9rem; */
 	font-size: 0.9rem;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 7. Scroll Reveal ---------- */
+/* CSS rule/declaration: .js-reveal .reveal:not(.is-visible) { */
 .js-reveal .reveal:not(.is-visible) {
+ /* CSS rule/declaration: opacity: 0 !important; */
 	opacity: 0 !important;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .js-reveal .reveal.is-visible { */
 .js-reveal .reveal.is-visible {
+ /* CSS rule/declaration: opacity: 1 !important; */
 	opacity: 1 !important;
+ /* CSS rule/declaration: animation: ccReveal 0.5s ease backwards; */
 	animation: ccReveal 0.5s ease backwards;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 8. Forms & Validation Errors ---------- */
+/* CSS rule/declaration: .form-group input.input-error, */
 .form-group input.input-error,
+/* CSS rule/declaration: .form-group select.input-error, */
 .form-group select.input-error,
+/* CSS rule/declaration: .form-group textarea.input-error, */
 .form-group textarea.input-error,
+/* CSS rule/declaration: .input-error { */
 .input-error {
+ /* CSS rule/declaration: border-color: #f87171 !important; */
 	border-color: #f87171 !important;
+ /* CSS rule/declaration: background-color: #fff6f5; */
 	background-color: #fff6f5;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: form button[type="submit"]:disabled { */
 form button[type="submit"]:disabled {
+ /* CSS rule/declaration: opacity: 0.55; */
 	opacity: 0.55;
+ /* CSS rule/declaration: cursor: not-allowed; */
 	cursor: not-allowed;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 9. Cookie Banner & Consent ---------- */
+/* CSS rule/declaration: .cookie-banner { */
 .cookie-banner {
+ /* CSS rule/declaration: position: fixed; */
 	position: fixed;
+ /* CSS rule/declaration: right: 12px; */
 	right: 12px;
+ /* CSS rule/declaration: bottom: 12px; */
 	bottom: 12px;
+ /* CSS rule/declaration: left: 12px; */
 	left: 12px;
+ /* CSS rule/declaration: z-index: 99980; */
 	z-index: 99980;
+ /* CSS rule/declaration: max-width: 880px; */
 	max-width: 880px;
+ /* CSS rule/declaration: max-height: 88vh; */
 	max-height: 88vh;
+ /* CSS rule/declaration: margin: 0 auto; */
 	margin: 0 auto;
+ /* CSS rule/declaration: padding: 20px 22px; */
 	padding: 20px 22px;
+ /* CSS rule/declaration: overflow-y: auto; */
 	overflow-y: auto;
+ /* CSS rule/declaration: color: var(--white); */
 	color: var(--white);
+ /* CSS rule/declaration: background: var(--navy); */
 	background: var(--navy);
+ /* CSS rule/declaration: border: 2px solid var(--yellow); */
 	border: 2px solid var(--yellow);
+ /* CSS rule/declaration: border-radius: var(--radius); */
 	border-radius: var(--radius);
+ /* CSS rule/declaration: box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); */
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner[hidden], */
 .cookie-banner[hidden],
+/* CSS rule/declaration: .cookie-settings[hidden], */
 .cookie-settings[hidden],
+/* CSS rule/declaration: .cookie-actions[hidden] { */
 .cookie-actions[hidden] {
+ /* CSS rule/declaration: display: none; */
 	display: none;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner .cookie-title { */
 .cookie-banner .cookie-title {
+ /* CSS rule/declaration: margin-bottom: 8px; */
 	margin-bottom: 8px;
+ /* CSS rule/declaration: color: var(--yellow); */
 	color: var(--yellow);
+ /* CSS rule/declaration: font-size: 1.25rem; */
 	font-size: 1.25rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner p { */
 .cookie-banner p {
+ /* CSS rule/declaration: margin-bottom: 12px; */
 	margin-bottom: 12px;
+ /* CSS rule/declaration: color: var(--white); */
 	color: var(--white);
+ /* CSS rule/declaration: font-size: 0.97rem; */
 	font-size: 0.97rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner a { */
 .cookie-banner a {
+ /* CSS rule/declaration: color: var(--yellow); */
 	color: var(--yellow);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-actions { */
 .cookie-actions {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: flex-wrap: wrap; */
 	flex-wrap: wrap;
+ /* CSS rule/declaration: gap: 10px; */
 	gap: 10px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-options { */
 .cookie-options {
+ /* CSS rule/declaration: margin: 0 0 14px; */
 	margin: 0 0 14px;
+ /* CSS rule/declaration: padding: 0; */
 	padding: 0;
+ /* CSS rule/declaration: border: 0; */
 	border: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-options legend { */
 .cookie-options legend {
+ /* CSS rule/declaration: margin-bottom: 8px; */
 	margin-bottom: 8px;
+ /* CSS rule/declaration: padding: 0; */
 	padding: 0;
+ /* CSS rule/declaration: font-weight: 800; */
 	font-weight: 800;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-option { */
 .cookie-option {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: flex-start; */
 	align-items: flex-start;
+ /* CSS rule/declaration: gap: 12px; */
 	gap: 12px;
+ /* CSS rule/declaration: margin-bottom: 12px; */
 	margin-bottom: 12px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner input[type="checkbox"] { */
 .cookie-banner input[type="checkbox"] {
+ /* CSS rule/declaration: flex: 0 0 22px; */
 	flex: 0 0 22px;
+ /* CSS rule/declaration: width: 22px; */
 	width: 22px;
+ /* CSS rule/declaration: height: 22px; */
 	height: 22px;
+ /* CSS rule/declaration: min-width: 22px; */
 	min-width: 22px;
+ /* CSS rule/declaration: margin: 2px 0 0; */
 	margin: 2px 0 0;
+ /* CSS rule/declaration: padding: 0; */
 	padding: 0;
+ /* CSS rule/declaration: accent-color: var(--yellow); */
 	accent-color: var(--yellow);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-option label { */
 .cookie-option label {
+ /* CSS rule/declaration: color: var(--white); */
 	color: var(--white);
+ /* CSS rule/declaration: cursor: pointer; */
 	cursor: pointer;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-help { */
 .cookie-help {
+ /* CSS rule/declaration: display: block; */
 	display: block;
+ /* CSS rule/declaration: font-size: 0.9rem; */
 	font-size: 0.9rem;
+ /* CSS rule/declaration: opacity: 0.9; */
 	opacity: 0.9;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: .consent-placeholder { */
 .consent-placeholder {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: flex-direction: column; */
 	flex-direction: column;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: gap: 12px; */
 	gap: 12px;
+ /* CSS rule/declaration: min-height: 260px; */
 	min-height: 260px;
+ /* CSS rule/declaration: padding: 24px; */
 	padding: 24px;
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+ /* CSS rule/declaration: background: var(--grey); */
 	background: var(--grey);
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .consent-placeholder p { */
 .consent-placeholder p {
+ /* CSS rule/declaration: margin: 0; */
 	margin: 0;
+ /* CSS rule/declaration: max-width: 520px; */
 	max-width: 520px;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 10. Tailwind Page Overrides & Components ---------- */
+/* CSS rule/declaration: .cc-result h3 { */
 .cc-result h3 {
+ /* CSS rule/declaration: font-size: 1.125rem; */
 	font-size: 1.125rem;
+ /* CSS rule/declaration: font-weight: 800; */
 	font-weight: 800;
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result ul { */
 .cc-result ul {
+ /* CSS rule/declaration: margin-top: 0.75rem; */
 	margin-top: 0.75rem;
+ /* CSS rule/declaration: display: grid; */
 	display: grid;
+ /* CSS rule/declaration: gap: 0.35rem; */
 	gap: 0.35rem;
+ /* CSS rule/declaration: font-size: 0.875rem; */
 	font-size: 0.875rem;
+ /* CSS rule/declaration: color: #475569; */
 	color: #475569;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result pre { */
 .cc-result pre {
+ /* CSS rule/declaration: margin-top: 0.75rem; */
 	margin-top: 0.75rem;
+ /* CSS rule/declaration: white-space: pre-wrap; */
 	white-space: pre-wrap;
+ /* CSS rule/declaration: word-break: break-word; */
 	word-break: break-word;
+ /* CSS rule/declaration: border-radius: 1rem; */
 	border-radius: 1rem;
+ /* CSS rule/declaration: background: #fff; */
 	background: #fff;
+ /* CSS rule/declaration: border: 1px solid #e2e8f0; */
 	border: 1px solid #e2e8f0;
+ /* CSS rule/declaration: padding: 1rem; */
 	padding: 1rem;
+ /* CSS rule/declaration: font-size: 0.75rem; */
 	font-size: 0.75rem;
+ /* CSS rule/declaration: color: #334155; */
 	color: #334155;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result .status-ok { */
 .cc-result .status-ok {
+ /* CSS rule/declaration: color: #047857; */
 	color: #047857;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result .status-low { */
 .cc-result .status-low {
+ /* CSS rule/declaration: color: #b45309; */
 	color: #b45309;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result .status-out { */
 .cc-result .status-out {
+ /* CSS rule/declaration: color: #b91c1c; */
 	color: #b91c1c;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result .hint { */
 .cc-result .hint {
+ /* CSS rule/declaration: margin-top: 0.75rem; */
 	margin-top: 0.75rem;
+ /* CSS rule/declaration: font-size: 0.75rem; */
 	font-size: 0.75rem;
+ /* CSS rule/declaration: color: #94a3b8; */
 	color: #94a3b8;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result .cc-btn { */
 .cc-result .cc-btn {
+ /* CSS rule/declaration: display: inline-flex; */
 	display: inline-flex;
+ /* CSS rule/declaration: margin-top: 1rem; */
 	margin-top: 1rem;
+ /* CSS rule/declaration: border-radius: 999px; */
 	border-radius: 999px;
+ /* CSS rule/declaration: background: var(--navy); */
 	background: var(--navy);
+ /* CSS rule/declaration: color: #fff; */
 	color: #fff;
+ /* CSS rule/declaration: padding: 0.75rem 1.5rem; */
 	padding: 0.75rem 1.5rem;
+ /* CSS rule/declaration: font-size: 0.875rem; */
 	font-size: 0.875rem;
+ /* CSS rule/declaration: font-weight: 700; */
 	font-weight: 700;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-result .cc-btn:hover { */
 .cc-result .cc-btn:hover {
+ /* CSS rule/declaration: background: #1c3268; */
 	background: #1c3268;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-hub-map-wrap { */
 .cc-hub-map-wrap {
+ /* CSS rule/declaration: margin-top: 2.5rem; */
 	margin-top: 2.5rem;
+/* CSS rule/declaration: } */
 }
 
 /* Buttons used by the cookie banner, map message and quick view */
+/* CSS rule/declaration: .cookie-banner .btn, */
 .cookie-banner .btn,
+/* CSS rule/declaration: .modal .btn, */
 .modal .btn,
+/* CSS rule/declaration: .hub-map .btn, */
 .hub-map .btn,
+/* CSS rule/declaration: .consent-placeholder .btn { */
 .consent-placeholder .btn {
+ /* CSS rule/declaration: display: inline-flex; */
 	display: inline-flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: min-height: 42px; */
 	min-height: 42px;
+ /* CSS rule/declaration: padding: 10px 22px; */
 	padding: 10px 22px;
+ /* CSS rule/declaration: border: 2px solid transparent; */
 	border: 2px solid transparent;
+ /* CSS rule/declaration: border-radius: 999px; */
 	border-radius: 999px;
+ /* CSS rule/declaration: cursor: pointer; */
 	cursor: pointer;
+ /* CSS rule/declaration: background: var(--yellow); */
 	background: var(--yellow);
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+ /* CSS rule/declaration: font: */
 	font:
+  /* CSS rule/declaration: 700 0.9rem Inter, */
 		700 0.9rem Inter,
+  /* CSS rule/declaration: sans-serif; */
 		sans-serif;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner .btn:hover, */
 .cookie-banner .btn:hover,
+/* CSS rule/declaration: .modal .btn:hover, */
 .modal .btn:hover,
+/* CSS rule/declaration: .hub-map .btn:hover { */
 .hub-map .btn:hover {
+ /* CSS rule/declaration: background: #ffdf5e; */
 	background: #ffdf5e;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner .btn-ghost-light { */
 .cookie-banner .btn-ghost-light {
+ /* CSS rule/declaration: background: transparent; */
 	background: transparent;
+ /* CSS rule/declaration: color: #fff; */
 	color: #fff;
+ /* CSS rule/declaration: border-color: rgb(255 255 255 / 0.45); */
 	border-color: rgb(255 255 255 / 0.45);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cookie-banner .btn-ghost-light:hover { */
 .cookie-banner .btn-ghost-light:hover {
+ /* CSS rule/declaration: background: rgb(255 255 255 / 0.12); */
 	background: rgb(255 255 255 / 0.12);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .btn-sm { */
 .btn-sm {
+ /* CSS rule/declaration: min-height: 36px !important; */
 	min-height: 36px !important;
+ /* CSS rule/declaration: padding: 6px 16px !important; */
 	padding: 6px 16px !important;
+ /* CSS rule/declaration: font-size: 0.8125rem !important; */
 	font-size: 0.8125rem !important;
+/* CSS rule/declaration: } */
 }
 
 /* Image cursors */
+/* CSS rule/declaration: main img:not([data-no-lightbox]) { */
 main img:not([data-no-lightbox]) {
+ /* CSS rule/declaration: cursor: zoom-in; */
 	cursor: zoom-in;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main a img, */
 main a img,
+/* CSS rule/declaration: main button img, */
 main button img,
+/* CSS rule/declaration: main img[alt=""] { */
 main img[alt=""] {
+ /* CSS rule/declaration: cursor: inherit; */
 	cursor: inherit;
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 11. Responsive & Accessibility ---------- */
+/* CSS rule/declaration: @media (max-width: 640px) { */
 @media (max-width: 640px) {
+ /* CSS rule/declaration: .modal { */
 	.modal {
+  /* CSS rule/declaration: grid-template-columns: 1fr; */
 		grid-template-columns: 1fr;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .modal-image { */
 	.modal-image {
+  /* CSS rule/declaration: max-height: 220px; */
 		max-height: 220px;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 620px) { */
 @media (max-width: 620px) {
+ /* CSS rule/declaration: .toast { */
 	.toast {
+  /* CSS rule/declaration: width: calc(100% - 30px); */
 		width: calc(100% - 30px);
+  /* CSS rule/declaration: border-radius: 12px; */
 		border-radius: 12px;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 600px) { */
 @media (max-width: 600px) {
+ /* CSS rule/declaration: .lightbox { */
 	.lightbox {
+  /* CSS rule/declaration: padding: 64px 12px 24px; */
 		padding: 64px 12px 24px;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .lb-prev, */
 	.lb-prev,
+ /* CSS rule/declaration: .lb-next { */
 	.lb-next {
+  /* CSS rule/declaration: top: auto; */
 		top: auto;
+  /* CSS rule/declaration: bottom: 12px; */
 		bottom: 12px;
+  /* CSS rule/declaration: transform: none; */
 		transform: none;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .hub-map { */
 	.hub-map {
+  /* CSS rule/declaration: height: 340px; */
 		height: 340px;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (min-width: 1025px) { */
 @media (min-width: 1025px) {
+ /* CSS rule/declaration: .page-loader-visual { */
 	.page-loader-visual {
+  /* CSS rule/declaration: width: 400px; */
 		width: 400px;
+  /* CSS rule/declaration: height: 400px; */
 		height: 400px;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-visual .loader { */
 	.page-loader-visual .loader {
+  /* CSS rule/declaration: --loader-scale: 1; */
 		--loader-scale: 1;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 520px) { */
 @media (max-width: 520px) {
+ /* CSS rule/declaration: .page-loader-visual { */
 	.page-loader-visual {
+  /* CSS rule/declaration: width: 250px; */
 		width: 250px;
+  /* CSS rule/declaration: height: 250px; */
 		height: 250px;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-visual .loader { */
 	.page-loader-visual .loader {
+  /* CSS rule/declaration: --loader-scale: 0.64; */
 		--loader-scale: 0.64;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-brand { */
 	.page-loader-brand {
+  /* CSS rule/declaration: margin-top: 8px; */
 		margin-top: 8px;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 360px) { */
 @media (max-width: 360px) {
+ /* CSS rule/declaration: .page-loader-visual { */
 	.page-loader-visual {
+  /* CSS rule/declaration: width: 200px; */
 		width: 200px;
+  /* CSS rule/declaration: height: 200px; */
 		height: 200px;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-visual .loader { */
 	.page-loader-visual .loader {
+  /* CSS rule/declaration: --loader-scale: 0.52; */
 		--loader-scale: 0.52;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
 /* ----- Shared wishlist and centred legal information ----- */
+/* CSS rule/declaration: .cc-footer-legal { */
 .cc-footer-legal {
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-footer-legal > p { */
 .cc-footer-legal > p {
+ /* CSS rule/declaration: margin-left: auto; */
 	margin-left: auto;
+ /* CSS rule/declaration: margin-right: auto; */
 	margin-right: auto;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: [data-add-to-wishlist].is-wishlisted { */
 [data-add-to-wishlist].is-wishlisted {
+ /* CSS rule/declaration: border-color: #0d1b3e; */
 	border-color: #0d1b3e;
+ /* CSS rule/declaration: background: #0d1b3e; */
 	background: #0d1b3e;
+ /* CSS rule/declaration: color: #ffd23f; */
 	color: #ffd23f;
+/* CSS rule/declaration: } */
 }
 
 /* ----- Parent Hub checklist print layout ----- */
+/* CSS rule/declaration: .cc-print-header, */
 .cc-print-header,
+/* CSS rule/declaration: .cc-print-footer { */
 .cc-print-footer {
+ /* CSS rule/declaration: display: none; */
 	display: none;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: @media print { */
 @media print {
+ /* CSS rule/declaration: @page { */
 	@page {
+  /* CSS rule/declaration: size: A4; */
 		size: A4;
+  /* CSS rule/declaration: margin: 16mm; */
 		margin: 16mm;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: body * { */
 	body * {
+  /* CSS rule/declaration: visibility: hidden !important; */
 		visibility: hidden !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print, */
 	#parent-checklist-print,
+ /* CSS rule/declaration: #parent-checklist-print * { */
 	#parent-checklist-print * {
+  /* CSS rule/declaration: visibility: visible !important; */
 		visibility: visible !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print { */
 	#parent-checklist-print {
+  /* CSS rule/declaration: position: absolute !important; */
 		position: absolute !important;
+  /* CSS rule/declaration: top: 0 !important; */
 		top: 0 !important;
+  /* CSS rule/declaration: left: 0 !important; */
 		left: 0 !important;
+  /* CSS rule/declaration: width: 100% !important; */
 		width: 100% !important;
+  /* CSS rule/declaration: max-width: none !important; */
 		max-width: none !important;
+  /* CSS rule/declaration: padding: 0 !important; */
 		padding: 0 !important;
+  /* CSS rule/declaration: border: 0 !important; */
 		border: 0 !important;
+  /* CSS rule/declaration: border-radius: 0 !important; */
 		border-radius: 0 !important;
+  /* CSS rule/declaration: box-shadow: none !important; */
 		box-shadow: none !important;
+  /* CSS rule/declaration: background: #fff !important; */
 		background: #fff !important;
+  /* CSS rule/declaration: color: #0d1b3e !important; */
 		color: #0d1b3e !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print .cc-print-header, */
 	#parent-checklist-print .cc-print-header,
+ /* CSS rule/declaration: #parent-checklist-print .cc-print-footer { */
 	#parent-checklist-print .cc-print-footer {
+  /* CSS rule/declaration: display: block !important; */
 		display: block !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print .cc-checklist-screen-title, */
 	#parent-checklist-print .cc-checklist-screen-title,
+ /* CSS rule/declaration: #parent-checklist-print #print-checklist { */
 	#parent-checklist-print #print-checklist {
+  /* CSS rule/declaration: display: none !important; */
 		display: none !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print ul { */
 	#parent-checklist-print ul {
+  /* CSS rule/declaration: margin-top: 1.25rem !important; */
 		margin-top: 1.25rem !important;
+  /* CSS rule/declaration: padding: 0 !important; */
 		padding: 0 !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print .cc-checklist-item { */
 	#parent-checklist-print .cc-checklist-item {
+  /* CSS rule/declaration: break-inside: avoid; */
 		break-inside: avoid;
+  /* CSS rule/declaration: margin-bottom: 0.8rem !important; */
 		margin-bottom: 0.8rem !important;
+  /* CSS rule/declaration: color: #1e293b !important; */
 		color: #1e293b !important;
+  /* CSS rule/declaration: font-size: 11pt !important; */
 		font-size: 11pt !important;
+  /* CSS rule/declaration: line-height: 1.45 !important; */
 		line-height: 1.45 !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print input[type="checkbox"] { */
 	#parent-checklist-print input[type="checkbox"] {
+  /* CSS rule/declaration: appearance: none; */
 		appearance: none;
+  /* CSS rule/declaration: width: 15px; */
 		width: 15px;
+  /* CSS rule/declaration: height: 15px; */
 		height: 15px;
+  /* CSS rule/declaration: min-width: 15px; */
 		min-width: 15px;
+  /* CSS rule/declaration: margin: 2px 10px 0 0; */
 		margin: 2px 10px 0 0;
+  /* CSS rule/declaration: border: 1.5px solid #0d1b3e; */
 		border: 1.5px solid #0d1b3e;
+  /* CSS rule/declaration: border-radius: 3px; */
 		border-radius: 3px;
+  /* CSS rule/declaration: background: #fff; */
 		background: #fff;
+  /* CSS rule/declaration: print-color-adjust: exact; */
 		print-color-adjust: exact;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #parent-checklist-print .cc-print-footer { */
 	#parent-checklist-print .cc-print-footer {
+  /* CSS rule/declaration: margin-top: 2rem; */
 		margin-top: 2rem;
+  /* CSS rule/declaration: padding-top: 1rem; */
 		padding-top: 1rem;
+  /* CSS rule/declaration: border-top: 1px solid #cbd5e1; */
 		border-top: 1px solid #cbd5e1;
+  /* CSS rule/declaration: text-align: center; */
 		text-align: center;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .cookie-banner { */
 	.cookie-banner {
+  /* CSS rule/declaration: display: none !important; */
 		display: none !important;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (prefers-reduced-motion: reduce) { */
 @media (prefers-reduced-motion: reduce) {
+ /* CSS rule/declaration: .animate-spin-slow, */
 	.animate-spin-slow,
+ /* CSS rule/declaration: .animate-float, */
 	.animate-float,
+ /* CSS rule/declaration: .animate-float-delay, */
 	.animate-float-delay,
+ /* CSS rule/declaration: .animate-marquee, */
 	.animate-marquee,
+ /* CSS rule/declaration: .animate-fade-up, */
 	.animate-fade-up,
+ /* CSS rule/declaration: .animate-pulse-soft { */
 	.animate-pulse-soft {
+  /* CSS rule/declaration: animation: none !important; */
 		animation: none !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: #page-loader { */
 	#page-loader {
+  /* CSS rule/declaration: transition: */
 		transition:
+   /* CSS rule/declaration: opacity 0.05s ease, */
 			opacity 0.05s ease,
+   /* CSS rule/declaration: visibility 0.05s ease; */
 			visibility 0.05s ease;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-visual .loader, */
 	.page-loader-visual .loader,
+ /* CSS rule/declaration: .page-loader-visual .nucleus { */
 	.page-loader-visual .nucleus {
+  /* CSS rule/declaration: animation: none !important; */
 		animation: none !important;
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-visual .nucleus { */
 	.page-loader-visual .nucleus {
+  /* CSS rule/declaration: transform: translate(-50%, -50%) scale(1); */
 		transform: translate(-50%, -50%) scale(1);
+ /* CSS rule/declaration: } */
 	}
+ /* CSS rule/declaration: .page-loader-visual .ring { */
 	.page-loader-visual .ring {
+  /* CSS rule/declaration: animation-duration: 4s !important; */
 		animation-duration: 4s !important;
+  /* CSS rule/declaration: animation-iteration-count: infinite !important; */
 		animation-iteration-count: infinite !important;
+ /* CSS rule/declaration: } */
 	}
+/* CSS rule/declaration: } */
 }
 
 /* ---------- 12. Icon Contrast on Dark Surfaces ---------- */
@@ -962,94 +1875,173 @@ main img[alt=""] {
    Tailwind text colours. Match exact solid background utility classes only.
    Do not match translucent navy backgrounds such as bg-[#0d1b3e]/5:
    icons on those light surfaces must keep their original dark colour. */
+/* CSS rule/declaration: [class~="bg-[#0d1b3e]"] img[src*="/icons/"], */
 [class~="bg-[#0d1b3e]"] img[src*="/icons/"],
+/* CSS rule/declaration: [class~="bg-[#09122e]"] img[src*="/icons/"], */
 [class~="bg-[#09122e]"] img[src*="/icons/"],
+/* CSS rule/declaration: [class~="bg-[#08142f]"] img[src*="/icons/"], */
 [class~="bg-[#08142f]"] img[src*="/icons/"],
+/* CSS rule/declaration: [class~="bg-[#17295c]"] img[src*="/icons/"], */
 [class~="bg-[#17295c]"] img[src*="/icons/"],
+/* CSS rule/declaration: [class~="bg-[#1c3268]"] img[src*="/icons/"], */
 [class~="bg-[#1c3268]"] img[src*="/icons/"],
+/* CSS rule/declaration: .cookie-banner img[src*="/icons/"] { */
 .cookie-banner img[src*="/icons/"] {
+ /* CSS rule/declaration: filter: brightness(0) invert(1); */
 	filter: brightness(0) invert(1);
+/* CSS rule/declaration: } */
 }
 
 
 /* ----- Homepage trust marquee ----- */
+/* CSS rule/declaration: .cc-trust-marquee { position: relative; z-index: 10; width: 100%; overflow: hidden; border-top: 1px solid rgba */
 .cc-trust-marquee { position: relative; z-index: 10; width: 100%; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid #e2e8f0; background: #fff; box-shadow: 0 12px 28px rgba(13,27,62,.07); }
+/* CSS rule/declaration: .cc-marquee-viewport { width: 100%; overflow: hidden; } */
 .cc-marquee-viewport { width: 100%; overflow: hidden; }
+/* CSS rule/declaration: .cc-marquee-track { display: flex; width: max-content; flex-wrap: nowrap; animation: none !important; will-cha */
 .cc-marquee-track { display: flex; width: max-content; flex-wrap: nowrap; animation: none !important; will-change: transform; }
+/* CSS rule/declaration: .cc-marquee-group { display: flex; flex: 0 0 auto; align-items: center; gap: 2.5rem; padding: 1.1rem 1.25rem;  */
 .cc-marquee-group { display: flex; flex: 0 0 auto; align-items: center; gap: 2.5rem; padding: 1.1rem 1.25rem; }
+/* CSS rule/declaration: .cc-marquee-item { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .55rem; white-space: nowrap */
 .cc-marquee-item { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .55rem; white-space: nowrap; color: #475569; font-size: .82rem; }
+/* CSS rule/declaration: .cc-marquee-item img { width: 1.1rem; height: 1.1rem; filter: brightness(0) saturate(100%) invert(11%) sepia(2 */
 .cc-marquee-item img { width: 1.1rem; height: 1.1rem; filter: brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(2208%) hue-rotate(190deg) brightness(91%) contrast(96%); }
+/* CSS rule/declaration: .cc-marquee-item strong { color: #0d1b3e; font-weight: 800; } */
 .cc-marquee-item strong { color: #0d1b3e; font-weight: 800; }
 /* ----- Consistent centred footer layout on every page ----- */
+/* CSS rule/declaration: footer .max-w-7xl > .grid { text-align: center; } */
 footer .max-w-7xl > .grid { text-align: center; }
+/* CSS rule/declaration: footer .max-w-7xl > .grid > div > a:first-child { justify-content: center; } */
 footer .max-w-7xl > .grid > div > a:first-child { justify-content: center; }
+/* CSS rule/declaration: footer .max-w-7xl > .grid > div > div { justify-content: center; } */
 footer .max-w-7xl > .grid > div > div { justify-content: center; }
+/* CSS rule/declaration: footer .max-w-7xl > .grid ul { padding: 0; list-style: none; } */
 footer .max-w-7xl > .grid ul { padding: 0; list-style: none; }
+/* CSS rule/declaration: footer .cc-footer-legal { text-align: center; } */
 footer .cc-footer-legal { text-align: center; }
+/* CSS rule/declaration: footer .cc-footer-legal > p { margin-left: auto; margin-right: auto; } */
 footer .cc-footer-legal > p { margin-left: auto; margin-right: auto; }
 
 
 /* ----- Shared navigation and footer alignment across every page ----- */
+/* CSS rule/declaration: #siteHeader > div:first-child { min-height: 4rem; } */
 #siteHeader > div:first-child { min-height: 4rem; }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] { align-items: center; gap: 0.25rem; } */
 #siteHeader nav[aria-label="Main navigation"] { align-items: center; gap: 0.25rem; }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] > a { */
 #siteHeader nav[aria-label="Main navigation"] > a {
+ /* CSS rule/declaration: display: inline-flex; align-items: center; justify-content: center; min-height: 2.5rem; */
 	display: inline-flex; align-items: center; justify-content: center; min-height: 2.5rem;
+ /* CSS rule/declaration: padding: 0.5rem 0.9rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; */
 	padding: 0.5rem 0.9rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500;
+ /* CSS rule/declaration: line-height: 1.25rem; white-space: nowrap; text-decoration: none; color: #475569; background: transparent; */
 	line-height: 1.25rem; white-space: nowrap; text-decoration: none; color: #475569; background: transparent;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] > a:hover { color: #0d1b3e; background: #f1f5f9; } */
 #siteHeader nav[aria-label="Main navigation"] > a:hover { color: #0d1b3e; background: #f1f5f9; }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] > a[aria-current="page"] { */
 #siteHeader nav[aria-label="Main navigation"] > a[aria-current="page"] {
+ /* CSS rule/declaration: color: #0d1b3e; background: rgb(13 27 62 / 0.06); font-weight: 700; */
 	color: #0d1b3e; background: rgb(13 27 62 / 0.06); font-weight: 700;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Mobile navigation"] { display: flex; flex-direction: column; gap: 0.25rem; } */
 #siteHeader nav[aria-label="Mobile navigation"] { display: flex; flex-direction: column; gap: 0.25rem; }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Mobile navigation"] > a { */
 #siteHeader nav[aria-label="Mobile navigation"] > a {
+ /* CSS rule/declaration: display: flex; align-items: center; min-height: 2.75rem; padding: 0.75rem 1rem; */
 	display: flex; align-items: center; min-height: 2.75rem; padding: 0.75rem 1rem;
+ /* CSS rule/declaration: border-radius: 1rem; font-size: 0.875rem; line-height: 1.25rem; text-decoration: none; color: #475569; */
 	border-radius: 1rem; font-size: 0.875rem; line-height: 1.25rem; text-decoration: none; color: #475569;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Mobile navigation"] > a:hover { background: #f8fafc; color: #0d1b3e; } */
 #siteHeader nav[aria-label="Mobile navigation"] > a:hover { background: #f8fafc; color: #0d1b3e; }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Mobile navigation"] > a[aria-current="page"] { */
 #siteHeader nav[aria-label="Mobile navigation"] > a[aria-current="page"] {
+ /* CSS rule/declaration: background: rgb(13 27 62 / 0.06); color: #0d1b3e; font-weight: 700; */
 	background: rgb(13 27 62 / 0.06); color: #0d1b3e; font-weight: 700;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: footer .cc-footer-legal, footer .cc-footer-legal > p { text-align: center; } */
 footer .cc-footer-legal, footer .cc-footer-legal > p { text-align: center; }
+/* CSS rule/declaration: footer .cc-footer-legal > p { margin-right: auto; margin-left: auto; } */
 footer .cc-footer-legal > p { margin-right: auto; margin-left: auto; }
 
 
 /* ----- Shared navigation geometry across every page ----- */
+/* CSS rule/declaration: header nav[aria-label="Main navigation"] { */
 header nav[aria-label="Main navigation"] {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: gap: 0.25rem; */
 	gap: 0.25rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: header nav[aria-label="Main navigation"] > a { */
 header nav[aria-label="Main navigation"] > a {
+ /* CSS rule/declaration: display: inline-flex; */
 	display: inline-flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: justify-content: center; */
 	justify-content: center;
+ /* CSS rule/declaration: min-height: 40px; */
 	min-height: 40px;
+ /* CSS rule/declaration: padding: 0.5rem 1rem; */
 	padding: 0.5rem 1rem;
+ /* CSS rule/declaration: border-radius: 999px; */
 	border-radius: 999px;
+ /* CSS rule/declaration: white-space: nowrap; */
 	white-space: nowrap;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: header nav[aria-label="Main navigation"] > a[aria-current="page"] { */
 header nav[aria-label="Main navigation"] > a[aria-current="page"] {
+ /* CSS rule/declaration: background: rgba(13, 27, 62, 0.06); */
 	background: rgba(13, 27, 62, 0.06);
+ /* CSS rule/declaration: color: var(--navy); */
 	color: var(--navy);
+ /* CSS rule/declaration: font-weight: 700; */
 	font-weight: 700;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: header nav[aria-label="Mobile navigation"] > a { */
 header nav[aria-label="Mobile navigation"] > a {
+ /* CSS rule/declaration: display: flex; */
 	display: flex;
+ /* CSS rule/declaration: align-items: center; */
 	align-items: center;
+ /* CSS rule/declaration: min-height: 44px; */
 	min-height: 44px;
+ /* CSS rule/declaration: padding: 0.75rem 1rem; */
 	padding: 0.75rem 1rem;
+ /* CSS rule/declaration: border-radius: 1rem; */
 	border-radius: 1rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: footer .cc-footer-legal { */
 footer .cc-footer-legal {
+ /* CSS rule/declaration: width: 100%; */
 	width: 100%;
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: footer .cc-footer-legal > p { */
 footer .cc-footer-legal > p {
+ /* CSS rule/declaration: max-width: 100%; */
 	max-width: 100%;
+ /* CSS rule/declaration: margin-right: auto; */
 	margin-right: auto;
+ /* CSS rule/declaration: margin-left: auto; */
 	margin-left: auto;
+ /* CSS rule/declaration: text-align: center; */
 	text-align: center;
+/* CSS rule/declaration: } */
 }
 
 
@@ -1060,189 +2052,365 @@ footer .cc-footer-legal > p {
    ========================================================== */
 
 /* Prevent long labels and controls from forcing horizontal overflow. */
+/* CSS rule/declaration: #shop, */
 #shop,
+/* CSS rule/declaration: #deals-gallery, */
 #deals-gallery,
+/* CSS rule/declaration: #sell-with-us { */
 #sell-with-us {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop .tab-panel, */
 #shop .tab-panel,
+/* CSS rule/declaration: #deals-gallery, */
 #deals-gallery,
+/* CSS rule/declaration: #sell-with-us .tab-panel, */
 #sell-with-us .tab-panel,
+/* CSS rule/declaration: #deals-results, */
 #deals-results,
+/* CSS rule/declaration: #panel-new, */
 #panel-new,
+/* CSS rule/declaration: #panel-used { */
 #panel-used {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop [role="tablist"], */
 #shop [role="tablist"],
+/* CSS rule/declaration: #sell-with-us [role="tablist"] { */
 #sell-with-us [role="tablist"] {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: flex-wrap: wrap; */
   flex-wrap: wrap;
+  /* CSS rule/declaration: gap: 0.5rem; */
   gap: 0.5rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop [role="tablist"] [role="tab"], */
 #shop [role="tablist"] [role="tab"],
+/* CSS rule/declaration: #sell-with-us [role="tablist"] [role="tab"] { */
 #sell-with-us [role="tablist"] [role="tab"] {
+  /* CSS rule/declaration: min-height: 44px; */
   min-height: 44px;
+  /* CSS rule/declaration: white-space: normal; */
   white-space: normal;
+  /* CSS rule/declaration: text-align: center; */
   text-align: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery #deals-results > article, */
 #deals-gallery #deals-results > article,
+/* CSS rule/declaration: #panel-new .grid > article, */
 #panel-new .grid > article,
+/* CSS rule/declaration: #panel-used .grid > article { */
 #panel-used .grid > article {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: height: 100%; */
   height: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery #deals-results img, */
 #deals-gallery #deals-results img,
+/* CSS rule/declaration: #panel-new .grid > article img, */
 #panel-new .grid > article img,
+/* CSS rule/declaration: #panel-used .grid > article img { */
 #panel-used .grid > article img {
+  /* CSS rule/declaration: display: block; */
   display: block;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: aspect-ratio: 1 / 1; */
   aspect-ratio: 1 / 1;
+  /* CSS rule/declaration: object-fit: cover; */
   object-fit: cover;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery #deals-results button, */
 #deals-gallery #deals-results button,
+/* CSS rule/declaration: #panel-new .grid > article button, */
 #panel-new .grid > article button,
+/* CSS rule/declaration: #panel-used .grid > article button { */
 #panel-used .grid > article button {
+  /* CSS rule/declaration: min-height: 44px; */
   min-height: 44px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery #deals-results h3, */
 #deals-gallery #deals-results h3,
+/* CSS rule/declaration: #panel-new .grid > article h3, */
 #panel-new .grid > article h3,
+/* CSS rule/declaration: #panel-used .grid > article h3 { */
 #panel-used .grid > article h3 {
+  /* CSS rule/declaration: overflow-wrap: anywhere; */
   overflow-wrap: anywhere;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery #product-search, */
 #deals-gallery #product-search,
+/* CSS rule/declaration: #deals-gallery #filter-category, */
 #deals-gallery #filter-category,
+/* CSS rule/declaration: #deals-gallery #filter-condition, */
 #deals-gallery #filter-condition,
+/* CSS rule/declaration: #deals-gallery #sort-by { */
 #deals-gallery #sort-by {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: min-height: 44px; */
   min-height: 44px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery .mt-8.flex.w-max, */
 #deals-gallery .mt-8.flex.w-max,
+/* CSS rule/declaration: #sell-with-us .mt-6 .flex.w-max { */
 #sell-with-us .mt-6 .flex.w-max {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: flex-wrap: wrap; */
   flex-wrap: wrap;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery figure, */
 #deals-gallery figure,
+/* CSS rule/declaration: #sell-with-us figure { */
 #sell-with-us figure {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #deals-gallery img, */
 #deals-gallery img,
+/* CSS rule/declaration: #sell-with-us img { */
 #sell-with-us img {
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #sell-with-us .grid { */
 #sell-with-us .grid {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #sell-with-us form, */
 #sell-with-us form,
+/* CSS rule/declaration: #sell-with-us input, */
 #sell-with-us input,
+/* CSS rule/declaration: #sell-with-us select, */
 #sell-with-us select,
+/* CSS rule/declaration: #sell-with-us textarea { */
 #sell-with-us textarea {
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
 
 /* Small phones: single-column controls and cards, comfortable tap targets. */
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #shop, */
   #shop,
+  /* CSS rule/declaration: #deals-gallery, */
   #deals-gallery,
+  /* CSS rule/declaration: #sell-with-us { */
   #sell-with-us {
+    /* CSS rule/declaration: overflow-x: clip; */
     overflow-x: clip;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [role="tablist"], */
   #shop [role="tablist"],
+  /* CSS rule/declaration: #sell-with-us [role="tablist"] { */
   #sell-with-us [role="tablist"] {
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [role="tablist"] [role="tab"], */
   #shop [role="tablist"] [role="tab"],
+  /* CSS rule/declaration: #sell-with-us [role="tablist"] [role="tab"] { */
   #sell-with-us [role="tablist"] [role="tab"] {
+    /* CSS rule/declaration: flex: 1 1 100%; */
     flex: 1 1 100%;
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery .mt-8.grid, */
   #deals-gallery .mt-8.grid,
+  /* CSS rule/declaration: #deals-gallery #deals-results, */
   #deals-gallery #deals-results,
+  /* CSS rule/declaration: #panel-new > .grid, */
   #panel-new > .grid,
+  /* CSS rule/declaration: #panel-used .mt-8.grid { */
   #panel-used .mt-8.grid {
+    /* CSS rule/declaration: grid-template-columns: minmax(0, 1fr) !important; */
     grid-template-columns: minmax(0, 1fr) !important;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery .mt-8.flex.flex-wrap, */
   #deals-gallery .mt-8.flex.flex-wrap,
+  /* CSS rule/declaration: #deals-gallery .mt-8.flex:not(.w-max) { */
   #deals-gallery .mt-8.flex:not(.w-max) {
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery #deals-see-more, */
   #deals-gallery #deals-see-more,
+  /* CSS rule/declaration: #deals-gallery #deals-see-less { */
   #deals-gallery #deals-see-less {
+    /* CSS rule/declaration: flex: 1 1 100%; */
     flex: 1 1 100%;
+    /* CSS rule/declaration: justify-content: center; */
     justify-content: center;
+    /* CSS rule/declaration: min-height: 44px; */
     min-height: 44px;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery #deals-results article, */
   #deals-gallery #deals-results article,
+  /* CSS rule/declaration: #panel-new > .grid > article { */
   #panel-new > .grid > article {
+    /* CSS rule/declaration: padding: 0.75rem; */
     padding: 0.75rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery #deals-results article > div:last-child > div:last-child, */
   #deals-gallery #deals-results article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #panel-new > .grid > article > div:last-child > div:last-child { */
   #panel-new > .grid > article > div:last-child > div:last-child {
+    /* CSS rule/declaration: flex-direction: column; */
     flex-direction: column;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery #deals-results article button, */
   #deals-gallery #deals-results article button,
+  /* CSS rule/declaration: #panel-new > .grid > article button { */
   #panel-new > .grid > article button {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery .mt-8.grid figure, */
   #deals-gallery .mt-8.grid figure,
+  /* CSS rule/declaration: #sell-with-us .mt-8.grid figure { */
   #sell-with-us .mt-8.grid figure {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #sell-with-us .mt-16.grid { */
   #sell-with-us .mt-16.grid {
+    /* CSS rule/declaration: grid-template-columns: minmax(0, 1fr) !important; */
     grid-template-columns: minmax(0, 1fr) !important;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #sell-with-us .rounded-\[3rem\] { */
   #sell-with-us .rounded-\[3rem\] {
+    /* CSS rule/declaration: border-radius: 1.5rem; */
     border-radius: 1.5rem;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* Large phones and tablets: two product columns and compact filter grid. */
+/* CSS rule/declaration: @media (min-width: 480px) and (max-width: 1023px) { */
 @media (min-width: 480px) and (max-width: 1023px) {
+  /* CSS rule/declaration: #deals-gallery #deals-results, */
   #deals-gallery #deals-results,
+  /* CSS rule/declaration: #panel-new > .grid, */
   #panel-new > .grid,
+  /* CSS rule/declaration: #panel-used .mt-8.grid { */
   #panel-used .mt-8.grid {
+    /* CSS rule/declaration: grid-template-columns: repeat(2, minmax(0, 1fr)) !important; */
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery .mt-8.grid, */
   #deals-gallery .mt-8.grid,
+  /* CSS rule/declaration: #sell-with-us .mt-8.grid { */
   #sell-with-us .mt-8.grid {
+    /* CSS rule/declaration: grid-template-columns: repeat(2, minmax(0, 1fr)); */
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #deals-gallery .rounded-3xl.border.bg-\[\#faf8f4\].p-5 { */
   #deals-gallery .rounded-3xl.border.bg-\[\#faf8f4\].p-5 {
+    /* CSS rule/declaration: grid-template-columns: repeat(2, minmax(0, 1fr)); */
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [role="tablist"] [role="tab"], */
   #shop [role="tablist"] [role="tab"],
+  /* CSS rule/declaration: #sell-with-us [role="tablist"] [role="tab"] { */
   #sell-with-us [role="tablist"] [role="tab"] {
+    /* CSS rule/declaration: flex: 1 1 auto; */
     flex: 1 1 auto;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* Desktop: restore wider catalogue grids and keep the toolbar aligned. */
+/* CSS rule/declaration: @media (min-width: 1024px) { */
 @media (min-width: 1024px) {
+  /* CSS rule/declaration: #deals-gallery #deals-results, */
   #deals-gallery #deals-results,
+  /* CSS rule/declaration: #panel-used .mt-8.grid { */
   #panel-used .mt-8.grid {
+    /* CSS rule/declaration: grid-template-columns: repeat(3, minmax(0, 1fr)) !important; */
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new > .grid { */
   #panel-new > .grid {
+    /* CSS rule/declaration: grid-template-columns: repeat(4, minmax(0, 1fr)) !important; */
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [role="tablist"], */
   #shop [role="tablist"],
+  /* CSS rule/declaration: #sell-with-us [role="tablist"] { */
   #sell-with-us [role="tablist"] {
+    /* CSS rule/declaration: width: max-content; */
     width: max-content;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* Respect reduced-motion preferences on touch devices too. */
+/* CSS rule/declaration: @media (prefers-reduced-motion: reduce) { */
 @media (prefers-reduced-motion: reduce) {
+  /* CSS rule/declaration: #deals-gallery #deals-results *, */
   #deals-gallery #deals-results *,
+  /* CSS rule/declaration: #panel-new *, */
   #panel-new *,
+  /* CSS rule/declaration: #panel-used * { */
   #panel-used * {
+    /* CSS rule/declaration: scroll-behavior: auto !important; */
     scroll-behavior: auto !important;
+    /* CSS rule/declaration: transition-duration: 0.01ms !important; */
     transition-duration: 0.01ms !important;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 
@@ -1253,393 +2421,759 @@ footer .cc-footer-legal > p {
    ========================================================== */
 
 /* Keep sizing predictable and prevent wide children from stretching the page. */
+/* CSS rule/declaration: *, */
 *,
+/* CSS rule/declaration: *::before, */
 *::before,
+/* CSS rule/declaration: *::after { */
 *::after {
+  /* CSS rule/declaration: box-sizing: border-box; */
   box-sizing: border-box;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: html { */
 html {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: overflow-x: clip; */
   overflow-x: clip;
+  /* CSS rule/declaration: scroll-padding-top: 5rem; */
   scroll-padding-top: 5rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: body { */
 body {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: min-width: 320px; */
   min-width: 320px;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: margin: 0; */
   margin: 0;
+  /* CSS rule/declaration: overflow-x: clip; */
   overflow-x: clip;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main, */
 main,
+/* CSS rule/declaration: main > *, */
 main > *,
+/* CSS rule/declaration: section, */
 section,
+/* CSS rule/declaration: article, */
 article,
+/* CSS rule/declaration: aside, */
 aside,
+/* CSS rule/declaration: footer, */
 footer,
+/* CSS rule/declaration: header { */
 header {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: img, */
 img,
+/* CSS rule/declaration: svg, */
 svg,
+/* CSS rule/declaration: video, */
 video,
+/* CSS rule/declaration: canvas, */
 canvas,
+/* CSS rule/declaration: iframe { */
 iframe {
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: img, */
 img,
+/* CSS rule/declaration: video { */
 video {
+  /* CSS rule/declaration: height: auto; */
   height: auto;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: iframe { */
 iframe {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: button, */
 button,
+/* CSS rule/declaration: input, */
 input,
+/* CSS rule/declaration: select, */
 select,
+/* CSS rule/declaration: textarea { */
 textarea {
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: font: inherit; */
   font: inherit;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: input, */
 input,
+/* CSS rule/declaration: select, */
 select,
+/* CSS rule/declaration: textarea { */
 textarea {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: p, */
 p,
+/* CSS rule/declaration: li, */
 li,
+/* CSS rule/declaration: h1, */
 h1,
+/* CSS rule/declaration: h2, */
 h2,
+/* CSS rule/declaration: h3, */
 h3,
+/* CSS rule/declaration: h4, */
 h4,
+/* CSS rule/declaration: a, */
 a,
+/* CSS rule/declaration: button, */
 button,
+/* CSS rule/declaration: label { */
 label {
+  /* CSS rule/declaration: overflow-wrap: anywhere; */
   overflow-wrap: anywhere;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: [hidden] { */
 [hidden] {
+  /* CSS rule/declaration: display: none !important; */
   display: none !important;
+/* CSS rule/declaration: } */
 }
 
 /* Header: show one navigation system at a time. */
+/* CSS rule/declaration: #siteHeader > div:first-child { */
 #siteHeader > div:first-child {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 80rem; */
   max-width: 80rem;
+  /* CSS rule/declaration: margin-inline: auto; */
   margin-inline: auto;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] { */
 #siteHeader nav[aria-label="Main navigation"] {
+  /* CSS rule/declaration: display: none !important; */
   display: none !important;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: flex-wrap: nowrap; */
   flex-wrap: nowrap;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] > a { */
 #siteHeader nav[aria-label="Main navigation"] > a {
+  /* CSS rule/declaration: flex: 0 0 auto; */
   flex: 0 0 auto;
+  /* CSS rule/declaration: padding-inline: clamp(0.45rem, 0.8vw, 0.9rem); */
   padding-inline: clamp(0.45rem, 0.8vw, 0.9rem);
+  /* CSS rule/declaration: font-size: clamp(0.72rem, 0.82vw, 0.875rem); */
   font-size: clamp(0.72rem, 0.82vw, 0.875rem);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader #navToggle { */
 #siteHeader #navToggle {
+  /* CSS rule/declaration: flex: 0 0 2.5rem; */
   flex: 0 0 2.5rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader #mobileMenu { */
 #siteHeader #mobileMenu {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Mobile navigation"] { */
 #siteHeader nav[aria-label="Mobile navigation"] {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: flex-direction: column; */
   flex-direction: column;
+  /* CSS rule/declaration: gap: 0.25rem; */
   gap: 0.25rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #siteHeader nav[aria-label="Mobile navigation"] > a { */
 #siteHeader nav[aria-label="Mobile navigation"] > a {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (min-width: 1024px) { */
 @media (min-width: 1024px) {
+  /* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] { */
   #siteHeader nav[aria-label="Main navigation"] {
+    /* CSS rule/declaration: display: flex !important; */
     display: flex !important;
+    /* CSS rule/declaration: align-items: center; */
     align-items: center;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader #navToggle, */
   #siteHeader #navToggle,
+  /* CSS rule/declaration: #siteHeader #mobileMenu { */
   #siteHeader #mobileMenu {
+    /* CSS rule/declaration: display: none !important; */
     display: none !important;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (min-width: 1024px) and (max-width: 1279px) { */
 @media (min-width: 1024px) and (max-width: 1279px) {
+  /* CSS rule/declaration: #siteHeader > div:first-child { */
   #siteHeader > div:first-child {
+    /* CSS rule/declaration: gap: 0.5rem; */
     gap: 0.5rem;
+    /* CSS rule/declaration: padding-inline: 1rem; */
     padding-inline: 1rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] { */
   #siteHeader nav[aria-label="Main navigation"] {
+    /* CSS rule/declaration: gap: 0 !important; */
     gap: 0 !important;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] > a { */
   #siteHeader nav[aria-label="Main navigation"] > a {
+    /* CSS rule/declaration: padding-inline: 0.45rem; */
     padding-inline: 0.45rem;
+    /* CSS rule/declaration: font-size: 0.72rem; */
     font-size: 0.72rem;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* General page gutters and content widths. */
+/* CSS rule/declaration: main > section, */
 main > section,
+/* CSS rule/declaration: main > div, */
 main > div,
+/* CSS rule/declaration: main > article { */
 main > article {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main .max-w-7xl, */
 main .max-w-7xl,
+/* CSS rule/declaration: footer .max-w-7xl { */
 footer .max-w-7xl {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 80rem; */
   max-width: 80rem;
+  /* CSS rule/declaration: margin-inline: auto; */
   margin-inline: auto;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main .grid, */
 main .grid,
+/* CSS rule/declaration: footer .grid { */
 footer .grid {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main .grid > *, */
 main .grid > *,
+/* CSS rule/declaration: footer .grid > * { */
 footer .grid > * {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main .overflow-x-auto, */
 main .overflow-x-auto,
+/* CSS rule/declaration: main nav[aria-label="Section navigation"] > div { */
 main nav[aria-label="Section navigation"] > div {
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: overscroll-behavior-inline: contain; */
   overscroll-behavior-inline: contain;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main table { */
 main table {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main pre, */
 main pre,
+/* CSS rule/declaration: main code { */
 main code {
+  /* CSS rule/declaration: white-space: pre-wrap; */
   white-space: pre-wrap;
+  /* CSS rule/declaration: overflow-wrap: anywhere; */
   overflow-wrap: anywhere;
+/* CSS rule/declaration: } */
 }
 
 /* Forms and action groups should wrap instead of forcing horizontal scrolling. */
+/* CSS rule/declaration: main form { */
 main form {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main form input, */
 main form input,
+/* CSS rule/declaration: main form select, */
 main form select,
+/* CSS rule/declaration: main form textarea { */
 main form textarea {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main form button, */
 main form button,
+/* CSS rule/declaration: main button, */
 main button,
+/* CSS rule/declaration: main a[class*="rounded-full"] { */
 main a[class*="rounded-full"] {
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main .flex:not(.flex-col) { */
 main .flex:not(.flex-col) {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: main .flex.flex-wrap, */
 main .flex.flex-wrap,
+/* CSS rule/declaration: footer .flex.flex-wrap { */
 footer .flex.flex-wrap {
+  /* CSS rule/declaration: row-gap: 0.65rem; */
   row-gap: 0.65rem;
+/* CSS rule/declaration: } */
 }
 
 /* The Section 1 Shop controls use the same centred, consistent button layout. */
+/* CSS rule/declaration: #shop [data-shop-pagination] { */
 #shop [data-shop-pagination] {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: flex-wrap: wrap; */
   flex-wrap: wrap;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: justify-content: center; */
   justify-content: center;
+  /* CSS rule/declaration: gap: 0.75rem; */
   gap: 0.75rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop [data-shop-pagination] button { */
 #shop [data-shop-pagination] button {
+  /* CSS rule/declaration: display: inline-flex; */
   display: inline-flex;
+  /* CSS rule/declaration: min-width: 9rem; */
   min-width: 9rem;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: justify-content: center; */
   justify-content: center;
+  /* CSS rule/declaration: border-radius: 9999px; */
   border-radius: 9999px;
+  /* CSS rule/declaration: padding: 0.75rem 1.75rem; */
   padding: 0.75rem 1.75rem;
+  /* CSS rule/declaration: font-size: 0.875rem; */
   font-size: 0.875rem;
+  /* CSS rule/declaration: font-weight: 700; */
   font-weight: 700;
+  /* CSS rule/declaration: line-height: 1.25rem; */
   line-height: 1.25rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop [data-shop-pagination] button[hidden] { */
 #shop [data-shop-pagination] button[hidden] {
+  /* CSS rule/declaration: display: none !important; */
   display: none !important;
+/* CSS rule/declaration: } */
 }
 
 /* Tablet and phone layouts. */
+/* CSS rule/declaration: @media (max-width: 1023px) { */
 @media (max-width: 1023px) {
+  /* CSS rule/declaration: #siteHeader > div:first-child { */
   #siteHeader > div:first-child {
+    /* CSS rule/declaration: gap: 0.5rem; */
     gap: 0.5rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader > div:first-child > a:first-child { */
   #siteHeader > div:first-child > a:first-child {
+    /* CSS rule/declaration: min-width: 0; */
     min-width: 0;
+    /* CSS rule/declaration: font-size: clamp(1rem, 3.5vw, 1.25rem); */
     font-size: clamp(1rem, 3.5vw, 1.25rem);
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader > div:first-child > div:last-child { */
   #siteHeader > div:first-child > div:last-child {
+    /* CSS rule/declaration: flex: 0 0 auto; */
     flex: 0 0 auto;
+    /* CSS rule/declaration: gap: 0.35rem; */
     gap: 0.35rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main .grid { */
   main .grid {
+    /* CSS rule/declaration: grid-template-columns: repeat(2, minmax(0, 1fr)); */
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main .flex { */
   main .flex {
+    /* CSS rule/declaration: flex-wrap: wrap; */
     flex-wrap: wrap;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 767px) { */
 @media (max-width: 767px) {
+  /* CSS rule/declaration: main > section, */
   main > section,
+  /* CSS rule/declaration: main > div, */
   main > div,
+  /* CSS rule/declaration: main > article { */
   main > article {
+    /* CSS rule/declaration: scroll-margin-top: 5rem; */
     scroll-margin-top: 5rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main .grid { */
   main .grid {
+    /* CSS rule/declaration: grid-template-columns: minmax(0, 1fr); */
     grid-template-columns: minmax(0, 1fr);
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main h1 { */
   main h1 {
+    /* CSS rule/declaration: font-size: clamp(1.9rem, 8vw, 3rem); */
     font-size: clamp(1.9rem, 8vw, 3rem);
+    /* CSS rule/declaration: line-height: 1.12; */
     line-height: 1.12;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main h2 { */
   main h2 {
+    /* CSS rule/declaration: font-size: clamp(1.45rem, 6vw, 2.15rem); */
     font-size: clamp(1.45rem, 6vw, 2.15rem);
+    /* CSS rule/declaration: line-height: 1.2; */
     line-height: 1.2;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main .flex:not(.flex-col) { */
   main .flex:not(.flex-col) {
+    /* CSS rule/declaration: flex-wrap: wrap; */
     flex-wrap: wrap;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: main .flex > button, */
   main .flex > button,
+  /* CSS rule/declaration: main .flex > a[class*="rounded-full"] { */
   main .flex > a[class*="rounded-full"] {
+    /* CSS rule/declaration: max-width: 100%; */
     max-width: 100%;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: footer .max-w-7xl { */
   footer .max-w-7xl {
+    /* CSS rule/declaration: padding-block: 2.75rem; */
     padding-block: 2.75rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: footer .grid { */
   footer .grid {
+    /* CSS rule/declaration: grid-template-columns: minmax(0, 1fr); */
     grid-template-columns: minmax(0, 1fr);
+    /* CSS rule/declaration: gap: 2rem; */
     gap: 2rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: .cookie-banner { */
   .cookie-banner {
+    /* CSS rule/declaration: right: 8px; */
     right: 8px;
+    /* CSS rule/declaration: bottom: 8px; */
     bottom: 8px;
+    /* CSS rule/declaration: left: 8px; */
     left: 8px;
+    /* CSS rule/declaration: max-height: 82dvh; */
     max-height: 82dvh;
+    /* CSS rule/declaration: padding: 1rem; */
     padding: 1rem;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #siteHeader > div:first-child { */
   #siteHeader > div:first-child {
+    /* CSS rule/declaration: padding-inline: 0.75rem; */
     padding-inline: 0.75rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader > div:first-child > a:first-child { */
   #siteHeader > div:first-child > a:first-child {
+    /* CSS rule/declaration: gap: 0.4rem; */
     gap: 0.4rem;
+    /* CSS rule/declaration: font-size: 0.95rem; */
     font-size: 0.95rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader > div:first-child > a:first-child > span:first-child { */
   #siteHeader > div:first-child > a:first-child > span:first-child {
+    /* CSS rule/declaration: width: 2rem; */
     width: 2rem;
+    /* CSS rule/declaration: height: 2rem; */
     height: 2rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader > div:first-child > div:last-child { */
   #siteHeader > div:first-child > div:last-child {
+    /* CSS rule/declaration: gap: 0.25rem; */
     gap: 0.25rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #siteHeader #navToggle, */
   #siteHeader #navToggle,
+  /* CSS rule/declaration: #siteHeader #cartButton, */
   #siteHeader #cartButton,
+  /* CSS rule/declaration: #siteHeader #wishlistButton { */
   #siteHeader #wishlistButton {
+    /* CSS rule/declaration: width: 2.5rem; */
     width: 2.5rem;
+    /* CSS rule/declaration: height: 2.5rem; */
     height: 2.5rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [data-shop-pagination] { */
   #shop [data-shop-pagination] {
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [data-shop-pagination] button { */
   #shop [data-shop-pagination] button {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+    /* CSS rule/declaration: min-width: 0; */
     min-width: 0;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: .hub-map { */
   .hub-map {
+    /* CSS rule/declaration: min-height: 18rem; */
     min-height: 18rem;
+    /* CSS rule/declaration: height: 18rem; */
     height: 18rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: .lightbox { */
   .lightbox {
+    /* CSS rule/declaration: padding-inline: 0.5rem; */
     padding-inline: 0.5rem;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (prefers-reduced-motion: reduce) { */
 @media (prefers-reduced-motion: reduce) {
+  /* CSS rule/declaration: html { */
   html {
+    /* CSS rule/declaration: scroll-behavior: auto !important; */
     scroll-behavior: auto !important;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* ==========================================================
    CAMPUS-CART — FINAL VIEWPORT AND BUTTON SAFEGUARDS
    Keep the desktop navigation out of the mobile layout.
    ========================================================== */
+/* CSS rule/declaration: @media (max-width: 1023px) { */
 @media (max-width: 1023px) {
+  /* CSS rule/declaration: #siteHeader nav[aria-label="Main navigation"] { */
   #siteHeader nav[aria-label="Main navigation"] {
+    /* CSS rule/declaration: display: none !important; */
     display: none !important;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (min-width: 1024px) { */
 @media (min-width: 1024px) {
+  /* CSS rule/declaration: #siteHeader #navToggle, */
   #siteHeader #navToggle,
+  /* CSS rule/declaration: #siteHeader #mobileMenu { */
   #siteHeader #mobileMenu {
+    /* CSS rule/declaration: display: none !important; */
     display: none !important;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* Prevent narrow action rows and their buttons from widening the page. */
+/* CSS rule/declaration: main .flex > button, */
 main .flex > button,
+/* CSS rule/declaration: main .flex > a[class*="rounded-full"] { */
 main .flex > a[class*="rounded-full"] {
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: flex-shrink: 1; */
   flex-shrink: 1;
+/* CSS rule/declaration: } */
 }
 
 /* Clip horizontal overflow without disabling sticky positioning. */
+/* CSS rule/declaration: html, */
 html,
+/* CSS rule/declaration: body { */
 body {
+  /* CSS rule/declaration: overflow-x: clip; */
   overflow-x: clip;
+/* CSS rule/declaration: } */
 }
 
 
 /* ----- Products: left-aligned pagination and consistent card actions ----- */
+/* CSS rule/declaration: #shop [data-shop-pagination] { */
 #shop [data-shop-pagination] {
+  /* CSS rule/declaration: justify-content: flex-start; */
   justify-content: flex-start;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop [data-shop-pagination] button { */
 #shop [data-shop-pagination] button {
+  /* CSS rule/declaration: width: auto; */
   width: auto;
+  /* CSS rule/declaration: min-width: 9rem; */
   min-width: 9rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article, */
 #panel-new .grid > article,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article, */
 #panel-used .mt-8.grid > article,
+/* CSS rule/declaration: #deals-gallery #deals-results > article { */
 #deals-gallery #deals-results > article {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: height: 100%; */
   height: 100%;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: flex-direction: column; */
   flex-direction: column;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article > div:last-child, */
 #panel-new .grid > article > div:last-child,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child, */
 #panel-used .mt-8.grid > article > div:last-child,
+/* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child { */
 #deals-gallery #deals-results > article > div:last-child {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: flex: 1 1 auto; */
   flex: 1 1 auto;
+  /* CSS rule/declaration: flex-direction: column; */
   flex-direction: column;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article > div:last-child > div:last-child, */
 #panel-new .grid > article > div:last-child > div:last-child,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child > div:last-child, */
 #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+/* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child > div:last-child { */
 #deals-gallery #deals-results > article > div:last-child > div:last-child {
+  /* CSS rule/declaration: margin-top: auto; */
   margin-top: auto;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article button img, */
 #panel-new .grid > article button img,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article button img, */
 #panel-used .mt-8.grid > article button img,
+/* CSS rule/declaration: #deals-gallery #deals-results > article button img { */
 #deals-gallery #deals-results > article button img {
+  /* CSS rule/declaration: display: inline-block; */
   display: inline-block;
+  /* CSS rule/declaration: width: 1rem; */
   width: 1rem;
+  /* CSS rule/declaration: height: 1rem; */
   height: 1rem;
+  /* CSS rule/declaration: flex: 0 0 1rem; */
   flex: 0 0 1rem;
+  /* CSS rule/declaration: object-fit: contain; */
   object-fit: contain;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #shop [data-shop-pagination] { */
   #shop [data-shop-pagination] {
+    /* CSS rule/declaration: justify-content: flex-start; */
     justify-content: flex-start;
+    /* CSS rule/declaration: align-items: center; */
     align-items: center;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [data-shop-pagination] button { */
   #shop [data-shop-pagination] button {
+    /* CSS rule/declaration: width: auto; */
     width: auto;
+    /* CSS rule/declaration: min-width: 8.5rem; */
     min-width: 8.5rem;
+    /* CSS rule/declaration: flex: 0 0 auto; */
     flex: 0 0 auto;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 
@@ -1649,132 +3183,253 @@ body {
    ========================================================== */
 
 /* Align the Shop tab pagination with the left edge of its product grid. */
+/* CSS rule/declaration: #shop [data-shop-pagination] { */
 #shop [data-shop-pagination] {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: justify-content: flex-start; */
   justify-content: flex-start;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: gap: 0.75rem; */
   gap: 0.75rem;
+  /* CSS rule/declaration: margin-inline: 0; */
   margin-inline: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #shop [data-shop-pagination] button { */
 #shop [data-shop-pagination] button {
+  /* CSS rule/declaration: display: inline-flex; */
   display: inline-flex;
+  /* CSS rule/declaration: width: auto; */
   width: auto;
+  /* CSS rule/declaration: min-width: 9rem; */
   min-width: 9rem;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+  /* CSS rule/declaration: flex: 0 0 auto; */
   flex: 0 0 auto;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: justify-content: center; */
   justify-content: center;
+  /* CSS rule/declaration: white-space: nowrap; */
   white-space: nowrap;
+/* CSS rule/declaration: } */
 }
 
 /* Give Shop New, Second-Hand and Deals cards the same sizing behaviour. */
+/* CSS rule/declaration: #panel-new .grid > article, */
 #panel-new .grid > article,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article, */
 #panel-used .mt-8.grid > article,
+/* CSS rule/declaration: #deals-gallery #deals-results > article { */
 #deals-gallery #deals-results > article {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: height: 100%; */
   height: 100%;
+  /* CSS rule/declaration: flex-direction: column; */
   flex-direction: column;
+  /* CSS rule/declaration: align-self: stretch; */
   align-self: stretch;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article > div:first-child, */
 #panel-new .grid > article > div:first-child,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article > div:first-child, */
 #panel-used .mt-8.grid > article > div:first-child,
+/* CSS rule/declaration: #deals-gallery #deals-results > article > div:first-child { */
 #deals-gallery #deals-results > article > div:first-child {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: overflow: hidden; */
   overflow: hidden;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article > div:first-child img, */
 #panel-new .grid > article > div:first-child img,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article > div:first-child img, */
 #panel-used .mt-8.grid > article > div:first-child img,
+/* CSS rule/declaration: #deals-gallery #deals-results > article > div:first-child img { */
 #deals-gallery #deals-results > article > div:first-child img {
+  /* CSS rule/declaration: display: block; */
   display: block;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: aspect-ratio: 1 / 1; */
   aspect-ratio: 1 / 1;
+  /* CSS rule/declaration: object-fit: cover; */
   object-fit: cover;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article > div:last-child, */
 #panel-new .grid > article > div:last-child,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child, */
 #panel-used .mt-8.grid > article > div:last-child,
+/* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child { */
 #deals-gallery #deals-results > article > div:last-child {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: flex: 1 1 auto; */
   flex: 1 1 auto;
+  /* CSS rule/declaration: flex-direction: column; */
   flex-direction: column;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article > div:last-child > div:last-child, */
 #panel-new .grid > article > div:last-child > div:last-child,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child > div:last-child, */
 #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+/* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child > div:last-child { */
 #deals-gallery #deals-results > article > div:last-child > div:last-child {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: flex-wrap: wrap; */
   flex-wrap: wrap;
+  /* CSS rule/declaration: gap: 0.5rem; */
   gap: 0.5rem;
+  /* CSS rule/declaration: margin-top: auto; */
   margin-top: auto;
+  /* CSS rule/declaration: padding-top: 1rem; */
   padding-top: 1rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article button, */
 #panel-new .grid > article button,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article button, */
 #panel-used .mt-8.grid > article button,
+/* CSS rule/declaration: #deals-gallery #deals-results > article button { */
 #deals-gallery #deals-results > article button {
+  /* CSS rule/declaration: display: inline-flex; */
   display: inline-flex;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: justify-content: center; */
   justify-content: center;
+  /* CSS rule/declaration: gap: 0.5rem; */
   gap: 0.5rem;
+  /* CSS rule/declaration: white-space: normal; */
   white-space: normal;
+  /* CSS rule/declaration: text-align: center; */
   text-align: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .grid > article button img, */
 #panel-new .grid > article button img,
+/* CSS rule/declaration: #panel-used .mt-8.grid > article button img, */
 #panel-used .mt-8.grid > article button img,
+/* CSS rule/declaration: #deals-gallery #deals-results > article button img { */
 #deals-gallery #deals-results > article button img {
+  /* CSS rule/declaration: display: inline-block; */
   display: inline-block;
+  /* CSS rule/declaration: width: 1rem; */
   width: 1rem;
+  /* CSS rule/declaration: height: 1rem; */
   height: 1rem;
+  /* CSS rule/declaration: flex: 0 0 1rem; */
   flex: 0 0 1rem;
+  /* CSS rule/declaration: object-fit: contain; */
   object-fit: contain;
+/* CSS rule/declaration: } */
 }
 
 /* Phones: stack card actions for comfortable tapping and prevent overflow. */
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #shop [data-shop-pagination] { */
   #shop [data-shop-pagination] {
+    /* CSS rule/declaration: justify-content: flex-start; */
     justify-content: flex-start;
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #shop [data-shop-pagination] button { */
   #shop [data-shop-pagination] button {
+    /* CSS rule/declaration: width: auto; */
     width: auto;
+    /* CSS rule/declaration: min-width: 8.5rem; */
     min-width: 8.5rem;
+    /* CSS rule/declaration: max-width: 100%; */
     max-width: 100%;
+    /* CSS rule/declaration: flex: 0 1 auto; */
     flex: 0 1 auto;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new .grid > article > div:last-child > div:last-child, */
   #panel-new .grid > article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child > div:last-child, */
   #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child > div:last-child { */
   #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    /* CSS rule/declaration: flex-direction: column; */
     flex-direction: column;
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new .grid > article button, */
   #panel-new .grid > article button,
+  /* CSS rule/declaration: #panel-used .mt-8.grid > article button, */
   #panel-used .mt-8.grid > article button,
+  /* CSS rule/declaration: #deals-gallery #deals-results > article button { */
   #deals-gallery #deals-results > article button {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+    /* CSS rule/declaration: flex: 1 1 100%; */
     flex: 1 1 100%;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* Tablets and desktops: keep action buttons side by side where space permits. */
+/* CSS rule/declaration: @media (min-width: 480px) { */
 @media (min-width: 480px) {
+  /* CSS rule/declaration: #panel-new .grid > article > div:last-child > div:last-child, */
   #panel-new .grid > article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child > div:last-child, */
   #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child > div:last-child { */
   #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    /* CSS rule/declaration: flex-direction: row; */
     flex-direction: row;
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new .grid > article button[data-add], */
   #panel-new .grid > article button[data-add],
+  /* CSS rule/declaration: #panel-used .mt-8.grid > article button[data-add], */
   #panel-used .mt-8.grid > article button[data-add],
+  /* CSS rule/declaration: #deals-gallery #deals-results > article button[data-add] { */
   #deals-gallery #deals-results > article button[data-add] {
+    /* CSS rule/declaration: flex: 1 1 8rem; */
     flex: 1 1 8rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new .grid > article button[data-quickview], */
   #panel-new .grid > article button[data-quickview],
+  /* CSS rule/declaration: #panel-used .mt-8.grid > article button[data-quickview], */
   #panel-used .mt-8.grid > article button[data-quickview],
+  /* CSS rule/declaration: #deals-gallery #deals-results > article button[data-quickview] { */
   #deals-gallery #deals-results > article button[data-quickview] {
+    /* CSS rule/declaration: flex: 0 1 auto; */
     flex: 0 1 auto;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 
@@ -1782,190 +3437,368 @@ body {
    CAMPUS-CART — MATCHED SHOP NEW + SECOND-HAND CAROUSELS
    Horizontal scrolling with visible, clickable arrow controls.
    ========================================================== */
+/* CSS rule/declaration: #panel-new .cc-shop-carousel, */
 #panel-new .cc-shop-carousel,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel { */
 #panel-used .cc-shop-carousel {
+  /* CSS rule/declaration: display: flex !important; */
   display: flex !important;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: grid-template-columns: none !important; */
   grid-template-columns: none !important;
+  /* CSS rule/declaration: gap: 1rem; */
   gap: 1rem;
+  /* CSS rule/declaration: overflow-x: auto; */
   overflow-x: auto;
+  /* CSS rule/declaration: overflow-y: hidden; */
   overflow-y: hidden;
+  /* CSS rule/declaration: padding: 0.25rem 0.25rem 1rem; */
   padding: 0.25rem 0.25rem 1rem;
+  /* CSS rule/declaration: scroll-snap-type: x mandatory; */
   scroll-snap-type: x mandatory;
+  /* CSS rule/declaration: scroll-behavior: smooth; */
   scroll-behavior: smooth;
+  /* CSS rule/declaration: overscroll-behavior-inline: contain; */
   overscroll-behavior-inline: contain;
+  /* CSS rule/declaration: -webkit-overflow-scrolling: touch; */
   -webkit-overflow-scrolling: touch;
+  /* CSS rule/declaration: scrollbar-width: thin; */
   scrollbar-width: thin;
+  /* CSS rule/declaration: scrollbar-color: #0d1b3e #e2e8f0; */
   scrollbar-color: #0d1b3e #e2e8f0;
+  /* CSS rule/declaration: cursor: grab; */
   cursor: grab;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .cc-shop-carousel:active, */
 #panel-new .cc-shop-carousel:active,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel:active { */
 #panel-used .cc-shop-carousel:active {
+  /* CSS rule/declaration: cursor: grabbing; */
   cursor: grabbing;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .cc-shop-carousel > article, */
 #panel-new .cc-shop-carousel > article,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel > article { */
 #panel-used .cc-shop-carousel > article {
+  /* CSS rule/declaration: flex: 0 0 clamp(250px, 29vw, 310px); */
   flex: 0 0 clamp(250px, 29vw, 310px);
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: scroll-snap-align: start; */
   scroll-snap-align: start;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .cc-shop-carousel:focus-visible, */
 #panel-new .cc-shop-carousel:focus-visible,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel:focus-visible { */
 #panel-used .cc-shop-carousel:focus-visible {
+  /* CSS rule/declaration: outline: 3px solid #ffd23f; */
   outline: 3px solid #ffd23f;
+  /* CSS rule/declaration: outline-offset: 4px; */
   outline-offset: 4px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .cc-shop-carousel::-webkit-scrollbar, */
 #panel-new .cc-shop-carousel::-webkit-scrollbar,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel::-webkit-scrollbar { */
 #panel-used .cc-shop-carousel::-webkit-scrollbar {
+  /* CSS rule/declaration: height: 8px; */
   height: 8px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .cc-shop-carousel::-webkit-scrollbar-track, */
 #panel-new .cc-shop-carousel::-webkit-scrollbar-track,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel::-webkit-scrollbar-track { */
 #panel-used .cc-shop-carousel::-webkit-scrollbar-track {
+  /* CSS rule/declaration: border-radius: 999px; */
   border-radius: 999px;
+  /* CSS rule/declaration: background: #e2e8f0; */
   background: #e2e8f0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new .cc-shop-carousel::-webkit-scrollbar-thumb, */
 #panel-new .cc-shop-carousel::-webkit-scrollbar-thumb,
+/* CSS rule/declaration: #panel-used .cc-shop-carousel::-webkit-scrollbar-thumb { */
 #panel-used .cc-shop-carousel::-webkit-scrollbar-thumb {
+  /* CSS rule/declaration: border-radius: 999px; */
   border-radius: 999px;
+  /* CSS rule/declaration: background: #0d1b3e; */
   background: #0d1b3e;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-shop-carousel-controls { */
 .cc-shop-carousel-controls {
+  /* CSS rule/declaration: display: flex; */
   display: flex;
+  /* CSS rule/declaration: justify-content: flex-end; */
   justify-content: flex-end;
+  /* CSS rule/declaration: gap: 0.6rem; */
   gap: 0.6rem;
+  /* CSS rule/declaration: margin: 0 0 0.75rem; */
   margin: 0 0 0.75rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-shop-carousel-arrow { */
 .cc-shop-carousel-arrow {
+  /* CSS rule/declaration: display: inline-flex; */
   display: inline-flex;
+  /* CSS rule/declaration: width: 2.75rem; */
   width: 2.75rem;
+  /* CSS rule/declaration: height: 2.75rem; */
   height: 2.75rem;
+  /* CSS rule/declaration: min-width: 2.75rem; */
   min-width: 2.75rem;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: justify-content: center; */
   justify-content: center;
+  /* CSS rule/declaration: border: 1px solid #cbd5e1; */
   border: 1px solid #cbd5e1;
+  /* CSS rule/declaration: border-radius: 999px; */
   border-radius: 999px;
+  /* CSS rule/declaration: background: #ffffff; */
   background: #ffffff;
+  /* CSS rule/declaration: color: #0d1b3e; */
   color: #0d1b3e;
+  /* CSS rule/declaration: cursor: pointer; */
   cursor: pointer;
+  /* CSS rule/declaration: transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease; */
   transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-shop-carousel-arrow:hover { */
 .cc-shop-carousel-arrow:hover {
+  /* CSS rule/declaration: border-color: #0d1b3e; */
   border-color: #0d1b3e;
+  /* CSS rule/declaration: background: #0d1b3e; */
   background: #0d1b3e;
+  /* CSS rule/declaration: color: #ffffff; */
   color: #ffffff;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-shop-carousel-arrow:active { */
 .cc-shop-carousel-arrow:active {
+  /* CSS rule/declaration: transform: scale(0.96); */
   transform: scale(0.96);
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-shop-carousel-arrow:focus-visible { */
 .cc-shop-carousel-arrow:focus-visible {
+  /* CSS rule/declaration: outline: 3px solid #ffd23f; */
   outline: 3px solid #ffd23f;
+  /* CSS rule/declaration: outline-offset: 3px; */
   outline-offset: 3px;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-shop-carousel-arrow img { */
 .cc-shop-carousel-arrow img {
+  /* CSS rule/declaration: width: 1.1rem; */
   width: 1.1rem;
+  /* CSS rule/declaration: height: 1.1rem; */
   height: 1.1rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #panel-new .cc-shop-carousel > article, */
   #panel-new .cc-shop-carousel > article,
+  /* CSS rule/declaration: #panel-used .cc-shop-carousel > article { */
   #panel-used .cc-shop-carousel > article {
+    /* CSS rule/declaration: flex-basis: min(82vw, 300px); */
     flex-basis: min(82vw, 300px);
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: .cc-shop-carousel-controls { */
   .cc-shop-carousel-controls {
+    /* CSS rule/declaration: justify-content: flex-end; */
     justify-content: flex-end;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 /* Wishlist buttons stay compact beside the cart action on every catalogue card. */
+/* CSS rule/declaration: #panel-new article button[data-add-to-wishlist], */
 #panel-new article button[data-add-to-wishlist],
+/* CSS rule/declaration: #panel-used article button[data-add-to-wishlist], */
 #panel-used article button[data-add-to-wishlist],
+/* CSS rule/declaration: #deals-gallery #deals-results article button[data-add-to-wishlist] { */
 #deals-gallery #deals-results article button[data-add-to-wishlist] {
+  /* CSS rule/declaration: display: inline-flex; */
   display: inline-flex;
+  /* CSS rule/declaration: width: 2.75rem; */
   width: 2.75rem;
+  /* CSS rule/declaration: min-width: 2.75rem; */
   min-width: 2.75rem;
+  /* CSS rule/declaration: height: 2.75rem; */
   height: 2.75rem;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+  /* CSS rule/declaration: flex: 0 0 2.75rem; */
   flex: 0 0 2.75rem;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: justify-content: center; */
   justify-content: center;
+  /* CSS rule/declaration: padding: 0; */
   padding: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #panel-new article button[data-add-to-wishlist] img, */
 #panel-new article button[data-add-to-wishlist] img,
+/* CSS rule/declaration: #panel-used article button[data-add-to-wishlist] img, */
 #panel-used article button[data-add-to-wishlist] img,
+/* CSS rule/declaration: #deals-gallery #deals-results article button[data-add-to-wishlist] img { */
 #deals-gallery #deals-results article button[data-add-to-wishlist] img {
+  /* CSS rule/declaration: width: 1rem; */
   width: 1rem;
+  /* CSS rule/declaration: height: 1rem; */
   height: 1rem;
+/* CSS rule/declaration: } */
 }
 
 /* FAQ: every question occupies its own full-width horizontal row. */
+/* CSS rule/declaration: #sell-with-us #faq-student, */
 #sell-with-us #faq-student,
+/* CSS rule/declaration: #sell-with-us #faq-parent { */
 #sell-with-us #faq-parent {
+  /* CSS rule/declaration: display: grid; */
   display: grid;
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: grid-template-columns: minmax(0, 1fr) !important; */
   grid-template-columns: minmax(0, 1fr) !important;
+  /* CSS rule/declaration: align-items: start; */
   align-items: start;
+  /* CSS rule/declaration: gap: 0.85rem; */
   gap: 0.85rem;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #sell-with-us #faq-student > details, */
 #sell-with-us #faq-student > details,
+/* CSS rule/declaration: #sell-with-us #faq-parent > details { */
 #sell-with-us #faq-parent > details {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: min-width: 0; */
   min-width: 0;
+  /* CSS rule/declaration: margin: 0; */
   margin: 0;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #sell-with-us #faq-student > details > summary, */
 #sell-with-us #faq-student > details > summary,
+/* CSS rule/declaration: #sell-with-us #faq-parent > details > summary { */
 #sell-with-us #faq-parent > details > summary {
+  /* CSS rule/declaration: width: 100%; */
   width: 100%;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+  /* CSS rule/declaration: text-align: left; */
   text-align: left;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: #sell-with-us [aria-label="FAQ tabs"] { */
 #sell-with-us [aria-label="FAQ tabs"] {
+  /* CSS rule/declaration: display: inline-flex; */
   display: inline-flex;
+  /* CSS rule/declaration: width: fit-content; */
   width: fit-content;
+  /* CSS rule/declaration: max-width: 100%; */
   max-width: 100%;
+  /* CSS rule/declaration: flex-wrap: wrap; */
   flex-wrap: wrap;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #panel-new .cc-shop-new-marquee > article { */
   #panel-new .cc-shop-new-marquee > article {
+    /* CSS rule/declaration: flex-basis: min(82vw, 300px); */
     flex-basis: min(82vw, 300px);
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #sell-with-us [aria-label="FAQ tabs"] { */
   #sell-with-us [aria-label="FAQ tabs"] {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #sell-with-us [aria-label="FAQ tabs"] > button { */
   #sell-with-us [aria-label="FAQ tabs"] > button {
+    /* CSS rule/declaration: flex: 1 1 0; */
     flex: 1 1 0;
+    /* CSS rule/declaration: white-space: nowrap; */
     white-space: nowrap;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 
 /* Keep the wishlist icon beside Add to Order Summary on narrow screens. */
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #panel-new .grid > article > div:last-child > div:last-child, */
   #panel-new .grid > article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #panel-used .mt-8.grid > article > div:last-child > div:last-child, */
   #panel-used .mt-8.grid > article > div:last-child > div:last-child,
+  /* CSS rule/declaration: #deals-gallery #deals-results > article > div:last-child > div:last-child { */
   #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    /* CSS rule/declaration: flex-direction: row; */
     flex-direction: row;
+    /* CSS rule/declaration: flex-wrap: wrap; */
     flex-wrap: wrap;
+    /* CSS rule/declaration: align-items: stretch; */
     align-items: stretch;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new article button[data-add], */
   #panel-new article button[data-add],
+  /* CSS rule/declaration: #panel-used article button[data-add], */
   #panel-used article button[data-add],
+  /* CSS rule/declaration: #deals-gallery #deals-results article button[data-add] { */
   #deals-gallery #deals-results article button[data-add] {
+    /* CSS rule/declaration: width: auto; */
     width: auto;
+    /* CSS rule/declaration: min-width: 0; */
     min-width: 0;
+    /* CSS rule/declaration: flex: 1 1 calc(100% - 3.25rem); */
     flex: 1 1 calc(100% - 3.25rem);
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new article button[data-add-to-wishlist], */
   #panel-new article button[data-add-to-wishlist],
+  /* CSS rule/declaration: #panel-used article button[data-add-to-wishlist], */
   #panel-used article button[data-add-to-wishlist],
+  /* CSS rule/declaration: #deals-gallery #deals-results article button[data-add-to-wishlist] { */
   #deals-gallery #deals-results article button[data-add-to-wishlist] {
+    /* CSS rule/declaration: width: 2.75rem; */
     width: 2.75rem;
+    /* CSS rule/declaration: flex: 0 0 2.75rem; */
     flex: 0 0 2.75rem;
+  /* CSS rule/declaration: } */
   }
+  /* CSS rule/declaration: #panel-new article button[data-quickview], */
   #panel-new article button[data-quickview],
+  /* CSS rule/declaration: #panel-used article button[data-quickview], */
   #panel-used article button[data-quickview],
+  /* CSS rule/declaration: #deals-gallery #deals-results article button[data-quickview] { */
   #deals-gallery #deals-results article button[data-quickview] {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+    /* CSS rule/declaration: flex: 1 1 100%; */
     flex: 1 1 100%;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 
@@ -1973,56 +3806,106 @@ body {
    HOMEPAGE — BRAND / NEED MARQUEE
    Dedicated no-wrap track with a seamless duplicated loop.
    ========================================================== */
+/* CSS rule/declaration: .cc-brand-marquee { width: 100%; overflow: hidden; } */
 .cc-brand-marquee { width: 100%; overflow: hidden; }
+/* CSS rule/declaration: .cc-brand-marquee-viewport { width: 100%; overflow: hidden; } */
 .cc-brand-marquee-viewport { width: 100%; overflow: hidden; }
+/* CSS rule/declaration: .cc-brand-marquee-track { */
 .cc-brand-marquee-track {
+  /* CSS rule/declaration: display: flex !important; */
   display: flex !important;
+  /* CSS rule/declaration: width: max-content; */
   width: max-content;
+  /* CSS rule/declaration: max-width: none; */
   max-width: none;
+  /* CSS rule/declaration: flex-wrap: nowrap !important; */
   flex-wrap: nowrap !important;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: animation: none !important; */
   animation: none !important;
+  /* CSS rule/declaration: will-change: transform; */
   will-change: transform;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-brand-marquee-group { */
 .cc-brand-marquee-group {
+  /* CSS rule/declaration: display: flex !important; */
   display: flex !important;
+  /* CSS rule/declaration: flex: 0 0 auto; */
   flex: 0 0 auto;
+  /* CSS rule/declaration: flex-wrap: nowrap !important; */
   flex-wrap: nowrap !important;
+  /* CSS rule/declaration: align-items: center; */
   align-items: center;
+  /* CSS rule/declaration: white-space: nowrap; */
   white-space: nowrap;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-brand-marquee-group > * { flex: 0 0 auto; white-space: nowrap; } */
 .cc-brand-marquee-group > * { flex: 0 0 auto; white-space: nowrap; }
+/* CSS rule/declaration: @keyframes cc-brand-marquee-scroll { */
 @keyframes cc-brand-marquee-scroll {
+  /* CSS rule/declaration: from { transform: translateX(0); } */
   from { transform: translateX(0); }
+  /* CSS rule/declaration: to { transform: translateX(-50%); } */
   to { transform: translateX(-50%); }
+/* CSS rule/declaration: } */
 }
 /* Featured starter bundle wishlist controls must remain distinct from cart controls. */
+/* CSS rule/declaration: .cc-featured-wishlist { */
 .cc-featured-wishlist {
+  /* CSS rule/declaration: width: 2.75rem; */
   width: 2.75rem;
+  /* CSS rule/declaration: min-width: 2.75rem; */
   min-width: 2.75rem;
+  /* CSS rule/declaration: height: 2.75rem; */
   height: 2.75rem;
+  /* CSS rule/declaration: min-height: 2.75rem; */
   min-height: 2.75rem;
+  /* CSS rule/declaration: flex: 0 0 2.75rem; */
   flex: 0 0 2.75rem;
+  /* CSS rule/declaration: padding: 0; */
   padding: 0;
+  /* CSS rule/declaration: color: #ffd23f; */
   color: #ffd23f;
+  /* CSS rule/declaration: border-color: rgba(255,255,255,.35); */
   border-color: rgba(255,255,255,.35);
+  /* CSS rule/declaration: background: rgba(255,255,255,.08); */
   background: rgba(255,255,255,.08);
+  /* CSS rule/declaration: font-size: 1.55rem; */
   font-size: 1.55rem;
+  /* CSS rule/declaration: line-height: 1; */
   line-height: 1;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-featured-wishlist.is-wishlisted { */
 .cc-featured-wishlist.is-wishlisted {
+  /* CSS rule/declaration: color: #ffd23f; */
   color: #ffd23f;
+  /* CSS rule/declaration: border-color: #ffd23f; */
   border-color: #ffd23f;
+  /* CSS rule/declaration: background: #0d1b3e; */
   background: #0d1b3e;
+/* CSS rule/declaration: } */
 }
+/* CSS rule/declaration: .cc-featured-wishlist [data-wishlist-icon] { display: block; line-height: 1; } */
 .cc-featured-wishlist [data-wishlist-icon] { display: block; line-height: 1; }
+/* CSS rule/declaration: @media (max-width: 479px) { */
 @media (max-width: 479px) {
+  /* CSS rule/declaration: #main .cc-featured-wishlist, */
   #main .cc-featured-wishlist,
+  /* CSS rule/declaration: #main .cc-featured-wishlist + button[data-add-to-cart] { */
   #main .cc-featured-wishlist + button[data-add-to-cart] {
+    /* CSS rule/declaration: width: 2.75rem; */
     width: 2.75rem;
+    /* CSS rule/declaration: min-width: 2.75rem; */
     min-width: 2.75rem;
+    /* CSS rule/declaration: flex: 0 0 2.75rem; */
     flex: 0 0 2.75rem;
+  /* CSS rule/declaration: } */
   }
+/* CSS rule/declaration: } */
 }
 
 
@@ -2030,236 +3913,440 @@ body {
    PRODUCTS PAGE — PRODUCT CARDS AND SECTION 1 SHOP CONTROLS
    ========================================================== */
 /* Match the reference product-card layout without changing other pages. */
+            /* CSS rule/declaration: #shop #panel-new article, */
             #shop #panel-new article,
+            /* CSS rule/declaration: #shop #panel-used article, */
             #shop #panel-used article,
+            /* CSS rule/declaration: #deals-gallery #deals-results article { */
             #deals-gallery #deals-results article {
+                /* CSS rule/declaration: display: flex; */
                 display: flex;
+                /* CSS rule/declaration: min-width: 0; */
                 min-width: 0;
+                /* CSS rule/declaration: height: 100%; */
                 height: 100%;
+                /* CSS rule/declaration: flex-direction: column; */
                 flex-direction: column;
+                /* CSS rule/declaration: overflow: hidden; */
                 overflow: hidden;
+                /* CSS rule/declaration: border: 1px solid #e2e8f0; */
                 border: 1px solid #e2e8f0;
+                /* CSS rule/declaration: border-radius: 1.65rem; */
                 border-radius: 1.65rem;
+                /* CSS rule/declaration: background: #fff; */
                 background: #fff;
+                /* CSS rule/declaration: padding: 0.85rem; */
                 padding: 0.85rem;
+                /* CSS rule/declaration: box-shadow: 0 8px 22px rgb(13 27 62 / 6%); */
                 box-shadow: 0 8px 22px rgb(13 27 62 / 6%);
+                /* CSS rule/declaration: transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease; */
                 transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article:hover, */
             #shop #panel-new article:hover,
+            /* CSS rule/declaration: #shop #panel-used article:hover, */
             #shop #panel-used article:hover,
+            /* CSS rule/declaration: #deals-gallery #deals-results article:hover { */
             #deals-gallery #deals-results article:hover {
+                /* CSS rule/declaration: transform: translateY(-4px); */
                 transform: translateY(-4px);
+                /* CSS rule/declaration: border-color: #cbd5e1; */
                 border-color: #cbd5e1;
+                /* CSS rule/declaration: box-shadow: 0 16px 32px rgb(13 27 62 / 12%); */
                 box-shadow: 0 16px 32px rgb(13 27 62 / 12%);
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:first-child, */
             #shop #panel-new article > div:first-child,
+            /* CSS rule/declaration: #shop #panel-used article > div:first-child, */
             #shop #panel-used article > div:first-child,
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:first-child { */
             #deals-gallery #deals-results article > div:first-child {
+                /* CSS rule/declaration: position: relative; */
                 position: relative;
+                /* CSS rule/declaration: overflow: hidden; */
                 overflow: hidden;
+                /* CSS rule/declaration: border-radius: 1.2rem; */
                 border-radius: 1.2rem;
+                /* CSS rule/declaration: background: #f1f5f9; */
                 background: #f1f5f9;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:first-child img, */
             #shop #panel-new article > div:first-child img,
+            /* CSS rule/declaration: #shop #panel-used article > div:first-child img, */
             #shop #panel-used article > div:first-child img,
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:first-child img { */
             #deals-gallery #deals-results article > div:first-child img {
+                /* CSS rule/declaration: display: block; */
                 display: block;
+                /* CSS rule/declaration: width: 100%; */
                 width: 100%;
+                /* CSS rule/declaration: aspect-ratio: 1 / 1; */
                 aspect-ratio: 1 / 1;
+                /* CSS rule/declaration: object-fit: cover; */
                 object-fit: cover;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:nth-child(2), */
             #shop #panel-new article > div:nth-child(2),
+            /* CSS rule/declaration: #shop #panel-used article > div:nth-child(2), */
             #shop #panel-used article > div:nth-child(2),
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:nth-child(2) { */
             #deals-gallery #deals-results article > div:nth-child(2) {
+                /* CSS rule/declaration: display: flex; */
                 display: flex;
+                /* CSS rule/declaration: flex: 1 1 auto; */
                 flex: 1 1 auto;
+                /* CSS rule/declaration: flex-direction: column; */
                 flex-direction: column;
+                /* CSS rule/declaration: padding: 0.15rem 0.1rem 0.1rem; */
                 padding: 0.15rem 0.1rem 0.1rem;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:nth-child(2) > div:first-child, */
             #shop #panel-new article > div:nth-child(2) > div:first-child,
+            /* CSS rule/declaration: #shop #panel-used article > div:nth-child(2) > div:first-child, */
             #shop #panel-used article > div:nth-child(2) > div:first-child,
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:nth-child(2) > div:first-child { */
             #deals-gallery #deals-results article > div:nth-child(2) > div:first-child {
+                /* CSS rule/declaration: display: flex; */
                 display: flex;
+                /* CSS rule/declaration: align-items: flex-start; */
                 align-items: flex-start;
+                /* CSS rule/declaration: justify-content: space-between; */
                 justify-content: space-between;
+                /* CSS rule/declaration: gap: 0.6rem; */
                 gap: 0.6rem;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article h3, */
             #shop #panel-new article h3,
+            /* CSS rule/declaration: #shop #panel-used article h3, */
             #shop #panel-used article h3,
+            /* CSS rule/declaration: #deals-gallery #deals-results article h3 { */
             #deals-gallery #deals-results article h3 {
+                /* CSS rule/declaration: min-width: 0; */
                 min-width: 0;
+                /* CSS rule/declaration: font-size: 0.9rem; */
                 font-size: 0.9rem;
+                /* CSS rule/declaration: font-weight: 800; */
                 font-weight: 800;
+                /* CSS rule/declaration: line-height: 1.35; */
                 line-height: 1.35;
+                /* CSS rule/declaration: color: #0d1b3e; */
                 color: #0d1b3e;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:nth-child(2) > div:first-child span, */
             #shop #panel-new article > div:nth-child(2) > div:first-child span,
+            /* CSS rule/declaration: #shop #panel-used article > div:nth-child(2) > div:first-child span, */
             #shop #panel-used article > div:nth-child(2) > div:first-child span,
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:nth-child(2) > div:first-child span { */
             #deals-gallery #deals-results article > div:nth-child(2) > div:first-child span {
+                /* CSS rule/declaration: flex-shrink: 0; */
                 flex-shrink: 0;
+                /* CSS rule/declaration: white-space: nowrap; */
                 white-space: nowrap;
+                /* CSS rule/declaration: font-size: 0.9rem; */
                 font-size: 0.9rem;
+                /* CSS rule/declaration: font-weight: 800; */
                 font-weight: 800;
+                /* CSS rule/declaration: color: #0d1b3e; */
                 color: #0d1b3e;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:nth-child(2) > p, */
             #shop #panel-new article > div:nth-child(2) > p,
+            /* CSS rule/declaration: #shop #panel-used article > div:nth-child(2) > p, */
             #shop #panel-used article > div:nth-child(2) > p,
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:nth-child(2) > p { */
             #deals-gallery #deals-results article > div:nth-child(2) > p {
+                /* CSS rule/declaration: display: -webkit-box; */
                 display: -webkit-box;
+                /* CSS rule/declaration: overflow: hidden; */
                 overflow: hidden;
+                /* CSS rule/declaration: -webkit-box-orient: vertical; */
                 -webkit-box-orient: vertical;
+                /* CSS rule/declaration: -webkit-line-clamp: 2; */
                 -webkit-line-clamp: 2;
+                /* CSS rule/declaration: min-height: 2.5em; */
                 min-height: 2.5em;
+                /* CSS rule/declaration: margin-top: 0.4rem; */
                 margin-top: 0.4rem;
+                /* CSS rule/declaration: font-size: 0.72rem; */
                 font-size: 0.72rem;
+                /* CSS rule/declaration: line-height: 1.35; */
                 line-height: 1.35;
+                /* CSS rule/declaration: color: #64748b; */
                 color: #64748b;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article > div:nth-child(2) > div:last-child, */
             #shop #panel-new article > div:nth-child(2) > div:last-child,
+            /* CSS rule/declaration: #shop #panel-used article > div:nth-child(2) > div:last-child, */
             #shop #panel-used article > div:nth-child(2) > div:last-child,
+            /* CSS rule/declaration: #deals-gallery #deals-results article > div:nth-child(2) > div:last-child { */
             #deals-gallery #deals-results article > div:nth-child(2) > div:last-child {
+                /* CSS rule/declaration: display: flex; */
                 display: flex;
+                /* CSS rule/declaration: flex-wrap: nowrap; */
                 flex-wrap: nowrap;
+                /* CSS rule/declaration: align-items: center; */
                 align-items: center;
+                /* CSS rule/declaration: gap: 0.45rem; */
                 gap: 0.45rem;
+                /* CSS rule/declaration: width: 100%; */
                 width: 100%;
+                /* CSS rule/declaration: margin-top: auto; */
                 margin-top: auto;
+                /* CSS rule/declaration: padding-top: 1rem; */
                 padding-top: 1rem;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article button[data-add], */
             #shop #panel-new article button[data-add],
+            /* CSS rule/declaration: #shop #panel-used article button[data-add], */
             #shop #panel-used article button[data-add],
+            /* CSS rule/declaration: #deals-gallery #deals-results article button[data-add] { */
             #deals-gallery #deals-results article button[data-add] {
+                /* CSS rule/declaration: display: inline-flex; */
                 display: inline-flex;
+                /* CSS rule/declaration: min-width: 0; */
                 min-width: 0;
+                /* CSS rule/declaration: min-height: 2.65rem; */
                 min-height: 2.65rem;
+                /* CSS rule/declaration: min-width: 0; */
                 min-width: 0;
+                /* CSS rule/declaration: flex: 1 1 0; */
                 flex: 1 1 0;
+                /* CSS rule/declaration: align-items: center; */
                 align-items: center;
+                /* CSS rule/declaration: justify-content: center; */
                 justify-content: center;
+                /* CSS rule/declaration: gap: 0.55rem; */
                 gap: 0.55rem;
+                /* CSS rule/declaration: border-radius: 999px; */
                 border-radius: 999px;
+                /* CSS rule/declaration: padding: 0.6rem 0.55rem; */
                 padding: 0.6rem 0.55rem;
+                /* CSS rule/declaration: font-size: 0.72rem; */
                 font-size: 0.72rem;
+                /* CSS rule/declaration: font-weight: 800; */
                 font-weight: 800;
+                /* CSS rule/declaration: white-space: nowrap; */
                 white-space: nowrap;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article button[data-add-to-wishlist], */
             #shop #panel-new article button[data-add-to-wishlist],
+            /* CSS rule/declaration: #shop #panel-used article button[data-add-to-wishlist], */
             #shop #panel-used article button[data-add-to-wishlist],
+            /* CSS rule/declaration: #deals-gallery #deals-results article button[data-add-to-wishlist], */
             #deals-gallery #deals-results article button[data-add-to-wishlist],
+            /* CSS rule/declaration: #shop #panel-new article button[data-quickview], */
             #shop #panel-new article button[data-quickview],
+            /* CSS rule/declaration: #shop #panel-used article button[data-quickview], */
             #shop #panel-used article button[data-quickview],
+            /* CSS rule/declaration: #deals-gallery #deals-results article button[data-quickview] { */
             #deals-gallery #deals-results article button[data-quickview] {
+                /* CSS rule/declaration: display: inline-flex; */
                 display: inline-flex;
+                /* CSS rule/declaration: width: 2.55rem; */
                 width: 2.55rem;
+                /* CSS rule/declaration: min-width: 2.55rem; */
                 min-width: 2.55rem;
+                /* CSS rule/declaration: height: 2.55rem; */
                 height: 2.55rem;
+                /* CSS rule/declaration: min-height: 2.55rem; */
                 min-height: 2.55rem;
+                /* CSS rule/declaration: flex: 0 0 2.55rem; */
                 flex: 0 0 2.55rem;
+                /* CSS rule/declaration: align-items: center; */
                 align-items: center;
+                /* CSS rule/declaration: justify-content: center; */
                 justify-content: center;
+                /* CSS rule/declaration: border-radius: 999px; */
                 border-radius: 999px;
+                /* CSS rule/declaration: padding: 0; */
                 padding: 0;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article button[data-quickview], */
             #shop #panel-new article button[data-quickview],
+            /* CSS rule/declaration: #shop #panel-used article button[data-quickview], */
             #shop #panel-used article button[data-quickview],
+            /* CSS rule/declaration: #deals-gallery #deals-results article button[data-quickview] { */
             #deals-gallery #deals-results article button[data-quickview] {
+                /* CSS rule/declaration: font-size: 0; */
                 font-size: 0;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: #shop #panel-new article button[data-quickview] img, */
             #shop #panel-new article button[data-quickview] img,
+            /* CSS rule/declaration: #shop #panel-used article button[data-quickview] img, */
             #shop #panel-used article button[data-quickview] img,
+            /* CSS rule/declaration: #deals-gallery #deals-results article button[data-quickview] img { */
             #deals-gallery #deals-results article button[data-quickview] img {
+                /* CSS rule/declaration: width: 1rem; */
                 width: 1rem;
+                /* CSS rule/declaration: height: 1rem; */
                 height: 1rem;
+            /* CSS rule/declaration: } */
             }
 
+            /* CSS rule/declaration: @media (max-width: 479px) { */
             @media (max-width: 479px) {
+                /* CSS rule/declaration: #shop #panel-new article, */
                 #shop #panel-new article,
+                /* CSS rule/declaration: #shop #panel-used article, */
                 #shop #panel-used article,
+                /* CSS rule/declaration: #deals-gallery #deals-results article { */
                 #deals-gallery #deals-results article {
+                    /* CSS rule/declaration: padding: 0.7rem; */
                     padding: 0.7rem;
+                /* CSS rule/declaration: } */
                 }
 
+                /* CSS rule/declaration: #shop #panel-new article button[data-add], */
                 #shop #panel-new article button[data-add],
+                /* CSS rule/declaration: #shop #panel-used article button[data-add], */
                 #shop #panel-used article button[data-add],
+                /* CSS rule/declaration: #deals-gallery #deals-results article button[data-add] { */
                 #deals-gallery #deals-results article button[data-add] {
+                    /* CSS rule/declaration: padding-inline: 0.65rem; */
                     padding-inline: 0.65rem;
+                    /* CSS rule/declaration: font-size: 0.72rem; */
                     font-size: 0.72rem;
+                /* CSS rule/declaration: } */
                 }
+            /* CSS rule/declaration: } */
             }
 
 /* Keep each carousel's arrow controls aligned with the right edge
    of the Shop New / Second-Hand tab switch. */
+/* CSS rule/declaration: #shop .cc-shop-tabs-layout { */
 #shop .cc-shop-tabs-layout {
+    /* CSS rule/declaration: position: relative; */
     position: relative;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: #shop .cc-shop-tabs-layout .cc-shop-carousel-controls { */
 #shop .cc-shop-tabs-layout .cc-shop-carousel-controls {
+    /* CSS rule/declaration: position: absolute; */
     position: absolute;
+    /* CSS rule/declaration: top: 0; */
     top: 0;
+    /* CSS rule/declaration: right: 0; */
     right: 0;
+    /* CSS rule/declaration: z-index: 5; */
     z-index: 5;
+    /* CSS rule/declaration: display: flex; */
     display: flex;
+    /* CSS rule/declaration: justify-content: flex-end; */
     justify-content: flex-end;
+    /* CSS rule/declaration: gap: 0.6rem; */
     gap: 0.6rem;
+    /* CSS rule/declaration: margin: 0; */
     margin: 0;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: #shop .cc-shop-tabs-layout .cc-shop-carousel-arrow { */
 #shop .cc-shop-tabs-layout .cc-shop-carousel-arrow {
+    /* CSS rule/declaration: width: 2.75rem; */
     width: 2.75rem;
+    /* CSS rule/declaration: min-width: 2.75rem; */
     min-width: 2.75rem;
+    /* CSS rule/declaration: height: 2.75rem; */
     height: 2.75rem;
+    /* CSS rule/declaration: min-height: 2.75rem; */
     min-height: 2.75rem;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: @media (max-width: 760px) { */
 @media (max-width: 760px) {
+    /* CSS rule/declaration: #shop .cc-shop-tabs-layout .cc-shop-carousel-controls { */
     #shop .cc-shop-tabs-layout .cc-shop-carousel-controls {
+        /* CSS rule/declaration: position: static; */
         position: static;
+        /* CSS rule/declaration: justify-content: flex-end; */
         justify-content: flex-end;
+        /* CSS rule/declaration: margin-top: 0.75rem; */
         margin-top: 0.75rem;
+    /* CSS rule/declaration: } */
     }
+/* CSS rule/declaration: } */
 }
 
 
 /* FAQ tabs: ensure only the selected Student or Parent panel is visible. */
+/* CSS rule/declaration: #sell-with-us #faq-student.hidden, */
 #sell-with-us #faq-student.hidden,
+/* CSS rule/declaration: #sell-with-us #faq-parent.hidden { */
 #sell-with-us #faq-parent.hidden {
+    /* CSS rule/declaration: display: none !important; */
     display: none !important;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: #sell-with-us #faq-student.is-active, */
 #sell-with-us #faq-student.is-active,
+/* CSS rule/declaration: #sell-with-us #faq-parent.is-active { */
 #sell-with-us #faq-parent.is-active {
+    /* CSS rule/declaration: animation: cc-faq-panel-enter 260ms ease both; */
     animation: cc-faq-panel-enter 260ms ease both;
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: @keyframes cc-faq-panel-enter { */
 @keyframes cc-faq-panel-enter {
+    /* CSS rule/declaration: from { */
     from {
+        /* CSS rule/declaration: opacity: 0; */
         opacity: 0;
+        /* CSS rule/declaration: transform: translateY(8px); */
         transform: translateY(8px);
+    /* CSS rule/declaration: } */
     }
+    /* CSS rule/declaration: to { */
     to {
+        /* CSS rule/declaration: opacity: 1; */
         opacity: 1;
+        /* CSS rule/declaration: transform: translateY(0); */
         transform: translateY(0);
+    /* CSS rule/declaration: } */
     }
+/* CSS rule/declaration: } */
 }
 
+/* CSS rule/declaration: @media (prefers-reduced-motion: reduce) { */
 @media (prefers-reduced-motion: reduce) {
+    /* CSS rule/declaration: #sell-with-us #faq-student.is-active, */
     #sell-with-us #faq-student.is-active,
+    /* CSS rule/declaration: #sell-with-us #faq-parent.is-active { */
     #sell-with-us #faq-parent.is-active {
+        /* CSS rule/declaration: animation: none; */
         animation: none;
+    /* CSS rule/declaration: } */
     }
+/* CSS rule/declaration: } */
 }
 
 
@@ -2271,51 +4358,90 @@ body {
    ========================================================== */
 
 /* Shared rule for Campus-Cart content photography only. */
+/* CSS rule/declaration: main img[src*="/assets/images/"], */
 main img[src*="/assets/images/"],
+/* CSS rule/declaration: main img[src^="assets/images/"], */
 main img[src^="assets/images/"],
+/* CSS rule/declaration: main img[src^="../assets/images/"] { */
 main img[src^="../assets/images/"] {
+    /* CSS rule/declaration: display: block; */
     display: block;
+    /* CSS rule/declaration: max-width: 100%; */
     max-width: 100%;
+    /* CSS rule/declaration: object-fit: cover; */
     object-fit: cover;
+    /* CSS rule/declaration: object-position: center center; */
     object-position: center center;
+/* CSS rule/declaration: } */
 }
 
 /* Keep the hero's circular feature images inside their designed shape. */
+/* CSS rule/declaration: main img.rounded-full[src*="/assets/images/"] { */
 main img.rounded-full[src*="/assets/images/"] {
+    /* CSS rule/declaration: width: auto; */
     width: auto;
+    /* CSS rule/declaration: height: auto; */
     height: auto;
+    /* CSS rule/declaration: aspect-ratio: 1 / 1; */
     aspect-ratio: 1 / 1;
+    /* CSS rule/declaration: object-fit: cover; */
     object-fit: cover;
+/* CSS rule/declaration: } */
 }
 
 /* Product listings use consistent square image frames. */
+/* CSS rule/declaration: #shop article img[src*="/assets/images/"], */
 #shop article img[src*="/assets/images/"],
+/* CSS rule/declaration: #deals-gallery article img[src*="/assets/images/"], */
 #deals-gallery article img[src*="/assets/images/"],
+/* CSS rule/declaration: #panel-new article img[src*="/assets/images/"], */
 #panel-new article img[src*="/assets/images/"],
+/* CSS rule/declaration: #panel-used article img[src*="/assets/images/"] { */
 #panel-used article img[src*="/assets/images/"] {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+    /* CSS rule/declaration: aspect-ratio: 1 / 1; */
     aspect-ratio: 1 / 1;
+    /* CSS rule/declaration: height: auto; */
     height: auto;
+    /* CSS rule/declaration: object-fit: cover; */
     object-fit: cover;
+    /* CSS rule/declaration: object-position: center; */
     object-position: center;
+/* CSS rule/declaration: } */
 }
 
 /* Wide banners and editorial/gallery cards fill their own frames. */
+/* CSS rule/declaration: main img.w-full[src*="/assets/images/bundles/"], */
 main img.w-full[src*="/assets/images/bundles/"],
+/* CSS rule/declaration: main img.w-full[src*="/assets/images/second-hand/"] { */
 main img.w-full[src*="/assets/images/second-hand/"] {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+    /* CSS rule/declaration: object-fit: cover; */
     object-fit: cover;
+    /* CSS rule/declaration: object-position: center; */
     object-position: center;
+/* CSS rule/declaration: } */
 }
 
 /* Detail and quick-view product photos remain square and responsive. */
+/* CSS rule/declaration: #detail-img, */
 #detail-img,
+/* CSS rule/declaration: #product-detail img[src*="/assets/images/"] { */
 #product-detail img[src*="/assets/images/"] {
+    /* CSS rule/declaration: width: 100%; */
     width: 100%;
+    /* CSS rule/declaration: aspect-ratio: 1 / 1; */
     aspect-ratio: 1 / 1;
+    /* CSS rule/declaration: height: auto; */
     height: auto;
+    /* CSS rule/declaration: object-fit: contain; */
     object-fit: contain;
+    /* CSS rule/declaration: object-position: center; */
     object-position: center;
+    /* CSS rule/declaration: background: #f8fafc; */
     background: #f8fafc;
+/* CSS rule/declaration: } */
 }
 
