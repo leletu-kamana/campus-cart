@@ -218,6 +218,7 @@
       panels.forEach((panel) => {
         const active = panel === targetPanel;
         panel.classList.toggle('hidden', !active);
+        panel.classList.toggle('is-active', active);
         panel.setAttribute('aria-hidden', String(!active));
       });
     };
