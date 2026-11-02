@@ -979,12 +979,6 @@ main img[alt=""] {
 .cc-marquee-item { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .55rem; white-space: nowrap; color: #475569; font-size: .82rem; }
 .cc-marquee-item img { width: 1.1rem; height: 1.1rem; filter: brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(2208%) hue-rotate(190deg) brightness(91%) contrast(96%); }
 .cc-marquee-item strong { color: #0d1b3e; font-weight: 800; }
-/* Trust marquee continues moving while hovered. */
-@media (prefers-reduced-motion: reduce) {
- .cc-marquee-track { animation: none; width: 100%; flex-wrap: wrap; justify-content: center; }
- .cc-marquee-group { flex-wrap: wrap; justify-content: center; }
- .cc-marquee-group[aria-hidden="true"] { display: none; }
-}
 /* ----- Consistent centred footer layout on every page ----- */
 footer .max-w-7xl > .grid { text-align: center; }
 footer .max-w-7xl > .grid > div > a:first-child { justify-content: center; }
@@ -2001,12 +1995,6 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-/* The brand / need ticker keeps moving automatically, including on hover. */
-@media (prefers-reduced-motion: reduce) {
-  .cc-brand-marquee-track { animation: none !important; transform: none !important; }
-  .cc-brand-marquee-viewport { overflow-x: auto; }
-}
-
 /* Featured starter bundle wishlist controls must remain distinct from cart controls. */
 .cc-featured-wishlist {
   width: 2.75rem;
