@@ -1,15 +1,5 @@
-// ==========================================================
-// CAMPUS-CART
-// Coverage data: provinces, collection hubs and institutions
-// Used by forms.js (enquiry form) so the dropdowns and delivery
-// estimates always match the Coverage page.
-// ==========================================================
+// DATA LAYER — Defines the shared product catalogue, province, collection-hub and institution records consumed by the page scripts. These values populate product displays and location-aware form choices; the records are static project data, not a live stock or courier API.
 
-// leadDays = typical courier time to a campus in that province, in working days.
-// A campus in the same city as a hub is always 1 working day.
-// An institution with city "" has several campuses (or an unknown town), so the province lead time is used.
-// type is "University", "TVET college" or "Private institution".
-// Hub addresses and times are illustrative because Campus-Cart is a fictional business.
 const PROVINCES = [ // Starts the list of provinces.
  { // Starts a new province record.
   "code": "EC", // Short province code used by the form and coverage data.
