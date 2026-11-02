@@ -974,7 +974,7 @@ main img[alt=""] {
 /* ----- Homepage trust marquee ----- */
 .cc-trust-marquee { position: relative; z-index: 10; width: 100%; overflow: hidden; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid #e2e8f0; background: #fff; box-shadow: 0 12px 28px rgba(13,27,62,.07); }
 .cc-marquee-viewport { width: 100%; overflow: hidden; }
-.cc-marquee-track { display: flex; width: max-content; flex-wrap: nowrap; animation: cc-marquee 34s linear infinite; animation-direction: normal; animation-play-state: running; will-change: transform; }
+.cc-marquee-track { display: flex; width: max-content; flex-wrap: nowrap; animation: cc-marquee 34s linear infinite; animation-direction: normal; animation-play-state: running !important; will-change: transform; }
 .cc-marquee-group { display: flex; flex: 0 0 auto; align-items: center; gap: 2.5rem; padding: 1.1rem 1.25rem; }
 .cc-marquee-item { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .55rem; white-space: nowrap; color: #475569; font-size: .82rem; }
 .cc-marquee-item img { width: 1.1rem; height: 1.1rem; filter: brightness(0) saturate(100%) invert(11%) sepia(21%) saturate(2208%) hue-rotate(190deg) brightness(91%) contrast(96%); }
@@ -1988,7 +1988,7 @@ body {
   align-items: center;
   animation: cc-brand-marquee-scroll 28s linear infinite;
   animation-direction: normal;
-  animation-play-state: running;
+  animation-play-state: running !important;
   will-change: transform;
 }
 .cc-brand-marquee-group {
