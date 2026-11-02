@@ -294,6 +294,8 @@
         ? usedProducts.map(card).join('')
         : '<p class="col-span-full rounded-2xl bg-white p-6 text-sm text-slate-500">No second-hand products are currently listed.</p>';
     }
+    // Apply saved wishlist state to cards that were just rendered.
+    CC.updateWishlistBadge();
 
     // Add independent See More / See Less controls to both Section 1 shop tabs.
     // Each tab starts with six products and reveals six more with every click.
@@ -392,6 +394,7 @@
       dealsResults.innerHTML = items.length
         ? items.slice(0, visibleCount).map(card).join('')
         : '<div class="col-span-full rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center"><h3 class="font-bold text-[#0d1b3e]">No matches</h3><p class="mt-1 text-sm text-slate-500">Try a different keyword, category or condition.</p></div>';
+      CC.updateWishlistBadge();
 
       if (seeMore) seeMore.hidden = items.length <= visibleCount;
       if (seeLess) seeLess.hidden = visibleCount <= STEP || items.length <= STEP;
