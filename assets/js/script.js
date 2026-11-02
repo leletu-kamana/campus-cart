@@ -1,11 +1,4 @@
-// ==========================================================
-// CAMPUS-CART
-// UNIFIED PAGE LOADER & PAGE TRANSITION SYSTEM
-// Features the Uiverse.io loader by Chris-immanuel-matthew
-// Provides zero-flash initial loading and smooth page transitions.
-// (The product, cart and form code that used to share this file now
-// lives in data.js, interactions.js and forms.js.)
-// ==========================================================
+// PAGE TRANSITION LAYER — Controls the shared loading overlay and navigation transition behaviour, including timing safeguards that prevent the loader from remaining visible indefinitely. Product, cart and form workflows are implemented in their dedicated JavaScript modules rather than in this file.
 
 (function () { // Performs the next step in the current Campus-Cart operation.
     // Enables JavaScript strict mode so unsafe or undeclared code is caught instead of silently continuing.
