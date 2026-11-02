@@ -1,12 +1,4 @@
-// ==========================================================
-// CAMPUS-CART
-// game.js - 404 page game: "Campus Runner"
-// A small endless runner. Jump over the crates for as long as you can.
-// Plain JavaScript and the canvas element, no libraries.
-// Runs only on a page that has the #game-canvas element.
-// (Replaces the older game.js: the 404 page now shows a live score and
-// a saved best score, so this version updates those two badges too.)
-// ==========================================================
+// GAME MODULE — Implements the Campus Runner canvas mini-game shown only when the page contains its game canvas and controls. It manages the animation loop, jumping, obstacles, score and saved best score; it is a self-contained browser game rather than part of shopping or checkout.
 
 (function () {
   'use strict';
