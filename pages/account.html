@@ -1,294 +1,203 @@
 <!doctype html>
 <!-- ==========================================================
-     <!-- HTML content: CAMPUS-CART | ACCOUNT PAGE -->
      CAMPUS-CART | ACCOUNT PAGE
-     <!-- HTML content: This document defines the page structure, accessible content, -->
      This document defines the page structure, accessible content,
-     <!-- HTML content: navigation, interactive controls and links to shared assets. -->
      navigation, interactive controls and links to shared assets.
-     <!-- HTML content: ========================================================== --&gt; -->
      ========================================================== -->
-<!-- HTML: <html lang="en"> -->
 <html lang="en">
- <!-- HTML: <head> -->
 	<head>
-  <!-- HTML: <meta charset="utf-8" /> -->
 		<meta charset="utf-8" />
-  <!-- HTML: <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- HTML: <title>Student &amp; Parent Paths + Order Summary | Campus-Cart</title> -->
 		<title>Student &amp; Parent Paths + Order Summary | Campus-Cart</title>
-  <!-- HTML: <meta -->
 		<meta
 			name="description"
 			content="Review your Campus-Cart order summary, delivery or collection choice and account details."
 		/>
-  <!-- HTML: <meta name="robots" content="index, follow" /> -->
 		<meta name="robots" content="index, follow" />
-  <!-- HTML: <meta name="theme-color" content="#0d1b3e" /> -->
 		<meta name="theme-color" content="#0d1b3e" />
-  <!-- HTML: <meta -->
 		<meta
 			name="keywords"
 			content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery"
 		/>
-  <!-- HTML: <meta property="og:type" content="website" /> -->
 		<meta property="og:type" content="website" />
-  <!-- HTML: <meta property="og:site_name" content="Campus-Cart" /> -->
 		<meta property="og:site_name" content="Campus-Cart" />
-  <!-- HTML: <meta property="og:locale" content="en_ZA" /> -->
 		<meta property="og:locale" content="en_ZA" />
-  <!-- HTML: <meta -->
 		<meta
 			property="og:title"
 			content="Student &amp; Parent Paths + Order Summary | Campus-Cart"
 		/>
-  <!-- HTML: <meta -->
 		<meta
 			property="og:description"
 			content="Review your Campus-Cart order summary, delivery or collection choice and account details."
 		/>
-  <!-- HTML: <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <!-- HTML: <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-  <!-- HTML: <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- HTML: <link -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
 			rel="stylesheet"
 		/>
-  <!-- HTML: <link -->
 		<link
 			rel="icon"
 			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
 		/>
 
 		<!-- Tailwind v4 theme config: animations used across this page -->
-  <!-- HTML: <link rel="stylesheet" href="../assets/css/styles.css" /> -->
 		<link rel="stylesheet" href="../assets/css/styles.css" />
- <!-- HTML: </head> -->
 	</head>
 
- <!-- HTML: <body -->
 	<body
 		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
 	>
 		<!-- Skip link for keyboard users -->
-  <!-- HTML: <a -->
 		<a
 			href="#main"
 			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
 		>
-   <!-- HTML content: Skip to main content -->
 			Skip to main content
-  <!-- HTML: </a> -->
 		</a>
 
 		<!-- ===== Top utility bar ===== -->
-  <!-- HTML: <div -->
 		<div
 			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
 		>
-   <!-- HTML: <div -->
 			<div
 				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
 			>
-    <!-- HTML: <div class="flex items-center gap-5"> -->
 				<div class="flex items-center gap-5">
-     <!-- HTML: <a -->
 					<a
 						href="mailto:hello@campus-cart.co.za"
 						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
 					>
-      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
 							alt=""
 							class="h-3.5 w-3.5"
 						/>
-      <!-- HTML content: hello@campus-cart.co.za -->
 						hello@campus-cart.co.za
-     <!-- HTML: </a> -->
 					</a>
-     <!-- HTML: <a -->
 					<a
 						href="https://wa.me/27123456789"
 						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
 					>
-      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
 							alt=""
 							class="h-3.5 w-3.5"
 						/>
-      <!-- HTML content: +27 12 345 6789 -->
 						+27 12 345 6789
-     <!-- HTML: </a> -->
 					</a>
-    <!-- HTML: </div> -->
 				</div>
-    <!-- HTML: <div class="flex items-center gap-5"> -->
 				<div class="flex items-center gap-5">
-     <!-- HTML: <a href="#student" class="transition hover:text-[#ffd23f]" -->
 					<a href="#student" class="transition hover:text-[#ffd23f]"
 						>Student path</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <span class="text-slate-600">|</span> -->
 					<span class="text-slate-600">|</span>
-     <!-- HTML: <a href="#parent" class="transition hover:text-[#ffd23f]" -->
 					<a href="#parent" class="transition hover:text-[#ffd23f]"
 						>Parent path</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <span class="text-slate-600">|</span> -->
 					<span class="text-slate-600">|</span>
-     <!-- HTML: <span -->
 					<span
 						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
 					>
-      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
 							alt=""
 							class="h-3.5 w-3.5"
 						/>
-      <!-- HTML content: No card details on this site -->
 						No card details on this site
-     <!-- HTML: </span> -->
 					</span>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </div> -->
 			</div>
-  <!-- HTML: </div> -->
 		</div>
 
 		<!-- ===== Header / Navigation ===== -->
-  <!-- HTML: <header -->
 		<header
 			id="siteHeader"
 			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300"
 		>
-   <!-- HTML: <div -->
 			<div
 				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
-    <!-- HTML: <a -->
 				<a
 					href="../index.html"
 					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
 				>
-     <!-- HTML: <span -->
 					<span
 						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
 						>C</span
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <span>Campus<span class="text-[#c99700]">-Cart</span></span> -->
 					<span>Campus<span class="text-[#c99700]">-Cart</span></span>
-    <!-- HTML: </a> -->
 				</a>
 
 				<!-- Provides navigation links for moving between pages or page sections. -->
-    <!-- HTML: <nav -->
 				<nav
 					class="hidden items-center gap-1 lg:flex"
 					aria-label="Main navigation"
 				>
-     <!-- HTML: <a -->
 					<a
 						href="../index.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Home</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="about.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>About</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="products.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Shop</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="products.html#parent-hub"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Parent Hub</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="enquiry.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Enquiry</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="coverage.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Coverage</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="contact.html"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Contact</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="account.html"
 						aria-current="page"
 						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
 						>Account</a
-     <!-- HTML content: > -->
 					>
-    <!-- HTML: </nav> -->
 				</nav>
 
-    <!-- HTML: <div class="flex items-center gap-2 sm:gap-3"> -->
 				<div class="flex items-center gap-2 sm:gap-3">
-     <!-- HTML: <a -->
 					<a
 						href="products.html"
 						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid"
 						aria-label="Search products"
 					>
-      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
-     <!-- HTML: </a> -->
 					</a>
 
-     <!-- HTML: <div class="hidden text-right xl:block"> -->
 					<div class="hidden text-right xl:block">
-      <!-- HTML: <p id="navTime" class="text-xs font-bold text-[#0d1b3e]"> -->
 						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
-       <!-- HTML content: --:--:-- -->
 							--:--:--
-      <!-- HTML: </p> -->
 						</p>
-      <!-- HTML: <p id="navDate" class="text-[11px] text-slate-500">Loading…</p> -->
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
-     <!-- HTML: </div> -->
 					</div>
 
-     <!-- HTML: <button -->
 					<button
 						id="cartButton"
 						type="button"
@@ -297,23 +206,18 @@
 						aria-controls="cartDrawer"
 						aria-expanded="false"
 					>
-      <!-- HTML: <img -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
-      <!-- HTML: <span -->
 						<span
 							id="cartCount"
 							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
 							>0</span
-      <!-- HTML content: > -->
 						>
-     <!-- HTML: </button> -->
 					</button>
 
-     <!-- HTML: <button -->
 					<button
 						id="navToggle"
 						type="button"
@@ -322,398 +226,257 @@
 						aria-controls="mobileMenu"
 						aria-label="Menu"
 					>
-      <!-- HTML: <img -->
 						<img
 							id="navIcon"
 							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
-     <!-- HTML: </button> -->
 					</button>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </div> -->
 			</div>
 
-   <!-- HTML: <div -->
 			<div
 				id="mobileMenu"
 				class="hidden border-t border-slate-200 bg-white lg:hidden"
 			>
 				<!-- Provides navigation links for moving between pages or page sections. -->
-    <!-- HTML: <nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation"> -->
 				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
-     <!-- HTML: <a -->
 					<a
 						href="../index.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Home</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="about.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>About</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="products.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Shop</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="products.html#parent-hub"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Parent Hub</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="enquiry.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Enquiry</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="coverage.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Coverage</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="contact.html"
 						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Contact</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="account.html"
 						aria-current="page"
 						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]"
 						>Account</a
-     <!-- HTML content: > -->
 					>
-    <!-- HTML: </nav> -->
 				</nav>
-   <!-- HTML: </div> -->
 			</div>
-  <!-- HTML: </header> -->
 		</header>
 
 		<!-- Contains the primary content of this page, separate from shared navigation and footer content. -->
-  <!-- HTML: <main id="main" tabindex="-1"> -->
 		<main id="main" tabindex="-1">
 			<!-- ===== Page hero ===== -->
-   <!-- HTML: <section class="relative overflow-hidden bg-[#0d1b3e] text-white"> -->
 			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
-    <!-- HTML: <div -->
 				<div
 					aria-hidden="true"
 					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"
 				></div>
-    <!-- HTML: <div -->
 				<div
 					aria-hidden="true"
 					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
 				></div>
 
-    <!-- HTML: <div -->
 				<div
 					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
 				>
 					<!-- Provides navigation links for moving between pages or page sections. -->
-     <!-- HTML: <nav class="mb-6" aria-label="Breadcrumb"> -->
 					<nav class="mb-6" aria-label="Breadcrumb">
-      <!-- HTML: <ol class="flex items-center gap-2 text-sm text-slate-400"> -->
 						<ol class="flex items-center gap-2 text-sm text-slate-400">
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="../index.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="../index.html" class="transition hover:text-[#ffd23f]"
 									>Home</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li aria-hidden="true" class="text-slate-500">/</li> -->
 							<li aria-hidden="true" class="text-slate-500">/</li>
-       <!-- HTML: <li aria-current="page" class="font-semibold text-[#ffd23f]"> -->
 							<li aria-current="page" class="font-semibold text-[#ffd23f]">
-        <!-- HTML content: Account -->
 								Account
-       <!-- HTML: </li> -->
 							</li>
-      <!-- HTML: </ol> -->
 						</ol>
-     <!-- HTML: </nav> -->
 					</nav>
 
-     <!-- HTML: <div class="animate-fade-up"> -->
 					<div class="animate-fade-up">
-      <!-- HTML: <span -->
 						<span
 							class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
 						>
-       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg"
 								alt=""
 								class="h-3.5 w-3.5"
 							/>
-       <!-- HTML content: Your path -->
 							Your path
-      <!-- HTML: </span> -->
 						</span>
-      <!-- HTML: <h1 -->
 						<h1
 							class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl"
 						>
-       <!-- HTML content: No logins, -->
 							No logins,
-       <!-- HTML: <span -->
 							<span
 								class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
 								>no passwords</span
-       <!-- HTML content: > -->
 							>
-      <!-- HTML: </h1> -->
 						</h1>
-      <!-- HTML: <p class="mt-5 max-w-2xl text-lg text-slate-300"> -->
 						<p class="mt-5 max-w-2xl text-lg text-slate-300">
-       <!-- HTML content: These are informational paths, not accounts. Campus-Cart stores no -->
 							These are informational paths, not accounts. Campus-Cart stores no
-       <!-- HTML content: personal details and there is nothing to sign in to. -->
 							personal details and there is nothing to sign in to.
-      <!-- HTML: </p> -->
 						</p>
-     <!-- HTML: </div> -->
 					</div>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== In-page pill nav ===== -->
-   <!-- HTML: <nav -->
 			<nav
 				class="relative z-10 mx-auto -mt-8 max-w-3xl px-4 sm:px-6"
 				aria-label="On this page"
 			>
-    <!-- HTML: <div -->
 				<div
 					class="flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 bg-white p-2 shadow-lg shadow-slate-200/60"
 				>
-     <!-- HTML: <a -->
 					<a
 						href="#student"
 						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
 						>Student path</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="#parent"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
 						>Parent path</a
-     <!-- HTML content: > -->
 					>
-     <!-- HTML: <a -->
 					<a
 						href="#order"
 						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
 						>Order Summary</a
-     <!-- HTML content: > -->
 					>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </nav> -->
 			</nav>
 
 			<!-- ===== Student path ===== -->
-   <!-- HTML: <section class="py-20" id="student"> -->
 			<section class="py-20" id="student">
-    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-     <!-- HTML: <div class="grid items-center gap-12 lg:grid-cols-2"> -->
 					<div class="grid items-center gap-12 lg:grid-cols-2">
-      <!-- HTML: <div> -->
 						<div>
-       <!-- HTML: <span -->
 							<span
 								class="inline-flex rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]"
 								>Student path</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <h2 -->
 							<h2
 								class="mt-4 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
-        <!-- HTML content: If you are the student -->
 								If you are the student
-       <!-- HTML: </h2> -->
 							</h2>
 
-       <!-- HTML: <ol class="mt-8 space-y-4"> -->
 							<ol class="mt-8 space-y-4">
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f] text-[11px] font-extrabold text-[#0d1b3e]"
 										>1</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Browse -->
 										Browse
-          <!-- HTML: <a -->
 										<a
 											href="products.html#shop"
 											class="font-bold text-[#0d1b3e] underline decoration-[#ffd23f] decoration-2 underline-offset-2 hover:text-[#c99700]"
 											>Shop New</a
-          <!-- HTML content: > -->
 										>
-          <!-- HTML content: for basics you need immediately. -->
 										for basics you need immediately.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f] text-[11px] font-extrabold text-[#0d1b3e]"
 										>2</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Check the -->
 										Check the
-          <!-- HTML: <a -->
 										<a
 											href="products.html#shop"
 											class="font-bold text-[#0d1b3e] underline decoration-[#ffd23f] decoration-2 underline-offset-2 hover:text-[#c99700]"
 											>Second-Hand Marketplace</a
-          <!-- HTML content: > -->
 										>
-          <!-- HTML content: before buying new — desks, fridges and textbooks are often -->
 										before buying new — desks, fridges and textbooks are often
-          <!-- HTML content: half price. -->
 										half price.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f] text-[11px] font-extrabold text-[#0d1b3e]"
 										>3</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Use -->
 										Use
-          <!-- HTML: <a -->
 										<a
 											href="products.html#deals-gallery"
 											class="font-bold text-[#0d1b3e] underline decoration-[#ffd23f] decoration-2 underline-offset-2 hover:text-[#c99700]"
 											>Deals</a
-          <!-- HTML content: > -->
 										>
-          <!-- HTML content: filters to sort by price. -->
 										filters to sort by price.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f] text-[11px] font-extrabold text-[#0d1b3e]"
 										>4</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Add items to your Order Summary below and pick a collection -->
 										Add items to your Order Summary below and pick a collection
-          <!-- HTML content: point. -->
 										point.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f] text-[11px] font-extrabold text-[#0d1b3e]"
 										>5</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Hand off by WhatsApp or email; we confirm availability and -->
 										Hand off by WhatsApp or email; we confirm availability and
-          <!-- HTML content: payment plan. -->
 										payment plan.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffd23f] text-[11px] font-extrabold text-[#0d1b3e]"
 										>6</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Selling at year end? See -->
 										Selling at year end? See
-          <!-- HTML: <a -->
 										<a
 											href="products.html#sell-with-us"
 											class="font-bold text-[#0d1b3e] underline decoration-[#ffd23f] decoration-2 underline-offset-2 hover:text-[#c99700]"
 											>Sell With Us</a
-          <!-- HTML content: >. -->
 										>.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-       <!-- HTML: </ol> -->
 							</ol>
-      <!-- HTML: </div> -->
 						</div>
 
-      <!-- HTML: <div class="relative"> -->
 						<div class="relative">
-       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/30 blur-2xl"
 							></div>
-       <!-- HTML: <figure class="relative"> -->
 							<figure class="relative">
-        <!-- HTML: <img -->
 								<img
 									src="https://picsum.photos/seed/cc-student-lifestyle/1000/667"
 									alt="A student lying on a residence bed, writing notes beside an open laptop"
@@ -722,890 +485,558 @@
 									loading="lazy"
 									class="aspect-[3/2] w-full rounded-[2rem] object-cover shadow-xl"
 								/>
-        <!-- HTML: <figcaption -->
 								<figcaption
 									class="absolute -bottom-5 left-6 rounded-2xl bg-white px-5 py-3.5 shadow-xl animate-float"
 								>
-         <!-- HTML: <p class="text-sm font-bold text-[#0d1b3e]"> -->
 									<p class="text-sm font-bold text-[#0d1b3e]">
-          <!-- HTML content: Plan around how you study -->
 										Plan around how you study
-         <!-- HTML: </p> -->
 									</p>
-         <!-- HTML: <p class="text-xs text-slate-500"> -->
 									<p class="text-xs text-slate-500">
-          <!-- HTML content: Your setup should match your routine -->
 										Your setup should match your routine
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </figcaption> -->
 								</figcaption>
-       <!-- HTML: </figure> -->
 							</figure>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
 
-     <!-- HTML: <div -->
 					<div
 						class="mt-16 rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10"
 					>
-      <!-- HTML: <div class="flex flex-col gap-4 sm:flex-row sm:items-start"> -->
 						<div class="flex flex-col gap-4 sm:flex-row sm:items-start">
-       <!-- HTML: <span -->
 							<span
 								class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[#0d1b3e]/5"
 							>
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/info.svg"
 									alt=""
 									class="h-5 w-5 text-[#0d1b3e]"
 								/>
-       <!-- HTML: </span> -->
 							</span>
-       <!-- HTML: <div> -->
 							<div>
-        <!-- HTML: <h3 class="text-lg font-extrabold text-[#0d1b3e]"> -->
 								<h3 class="text-lg font-extrabold text-[#0d1b3e]">
-         <!-- HTML content: Good to know -->
 									Good to know
-        <!-- HTML: </h3> -->
 								</h3>
-        <!-- HTML: <p class="mt-2 text-sm text-slate-600"> -->
 								<p class="mt-2 text-sm text-slate-600">
-         <!-- HTML content: Collection is free at listed residence, campus and locker -->
 									Collection is free at listed residence, campus and locker
-         <!-- HTML content: points. Bring your student card for handover. -->
 									points. Bring your student card for handover.
-        <!-- HTML: </p> -->
 								</p>
-        <!-- HTML: <p class="mt-2 text-sm text-slate-600"> -->
 								<p class="mt-2 text-sm text-slate-600">
-         <!-- HTML content: Payment plans are arranged by email — nothing is charged on -->
 									Payment plans are arranged by email — nothing is charged on
-         <!-- HTML content: this website. -->
 									this website.
-        <!-- HTML: </p> -->
 								</p>
-       <!-- HTML: </div> -->
 							</div>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Parent / Guardian path ===== -->
-   <!-- HTML: <section class="bg-white py-20" id="parent"> -->
 			<section class="bg-white py-20" id="parent">
-    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-     <!-- HTML: <div class="grid gap-12 lg:grid-cols-2"> -->
 					<div class="grid gap-12 lg:grid-cols-2">
-      <!-- HTML: <div> -->
 						<div>
-       <!-- HTML: <span -->
 							<span
 								class="inline-flex rounded-full bg-[#ffe9a8] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#7a5800]"
 								>Parent / Guardian path</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <h2 -->
 							<h2
 								class="mt-4 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 							>
-        <!-- HTML content: If you are the parent or guardian -->
 								If you are the parent or guardian
-       <!-- HTML: </h2> -->
 							</h2>
 
-       <!-- HTML: <ol class="mt-8 space-y-4"> -->
 							<ol class="mt-8 space-y-4">
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffe9a8] text-[11px] font-extrabold text-[#7a5800]"
 										>1</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Print the -->
 										Print the
-          <!-- HTML: <a -->
 										<a
 											href="products.html#parent-hub"
 											class="font-bold text-[#0d1b3e] underline decoration-[#ffd23f] decoration-2 underline-offset-2 hover:text-[#c99700]"
 											>First Year Checklist</a
-          <!-- HTML content: > -->
 										>
-          <!-- HTML content: and tick off what you already own. -->
 										and tick off what you already own.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffe9a8] text-[11px] font-extrabold text-[#7a5800]"
 										>2</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Compare the Basic, Standard and Premium bundles — contents -->
 										Compare the Basic, Standard and Premium bundles — contents
-          <!-- HTML content: and prices are fixed. -->
 										and prices are fixed.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffe9a8] text-[11px] font-extrabold text-[#7a5800]"
 										>3</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Send a -->
 										Send a
-          <!-- HTML: <a -->
 										<a
 											href="enquiry.html"
 											class="font-bold text-[#0d1b3e] underline decoration-[#ffd23f] decoration-2 underline-offset-2 hover:text-[#c99700]"
 											>pre-purchase enquiry</a
-          <!-- HTML content: > -->
 										>
-          <!-- HTML content: to confirm availability and a payment plan. -->
 										to confirm availability and a payment plan.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffe9a8] text-[11px] font-extrabold text-[#7a5800]"
 										>4</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Add the bundle to the Order Summary below and choose -->
 										Add the bundle to the Order Summary below and choose
-          <!-- HTML content: collection or delivery. -->
 										collection or delivery.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-        <!-- HTML: <li class="flex items-start gap-3"> -->
 								<li class="flex items-start gap-3">
-         <!-- HTML: <span -->
 									<span
 										class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#ffe9a8] text-[11px] font-extrabold text-[#7a5800]"
 										>5</span
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <p class="text-sm text-slate-700"> -->
 									<p class="text-sm text-slate-700">
-          <!-- HTML content: Pay by EFT using our static banking details, or arrange over -->
 										Pay by EFT using our static banking details, or arrange over
-          <!-- HTML content: WhatsApp. -->
 										WhatsApp.
-         <!-- HTML: </p> -->
 									</p>
-        <!-- HTML: </li> -->
 								</li>
-       <!-- HTML: </ol> -->
 							</ol>
-      <!-- HTML: </div> -->
 						</div>
 
-      <!-- HTML: <div -->
 						<div
 							class="relative overflow-hidden rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-xl sm:p-10"
 						>
-       <!-- HTML: <div -->
 							<div
 								aria-hidden="true"
 								class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl"
 							></div>
-       <!-- HTML: <div class="relative"> -->
 							<div class="relative">
-        <!-- HTML: <span -->
 								<span
 									class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"
 								>
-         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/wallet.svg"
 										alt=""
 										class="h-6 w-6 text-[#0d1b3e]"
 									/>
-        <!-- HTML: </span> -->
 								</span>
-        <!-- HTML: <h3 class="mt-5 text-2xl font-extrabold">Budget guidance</h3> -->
 								<h3 class="mt-5 text-2xl font-extrabold">Budget guidance</h3>
-        <!-- HTML: <p class="mt-3 text-sm text-slate-300"> -->
 								<p class="mt-3 text-sm text-slate-300">
-         <!-- HTML content: Most first-year families spend between -->
 									Most first-year families spend between
-         <!-- HTML: <strong class="text-[#ffd23f]">R1 500</strong> and -->
 									<strong class="text-[#ffd23f]">R1 500</strong> and
-         <!-- HTML: <strong class="text-[#ffd23f]">R4 500</strong> on res -->
 									<strong class="text-[#ffd23f]">R4 500</strong> on res
-         <!-- HTML content: essentials. Choosing second-hand for furniture and textbooks -->
 									essentials. Choosing second-hand for furniture and textbooks
-         <!-- HTML content: typically saves 30–50%. -->
 									typically saves 30–50%.
-        <!-- HTML: </p> -->
 								</p>
-        <!-- HTML: <a -->
 								<a
 									href="products.html#parent-hub"
 									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-3 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 								>
-         <!-- HTML content: Open Parent Hub -->
 									Open Parent Hub
-         <!-- HTML: <img -->
 									<img
 										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 										alt=""
 										class="h-4 w-4"
 									/>
-        <!-- HTML: </a> -->
 								</a>
-       <!-- HTML: </div> -->
 							</div>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Order Summary ===== -->
-   <!-- HTML: <section class="py-20" id="order"> -->
 			<section class="py-20" id="order">
-    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-     <!-- HTML: <div class="max-w-2xl"> -->
 					<div class="max-w-2xl">
-      <!-- HTML: <span -->
 						<span
 							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>Checkout hand-off</span
-      <!-- HTML content: > -->
 						>
-      <!-- HTML: <h2 -->
 						<h2
 							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
 						>
-       <!-- HTML content: Order Summary -->
 							Order Summary
-      <!-- HTML: </h2> -->
 						</h2>
-      <!-- HTML: <p class="mt-4 text-slate-600"> -->
 						<p class="mt-4 text-slate-600">
-       <!-- HTML content: Items you added while browsing. This list lives in the current -->
 							Items you added while browsing. This list lives in the current
-       <!-- HTML content: browser session only and clears when you close the tab — no -->
 							browser session only and clears when you close the tab — no
-       <!-- HTML content: payment gateway is involved. -->
 							payment gateway is involved.
-      <!-- HTML: </p> -->
 						</p>
-     <!-- HTML: </div> -->
 					</div>
 
 					<!-- Four-step guide -->
-     <!-- HTML: <ol -->
 					<ol
 						class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
 						aria-label="Order steps"
 					>
-      <!-- HTML: <li -->
 						<li
 							class="relative rounded-3xl border border-slate-200 bg-white p-5"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-9 w-9 place-items-center rounded-full bg-[#ffd23f] text-sm font-extrabold text-[#0d1b3e]"
 								>1</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <p class="mt-3 text-sm font-bold text-[#0d1b3e]"> -->
 							<p class="mt-3 text-sm font-bold text-[#0d1b3e]">
-        <!-- HTML content: Review your items -->
 								Review your items
-       <!-- HTML: </p> -->
 							</p>
-       <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 							<p class="mt-1 text-xs text-slate-500">
-        <!-- HTML content: Check quantities and the total below. -->
 								Check quantities and the total below.
-       <!-- HTML: </p> -->
 							</p>
-      <!-- HTML: </li> -->
 						</li>
-      <!-- HTML: <li -->
 						<li
 							class="relative rounded-3xl border border-slate-200 bg-white p-5"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-9 w-9 place-items-center rounded-full bg-[#ffd23f] text-sm font-extrabold text-[#0d1b3e]"
 								>2</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <p class="mt-3 text-sm font-bold text-[#0d1b3e]"> -->
 							<p class="mt-3 text-sm font-bold text-[#0d1b3e]">
-        <!-- HTML content: Choose collection or delivery -->
 								Choose collection or delivery
-       <!-- HTML: </p> -->
 							</p>
-       <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 							<p class="mt-1 text-xs text-slate-500">
-        <!-- HTML content: Pick a listed collection point. -->
 								Pick a listed collection point.
-       <!-- HTML: </p> -->
 							</p>
-      <!-- HTML: </li> -->
 						</li>
-      <!-- HTML: <li -->
 						<li
 							class="relative rounded-3xl border border-slate-200 bg-white p-5"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-9 w-9 place-items-center rounded-full bg-[#ffd23f] text-sm font-extrabold text-[#0d1b3e]"
 								>3</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <p class="mt-3 text-sm font-bold text-[#0d1b3e]">Pay by EFT</p> -->
 							<p class="mt-3 text-sm font-bold text-[#0d1b3e]">Pay by EFT</p>
-       <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 							<p class="mt-1 text-xs text-slate-500">
-        <!-- HTML content: Or arrange a plan over WhatsApp. -->
 								Or arrange a plan over WhatsApp.
-       <!-- HTML: </p> -->
 							</p>
-      <!-- HTML: </li> -->
 						</li>
-      <!-- HTML: <li -->
 						<li
 							class="relative rounded-3xl border border-slate-200 bg-white p-5"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-9 w-9 place-items-center rounded-full bg-[#ffd23f] text-sm font-extrabold text-[#0d1b3e]"
 								>4</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <p class="mt-3 text-sm font-bold text-[#0d1b3e]">We confirm</p> -->
 							<p class="mt-3 text-sm font-bold text-[#0d1b3e]">We confirm</p>
-       <!-- HTML: <p class="mt-1 text-xs text-slate-500"> -->
 							<p class="mt-1 text-xs text-slate-500">
-        <!-- HTML content: Availability and handover details. -->
 								Availability and handover details.
-       <!-- HTML: </p> -->
 							</p>
-      <!-- HTML: </li> -->
 						</li>
-     <!-- HTML: </ol> -->
 					</ol>
 
 					<!-- Step 1: items -->
-     <!-- HTML: <div -->
 					<div
 						class="mt-8 rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
 					>
-      <!-- HTML: <h3 -->
 						<h3
 							class="flex items-center gap-3 text-xl font-extrabold text-[#0d1b3e]"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-8 w-8 place-items-center rounded-full bg-[#0d1b3e] text-sm text-[#ffd23f]"
 								>1</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML content: Your items -->
 							Your items
-      <!-- HTML: </h3> -->
 						</h3>
 
 						<!-- Empty state -->
-      <!-- HTML: <div -->
 						<div
 							id="order-empty"
 							class="mt-6 flex flex-col items-center rounded-3xl border border-dashed border-slate-300 px-6 py-12 text-center"
 						>
-       <!-- HTML: <img -->
 							<img
 								src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 								alt=""
 								class="h-10 w-10 text-slate-300"
 							/>
-       <!-- HTML: <p class="mt-4 text-base font-bold text-[#0d1b3e]"> -->
 							<p class="mt-4 text-base font-bold text-[#0d1b3e]">
-        <!-- HTML content: Nothing added yet -->
 								Nothing added yet
-       <!-- HTML: </p> -->
 							</p>
-       <!-- HTML: <p class="mt-1 text-sm text-slate-500"> -->
 							<p class="mt-1 text-sm text-slate-500">
-        <!-- HTML content: Add bundles or products from the Shop, Deals or Parent Hub -->
 								Add bundles or products from the Shop, Deals or Parent Hub
-        <!-- HTML content: sections. -->
 								sections.
-       <!-- HTML: </p> -->
 							</p>
-       <!-- HTML: <a -->
 							<a
 								href="products.html#shop"
 								class="mt-5 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 							>
-        <!-- HTML content: Start shopping -->
 								Start shopping
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
-       <!-- HTML: </a> -->
 							</a>
-      <!-- HTML: </div> -->
 						</div>
 
 						<!-- Items table -->
-      <!-- HTML: <div id="order-table-wrap" class="hidden"> -->
 						<div id="order-table-wrap" class="hidden">
-       <!-- HTML: <div -->
 							<div
 								class="mt-6 overflow-x-auto rounded-3xl border border-slate-200"
 							>
-        <!-- HTML: <table class="w-full min-w-[560px] text-left text-sm"> -->
 								<table class="w-full min-w-[560px] text-left text-sm">
-         <!-- HTML: <thead -->
 									<thead
 										class="bg-[#faf8f4] text-xs uppercase tracking-wider text-slate-500"
 									>
-          <!-- HTML: <tr> -->
 										<tr>
-           <!-- HTML: <th scope="col" class="px-5 py-3.5 font-bold">Item</th> -->
 											<th scope="col" class="px-5 py-3.5 font-bold">Item</th>
-           <!-- HTML: <th scope="col" class="px-5 py-3.5 font-bold">Price</th> -->
 											<th scope="col" class="px-5 py-3.5 font-bold">Price</th>
-           <!-- HTML: <th scope="col" class="px-5 py-3.5 font-bold">Qty</th> -->
 											<th scope="col" class="px-5 py-3.5 font-bold">Qty</th>
-           <!-- HTML: <th scope="col" class="px-5 py-3.5 font-bold"> -->
 											<th scope="col" class="px-5 py-3.5 font-bold">
-            <!-- HTML content: Subtotal -->
 												Subtotal
-           <!-- HTML: </th> -->
 											</th>
-           <!-- HTML: <th scope="col" class="px-5 py-3.5 font-bold"> -->
 											<th scope="col" class="px-5 py-3.5 font-bold">
-            <!-- HTML: <span class="sr-only">Action</span> -->
 												<span class="sr-only">Action</span>
-           <!-- HTML: </th> -->
 											</th>
-          <!-- HTML: </tr> -->
 										</tr>
-         <!-- HTML: </thead> -->
 									</thead>
-         <!-- HTML: <tbody -->
 									<tbody
 										id="order-body"
 										class="divide-y divide-slate-100"
 									></tbody>
-        <!-- HTML: </table> -->
 								</table>
-       <!-- HTML: </div> -->
 							</div>
 
-       <!-- HTML: <div -->
 							<div
 								class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
 							>
-        <!-- HTML: <p class="text-lg text-slate-600"> -->
 								<p class="text-lg text-slate-600">
-         <!-- HTML content: Total: -->
 									Total:
-         <!-- HTML: <span -->
 									<span
 										id="order-total"
 										class="text-2xl font-extrabold text-[#0d1b3e]"
 										>R0</span
-         <!-- HTML content: > -->
 									>
-        <!-- HTML: </p> -->
 								</p>
-        <!-- HTML: <div class="flex flex-wrap gap-3"> -->
 								<div class="flex flex-wrap gap-3">
-         <!-- HTML: <button -->
 									<button
 										type="button"
 										id="order-clear"
 										class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-red-300 hover:text-red-600"
 									>
-          <!-- HTML content: Clear summary -->
 										Clear summary
-         <!-- HTML: </button> -->
 									</button>
-         <!-- HTML: <button -->
 									<button
 										type="button"
 										id="skip-to-address"
 										class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 									>
-          <!-- HTML content: Skip to Address -->
 										Skip to Address
-          <!-- HTML: <img -->
 										<img
 											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-down.svg"
 											alt=""
 											class="h-4 w-4"
 										/>
-         <!-- HTML: </button> -->
 									</button>
-        <!-- HTML: </div> -->
 								</div>
-       <!-- HTML: </div> -->
 							</div>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
 
 					<!-- Step 2: delivery / collection -->
-     <!-- HTML: <div -->
 					<div
 						class="mt-6 rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
 						id="step-address"
 					>
-      <!-- HTML: <h3 -->
 						<h3
 							class="flex items-center gap-3 text-xl font-extrabold text-[#0d1b3e]"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-8 w-8 place-items-center rounded-full bg-[#0d1b3e] text-sm text-[#ffd23f]"
 								>2</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML content: Delivery or collection -->
 							Delivery or collection
-      <!-- HTML: </h3> -->
 						</h3>
 
-      <!-- HTML: <div class="mt-6 grid gap-4 md:grid-cols-2"> -->
 						<div class="mt-6 grid gap-4 md:grid-cols-2">
-       <!-- HTML: <div> -->
 							<div>
-        <!-- HTML: <label -->
 								<label
 									for="delivery-method"
 									class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
 									>Method</label
-        <!-- HTML content: > -->
 								>
-        <!-- HTML: <select -->
 								<select
 									id="delivery-method"
 									class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
 								>
-         <!-- HTML: <option value="collection"> -->
 									<option value="collection">
-          <!-- HTML content: Collect at a Campus-Cart point -->
 										Collect at a Campus-Cart point
-         <!-- HTML: </option> -->
 									</option>
-         <!-- HTML: <option value="delivery">Courier delivery (quoted)</option> -->
 									<option value="delivery">Courier delivery (quoted)</option>
-        <!-- HTML: </select> -->
 								</select>
-       <!-- HTML: </div> -->
 							</div>
-       <!-- HTML: <div> -->
 							<div>
-        <!-- HTML: <label -->
 								<label
 									for="delivery-address"
 									class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
 									>Address or collection point</label
-        <!-- HTML content: > -->
 								>
-        <!-- HTML: <input -->
 								<input
 									id="delivery-address"
 									type="text"
 									placeholder="e.g. Hatfield res reception, Pretoria"
 									class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
 								/>
-       <!-- HTML: </div> -->
 							</div>
-      <!-- HTML: </div> -->
 						</div>
 
-      <!-- HTML: <p id="delivery-hint" class="mt-3 text-xs text-slate-500"> -->
 						<p id="delivery-hint" class="mt-3 text-xs text-slate-500">
-       <!-- HTML content: Collection is free at any listed campus, residence or locker -->
 							Collection is free at any listed campus, residence or locker
-       <!-- HTML content: point. -->
 							point.
-      <!-- HTML: </p> -->
 						</p>
-     <!-- HTML: </div> -->
 					</div>
 
 					<!-- Step 3: hand off -->
-     <!-- HTML: <div -->
 					<div
 						class="mt-6 rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
 					>
-      <!-- HTML: <h3 -->
 						<h3
 							class="flex items-center gap-3 text-xl font-extrabold text-[#0d1b3e]"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-8 w-8 place-items-center rounded-full bg-[#0d1b3e] text-sm text-[#ffd23f]"
 								>3</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML content: Hand off your order -->
 							Hand off your order
-      <!-- HTML: </h3> -->
 						</h3>
 
-      <!-- HTML: <p class="mt-4 text-sm text-slate-600"> -->
 						<p class="mt-4 text-sm text-slate-600">
-       <!-- HTML content: Pick how you want to finish. Each option passes your summary to a -->
 							Pick how you want to finish. Each option passes your summary to a
-       <!-- HTML content: human — no card details are ever entered here. -->
 							human — no card details are ever entered here.
-      <!-- HTML: </p> -->
 						</p>
 
-      <!-- HTML: <div class="mt-5 flex flex-wrap gap-3"> -->
 						<div class="mt-5 flex flex-wrap gap-3">
-       <!-- HTML: <a -->
 							<a
 								id="checkout-whatsapp"
 								href="#"
 								class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-3 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 							>
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
-        <!-- HTML content: Send via WhatsApp -->
 								Send via WhatsApp
-       <!-- HTML: </a> -->
 							</a>
-       <!-- HTML: <a -->
 							<a
 								id="checkout-email"
 								href="#"
 								class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 							>
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
-        <!-- HTML content: Send by email -->
 								Send by email
-       <!-- HTML: </a> -->
 							</a>
-       <!-- HTML: <button -->
 							<button
 								type="button"
 								id="checkout-eft"
 								class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-600 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]"
 							>
-        <!-- HTML content: Show EFT instructions -->
 								Show EFT instructions
-       <!-- HTML: </button> -->
 							</button>
-      <!-- HTML: </div> -->
 						</div>
 
-      <!-- HTML: <div -->
 						<div
 							id="eft-details"
 							class="mt-6 hidden rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7"
 						>
-       <!-- HTML: <h4 class="text-base font-extrabold text-[#0d1b3e]"> -->
 							<h4 class="text-base font-extrabold text-[#0d1b3e]">
-        <!-- HTML content: Static EFT instructions -->
 								Static EFT instructions
-       <!-- HTML: </h4> -->
 							</h4>
-       <!-- HTML: <dl class="mt-4 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2"> -->
 							<dl class="mt-4 grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2">
-        <!-- HTML: <div -->
 								<div
 									class="flex justify-between gap-4 border-b border-slate-200 pb-2"
 								>
-         <!-- HTML: <dt class="font-bold text-[#0d1b3e]">Account name</dt> -->
 									<dt class="font-bold text-[#0d1b3e]">Account name</dt>
-         <!-- HTML: <dd class="text-slate-600">Campus-Cart Student Essentials</dd> -->
 									<dd class="text-slate-600">Campus-Cart Student Essentials</dd>
-        <!-- HTML: </div> -->
 								</div>
-        <!-- HTML: <div -->
 								<div
 									class="flex justify-between gap-4 border-b border-slate-200 pb-2"
 								>
-         <!-- HTML: <dt class="font-bold text-[#0d1b3e]">Bank</dt> -->
 									<dt class="font-bold text-[#0d1b3e]">Bank</dt>
-         <!-- HTML: <dd class="text-slate-600">Capitec Bank South Africa</dd> -->
 									<dd class="text-slate-600">Capitec Bank South Africa</dd>
-        <!-- HTML: </div> -->
 								</div>
-        <!-- HTML: <div -->
 								<div
 									class="flex justify-between gap-4 border-b border-slate-200 pb-2"
 								>
-         <!-- HTML: <dt class="font-bold text-[#0d1b3e]">Account number</dt> -->
 									<dt class="font-bold text-[#0d1b3e]">Account number</dt>
-         <!-- HTML: <dd class="text-slate-600">1234 5678 90</dd> -->
 									<dd class="text-slate-600">1234 5678 90</dd>
-        <!-- HTML: </div> -->
 								</div>
-        <!-- HTML: <div -->
 								<div
 									class="flex justify-between gap-4 border-b border-slate-200 pb-2"
 								>
-         <!-- HTML: <dt class="font-bold text-[#0d1b3e]">Branch code</dt> -->
 									<dt class="font-bold text-[#0d1b3e]">Branch code</dt>
-         <!-- HTML: <dd class="text-slate-600">250655</dd> -->
 									<dd class="text-slate-600">250655</dd>
-        <!-- HTML: </div> -->
 								</div>
-        <!-- HTML: <div class="flex justify-between gap-4 sm:col-span-2"> -->
 								<div class="flex justify-between gap-4 sm:col-span-2">
-         <!-- HTML: <dt class="font-bold text-[#0d1b3e]">Reference</dt> -->
 									<dt class="font-bold text-[#0d1b3e]">Reference</dt>
-         <!-- HTML: <dd class="text-slate-600">your surname + campus</dd> -->
 									<dd class="text-slate-600">your surname + campus</dd>
-        <!-- HTML: </div> -->
 								</div>
-       <!-- HTML: </dl> -->
 							</dl>
-       <!-- HTML: <p class="mt-4 text-sm text-slate-600"> -->
 							<p class="mt-4 text-sm text-slate-600">
-        <!-- HTML content: Email your proof of payment to -->
 								Email your proof of payment to
-        <!-- HTML: <a -->
 								<a
 									href="mailto:orders@campus-cart.co.za"
 									class="font-bold text-[#0d1b3e] underline"
 									>orders@campus-cart.co.za</a
-        <!-- HTML content: >. We confirm stock and a collection slot within one working -->
 								>. We confirm stock and a collection slot within one working
-        <!-- HTML content: day. These details are illustrative for this demo site. -->
 								day. These details are illustrative for this demo site.
-       <!-- HTML: </p> -->
 							</p>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </section> -->
 			</section>
 
 			<!-- ===== Newsletter band ===== -->
-   <!-- HTML: <section class="bg-[#f7f5f1] pb-20"> -->
 			<section class="bg-[#f7f5f1] pb-20">
-    <!-- HTML: <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-     <!-- HTML: <div -->
 					<div
 						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
 					>
-      <!-- HTML: <div -->
 						<div
 							aria-hidden="true"
 							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"
 						></div>
-      <!-- HTML: <div -->
 						<div
 							aria-hidden="true"
 							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
 						></div>
 
-      <!-- HTML: <div class="relative grid items-center gap-8 lg:grid-cols-2"> -->
 						<div class="relative grid items-center gap-8 lg:grid-cols-2">
-       <!-- HTML: <div> -->
 							<div>
-        <!-- HTML: <span -->
 								<span
 									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
 									>Stay in the loop</span
-        <!-- HTML content: > -->
 								>
-        <!-- HTML: <h2 -->
 								<h2
 									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
 								>
-         <!-- HTML content: Get first dibs on -->
 									Get first dibs on
-         <!-- HTML: <span -->
 									<span
 										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
 										>new season kit</span
-         <!-- HTML content: > -->
 									>
-        <!-- HTML: </h2> -->
 								</h2>
-        <!-- HTML: <p class="mt-3 text-sm text-slate-300"> -->
 								<p class="mt-3 text-sm text-slate-300">
-         <!-- HTML content: One short email a month: new bundles, second-hand drops and -->
 									One short email a month: new bundles, second-hand drops and
-         <!-- HTML content: collection updates near your campus. -->
 									collection updates near your campus.
-        <!-- HTML: </p> -->
 								</p>
-       <!-- HTML: </div> -->
 							</div>
 
 							<!-- Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. -->
-       <!-- HTML: <form id="newsletterBandForm" class="w-full"> -->
 							<form id="newsletterBandForm" class="w-full">
-        <!-- HTML: <div class="flex flex-col gap-3 sm:flex-row"> -->
 								<div class="flex flex-col gap-3 sm:flex-row">
-         <!-- HTML: <label for="newsletterBandEmail" class="sr-only" -->
 									<label for="newsletterBandEmail" class="sr-only"
 										>Email address</label
-         <!-- HTML content: > -->
 									>
-         <!-- HTML: <input -->
 									<input
 										id="newsletterBandEmail"
 										name="email"
@@ -1614,409 +1045,250 @@
 										placeholder="you@example.com"
 										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
 									/>
-         <!-- HTML: <button -->
 									<button
 										type="submit"
 										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 									>
-          <!-- HTML content: Join the list -->
 										Join the list
-         <!-- HTML: </button> -->
 									</button>
-        <!-- HTML: </div> -->
 								</div>
-        <!-- HTML: <p class="mt-3 text-xs text-slate-400"> -->
 								<p class="mt-3 text-xs text-slate-400">
-         <!-- HTML content: No spam. Unsubscribe any time. -->
 									No spam. Unsubscribe any time.
-        <!-- HTML: </p> -->
 								</p>
-       <!-- HTML: </form> -->
 							</form>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </section> -->
 			</section>
-  <!-- HTML: </main> -->
 		</main>
 
 		<!-- ===== Footer ===== -->
-  <!-- HTML: <footer class="bg-[#09122e] text-slate-300"> -->
 		<footer class="bg-[#09122e] text-slate-300">
-   <!-- HTML: <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"> -->
 			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-    <!-- HTML: <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4"> -->
 				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-     <!-- HTML: <div> -->
 					<div>
-      <!-- HTML: <a -->
 						<a
 							href="../index.html"
 							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
 						>
-       <!-- HTML: <span -->
 							<span
 								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]"
 								>C</span
-       <!-- HTML content: > -->
 							>
-       <!-- HTML: <span>Campus<span class="text-[#ffd23f]">-Cart</span></span> -->
 							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span>
-      <!-- HTML: </a> -->
 						</a>
-      <!-- HTML: <p class="mt-4 text-sm text-slate-400"> -->
 						<p class="mt-4 text-sm text-slate-400">
-       <!-- HTML content: Affordable new and second-hand student essentials for South -->
 							Affordable new and second-hand student essentials for South
-       <!-- HTML content: African campuses. -->
 							African campuses.
-      <!-- HTML: </p> -->
 						</p>
-      <!-- HTML: <p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p> -->
 						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
 
-      <!-- HTML: <div class="mt-5 flex items-center gap-2"> -->
 						<div class="mt-5 flex items-center gap-2">
-       <!-- HTML: <a -->
 							<a
 								href="mailto:hello@campus-cart.co.za"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
 								aria-label="Email Campus-Cart"
 							>
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
-       <!-- HTML: </a> -->
 							</a>
-       <!-- HTML: <a -->
 							<a
 								href="https://wa.me/27123456789"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
 								aria-label="WhatsApp Campus-Cart"
 							>
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
-       <!-- HTML: </a> -->
 							</a>
-       <!-- HTML: <a -->
 							<a
 								href="coverage.html"
 								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
 								aria-label="Coverage map"
 							>
-        <!-- HTML: <img -->
 								<img
 									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
 									alt=""
 									class="h-4 w-4"
 								/>
-       <!-- HTML: </a> -->
 							</a>
-      <!-- HTML: </div> -->
 						</div>
-     <!-- HTML: </div> -->
 					</div>
 
-     <!-- HTML: <div> -->
 					<div>
-      <!-- HTML: <h3 class="text-sm font-bold uppercase tracking-wider text-white"> -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
-       <!-- HTML content: Shop -->
 							Shop
-      <!-- HTML: </h3> -->
 						</h3>
-      <!-- HTML: <ul class="mt-4 space-y-2.5 text-sm"> -->
 						<ul class="mt-4 space-y-2.5 text-sm">
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="products.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="products.html" class="transition hover:text-[#ffd23f]"
 									>Shop New</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a -->
 								<a
 									href="products.html#deals-gallery"
 									class="transition hover:text-[#ffd23f]"
 									>Deals &amp; Gallery</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a -->
 								<a
 									href="products.html#product-detail"
 									class="transition hover:text-[#ffd23f]"
 									>Product Detail</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a -->
 								<a
 									href="products.html#sell-with-us"
 									class="transition hover:text-[#ffd23f]"
 									>Sell With Us</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-      <!-- HTML: </ul> -->
 						</ul>
-     <!-- HTML: </div> -->
 					</div>
 
-     <!-- HTML: <div> -->
 					<div>
-      <!-- HTML: <h3 class="text-sm font-bold uppercase tracking-wider text-white"> -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
-       <!-- HTML content: Company -->
 							Company
-      <!-- HTML: </h3> -->
 						</h3>
-      <!-- HTML: <ul class="mt-4 space-y-2.5 text-sm"> -->
 						<ul class="mt-4 space-y-2.5 text-sm">
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="about.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="about.html" class="transition hover:text-[#ffd23f]"
 									>About</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a -->
 								<a
 									href="products.html#parent-hub"
 									class="transition hover:text-[#ffd23f]"
 									>Parent Hub</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="enquiry.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="enquiry.html" class="transition hover:text-[#ffd23f]"
 									>Enquiry</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="coverage.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="coverage.html" class="transition hover:text-[#ffd23f]"
 									>Coverage</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="contact.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="contact.html" class="transition hover:text-[#ffd23f]"
 									>Contact</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a href="account.html" class="transition hover:text-[#ffd23f]" -->
 								<a href="account.html" class="transition hover:text-[#ffd23f]"
 									>Account</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-      <!-- HTML: </ul> -->
 						</ul>
-     <!-- HTML: </div> -->
 					</div>
 
-     <!-- HTML: <div> -->
 					<div>
-      <!-- HTML: <h3 class="text-sm font-bold uppercase tracking-wider text-white"> -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
-       <!-- HTML content: Reach us -->
 							Reach us
-      <!-- HTML: </h3> -->
 						</h3>
-      <!-- HTML: <ul class="mt-4 space-y-2.5 text-sm"> -->
 						<ul class="mt-4 space-y-2.5 text-sm">
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a -->
 								<a
 									href="mailto:hello@campus-cart.co.za"
 									class="transition hover:text-[#ffd23f]"
 									>hello@campus-cart.co.za</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li> -->
 							<li>
-        <!-- HTML: <a -->
 								<a
 									href="https://wa.me/27123456789"
 									class="transition hover:text-[#ffd23f]"
 									>WhatsApp: 012 345 6789</a
-        <!-- HTML content: > -->
 								>
-       <!-- HTML: </li> -->
 							</li>
-       <!-- HTML: <li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li> -->
 							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
-      <!-- HTML: </ul> -->
 						</ul>
-     <!-- HTML: </div> -->
 					</div>
-    <!-- HTML: </div> -->
 				</div>
 
-    <!-- HTML: <div class="cc-footer-legal mt-12 border-t border-white/10 pt-8"> -->
 				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
-     <!-- HTML: <p class="text-sm text-slate-400"> -->
 					<p class="text-sm text-slate-400">
-      <!-- HTML: <a href="privacy.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
 							>Privacy Policy</a
-      <!-- HTML content: > -->
 						>
-      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
-      <!-- HTML: <a href="terms.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="terms.html" class="transition hover:text-[#ffd23f]"
 							>Terms &amp; Conditions</a
-      <!-- HTML content: > -->
 						>
-      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
-      <!-- HTML: <a href="cookies.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie Policy</a
-      <!-- HTML content: > -->
 						>
-      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
-      <!-- HTML: <a href="returns.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="returns.html" class="transition hover:text-[#ffd23f]"
 							>Returns &amp; Delivery</a
-      <!-- HTML content: > -->
 						>
-      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
-      <!-- HTML: <a href="cookies.html" class="transition hover:text-[#ffd23f]" -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie settings</a
-      <!-- HTML content: > -->
 						>
-     <!-- HTML: </p> -->
 					</p>
-     <!-- HTML: <p class="mt-3 text-sm text-slate-400"> -->
 					<p class="mt-3 text-sm text-slate-400">
-      <!-- HTML content: Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, -->
 						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
-      <!-- HTML content: 0083. -->
 						0083.
-     <!-- HTML: </p> -->
 					</p>
-     <!-- HTML: <p class="mt-3 text-sm text-slate-400"> -->
 					<p class="mt-3 text-sm text-slate-400">
-      <!-- HTML: <a href="about.html#licence" class="transition hover:text-[#ffd23f]" -->
 						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
 							>Licence and credits</a
-      <!-- HTML content: > -->
 						>
-      <!-- HTML: <span class="text-slate-600"> | </span> -->
 						<span class="text-slate-600"> | </span>
-      <!-- HTML: <a href="../sitemap.xml" class="transition hover:text-[#ffd23f]" -->
 						<a href="../sitemap.xml" class="transition hover:text-[#ffd23f]"
 							>Sitemap.xml</a
-      <!-- HTML content: > -->
 						>
-     <!-- HTML: </p> -->
 					</p>
-     <!-- HTML: <p class="mt-3 text-sm text-slate-400"> -->
 					<p class="mt-3 text-sm text-slate-400">
-      <!-- HTML content: &copy; <span id="copyright-year">2026</span> Campus-Cart. Static -->
 						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static
-      <!-- HTML content: demo site — no payments are processed and no personal data is -->
 						demo site — no payments are processed and no personal data is
-      <!-- HTML content: stored. -->
 						stored.
-     <!-- HTML: </p> -->
 					</p>
-    <!-- HTML: </div> -->
 				</div>
-   <!-- HTML: </div> -->
 			</div>
-  <!-- HTML: </footer> -->
 		</footer>
 
 		<!-- Snack bar for inline feedback -->
-  <!-- HTML: <div -->
 		<div
 			id="snack"
 			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300"
 		></div>
 
 		<!-- Back to top -->
-  <!-- HTML: <button -->
 		<button
 			id="toTop"
 			type="button"
 			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
 			aria-label="Back to top"
 		>
-   <!-- HTML: <img -->
 			<img
 				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
 				alt=""
 				class="h-5 w-5"
 			/>
-  <!-- HTML: </button> -->
 		</button>
 
 		<!-- ===== Site script ===== -->
-  <!-- HTML: <script src="../assets/js/data.js" defer></script> -->
 		<script src="../assets/js/data.js" defer></script>
-  <!-- HTML: <script src="../assets/js/ui.js" defer></script> -->
 		<script src="../assets/js/ui.js" defer></script>
-  <!-- HTML: <script src="../assets/js/consent.js" defer></script> -->
 		<script src="../assets/js/consent.js" defer></script>
-  <!-- HTML: <script src="../assets/js/interactions.js" defer></script> -->
 		<script src="../assets/js/interactions.js" defer></script>
-  <!-- HTML: <script src="../assets/js/forms.js" defer></script> -->
 		<script src="../assets/js/forms.js" defer></script>
-  <!-- HTML: <script src="../assets/js/features.js" defer></script> -->
 		<script src="../assets/js/features.js" defer></script>
-  <!-- HTML: <script src="../assets/js/script.js" defer></script> -->
 		<script src="../assets/js/script.js" defer></script>
- <!-- HTML: </body> -->
 	</body>
-<!-- HTML: </html> -->
 </html>
