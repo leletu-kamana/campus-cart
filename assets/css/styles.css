@@ -5745,3 +5745,223 @@ html {
     transition: none !important;
   }
 }
+
+
+/* ==========================================================
+   PRODUCTS PAGE RESPONSIVE REFINEMENTS
+   ========================================================== */
+
+/* Centre the scroll-to-top arrow within its circular button. */
+#toTop {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+#toTop > img,
+#toTop > svg,
+#toTop > i {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+/* Keep the products hero image and its overlay content inside the banner frame. */
+body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden {
+  isolation: isolate;
+  min-height: clamp(15rem, 32vw, 30rem);
+}
+
+body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > img {
+  display: block;
+  width: 100%;
+  height: clamp(15rem, 32vw, 30rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > .absolute.inset-0.flex {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Allow the Shop New / Second-Hand category switch to wrap and remain touch-friendly. */
+#shop .cc-shop-tabs-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+#shop .cc-shop-tabs-layout [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.35rem;
+  border-radius: 1.25rem;
+}
+
+#shop .cc-shop-tabs-layout [role="tablist"] > [role="tab"] {
+  min-height: 2.75rem;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+#shop .cc-shop-tabs-layout .tab-panel {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Checklist content should shrink naturally without pushing the page sideways. */
+#parent-checklist-print {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+#parent-checklist-print ul {
+  min-width: 0;
+  padding-left: 0;
+}
+
+#parent-checklist-print .cc-checklist-item {
+  min-width: 0;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+#parent-checklist-print .cc-checklist-item > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#parent-checklist-print input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+#parent-checklist-print #print-checklist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* FAQ tabs remain usable on narrow screens and the panels use the available width. */
+#sell-with-us [aria-label="FAQ tabs"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.35rem;
+}
+
+#sell-with-us [aria-label="FAQ tabs"] > button {
+  min-height: 2.75rem;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+#sell-with-us #faq-student,
+#sell-with-us #faq-parent {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  body:has(#shop) section[aria-label="Shop student essentials"] {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden {
+    min-height: 18rem;
+    border-radius: 1.5rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > img {
+    height: 18rem;
+    object-position: 60% center;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > .absolute.inset-0.flex {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > .absolute.inset-0.flex > p {
+    max-width: 18rem;
+  }
+
+  #shop .cc-shop-tabs-layout [role="tablist"],
+  #sell-with-us [aria-label="FAQ tabs"] {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  #shop .cc-shop-tabs-layout [role="tablist"] > [role="tab"],
+  #sell-with-us [aria-label="FAQ tabs"] > button {
+    flex: 1 1 9rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  #parent-checklist-print {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  #parent-checklist-print #print-checklist {
+    width: 100%;
+  }
+
+  #parent-checklist-print .cc-checklist-item {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 360px) {
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden {
+    min-height: 16rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > img {
+    height: 16rem;
+  }
+
+  #shop .cc-shop-tabs-layout [role="tablist"] > [role="tab"],
+  #sell-with-us [aria-label="FAQ tabs"] > button {
+    flex-basis: 100%;
+  }
+}
+
+/* Normal browser printing stays normal; checklist-only print mode is enabled by its button. */
+@media print {
+  body:not(.cc-print-checklist) * {
+    visibility: visible !important;
+  }
+
+  body:not(.cc-print-checklist) #parent-checklist-print {
+    position: static !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: initial !important;
+    border: initial !important;
+    border-radius: initial !important;
+    box-shadow: initial !important;
+  }
+}
