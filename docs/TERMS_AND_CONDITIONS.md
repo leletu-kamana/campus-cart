@@ -5,7 +5,7 @@
 
 > **Demonstration notice:** Campus-Cart is a fictional organisation built as a student website project at The IIE Rosebank International. No real goods are sold, no payments are taken and no personal information is kept on a server. This document explains how the website works today and how personal information and orders would be handled if Campus-Cart begins trading.
 
-**Website version:** [Read the formatted Terms and Conditions](https://campus-cart-olive.vercel.app/pages/terms.html)
+**Website version:** [Read the formatted Terms and Conditions](https://leletu-kamana.github.io/campus-cart/pages/terms.html)
 
 ---
 
@@ -68,7 +68,7 @@ Second-hand items are checked by our team and described as accurately as we can,
 
 ## 7. Delivery, collection, returns and refunds
 
-Delivery and collection are explained in our [Returns, Refunds and Delivery policy](https://campus-cart-olive.vercel.app/pages/returns.html), which forms part of these terms.
+Delivery and collection are explained in our [Returns, Refunds and Delivery policy](https://leletu-kamana.github.io/campus-cart/pages/returns.html), which forms part of these terms.
 
 ## 8. Selling with us
 
@@ -88,7 +88,7 @@ We may review, refuse or remove a listing at our discretion, for example if it i
 
 ## 10. Ownership of the content
 
-The Campus-Cart name, logo, text, design and code belong to Campus-Cart or its licensors. Third-party images, fonts and code are used under their own licences, which are listed in the [Licence and credits](https://campus-cart-olive.vercel.app/pages/about.html#licence) section of the About page. You may view and print pages for your personal use, but you may not copy or republish the content without our written permission.
+The Campus-Cart name, logo, text, design and code belong to Campus-Cart or its licensors. Third-party images, fonts and code are used under their own licences, which are listed in the [Licence and credits](https://leletu-kamana.github.io/campus-cart/pages/about.html#licence) section of the About page. You may view and print pages for your personal use, but you may not copy or republish the content without our written permission.
 
 ## 11. Third-party services and links
 
@@ -100,7 +100,7 @@ We take care to keep the website accurate and available, but we cannot promise t
 
 ## 13. Privacy and cookies
 
-Our [Privacy Policy](https://campus-cart-olive.vercel.app/pages/privacy.html) and [Cookie Policy](https://campus-cart-olive.vercel.app/pages/cookies.html) explain how we handle personal information and browser storage.
+Our [Privacy Policy](https://leletu-kamana.github.io/campus-cart/pages/privacy.html) and [Cookie Policy](https://leletu-kamana.github.io/campus-cart/pages/cookies.html) explain how we handle personal information and browser storage.
 
 ## 14. Changes to these terms
 
@@ -112,7 +112,7 @@ These terms are governed by the laws of the Republic of South Africa. If we cann
 
 ## 16. Contact us
 
-Questions about these terms? Email [hello@campus-cart.co.za](mailto:hello@campus-cart.co.za) or use the [Campus-Cart contact page](https://campus-cart-olive.vercel.app/pages/contact.html).
+Questions about these terms? Email [hello@campus-cart.co.za](mailto:hello@campus-cart.co.za) or use the [Campus-Cart contact page](https://leletu-kamana.github.io/campus-cart/pages/contact.html).
 
 ---
 
