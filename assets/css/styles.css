@@ -5711,3 +5711,35 @@ object {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Back-to-top control: keeps the shared scroll button visible, reachable and usable on every page. */
+#toTop {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Gives keyboard users a clear focus indicator when they reach the floating control. */
+#toTop:focus-visible {
+  outline: 3px solid #ffd23f;
+  outline-offset: 4px;
+}
+
+/* Smooth anchor movement across the site, while respecting reduced-motion preferences. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  #toTop {
+    transition: none !important;
+  }
+}
