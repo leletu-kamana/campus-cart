@@ -30,6 +30,7 @@
     function getOrCreateLoader() { // Declares a reusable function for this feature.
         // Searches the document for the element identified as the page loader.
         var loader = document.getElementById("page-loader"); // Declares and initializes the variable used by this operation.
+        // Checks the condition before executing the following branch.
         if (!loader && document.body) { // Checks the condition before running this block.
             // Creates a div element when the loader is missing from the HTML.
             loader = document.createElement("div"); // Assigns a value to the variable or object property.
@@ -76,10 +77,12 @@
     function showPageLoader() { // Declares a reusable function for this feature.
         // Gets the existing loader or creates one before changing its state.
         var loader = getOrCreateLoader(); // Declares and initializes the variable used by this operation.
+        // Checks the condition before executing the following branch.
         if (loader) { // Checks the condition before running this block.
             // Removes the hidden class so the loader becomes visible.
             loader.classList.remove("is-hidden"); // Changes or checks a CSS class controlling the element's state.
         } // Closes the current block, expression, or function call.
+        // Checks the condition before executing the following branch.
         if (document.body) { // Checks the condition before running this block.
             // Adds the page-loading class so CSS can prevent scrolling while loading.
             document.body.classList.add("page-loading"); // Changes or checks a CSS class controlling the element's state.
@@ -87,11 +90,13 @@
 
         // Start failsafe safety timer
         if (safetyTimer) { // Checks the condition before running this block.
+            // Uses a browser API to access the DOM, storage or timing facility.
             clearTimeout(safetyTimer); // Calls the function or method needed for this operation.
         } // Closes the current block, expression, or function call.
         // Starts a failsafe timer in case the normal navigation process becomes stuck.
         safetyTimer = setTimeout(function () { // Assigns a value to the variable or object property.
             hidePageLoader(); // Calls the function or method needed for this operation.
+            // Updates the module state used by the surrounding operation.
             isNavigating = false; // Assigns a value to the variable or object property.
         }, SAFETY_TIMEOUT); // Performs the next step in the current Campus-Cart operation.
     } // Closes the current block, expression, or function call.
@@ -101,16 +106,22 @@
      */
     // Defines the function that hides the loader and restores normal page scrolling.
     function hidePageLoader() { // Declares a reusable function for this feature.
+        // Checks the condition before executing the following branch.
         if (safetyTimer) { // Checks the condition before running this block.
+            // Uses a browser API to access the DOM, storage or timing facility.
             clearTimeout(safetyTimer); // Calls the function or method needed for this operation.
+            // Updates the module state used by the surrounding operation.
             safetyTimer = null; // Assigns a value to the variable or object property.
         } // Closes the current block, expression, or function call.
 
+        // Declares the state value, configuration setting or DOM reference used by this module.
         var loader = document.getElementById("page-loader"); // Declares and initializes the variable used by this operation.
+        // Checks the condition before executing the following branch.
         if (loader) { // Checks the condition before running this block.
             // Adds the hidden class so the loader can fade or transition out.
             loader.classList.add("is-hidden"); // Changes or checks a CSS class controlling the element's state.
         } // Closes the current block, expression, or function call.
+        // Checks the condition before executing the following branch.
         if (document.body) { // Checks the condition before running this block.
             // Removes the page-loading class and restores normal scrolling.
             document.body.classList.remove("page-loading"); // Changes or checks a CSS class controlling the element's state.
@@ -128,10 +139,13 @@
         // Calculates the remaining minimum loader time and prevents a negative delay.
         var remainingTime = Math.max(0, MIN_LOADER_TIME - elapsedTime); // Declares and initializes the variable used by this operation.
 
+        // Checks the condition before executing the following branch.
         if (loaderTimer) { // Checks the condition before running this block.
+            // Uses a browser API to access the DOM, storage or timing facility.
             clearTimeout(loaderTimer); // Calls the function or method needed for this operation.
         } // Closes the current block, expression, or function call.
 
+        // Uses a browser API to access the DOM, storage or timing facility.
         loaderTimer = setTimeout(function () { // Assigns a value to the variable or object property.
             hidePageLoader(); // Calls the function or method needed for this operation.
         }, remainingTime); // Performs the next step in the current Campus-Cart operation.
@@ -146,28 +160,33 @@
         // Exclude external domains
         // Rejects links that point to a different website origin.
         if (url.origin !== window.location.origin) { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return false; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
         // Exclude links set to open in a new tab or specific target
         // Rejects links that intentionally open in another browsing context.
         if (link.target && link.target !== "_self") { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return false; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
         // Exclude file downloads
         // Rejects links intended to download a file instead of navigating between pages.
         if (link.hasAttribute("download")) { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return false; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
         // Exclude external protocol schemes
         // Reads the original href attribute so special protocols can be identified.
         var href = link.getAttribute("href") || ""; // Declares and initializes the variable used by this operation.
+        // Checks the condition before executing the following branch.
         if (href.indexOf("mailto:") === 0 || // Checks the condition before running this block.
             href.indexOf("tel:") === 0 || // Calls the function or method needed for this operation.
             href.indexOf("https://wa.me/") === 0 || // Calls the function or method needed for this operation.
             href.indexOf("javascript:") === 0) { // Calls the function or method needed for this operation.
+            // Returns the result or exits this function path.
             return false; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
@@ -176,15 +195,19 @@
         var isSamePath = url.pathname === window.location.pathname; // Declares and initializes the variable used by this operation.
         // Checks whether the destination has the same query-string parameters.
         var isSameSearch = url.search === window.location.search; // Declares and initializes the variable used by this operation.
+        // Checks the condition before executing the following branch.
         if (isSamePath && isSameSearch && url.hash !== "") { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return false; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
         // Exclude clicking the exact same URL if already on it
         if (isSamePath && isSameSearch && !url.hash && !window.location.hash) { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return false; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
+        // Returns the result or exits this function path.
         return true; // Exits this function and returns the stated value.
     } // Closes the current block, expression, or function call.
 
@@ -201,6 +224,7 @@
         // Displays the loader before the browser changes the current document.
         showPageLoader(); // Calls the function or method needed for this operation.
 
+        // Uses a browser API to access the DOM, storage or timing facility.
         setTimeout(function () { // Schedules this callback to run after the specified delay.
             // Navigates the browser to the destination after the exit transition finishes.
             window.location.href = destinationUrl; // Sets the browser destination for this navigation.
@@ -212,12 +236,15 @@
     document.addEventListener("click", function (event) { // Registers a document-level event handler for this interaction.
         // Allow default browser behaviors for modified clicks (e.g. Ctrl+click, Cmd+click to open new tab)
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
         // Finds the nearest anchor element associated with the clicked target.
         var link = event.target.closest ? event.target.closest("a") : null; // Declares and initializes the variable used by this operation.
+        // Checks the condition before executing the following branch.
         if (!link || !link.href) { // Checks the condition before running this block.
+            // Returns the result or exits this function path.
             return; // Exits this function and returns the stated value.
         } // Closes the current block, expression, or function call.
 
@@ -225,13 +252,16 @@
             // Creates a complete URL object using the current page URL as the base.
             var url = new URL(link.href, window.location.href); // Declares and initializes the variable used by this operation.
 
+            // Checks the condition before executing the following branch.
             if (!shouldTransition(link, url)) { // Checks the condition before running this block.
+                // Returns the result or exits this function path.
                 return; // Exits this function and returns the stated value.
             } // Closes the current block, expression, or function call.
 
             // If a transition is already in flight, block rapid duplicate clicks
             if (isNavigating) { // Checks the condition before running this block.
                 event.preventDefault(); // Stops the browser's default action so the custom handling can run.
+                // Returns the result or exits this function path.
                 return; // Exits this function and returns the stated value.
             } // Closes the current block, expression, or function call.
 
@@ -253,6 +283,7 @@
     // Provides an additional fallback based on DOM readiness.
     // Waits until the HTML has been parsed before initializing features that depend on page elements.
     document.addEventListener("DOMContentLoaded", function () { // Registers a document-level event handler for this interaction.
+            // Uses a browser API to access the DOM, storage or timing facility.
             setTimeout(scheduleInitialHide, 500); // Schedules this callback to run after the specified delay.
         }, { once: true }); // Performs the next step in the current Campus-Cart operation.
     } // Closes the current block, expression, or function call.
@@ -260,6 +291,7 @@
     // Handle Browser Back / Browser Forward / BFCache restoration
     // Handles browser back, forward, and BFCache restoration events.
     window.addEventListener("pageshow", function (event) { // Registers a window event handler for this browser event.
+        // Updates the module state used by the surrounding operation.
         isNavigating = false; // Assigns a value to the variable or object property.
         hidePageLoader(); // Calls the function or method needed for this operation.
     }); // Closes the current block, expression, or function call.
