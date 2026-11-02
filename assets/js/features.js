@@ -1,14 +1,4 @@
-// ==========================================================
-// CAMPUS-CART
-// Part 3 interactive features
-//   1. Interactive collection-hub map (Leaflet)
-//   2. Lightbox for every content image on the site
-//   3. Product quick-view modal
-//   4. FAQ accordion (one open answer at a time)
-//   5. Scroll reveal animation for cards
-// Every feature checks that its elements exist first, so this one
-// file can be loaded safely on every page.
-// ==========================================================
+// ENHANCEMENT LAYER — Adds optional page features such as the Leaflet collection-hub map, image lightbox, product quick view, FAQ accordion and scroll-reveal effects. Each initializer checks for the required page elements and dependencies so unrelated pages can load this shared file safely.
 
 (function () { // Wraps the features in a function so their variables stay private.
     "use strict"; // Turns on stricter error checking.
