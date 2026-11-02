@@ -34,17 +34,12 @@
             const directionValue =
                 track.dataset.direction || marquee.dataset.direction || "left";
             const direction = directionValue === "right" ? "right" : "left";
-            const pauseOnHover =
-                (track.dataset.pauseHover || marquee.dataset.pauseHover || "true") !== "false";
-            const reducedMotion = window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            );
+            /* This homepage marquee is intentionally always-on. */
 
             let cycleDistance = 0;
             let position = 0;
             let previousTimestamp = 0;
             let animationFrame = null;
-            let isHovered = false;
             let isVisible = true;
 
             const measure = () => {
@@ -66,12 +61,7 @@
                 const elapsed = Math.min(timestamp - previousTimestamp, 50);
                 previousTimestamp = timestamp;
 
-                if (
-                    !isHovered &&
-                    isVisible &&
-                    !reducedMotion.matches &&
-                    cycleDistance > 0
-                ) {
+                if (isVisible && cycleDistance > 0) {
                     /* data-speed is measured in pixels per 60Hz frame. */
                     const frameScale = elapsed / (1000 / 60);
                     const distance = speed * frameScale;
@@ -96,7 +86,7 @@
             };
 
             const start = () => {
-                if (animationFrame !== null || reducedMotion.matches) return;
+                if (animationFrame !== null) return;
                 previousTimestamp = 0;
                 animationFrame = window.requestAnimationFrame(animate);
             };
@@ -108,16 +98,6 @@
                 }
                 previousTimestamp = 0;
             };
-
-            if (pauseOnHover) {
-                marquee.addEventListener("mouseenter", () => {
-                    isHovered = true;
-                });
-
-                marquee.addEventListener("mouseleave", () => {
-                    isHovered = false;
-                });
-            }
 
             const resizeObserver = new ResizeObserver(measure);
             resizeObserver.observe(viewport);
@@ -131,16 +111,6 @@
                 });
                 visibilityObserver.observe(marquee);
             }
-
-            reducedMotion.addEventListener("change", () => {
-                if (reducedMotion.matches) {
-                    stop();
-                    track.style.transform = "none";
-                } else {
-                    measure();
-                    start();
-                }
-            });
 
             if (document.fonts?.ready) {
                 document.fonts.ready.then(measure);
