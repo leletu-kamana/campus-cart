@@ -5714,9 +5714,11 @@ object {
 
 
 /* Back-to-top control: keeps the shared scroll button visible, reachable and usable on every page. */
-#toTop {
+#toTop:not(.hidden) {
   display: grid;
-  place-items: center;
+}
+
+#toTop {
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
