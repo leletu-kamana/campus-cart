@@ -1,13 +1,16 @@
 // FORM LAYER — Handles the enquiry and contact forms, including field validation, product and stock lookups, delivery estimates and the configured message-submission workflow. The page displays client-side results and any configured Web3Forms response; it does not independently process payments or confirm fulfilment.
 
+// Registers a handler for the specified form or browser event.
 document.addEventListener("DOMContentLoaded", function () { // Run setup after the HTML has been parsed.
 
     // Looks for each form on the current page. Only one of them exists on each page.
     const enquiryForm = document.getElementById("enquiry-form"); // Get the enquiry form, or null if this page has none.
+    // Declares the form state, configuration value or DOM reference used below.
     const contactForm = document.getElementById("contact-form"); // Get the contact form, or null if this page has none.
 
     // Disable browser pop-up validation; the custom JavaScript checks below control all errors.
     if (enquiryForm) { enquiryForm.noValidate = true; }
+    // Checks the stated condition before running this validation or form branch.
     if (contactForm) { contactForm.noValidate = true; }
 
     // Starts the enquiry code only if the enquiry form is on this page.
@@ -33,28 +36,40 @@ document.addEventListener("DOMContentLoaded", function () { // Run setup after t
 // The pages hide things with the Tailwind "hidden" class, not the hidden attribute,
 // and wrap each field in a plain <div>, so these small helpers cover both styles.
 function groupOf(input) { // The wrapper that holds a field, its label and its error message.
+    // Returns the result or exits this function path.
     return input.closest("#enq-other-group") || input.closest(".form-group") || input.parentElement;
 }
+// Defines a reusable form-processing operation or callback.
 function isHiddenGroup(group) { // True when the wrapper is hidden by either method.
+    // Returns the result or exits this function path.
     return group.hidden || group.classList.contains("hidden");
 }
+// Defines a reusable form-processing operation or callback.
 function setHidden(el, hide) { // Hides or shows an element using both methods.
+    // Updates the state value used by the form workflow.
     el.hidden = hide;
     el.classList.toggle("hidden", hide);
 }
+// Defines a reusable form-processing operation or callback.
 function showBox(box, visible) { // Shows or hides a result box (enquiry result, email preview).
     box.classList.add("cc-result");
     box.classList.toggle("show", visible);
     box.classList.toggle("hidden", !visible);
+    // Checks the stated condition before running this validation or form branch.
     if (!visible) { box.innerHTML = ""; }
 }
+// Defines a reusable form-processing operation or callback.
 function showBox2(box) { // Shows a result box that already has its content.
     box.classList.add("cc-result", "show");
     box.classList.remove("hidden");
 }
+// Defines a reusable form-processing operation or callback.
 function productFor(name) { // Finds price and stock for an item, even if the stock table has no entry for it.
+    // Checks the stated condition before running this validation or form branch.
     if (STOCK[name]) { return STOCK[name]; }
+    // Declares the form state, configuration value or DOM reference used below.
     const found = (window.CC_CATALOGUE ? window.CC_CATALOGUE.DEALS : []).find(function (d) { return d.name === name; });
+    // Returns the result or exits this function path.
     return { price: found ? found.price : 0, stock: 5, type: found && found.condition === "used" ? "Second-hand" : "New" };
 }
 
@@ -66,35 +81,52 @@ function productFor(name) { // Finds price and stock for an item, even if the st
 // "open in my email app" link, so the visitor can send it by email instead.
 // ==========================================================
 const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+// Declares the form state, configuration value or DOM reference used below.
 const WEB3FORMS_KEY = "ce1abf2e-a2e8-46b7-b6a5-f9814d57b8aa";
 
+// Defines a reusable form-processing operation or callback.
 async function sendViaWeb3Forms(form, fields, box) {
+    // Declares the form state, configuration value or DOM reference used below.
     const submitBtn = form.querySelector('button[type="submit"]');
+    // Declares the form state, configuration value or DOM reference used below.
     const formData = new FormData(form); // Every named field in the form.
     formData.append("access_key", WEB3FORMS_KEY);
     Object.keys(fields).forEach(function (key) { formData.set(key, fields[key]); }); // subject, from_name, email, message.
 
+    // Declares the form state, configuration value or DOM reference used below.
     const originalText = submitBtn.textContent;
+    // Updates the selected page element, form value or visual state.
     submitBtn.textContent = "Sending...";
+    // Updates the state value used by the form workflow.
     submitBtn.disabled = true;
 
     // Adds a short status line at the top of the result box.
     function status(text, ok) {
+        // Declares the form state, configuration value or DOM reference used below.
         let line = box.querySelector(".cc-send-status");
+        // Checks the stated condition before running this validation or form branch.
         if (!line) {
+            // Uses a browser API to access the DOM, browser storage or timing facility.
             line = document.createElement("p");
+            // Updates the state value used by the form workflow.
             line.className = "cc-send-status";
             line.setAttribute("role", "status");
+            // Updates the selected page element, form value or visual state.
             line.style.cssText = "margin-bottom:.75rem;font-weight:700;";
             box.insertBefore(line, box.firstChild);
         }
+        // Updates the selected page element, form value or visual state.
         line.style.color = ok ? "#047857" : "#b91c1c";
+        // Updates the selected page element, form value or visual state.
         line.textContent = text;
     }
 
     try {
+        // Declares the form state, configuration value or DOM reference used below.
         const response = await fetch(WEB3FORMS_URL, { method: "POST", body: formData });
+        // Declares the form state, configuration value or DOM reference used below.
         const data = await response.json();
+        // Checks the stated condition before running this validation or form branch.
         if (response.ok && data.success) {
             status("Success! Your message has been sent.", true);
             form.reset();
@@ -104,7 +136,9 @@ async function sendViaWeb3Forms(form, fields, box) {
     } catch (error) {
         status("Something went wrong. Please try again, or send it from your email app below.", false);
     } finally {
+        // Updates the selected page element, form value or visual state.
         submitBtn.textContent = originalText;
+        // Updates the state value used by the form workflow.
         submitBtn.disabled = false;
         form.dispatchEvent(new Event("input", { bubbles: true })); // Lets the form gate lock or unlock the submit button again.
     }
@@ -118,6 +152,7 @@ function showError(input, message) { // Begin this block of code.
 
     // Writes the message into the span, if the span exists.
     if (errorBox) { // Begin this block of code.
+        // Updates the selected page element, form value or visual state.
         errorBox.textContent = message; // Execute this statement to update state or produce a result.
         errorBox.classList.remove("hidden"); // The Tailwind pages keep empty error messages hidden.
     } // Close this block or callback.
@@ -137,6 +172,7 @@ function clearError(input) { // Begin this block of code.
 
     // Empties the message text.
     if (errorBox) { // Begin this block of code.
+        // Updates the selected page element, form value or visual state.
         errorBox.textContent = ""; // Execute this statement to update state or produce a result.
         errorBox.classList.add("hidden"); // Hides the empty message again.
     } // Close this block or callback.
@@ -148,6 +184,7 @@ function clearError(input) { // Begin this block of code.
 
 // Checks an email address against a simple pattern: text, an @ sign, text, a dot, text.
 function isValidEmail(value) { // Begin this block of code.
+    // Returns the result or exits this function path.
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); // Return the result to the code that called this function.
 } // Close this block or callback.
 
@@ -219,18 +256,23 @@ const STOCK = { // Demo catalogue: each product has a price, quantity available 
 // If the file cannot be loaded (for example when the page is opened straight from a
 // folder instead of a web server), the built-in STOCK table above is used instead.
 function loadStockFromFile() { // Begin this block of code.
+    // Checks the stated condition before running this validation or form branch.
     if (typeof fetch !== "function") { return; } // Keep the built-in stock table if fetch is unavailable.
 
     fetch("../assets/data/stock.json", { cache: "no-cache" }) // Request fresh stock data instead of a cached copy.
         .then(function (response) { // Begin this block of code.
+            // Checks the stated condition before running this validation or form branch.
             if (!response.ok) { throw new Error("Stock file not found"); } // Run this block only when the condition is true.
+            // Returns the result or exits this function path.
             return response.json(); // Return the result to the code that called this function.
         }) // Close the current code block.
         .then(function (data) { // Begin this block of code.
             Object.keys(data).forEach(function (name) { // Begin this block of code.
+                // Declares the form state, configuration value or DOM reference used below.
                 const item = data[name]; // Declare a constant for use in this operation.
                 // Only accept entries that have the expected number fields.
                 if (item && typeof item.price === "number" && typeof item.stock === "number") { // Begin this block of code.
+                    // Updates the state value used by the form workflow.
                     STOCK[name] = { price: item.price, stock: item.stock, type: String(item.type) }; // Execute this statement to update state or produce a result.
                 } // Close this block or callback.
             }); // Close this block or callback.
@@ -242,36 +284,50 @@ function loadStockFromFile() { // Begin this block of code.
 
 // Adds working days to a date, skipping Saturdays and Sundays (public holidays are not counted).
 function addWorkingDays(start, days) { // Begin this block of code.
+    // Declares the form state, configuration value or DOM reference used below.
     const d = new Date(start); // Copy the starting date so the original value is unchanged.
+    // Repeats the following operation for each matching item or iteration.
     while (days > 0) { // Begin this block of code.
         d.setDate(d.getDate() + 1); // Execute this statement to update state or produce a result.
         // getDay() returns 0 for Sunday and 6 for Saturday.
         if (d.getDay() !== 0 && d.getDay() !== 6) { days--; } // Run this block only when the condition is true.
     } // Close this block or callback.
+    // Returns the result or exits this function path.
     return d; // Return the result to the code that called this function.
 } // Close this block or callback.
 
 // Formats a date like "Thu, 8 Oct 2026" for South African readers.
 function formatDate(d) { // Begin this block of code.
+    // Returns the result or exits this function path.
     return d.toLocaleDateString("en-ZA", { weekday: "short", day: "numeric", month: "short", year: "numeric" }); // Return the result to the code that called this function.
 } // Close this block or callback.
 
 // Finds the province object for the chosen province code.
 function getProvince(code) { // Begin this block of code.
+    // Returns the result or exits this function path.
     return PROVINCES.find(function (p) { return p.code === code; }); // Return the result to the code that called this function.
 } // Close this block or callback.
 
+// Defines a reusable form-processing operation or callback.
 function setupEnquiryForm(form) { // Begin this block of code.
 
     // Finds the fields that the code needs to read.
     const enquirerType = document.getElementById("enq-type"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const name = document.getElementById("enq-name"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const email = document.getElementById("enq-email"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const item = document.getElementById("enq-item"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const quantity = document.getElementById("enq-qty"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const method = document.getElementById("enq-method"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const province = document.getElementById("enq-province"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const institution = document.getElementById("enq-institution"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const result = document.getElementById("enquiry-result"); // Declare a constant for use in this operation.
 
     // Fills the province list from data.js (one option per province).
@@ -281,12 +337,16 @@ function setupEnquiryForm(form) { // Begin this block of code.
 
     // The extra text box for an institution that is not on the list.
     const otherGroup = document.getElementById("enq-other-group"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const other = document.getElementById("enq-other"); // Declare a constant for use in this operation.
 
     // Adds one <optgroup> (a labelled group of options) to the institution list.
     function addGroup(label, names) { // Begin this block of code.
+        // Checks the stated condition before running this validation or form branch.
         if (names.length === 0) { return; } // Run this block only when the condition is true.
+        // Declares the form state, configuration value or DOM reference used below.
         const group = document.createElement("optgroup"); // Declare a constant for use in this operation.
+        // Updates the state value used by the form workflow.
         group.label = label; // Update or inspect the relevant form or page element.
         names.forEach(function (n) { group.appendChild(new Option(n, n)); }); // Run this callback once for each item in the collection.
         institution.appendChild(group); // Update or inspect the relevant form or page element.
@@ -300,16 +360,23 @@ function setupEnquiryForm(form) { // Begin this block of code.
             institution.removeChild(institution.lastChild); // Update or inspect the relevant form or page element.
         } // Close this block or callback.
         setHidden(otherGroup, true); // Execute this statement to update state or produce a result.
+        // Declares the form state, configuration value or DOM reference used below.
         const chosen = getProvince(province.value); // Declare a constant for use in this operation.
+        // Checks the stated condition before running this validation or form branch.
         if (!chosen) { // Begin this block of code.
+            // Updates the state value used by the form workflow.
             institution.options[0].text = "Choose a province first..."; // Update or inspect the relevant form or page element.
+            // Updates the state value used by the form workflow.
             institution.disabled = true; // Update or inspect the relevant form or page element.
+            // Returns the result or exits this function path.
             return; // Execute this statement to update state or produce a result.
         } // Close this block or callback.
+        // Updates the state value used by the form workflow.
         institution.options[0].text = "Choose your institution..."; // Update or inspect the relevant form or page element.
 
         // Filters the province's institutions by type and adds a group for each type.
         function namesOfType(type) { // Begin this block of code.
+            // Returns the result or exits this function path.
             return chosen.institutions.filter(function (i) { return i.type === type; }) // Return the result to the code that called this function.
                                       .map(function (i) { return i.name; }); // Execute this statement to update state or produce a result.
         } // Close this block or callback.
@@ -318,6 +385,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
         addGroup("Private institutions in " + chosen.name, namesOfType("Private institution")); // Execute this statement to update state or produce a result.
         addGroup("National private providers", NATIONAL_PRIVATE); // Execute this statement to update state or produce a result.
         addGroup("Not on the list?", ["My institution is not listed"]); // Execute this statement to update state or produce a result.
+        // Updates the state value used by the form workflow.
         institution.disabled = false; // Update or inspect the relevant form or page element.
     }); // Close this block or callback.
 
@@ -334,28 +402,37 @@ function setupEnquiryForm(form) { // Begin this block of code.
     // and are used again when the form is submitted.
     const steps = [ // Declare a constant for use in this operation.
         { input: enquirerType, label: "I am a", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return enquirerType.value === "" ? "Please choose whether you are a student or a parent." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: name, label: "Full name", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return name.value.trim().length < 2 || name.value.trim().length > 80 ? "Please enter a name between 2 and 80 characters." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: email, label: "Email address", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return email.value.trim().length > 120 || !isValidEmail(email.value.trim()) ? "Please enter a valid email address (maximum 120 characters)." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: item, label: "Bundle or product", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return item.value === "" ? "Please choose a bundle or product." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: quantity, label: "Quantity", check: function () { // Begin this block of code.
+            // Declares the form state, configuration value or DOM reference used below.
             const amount = Number(quantity.value); // Declare a constant for use in this operation.
+            // Returns the result or exits this function path.
             return (quantity.value === "" || !Number.isInteger(amount) || amount < 1 || amount > 10) ? "Please enter a whole number from 1 to 10." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: method, label: "How do you want to get it?", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return method.value === "" ? "Please choose delivery or collection." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: province, label: "Province", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return province.value === "" ? "Please choose your province." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: institution, label: "Institution", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return institution.value === "" ? "Please choose your institution." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: other, label: "Name of your institution", check: function () { // Begin this block of code.
@@ -373,81 +450,115 @@ function setupEnquiryForm(form) { // Begin this block of code.
         // Clears the previous response.
         showBox(result, false);
 
+        // Declares the form state, configuration value or DOM reference used below.
         let valid = true; // Declare a variable whose value may change.
+        // Declares the form state, configuration value or DOM reference used below.
         let firstBad = null; // Declare a variable whose value may change.
 
         // Records the error and remembers the first invalid field.
         function fail(input, message) { // Begin this block of code.
             showError(input, message); // Execute this statement to update state or produce a result.
+            // Updates the state value used by the form workflow.
             valid = false; // Execute this statement to update state or produce a result.
+            // Checks the stated condition before running this validation or form branch.
             if (!firstBad) { firstBad = input; } // Run this block only when the condition is true.
         } // Close this block or callback.
 
         // Runs every check from the steps list. Fields that are hidden right now are skipped.
         steps.forEach(function (step) { // Begin this block of code.
+            // Checks the stated condition before running this validation or form branch.
             if (isHiddenGroup(groupOf(step.input))) { return; } // Run this block only when the condition is true.
+            // Declares the form state, configuration value or DOM reference used below.
             const message = step.check(); // Declare a constant for use in this operation.
+            // Checks the stated condition before running this validation or form branch.
             if (message !== "") { fail(step.input, message); } // Run this block only when the condition is true.
         }); // Close this block or callback.
+        // Declares the form state, configuration value or DOM reference used below.
         const qty = Number(quantity.value); // Convert the quantity field text into a number for calculations.
 
         // Stops here and moves the cursor to the first problem field.
         if (!valid) { // Begin this block of code.
             firstBad.focus(); // Execute this statement to update state or produce a result.
+            // Returns the result or exits this function path.
             return; // Execute this statement to update state or produce a result.
         } // Close this block or callback.
 
         // ----- Processing: work out the response from the validated input -----
         const product = productFor(item.value); // Find the selected product in the stock catalogue.
+        // Declares the form state, configuration value or DOM reference used below.
         const total = product.price * qty; // Calculate the estimated total before delivery fees.
+        // Declares the form state, configuration value or DOM reference used below.
         const prov = getProvince(province.value); // Declare a constant for use in this operation.
         // Looks the institution up. National private providers and typed-in institutions have no town,
         // so the province's typical delivery time is used for them.
         let inst = prov.institutions.find(function (i) { return i.name === institution.value; }); // Declare a variable whose value may change.
+        // Checks the stated condition before running this validation or form branch.
         if (!inst) { // Begin this block of code.
+            // Declares the form state, configuration value or DOM reference used below.
             const typed = institution.value === "My institution is not listed"; // Declare a constant for use in this operation.
+            // Updates the state value used by the form workflow.
             inst = { name: typed ? other.value.trim() : institution.value, type: "Private institution", city: "" }; // Execute this statement to update state or produce a result.
         } // Close this block or callback.
 
         // Availability message from the stock table.
         let availability; // Declare a variable whose value may change.
+        // Declares the form state, configuration value or DOM reference used below.
         let statusClass; // Declare a variable whose value may change.
+        // Checks the stated condition before running this validation or form branch.
         if (product.stock === 0) { // Begin this block of code.
+            // Updates the state value used by the form workflow.
             availability = "Currently out of stock. Send us a message and we will notify you when it is back."; // Set the message shown for this stock situation.
+            // Updates the state value used by the form workflow.
             statusClass = "status-out"; // Choose the CSS class used to style this status.
         } else if (product.type === "Second-hand" && qty > 1) { // Begin this block of code.
+            // Updates the state value used by the form workflow.
             availability = "This second-hand item is a single listing, so only 1 is available."; // Set the message shown for this stock situation.
+            // Updates the state value used by the form workflow.
             statusClass = "status-low"; // Choose the CSS class used to style this status.
         } else if (qty > product.stock) { // Begin this block of code.
+            // Updates the state value used by the form workflow.
             availability = "Only " + product.stock + " in stock. We can reserve " + product.stock + " now and the rest on the next restock."; // Set the message shown for this stock situation.
+            // Updates the state value used by the form workflow.
             statusClass = "status-low"; // Choose the CSS class used to style this status.
         } else { // Begin this block of code.
+            // Updates the state value used by the form workflow.
             availability = "In stock. We can reserve " + qty + " for you."; // Set the message shown for this stock situation.
+            // Updates the state value used by the form workflow.
             statusClass = "status-ok"; // Choose the CSS class used to style this status.
         } // Close this block or callback.
 
         // Delivery working days: 1 if the institution is in a hub city, otherwise the province's typical time.
         const inHubCity = prov.hubs.some(function (h) { return h.city === inst.city; }); // Declare a constant for use in this operation.
+        // Declares the form state, configuration value or DOM reference used below.
         const leadDays = inHubCity ? 1 : prov.leadDays; // Declare a constant for use in this operation.
 
         // Orders placed before 12:00 on a weekday are dispatched the same day; later orders count from the next working day.
         const now = new Date(); // Use the current local date and time for the estimate.
+        // Declares the form state, configuration value or DOM reference used below.
         const afterCutoff = now.getHours() >= 12 || now.getDay() === 0 || now.getDay() === 6; // Declare a constant for use in this operation.
+        // Declares the form state, configuration value or DOM reference used below.
         const readyBy = addWorkingDays(now, leadDays + (afterCutoff ? 1 : 0)); // Declare a constant for use in this operation.
 
         // Builds the delivery or collection lines for the response.
         let deliveryHtml; // Declare a variable whose value may change.
+        // Declares the form state, configuration value or DOM reference used below.
         let deliveryText; // Declare a variable whose value may change.
+        // Checks the stated condition before running this validation or form branch.
         if (method.value === "Delivery") { // Begin this block of code.
+            // Updates the state value used by the form workflow.
             deliveryText = "Delivery to " + inst.name + (inst.city ? " (" + inst.city + ")" : "") + ", " + prov.name; // Build the plain-text delivery or collection summary.
+            // Updates the state value used by the form workflow.
             deliveryHtml = // Build the HTML list shown in the result.
                 "<li><strong>Delivery to:</strong> " + escapeHtml(inst.name) + (inst.city ? ", " + escapeHtml(inst.city) : "") + ", " + prov.name + "</li>" + // Continue building the text value used in this operation.
                 "<li><strong>Earliest arrival:</strong> " + formatDate(readyBy) + " (" + leadDays + " working day" + (leadDays > 1 ? "s" : "") + ")</li>" + // Continue building the text value used in this operation.
                 "<li><strong>Handover window:</strong> Mon-Fri 10:00-16:00 at the student centre or main gate. Bring your student card.</li>" + // Continue building the text value used in this operation.
                 "<li><strong>Delivery fee:</strong> quoted and confirmed before you pay.</li>"; // Continue building the text value used in this operation.
         } else { // Begin this block of code.
+            // Declares the form state, configuration value or DOM reference used below.
             const hub = prov.hubs[0]; // Declare a constant for use in this operation.
+            // Updates the state value used by the form workflow.
             deliveryText = "Collection at the " + hub.city + " hub, " + prov.name; // Build the plain-text delivery or collection summary.
+            // Updates the state value used by the form workflow.
             deliveryHtml = // Build the HTML list shown in the result.
                 "<li><strong>Collect from:</strong> " + hub.city + " hub, " + escapeHtml(hub.address) + "</li>" + // Continue building the text value used in this operation.
                 "<li><strong>Hub hours:</strong> " + hub.hours + "</li>" + // Continue building the text value used in this operation.
@@ -458,6 +569,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
         // It follows a professional layout: a subject that names the request, a polite greeting,
         // the order details, a clear request and a courteous closing.
         const subject = "Availability Enquiry \u2013 " + item.value; // Declare a constant for use in this operation.
+        // Declares the form state, configuration value or DOM reference used below.
         const body = // Declare a constant for use in this operation.
             "Dear Campus-Cart Team,\r\n\r\n" + // Continue building the text value used in this operation.
             "I am writing to enquire about the availability of the item below and, if it is available, to arrange to purchase it.\r\n\r\n" + // Continue building the text value used in this operation.
@@ -467,12 +579,14 @@ function setupEnquiryForm(form) { // Begin this block of code.
             "Order method: " + deliveryText + "\r\n" + // Continue building the text value used in this operation.
             "Institution: " + inst.name + " (" + prov.name + ")\r\n\r\n" + // Continue building the text value used in this operation.
             "Could you please confirm that the item is available and let me know the next steps for payment and " + // Continue building the text value used in this operation.
+            // Updates the selected page element, form value or visual state.
             (method.value === "Delivery" ? "delivery" : "collection") + "?\r\n\r\n" + // This line contributes to the current expression or data structure.
             "Thank you for your assistance. I look forward to your response.\r\n\r\n" + // Continue building the text value used in this operation.
             "Kind regards,\r\n" + // Continue building the text value used in this operation.
             name.value.trim() + "\r\n" + // This line contributes to the current expression or data structure.
             "(" + enquirerType.value + ")\r\n" + // Continue building the text value used in this operation.
             "Email: " + email.value.trim(); // Continue building the text value used in this operation.
+        // Declares the form state, configuration value or DOM reference used below.
         const mailto = "mailto:" + (form.dataset.mailto || "enquiries@campus-cart.co.za") + // Build a link that opens the visitor’s email application.
             "?subject=" + encodeURIComponent(subject) + // Continue building the text value used in this operation.
             "&body=" + encodeURIComponent(body); // Continue building the text value used in this operation.
@@ -503,6 +617,7 @@ function setupEnquiryForm(form) { // Begin this block of code.
 
 // Replaces characters that have a special meaning in HTML so user text cannot inject markup.
 function escapeHtml(text) { // Begin this block of code.
+    // Returns the result or exits this function path.
     return text // Return the result to the code that called this function.
         .replace(/&/g, "&amp;") // This line contributes to the current expression or data structure.
         .replace(/</g, "&lt;") // This line contributes to the current expression or data structure.
@@ -520,24 +635,34 @@ const CALL_BACK = "Call or WhatsApp me"; // Shared option text used to decide wh
 
 // Turns the chosen outcome into a polite sentence for the email.
 function outcomeSentence(choice, phoneNumber) { // Begin this block of code.
+    // Checks the stated condition before running this validation or form branch.
     if (choice === CALL_BACK) { // Begin this block of code.
+        // Returns the result or exits this function path.
         return "I would appreciate it if you could call or WhatsApp me on " + phoneNumber + "."; // Return the result to the code that called this function.
     } // Close this block or callback.
+    // Checks the stated condition before running this validation or form branch.
     if (choice === "Arrange a refund") { // Begin this block of code.
+        // Returns the result or exits this function path.
         return "I would appreciate it if you could arrange a refund for me."; // Return the result to the code that called this function.
     } // Close this block or callback.
+    // Checks the stated condition before running this validation or form branch.
     if (choice === "Arrange a replacement or swap") { // Begin this block of code.
+        // Returns the result or exits this function path.
         return "I would appreciate it if you could arrange a replacement or swap for me."; // Return the result to the code that called this function.
     } // Close this block or callback.
+    // Checks the stated condition before running this validation or form branch.
     if (choice === "Update me on my order") { // Begin this block of code.
+        // Returns the result or exits this function path.
         return "I would appreciate an update on the status of my order."; // Return the result to the code that called this function.
     } // Close this block or callback.
+    // Returns the result or exits this function path.
     return "I would appreciate a reply by email with the information I have requested."; // Return the result to the code that called this function.
 } // Close this block or callback.
 
 // Builds a clear subject line that names the problem or request, like
 // "Complaint Regarding Order CC-1025" or "Order and Collection Query \u2013 Thandi Mokoena".
 function buildContactSubject(topicText, orderRef, fullName) { // Begin this block of code.
+    // Declares the form state, configuration value or DOM reference used below.
     const labels = { // Convert form topic labels into concise email subject wording.
         "Order or collection question": "Order and Collection Query", // Continue building the text value used in this operation.
         "Complaint or problem with an order": "Complaint Regarding Order", // Continue building the text value used in this operation.
@@ -545,12 +670,15 @@ function buildContactSubject(topicText, orderRef, fullName) { // Begin this bloc
         "Parent Hub & bundles": "Parent Hub and Bundle Query", // Continue building the text value used in this operation.
         "Something else": "General Query" // Continue building the text value used in this operation.
     }; // Close the current code block.
+    // Declares the form state, configuration value or DOM reference used below.
     const label = labels[topicText] || "General Query"; // Declare a constant for use in this operation.
 
     // A complaint with an order reference reads naturally as "Complaint Regarding Order CC-1025".
     if (topicText === "Complaint or problem with an order") { // Begin this block of code.
+        // Returns the result or exits this function path.
         return orderRef !== "" ? label + " " + orderRef : "Complaint Regarding My Order \u2013 " + fullName; // Return the result to the code that called this function.
     } // Close this block or callback.
+    // Returns the result or exits this function path.
     return label + " \u2013 " + (orderRef !== "" ? "Order " + orderRef : fullName); // Return the result to the code that called this function.
 } // Close this block or callback.
 
@@ -559,16 +687,24 @@ function buildContactSubject(topicText, orderRef, fullName) { // Begin this bloc
 // CONTACT FORM
 // ==========================================================
 
+// Defines a reusable form-processing operation or callback.
 function setupContactForm(form) { // Begin this block of code.
 
     // Finds the fields that the code needs to read.
     const name = document.getElementById("c-name"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const email = document.getElementById("c-email"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const phone = document.getElementById("c-phone"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const topic = document.getElementById("c-topic"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const order = document.getElementById("c-order"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const outcome = document.getElementById("c-outcome"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const message = document.getElementById("c-message"); // Declare a constant for use in this operation.
+    // Declares the form state, configuration value or DOM reference used below.
     const preview = document.getElementById("contact-preview"); // Declare a constant for use in this operation.
 
     clearErrorsOnInput(form); // Execute this statement to update state or produce a result.
@@ -576,12 +712,15 @@ function setupContactForm(form) { // Begin this block of code.
     // The fields in the order the visitor fills them in (see setupFormGate for how this list is used).
     const steps = [ // Declare a constant for use in this operation.
         { input: name, label: "Full name", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return name.value.trim().length < 2 || name.value.trim().length > 80 ? "Please enter a name between 2 and 80 characters." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: email, label: "Email address", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return email.value.trim().length > 120 || !isValidEmail(email.value.trim()) ? "Please enter a valid email address (maximum 120 characters)." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: topic, label: "Topic", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return topic.value === "" ? "Please choose a topic." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: order, label: "Order reference", check: function () { // Begin this block of code.
@@ -590,11 +729,13 @@ function setupContactForm(form) { // Begin this block of code.
                 ? "Use 3 to 30 letters, numbers, # or dashes, e.g. CC-1025." : ""; // Execute this statement to update state or produce a result.
         } }, // Close the current code block.
         { input: outcome, label: "What would you like us to do?", check: function () { // Begin this block of code.
+            // Returns the result or exits this function path.
             return outcome.value === "" ? "Please tell us what you would like us to do." : ""; // Return the result to the code that called this function.
         } }, // Close the current code block.
         { input: phone, label: "Phone / WhatsApp", check: function () { // Begin this block of code.
             // A phone number is needed when the visitor asks for a call or WhatsApp message.
             if (outcome.value === CALL_BACK && phone.value.trim() === "") { // Begin this block of code.
+                // Returns the result or exits this function path.
                 return "Please enter your phone number so we can call or WhatsApp you."; // Return the result to the code that called this function.
             } // Close this block or callback.
             // Otherwise optional, but if something is typed it must look like a valid number.
@@ -616,24 +757,32 @@ function setupContactForm(form) { // Begin this block of code.
         // Hides any earlier preview.
         showBox(preview, false);
 
+        // Declares the form state, configuration value or DOM reference used below.
         let valid = true; // Declare a variable whose value may change.
+        // Declares the form state, configuration value or DOM reference used below.
         let firstBad = null; // Declare a variable whose value may change.
 
+        // Defines a reusable form-processing operation or callback.
         function fail(input, msg) { // Begin this block of code.
             showError(input, msg); // Execute this statement to update state or produce a result.
+            // Updates the state value used by the form workflow.
             valid = false; // Execute this statement to update state or produce a result.
+            // Checks the stated condition before running this validation or form branch.
             if (!firstBad) { firstBad = input; } // Run this block only when the condition is true.
         } // Close this block or callback.
 
         // Runs every check from the steps list.
         steps.forEach(function (step) { // Begin this block of code.
+            // Declares the form state, configuration value or DOM reference used below.
             const problem = step.check(); // Declare a constant for use in this operation.
+            // Checks the stated condition before running this validation or form branch.
             if (problem !== "") { fail(step.input, problem); } // Run this block only when the condition is true.
         }); // Close this block or callback.
 
         // Stops here and focuses the first problem field.
         if (!valid) { // Begin this block of code.
             firstBad.focus(); // Execute this statement to update state or produce a result.
+            // Returns the result or exits this function path.
             return; // Execute this statement to update state or produce a result.
         } // Close this block or callback.
 
@@ -641,8 +790,10 @@ function setupContactForm(form) { // Begin this block of code.
         // The email follows the layout of a formal message: a clear subject, a polite greeting,
         // relevant details, a clear request and a courteous closing.
         const recipient = form.dataset.mailto || "hello@campus-cart.co.za"; // Read the email address configured in the form's data-mailto attribute.
+        // Declares the form state, configuration value or DOM reference used below.
         const subject = buildContactSubject(topic.value, order.value.trim(), name.value.trim()); // Declare a constant for use in this operation.
 
+        // Declares the form state, configuration value or DOM reference used below.
         const lines = [ // Build the email body as separate lines before joining them.
             "Dear Campus-Cart Team,", // Continue building the text value used in this operation.
             "", // Continue building the text value used in this operation.
@@ -674,6 +825,7 @@ function setupContactForm(form) { // Begin this block of code.
             lines.push("Phone: " + phone.value.trim()); // Add the next section of text to the email body.
         } // Close this block or callback.
 
+        // Declares the form state, configuration value or DOM reference used below.
         const body = lines.join("\r\n"); // Use CRLF line breaks for the email body.
 
         // Builds the mailto link. encodeURIComponent makes spaces and symbols safe in a URL.
