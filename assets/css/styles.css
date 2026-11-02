@@ -1784,10 +1784,11 @@ body {
 
 
 /* ==========================================================
-   CAMPUS-CART — SHOP NEW MANUAL PRODUCT MARQUEE
-   Horizontal scroll is user-controlled; no automatic movement.
+   CAMPUS-CART — MATCHED SHOP NEW + SECOND-HAND CAROUSELS
+   Horizontal scrolling with visible, clickable arrow controls.
    ========================================================== */
-#panel-new .cc-shop-new-marquee {
+#panel-new .cc-shop-carousel,
+#panel-used .cc-shop-carousel {
   display: flex !important;
   width: 100%;
   max-width: 100%;
@@ -1804,28 +1805,79 @@ body {
   scrollbar-color: #0d1b3e #e2e8f0;
   cursor: grab;
 }
-#panel-new .cc-shop-new-marquee:active {
+#panel-new .cc-shop-carousel:active,
+#panel-used .cc-shop-carousel:active {
   cursor: grabbing;
 }
-#panel-new .cc-shop-new-marquee > article {
+#panel-new .cc-shop-carousel > article,
+#panel-used .cc-shop-carousel > article {
   flex: 0 0 clamp(250px, 29vw, 310px);
   min-width: 0;
   scroll-snap-align: start;
 }
-#panel-new .cc-shop-new-marquee:focus-visible {
+#panel-new .cc-shop-carousel:focus-visible,
+#panel-used .cc-shop-carousel:focus-visible {
   outline: 3px solid #ffd23f;
   outline-offset: 4px;
 }
-#panel-new .cc-shop-new-marquee::-webkit-scrollbar {
+#panel-new .cc-shop-carousel::-webkit-scrollbar,
+#panel-used .cc-shop-carousel::-webkit-scrollbar {
   height: 8px;
 }
-#panel-new .cc-shop-new-marquee::-webkit-scrollbar-track {
+#panel-new .cc-shop-carousel::-webkit-scrollbar-track,
+#panel-used .cc-shop-carousel::-webkit-scrollbar-track {
   border-radius: 999px;
   background: #e2e8f0;
 }
-#panel-new .cc-shop-new-marquee::-webkit-scrollbar-thumb {
+#panel-new .cc-shop-carousel::-webkit-scrollbar-thumb,
+#panel-used .cc-shop-carousel::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background: #0d1b3e;
+}
+.cc-shop-carousel-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin: 0 0 0.75rem;
+}
+.cc-shop-carousel-arrow {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  min-width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0d1b3e;
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+.cc-shop-carousel-arrow:hover {
+  border-color: #0d1b3e;
+  background: #0d1b3e;
+  color: #ffffff;
+}
+.cc-shop-carousel-arrow:active {
+  transform: scale(0.96);
+}
+.cc-shop-carousel-arrow:focus-visible {
+  outline: 3px solid #ffd23f;
+  outline-offset: 3px;
+}
+.cc-shop-carousel-arrow img {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+@media (max-width: 479px) {
+  #panel-new .cc-shop-carousel > article,
+  #panel-used .cc-shop-carousel > article {
+    flex-basis: min(82vw, 300px);
+  }
+  .cc-shop-carousel-controls {
+    justify-content: flex-end;
+  }
 }
 
 /* Wishlist buttons stay compact beside the cart action on every catalogue card. */
