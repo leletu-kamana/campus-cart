@@ -9,35 +9,45 @@
 		<meta charset="utf-8" /> <!-- UTF-8 encoding supports all characters and the rand sign -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive viewport: width follows the device, no zoom lock -->
 		<title>About Campus-Cart | Our History, Mission &amp; Vision</title> <!-- Browser tab title for the About page -->
+		<!-- Meta description summarises the About page for search engines -->
+		<!-- Short pitch shown under the search result -->
 		<meta
-			name="description" <!-- Meta description summarises the About page for search engines -->
-			content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces." <!-- Short pitch shown under the search result -->
+			name="description" 
+			content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces." 
 		/>
 		<meta name="theme-color" content="#0d1b3e" /> <!-- Tints the browser UI with Campus-Cart navy -->
 		<script src="https://unpkg.com/@tailwindcss/browser@4"></script> <!-- Tailwind CSS v4 browser build: supplies the utility classes used throughout this page -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Opens an early connection to Google Fonts for faster loading -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Opens an early CORS connection to the font files themselves -->
+		<!-- Loads Inter for body text and Playfair Display italic for decorative headings -->
+		<!-- This link is a stylesheet -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" <!-- Loads Inter for body text and Playfair Display italic for decorative headings -->
-			rel="stylesheet" <!-- This link is a stylesheet -->
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" 
+			rel="stylesheet" 
 		/>
+		<!-- Favicon link shown in browser tabs and bookmarks -->
+		<!-- Inline SVG favicon: yellow "C" on a navy rounded square, no extra file request -->
 		<link
-			rel="icon" <!-- Favicon link shown in browser tabs and bookmarks -->
-			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E" <!-- Inline SVG favicon: yellow "C" on a navy rounded square, no extra file request -->
+			rel="icon" 
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E" 
 		/>
 
 		<!-- Tailwind v4 theme config: animations used on this page -->
 		<link rel="stylesheet" href="https://campus-cart-olive.vercel.app/assets/css/styles.css" /> <!-- Site stylesheet: custom animations and component overrides -->
 	</head> <!-- End of head; everything below is rendered page content -->
 
-	<body <!-- Body element starts the visible page -->
-		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]" <!-- Warm off-white background, Inter font, slate text, smooth anti-aliased rendering -->
+	<!-- Body element starts the visible page -->
+	<!-- Warm off-white background, Inter font, slate text, smooth anti-aliased rendering -->
+	<body 
+		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]" 
 	>
 		<!-- Skip link for keyboard users -->
 		<!-- Hidden until focused: lets keyboard users jump straight past the navigation to <main> -->
+		<!-- Target: the main content landmark -->
+		<!-- Screen-reader only until focused, then styled as a floating navy pill -->
 		<a
-			href="#main" <!-- Target: the main content landmark -->
-			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white" <!-- Screen-reader only until focused, then styled as a floating navy pill -->
+			href="#main" 
+			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white" 
 		>
 			Skip to main content <!-- Visible label when the skip link receives focus -->
 		</a>
@@ -45,36 +55,48 @@
 		<!-- ===== Top utility bar (SoleStyle-style strip) ===== -->
 		<!-- Thin navy strip above the header: contact details, audience paths and a delivery promise.
 		     Hidden on small screens (md:block) to save vertical space on mobile. -->
+		<!-- Hidden below md, shown as a navy block from md up -->
 		<div
-			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block" <!-- Hidden below md, shown as a navy block from md up -->
+			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block" 
 		>
+			<!-- Centred flex row, fixed 36px height, small text -->
 			<div
-				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8" <!-- Centred flex row, fixed 36px height, small text -->
+				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8" 
 			>
 				<!-- Left cluster: email link (always visible) and WhatsApp link (large screens only) -->
 				<div class="flex items-center gap-5"> <!-- Flex row with consistent 20px gaps -->
 					<!-- Clickable mailto link with a small mail icon -->
+					<!-- Opens the visitor's email client pre-addressed to support -->
+					<!-- Inline flex; text turns gold on hover -->
 					<a
-						href="mailto:hello@campus-cart.co.za" <!-- Opens the visitor's email client pre-addressed to support -->
-						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]" <!-- Inline flex; text turns gold on hover -->
+						href="mailto:hello@campus-cart.co.za" 
+						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]" 
 					>
 						<!-- Decorative icon: empty alt so screen readers skip it -->
+						<!-- Lucide mail icon loaded from the CDN -->
+						<!-- Empty alt marks the icon as decorative -->
+						<!-- Small 14px icon sized to match the strip text -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" <!-- Lucide mail icon loaded from the CDN -->
-							alt="" <!-- Empty alt marks the icon as decorative -->
-							class="h-3.5 w-3.5" <!-- Small 14px icon sized to match the strip text -->
+							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" 
+							alt="" 
+							class="h-3.5 w-3.5" 
 						/>
 						hello@campus-cart.co.za <!-- Visible support email address -->
 					</a>
 					<!-- WhatsApp deep link, hidden until the lg breakpoint -->
+					<!-- wa.me deep link opens WhatsApp with the number pre-filled -->
+					<!-- Hidden below lg, inline flex from lg up, gold hover -->
 					<a
-						href="https://wa.me/27123456789" <!-- wa.me deep link opens WhatsApp with the number pre-filled -->
-						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex" <!-- Hidden below lg, inline flex from lg up, gold hover -->
+						href="https://wa.me/27123456789" 
+						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex" 
 					>
+						<!-- Lucide message-circle icon representing WhatsApp -->
+						<!-- Decorative -->
+						<!-- 14px icon -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" <!-- Lucide message-circle icon representing WhatsApp -->
-							alt="" <!-- Decorative -->
-							class="h-3.5 w-3.5" <!-- 14px icon -->
+							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" 
+							alt="" 
+							class="h-3.5 w-3.5" 
 						/>
 						+27 12 345 6789 <!-- Visible WhatsApp phone number -->
 					</a>
@@ -92,13 +114,17 @@
 					> <!-- Visible link text -->
 					<span class="text-slate-600">|</span> <!-- Second dimmed divider -->
 					<!-- Trust badge: hidden on the smallest screens, shown from sm upward -->
+					<!-- Hidden on mobile, inline flex from sm, gold text -->
 					<span
-						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex" <!-- Hidden on mobile, inline flex from sm, gold text -->
+						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex" 
 					>
+						<!-- Shield-check icon implying safety -->
+						<!-- Decorative -->
+						<!-- 14px icon -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" <!-- Shield-check icon implying safety -->
-							alt="" <!-- Decorative -->
-							class="h-3.5 w-3.5" <!-- 14px icon -->
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" 
+							alt="" 
+							class="h-3.5 w-3.5" 
 						/>
 						Delivery to every campus <!-- Trust message text -->
 					</span>
@@ -108,21 +134,27 @@
 
 		<!-- ===== Header / Navigation ===== -->
 		<!-- Sticky header: stays pinned to the top with a translucent blurred background -->
+		<!-- ID used by JavaScript to add a shadow when the page scrolls -->
+		<!-- Sticks to top, translucent white blur, bottom border -->
 		<header
-			id="siteHeader" <!-- ID used by JavaScript to add a shadow when the page scrolls -->
-			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md" <!-- Sticks to top, translucent white blur, bottom border -->
+			id="siteHeader" 
+			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md" 
 		>
+			<!-- Centred flex row, 64px tall header bar -->
 			<div
-				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" <!-- Centred flex row, 64px tall header bar -->
+				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" 
 			>
 				<!-- Brand logo: clickable link back to the homepage, with a navy "C" tile and wordmark -->
+				<!-- Returns the visitor to the homepage -->
+				<!-- Flex row, bold extra-large navy text -->
 				<a
-					href="https://campus-cart-olive.vercel.app/index.html" <!-- Returns the visitor to the homepage -->
-					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]" <!-- Flex row, bold extra-large navy text -->
+					href="https://campus-cart-olive.vercel.app/index.html" 
+					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]" 
 				>
 					<!-- Logo tile containing the letter C -->
+					<!-- 36px navy rounded tile with centred gold C -->
 					<span
-						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]" <!-- 36px navy rounded tile with centred gold C -->
+						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]" 
 						>C</span
 					> <!-- The literal letter shown inside the tile -->
 					<!-- Wordmark: "Campus" in navy, "-Cart" in gold -->
@@ -131,57 +163,76 @@
 
 				<!-- Provides navigation links for moving between pages or page sections. -->
 				<!-- Desktop navigation: hidden below lg, where the mobile menu takes over -->
+				<!-- Hidden below lg; flex from lg up with 4px gaps -->
+				<!-- Accessible name so screen readers announce this as the main nav -->
 				<nav
-					class="hidden items-center gap-1 lg:flex" <!-- Hidden below lg; flex from lg up with 4px gaps -->
-					aria-label="Main navigation" <!-- Accessible name so screen readers announce this as the main nav -->
+					class="hidden items-center gap-1 lg:flex" 
+					aria-label="Main navigation" 
 				>
 					<!-- Home link: returns to the homepage -->
+					<!-- Home target -->
+					<!-- Grey hover background and navy hover text -->
 					<a
-						href="https://campus-cart-olive.vercel.app/index.html" <!-- Home target -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Grey hover background and navy hover text -->
+						href="https://campus-cart-olive.vercel.app/index.html" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Home</a
 					>
 					<!-- About is the current page: styled as active with aria-current="page" -->
+					<!-- About page target (relative) -->
+					<!-- Marks this link as the current page for assistive tech -->
+					<!-- Active pill: faint navy background and bold text -->
 					<a
-						href="about.html" <!-- About page target (relative) -->
-						aria-current="page" <!-- Marks this link as the current page for assistive tech -->
-						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]" <!-- Active pill: faint navy background and bold text -->
+						href="about.html" 
+						aria-current="page" 
+						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]" 
 						>About</a
 					>
 					<!-- Shop / products listing page -->
+					<!-- Products page target -->
+					<!-- Grey/navy hover -->
 					<a
-						href="products.html" <!-- Products page target -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Grey/navy hover -->
+						href="products.html" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Shop</a
 					>
 					<!-- Parent Hub: anchor within the products page aimed at parents/guardians -->
+					<!-- Deep link to the parent hub section on the products page -->
+					<!-- Same hover treatment as Shop -->
 					<a
-						href="products.html#parent-hub" <!-- Deep link to the parent hub section on the products page -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Same hover treatment as Shop -->
+						href="products.html#parent-hub" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Parent Hub</a
 					>
 					<!-- Enquiry form page -->
+					<!-- Enquiry page target -->
+					<!-- Grey/navy hover -->
 					<a
-						href="enquiry.html" <!-- Enquiry page target -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Grey/navy hover -->
+						href="enquiry.html" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Enquiry</a
 					>
 					<!-- Delivery coverage page -->
+					<!-- Coverage page target -->
+					<!-- Grey/navy hover -->
 					<a
-						href="coverage.html" <!-- Coverage page target -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Grey/navy hover -->
+						href="coverage.html" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Coverage</a
 					>
 					<!-- Contact page -->
+					<!-- Contact page target -->
+					<!-- Grey/navy hover -->
 					<a
-						href="contact.html" <!-- Contact page target -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Grey/navy hover -->
+						href="contact.html" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Contact</a
 					>
 					<!-- Account / login page -->
+					<!-- Account page target -->
+					<!-- Grey/navy hover -->
 					<a
-						href="account.html" <!-- Account page target -->
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" <!-- Grey/navy hover -->
+						href="account.html" 
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
 						>Account</a
 					>
 				</nav>
@@ -189,15 +240,21 @@
 				<!-- Right-hand action cluster: search, live clock, cart and mobile menu toggle -->
 				<div class="flex items-center gap-2 sm:gap-3"> <!-- Flex row with tighter gaps on mobile -->
 					<!-- Search shortcut: icon-only circular button linking to the products page (desktop only) -->
+					<!-- Search icon jumps to the products page where search lives -->
+					<!-- Hidden below lg; 40px circular bordered button -->
+					<!-- Accessible name for the icon-only link -->
 					<a
-						href="products.html" <!-- Search icon jumps to the products page where search lives -->
-						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid" <!-- Hidden below lg; 40px circular bordered button -->
-						aria-label="Search products" <!-- Accessible name for the icon-only link -->
+						href="products.html" 
+						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid" 
+						aria-label="Search products" 
 					>
+						<!-- Lucide search magnifier -->
+						<!-- Decorative -->
+						<!-- 20px icon -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg" <!-- Lucide search magnifier -->
-							alt="" <!-- Decorative -->
-							class="h-5 w-5" <!-- 20px icon -->
+							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg" 
+							alt="" 
+							class="h-5 w-5" 
 						/>
 					</a>
 
@@ -212,43 +269,64 @@
 					</div>
 
 					<!-- Cart trigger: opens the cart drawer; aria-expanded reflects open/closed state -->
+					<!-- ID used by the cart drawer JavaScript -->
+					<!-- Explicit button type prevents accidental form submission -->
+					<!-- Circular bordered button with navy hover border -->
+					<!-- Points to the drawer this button toggles -->
+					<!-- Reflects the drawer's current closed state -->
+					<!-- Accessible name since the button is icon-only -->
 					<button
-						id="cartButton" <!-- ID used by the cart drawer JavaScript -->
-						type="button" <!-- Explicit button type prevents accidental form submission -->
-						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" <!-- Circular bordered button with navy hover border -->
-						aria-controls="cartDrawer" <!-- Points to the drawer this button toggles -->
-						aria-expanded="false" <!-- Reflects the drawer's current closed state -->
-						aria-label="Open cart" <!-- Accessible name since the button is icon-only -->
+						id="cartButton" 
+						type="button" 
+						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" 
+						aria-controls="cartDrawer" 
+						aria-expanded="false" 
+						aria-label="Open cart" 
 					>
 						<!-- Shopping bag icon (decorative) -->
+						<!-- Lucide shopping bag icon -->
+						<!-- Decorative -->
+						<!-- 20px icon -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" <!-- Lucide shopping bag icon -->
-							alt="" <!-- Decorative -->
-							class="h-5 w-5" <!-- 20px icon -->
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" 
+							alt="" 
+							class="h-5 w-5" 
 						/>
 						<!-- Cart badge: item count, kept in sync by the cart JavaScript -->
+						<!-- ID targeted by the cart JavaScript to update the count -->
+						<!-- Gold badge pinned to the top-right of the bag -->
 						<span
-							id="cartCount" <!-- ID targeted by the cart JavaScript to update the count -->
-							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]" <!-- Gold badge pinned to the top-right of the bag -->
+							id="cartCount" 
+							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]" 
 							>0</span
 						> <!-- Starts at zero before the cart is hydrated -->
 					</button>
 
 					<!-- Mobile menu toggle: visible only below lg; swaps between menu and close icons -->
+					<!-- ID used by the menu JavaScript -->
+					<!-- Explicit button type -->
+					<!-- Shown below lg, hidden from lg up -->
+					<!-- Reflects the mobile menu's current closed state -->
+					<!-- Points to the panel this button toggles -->
+					<!-- Accessible name -->
 					<button
-						id="navToggle" <!-- ID used by the menu JavaScript -->
-						type="button" <!-- Explicit button type -->
-						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" <!-- Shown below lg, hidden from lg up -->
-						aria-expanded="false" <!-- Reflects the mobile menu's current closed state -->
-						aria-controls="mobileMenu" <!-- Points to the panel this button toggles -->
-						aria-label="Menu" <!-- Accessible name -->
+						id="navToggle" 
+						type="button" 
+						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" 
+						aria-expanded="false" 
+						aria-controls="mobileMenu" 
+						aria-label="Menu" 
 					>
 						<!-- Icon whose src is swapped by JavaScript when the menu opens/closes -->
+						<!-- ID targeted by the script to swap the icon -->
+						<!-- Default menu (hamburger) icon -->
+						<!-- Decorative -->
+						<!-- 20px icon -->
 						<img
-							id="navIcon" <!-- ID targeted by the script to swap the icon -->
-							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" <!-- Default menu (hamburger) icon -->
-							alt="" <!-- Decorative -->
-							class="h-5 w-5" <!-- 20px icon -->
+							id="navIcon" 
+							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" 
+							alt="" 
+							class="h-5 w-5" 
 						/>
 					</button>
 				</div>
@@ -256,59 +334,78 @@
 
 			<!-- Mobile menu (toggled by JS) -->
 			<!-- Mobile navigation panel: hidden by default, toggled open by #navToggle -->
+			<!-- ID referenced by aria-controls on the toggle button -->
+			<!-- Hidden by default; never shown at lg and above -->
 			<div
-				id="mobileMenu" <!-- ID referenced by aria-controls on the toggle button -->
-				class="hidden border-t border-slate-200 bg-white lg:hidden" <!-- Hidden by default; never shown at lg and above -->
+				id="mobileMenu" 
+				class="hidden border-t border-slate-200 bg-white lg:hidden" 
 			>
 				<!-- Provides navigation links for moving between pages or page sections. -->
 				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation"> <!-- Stacked links with 4px vertical gaps; distinct aria-label -->
 					<!-- Home link: returns to the homepage -->
+					<!-- Home target -->
+					<!-- Standard mobile link style -->
 					<a
-						href="https://campus-cart-olive.vercel.app/index.html" <!-- Home target -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="https://campus-cart-olive.vercel.app/index.html" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Home</a
 					>
 					<!-- About: highlighted as the active page on mobile too -->
+					<!-- About target -->
+					<!-- Marks this as the current page -->
+					<!-- Active style: faint navy background, bold text -->
 					<a
-						href="about.html" <!-- About target -->
-						aria-current="page" <!-- Marks this as the current page -->
-						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]" <!-- Active style: faint navy background, bold text -->
+						href="about.html" 
+						aria-current="page" 
+						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]" 
 						>About</a
 					>
 					<!-- Shop / products -->
+					<!-- Products target -->
+					<!-- Standard mobile link style -->
 					<a
-						href="products.html" <!-- Products target -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="products.html" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Shop</a
 					>
 					<!-- Parent Hub anchor -->
+					<!-- Deep link to parent hub section -->
+					<!-- Standard mobile link style -->
 					<a
-						href="products.html#parent-hub" <!-- Deep link to parent hub section -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="products.html#parent-hub" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Parent Hub</a
 					>
 					<!-- Enquiry page -->
+					<!-- Enquiry target -->
+					<!-- Standard mobile link style -->
 					<a
-						href="enquiry.html" <!-- Enquiry target -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="enquiry.html" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Enquiry</a
 					>
 					<!-- Coverage page -->
+					<!-- Coverage target -->
+					<!-- Standard mobile link style -->
 					<a
-						href="coverage.html" <!-- Coverage target -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="coverage.html" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Coverage</a
 					>
 					<!-- Contact page -->
+					<!-- Contact target -->
+					<!-- Standard mobile link style -->
 					<a
-						href="contact.html" <!-- Contact target -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="contact.html" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Contact</a
 					>
 					<!-- Account page -->
+					<!-- Account target -->
+					<!-- Standard mobile link style -->
 					<a
-						href="account.html" <!-- Account target -->
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" <!-- Standard mobile link style -->
+						href="account.html" 
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
 						>Account</a
 					>
 				</nav>
@@ -322,19 +419,24 @@
 			<!-- Full-width navy hero: breadcrumb, eyebrow badge, headline and intro paragraph -->
 			<section class="relative overflow-hidden bg-[#0d1b3e] text-white"> <!-- Relative positioning for decorations; navy block with white text -->
 				<!-- Decorative radial glows (two soft light spots) — aria-hidden so they're ignored by AT -->
+				<!-- Hides the decoration from screen readers -->
+				<!-- Two layered radial gradients: warm gold glow top-right, deep blue glow bottom-left -->
 				<div
-					aria-hidden="true" <!-- Hides the decoration from screen readers -->
-					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]" <!-- Two layered radial gradients: warm gold glow top-right, deep blue glow bottom-left -->
+					aria-hidden="true" 
+					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]" 
 				></div>
 				<!-- Decorative diagonal gold blur band on the right side of the hero -->
+				<!-- Decorative only -->
+				<!-- Oversized rotated gold gradient with heavy blur -->
 				<div
-					aria-hidden="true" <!-- Decorative only -->
-					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl" <!-- Oversized rotated gold gradient with heavy blur -->
+					aria-hidden="true" 
+					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl" 
 				></div>
 
 				<!-- Hero content container: constrained max width with responsive padding -->
+				<!-- Centred max-width wrapper with responsive padding -->
 				<div
-					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24" <!-- Centred max-width wrapper with responsive padding -->
+					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24" 
 				>
 					<!-- Breadcrumb -->
 					<!-- Trail of links showing this page's position in the site hierarchy -->
@@ -356,24 +458,30 @@
 					<!-- Copy block: entrance animation plays on load -->
 					<div class="animate-fade-up"> <!-- Runs the custom fade-up entrance animation -->
 						<!-- Eyebrow badge with sparkle icon -->
+						<!-- Pill badge with glass effect and gold uppercase text -->
 						<span
-							class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]" <!-- Pill badge with glass effect and gold uppercase text -->
+							class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]" 
 						>
+							<!-- Lucide sparkles icon -->
+							<!-- Decorative -->
+							<!-- 14px icon -->
 							<img
-								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg" <!-- Lucide sparkles icon -->
-								alt="" <!-- Decorative -->
-								class="h-3.5 w-3.5" <!-- 14px icon -->
+								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg" 
+								alt="" 
+								class="h-3.5 w-3.5" 
 							/>
 							About us <!-- Badge text -->
 						</span>
 
 						<!-- Main H1 with an italic serif accent -->
+						<!-- Extra-bold responsive display heading -->
 						<h1
-							class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl" <!-- Extra-bold responsive display heading -->
+							class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl" 
 						>
 							Built by students, <!-- Opening line of the headline -->
+							<!-- Italic serif accent in gold -->
 							<span
-								class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]" <!-- Italic serif accent in gold -->
+								class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]" 
 								>for students and their families</span
 							> <!-- Italic accent phrase -->
 						</h1>
@@ -395,12 +503,14 @@
 					<div class="grid items-center gap-12 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
 						<!-- Text column: the story of how Campus-Cart started -->
 						<div>
+							<!-- Small gold uppercase eyebrow -->
 							<span
-								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" <!-- Small gold uppercase eyebrow -->
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
 								>Our history</span
 							> <!-- Eyebrow label -->
+							<!-- Large navy section heading -->
 							<h2
-								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" <!-- Large navy section heading -->
+								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 							>
 								From a res corridor to nine provinces <!-- Heading text -->
 							</h2>
@@ -433,22 +543,31 @@
 						<!-- Image column: photo of reviewed second-hand items plus a floating badge -->
 						<div class="relative"> <!-- Relative wrapper for the floating badge -->
 							<!-- Soft gold glow behind the photo -->
+							<!-- Decorative only -->
+							<!-- Oversized gold glow extending past the photo -->
 							<div
-								aria-hidden="true" <!-- Decorative only -->
-								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/30 blur-2xl" <!-- Oversized gold glow extending past the photo -->
+								aria-hidden="true" 
+								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/30 blur-2xl" 
 							></div>
 							<!-- Reviewed second-hand items photo -->
+							<!-- Placeholder lifestyle photo -->
+							<!-- Descriptive alt -->
+							<!-- Intrinsic width hint to avoid layout shift -->
+							<!-- Intrinsic height hint to avoid layout shift -->
+							<!-- Deferred since the section is below the fold -->
+							<!-- Rounded landscape photo with a large shadow -->
 							<img
-								src="https://picsum.photos/seed/cc-about-history/1000/900" <!-- Placeholder lifestyle photo -->
-								alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair" <!-- Descriptive alt -->
-								width="1000" <!-- Intrinsic width hint to avoid layout shift -->
-								height="900" <!-- Intrinsic height hint to avoid layout shift -->
-								loading="lazy" <!-- Deferred since the section is below the fold -->
-								class="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl" <!-- Rounded landscape photo with a large shadow -->
+								src="https://picsum.photos/seed/cc-about-history/1000/900" 
+								alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair" 
+								width="1000" 
+								height="900" 
+								loading="lazy" 
+								class="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl" 
 							/>
 							<!-- Floating white badge with the "Student-run since 2021" tagline -->
+							<!-- White card that gently floats -->
 							<div
-								class="absolute -bottom-5 right-6 rounded-2xl bg-white p-4 shadow-xl animate-float" <!-- White card that gently floats -->
+								class="absolute -bottom-5 right-6 rounded-2xl bg-white p-4 shadow-xl animate-float" 
 							>
 								<p class="text-sm font-bold text-[#0d1b3e]">
 									Student-run since 2021 <!-- Badge headline -->
@@ -468,12 +587,14 @@
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
 					<div class="max-w-2xl"> <!-- Constrained heading width -->
+						<!-- Small gold uppercase eyebrow -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" <!-- Small gold uppercase eyebrow -->
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
 							>Our journey</span
 						> <!-- Eyebrow label -->
+						<!-- Large navy section heading -->
 						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" <!-- Large navy section heading -->
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
 							Milestones along the way <!-- Heading text -->
 						</h2>
@@ -483,8 +604,9 @@
 					<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"> <!-- Responsive column count with 32px gaps -->
 						<!-- Milestone 1: 2021 -->
 						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border separates each card from its heading -->
+							<!-- Oversized italic year in low opacity navy -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" <!-- Oversized italic year in low opacity navy -->
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
 							>
 								2021 <!-- Year -->
 							</p>
@@ -499,8 +621,9 @@
 
 						<!-- Milestone 2: 2023 -->
 						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border -->
+							<!-- Oversized italic year -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" <!-- Oversized italic year -->
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
 							>
 								2023 <!-- Year -->
 							</p>
@@ -515,8 +638,9 @@
 
 						<!-- Milestone 3: 2025 -->
 						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border -->
+							<!-- Oversized italic year -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" <!-- Oversized italic year -->
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
 							>
 								2025 <!-- Year -->
 							</p>
@@ -531,8 +655,9 @@
 
 						<!-- Milestone 4: Today -->
 						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border -->
+							<!-- Oversized italic label -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" <!-- Oversized italic label -->
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
 							>
 								Today <!-- "Today" label in place of a year -->
 							</p>
@@ -554,16 +679,21 @@
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
 					<div class="grid gap-6 md:grid-cols-2"> <!-- Single column on mobile, two equal columns at md -->
 						<!-- Mission card: white background, gold icon tile -->
+						<!-- White rounded card with a subtle border and shadow -->
 						<div
-							class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10" <!-- White rounded card with a subtle border and shadow -->
+							class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10" 
 						>
+							<!-- 48px gold icon tile -->
 							<span
-								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]" <!-- 48px gold icon tile -->
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]" 
 							>
+								<!-- Target icon implying mission/goal -->
+								<!-- Decorative -->
+								<!-- 24px navy icon -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/target.svg" <!-- Target icon implying mission/goal -->
-									alt="" <!-- Decorative -->
-									class="h-6 w-6 text-[#0d1b3e]" <!-- 24px navy icon -->
+									src="https://unpkg.com/lucide-static@1.44.0/icons/target.svg" 
+									alt="" 
+									class="h-6 w-6 text-[#0d1b3e]" 
 								/>
 							</span>
 							<h3 class="mt-5 text-2xl font-extrabold text-[#0d1b3e]">
@@ -578,16 +708,21 @@
 						</div>
 
 						<!-- Vision card: navy background, white text, gold icon tile -->
+						<!-- Navy rounded card with white text -->
 						<div
-							class="rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-sm sm:p-10" <!-- Navy rounded card with white text -->
+							class="rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-sm sm:p-10" 
 						>
+							<!-- 48px gold icon tile -->
 							<span
-								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]" <!-- 48px gold icon tile -->
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]" 
 							>
+								<!-- Eye icon implying vision -->
+								<!-- Decorative -->
+								<!-- 24px navy icon -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/eye.svg" <!-- Eye icon implying vision -->
-									alt="" <!-- Decorative -->
-									class="h-6 w-6 text-[#0d1b3e]" <!-- 24px navy icon -->
+									src="https://unpkg.com/lucide-static@1.44.0/icons/eye.svg" 
+									alt="" 
+									class="h-6 w-6 text-[#0d1b3e]" 
 								/>
 							</span>
 							<h3 class="mt-5 text-2xl font-extrabold">Our vision</h3> <!-- Card title -->
@@ -608,12 +743,14 @@
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
 					<div class="max-w-2xl"> <!-- Constrained heading width -->
+						<!-- Small gold uppercase eyebrow -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" <!-- Small gold uppercase eyebrow -->
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
 							>Audience</span
 						> <!-- Eyebrow label -->
+						<!-- Large navy section heading -->
 						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" <!-- Large navy section heading -->
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
 							Who we serve <!-- Heading text -->
 						</h2>
@@ -623,17 +760,21 @@
 					<div class="mt-10 grid gap-6 lg:grid-cols-2"> <!-- Responsive column count with 24px gaps -->
 						<!-- Primary audience -->
 						<!-- Amber-coloured card describing the main student audience -->
+						<!-- Amber rounded card with navy text -->
 						<article
-							class="group relative overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-8 text-[#0d1b3e] shadow-sm sm:p-10" <!-- Amber rounded card with navy text -->
+							class="group relative overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-8 text-[#0d1b3e] shadow-sm sm:p-10" 
 						>
 							<!-- Soft white glow decoration, top-right -->
+							<!-- Decorative only -->
+							<!-- Soft white glow in the top-right corner -->
 							<div
-								aria-hidden="true" <!-- Decorative only -->
-								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl" <!-- Soft white glow in the top-right corner -->
+								aria-hidden="true" 
+								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl" 
 							></div>
 							<div class="relative"> <!-- Relative so content sits above the decoration -->
+								<!-- Navy pill with gold text -->
 								<span
-									class="inline-flex rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]" <!-- Navy pill with gold text -->
+									class="inline-flex rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]" 
 									>Primary audience</span
 								> <!-- Pill label -->
 								<h3 class="mt-5 text-2xl font-extrabold">
@@ -648,37 +789,51 @@
 								<!-- Reassurance checklist: three items with gold check icons -->
 								<ul class="mt-5 space-y-2.5 text-sm font-semibold"> <!-- Stacked list of audience needs -->
 									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+										<!-- Check mark icon -->
+										<!-- Decorative -->
+										<!-- 16px navy check, never shrinks -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" <!-- Check mark icon -->
-											alt="" <!-- Decorative -->
-											class="mt-0.5 h-4 w-4 shrink-0" <!-- 16px navy check, never shrinks -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
+											alt="" 
+											class="mt-0.5 h-4 w-4 shrink-0" 
 										/>Need affordable basics fast, usually in registration week <!-- First audience need -->
 									</li>
 									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+										<!-- Check mark icon -->
+										<!-- Decorative -->
+										<!-- 16px navy check, never shrinks -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" <!-- Check mark icon -->
-											alt="" <!-- Decorative -->
-											class="mt-0.5 h-4 w-4 shrink-0" <!-- 16px navy check, never shrinks -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
+											alt="" 
+											class="mt-0.5 h-4 w-4 shrink-0" 
 										/>Want to resell items at the end of the year <!-- Second audience need -->
 									</li>
 									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+										<!-- Check mark icon -->
+										<!-- Decorative -->
+										<!-- 16px navy check, never shrinks -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" <!-- Check mark icon -->
-											alt="" <!-- Decorative -->
-											class="mt-0.5 h-4 w-4 shrink-0" <!-- 16px navy check, never shrinks -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
+											alt="" 
+											class="mt-0.5 h-4 w-4 shrink-0" 
 										/>Prefer collection on or near campus <!-- Third audience need -->
 									</li>
 								</ul>
 								<!-- CTA into the student account path -->
+								<!-- Deep link to the student account flow -->
+								<!-- Navy pill that lightens on hover -->
 								<a
-									href="https://campus-cart-olive.vercel.app/pages/account.html#student" <!-- Deep link to the student account flow -->
-									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]" <!-- Navy pill that lightens on hover -->
+									href="https://campus-cart-olive.vercel.app/pages/account.html#student" 
+									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]" 
 								>
 									Student path <!-- Button label -->
+									<!-- Arrow-right icon -->
+									<!-- Decorative -->
+									<!-- 16px icon -->
 									<img
-										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" <!-- Arrow-right icon -->
-										alt="" <!-- Decorative -->
-										class="h-4 w-4" <!-- 16px icon -->
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" 
+										alt="" 
+										class="h-4 w-4" 
 									/>
 								</a>
 							</div>
@@ -686,17 +841,21 @@
 
 						<!-- Secondary audience -->
 						<!-- White card with a subtle ring describing the parent/guardian audience -->
+						<!-- White rounded card with a subtle ring -->
 						<article
-							class="group relative overflow-hidden rounded-[2.5rem] bg-white p-8 text-[#0d1b3e] shadow-sm ring-1 ring-slate-200 sm:p-10" <!-- White rounded card with a subtle ring -->
+							class="group relative overflow-hidden rounded-[2.5rem] bg-white p-8 text-[#0d1b3e] shadow-sm ring-1 ring-slate-200 sm:p-10" 
 						>
 							<!-- Soft gold glow decoration, top-left -->
+							<!-- Decorative only -->
+							<!-- Soft gold glow in the top-left corner -->
 							<div
-								aria-hidden="true" <!-- Decorative only -->
-								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#ffd23f]/20 blur-2xl" <!-- Soft gold glow in the top-left corner -->
+								aria-hidden="true" 
+								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#ffd23f]/20 blur-2xl" 
 							></div>
 							<div class="relative"> <!-- Relative so content sits above the decoration -->
+								<!-- Pale gold pill with dark text -->
 								<span
-									class="inline-flex rounded-full bg-[#ffe9a8] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#7a5800]" <!-- Pale gold pill with dark text -->
+									class="inline-flex rounded-full bg-[#ffe9a8] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#7a5800]" 
 									>Secondary audience</span
 								> <!-- Pill label -->
 								<h3 class="mt-5 text-2xl font-extrabold">
@@ -710,37 +869,51 @@
 								<!-- Reassurance checklist: three items with green check icons -->
 								<ul class="mt-5 space-y-2.5 text-sm font-semibold"> <!-- Stacked list of audience needs -->
 									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+										<!-- Check mark icon -->
+										<!-- Decorative -->
+										<!-- 16px green check, never shrinks -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" <!-- Check mark icon -->
-											alt="" <!-- Decorative -->
-											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" <!-- 16px green check, never shrinks -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
+											alt="" 
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" 
 										/>Budget in advance with fixed-price bundles <!-- First audience need -->
 									</li>
 									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+										<!-- Check mark icon -->
+										<!-- Decorative -->
+										<!-- 16px green check, never shrinks -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" <!-- Check mark icon -->
-											alt="" <!-- Decorative -->
-											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" <!-- 16px green check, never shrinks -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
+											alt="" 
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" 
 										/>Larger type, plain language, printable checklist <!-- Second audience need -->
 									</li>
 									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+										<!-- Check mark icon -->
+										<!-- Decorative -->
+										<!-- 16px green check, never shrinks -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" <!-- Check mark icon -->
-											alt="" <!-- Decorative -->
-											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" <!-- 16px green check, never shrinks -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
+											alt="" 
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" 
 										/>Direct contact by email or WhatsApp <!-- Third audience need -->
 									</li>
 								</ul>
 								<!-- CTA into the Parent Hub section on the products page -->
+								<!-- Deep link into the parent hub section -->
+								<!-- Navy pill that lightens on hover -->
 								<a
-									href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub" <!-- Deep link into the parent hub section -->
-									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]" <!-- Navy pill that lightens on hover -->
+									href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub" 
+									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]" 
 								>
 									Parent Hub <!-- Button label -->
+									<!-- Arrow-right icon -->
+									<!-- Decorative -->
+									<!-- 16px icon -->
 									<img
-										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" <!-- Arrow-right icon -->
-										alt="" <!-- Decorative -->
-										class="h-4 w-4" <!-- 16px icon -->
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" 
+										alt="" 
+										class="h-4 w-4" 
 									/>
 								</a>
 							</div>
@@ -755,12 +928,14 @@
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
 					<div class="max-w-2xl"> <!-- Constrained heading width -->
+						<!-- Small gold uppercase eyebrow -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" <!-- Small gold uppercase eyebrow -->
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
 							>The author</span
 						> <!-- Eyebrow label -->
+						<!-- Large navy section heading -->
 						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" <!-- Large navy section heading -->
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
 							Meet the author <!-- Heading text -->
 						</h2>
@@ -769,22 +944,30 @@
 					<!-- Two-card grid: author bio on the left, social links on the right -->
 					<div class="mt-10 grid gap-6 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
 						<!-- Author bio card: warm off-white with a photo and intro text -->
+						<!-- Warm off-white rounded card -->
 						<div
-							class="rounded-[2.5rem] border border-slate-200 bg-[#faf8f4] p-8 sm:p-10" <!-- Warm off-white rounded card -->
+							class="rounded-[2.5rem] border border-slate-200 bg-[#faf8f4] p-8 sm:p-10" 
 						>
 							<div class="flex flex-col items-center gap-6 sm:flex-row"> <!-- Stacked on mobile, row at sm -->
 								<!-- Author portrait with a gold ring -->
+								<!-- LinkedIn-hosted portrait -->
+								<!-- Descriptive alt -->
+								<!-- Deferred since the section is below the fold -->
+								<!-- Intrinsic width -->
+								<!-- Intrinsic height -->
+								<!-- Fallback image if the primary portrait fails to load -->
+								<!-- 112px circular portrait with a gold ring -->
 								<img
-									src="https://media.licdn.com/dms/image/v2/D4D35AQHDiZjqIjth8w/profile-framedphoto-shrink_400_400/B4DZ.psKQ.J4AY-/0/1785258354110?e=1792270800&v=beta&t=Wg7vJli-6x9YSGnBg3N_AEXnzOdP8eskuil-V7Oq4SA" <!-- LinkedIn-hosted portrait -->
-									alt="Leletu Kamana, the author of Campus-Cart" <!-- Descriptive alt -->
-									loading="lazy" <!-- Deferred since the section is below the fold -->
-									width="180" <!-- Intrinsic width -->
-									height="180" <!-- Intrinsic height -->
+									src="https://media.licdn.com/dms/image/v2/D4D35AQHDiZjqIjth8w/profile-framedphoto-shrink_400_400/B4DZ.psKQ.J4AY-/0/1785258354110?e=1792270800&v=beta&t=Wg7vJli-6x9YSGnBg3N_AEXnzOdP8eskuil-V7Oq4SA" 
+									alt="Leletu Kamana, the author of Campus-Cart" 
+									loading="lazy" 
+									width="180" 
+									height="180" 
 									onerror="
 										this.onerror = null;
 										this.src = 'https://i.pravatar.cc/300?u=leletu-kamana';
-									" <!-- Fallback image if the primary portrait fails to load -->
-									class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]" <!-- 112px circular portrait with a gold ring -->
+									" 
+									class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]" 
 								/>
 								<div class="text-center sm:text-left"> <!-- Centred on mobile, left-aligned at sm -->
 									<h3 class="text-2xl font-extrabold text-[#0d1b3e]">
@@ -809,48 +992,69 @@
 							<ul class="mt-5 space-y-3 text-sm"> <!-- Stacked list of profile links -->
 								<li>
 									<!-- GitHub profile link: opens in a new tab with rel="noopener noreferrer" for security -->
+									<!-- External GitHub profile URL -->
+									<!-- Opens in a new tab -->
+									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
+									<!-- Glass pill with a subtle hover -->
 									<a
-										href="https://github.com/leletu-kamana" <!-- External GitHub profile URL -->
-										target="_blank" <!-- Opens in a new tab -->
-										rel="noopener noreferrer" <!-- Prevents the new tab from accessing window.opener and strips the referrer -->
-										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" <!-- Glass pill with a subtle hover -->
+										href="https://github.com/leletu-kamana" 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" 
 									>
+										<!-- Link icon -->
+										<!-- Decorative -->
+										<!-- 16px icon -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/link.svg" <!-- Link icon -->
-											alt="" <!-- Decorative -->
-											class="h-4 w-4" <!-- 16px icon -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/link.svg" 
+											alt="" 
+											class="h-4 w-4" 
 										/>
 										GitHub profile <!-- Link label -->
 									</a>
 								</li>
 								<li>
 									<!-- Campus-Cart source code link -->
+									<!-- External repository URL -->
+									<!-- Opens in a new tab -->
+									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
+									<!-- Glass pill with a subtle hover -->
 									<a
-										href="https://github.com/leletu-kamana/campus-cart" <!-- External repository URL -->
-										target="_blank" <!-- Opens in a new tab -->
-										rel="noopener noreferrer" <!-- Prevents the new tab from accessing window.opener and strips the referrer -->
-										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" <!-- Glass pill with a subtle hover -->
+										href="https://github.com/leletu-kamana/campus-cart" 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" 
 									>
+										<!-- Code icon -->
+										<!-- Decorative -->
+										<!-- 16px icon -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/code.svg" <!-- Code icon -->
-											alt="" <!-- Decorative -->
-											class="h-4 w-4" <!-- 16px icon -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/code.svg" 
+											alt="" 
+											class="h-4 w-4" 
 										/>
 										Campus-Cart source code <!-- Link label -->
 									</a>
 								</li>
 								<li>
 									<!-- Personal portfolio link -->
+									<!-- External portfolio URL -->
+									<!-- Opens in a new tab -->
+									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
+									<!-- Glass pill with a subtle hover -->
 									<a
-										href="https://leletu-kamana-portfolio-2026.vercel.app/" <!-- External portfolio URL -->
-										target="_blank" <!-- Opens in a new tab -->
-										rel="noopener noreferrer" <!-- Prevents the new tab from accessing window.opener and strips the referrer -->
-										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" <!-- Glass pill with a subtle hover -->
+										href="https://leletu-kamana-portfolio-2026.vercel.app/" 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" 
 									>
+										<!-- Globe icon -->
+										<!-- Decorative -->
+										<!-- 16px icon -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" <!-- Globe icon -->
-											alt="" <!-- Decorative -->
-											class="h-4 w-4" <!-- 16px icon -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" 
+											alt="" 
+											class="h-4 w-4" 
 										/>
 										Personal portfolio <!-- Link label -->
 									</a>
@@ -867,12 +1071,14 @@
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
 					<div class="max-w-2xl"> <!-- Constrained heading width -->
+						<!-- Small gold uppercase eyebrow -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" <!-- Small gold uppercase eyebrow -->
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
 							>Licence</span
 						> <!-- Eyebrow label -->
+						<!-- Large navy section heading -->
 						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" <!-- Large navy section heading -->
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
 							Licence and credits <!-- Heading text -->
 						</h2>
@@ -881,8 +1087,9 @@
 					<!-- Two-card grid: this site's licence on the left, third-party credits on the right -->
 					<div class="mt-10 grid gap-6 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
 						<!-- This website's licence -->
+						<!-- White rounded card with a subtle border and shadow -->
 						<div
-							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" <!-- White rounded card with a subtle border and shadow -->
+							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" 
 						>
 							<h3 class="text-lg font-bold text-[#0d1b3e]">This website</h3> <!-- Card title -->
 							<p class="mt-3 text-sm text-slate-600">
@@ -894,8 +1101,9 @@
 						</div>
 
 						<!-- Third-party software and data credits -->
+						<!-- White rounded card with a subtle border and shadow -->
 						<div
-							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" <!-- White rounded card with a subtle border and shadow -->
+							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" 
 						>
 							<h3 class="text-lg font-bold text-[#0d1b3e]">
 								Third-party software and data <!-- Card title -->
@@ -903,11 +1111,15 @@
 							<ul class="mt-3 space-y-3 text-sm text-slate-600"> <!-- Stacked list of credits -->
 								<li>
 									<!-- Leaflet map library credit with licence note -->
+									<!-- External Leaflet project URL -->
+									<!-- Opens in a new tab -->
+									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
+									<!-- Bold navy underlined link -->
 									<a
-										href="https://leafletjs.com/" <!-- External Leaflet project URL -->
-										target="_blank" <!-- Opens in a new tab -->
-										rel="noopener noreferrer" <!-- Prevents the new tab from accessing window.opener and strips the referrer -->
-										class="font-bold text-[#0d1b3e] underline" <!-- Bold navy underlined link -->
+										href="https://leafletjs.com/" 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="font-bold text-[#0d1b3e] underline" 
 										>Leaflet</a
 									>
 									1.9.4 draws the collection hub map. Copyright © 2010–2023
@@ -920,11 +1132,15 @@
 								<li>
 									<!-- OpenStreetMap attribution -->
 									Map data ©
+									<!-- External OSM copyright URL -->
+									<!-- Opens in a new tab -->
+									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
+									<!-- Bold navy underlined link -->
 									<a
-										href="https://www.openstreetmap.org/copyright" <!-- External OSM copyright URL -->
-										target="_blank" <!-- Opens in a new tab -->
-										rel="noopener noreferrer" <!-- Prevents the new tab from accessing window.opener and strips the referrer -->
-										class="font-bold text-[#0d1b3e] underline" <!-- Bold navy underlined link -->
+										href="https://www.openstreetmap.org/copyright" 
+										target="_blank" 
+										rel="noopener noreferrer" 
+										class="font-bold text-[#0d1b3e] underline" 
 										>OpenStreetMap contributors</a
 									>, available under the Open Database Licence (ODbL). <!-- Attribution sentence -->
 								</li>
@@ -938,8 +1154,9 @@
 			<!-- Full-width navy CTA band with two conversion buttons -->
 			<section class="bg-[#0d1b3e] py-20 text-white"> <!-- Full-width navy band with white text -->
 				<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8"> <!-- Centred max-width wrapper with centred text -->
+					<!-- Small gold uppercase eyebrow -->
 					<span
-						class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]" <!-- Small gold uppercase eyebrow -->
+						class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]" 
 						>Get in touch</span
 					> <!-- Eyebrow label -->
 					<h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -950,25 +1167,33 @@
 						general contact form. <!-- Supporting sentence -->
 					</p>
 					<!-- Two conversion CTAs: primary "send enquiry" and secondary "contact us" -->
+					<!-- Stacked on mobile, row at sm -->
 					<div
-						class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" <!-- Stacked on mobile, row at sm -->
+						class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" 
 					>
 						<!-- Primary CTA: gold pill linking to the enquiry form -->
+						<!-- Enquiry form target -->
+						<!-- Gold pill that brightens on hover -->
 						<a
-							href="enquiry.html" <!-- Enquiry form target -->
-							class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]" <!-- Gold pill that brightens on hover -->
+							href="enquiry.html" 
+							class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]" 
 						>
 							Send an enquiry <!-- Button label -->
+							<!-- Arrow-right icon -->
+							<!-- Decorative -->
+							<!-- 16px icon -->
 							<img
-								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" <!-- Arrow-right icon -->
-								alt="" <!-- Decorative -->
-								class="h-4 w-4" <!-- 16px icon -->
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" 
+								alt="" 
+								class="h-4 w-4" 
 							/>
 						</a>
 						<!-- Secondary CTA: outlined glass button linking to the contact page -->
+						<!-- Contact page target -->
+						<!-- Outlined glass button -->
 						<a
-							href="contact.html" <!-- Contact page target -->
-							class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10" <!-- Outlined glass button -->
+							href="contact.html" 
+							class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10" 
 						>
 							Contact us <!-- Button label -->
 						</a>
@@ -980,33 +1205,41 @@
 			<!-- Rounded navy panel with decorative glows and a single-field email sign-up form -->
 			<section class="bg-[#f7f5f1] pb-20"> <!-- Warm off-white band with bottom padding only -->
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
+					<!-- Very rounded navy panel with generous padding -->
 					<div
-						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14" <!-- Very rounded navy panel with generous padding -->
+						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14" 
 					>
 						<!-- Decorative gold glow, top-right -->
+						<!-- Decorative only -->
+						<!-- Large soft gold glow in the top-right corner -->
 						<div
-							aria-hidden="true" <!-- Decorative only -->
-							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl" <!-- Large soft gold glow in the top-right corner -->
+							aria-hidden="true" 
+							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl" 
 						></div>
 						<!-- Decorative blue glow, bottom-left -->
+						<!-- Decorative only -->
+						<!-- Large soft blue glow in the bottom-left corner -->
 						<div
-							aria-hidden="true" <!-- Decorative only -->
-							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl" <!-- Large soft blue glow in the bottom-left corner -->
+							aria-hidden="true" 
+							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl" 
 						></div>
 
 						<div class="relative grid items-center gap-8 lg:grid-cols-2"> <!-- Relative so content sits above the glows; 2 columns at lg -->
 							<!-- Copy column: eyebrow, headline with italic accent, supporting line -->
 							<div>
+								<!-- Small gold uppercase eyebrow -->
 								<span
-									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]" <!-- Small gold uppercase eyebrow -->
+									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]" 
 									>Stay in the loop</span
 								> <!-- Eyebrow label -->
+								<!-- Large white section heading -->
 								<h2
-									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" <!-- Large white section heading -->
+									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" 
 								>
 									Get first dibs on <!-- First part of the heading -->
+									<!-- Italic serif accent in gold -->
 									<span
-										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]" <!-- Italic serif accent in gold -->
+										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]" 
 										>new season kit</span
 									> <!-- Italic accent phrase -->
 								</h2>
@@ -1026,18 +1259,26 @@
 									> <!-- Label is screen-reader only -->
 									<!-- Email field: type="text" + inputmode="email" so JS can validate it
 									     while mobile keyboards still show the @ key -->
+									<!-- ID referenced by the label and forms.js -->
+									<!-- Field name submitted with the form -->
+									<!-- Text input; email validation happens in JS to show friendly messages -->
+									<!-- Requests an email-style keyboard on mobile -->
+									<!-- Example hint inside the field -->
+									<!-- Glass input with a gold focus border -->
 									<input
-										id="newsletterBandEmail" <!-- ID referenced by the label and forms.js -->
-										name="email" <!-- Field name submitted with the form -->
-										type="text" <!-- Text input; email validation happens in JS to show friendly messages -->
-										inputmode="email" <!-- Requests an email-style keyboard on mobile -->
-										placeholder="you@example.com" <!-- Example hint inside the field -->
-										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none" <!-- Glass input with a gold focus border -->
+										id="newsletterBandEmail" 
+										name="email" 
+										type="text" 
+										inputmode="email" 
+										placeholder="you@example.com" 
+										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none" 
 									/>
 									<!-- Submit button: gold pill, does not shrink inside the flex row -->
+									<!-- Submits the form to the JS handler -->
+									<!-- Gold pill that never shrinks in the flex row -->
 									<button
-										type="submit" <!-- Submits the form to the JS handler -->
-										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]" <!-- Gold pill that never shrinks in the flex row -->
+										type="submit" 
+										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]" 
 									>
 										Join the list <!-- Button label -->
 									</button>
@@ -1062,12 +1303,15 @@
 					<!-- Column 1: brand mark, blurb, opening hours and social/contact icon buttons -->
 					<div>
 						<!-- Footer logo: gold "C" tile on a navy circle, links back to the homepage -->
+						<!-- Absolute URL back to the site root homepage -->
+						<!-- Flex row with bold white text -->
 						<a
-							href="https://campus-cart-olive.vercel.app/index.html" <!-- Absolute URL back to the site root homepage -->
-							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white" <!-- Flex row with bold white text -->
+							href="https://campus-cart-olive.vercel.app/index.html" 
+							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white" 
 						>
+							<!-- 36px gold tile with a navy C -->
 							<span
-								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]" <!-- 36px gold tile with a navy C -->
+								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]" 
 								>C</span
 							> <!-- The literal letter shown inside the tile -->
 							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span> <!-- Wordmark with gold suffix -->
@@ -1082,39 +1326,57 @@
 						<!-- Icon-only contact buttons: each has an aria-label for screen readers -->
 						<div class="mt-5 flex items-center gap-2"> <!-- Row of three 36px icon buttons -->
 							<!-- Email -->
+							<!-- Opens the visitor's email client -->
+							<!-- 36px outlined circle; gold border/text on hover -->
+							<!-- Accessible name -->
 							<a
-								href="mailto:hello@campus-cart.co.za" <!-- Opens the visitor's email client -->
-								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" <!-- 36px outlined circle; gold border/text on hover -->
-								aria-label="Email Campus-Cart" <!-- Accessible name -->
+								href="mailto:hello@campus-cart.co.za" 
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" 
+								aria-label="Email Campus-Cart" 
 							>
+								<!-- Mail icon -->
+								<!-- Decorative -->
+								<!-- 16px icon -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" <!-- Mail icon -->
-									alt="" <!-- Decorative -->
-									class="h-4 w-4" <!-- 16px icon -->
+									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" 
+									alt="" 
+									class="h-4 w-4" 
 								/>
 							</a>
 							<!-- WhatsApp -->
+							<!-- Opens WhatsApp with the number pre-filled -->
+							<!-- 36px outlined circle; gold border/text on hover -->
+							<!-- Accessible name -->
 							<a
-								href="https://wa.me/27123456789" <!-- Opens WhatsApp with the number pre-filled -->
-								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" <!-- 36px outlined circle; gold border/text on hover -->
-								aria-label="WhatsApp Campus-Cart" <!-- Accessible name -->
+								href="https://wa.me/27123456789" 
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" 
+								aria-label="WhatsApp Campus-Cart" 
 							>
+								<!-- Message-circle icon -->
+								<!-- Decorative -->
+								<!-- 16px icon -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" <!-- Message-circle icon -->
-									alt="" <!-- Decorative -->
-									class="h-4 w-4" <!-- 16px icon -->
+									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" 
+									alt="" 
+									class="h-4 w-4" 
 								/>
 							</a>
 							<!-- Coverage map -->
+							<!-- Coverage page target (relative) -->
+							<!-- 36px outlined circle; gold border/text on hover -->
+							<!-- Accessible name -->
 							<a
-								href="coverage.html" <!-- Coverage page target (relative) -->
-								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" <!-- 36px outlined circle; gold border/text on hover -->
-								aria-label="Coverage map" <!-- Accessible name -->
+								href="coverage.html" 
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" 
+								aria-label="Coverage map" 
 							>
+								<!-- Globe icon -->
+								<!-- Decorative -->
+								<!-- 16px icon -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" <!-- Globe icon -->
-									alt="" <!-- Decorative -->
-									class="h-4 w-4" <!-- 16px icon -->
+									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" 
+									alt="" 
+									class="h-4 w-4" 
 								/>
 							</a>
 						</div>
@@ -1132,23 +1394,29 @@
 								> <!-- Link to the new products listing -->
 							</li>
 							<li>
+								<!-- Deep link to the deals gallery -->
+								<!-- Gold text on hover -->
 								<a
-									href="products.html#deals-gallery" <!-- Deep link to the deals gallery -->
-									class="transition hover:text-[#ffd23f]" <!-- Gold text on hover -->
+									href="products.html#deals-gallery" 
+									class="transition hover:text-[#ffd23f]" 
 									>Deals &amp; Gallery</a
 								> <!-- Link label -->
 							</li>
 							<li>
+								<!-- Deep link to a product detail section -->
+								<!-- Gold text on hover -->
 								<a
-									href="products.html#product-detail" <!-- Deep link to a product detail section -->
-									class="transition hover:text-[#ffd23f]" <!-- Gold text on hover -->
+									href="products.html#product-detail" 
+									class="transition hover:text-[#ffd23f]" 
 									>Product Detail</a
 								> <!-- Link label -->
 							</li>
 							<li>
+								<!-- Deep link to the selling section -->
+								<!-- Gold text on hover -->
 								<a
-									href="products.html#sell-with-us" <!-- Deep link to the selling section -->
-									class="transition hover:text-[#ffd23f]" <!-- Gold text on hover -->
+									href="products.html#sell-with-us" 
+									class="transition hover:text-[#ffd23f]" 
 									>Sell With Us</a
 								> <!-- Link label -->
 							</li>
@@ -1167,9 +1435,11 @@
 								> <!-- Link to the About page -->
 							</li>
 							<li>
+								<!-- Deep link to the parent hub section -->
+								<!-- Gold text on hover -->
 								<a
-									href="products.html#parent-hub" <!-- Deep link to the parent hub section -->
-									class="transition hover:text-[#ffd23f]" <!-- Gold text on hover -->
+									href="products.html#parent-hub" 
+									class="transition hover:text-[#ffd23f]" 
 									>Parent Hub</a
 								> <!-- Link label -->
 							</li>
@@ -1203,16 +1473,20 @@
 						</h3>
 						<ul class="mt-4 space-y-2.5 text-sm"> <!-- List of contact details -->
 							<li>
+								<!-- Opens the visitor's email client -->
+								<!-- Gold text on hover -->
 								<a
-									href="mailto:hello@campus-cart.co.za" <!-- Opens the visitor's email client -->
-									class="transition hover:text-[#ffd23f]" <!-- Gold text on hover -->
+									href="mailto:hello@campus-cart.co.za" 
+									class="transition hover:text-[#ffd23f]" 
 									>hello@campus-cart.co.za</a
 								> <!-- Visible support email -->
 							</li>
 							<li>
+								<!-- Opens WhatsApp with the number pre-filled -->
+								<!-- Gold text on hover -->
 								<a
-									href="https://wa.me/27123456789" <!-- Opens WhatsApp with the number pre-filled -->
-									class="transition hover:text-[#ffd23f]" <!-- Gold text on hover -->
+									href="https://wa.me/27123456789" 
+									class="transition hover:text-[#ffd23f]" 
 									>WhatsApp: 012 345 6789</a
 								> <!-- Visible WhatsApp number -->
 							</li>
@@ -1272,23 +1546,32 @@
 
 		<!-- Snack bar for inline feedback -->
 		<!-- Toast element: pointer-events-none so it never blocks clicks; JS fades it in/out via opacity -->
+		<!-- ID targeted by the snackbar JavaScript -->
+		<!-- Fixed, centred pill that starts invisible and fades via opacity -->
 		<div
-			id="snack" <!-- ID targeted by the snackbar JavaScript -->
-			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300" <!-- Fixed, centred pill that starts invisible and fades via opacity -->
+			id="snack" 
+			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300" 
 		></div>
 
 		<!-- Back to top -->
 		<!-- Floating scroll-to-top button: starts hidden (hidden) and is revealed by JavaScript -->
+		<!-- ID targeted by the back-to-top JavaScript -->
+		<!-- Explicit button type -->
+		<!-- Fixed navy circle in the bottom-right; hidden until scrolled -->
+		<!-- Accessible name for the icon-only button -->
 		<button
-			id="toTop" <!-- ID targeted by the back-to-top JavaScript -->
-			type="button" <!-- Explicit button type -->
-			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]" <!-- Fixed navy circle in the bottom-right; hidden until scrolled -->
-			aria-label="Back to top" <!-- Accessible name for the icon-only button -->
+			id="toTop" 
+			type="button" 
+			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]" 
+			aria-label="Back to top" 
 		>
+			<!-- Up-arrow icon -->
+			<!-- Decorative -->
+			<!-- 20px icon -->
 			<img
-				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg" <!-- Up-arrow icon -->
-				alt="" <!-- Decorative -->
-				class="h-5 w-5" <!-- 20px icon -->
+				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg" 
+				alt="" 
+				class="h-5 w-5" 
 			/>
 		</button>
 
