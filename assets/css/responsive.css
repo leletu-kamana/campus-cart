@@ -79,3 +79,79 @@ h4 {
 		scroll-behavior: auto !important;
 	}
 }
+
+
+/* ==========================================================
+   Homepage recent-product cards
+   Keep the existing desktop layout; use the requested 3-column
+   card layout on mobile without allowing card content to overflow.
+   ========================================================== */
+
+#home-recent-products-grid {
+	align-items: stretch;
+}
+
+#home-recent-products-grid > article {
+	width: 100%;
+	min-width: 0;
+	max-width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#home-recent-products-grid > article img {
+	max-width: 100%;
+}
+
+@media (max-width: 767px) {
+	#home-recent-products-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.75rem;
+	}
+
+	#home-recent-products-grid > article {
+		padding: 0.5rem;
+		border-radius: 1rem;
+	}
+
+	#home-recent-products-grid > article > div:first-child {
+		border-radius: 0.75rem;
+	}
+
+	#home-recent-products-grid h3 {
+		font-size: 0.7rem;
+		line-height: 1.25;
+		overflow-wrap: anywhere;
+	}
+
+	#home-recent-products-grid p {
+		font-size: 0.625rem;
+		line-height: 1.35;
+	}
+
+	#home-recent-products-grid [data-add-to-cart] {
+		width: 2rem;
+		height: 2rem;
+		right: 0.4rem;
+		bottom: 0.4rem;
+	}
+
+	#home-recent-products-grid [data-add-to-cart] img {
+		width: 0.875rem;
+		height: 0.875rem;
+	}
+}
+
+@media (max-width: 380px) {
+	#home-recent-products-grid {
+		gap: 0.5rem;
+	}
+
+	#home-recent-products-grid > article {
+		padding: 0.4rem;
+	}
+
+	#home-recent-products-grid h3 {
+		font-size: 0.65rem;
+	}
+}
