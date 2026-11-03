@@ -6077,7 +6077,8 @@ body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow
 /* Deals and gallery: compact three-column product browsing on phones and small tablets. */
 @media (max-width: 767px) {
   #deals-gallery #deals-results {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Three compact product columns are limited to phone-sized screens. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 0.75rem;
   }
 
@@ -6129,7 +6130,8 @@ body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow
   }
 
   #deals-gallery .grid.auto-rows-\[180px\] {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Keep the Products gallery in three columns on phone screens only. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     grid-auto-rows: 150px;
     gap: 0.75rem;
   }
