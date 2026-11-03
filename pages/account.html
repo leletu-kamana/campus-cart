@@ -49,7 +49,7 @@
 			content="Review your Campus-Cart order summary, delivery or collection choice and account details."
 		/>
 		<!-- ELEMENT DOCUMENTATION: Loads JavaScript; src identifies the file and defer delays execution until parsing is complete. -->
-		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<link rel="stylesheet" href="../assets/css/tailwind.css" />
 		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet, icon or connection hint. Attributes: href="https://fonts.googleapis.com": link, email or in-page destination. -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet, icon or connection hint. Attributes: href="https://fonts.gstatic.com": link, email or in-page destination; crossorigin: cross-origin handling. -->
@@ -284,29 +284,43 @@
 						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-[11px] text-slate-500": CSS classes controlling appearance and layout. -->
 						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
 					</div>
-
-					<!-- CART CONTROL: opens the shared cart drawer and displays the current item count. -->
-
+					
+					<!-- Cart trigger: opens the cart drawer; aria-expanded reflects open/closed state -->
+					<!-- ID used by the cart drawer JavaScript -->
+					<!-- Explicit button type prevents accidental form submission -->
+					<!-- Circular bordered button with navy hover border -->
+					<!-- Points to the drawer this button toggles -->
+					<!-- Reflects the drawer's current closed state -->
+					<!-- Accessible name since the button is icon-only -->
+					<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]": CSS classes controlling appearance, spacing and layout; aria-controls="cartDrawer": identifies the interface element controlled by this element; aria-expanded="false": communicates expanded or collapsed state; aria-label="Open cart": accessible name announced by assistive technology. -->
 					<button
-						id="cartToggle"
+						id="cartButton"
 						type="button"
 						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
-						aria-label="Open cart"
 						aria-controls="cartDrawer"
 						aria-expanded="false"
+						aria-label="Open cart"
 					>
-						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies it and alt supplies its text alternative. Attributes: alt="": image text alternative; empty means decorative; class="h-5 w-5": CSS classes controlling appearance and layout. -->
+						<!-- Shopping bag icon (decorative) -->
+						<!-- Lucide shopping bag icon -->
+						<!-- Decorative -->
+						<!-- 20px icon -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
 						<img
 							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
 							alt=""
 							class="h-5 w-5"
 						/>
-						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text and icons. Attributes: class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]": CSS classes controlling appearance and layout. -->
+						<!-- Cart badge: item count, kept in sync by the cart JavaScript -->
+						<!-- ID targeted by the cart JavaScript to update the count -->
+						<!-- Gold badge pinned to the top-right of the bag -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 						<span
 							id="cartCount"
 							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
 							>0</span
 						>
+						<!-- Starts at zero before the cart is hydrated -->
 					</button>
 
 					<!-- MOBILE MENU TOGGLE: controls the visibility of navigation links on smaller screens. -->
