@@ -1,4 +1,5 @@
-<!doctype html> <!-- Declares the document as HTML5 so browsers use standards mode -->
+<!doctype html>
+<!-- Declares the document as HTML5 so browsers use standards mode -->
 <!--
   This document presents the Campus-Cart project information, background, purpose and supporting content. It reuses the site navigation, shared visual system, contact routes and footer while keeping page-specific information inside the main content landmark.
 -->
@@ -7,129 +8,186 @@
 <!-- This document defines the page structure, accessible content, -->
 <!-- navigation, interactive controls and links to shared assets.  -->
 <!-- ========================================================== -->
-<html lang="en"> <!-- Root element; lang="en" tells screen readers and search engines the page is in English -->
-	<head> <!-- Head holds metadata, styles and scripts that are not rendered directly -->
-		<meta charset="utf-8" /> <!-- UTF-8 encoding supports all characters and the rand sign -->
-		<meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive viewport: width follows the device, no zoom lock -->
-		<title>About Campus-Cart | Our History, Mission &amp; Vision</title> <!-- Browser tab title for the About page -->
+<!-- ELEMENT DOCUMENTATION: Root HTML document; lang declares the document language. -->
+<html lang="en">
+	<!-- Root element; lang="en" tells screen readers and search engines the page is in English -->
+	<!-- ELEMENT DOCUMENTATION: Document metadata and linked resources loaded before page content. -->
+	<head>
+		<!-- Head holds metadata, styles and scripts that are not rendered directly -->
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. -->
+		<meta charset="utf-8" />
+		<!-- UTF-8 encoding supports all characters and the rand sign -->
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="width=device-width, initial-scale=1": value supplied for a metadata entry. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Responsive viewport: width follows the device, no zoom lock -->
+		<!-- ELEMENT DOCUMENTATION: Browser-tab and search-result title. -->
+		<title>About Campus-Cart | Our History, Mission &amp; Vision</title>
+		<!-- Browser tab title for the About page -->
 		<!-- Meta description summarises the About page for search engines -->
 		<!-- Short pitch shown under the search result -->
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces.": value supplied for a metadata entry. -->
 		<meta
-			name="description" 
-			content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces." 
+			name="description"
+			content="Learn how Campus-Cart grew from a student resale group into a national student marketplace covering all nine South African provinces."
 		/>
-		<meta name="theme-color" content="#0d1b3e" /> <!-- Tints the browser UI with Campus-Cart navy -->
-		<script src="https://unpkg.com/@tailwindcss/browser@4"></script> <!-- Tailwind CSS v4 browser build: supplies the utility classes used throughout this page -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" /> <!-- Opens an early connection to Google Fonts for faster loading -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Opens an early CORS connection to the font files themselves -->
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="#0d1b3e": value supplied for a metadata entry. -->
+		<meta name="theme-color" content="#0d1b3e" />
+		<!-- Tints the browser UI with Campus-Cart navy -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. -->
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<!-- Tailwind CSS v4 browser build: supplies the utility classes used throughout this page -->
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://fonts.googleapis.com": link destination, email action or in-page anchor. -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- Opens an early connection to Google Fonts for faster loading -->
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://fonts.gstatic.com": link destination, email action or in-page anchor; crossorigin: cross-origin resource handling. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Opens an early CORS connection to the font files themselves -->
 		<!-- Loads Inter for body text and Playfair Display italic for decorative headings -->
 		<!-- This link is a stylesheet -->
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: rel="stylesheet": relationship between the current document and linked resource. -->
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" 
-			rel="stylesheet" 
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
 		/>
 		<!-- Favicon link shown in browser tabs and bookmarks -->
 		<!-- Inline SVG favicon: yellow "C" on a navy rounded square, no extra file request -->
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E": link destination, email action or in-page anchor. -->
 		<link
-			rel="icon" 
-			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E" 
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
 		/>
 
 		<!-- Tailwind v4 theme config: animations used on this page -->
-		<link rel="stylesheet" href="https://campus-cart-olive.vercel.app/assets/css/styles.css" /> <!-- Site stylesheet: custom animations and component overrides -->
-	</head> <!-- End of head; everything below is rendered page content -->
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://leletu-kamana.github.io/campus-cart/assets/css/styles.css": link destination, email action or in-page anchor. -->
+		<link
+			rel="stylesheet"
+			href="https://leletu-kamana.github.io/campus-cart/assets/css/styles.css"
+		/>
+		<!-- Site stylesheet: custom animations and component overrides -->
+	</head>
+	<!-- End of head; everything below is rendered page content -->
 
 	<!-- Body element starts the visible page -->
 	<!-- Warm off-white background, Inter font, slate text, smooth anti-aliased rendering -->
-	<body 
-		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]" 
+	<!-- ELEMENT DOCUMENTATION: Visible page content and interactive interface. -->
+	<body
+		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
 	>
 		<!-- Skip link for keyboard users -->
 		<!-- Hidden until focused: lets keyboard users jump straight past the navigation to <main> -->
 		<!-- Target: the main content landmark -->
 		<!-- Screen-reader only until focused, then styled as a floating navy pill -->
+		<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white": CSS classes controlling appearance, spacing and layout. -->
 		<a
-			href="#main" 
-			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white" 
+			href="#main"
+			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
 		>
-			Skip to main content <!-- Visible label when the skip link receives focus -->
+			Skip to main content
+			<!-- Visible label when the skip link receives focus -->
 		</a>
 
 		<!-- ===== Top utility bar (SoleStyle-style strip) ===== -->
 		<!-- Thin navy strip above the header: contact details, audience paths and a delivery promise.
 		     Hidden on small screens (md:block) to save vertical space on mobile. -->
 		<!-- Hidden below md, shown as a navy block from md up -->
+		<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 		<div
-			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block" 
+			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
 		>
 			<!-- Centred flex row, fixed 36px height, small text -->
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 			<div
-				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8" 
+				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
 			>
 				<!-- Left cluster: email link (always visible) and WhatsApp link (large screens only) -->
-				<div class="flex items-center gap-5"> <!-- Flex row with consistent 20px gaps -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="flex items-center gap-5">
+					<!-- Flex row with consistent 20px gaps -->
 					<!-- Clickable mailto link with a small mail icon -->
 					<!-- Opens the visitor's email client pre-addressed to support -->
 					<!-- Inline flex; text turns gold on hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="mailto:hello@campus-cart.co.za" 
-						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]" 
+						href="mailto:hello@campus-cart.co.za"
+						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
 					>
 						<!-- Decorative icon: empty alt so screen readers skip it -->
 						<!-- Lucide mail icon loaded from the CDN -->
 						<!-- Empty alt marks the icon as decorative -->
 						<!-- Small 14px icon sized to match the strip text -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" 
-							alt="" 
-							class="h-3.5 w-3.5" 
+							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+							alt=""
+							class="h-3.5 w-3.5"
 						/>
-						hello@campus-cart.co.za <!-- Visible support email address -->
+						hello@campus-cart.co.za
+						<!-- Visible support email address -->
 					</a>
 					<!-- WhatsApp deep link, hidden until the lg breakpoint -->
 					<!-- wa.me deep link opens WhatsApp with the number pre-filled -->
 					<!-- Hidden below lg, inline flex from lg up, gold hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="https://wa.me/27123456789" 
-						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex" 
+						href="https://wa.me/27123456789"
+						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
 					>
 						<!-- Lucide message-circle icon representing WhatsApp -->
 						<!-- Decorative -->
 						<!-- 14px icon -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" 
-							alt="" 
-							class="h-3.5 w-3.5" 
+							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+							alt=""
+							class="h-3.5 w-3.5"
 						/>
-						+27 12 345 6789 <!-- Visible WhatsApp phone number -->
+						+27 12 345 6789
+						<!-- Visible WhatsApp phone number -->
 					</a>
 				</div>
 				<!-- Right cluster: two audience entry points (student/parent) plus a trust badge -->
-				<div class="flex items-center gap-5"> <!-- Flex row with 20px gaps -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="flex items-center gap-5">
+					<!-- Flex row with 20px gaps -->
 					<!-- Student path: deep-links to the student section of the account page -->
-					<a href="https://campus-cart-olive.vercel.app/pages/account.html#student" class="transition hover:text-[#ffd23f]"
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="https://leletu-kamana.github.io/campus-cart/pages/account.html#student"
+						class="transition hover:text-[#ffd23f]"
 						>Student path</a
-					> <!-- Visible link text -->
-					<span class="text-slate-600">|</span> <!-- Dimmed pipe character acting as a divider -->
+					>
+					<!-- Visible link text -->
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span class="text-slate-600">|</span>
+					<!-- Dimmed pipe character acting as a divider -->
 					<!-- Parent path: deep-links to the parent section of the account page -->
-					<a href="https://campus-cart-olive.vercel.app/pages/account.html#parent" class="transition hover:text-[#ffd23f]"
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="https://leletu-kamana.github.io/campus-cart/pages/account.html#parent"
+						class="transition hover:text-[#ffd23f]"
 						>Parent path</a
-					> <!-- Visible link text -->
-					<span class="text-slate-600">|</span> <!-- Second dimmed divider -->
+					>
+					<!-- Visible link text -->
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span class="text-slate-600">|</span>
+					<!-- Second dimmed divider -->
 					<!-- Trust badge: hidden on the smallest screens, shown from sm upward -->
 					<!-- Hidden on mobile, inline flex from sm, gold text -->
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 					<span
-						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex" 
+						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
 					>
 						<!-- Shield-check icon implying safety -->
 						<!-- Decorative -->
 						<!-- 14px icon -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" 
-							alt="" 
-							class="h-3.5 w-3.5" 
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+							alt=""
+							class="h-3.5 w-3.5"
 						/>
-						Delivery to every campus <!-- Trust message text -->
+						Delivery to every campus
+						<!-- Trust message text -->
 					</span>
 				</div>
 			</div>
@@ -139,136 +197,166 @@
 		<!-- Sticky header: stays pinned to the top with a translucent blurred background -->
 		<!-- ID used by JavaScript to add a shadow when the page scrolls -->
 		<!-- Sticks to top, translucent white blur, bottom border -->
+		<!-- ELEMENT DOCUMENTATION: Site header region containing branding and navigation. Attributes: class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md": CSS classes controlling appearance, spacing and layout. -->
 		<header
-			id="siteHeader" 
-			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md" 
+			id="siteHeader"
+			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md"
 		>
 			<!-- Centred flex row, 64px tall header bar -->
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 			<div
-				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" 
+				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
 			>
 				<!-- Brand logo: clickable link back to the homepage, with a navy "C" tile and wordmark -->
 				<!-- Returns the visitor to the homepage -->
 				<!-- Flex row, bold extra-large navy text -->
+				<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 				<a
-					href="https://campus-cart-olive.vercel.app/index.html" 
-					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]" 
+					href="https://leletu-kamana.github.io/campus-cart/index.html"
+					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
 				>
 					<!-- Logo tile containing the letter C -->
 					<!-- 36px navy rounded tile with centred gold C -->
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 					<span
-						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]" 
+						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
 						>C</span
-					> <!-- The literal letter shown inside the tile -->
+					>
+					<!-- The literal letter shown inside the tile -->
 					<!-- Wordmark: "Campus" in navy, "-Cart" in gold -->
-					<span>Campus<span class="text-[#c99700]">-Cart</span></span> <!-- Nested span colours the suffix gold -->
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span
+						>Campus<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-[#c99700]">-Cart</span></span
+					>
+					<!-- Nested span colours the suffix gold -->
 				</a>
 
 				<!-- Provides navigation links for moving between pages or page sections. -->
 				<!-- Desktop navigation: hidden below lg, where the mobile menu takes over -->
 				<!-- Hidden below lg; flex from lg up with 4px gaps -->
 				<!-- Accessible name so screen readers announce this as the main nav -->
+				<!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Main navigation": accessible name announced by assistive technology. -->
 				<nav
-					class="hidden items-center gap-1 lg:flex" 
-					aria-label="Main navigation" 
+					class="hidden items-center gap-1 lg:flex"
+					aria-label="Main navigation"
 				>
 					<!-- Home link: returns to the homepage -->
 					<!-- Home target -->
 					<!-- Grey hover background and navy hover text -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="https://campus-cart-olive.vercel.app/index.html" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="https://leletu-kamana.github.io/campus-cart/index.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Home</a
 					>
 					<!-- About is the current page: styled as active with aria-current="page" -->
 					<!-- About page target (relative) -->
 					<!-- Marks this link as the current page for assistive tech -->
 					<!-- Active pill: faint navy background and bold text -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: aria-current="page": identifies the current page or item; class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="about.html" 
-						aria-current="page" 
-						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]" 
+						href="about.html"
+						aria-current="page"
+						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
 						>About</a
 					>
 					<!-- Shop / products listing page -->
 					<!-- Products page target -->
 					<!-- Grey/navy hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="products.html" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="products.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Shop</a
 					>
 					<!-- Parent Hub: anchor within the products page aimed at parents/guardians -->
 					<!-- Deep link to the parent hub section on the products page -->
 					<!-- Same hover treatment as Shop -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="products.html#parent-hub" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="products.html#parent-hub"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Parent Hub</a
 					>
 					<!-- Enquiry form page -->
 					<!-- Enquiry page target -->
 					<!-- Grey/navy hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="enquiry.html" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="enquiry.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Enquiry</a
 					>
 					<!-- Delivery coverage page -->
 					<!-- Coverage page target -->
 					<!-- Grey/navy hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="coverage.html" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="coverage.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Coverage</a
 					>
 					<!-- Contact page -->
 					<!-- Contact page target -->
 					<!-- Grey/navy hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="contact.html" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="contact.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Contact</a
 					>
 					<!-- Account / login page -->
 					<!-- Account page target -->
 					<!-- Grey/navy hover -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="account.html" 
-						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]" 
+						href="account.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
 						>Account</a
 					>
 				</nav>
 
 				<!-- Right-hand action cluster: search, live clock, cart and mobile menu toggle -->
-				<div class="flex items-center gap-2 sm:gap-3"> <!-- Flex row with tighter gaps on mobile -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="flex items-center gap-2 sm:gap-3">
+					<!-- Flex row with tighter gaps on mobile -->
 					<!-- Search shortcut: icon-only circular button linking to the products page (desktop only) -->
 					<!-- Search icon jumps to the products page where search lives -->
 					<!-- Hidden below lg; 40px circular bordered button -->
 					<!-- Accessible name for the icon-only link -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid": CSS classes controlling appearance, spacing and layout; aria-label="Search products": accessible name announced by assistive technology. -->
 					<a
-						href="products.html" 
-						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid" 
-						aria-label="Search products" 
+						href="products.html"
+						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid"
+						aria-label="Search products"
 					>
 						<!-- Lucide search magnifier -->
 						<!-- Decorative -->
 						<!-- 20px icon -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg" 
-							alt="" 
-							class="h-5 w-5" 
+							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg"
+							alt=""
+							class="h-5 w-5"
 						/>
 					</a>
 
 					<!-- Live clock block: time and date are injected by JavaScript (xl screens only) -->
-					<div class="hidden text-right xl:block"> <!-- Hidden below xl; right-aligned text -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="hidden text-right xl:block">
+						<!-- Hidden below xl; right-aligned text -->
 						<!-- Digital time placeholder, updated by script -->
-						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]"> <!-- ID targeted by the clock JavaScript -->
-							--:--:-- <!-- Placeholder shown until the script runs -->
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-xs font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
+							<!-- ID targeted by the clock JavaScript -->
+							--:--:--
+							<!-- Placeholder shown until the script runs -->
 						</p>
 						<!-- Date placeholder, replaced with the current date once loaded -->
-						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p> <!-- Small grey placeholder text -->
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-[11px] text-slate-500": CSS classes controlling appearance, spacing and layout. -->
+						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
+						<!-- Small grey placeholder text -->
 					</div>
 
 					<!-- Cart trigger: opens the cart drawer; aria-expanded reflects open/closed state -->
@@ -278,31 +366,35 @@
 					<!-- Points to the drawer this button toggles -->
 					<!-- Reflects the drawer's current closed state -->
 					<!-- Accessible name since the button is icon-only -->
+					<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]": CSS classes controlling appearance, spacing and layout; aria-controls="cartDrawer": identifies the interface element controlled by this element; aria-expanded="false": communicates expanded or collapsed state; aria-label="Open cart": accessible name announced by assistive technology. -->
 					<button
-						id="cartButton" 
-						type="button" 
-						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" 
-						aria-controls="cartDrawer" 
-						aria-expanded="false" 
-						aria-label="Open cart" 
+						id="cartButton"
+						type="button"
+						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
+						aria-controls="cartDrawer"
+						aria-expanded="false"
+						aria-label="Open cart"
 					>
 						<!-- Shopping bag icon (decorative) -->
 						<!-- Lucide shopping bag icon -->
 						<!-- Decorative -->
 						<!-- 20px icon -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
 						<img
-							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" 
-							alt="" 
-							class="h-5 w-5" 
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+							alt=""
+							class="h-5 w-5"
 						/>
 						<!-- Cart badge: item count, kept in sync by the cart JavaScript -->
 						<!-- ID targeted by the cart JavaScript to update the count -->
 						<!-- Gold badge pinned to the top-right of the bag -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 						<span
-							id="cartCount" 
-							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]" 
+							id="cartCount"
+							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
 							>0</span
-						> <!-- Starts at zero before the cart is hydrated -->
+						>
+						<!-- Starts at zero before the cart is hydrated -->
 					</button>
 
 					<!-- Mobile menu toggle: visible only below lg; swaps between menu and close icons -->
@@ -312,24 +404,26 @@
 					<!-- Reflects the mobile menu's current closed state -->
 					<!-- Points to the panel this button toggles -->
 					<!-- Accessible name -->
+					<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden": CSS classes controlling appearance, spacing and layout; aria-expanded="false": communicates expanded or collapsed state; aria-controls="mobileMenu": identifies the interface element controlled by this element; aria-label="Menu": accessible name announced by assistive technology. -->
 					<button
-						id="navToggle" 
-						type="button" 
-						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" 
-						aria-expanded="false" 
-						aria-controls="mobileMenu" 
-						aria-label="Menu" 
+						id="navToggle"
+						type="button"
+						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden"
+						aria-expanded="false"
+						aria-controls="mobileMenu"
+						aria-label="Menu"
 					>
 						<!-- Icon whose src is swapped by JavaScript when the menu opens/closes -->
 						<!-- ID targeted by the script to swap the icon -->
 						<!-- Default menu (hamburger) icon -->
 						<!-- Decorative -->
 						<!-- 20px icon -->
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg": location of an image, script or embedded resource; alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
 						<img
-							id="navIcon" 
-							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" 
-							alt="" 
-							class="h-5 w-5" 
+							id="navIcon"
+							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
+							alt=""
+							class="h-5 w-5"
 						/>
 					</button>
 				</div>
@@ -339,76 +433,87 @@
 			<!-- Mobile navigation panel: hidden by default, toggled open by #navToggle -->
 			<!-- ID referenced by aria-controls on the toggle button -->
 			<!-- Hidden by default; never shown at lg and above -->
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="hidden border-t border-slate-200 bg-white lg:hidden": CSS classes controlling appearance, spacing and layout. -->
 			<div
-				id="mobileMenu" 
-				class="hidden border-t border-slate-200 bg-white lg:hidden" 
+				id="mobileMenu"
+				class="hidden border-t border-slate-200 bg-white lg:hidden"
 			>
 				<!-- Provides navigation links for moving between pages or page sections. -->
-				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation"> <!-- Stacked links with 4px vertical gaps; distinct aria-label -->
+				<!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Mobile navigation": accessible name announced by assistive technology. -->
+				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
+					<!-- Stacked links with 4px vertical gaps; distinct aria-label -->
 					<!-- Home link: returns to the homepage -->
 					<!-- Home target -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="https://campus-cart-olive.vercel.app/index.html" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="https://leletu-kamana.github.io/campus-cart/index.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Home</a
 					>
 					<!-- About: highlighted as the active page on mobile too -->
 					<!-- About target -->
 					<!-- Marks this as the current page -->
 					<!-- Active style: faint navy background, bold text -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: aria-current="page": identifies the current page or item; class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="about.html" 
-						aria-current="page" 
-						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]" 
+						href="about.html"
+						aria-current="page"
+						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]"
 						>About</a
 					>
 					<!-- Shop / products -->
 					<!-- Products target -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="products.html" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="products.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Shop</a
 					>
 					<!-- Parent Hub anchor -->
 					<!-- Deep link to parent hub section -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="products.html#parent-hub" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="products.html#parent-hub"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Parent Hub</a
 					>
 					<!-- Enquiry page -->
 					<!-- Enquiry target -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="enquiry.html" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="enquiry.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Enquiry</a
 					>
 					<!-- Coverage page -->
 					<!-- Coverage target -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="coverage.html" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="coverage.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Coverage</a
 					>
 					<!-- Contact page -->
 					<!-- Contact target -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="contact.html" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="contact.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Contact</a
 					>
 					<!-- Account page -->
 					<!-- Account target -->
 					<!-- Standard mobile link style -->
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
 					<a
-						href="account.html" 
-						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50" 
+						href="account.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
 						>Account</a
 					>
 				</nav>
@@ -417,83 +522,112 @@
 
 		<!-- Contains the primary content of this page, separate from shared navigation and footer content. -->
 		<!-- tabindex="-1" allows the skip link to move keyboard focus here programmatically -->
+		<!-- ELEMENT DOCUMENTATION: Primary content landmark for this page. Attributes: tabindex="-1": controls keyboard focus behaviour. -->
 		<main id="main" tabindex="-1">
 			<!-- ===== Page hero with breadcrumb ===== -->
 			<!-- Full-width navy hero: breadcrumb, eyebrow badge, headline and intro paragraph -->
-			<section class="relative overflow-hidden bg-[#0d1b3e] text-white"> <!-- Relative positioning for decorations; navy block with white text -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
+				<!-- Relative positioning for decorations; navy block with white text -->
 				<!-- Decorative radial glows (two soft light spots) — aria-hidden so they're ignored by AT -->
 				<!-- Hides the decoration from screen readers -->
 				<!-- Two layered radial gradients: warm gold glow top-right, deep blue glow bottom-left -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]": CSS classes controlling appearance, spacing and layout. -->
 				<div
-					aria-hidden="true" 
-					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]" 
+					aria-hidden="true"
+					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"
 				></div>
 				<!-- Decorative diagonal gold blur band on the right side of the hero -->
 				<!-- Decorative only -->
 				<!-- Oversized rotated gold gradient with heavy blur -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl": CSS classes controlling appearance, spacing and layout. -->
 				<div
-					aria-hidden="true" 
-					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl" 
+					aria-hidden="true"
+					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
 				></div>
 
 				<!-- Hero content container: constrained max width with responsive padding -->
 				<!-- Centred max-width wrapper with responsive padding -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 				<div
-					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24" 
+					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
 				>
 					<!-- Breadcrumb -->
 					<!-- Trail of links showing this page's position in the site hierarchy -->
-					<nav class="mb-6" aria-label="Breadcrumb"> <!-- Accessible name so screen readers announce this as breadcrumb navigation -->
-						<ol class="flex items-center gap-2 text-sm text-slate-400"> <!-- Ordered list of crumbs -->
+					<!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Breadcrumb": accessible name announced by assistive technology. -->
+					<nav class="mb-6" aria-label="Breadcrumb">
+						<!-- Accessible name so screen readers announce this as breadcrumb navigation -->
+						<!-- ELEMENT DOCUMENTATION: Ordered list of sequential items. -->
+						<ol class="flex items-center gap-2 text-sm text-slate-400">
+							<!-- Ordered list of crumbs -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Home crumb: links back to the site root -->
-								<a href="https://campus-cart-olive.vercel.app/index.html" class="transition hover:text-[#ffd23f]"
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="https://leletu-kamana.github.io/campus-cart/index.html"
+									class="transition hover:text-[#ffd23f]"
 									>Home</a
 								>
 							</li>
-							<li aria-hidden="true" class="text-slate-500">/</li> <!-- Decorative separator slash, hidden from AT -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. Attributes: class="text-slate-500": CSS classes controlling appearance, spacing and layout. -->
+							<li aria-hidden="true" class="text-slate-500">/</li>
+							<!-- Decorative separator slash, hidden from AT -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. Attributes: class="font-semibold text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 							<li aria-current="page" class="font-semibold text-[#ffd23f]">
-								About <!-- Current page crumb, highlighted in gold -->
+								About
+								<!-- Current page crumb, highlighted in gold -->
 							</li>
 						</ol>
 					</nav>
 
 					<!-- Copy block: entrance animation plays on load -->
-					<div class="animate-fade-up"> <!-- Runs the custom fade-up entrance animation -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="animate-fade-up">
+						<!-- Runs the custom fade-up entrance animation -->
 						<!-- Eyebrow badge with sparkle icon -->
 						<!-- Pill badge with glass effect and gold uppercase text -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 						<span
-							class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]" 
+							class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
 						>
 							<!-- Lucide sparkles icon -->
 							<!-- Decorative -->
 							<!-- 14px icon -->
+							<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
 							<img
-								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg" 
-								alt="" 
-								class="h-3.5 w-3.5" 
+								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg"
+								alt=""
+								class="h-3.5 w-3.5"
 							/>
-							About us <!-- Badge text -->
+							About us
+							<!-- Badge text -->
 						</span>
 
 						<!-- Main H1 with an italic serif accent -->
 						<!-- Extra-bold responsive display heading -->
+						<!-- ELEMENT DOCUMENTATION: Main page heading. -->
 						<h1
-							class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl" 
+							class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl"
 						>
-							Built by students, <!-- Opening line of the headline -->
+							Built by students,
+							<!-- Opening line of the headline -->
 							<!-- Italic serif accent in gold -->
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 							<span
-								class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]" 
+								class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
 								>for students and their families</span
-							> <!-- Italic accent phrase -->
+							>
+							<!-- Italic accent phrase -->
 						</h1>
 
 						<!-- Lead paragraph summarising what Campus-Cart is -->
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 						<p class="mt-5 max-w-2xl text-lg text-slate-300">
 							Campus-Cart is a South African student essentials marketplace that
 							pairs affordable new stock with a manually reviewed second-hand
-							range. <!-- Short brand summary -->
+							range.
+							<!-- Short brand summary -->
 						</p>
 					</div>
 				</div>
@@ -501,31 +635,45 @@
 
 			<!-- ===== Our history ===== -->
 			<!-- Two-column section: origin story text on the left, photo with floating badge on the right -->
-			<section class="py-20"> <!-- Transparent band with 80px vertical padding -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
-					<div class="grid items-center gap-12 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="py-20">
+				<!-- Transparent band with 80px vertical padding -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="grid items-center gap-12 lg:grid-cols-2">
+						<!-- Single column on mobile, two equal columns at lg -->
 						<!-- Text column: the story of how Campus-Cart started -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 						<div>
 							<!-- Small gold uppercase eyebrow -->
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 							<span
-								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 								>Our history</span
-							> <!-- Eyebrow label -->
-							<!-- Large navy section heading -->
-							<h2
-								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 							>
-								From a res corridor to nine provinces <!-- Heading text -->
+							<!-- Eyebrow label -->
+							<!-- Large navy section heading -->
+							<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+							<h2
+								class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+							>
+								From a res corridor to nine provinces
+								<!-- Heading text -->
 							</h2>
 
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-5 text-slate-600">
 								In 2021 a handful of final-year students in Pretoria noticed the
 								same thing every November: perfectly good kettles, fridges,
 								desks and textbooks were being dumped in res corridors, while
 								first-years arriving in January were paying full retail for the
-								same items. <!-- Opening paragraph setting the scene -->
+								same items.
+								<!-- Opening paragraph setting the scene -->
 							</p>
 
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-4 text-slate-600">
 								What began as a WhatsApp group with a spreadsheet grew into an
 								organised handover service across campuses in several provinces,
@@ -533,24 +681,30 @@
 								and major private institution in all nine provinces. By 2023 we
 								had added new stock so that families could buy a complete bundle
 								in one go, and by 2025 we formalised collection points at
-								residences, campus desks and secure lockers. <!-- Middle paragraph describing growth -->
+								residences, campus desks and secure lockers.
+								<!-- Middle paragraph describing growth -->
 							</p>
 
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-4 text-slate-600">
 								Today Campus-Cart operates as a small, student-run team with
 								reviewers who physically check every second-hand listing before
-								it goes live. <!-- Closing paragraph describing today's state -->
+								it goes live.
+								<!-- Closing paragraph describing today's state -->
 							</p>
 						</div>
 
 						<!-- Image column: photo of reviewed second-hand items plus a floating badge -->
-						<div class="relative"> <!-- Relative wrapper for the floating badge -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative">
+							<!-- Relative wrapper for the floating badge -->
 							<!-- Soft gold glow behind the photo -->
 							<!-- Decorative only -->
 							<!-- Oversized gold glow extending past the photo -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/30 blur-2xl": CSS classes controlling appearance, spacing and layout. -->
 							<div
-								aria-hidden="true" 
-								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/30 blur-2xl" 
+								aria-hidden="true"
+								class="absolute -inset-4 rounded-[2.5rem] bg-[#ffd23f]/30 blur-2xl"
 							></div>
 							<!-- Reviewed second-hand items photo -->
 							<!-- Placeholder lifestyle photo -->
@@ -559,24 +713,30 @@
 							<!-- Intrinsic height hint to avoid layout shift -->
 							<!-- Deferred since the section is below the fold -->
 							<!-- Rounded landscape photo with a large shadow -->
+							<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair": alternative text for an image; empty text marks a decorative image; width="1000": resource width; height="900": resource height; loading="lazy": controls resource loading behaviour; class="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl": CSS classes controlling appearance, spacing and layout. -->
 							<img
-								src="https://picsum.photos/seed/cc-about-history/1000/900" 
-								alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair" 
-								width="1000" 
-								height="900" 
-								loading="lazy" 
-								class="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl" 
+								src="https://picsum.photos/seed/cc-about-history/1000/900"
+								alt="Reviewed second-hand student items including textbooks, a mini fridge and a study chair"
+								width="1000"
+								height="900"
+								loading="lazy"
+								class="relative aspect-[4/3] w-full rounded-[2rem] object-cover shadow-xl"
 							/>
 							<!-- Floating white badge with the "Student-run since 2021" tagline -->
 							<!-- White card that gently floats -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 							<div
-								class="absolute -bottom-5 right-6 rounded-2xl bg-white p-4 shadow-xl animate-float" 
+								class="absolute -bottom-5 right-6 rounded-2xl bg-white p-4 shadow-xl animate-float"
 							>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 								<p class="text-sm font-bold text-[#0d1b3e]">
-									Student-run since 2021 <!-- Badge headline -->
+									Student-run since 2021
+									<!-- Badge headline -->
 								</p>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 								<p class="text-xs text-slate-500">
-									Every listing reviewed by a person <!-- Badge supporting line -->
+									Every listing reviewed by a person
+									<!-- Badge supporting line -->
 								</p>
 							</div>
 						</div>
@@ -586,90 +746,134 @@
 
 			<!-- ===== Our journey — milestone timeline (SoleStyle editorial strip) ===== -->
 			<!-- White band containing four milestone cards marking key years in the company's history -->
-			<section class="bg-white py-20"> <!-- White band with 80px vertical padding -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="bg-white py-20">
+				<!-- White band with 80px vertical padding -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
-					<div class="max-w-2xl"> <!-- Constrained heading width -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="max-w-2xl">
+						<!-- Constrained heading width -->
 						<!-- Small gold uppercase eyebrow -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>Our journey</span
-						> <!-- Eyebrow label -->
-						<!-- Large navy section heading -->
-						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
-							Milestones along the way <!-- Heading text -->
+						<!-- Eyebrow label -->
+						<!-- Large navy section heading -->
+						<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+						<h2
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+						>
+							Milestones along the way
+							<!-- Heading text -->
 						</h2>
 					</div>
 
 					<!-- Timeline grid: 1 / 2 / 4 columns depending on breakpoint -->
-					<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"> <!-- Responsive column count with 32px gaps -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+						<!-- Responsive column count with 32px gaps -->
 						<!-- Milestone 1: 2021 -->
-						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border separates each card from its heading -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative border-t-4 border-[#ffd23f] pt-6">
+							<!-- Gold top border separates each card from its heading -->
 							<!-- Oversized italic year in low opacity navy -->
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]"
 							>
-								2021 <!-- Year -->
+								2021
+								<!-- Year -->
 							</p>
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 							<h3 class="mt-3 text-base font-extrabold text-[#0d1b3e]">
-								First resale group <!-- Milestone title -->
+								First resale group
+								<!-- Milestone title -->
 							</h3>
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-2 text-sm text-slate-600">
 								Final-years in Pretoria start a WhatsApp group to hand down
-								kettles, fridges and textbooks. <!-- Milestone description -->
+								kettles, fridges and textbooks.
+								<!-- Milestone description -->
 							</p>
 						</div>
 
 						<!-- Milestone 2: 2023 -->
-						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative border-t-4 border-[#ffd23f] pt-6">
+							<!-- Gold top border -->
 							<!-- Oversized italic year -->
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]"
 							>
-								2023 <!-- Year -->
+								2023
+								<!-- Year -->
 							</p>
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 							<h3 class="mt-3 text-base font-extrabold text-[#0d1b3e]">
-								New stock added <!-- Milestone title -->
+								New stock added
+								<!-- Milestone title -->
 							</h3>
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-2 text-sm text-slate-600">
 								Families can buy a complete fixed-price bundle in one go — not
-								just second-hand items. <!-- Milestone description -->
+								just second-hand items.
+								<!-- Milestone description -->
 							</p>
 						</div>
 
 						<!-- Milestone 3: 2025 -->
-						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative border-t-4 border-[#ffd23f] pt-6">
+							<!-- Gold top border -->
 							<!-- Oversized italic year -->
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]"
 							>
-								2025 <!-- Year -->
+								2025
+								<!-- Year -->
 							</p>
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 							<h3 class="mt-3 text-base font-extrabold text-[#0d1b3e]">
-								Collection points formalised <!-- Milestone title -->
+								Collection points formalised
+								<!-- Milestone title -->
 							</h3>
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-2 text-sm text-slate-600">
 								Residence desks, campus counters and secure lockers become the
-								standard way to collect. <!-- Milestone description -->
+								standard way to collect.
+								<!-- Milestone description -->
 							</p>
 						</div>
 
 						<!-- Milestone 4: Today -->
-						<div class="relative border-t-4 border-[#ffd23f] pt-6"> <!-- Gold top border -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative border-t-4 border-[#ffd23f] pt-6">
+							<!-- Gold top border -->
 							<!-- Oversized italic label -->
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p
-								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]" 
+								class="text-4xl font-black italic leading-none text-[#0d1b3e]/15 [font-family:'Playfair_Display',Georgia,serif]"
 							>
-								Today <!-- "Today" label in place of a year -->
+								Today
+								<!-- "Today" label in place of a year -->
 							</p>
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 							<h3 class="mt-3 text-base font-extrabold text-[#0d1b3e]">
-								All nine provinces <!-- Milestone title -->
+								All nine provinces
+								<!-- Milestone title -->
 							</h3>
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-2 text-sm text-slate-600">
 								Delivering to every public university, TVET college and major
-								private institution nationwide. <!-- Milestone description -->
+								private institution nationwide.
+								<!-- Milestone description -->
 							</p>
 						</div>
 					</div>
@@ -678,62 +882,82 @@
 
 			<!-- ===== Mission & Vision ===== -->
 			<!-- Two contrasting cards: white mission card and navy vision card -->
-			<section class="bg-[#faf8f4] py-20"> <!-- Very pale warm band with 80px vertical padding -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
-					<div class="grid gap-6 md:grid-cols-2"> <!-- Single column on mobile, two equal columns at md -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="bg-[#faf8f4] py-20">
+				<!-- Very pale warm band with 80px vertical padding -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="grid gap-6 md:grid-cols-2">
+						<!-- Single column on mobile, two equal columns at md -->
 						<!-- Mission card: white background, gold icon tile -->
 						<!-- White rounded card with a subtle border and shadow -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 						<div
-							class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10" 
+							class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10"
 						>
 							<!-- 48px gold icon tile -->
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 							<span
-								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]" 
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"
 							>
 								<!-- Target icon implying mission/goal -->
 								<!-- Decorative -->
 								<!-- 24px navy icon -->
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/target.svg" 
-									alt="" 
-									class="h-6 w-6 text-[#0d1b3e]" 
+									src="https://unpkg.com/lucide-static@1.44.0/icons/target.svg"
+									alt=""
+									class="h-6 w-6 text-[#0d1b3e]"
 								/>
 							</span>
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 							<h3 class="mt-5 text-2xl font-extrabold text-[#0d1b3e]">
-								Our mission <!-- Card title -->
+								Our mission
+								<!-- Card title -->
 							</h3>
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-3 text-slate-600">
 								To make the cost of starting tertiary education fairer, by
 								giving students and their families access to affordable,
 								quality-checked essentials and a safe way to resell what they
-								outgrow. <!-- Mission statement -->
+								outgrow.
+								<!-- Mission statement -->
 							</p>
 						</div>
 
 						<!-- Vision card: navy background, white text, gold icon tile -->
 						<!-- Navy rounded card with white text -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 						<div
-							class="rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-sm sm:p-10" 
+							class="rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-sm sm:p-10"
 						>
 							<!-- 48px gold icon tile -->
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 							<span
-								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]" 
+								class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"
 							>
 								<!-- Eye icon implying vision -->
 								<!-- Decorative -->
 								<!-- 24px navy icon -->
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/eye.svg" 
-									alt="" 
-									class="h-6 w-6 text-[#0d1b3e]" 
+									src="https://unpkg.com/lucide-static@1.44.0/icons/eye.svg"
+									alt=""
+									class="h-6 w-6 text-[#0d1b3e]"
 								/>
 							</span>
-							<h3 class="mt-5 text-2xl font-extrabold">Our vision</h3> <!-- Card title -->
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+							<h3 class="mt-5 text-2xl font-extrabold">Our vision</h3>
+							<!-- Card title -->
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-3 text-slate-300">
 								A South Africa where no student delays or drops out of study
 								because they cannot afford a bed, a desk or a prescribed
 								textbook — and where student kit circulates instead of ending up
-								in a skip. <!-- Vision statement -->
+								in a skip.
+								<!-- Vision statement -->
 							</p>
 						</div>
 					</div>
@@ -742,101 +966,140 @@
 
 			<!-- ===== Who we serve ===== -->
 			<!-- Two audience cards: primary (students) and secondary (parents/guardians) -->
-			<section class="py-20" id="who-we-serve"> <!-- Transparent band with an ID for deep linking -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. Attributes: id="who-we-serve": unique identifier used by CSS, JavaScript or in-page links. -->
+			<section class="py-20" id="who-we-serve">
+				<!-- Transparent band with an ID for deep linking -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
-					<div class="max-w-2xl"> <!-- Constrained heading width -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="max-w-2xl">
+						<!-- Constrained heading width -->
 						<!-- Small gold uppercase eyebrow -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>Audience</span
-						> <!-- Eyebrow label -->
-						<!-- Large navy section heading -->
-						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
-							Who we serve <!-- Heading text -->
+						<!-- Eyebrow label -->
+						<!-- Large navy section heading -->
+						<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+						<h2
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+						>
+							Who we serve
+							<!-- Heading text -->
 						</h2>
 					</div>
 
 					<!-- Audience grid: single column on mobile, two equal columns at lg -->
-					<div class="mt-10 grid gap-6 lg:grid-cols-2"> <!-- Responsive column count with 24px gaps -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="mt-10 grid gap-6 lg:grid-cols-2">
+						<!-- Responsive column count with 24px gaps -->
 						<!-- Primary audience -->
 						<!-- Amber-coloured card describing the main student audience -->
 						<!-- Amber rounded card with navy text -->
+						<!-- ELEMENT DOCUMENTATION: Self-contained composition such as a product card or article. -->
 						<article
-							class="group relative overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-8 text-[#0d1b3e] shadow-sm sm:p-10" 
+							class="group relative overflow-hidden rounded-[2.5rem] bg-[#ffd23f] p-8 text-[#0d1b3e] shadow-sm sm:p-10"
 						>
 							<!-- Soft white glow decoration, top-right -->
 							<!-- Decorative only -->
 							<!-- Soft white glow in the top-right corner -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl": CSS classes controlling appearance, spacing and layout. -->
 							<div
-								aria-hidden="true" 
-								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl" 
+								aria-hidden="true"
+								class="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-white/30 blur-2xl"
 							></div>
-							<div class="relative"> <!-- Relative so content sits above the decoration -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div class="relative">
+								<!-- Relative so content sits above the decoration -->
 								<!-- Navy pill with gold text -->
+								<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 								<span
-									class="inline-flex rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]" 
+									class="inline-flex rounded-full bg-[#0d1b3e] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ffd23f]"
 									>Primary audience</span
-								> <!-- Pill label -->
+								>
+								<!-- Pill label -->
+								<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 								<h3 class="mt-5 text-2xl font-extrabold">
-									Tertiary students, ages 19–30 <!-- Card title -->
+									Tertiary students, ages 19–30
+									<!-- Card title -->
 								</h3>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 								<p class="mt-3 text-sm text-[#0d1b3e]/70">
 									Undergraduates, postgraduates and TVET students living in
 									residence, private digs or commuting from home. They are
 									price-sensitive, mobile-first, and often buying for the first
-									time without family nearby. <!-- Audience description -->
+									time without family nearby.
+									<!-- Audience description -->
 								</p>
 								<!-- Reassurance checklist: three items with gold check icons -->
-								<ul class="mt-5 space-y-2.5 text-sm font-semibold"> <!-- Stacked list of audience needs -->
-									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+								<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+								<ul class="mt-5 space-y-2.5 text-sm font-semibold">
+									<!-- Stacked list of audience needs -->
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- Icon and text aligned to the top -->
 										<!-- Check mark icon -->
 										<!-- Decorative -->
 										<!-- 16px navy check, never shrinks -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
-											alt="" 
-											class="mt-0.5 h-4 w-4 shrink-0" 
-										/>Need affordable basics fast, usually in registration week <!-- First audience need -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0"
+										/>Need affordable basics fast, usually in registration week
+										<!-- First audience need -->
 									</li>
-									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- Icon and text aligned to the top -->
 										<!-- Check mark icon -->
 										<!-- Decorative -->
 										<!-- 16px navy check, never shrinks -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
-											alt="" 
-											class="mt-0.5 h-4 w-4 shrink-0" 
-										/>Want to resell items at the end of the year <!-- Second audience need -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0"
+										/>Want to resell items at the end of the year
+										<!-- Second audience need -->
 									</li>
-									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- Icon and text aligned to the top -->
 										<!-- Check mark icon -->
 										<!-- Decorative -->
 										<!-- 16px navy check, never shrinks -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
-											alt="" 
-											class="mt-0.5 h-4 w-4 shrink-0" 
-										/>Prefer collection on or near campus <!-- Third audience need -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0"
+										/>Prefer collection on or near campus
+										<!-- Third audience need -->
 									</li>
 								</ul>
 								<!-- CTA into the student account path -->
 								<!-- Deep link to the student account flow -->
 								<!-- Navy pill that lightens on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="https://campus-cart-olive.vercel.app/pages/account.html#student" 
-									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]" 
+									href="https://leletu-kamana.github.io/campus-cart/pages/account.html#student"
+									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 								>
-									Student path <!-- Button label -->
+									Student path
+									<!-- Button label -->
 									<!-- Arrow-right icon -->
 									<!-- Decorative -->
 									<!-- 16px icon -->
+									<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 									<img
-										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" 
-										alt="" 
-										class="h-4 w-4" 
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+										alt=""
+										class="h-4 w-4"
 									/>
 								</a>
 							</div>
@@ -845,78 +1108,105 @@
 						<!-- Secondary audience -->
 						<!-- White card with a subtle ring describing the parent/guardian audience -->
 						<!-- White rounded card with a subtle ring -->
+						<!-- ELEMENT DOCUMENTATION: Self-contained composition such as a product card or article. -->
 						<article
-							class="group relative overflow-hidden rounded-[2.5rem] bg-white p-8 text-[#0d1b3e] shadow-sm ring-1 ring-slate-200 sm:p-10" 
+							class="group relative overflow-hidden rounded-[2.5rem] bg-white p-8 text-[#0d1b3e] shadow-sm ring-1 ring-slate-200 sm:p-10"
 						>
 							<!-- Soft gold glow decoration, top-left -->
 							<!-- Decorative only -->
 							<!-- Soft gold glow in the top-left corner -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#ffd23f]/20 blur-2xl": CSS classes controlling appearance, spacing and layout. -->
 							<div
-								aria-hidden="true" 
-								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#ffd23f]/20 blur-2xl" 
+								aria-hidden="true"
+								class="absolute -left-14 -top-14 h-44 w-44 rounded-full bg-[#ffd23f]/20 blur-2xl"
 							></div>
-							<div class="relative"> <!-- Relative so content sits above the decoration -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div class="relative">
+								<!-- Relative so content sits above the decoration -->
 								<!-- Pale gold pill with dark text -->
+								<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 								<span
-									class="inline-flex rounded-full bg-[#ffe9a8] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#7a5800]" 
+									class="inline-flex rounded-full bg-[#ffe9a8] px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-wider text-[#7a5800]"
 									>Secondary audience</span
-								> <!-- Pill label -->
+								>
+								<!-- Pill label -->
+								<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 								<h3 class="mt-5 text-2xl font-extrabold">
-									Parents and guardians <!-- Card title -->
+									Parents and guardians
+									<!-- Card title -->
 								</h3>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 								<p class="mt-3 text-sm text-slate-600">
 									Adults funding a student's first year who need clear, fixed
 									pricing, a checklist they can print, and reassurance that a
-									second-hand item has been checked by a person. <!-- Audience description -->
+									second-hand item has been checked by a person.
+									<!-- Audience description -->
 								</p>
 								<!-- Reassurance checklist: three items with green check icons -->
-								<ul class="mt-5 space-y-2.5 text-sm font-semibold"> <!-- Stacked list of audience needs -->
-									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+								<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+								<ul class="mt-5 space-y-2.5 text-sm font-semibold">
+									<!-- Stacked list of audience needs -->
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- Icon and text aligned to the top -->
 										<!-- Check mark icon -->
 										<!-- Decorative -->
 										<!-- 16px green check, never shrinks -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
-											alt="" 
-											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" 
-										/>Budget in advance with fixed-price bundles <!-- First audience need -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>Budget in advance with fixed-price bundles
+										<!-- First audience need -->
 									</li>
-									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- Icon and text aligned to the top -->
 										<!-- Check mark icon -->
 										<!-- Decorative -->
 										<!-- 16px green check, never shrinks -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
-											alt="" 
-											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" 
-										/>Larger type, plain language, printable checklist <!-- Second audience need -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>Larger type, plain language, printable checklist
+										<!-- Second audience need -->
 									</li>
-									<li class="flex items-start gap-2.5"> <!-- Icon and text aligned to the top -->
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- Icon and text aligned to the top -->
 										<!-- Check mark icon -->
 										<!-- Decorative -->
 										<!-- 16px green check, never shrinks -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" 
-											alt="" 
-											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" 
-										/>Direct contact by email or WhatsApp <!-- Third audience need -->
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>Direct contact by email or WhatsApp
+										<!-- Third audience need -->
 									</li>
 								</ul>
 								<!-- CTA into the Parent Hub section on the products page -->
 								<!-- Deep link into the parent hub section -->
 								<!-- Navy pill that lightens on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="https://campus-cart-olive.vercel.app/pages/products.html#parent-hub" 
-									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]" 
+									href="https://leletu-kamana.github.io/campus-cart/pages/products.html#parent-hub"
+									class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1c3268]"
 								>
-									Parent Hub <!-- Button label -->
+									Parent Hub
+									<!-- Button label -->
 									<!-- Arrow-right icon -->
 									<!-- Decorative -->
 									<!-- 16px icon -->
+									<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 									<img
-										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" 
-										alt="" 
-										class="h-4 w-4" 
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+										alt=""
+										class="h-4 w-4"
 									/>
 								</a>
 							</div>
@@ -927,31 +1217,46 @@
 
 			<!-- ===== Meet the author ===== -->
 			<!-- Two-card section introducing the student behind Campus-Cart and linking to their online profiles -->
-			<section class="bg-white py-20" id="author"> <!-- White band with an ID for deep linking -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. Attributes: id="author": unique identifier used by CSS, JavaScript or in-page links. -->
+			<section class="bg-white py-20" id="author">
+				<!-- White band with an ID for deep linking -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
-					<div class="max-w-2xl"> <!-- Constrained heading width -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="max-w-2xl">
+						<!-- Constrained heading width -->
 						<!-- Small gold uppercase eyebrow -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>The author</span
-						> <!-- Eyebrow label -->
-						<!-- Large navy section heading -->
-						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
-							Meet the author <!-- Heading text -->
+						<!-- Eyebrow label -->
+						<!-- Large navy section heading -->
+						<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+						<h2
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+						>
+							Meet the author
+							<!-- Heading text -->
 						</h2>
 					</div>
 
 					<!-- Two-card grid: author bio on the left, social links on the right -->
-					<div class="mt-10 grid gap-6 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="mt-10 grid gap-6 lg:grid-cols-2">
+						<!-- Single column on mobile, two equal columns at lg -->
 						<!-- Author bio card: warm off-white with a photo and intro text -->
 						<!-- Warm off-white rounded card -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 						<div
-							class="rounded-[2.5rem] border border-slate-200 bg-[#faf8f4] p-8 sm:p-10" 
+							class="rounded-[2.5rem] border border-slate-200 bg-[#faf8f4] p-8 sm:p-10"
 						>
-							<div class="flex flex-col items-center gap-6 sm:flex-row"> <!-- Stacked on mobile, row at sm -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div class="flex flex-col items-center gap-6 sm:flex-row">
+								<!-- Stacked on mobile, row at sm -->
 								<!-- Author portrait with a gold ring -->
 								<!-- LinkedIn-hosted portrait -->
 								<!-- Descriptive alt -->
@@ -960,106 +1265,136 @@
 								<!-- Intrinsic height -->
 								<!-- Fallback image if the primary portrait fails to load -->
 								<!-- 112px circular portrait with a gold ring -->
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="Leletu Kamana, the author of Campus-Cart": alternative text for an image; empty text marks a decorative image; loading="lazy": controls resource loading behaviour; width="180": resource width; height="180": resource height; onerror="
+										this.onerror = null;
+										this.src = 'https://i.pravatar.cc/300?u=leletu-kamana';
+									": HTML attribute used by the browser, CSS, JavaScript or assistive technology; class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<img
-									src="https://media.licdn.com/dms/image/v2/D4D35AQHDiZjqIjth8w/profile-framedphoto-shrink_400_400/B4DZ.psKQ.J4AY-/0/1785258354110?e=1792270800&v=beta&t=Wg7vJli-6x9YSGnBg3N_AEXnzOdP8eskuil-V7Oq4SA" 
-									alt="Leletu Kamana, the author of Campus-Cart" 
-									loading="lazy" 
-									width="180" 
-									height="180" 
+									src="https://media.licdn.com/dms/image/v2/D4D35AQHDiZjqIjth8w/profile-framedphoto-shrink_400_400/B4DZ.psKQ.J4AY-/0/1785258354110?e=1792270800&v=beta&t=Wg7vJli-6x9YSGnBg3N_AEXnzOdP8eskuil-V7Oq4SA"
+									alt="Leletu Kamana, the author of Campus-Cart"
+									loading="lazy"
+									width="180"
+									height="180"
 									onerror="
 										this.onerror = null;
 										this.src = 'https://i.pravatar.cc/300?u=leletu-kamana';
-									" 
-									class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]" 
+									"
+									class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]"
 								/>
-								<div class="text-center sm:text-left"> <!-- Centred on mobile, left-aligned at sm -->
+								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+								<div class="text-center sm:text-left">
+									<!-- Centred on mobile, left-aligned at sm -->
+									<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 									<h3 class="text-2xl font-extrabold text-[#0d1b3e]">
-										Leletu Kamana <!-- Author name -->
+										Leletu Kamana
+										<!-- Author name -->
 									</h3>
+									<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 									<p class="mt-2 text-sm text-slate-600">
 										First-year Diploma in Information Technology (Software
 										Development) student at The IIE Rosebank International, Port
-										Elizabeth Campus. <!-- Author's course and institution -->
+										Elizabeth Campus.
+										<!-- Author's course and institution -->
 									</p>
+									<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 									<p class="mt-2 text-sm text-slate-600">
 										Campus-Cart is the website project for the WEDE5020 module,
-										created by Leletu and published on GitHub Pages. <!-- Project context -->
+										created by Leletu and published on GitHub Pages.
+										<!-- Project context -->
 									</p>
 								</div>
 							</div>
 						</div>
 
 						<!-- Social links card: navy background with three external profile links -->
-						<div class="rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white sm:p-10"> <!-- Navy rounded card with white text -->
-							<h3 class="text-2xl font-extrabold">Find the author online</h3> <!-- Card title -->
-							<ul class="mt-5 space-y-3 text-sm"> <!-- Stacked list of profile links -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white sm:p-10">
+							<!-- Navy rounded card with white text -->
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+							<h3 class="text-2xl font-extrabold">Find the author online</h3>
+							<!-- Card title -->
+							<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+							<ul class="mt-5 space-y-3 text-sm">
+								<!-- Stacked list of profile links -->
+								<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 								<li>
 									<!-- GitHub profile link: opens in a new tab with rel="noopener noreferrer" for security -->
 									<!-- External GitHub profile URL -->
 									<!-- Opens in a new tab -->
 									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
 									<!-- Glass pill with a subtle hover -->
+									<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: target="_blank": where a linked resource opens; rel="noopener noreferrer": relationship between the current document and linked resource; class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10": CSS classes controlling appearance, spacing and layout. -->
 									<a
-										href="https://github.com/leletu-kamana" 
-										target="_blank" 
-										rel="noopener noreferrer" 
-										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" 
+										href="https://github.com/leletu-kamana"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10"
 									>
 										<!-- Link icon -->
 										<!-- Decorative -->
 										<!-- 16px icon -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/link.svg" 
-											alt="" 
-											class="h-4 w-4" 
+											src="https://unpkg.com/lucide-static@1.44.0/icons/link.svg"
+											alt=""
+											class="h-4 w-4"
 										/>
-										GitHub profile <!-- Link label -->
+										GitHub profile
+										<!-- Link label -->
 									</a>
 								</li>
+								<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 								<li>
 									<!-- Campus-Cart source code link -->
 									<!-- External repository URL -->
 									<!-- Opens in a new tab -->
 									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
 									<!-- Glass pill with a subtle hover -->
+									<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: target="_blank": where a linked resource opens; rel="noopener noreferrer": relationship between the current document and linked resource; class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10": CSS classes controlling appearance, spacing and layout. -->
 									<a
-										href="https://github.com/leletu-kamana/campus-cart" 
-										target="_blank" 
-										rel="noopener noreferrer" 
-										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" 
+										href="https://github.com/leletu-kamana/campus-cart"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10"
 									>
 										<!-- Code icon -->
 										<!-- Decorative -->
 										<!-- 16px icon -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/code.svg" 
-											alt="" 
-											class="h-4 w-4" 
+											src="https://unpkg.com/lucide-static@1.44.0/icons/code.svg"
+											alt=""
+											class="h-4 w-4"
 										/>
-										Campus-Cart source code <!-- Link label -->
+										Campus-Cart source code
+										<!-- Link label -->
 									</a>
 								</li>
+								<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 								<li>
 									<!-- Personal portfolio link -->
 									<!-- External portfolio URL -->
 									<!-- Opens in a new tab -->
 									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
 									<!-- Glass pill with a subtle hover -->
+									<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: target="_blank": where a linked resource opens; rel="noopener noreferrer": relationship between the current document and linked resource; class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10": CSS classes controlling appearance, spacing and layout. -->
 									<a
-										href="https://leletu-kamana-portfolio-2026.vercel.app/" 
-										target="_blank" 
-										rel="noopener noreferrer" 
-										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10" 
+										href="https://leletu-kamana-portfolio-2026.vercel.app/"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 transition hover:bg-white/10"
 									>
 										<!-- Globe icon -->
 										<!-- Decorative -->
 										<!-- 16px icon -->
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 										<img
-											src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" 
-											alt="" 
-											class="h-4 w-4" 
+											src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
+											alt=""
+											class="h-4 w-4"
 										/>
-										Personal portfolio <!-- Link label -->
+										Personal portfolio
+										<!-- Link label -->
 									</a>
 								</li>
 							</ul>
@@ -1070,68 +1405,95 @@
 
 			<!-- ===== Licence and credits ===== -->
 			<!-- Two cards explaining the site's own licence and the third-party software it uses -->
-			<section class="py-20" id="licence"> <!-- Transparent band with an ID for deep linking -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. Attributes: id="licence": unique identifier used by CSS, JavaScript or in-page links. -->
+			<section class="py-20" id="licence">
+				<!-- Transparent band with an ID for deep linking -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
 					<!-- Section heading block -->
-					<div class="max-w-2xl"> <!-- Constrained heading width -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="max-w-2xl">
+						<!-- Constrained heading width -->
 						<!-- Small gold uppercase eyebrow -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 						<span
-							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]" 
+							class="text-xs font-bold uppercase tracking-[0.2em] text-[#c99700]"
 							>Licence</span
-						> <!-- Eyebrow label -->
-						<!-- Large navy section heading -->
-						<h2
-							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl" 
 						>
-							Licence and credits <!-- Heading text -->
+						<!-- Eyebrow label -->
+						<!-- Large navy section heading -->
+						<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+						<h2
+							class="mt-3 text-3xl font-extrabold tracking-tight text-[#0d1b3e] sm:text-4xl"
+						>
+							Licence and credits
+							<!-- Heading text -->
 						</h2>
 					</div>
 
 					<!-- Two-card grid: this site's licence on the left, third-party credits on the right -->
-					<div class="mt-10 grid gap-6 lg:grid-cols-2"> <!-- Single column on mobile, two equal columns at lg -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="mt-10 grid gap-6 lg:grid-cols-2">
+						<!-- Single column on mobile, two equal columns at lg -->
 						<!-- This website's licence -->
 						<!-- White rounded card with a subtle border and shadow -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 						<div
-							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" 
+							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
 						>
-							<h3 class="text-lg font-bold text-[#0d1b3e]">This website</h3> <!-- Card title -->
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+							<h3 class="text-lg font-bold text-[#0d1b3e]">This website</h3>
+							<!-- Card title -->
+							<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 							<p class="mt-3 text-sm text-slate-600">
 								© 2026 Leletu Kamana. Campus-Cart is a student demonstration
 								project created for the WEDE5020 module at The IIE Rosebank
 								International, Port Elizabeth Campus. It does not sell real
-								products or process real payments. <!-- Copyright and demo disclaimer -->
+								products or process real payments.
+								<!-- Copyright and demo disclaimer -->
 							</p>
 						</div>
 
 						<!-- Third-party software and data credits -->
 						<!-- White rounded card with a subtle border and shadow -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 						<div
-							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm" 
+							class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm"
 						>
+							<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 							<h3 class="text-lg font-bold text-[#0d1b3e]">
-								Third-party software and data <!-- Card title -->
+								Third-party software and data
+								<!-- Card title -->
 							</h3>
-							<ul class="mt-3 space-y-3 text-sm text-slate-600"> <!-- Stacked list of credits -->
+							<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+							<ul class="mt-3 space-y-3 text-sm text-slate-600">
+								<!-- Stacked list of credits -->
+								<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 								<li>
 									<!-- Leaflet map library credit with licence note -->
 									<!-- External Leaflet project URL -->
 									<!-- Opens in a new tab -->
 									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
 									<!-- Bold navy underlined link -->
+									<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: target="_blank": where a linked resource opens; rel="noopener noreferrer": relationship between the current document and linked resource; class="font-bold text-[#0d1b3e] underline": CSS classes controlling appearance, spacing and layout. -->
 									<a
-										href="https://leafletjs.com/" 
-										target="_blank" 
-										rel="noopener noreferrer" 
-										class="font-bold text-[#0d1b3e] underline" 
+										href="https://leafletjs.com/"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="font-bold text-[#0d1b3e] underline"
 										>Leaflet</a
 									>
 									1.9.4 draws the collection hub map. Copyright © 2010–2023
 									Volodymyr Agafonkin and © 2010–2011 CloudMade, released under
 									the BSD 2-Clause Licence. The licence text is kept in
+									<!-- ELEMENT DOCUMENTATION: The <code> element contributes to the page structure or content. -->
 									<code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs"
-										>https://campus-cart-olive.vercel.app/assets/vendor/leaflet/LICENSE</code
-									>. <!-- Licence details with inline code reference -->
+										>https://leletu-kamana.github.io/campus-cart/assets/vendor/leaflet/LICENSE</code
+									>.
+									<!-- Licence details with inline code reference -->
 								</li>
+								<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 								<li>
 									<!-- OpenStreetMap attribution -->
 									Map data ©
@@ -1139,13 +1501,15 @@
 									<!-- Opens in a new tab -->
 									<!-- Prevents the new tab from accessing window.opener and strips the referrer -->
 									<!-- Bold navy underlined link -->
+									<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: target="_blank": where a linked resource opens; rel="noopener noreferrer": relationship between the current document and linked resource; class="font-bold text-[#0d1b3e] underline": CSS classes controlling appearance, spacing and layout. -->
 									<a
-										href="https://www.openstreetmap.org/copyright" 
-										target="_blank" 
-										rel="noopener noreferrer" 
-										class="font-bold text-[#0d1b3e] underline" 
+										href="https://www.openstreetmap.org/copyright"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="font-bold text-[#0d1b3e] underline"
 										>OpenStreetMap contributors</a
-									>, available under the Open Database Licence (ODbL). <!-- Attribution sentence -->
+									>, available under the Open Database Licence (ODbL).
+									<!-- Attribution sentence -->
 								</li>
 							</ul>
 						</div>
@@ -1155,50 +1519,66 @@
 
 			<!-- ===== CTA ===== -->
 			<!-- Full-width navy CTA band with two conversion buttons -->
-			<section class="bg-[#0d1b3e] py-20 text-white"> <!-- Full-width navy band with white text -->
-				<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8"> <!-- Centred max-width wrapper with centred text -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="bg-[#0d1b3e] py-20 text-white">
+				<!-- Full-width navy band with white text -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper with centred text -->
 					<!-- Small gold uppercase eyebrow -->
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 					<span
-						class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]" 
+						class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
 						>Get in touch</span
-					> <!-- Eyebrow label -->
+					>
+					<!-- Eyebrow label -->
+					<!-- ELEMENT DOCUMENTATION: Major section heading. -->
 					<h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-						Want to talk to us? <!-- Heading text -->
+						Want to talk to us?
+						<!-- Heading text -->
 					</h2>
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 					<p class="mx-auto mt-4 max-w-xl text-slate-300">
 						Send a pre-purchase enquiry about a specific bundle, or use the
-						general contact form. <!-- Supporting sentence -->
+						general contact form.
+						<!-- Supporting sentence -->
 					</p>
 					<!-- Two conversion CTAs: primary "send enquiry" and secondary "contact us" -->
 					<!-- Stacked on mobile, row at sm -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 					<div
-						class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row" 
+						class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
 					>
 						<!-- Primary CTA: gold pill linking to the enquiry form -->
 						<!-- Enquiry form target -->
 						<!-- Gold pill that brightens on hover -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]": CSS classes controlling appearance, spacing and layout. -->
 						<a
-							href="enquiry.html" 
-							class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]" 
+							href="enquiry.html"
+							class="inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 						>
-							Send an enquiry <!-- Button label -->
+							Send an enquiry
+							<!-- Button label -->
 							<!-- Arrow-right icon -->
 							<!-- Decorative -->
 							<!-- 16px icon -->
+							<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 							<img
-								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" 
-								alt="" 
-								class="h-4 w-4" 
+								src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+								alt=""
+								class="h-4 w-4"
 							/>
 						</a>
 						<!-- Secondary CTA: outlined glass button linking to the contact page -->
 						<!-- Contact page target -->
 						<!-- Outlined glass button -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10": CSS classes controlling appearance, spacing and layout. -->
 						<a
-							href="contact.html" 
-							class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10" 
+							href="contact.html"
+							class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
 						>
-							Contact us <!-- Button label -->
+							Contact us
+							<!-- Button label -->
 						</a>
 					</div>
 				</div>
@@ -1206,60 +1586,84 @@
 
 			<!-- ===== Newsletter band (SoleStyle-style subscribe strip) ===== -->
 			<!-- Rounded navy panel with decorative glows and a single-field email sign-up form -->
-			<section class="bg-[#f7f5f1] pb-20"> <!-- Warm off-white band with bottom padding only -->
-				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="bg-[#f7f5f1] pb-20">
+				<!-- Warm off-white band with bottom padding only -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- Centred max-width wrapper -->
 					<!-- Very rounded navy panel with generous padding -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 					<div
-						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14" 
+						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
 					>
 						<!-- Decorative gold glow, top-right -->
 						<!-- Decorative only -->
 						<!-- Large soft gold glow in the top-right corner -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
 						<div
-							aria-hidden="true" 
-							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl" 
+							aria-hidden="true"
+							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"
 						></div>
 						<!-- Decorative blue glow, bottom-left -->
 						<!-- Decorative only -->
 						<!-- Large soft blue glow in the bottom-left corner -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
 						<div
-							aria-hidden="true" 
-							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl" 
+							aria-hidden="true"
+							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
 						></div>
 
-						<div class="relative grid items-center gap-8 lg:grid-cols-2"> <!-- Relative so content sits above the glows; 2 columns at lg -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative grid items-center gap-8 lg:grid-cols-2">
+							<!-- Relative so content sits above the glows; 2 columns at lg -->
 							<!-- Copy column: eyebrow, headline with italic accent, supporting line -->
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 							<div>
 								<!-- Small gold uppercase eyebrow -->
+								<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 								<span
-									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]" 
+									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
 									>Stay in the loop</span
-								> <!-- Eyebrow label -->
-								<!-- Large white section heading -->
-								<h2
-									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl" 
 								>
-									Get first dibs on <!-- First part of the heading -->
+								<!-- Eyebrow label -->
+								<!-- Large white section heading -->
+								<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+								<h2
+									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
+								>
+									Get first dibs on
+									<!-- First part of the heading -->
 									<!-- Italic serif accent in gold -->
+									<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 									<span
-										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]" 
+										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
 										>new season kit</span
-									> <!-- Italic accent phrase -->
+									>
+									<!-- Italic accent phrase -->
 								</h2>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 								<p class="mt-3 text-sm text-slate-300">
 									One short email a month: new bundles, second-hand drops and
-									collection updates near your campus. <!-- Supporting paragraph -->
+									collection updates near your campus.
+									<!-- Supporting paragraph -->
 								</p>
 							</div>
 
 							<!-- Form "newsletterBandForm": collects visitor input; associated JavaScript handles validation and submission behaviour. -->
-							<form id="newsletterBandForm" class="w-full"> <!-- ID targeted by forms.js -->
+							<!-- ELEMENT DOCUMENTATION: Groups controls used to collect and submit visitor information. Attributes: class="w-full": CSS classes controlling appearance, spacing and layout. -->
+							<form id="newsletterBandForm" class="w-full">
+								<!-- ID targeted by forms.js -->
 								<!-- Input + submit button: stacked on mobile, side-by-side from sm -->
-								<div class="flex flex-col gap-3 sm:flex-row"> <!-- Stacked with 12px gaps; row from sm up -->
+								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+								<div class="flex flex-col gap-3 sm:flex-row">
+									<!-- Stacked with 12px gaps; row from sm up -->
 									<!-- Visually hidden label keeps the field accessible without adding visual clutter -->
+									<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="sr-only": CSS classes controlling appearance, spacing and layout. -->
 									<label for="newsletterBandEmail" class="sr-only"
 										>Email address</label
-									> <!-- Label is screen-reader only -->
+									>
+									<!-- Label is screen-reader only -->
 									<!-- Email field: type="text" + inputmode="email" so JS can validate it
 									     while mobile keyboards still show the @ key -->
 									<!-- ID referenced by the label and forms.js -->
@@ -1268,27 +1672,32 @@
 									<!-- Requests an email-style keyboard on mobile -->
 									<!-- Example hint inside the field -->
 									<!-- Glass input with a gold focus border -->
+									<!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="email": form field name used when its value is collected; type="text": declares the input, button or resource type; inputmode="email": suggests an appropriate on-screen keyboard; placeholder="you@example.com": hint displayed while an input is empty; class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none": CSS classes controlling appearance, spacing and layout. -->
 									<input
-										id="newsletterBandEmail" 
-										name="email" 
-										type="text" 
-										inputmode="email" 
-										placeholder="you@example.com" 
-										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none" 
+										id="newsletterBandEmail"
+										name="email"
+										type="text"
+										inputmode="email"
+										placeholder="you@example.com"
+										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
 									/>
 									<!-- Submit button: gold pill, does not shrink inside the flex row -->
 									<!-- Submits the form to the JS handler -->
 									<!-- Gold pill that never shrinks in the flex row -->
+									<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]": CSS classes controlling appearance, spacing and layout. -->
 									<button
-										type="submit" 
-										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]" 
+										type="submit"
+										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
 									>
-										Join the list <!-- Button label -->
+										Join the list
+										<!-- Button label -->
 									</button>
 								</div>
 								<!-- Reassurance microcopy under the form -->
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 								<p class="mt-3 text-xs text-slate-400">
-									No spam. Unsubscribe any time. <!-- Small privacy reassurance line -->
+									No spam. Unsubscribe any time.
+									<!-- Small privacy reassurance line -->
 								</p>
 							</form>
 						</div>
@@ -1299,249 +1708,364 @@
 
 		<!-- ===== Footer ===== -->
 		<!-- Dark footer: brand block, link columns, legal links and copyright -->
-		<footer class="bg-[#09122e] text-slate-300"> <!-- Very dark navy footer with soft grey text -->
-			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"> <!-- Centred max-width wrapper with 64px vertical padding -->
+		<!-- ELEMENT DOCUMENTATION: Footer region containing supporting links and site information. -->
+		<footer class="bg-[#09122e] text-slate-300">
+			<!-- Very dark navy footer with soft grey text -->
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+				<!-- Centred max-width wrapper with 64px vertical padding -->
 				<!-- Four-column layout: brand (wide on lg) plus three link lists -->
-				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4"> <!-- 1 column on mobile, 2 at md, 4 at lg -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+					<!-- 1 column on mobile, 2 at md, 4 at lg -->
 					<!-- Column 1: brand mark, blurb, opening hours and social/contact icon buttons -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 					<div>
 						<!-- Footer logo: gold "C" tile on a navy circle, links back to the homepage -->
 						<!-- Absolute URL back to the site root homepage -->
 						<!-- Flex row with bold white text -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white": CSS classes controlling appearance, spacing and layout. -->
 						<a
-							href="https://campus-cart-olive.vercel.app/index.html" 
-							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white" 
+							href="https://leletu-kamana.github.io/campus-cart/index.html"
+							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
 						>
 							<!-- 36px gold tile with a navy C -->
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
 							<span
-								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]" 
+								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]"
 								>C</span
-							> <!-- The literal letter shown inside the tile -->
-							<span>Campus<span class="text-[#ffd23f]">-Cart</span></span> <!-- Wordmark with gold suffix -->
+							>
+							<!-- The literal letter shown inside the tile -->
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+							<span
+								>Campus<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+								<span class="text-[#ffd23f]">-Cart</span></span
+							>
+							<!-- Wordmark with gold suffix -->
 						</a>
 						<!-- Short brand description -->
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 						<p class="mt-4 text-sm text-slate-400">
 							Affordable new and second-hand student essentials for South
-							African campuses. <!-- Short brand blurb -->
+							African campuses.
+							<!-- Short brand blurb -->
 						</p>
 						<!-- Support hours -->
-						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p> <!-- Support hours line -->
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
+						<!-- Support hours line -->
 						<!-- Icon-only contact buttons: each has an aria-label for screen readers -->
-						<div class="mt-5 flex items-center gap-2"> <!-- Row of three 36px icon buttons -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="mt-5 flex items-center gap-2">
+							<!-- Row of three 36px icon buttons -->
 							<!-- Email -->
 							<!-- Opens the visitor's email client -->
 							<!-- 36px outlined circle; gold border/text on hover -->
 							<!-- Accessible name -->
+							<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="Email Campus-Cart": accessible name announced by assistive technology. -->
 							<a
-								href="mailto:hello@campus-cart.co.za" 
-								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" 
-								aria-label="Email Campus-Cart" 
+								href="mailto:hello@campus-cart.co.za"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="Email Campus-Cart"
 							>
 								<!-- Mail icon -->
 								<!-- Decorative -->
 								<!-- 16px icon -->
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" 
-									alt="" 
-									class="h-4 w-4" 
+									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+									alt=""
+									class="h-4 w-4"
 								/>
 							</a>
 							<!-- WhatsApp -->
 							<!-- Opens WhatsApp with the number pre-filled -->
 							<!-- 36px outlined circle; gold border/text on hover -->
 							<!-- Accessible name -->
+							<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="WhatsApp Campus-Cart": accessible name announced by assistive technology. -->
 							<a
-								href="https://wa.me/27123456789" 
-								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" 
-								aria-label="WhatsApp Campus-Cart" 
+								href="https://wa.me/27123456789"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="WhatsApp Campus-Cart"
 							>
 								<!-- Message-circle icon -->
 								<!-- Decorative -->
 								<!-- 16px icon -->
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" 
-									alt="" 
-									class="h-4 w-4" 
+									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+									alt=""
+									class="h-4 w-4"
 								/>
 							</a>
 							<!-- Coverage map -->
 							<!-- Coverage page target (relative) -->
 							<!-- 36px outlined circle; gold border/text on hover -->
 							<!-- Accessible name -->
+							<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="Coverage map": accessible name announced by assistive technology. -->
 							<a
-								href="coverage.html" 
-								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" 
-								aria-label="Coverage map" 
+								href="coverage.html"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="Coverage map"
 							>
 								<!-- Globe icon -->
 								<!-- Decorative -->
 								<!-- 16px icon -->
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
 								<img
-									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" 
-									alt="" 
-									class="h-4 w-4" 
+									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
+									alt=""
+									class="h-4 w-4"
 								/>
 							</a>
 						</div>
 					</div>
 
 					<!-- Column 2: shopping-related links -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 					<div>
+						<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
-							Shop <!-- Column heading -->
+							Shop
+							<!-- Column heading -->
 						</h3>
-						<ul class="mt-4 space-y-2.5 text-sm"> <!-- List of shop links -->
+						<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<!-- List of shop links -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a href="products.html" class="transition hover:text-[#ffd23f]"
 									>Shop New</a
-								> <!-- Link to the new products listing -->
+								>
+								<!-- Link to the new products listing -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Deep link to the deals gallery -->
 								<!-- Gold text on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="products.html#deals-gallery" 
-									class="transition hover:text-[#ffd23f]" 
+									href="products.html#deals-gallery"
+									class="transition hover:text-[#ffd23f]"
 									>Deals &amp; Gallery</a
-								> <!-- Link label -->
+								>
+								<!-- Link label -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Deep link to a product detail section -->
 								<!-- Gold text on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="products.html#product-detail" 
-									class="transition hover:text-[#ffd23f]" 
+									href="products.html#product-detail"
+									class="transition hover:text-[#ffd23f]"
 									>Product Detail</a
-								> <!-- Link label -->
+								>
+								<!-- Link label -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Deep link to the selling section -->
 								<!-- Gold text on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="products.html#sell-with-us" 
-									class="transition hover:text-[#ffd23f]" 
+									href="products.html#sell-with-us"
+									class="transition hover:text-[#ffd23f]"
 									>Sell With Us</a
-								> <!-- Link label -->
+								>
+								<!-- Link label -->
 							</li>
 						</ul>
 					</div>
 
 					<!-- Column 3: company / informational links -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 					<div>
+						<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
-							Company <!-- Column heading -->
+							Company
+							<!-- Column heading -->
 						</h3>
-						<ul class="mt-4 space-y-2.5 text-sm"> <!-- List of company links -->
+						<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<!-- List of company links -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a href="about.html" class="transition hover:text-[#ffd23f]"
 									>About</a
-								> <!-- Link to the About page -->
+								>
+								<!-- Link to the About page -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Deep link to the parent hub section -->
 								<!-- Gold text on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="products.html#parent-hub" 
-									class="transition hover:text-[#ffd23f]" 
+									href="products.html#parent-hub"
+									class="transition hover:text-[#ffd23f]"
 									>Parent Hub</a
-								> <!-- Link label -->
+								>
+								<!-- Link label -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a href="enquiry.html" class="transition hover:text-[#ffd23f]"
 									>Enquiry</a
-								> <!-- Link to the enquiry form -->
+								>
+								<!-- Link to the enquiry form -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a href="coverage.html" class="transition hover:text-[#ffd23f]"
 									>Coverage</a
-								> <!-- Link to the coverage page -->
+								>
+								<!-- Link to the coverage page -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a href="contact.html" class="transition hover:text-[#ffd23f]"
 									>Contact</a
-								> <!-- Link to the contact page -->
+								>
+								<!-- Link to the contact page -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a href="account.html" class="transition hover:text-[#ffd23f]"
 									>Account</a
-								> <!-- Link to the account page -->
+								>
+								<!-- Link to the account page -->
 							</li>
 						</ul>
 					</div>
 
 					<!-- Column 4: direct contact details -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 					<div>
+						<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
 						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
-							Reach us <!-- Column heading -->
+							Reach us
+							<!-- Column heading -->
 						</h3>
-						<ul class="mt-4 space-y-2.5 text-sm"> <!-- List of contact details -->
+						<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<!-- List of contact details -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Opens the visitor's email client -->
 								<!-- Gold text on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="mailto:hello@campus-cart.co.za" 
-									class="transition hover:text-[#ffd23f]" 
+									href="mailto:hello@campus-cart.co.za"
+									class="transition hover:text-[#ffd23f]"
 									>hello@campus-cart.co.za</a
-								> <!-- Visible support email -->
+								>
+								<!-- Visible support email -->
 							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
 							<li>
 								<!-- Opens WhatsApp with the number pre-filled -->
 								<!-- Gold text on hover -->
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 								<a
-									href="https://wa.me/27123456789" 
-									class="transition hover:text-[#ffd23f]" 
+									href="https://wa.me/27123456789"
+									class="transition hover:text-[#ffd23f]"
 									>WhatsApp: 012 345 6789</a
-								> <!-- Visible WhatsApp number -->
+								>
+								<!-- Visible WhatsApp number -->
 							</li>
-							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li> <!-- Support hours -->
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
+							<!-- Support hours -->
 						</ul>
 					</div>
 				</div>
 
 				<!-- Legal block: policy links, physical address, credits/sitemap and copyright -->
-				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8"> <!-- Top border separates the legal block from the columns -->
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
+					<!-- Top border separates the legal block from the columns -->
 					<!-- Policy links separated by pipe characters -->
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 					<p class="text-sm text-slate-400">
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
 							>Privacy Policy</a
-						> <!-- Link to the privacy policy -->
-						<span class="text-slate-600"> | </span> <!-- Dimmed pipe divider -->
+						>
+						<!-- Link to the privacy policy -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- Dimmed pipe divider -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 						<a href="terms.html" class="transition hover:text-[#ffd23f]"
 							>Terms &amp; Conditions</a
-						> <!-- Link to the terms page -->
-						<span class="text-slate-600"> | </span> <!-- Dimmed pipe divider -->
+						>
+						<!-- Link to the terms page -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- Dimmed pipe divider -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie Policy</a
-						> <!-- Link to the cookie policy -->
-						<span class="text-slate-600"> | </span> <!-- Dimmed pipe divider -->
+						>
+						<!-- Link to the cookie policy -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- Dimmed pipe divider -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 						<a href="returns.html" class="transition hover:text-[#ffd23f]"
 							>Returns &amp; Delivery</a
-						> <!-- Link to returns and delivery info -->
-						<span class="text-slate-600"> | </span> <!-- Dimmed pipe divider -->
+						>
+						<!-- Link to returns and delivery info -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- Dimmed pipe divider -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
 							>Cookie settings</a
-						> <!-- Link to cookie settings -->
+						>
+						<!-- Link to cookie settings -->
 					</p>
 					<!-- Registered head office address -->
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 					<p class="mt-3 text-sm text-slate-400">
 						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
-						0083. <!-- Physical address line -->
+						0083.
+						<!-- Physical address line -->
 					</p>
 					<!-- Licence/credits link plus XML sitemap for crawlers -->
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 					<p class="mt-3 text-sm text-slate-400">
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
 						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
 							>Licence and credits</a
-						> <!-- Link to the licence section on this page -->
-						<span class="text-slate-600"> | </span> <!-- Dimmed pipe divider -->
-						<a href="https://campus-cart-olive.vercel.app/sitemap.xml" class="transition hover:text-[#ffd23f]"
+						>
+						<!-- Link to the licence section on this page -->
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- Dimmed pipe divider -->
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a
+							href="https://leletu-kamana.github.io/campus-cart/sitemap.xml"
+							class="transition hover:text-[#ffd23f]"
 							>Sitemap.xml</a
-						> <!-- Absolute link to the XML sitemap -->
+						>
+						<!-- Absolute link to the XML sitemap -->
 					</p>
 					<!-- Copyright line; the year span is auto-updated by JavaScript -->
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
 					<p class="mt-3 text-sm text-slate-400">
-						&copy; <span id="copyright-year">2026</span> Campus-Cart. Static
-						demo site — no payments are processed and no personal data is
-						stored. <!-- Copyright and demo disclaimer -->
+						&copy;
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span id="copyright-year">2026</span> Campus-Cart. Static demo site
+						— no payments are processed and no personal data is stored.
+						<!-- Copyright and demo disclaimer -->
 					</p>
 				</div>
 			</div>
@@ -1551,9 +2075,10 @@
 		<!-- Toast element: pointer-events-none so it never blocks clicks; JS fades it in/out via opacity -->
 		<!-- ID targeted by the snackbar JavaScript -->
 		<!-- Fixed, centred pill that starts invisible and fades via opacity -->
+		<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300": CSS classes controlling appearance, spacing and layout. -->
 		<div
-			id="snack" 
-			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300" 
+			id="snack"
+			class="pointer-events-none fixed bottom-6 left-1/2 z-[90] -translate-x-1/2 rounded-full bg-[#0d1b3e] px-5 py-3 text-sm font-semibold text-white opacity-0 shadow-xl transition-opacity duration-300"
 		></div>
 
 		<!-- Back to top -->
@@ -1562,30 +2087,67 @@
 		<!-- Explicit button type -->
 		<!-- Fixed navy circle in the bottom-right; hidden until scrolled -->
 		<!-- Accessible name for the icon-only button -->
+		<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout; aria-label="Back to top": accessible name announced by assistive technology. -->
 		<button
-			id="toTop" 
-			type="button" 
-			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]" 
-			aria-label="Back to top" 
+			id="toTop"
+			type="button"
+			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
+			aria-label="Back to top"
 		>
 			<!-- Up-arrow icon -->
 			<!-- Decorative -->
 			<!-- 20px icon -->
+			<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
 			<img
-				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg" 
-				alt="" 
-				class="h-5 w-5" 
+				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
+				alt=""
+				class="h-5 w-5"
 			/>
 		</button>
 
 		<!-- ===== Site script ===== -->
 		<!-- All scripts use defer so they download in parallel and execute in order after parsing -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/data.js" defer></script> <!-- Shared product, bundle and campus data -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/ui.js" defer></script> <!-- Header, menu, cart drawer and general UI behaviours -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/consent.js" defer></script> <!-- Cookie consent banner logic -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/interactions.js" defer></script> <!-- Hover, reveal and other micro-interactions -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/forms.js" defer></script> <!-- Newsletter, enquiry and contact form validation/submission -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/features.js" defer></script> <!-- Wishlist, back-to-top, clock and page-level features -->
-		<script src="https://campus-cart-olive.vercel.app/assets/js/script.js" defer></script> <!-- Page bootstrap and shared helpers -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/data.js"
+			defer
+		></script>
+		<!-- Shared product, bundle and campus data -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/ui.js"
+			defer
+		></script>
+		<!-- Header, menu, cart drawer and general UI behaviours -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/consent.js"
+			defer
+		></script>
+		<!-- Cookie consent banner logic -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/interactions.js"
+			defer
+		></script>
+		<!-- Hover, reveal and other micro-interactions -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/forms.js"
+			defer
+		></script>
+		<!-- Newsletter, enquiry and contact form validation/submission -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/features.js"
+			defer
+		></script>
+		<!-- Wishlist, back-to-top, clock and page-level features -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script
+			src="https://leletu-kamana.github.io/campus-cart/assets/js/script.js"
+			defer
+		></script>
+		<!-- Page bootstrap and shared helpers -->
 	</body>
 </html>
