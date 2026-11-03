@@ -378,7 +378,7 @@
     // undefined
     const seeLess = $('#deals-see-less');
     // undefined
-    const STEP = 9;
+    const STEP = window.matchMedia('(max-width: 767px)').matches ? 9 : 4;
     // undefined
     let visibleCount = STEP;
 
