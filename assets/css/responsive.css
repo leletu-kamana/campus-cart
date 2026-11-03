@@ -1,0 +1,81 @@
+/* ==========================================================
+   Campus-Cart universal responsive safety layer
+   Loaded last. Remove its <link> to undo everything.
+   ========================================================== */
+
+/* Prevent sideways scrolling without breaking the sticky header */
+html,
+body {
+	max-width: 100%;
+	overflow-x: clip;
+}
+
+/* Stop iOS from resizing text on rotation */
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+/* Embedded media never exceeds its container */
+video,
+iframe,
+canvas,
+svg:not([class*="h-"]):not([class*="w-"]) {
+	max-width: 100%;
+}
+
+/* Long words, emails and URLs wrap instead of pushing the layout wide */
+p,
+li,
+dd,
+td,
+h1,
+h2,
+h3,
+h4 {
+	overflow-wrap: anywhere;
+}
+
+/* Wide tables scroll inside themselves */
+.table-scroll {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Leaflet map: responsive height, and keep tiles from shrinking */
+.leaflet-container {
+	max-width: 100%;
+	height: clamp(280px, 55vh, 560px);
+}
+.leaflet-container img {
+	max-width: none !important;
+}
+
+/* Comfortable tap targets on touch screens */
+@media (pointer: coarse) {
+	button,
+	select,
+	input,
+	[role="button"] {
+		min-height: 44px;
+	}
+}
+
+/* Small phones: tighten the page padding a little */
+@media (max-width: 480px) {
+	section {
+		scroll-margin-top: 4rem;
+	}
+}
+
+/* Respect users who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
