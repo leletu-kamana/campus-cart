@@ -1,749 +1,1319 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
   This document provides the product and bundle enquiry interface. Its form collects contact, item, quantity and institution details, while the linked JavaScript handles client-side interaction and result presentation; submitting the page does not itself prove that an order has been placed.
 -->
 <!-- CAMPUS-CART ENQUIRY PAGE: semantic page structure, accessible content, navigation and interactive controls. -->
 <!-- ELEMENT DOCUMENTATION: Root HTML document; lang declares the document language. -->
 <html lang="en">
-<!-- ELEMENT DOCUMENTATION: Document metadata and linked resources loaded before page content. -->
-<head>
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. -->
-<meta charset="utf-8">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="width=device-width, initial-scale=1": value supplied for a metadata entry. -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- ELEMENT DOCUMENTATION: Browser-tab and search-result title. -->
-<title>Bundle Enquiry | Campus-Cart Student Essentials</title>
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.": value supplied for a metadata entry. -->
-<meta name="description" content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="index, follow": value supplied for a metadata entry. -->
-<meta name="robots" content="index, follow">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="#0d1b3e": value supplied for a metadata entry. -->
-<meta name="theme-color" content="#0d1b3e">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery": value supplied for a metadata entry. -->
-<meta name="keywords" content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="website": value supplied for a metadata entry. -->
-<meta property="og:type" content="website">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Campus-Cart": value supplied for a metadata entry. -->
-<meta property="og:site_name" content="Campus-Cart">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="en_ZA": value supplied for a metadata entry. -->
-<meta property="og:locale" content="en_ZA">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Bundle Enquiry | Campus-Cart Student Essentials": value supplied for a metadata entry. -->
-<meta property="og:title" content="Bundle Enquiry | Campus-Cart Student Essentials">
-  <!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.": value supplied for a metadata entry. -->
-<meta property="og:description" content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.">
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. -->
-<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-  <!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://fonts.googleapis.com": link destination, email action or in-page anchor. -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://fonts.gstatic.com": link destination, email action or in-page anchor; crossorigin: cross-origin resource handling. -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: rel="stylesheet": relationship between the current document and linked resource. -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E": link destination, email action or in-page anchor. -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E">
+	<!-- ELEMENT DOCUMENTATION: Document metadata and linked resources loaded before page content. -->
+	<head>
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. -->
+		<meta charset="utf-8" />
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="width=device-width, initial-scale=1": value supplied for a metadata entry. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- ELEMENT DOCUMENTATION: Browser-tab and search-result title. -->
+		<title>Bundle Enquiry | Campus-Cart Student Essentials</title>
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.": value supplied for a metadata entry. -->
+		<meta
+			name="description"
+			content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college."
+		/>
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="index, follow": value supplied for a metadata entry. -->
+		<meta name="robots" content="index, follow" />
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="#0d1b3e": value supplied for a metadata entry. -->
+		<meta name="theme-color" content="#0d1b3e" />
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery": value supplied for a metadata entry. -->
+		<meta
+			name="keywords"
+			content="student essentials, South Africa, university, TVET college, second-hand, starter bundle, delivery"
+		/>
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="website": value supplied for a metadata entry. -->
+		<meta property="og:type" content="website" />
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Campus-Cart": value supplied for a metadata entry. -->
+		<meta property="og:site_name" content="Campus-Cart" />
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="en_ZA": value supplied for a metadata entry. -->
+		<meta property="og:locale" content="en_ZA" />
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Bundle Enquiry | Campus-Cart Student Essentials": value supplied for a metadata entry. -->
+		<meta
+			property="og:title"
+			content="Bundle Enquiry | Campus-Cart Student Essentials"
+		/>
+		<!-- ELEMENT DOCUMENTATION: Metadata describing encoding, viewport, indexing, theme or social previews. Attributes: content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college.": value supplied for a metadata entry. -->
+		<meta
+			property="og:description"
+			content="Check price, stock and delivery time for Campus-Cart bundles and products to any South African university or TVET college."
+		/>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. -->
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://fonts.googleapis.com": link destination, email action or in-page anchor. -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="https://fonts.gstatic.com": link destination, email action or in-page anchor; crossorigin: cross-origin resource handling. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: rel="stylesheet": relationship between the current document and linked resource. -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600;1,700;1,800&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E": link destination, email action or in-page anchor. -->
+		<link
+			rel="icon"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230d1b3e'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' fill='%23ffd23f' font-family='Arial' font-weight='700'%3EC%3C/text%3E%3C/svg%3E"
+		/>
 
-  <!-- Tailwind v4 theme config: animations used across this page -->
-  <!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="../assets/css/styles.css": link destination, email action or in-page anchor. -->
-<link rel="stylesheet" href="../assets/css/styles.css">
-</head>
+		<!-- Tailwind v4 theme config: animations used across this page -->
+		<!-- ELEMENT DOCUMENTATION: External resource relationship, such as a stylesheet or icon. Attributes: href="../assets/css/styles.css": link destination, email action or in-page anchor. -->
+		<link rel="stylesheet" href="../assets/css/styles.css" />
+	</head>
 
-<!-- ELEMENT DOCUMENTATION: Visible page content and interactive interface. -->
-<body class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]">
+	<!-- ELEMENT DOCUMENTATION: Visible page content and interactive interface. -->
+	<body
+		class="bg-[#f7f5f1] font-sans text-slate-700 antialiased [font-family:Inter,sans-serif]"
+	>
+		<!-- Skip link for keyboard users -->
+		<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white": CSS classes controlling appearance, spacing and layout. -->
+		<a
+			href="#main"
+			class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
+		>
+			Skip to main content
+		</a>
 
-  <!-- Skip link for keyboard users -->
-  <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white": CSS classes controlling appearance, spacing and layout. -->
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-[#0d1b3e] focus:px-5 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white">
-    Skip to main content
-  </a>
+		<!-- ===== Top utility bar ===== -->
+		<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+		<div
+			class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block"
+		>
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+			<div
+				class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8"
+			>
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="flex items-center gap-5">
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="mailto:hello@campus-cart.co.za"
+						class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]"
+					>
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						hello@campus-cart.co.za
+					</a>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="https://wa.me/27123456789"
+						class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex"
+					>
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						+27 12 345 6789
+					</a>
+				</div>
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="flex items-center gap-5">
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+					<a href="account.html#student" class="transition hover:text-[#ffd23f]"
+						>Student path</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span class="text-slate-600">|</span>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+					<a href="account.html#parent" class="transition hover:text-[#ffd23f]"
+						>Parent path</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span class="text-slate-600">|</span>
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span
+						class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex"
+					>
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg"
+							alt=""
+							class="h-3.5 w-3.5"
+						/>
+						Nothing stored on this site
+					</span>
+				</div>
+			</div>
+		</div>
 
-  <!-- ===== Top utility bar ===== -->
-  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="hidden border-b border-white/10 bg-[#0d1b3e] text-slate-300 md:block">
-    <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="mx-auto flex h-9 max-w-7xl items-center justify-between px-4 text-xs sm:px-6 lg:px-8">
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="flex items-center gap-5">
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="mailto:hello@campus-cart.co.za" class="inline-flex items-center gap-1.5 transition hover:text-[#ffd23f]">
-          <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" alt="" class="h-3.5 w-3.5">
-          hello@campus-cart.co.za
-        </a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex": CSS classes controlling appearance, spacing and layout. -->
-<a href="https://wa.me/27123456789" class="hidden items-center gap-1.5 transition hover:text-[#ffd23f] lg:inline-flex">
-          <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" alt="" class="h-3.5 w-3.5">
-          +27 12 345 6789
-        </a>
-      </div>
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="flex items-center gap-5">
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="account.html#student" class="transition hover:text-[#ffd23f]">Student path</a>
-        <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600">|</span>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="account.html#parent" class="transition hover:text-[#ffd23f]">Parent path</a>
-        <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600">|</span>
-        <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="hidden items-center gap-1.5 text-[#ffd23f] sm:inline-flex">
-          <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/shield-check.svg" alt="" class="h-3.5 w-3.5">
-          Nothing stored on this site
-        </span>
-      </div>
-    </div>
-  </div>
+		<!-- ===== Header / Navigation ===== -->
+		<!-- ELEMENT DOCUMENTATION: Site header region containing branding and navigation. Attributes: class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300": CSS classes controlling appearance, spacing and layout. -->
+		<header
+			id="siteHeader"
+			class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300"
+		>
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+			<div
+				class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+			>
+				<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+				<a
+					href="../index.html"
+					class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]"
+				>
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span
+						class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]"
+						>C</span
+					>
+					<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+					<span
+						>Campus<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-[#c99700]">-Cart</span></span
+					>
+				</a>
 
-  <!-- ===== Header / Navigation ===== -->
-  <!-- ELEMENT DOCUMENTATION: Site header region containing branding and navigation. Attributes: class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300": CSS classes controlling appearance, spacing and layout. -->
-<header id="siteHeader" class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-md transition-shadow duration-300">
-    <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="../index.html" class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-[#0d1b3e]">
-        <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="grid h-9 w-9 place-items-center rounded-xl bg-[#0d1b3e] text-lg text-[#ffd23f]">C</span>
-        <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span>Campus<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-[#c99700]">-Cart</span></span>
-      </a>
+				<!-- nav landmark groups related page content and supports accessible navigation. -->
+				<!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Main navigation": accessible name announced by assistive technology. -->
+				<nav
+					class="hidden items-center gap-1 lg:flex"
+					aria-label="Main navigation"
+				>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="../index.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Home</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="about.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>About</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="products.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Shop</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="products.html#parent-hub"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Parent Hub</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: aria-current="page": identifies the current page or item; class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="enquiry.html"
+						aria-current="page"
+						class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]"
+						>Enquiry</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="coverage.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Coverage</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="contact.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Contact</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="account.html"
+						class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]"
+						>Account</a
+					>
+				</nav>
 
-      <!-- nav landmark groups related page content and supports accessible navigation. -->
-      <!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Main navigation": accessible name announced by assistive technology. -->
-<nav class="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="../index.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Home</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="about.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">About</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Shop</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html#parent-hub" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Parent Hub</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: aria-current="page": identifies the current page or item; class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="enquiry.html" aria-current="page" class="rounded-full bg-[#0d1b3e]/5 px-4 py-2 text-sm font-semibold text-[#0d1b3e]">Enquiry</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="coverage.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Coverage</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="contact.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Contact</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="account.html" class="rounded-full px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-[#0d1b3e]">Account</a>
-      </nav>
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="flex items-center gap-2 sm:gap-3">
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid": CSS classes controlling appearance, spacing and layout; aria-label="Search products": accessible name announced by assistive technology. -->
+					<a
+						href="products.html"
+						class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid"
+						aria-label="Search products"
+					>
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+					</a>
 
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="flex items-center gap-2 sm:gap-3">
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid": CSS classes controlling appearance, spacing and layout; aria-label="Search products": accessible name announced by assistive technology. -->
-<a href="products.html" class="hidden h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e] lg:grid" aria-label="Search products">
-          <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/search.svg" alt="" class="h-5 w-5">
-        </a>
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="hidden text-right xl:block">
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-xs font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+						<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">
+							--:--:--
+						</p>
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-[11px] text-slate-500": CSS classes controlling appearance, spacing and layout. -->
+						<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
+					</div>
 
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="hidden text-right xl:block">
-          <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-xs font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<p id="navTime" class="text-xs font-bold text-[#0d1b3e]">--:--:--</p>
-          <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. Attributes: class="text-[11px] text-slate-500": CSS classes controlling appearance, spacing and layout. -->
-<p id="navDate" class="text-[11px] text-slate-500">Loading…</p>
-        </div>
+					<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]": CSS classes controlling appearance, spacing and layout; aria-controls="cartDrawer": identifies the interface element controlled by this element; aria-expanded="false": communicates expanded or collapsed state; aria-label="Open cart": accessible name announced by assistive technology. -->
+					<button
+						id="cartButton"
+						type="button"
+						class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]"
+						aria-controls="cartDrawer"
+						aria-expanded="false"
+						aria-label="Open cart"
+					>
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
+						<img
+							src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+						<span
+							id="cartCount"
+							class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]"
+							>0</span
+						>
+					</button>
 
-        <!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]": CSS classes controlling appearance, spacing and layout; aria-controls="cartDrawer": identifies the interface element controlled by this element; aria-expanded="false": communicates expanded or collapsed state; aria-label="Open cart": accessible name announced by assistive technology. -->
-<button id="cartButton" type="button" class="relative grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] transition hover:border-[#0d1b3e]" aria-controls="cartDrawer" aria-expanded="false" aria-label="Open cart">
+					<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden": CSS classes controlling appearance, spacing and layout; aria-expanded="false": communicates expanded or collapsed state; aria-controls="mobileMenu": identifies the interface element controlled by this element; aria-label="Menu": accessible name announced by assistive technology. -->
+					<button
+						id="navToggle"
+						type="button"
+						class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden"
+						aria-expanded="false"
+						aria-controls="mobileMenu"
+						aria-label="Menu"
+					>
+						<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg": location of an image, script or embedded resource; alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
+						<img
+							id="navIcon"
+							src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg"
+							alt=""
+							class="h-5 w-5"
+						/>
+					</button>
+				</div>
+			</div>
 
-          <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-5 w-5">
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<span id="cartCount" class="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-[#ffd23f] px-1 text-[11px] font-extrabold text-[#0d1b3e]">0</span>
-        
-</button>
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="hidden border-t border-slate-200 bg-white lg:hidden": CSS classes controlling appearance, spacing and layout. -->
+			<div
+				id="mobileMenu"
+				class="hidden border-t border-slate-200 bg-white lg:hidden"
+			>
+				<!-- nav landmark groups related page content and supports accessible navigation. -->
+				<!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Mobile navigation": accessible name announced by assistive technology. -->
+				<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="../index.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Home</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="about.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>About</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="products.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Shop</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="products.html#parent-hub"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Parent Hub</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: aria-current="page": identifies the current page or item; class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="enquiry.html"
+						aria-current="page"
+						class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]"
+						>Enquiry</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="coverage.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Coverage</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="contact.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Contact</a
+					>
+					<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
+					<a
+						href="account.html"
+						class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50"
+						>Account</a
+					>
+				</nav>
+			</div>
+		</header>
 
-        <!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden": CSS classes controlling appearance, spacing and layout; aria-expanded="false": communicates expanded or collapsed state; aria-controls="mobileMenu": identifies the interface element controlled by this element; aria-label="Menu": accessible name announced by assistive technology. -->
-<button id="navToggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 bg-white text-[#0d1b3e] lg:hidden" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
-          <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg": location of an image, script or embedded resource; alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
-<img id="navIcon" src="https://unpkg.com/lucide-static@1.44.0/icons/menu.svg" alt="" class="h-5 w-5">
-        </button>
-      </div>
-    </div>
+		<!-- main landmark groups related page content and supports accessible navigation. -->
+		<!-- ELEMENT DOCUMENTATION: Primary content landmark for this page. Attributes: tabindex="-1": controls keyboard focus behaviour. -->
+		<main id="main" tabindex="-1">
+			<!-- ===== Page hero ===== -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]": CSS classes controlling appearance, spacing and layout. -->
+				<div
+					aria-hidden="true"
+					class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"
+				></div>
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl": CSS classes controlling appearance, spacing and layout. -->
+				<div
+					aria-hidden="true"
+					class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"
+				></div>
 
-    <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="hidden border-t border-slate-200 bg-white lg:hidden": CSS classes controlling appearance, spacing and layout. -->
-<div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
-      <!-- nav landmark groups related page content and supports accessible navigation. -->
-      <!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Mobile navigation": accessible name announced by assistive technology. -->
-<nav class="space-y-1 px-4 py-4" aria-label="Mobile navigation">
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="../index.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Home</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="about.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">About</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Shop</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html#parent-hub" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Parent Hub</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: aria-current="page": identifies the current page or item; class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="enquiry.html" aria-current="page" class="block rounded-2xl bg-[#0d1b3e]/5 px-4 py-3 text-sm font-bold text-[#0d1b3e]">Enquiry</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="coverage.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Coverage</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="contact.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Contact</a>
-        <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50": CSS classes controlling appearance, spacing and layout. -->
-<a href="account.html" class="block rounded-2xl px-4 py-3 text-sm font-medium text-slate-600 hover:bg-slate-50">Account</a>
-      </nav>
-    </div>
-  </header>
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div
+					class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+				>
+					<!-- nav landmark groups related page content and supports accessible navigation. -->
+					<!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Breadcrumb": accessible name announced by assistive technology. -->
+					<nav class="mb-6" aria-label="Breadcrumb">
+						<!-- ELEMENT DOCUMENTATION: Ordered list of sequential items. -->
+						<ol class="flex items-center gap-2 text-sm text-slate-400">
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="../index.html" class="transition hover:text-[#ffd23f]"
+									>Home</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. Attributes: class="text-slate-500": CSS classes controlling appearance, spacing and layout. -->
+							<li aria-hidden="true" class="text-slate-500">/</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. Attributes: class="font-semibold text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+							<li aria-current="page" class="font-semibold text-[#ffd23f]">
+								Enquiry
+							</li>
+						</ol>
+					</nav>
 
-  <!-- main landmark groups related page content and supports accessible navigation. -->
-  <!-- ELEMENT DOCUMENTATION: Primary content landmark for this page. Attributes: tabindex="-1": controls keyboard focus behaviour. -->
-<main id="main" tabindex="-1">
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="animate-fade-up">
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span
+							class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]"
+						>
+							<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
+							<img
+								src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg"
+								alt=""
+								class="h-3.5 w-3.5"
+							/>
+							Before you buy
+						</span>
+						<!-- ELEMENT DOCUMENTATION: Main page heading. -->
+						<h1
+							class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl"
+						>
+							Pre-purchase
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+							<span
+								class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
+								>enquiry</span
+							>
+						</h1>
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+						<p class="mt-5 max-w-2xl text-lg text-slate-300">
+							Ask about a bundle, a single product or a second-hand listing.
+							Your message opens in your own email app — nothing is stored on
+							this site.
+						</p>
+					</div>
+				</div>
+			</section>
 
-    <!-- ===== Page hero ===== -->
-    <!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
-<section class="relative overflow-hidden bg-[#0d1b3e] text-white">
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]": CSS classes controlling appearance, spacing and layout. -->
-<div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,210,63,0.16),transparent_45%),radial-gradient(circle_at_10%_90%,rgba(56,89,196,0.40),transparent_50%)]"></div>
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl": CSS classes controlling appearance, spacing and layout. -->
-<div aria-hidden="true" class="absolute right-[-15%] top-[-40%] h-[120%] w-[55%] -rotate-12 rounded-[3rem] bg-gradient-to-br from-[#ffd23f]/30 to-[#ffd23f]/5 blur-2xl"></div>
+			<!-- ===== Enquiry form ===== -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="py-20">
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div class="grid gap-10 lg:grid-cols-5">
+						<!-- Form column -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="lg:col-span-3">
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div
+								class="rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-10"
+							>
+								<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+								<h2 class="text-2xl font-extrabold text-[#0d1b3e] sm:text-3xl">
+									Send your enquiry
+								</h2>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+								<p class="mt-2 text-sm text-slate-500">
+									We check the item and show the estimated total and
+									availability on this page. You can then email the enquiry to
+									us.
+								</p>
 
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <!-- nav landmark groups related page content and supports accessible navigation. -->
-        <!-- ELEMENT DOCUMENTATION: Navigation landmark grouping related links. Attributes: aria-label="Breadcrumb": accessible name announced by assistive technology. -->
-<nav class="mb-6" aria-label="Breadcrumb">
-          <!-- ELEMENT DOCUMENTATION: Ordered list of sequential items. -->
-<ol class="flex items-center gap-2 text-sm text-slate-400">
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="../index.html" class="transition hover:text-[#ffd23f]">Home</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. Attributes: class="text-slate-500": CSS classes controlling appearance, spacing and layout. -->
-<li aria-hidden="true" class="text-slate-500">/</li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. Attributes: class="font-semibold text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<li aria-current="page" class="font-semibold text-[#ffd23f]">Enquiry</li>
-          </ol>
-        </nav>
+								<!-- Input form; JavaScript provides client-side validation and submission handling. -->
+								<!-- ELEMENT DOCUMENTATION: Groups controls used to collect and submit visitor information. Attributes: class="mt-8 space-y-5": CSS classes controlling appearance, spacing and layout. -->
+								<form id="enquiry-form" class="mt-8 space-y-5">
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+									<div>
+										<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+										<label
+											for="enq-type"
+											class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+											>I am a *</label
+										>
+										<!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="enquirerType": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+										<select
+											id="enq-type"
+											name="enquirerType"
+											class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+										>
+											<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+											<option value="Student">Student</option>
+											<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+											<option value="Parent/Guardian">Parent/Guardian</option>
+										</select>
+										<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-type-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+										<span
+											class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+											id="enq-type-error"
+											role="alert"
+										></span>
+									</div>
 
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="animate-fade-up">
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#ffd23f]">
-            <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-3.5 w-3.5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/sparkles.svg" alt="" class="h-3.5 w-3.5"> Before you buy
-          </span>
-          <!-- ELEMENT DOCUMENTATION: Main page heading. -->
-<h1 class="mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl">
-            Pre-purchase <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]">enquiry</span>
-          </h1>
-          <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-5 max-w-2xl text-lg text-slate-300">
-            Ask about a bundle, a single product or a second-hand listing. Your message opens in your own email
-            app — nothing is stored on this site.
-          </p>
-        </div>
-      </div>
-    </section>
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+									<div class="grid gap-5 md:grid-cols-2">
+										<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+										<div>
+											<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+											<label
+												for="enq-name"
+												class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+												>Full name *</label
+											>
+											<!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="name": form field name used when its value is collected; type="text": declares the input, button or resource type; autocomplete="name": guides browser autofill behaviour; placeholder="e.g. Thandi Mokoena": hint displayed while an input is empty; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+											<input
+												id="enq-name"
+												name="name"
+												type="text"
+												autocomplete="name"
+												placeholder="e.g. Thandi Mokoena"
+												class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+											/>
+											<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-name-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+											<span
+												class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+												id="enq-name-error"
+												role="alert"
+											></span>
+										</div>
+										<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+										<div>
+											<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+											<label
+												for="enq-email"
+												class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+												>Email address *</label
+											>
+											<!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="email": form field name used when its value is collected; type="text": declares the input, button or resource type; inputmode="email": suggests an appropriate on-screen keyboard; autocomplete="email": guides browser autofill behaviour; placeholder="you@example.co.za": hint displayed while an input is empty; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+											<input
+												id="enq-email"
+												name="email"
+												type="text"
+												inputmode="email"
+												autocomplete="email"
+												placeholder="you@example.co.za"
+												class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+											/>
+											<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-email-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+											<span
+												class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+												id="enq-email-error"
+												role="alert"
+											></span>
+										</div>
+									</div>
 
-    <!-- ===== Enquiry form ===== -->
-    <!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
-<section class="py-20">
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="grid gap-10 lg:grid-cols-5">
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+									<div>
+										<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+										<label
+											for="enq-item"
+											class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+											>Bundle or product *</label
+										>
+										<!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="item": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+										<select
+											id="enq-item"
+											name="item"
+											class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+										>
+											<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+											<option value="">Choose an item...</option>
+											<!-- ELEMENT DOCUMENTATION: The <optgroup> element contributes to the page structure or content. -->
+											<optgroup label="Starter bundles">
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Basic Starter Bundle</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Standard Starter Bundle</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Premium Starter Bundle</option>
+											</optgroup>
+											<!-- ELEMENT DOCUMENTATION: The <optgroup> element contributes to the page structure or content. -->
+											<optgroup label="New products">
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Duvet &amp; Linen Set (Double)</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Electric Kettle 1.7L</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Stationery Mega Pack</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Load-Shedding Light Kit</option>
+											</optgroup>
+											<!-- ELEMENT DOCUMENTATION: The <optgroup> element contributes to the page structure or content. -->
+											<optgroup label="Second-hand marketplace">
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Study Desk</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Mini Bar Fridge</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Accounting Textbook Set</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Laptop Bag 15&quot;</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Two-Tier Bookshelf</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option>Study Chair</option>
+											</optgroup>
+										</select>
+										<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-item-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+										<span
+											class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+											id="enq-item-error"
+											role="alert"
+										></span>
+									</div>
 
-          <!-- Form column -->
-          <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="lg:col-span-3">
-            <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="rounded-[2.5rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-              <!-- ELEMENT DOCUMENTATION: Major section heading. -->
-<h2 class="text-2xl font-extrabold text-[#0d1b3e] sm:text-3xl">Send your enquiry</h2>
-              <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-2 text-sm text-slate-500">We check the item and show the estimated total and availability on this page. You can then email the enquiry to us.</p>
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+									<div class="grid gap-5 md:grid-cols-2">
+										<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+										<div>
+											<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+											<label
+												for="enq-qty"
+												class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+												>Quantity *</label
+											>
+											<!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="quantity": form field name used when its value is collected; type="number": declares the input, button or resource type; value="1": initial or submitted value of a control; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+											<input
+												id="enq-qty"
+												name="quantity"
+												type="number"
+												value="1"
+												class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+											/>
+											<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-qty-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+											<span
+												class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+												id="enq-qty-error"
+												role="alert"
+											></span>
+										</div>
+										<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+										<div>
+											<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+											<label
+												for="enq-method"
+												class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+												>How do you want to get it? *</label
+											>
+											<!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="method": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+											<select
+												id="enq-method"
+												name="method"
+												class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+											>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option value="Delivery">
+													Deliver to my institution
+												</option>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option value="Collection">
+													Collect from the provincial hub
+												</option>
+											</select>
+											<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-method-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+											<span
+												class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+												id="enq-method-error"
+												role="alert"
+											></span>
+										</div>
+									</div>
 
-              <!-- Input form; JavaScript provides client-side validation and submission handling. -->
-              <!-- ELEMENT DOCUMENTATION: Groups controls used to collect and submit visitor information. Attributes: class="mt-8 space-y-5": CSS classes controlling appearance, spacing and layout. -->
-<form id="enquiry-form" class="mt-8 space-y-5">
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+									<div class="grid gap-5 md:grid-cols-2">
+										<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+										<div>
+											<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+											<label
+												for="enq-province"
+												class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+												>Province *</label
+											>
+											<!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="province": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+											<select
+												id="enq-province"
+												name="province"
+												class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+											>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option value="">Choose a province...</option>
+											</select>
+											<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-province-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+											<span
+												class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+												id="enq-province-error"
+												role="alert"
+											></span>
+										</div>
+										<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+										<div>
+											<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+											<label
+												for="enq-institution"
+												class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+												>Institution *</label
+											>
+											<!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="institution": form field name used when its value is collected; disabled: prevents a control from being changed or activated; class="w-full rounded-full border border-slate-300 bg-slate-100 px-5 py-3 text-sm text-slate-400 focus:border-[#0d1b3e] focus:outline-none": CSS classes controlling appearance, spacing and layout. -->
+											<select
+												id="enq-institution"
+												name="institution"
+												disabled
+												class="w-full rounded-full border border-slate-300 bg-slate-100 px-5 py-3 text-sm text-slate-400 focus:border-[#0d1b3e] focus:outline-none"
+											>
+												<!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
+												<option value="">Choose a province first...</option>
+											</select>
+											<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-institution-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+											<span
+												class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+												id="enq-institution-error"
+												role="alert"
+											></span>
+										</div>
+									</div>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                  <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-type" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">I am a *</label>
-                  <!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="enquirerType": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<select id="enq-type" name="enquirerType" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                    <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="Student">Student</option>
-                    <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="Parent/Guardian">Parent/Guardian</option>
-                  </select>
-                  <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-type-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-type-error" role="alert"></span>
-                </div>
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="hidden": CSS classes controlling appearance, spacing and layout. -->
+									<div id="enq-other-group" class="hidden">
+										<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+										<label
+											for="enq-other"
+											class="mb-1.5 block text-sm font-bold text-[#0d1b3e]"
+											>Name of your institution *</label
+										>
+										<!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="otherInstitution": form field name used when its value is collected; type="text": declares the input, button or resource type; placeholder="e.g. Your private college or campus name": hint displayed while an input is empty; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+										<input
+											id="enq-other"
+											name="otherInstitution"
+											type="text"
+											placeholder="e.g. Your private college or campus name"
+											class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]"
+										/>
+										<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-other-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
+										<span
+											class="error-msg mt-1 hidden text-xs font-semibold text-red-600"
+											id="enq-other-error"
+											role="alert"
+										></span>
+									</div>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="grid gap-5 md:grid-cols-2">
-                  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                    <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-name" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Full name *</label>
-                    <!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="name": form field name used when its value is collected; type="text": declares the input, button or resource type; autocomplete="name": guides browser autofill behaviour; placeholder="e.g. Thandi Mokoena": hint displayed while an input is empty; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<input id="enq-name" name="name" type="text" autocomplete="name" placeholder="e.g. Thandi Mokoena" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                    <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-name-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-name-error" role="alert"></span>
-                  </div>
-                  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                    <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-email" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Email address *</label>
-                    <!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="email": form field name used when its value is collected; type="text": declares the input, button or resource type; inputmode="email": suggests an appropriate on-screen keyboard; autocomplete="email": guides browser autofill behaviour; placeholder="you@example.co.za": hint displayed while an input is empty; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<input id="enq-email" name="email" type="text" inputmode="email" autocomplete="email" placeholder="you@example.co.za" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                    <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-email-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-email-error" role="alert"></span>
-                  </div>
-                </div>
+									<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+									<div
+										class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+									>
+										<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout. -->
+										<button
+											type="submit"
+											class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]"
+										>
+											Get availability and price
+											<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
+											<img
+												src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+												alt=""
+												class="h-4 w-4"
+											/>
+										</button>
+										<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+										<p class="text-xs text-slate-400">
+											No data leaves this page until you hit send.
+										</p>
+									</div>
+								</form>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                  <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-item" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Bundle or product *</label>
-                  <!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="item": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<select id="enq-item" name="item" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                    <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="">Choose an item...</option>
-                    <!-- ELEMENT DOCUMENTATION: The <optgroup> element contributes to the page structure or content. -->
-<optgroup label="Starter bundles">
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Basic Starter Bundle</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Standard Starter Bundle</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Premium Starter Bundle</option>
-                    </optgroup>
-                    <!-- ELEMENT DOCUMENTATION: The <optgroup> element contributes to the page structure or content. -->
-<optgroup label="New products">
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Duvet &amp; Linen Set (Double)</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Electric Kettle 1.7L</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Stationery Mega Pack</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Load-Shedding Light Kit</option>
-                    </optgroup>
-                    <!-- ELEMENT DOCUMENTATION: The <optgroup> element contributes to the page structure or content. -->
-<optgroup label="Second-hand marketplace">
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Study Desk</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Mini Bar Fridge</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Accounting Textbook Set</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Laptop Bag 15&quot;</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Two-Tier Bookshelf</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option>Study Chair</option>
-                    </optgroup>
-                  </select>
-                  <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-item-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-item-error" role="alert"></span>
-                </div>
+								<!-- Result panel -->
+								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="mt-6 hidden rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7": CSS classes controlling appearance, spacing and layout; aria-live="polite": HTML attribute used by the browser, CSS, JavaScript or assistive technology. -->
+								<div
+									id="enquiry-result"
+									class="mt-6 hidden rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7"
+									aria-live="polite"
+								></div>
+							</div>
+						</div>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="grid gap-5 md:grid-cols-2">
-                  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                    <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-qty" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Quantity *</label>
-                    <!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="quantity": form field name used when its value is collected; type="number": declares the input, button or resource type; value="1": initial or submitted value of a control; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<input id="enq-qty" name="quantity" type="number" value="1" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                    <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-qty-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-qty-error" role="alert"></span>
-                  </div>
-                  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                    <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-method" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">How do you want to get it? *</label>
-                    <!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="method": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<select id="enq-method" name="method" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="Delivery">Deliver to my institution</option>
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="Collection">Collect from the provincial hub</option>
-                    </select>
-                    <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-method-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-method-error" role="alert"></span>
-                  </div>
-                </div>
+						<!-- Side column -->
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="space-y-6 lg:col-span-2">
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div
+								class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm"
+							>
+								<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+								<span
+									class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"
+								>
+									<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/clipboard-list.svg"
+										alt=""
+										class="h-6 w-6 text-[#0d1b3e]"
+									/>
+								</span>
+								<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+								<h3 class="mt-5 text-xl font-extrabold text-[#0d1b3e]">
+									What to include
+								</h3>
+								<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+								<ul class="mt-5 space-y-3 text-sm">
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>
+										Your institution and campus
+									</li>
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>
+										The bundle or item name
+									</li>
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>
+										Preferred collection point or delivery suburb
+									</li>
+									<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+									<li class="flex items-start gap-2.5">
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg"
+											alt=""
+											class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600"
+										/>
+										When you need it by
+									</li>
+								</ul>
+							</div>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="grid gap-5 md:grid-cols-2">
-                  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                    <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-province" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Province *</label>
-                    <!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="province": form field name used when its value is collected; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<select id="enq-province" name="province" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="">Choose a province...</option>
-                    </select>
-                    <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-province-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-province-error" role="alert"></span>
-                  </div>
-                  <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-                    <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-institution" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Institution *</label>
-                    <!-- ELEMENT DOCUMENTATION: Dropdown control for selecting an option. Attributes: name="institution": form field name used when its value is collected; disabled: prevents a control from being changed or activated; class="w-full rounded-full border border-slate-300 bg-slate-100 px-5 py-3 text-sm text-slate-400 focus:border-[#0d1b3e] focus:outline-none": CSS classes controlling appearance, spacing and layout. -->
-<select id="enq-institution" name="institution" disabled class="w-full rounded-full border border-slate-300 bg-slate-100 px-5 py-3 text-sm text-slate-400 focus:border-[#0d1b3e] focus:outline-none">
-                      <!-- ELEMENT DOCUMENTATION: Selectable option within a dropdown. -->
-<option value="">Choose a province first...</option>
-                    </select>
-                    <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-institution-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-institution-error" role="alert"></span>
-                  </div>
-                </div>
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div
+								class="relative overflow-hidden rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-xl"
+							>
+								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
+								<div
+									aria-hidden="true"
+									class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl"
+								></div>
+								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+								<div class="relative">
+									<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+									<span
+										class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]"
+									>
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+											alt=""
+											class="h-6 w-6 text-[#0d1b3e]"
+										/>
+									</span>
+									<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+									<h3 class="mt-5 text-xl font-extrabold">
+										Need a faster reply?
+									</h3>
+									<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+									<p class="mt-2 text-sm text-slate-300">
+										WhatsApp is usually quickest during registration season.
+									</p>
+									<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-3 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]": CSS classes controlling appearance, spacing and layout. -->
+									<a
+										href="https://wa.me/27123456789"
+										class="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-3 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
+									>
+										WhatsApp us
+										<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
+										<img
+											src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+											alt=""
+											class="h-4 w-4"
+										/>
+									</a>
+								</div>
+							</div>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="hidden": CSS classes controlling appearance, spacing and layout. -->
-<div id="enq-other-group" class="hidden">
-                  <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="mb-1.5 block text-sm font-bold text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<label for="enq-other" class="mb-1.5 block text-sm font-bold text-[#0d1b3e]">Name of your institution *</label>
-                  <!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="otherInstitution": form field name used when its value is collected; type="text": declares the input, button or resource type; placeholder="e.g. Your private college or campus name": hint displayed while an input is empty; class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<input id="enq-other" name="otherInstitution" type="text" placeholder="e.g. Your private college or campus name" class="w-full rounded-full border border-slate-300 bg-white px-5 py-3 text-sm text-slate-700 placeholder:text-slate-400 focus:border-[#0d1b3e] focus:outline-none focus:ring-2 focus:ring-[#ffd23f]">
-                  <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. Attributes: id="enq-other-error": unique identifier used by CSS, JavaScript or in-page links; role="alert": accessibility role assigned to the element. -->
-<span class="error-msg mt-1 hidden text-xs font-semibold text-red-600" id="enq-other-error" role="alert"></span>
-                </div>
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div
+								class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm"
+							>
+								<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+								<span
+									class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b3e]/5"
+								>
+									<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg"
+										alt=""
+										class="h-6 w-6 text-[#0d1b3e]"
+									/>
+								</span>
+								<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+								<h3 class="mt-5 text-xl font-extrabold text-[#0d1b3e]">
+									Already picked items?
+								</h3>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+								<p class="mt-2 text-sm text-slate-600">
+									Your Order Summary lives in this browser session — review it
+									before enquiring.
+								</p>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="account.html#order"
+									class="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]"
+								>
+									View Order Summary
+									<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
+									<img
+										src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg"
+										alt=""
+										class="h-4 w-4"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-                <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout. -->
-<button type="submit" class="inline-flex items-center gap-2 rounded-full bg-[#0d1b3e] px-7 py-3.5 text-sm font-bold text-white transition hover:bg-[#1c3268]">
-                    Get availability and price
-                    <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" alt="" class="h-4 w-4">
-                  </button>
-                  <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="text-xs text-slate-400">No data leaves this page until you hit send.</p>
-                </div>
-              </form>
+			<!-- ===== Newsletter band ===== -->
+			<!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
+			<section class="bg-[#f7f5f1] pb-20">
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div
+						class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14"
+					>
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
+						<div
+							aria-hidden="true"
+							class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"
+						></div>
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
+						<div
+							aria-hidden="true"
+							class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"
+						></div>
 
-              <!-- Result panel -->
-              <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="mt-6 hidden rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7": CSS classes controlling appearance, spacing and layout; aria-live="polite": HTML attribute used by the browser, CSS, JavaScript or assistive technology. -->
-<div id="enquiry-result" class="mt-6 hidden rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7" aria-live="polite"></div>
-            </div>
-          </div>
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="relative grid items-center gap-8 lg:grid-cols-2">
+							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+							<div>
+								<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+								<span
+									class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]"
+									>Stay in the loop</span
+								>
+								<!-- ELEMENT DOCUMENTATION: Major section heading. -->
+								<h2
+									class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl"
+								>
+									Get first dibs on
+									<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+									<span
+										class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]"
+										>new season kit</span
+									>
+								</h2>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+								<p class="mt-3 text-sm text-slate-300">
+									One short email a month: new bundles, second-hand drops and
+									collection updates near your campus.
+								</p>
+							</div>
 
-          <!-- Side column -->
-          <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="space-y-6 lg:col-span-2">
-            <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm">
-              <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]">
-                <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/clipboard-list.svg" alt="" class="h-6 w-6 text-[#0d1b3e]">
-              </span>
-              <!-- ELEMENT DOCUMENTATION: Subsection heading. -->
-<h3 class="mt-5 text-xl font-extrabold text-[#0d1b3e]">What to include</h3>
-              <!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
-<ul class="mt-5 space-y-3 text-sm">
-                <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li class="flex items-start gap-2.5">
-                  <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" alt="" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600">
-                  Your institution and campus
-                </li>
-                <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li class="flex items-start gap-2.5">
-                  <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" alt="" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600">
-                  The bundle or item name
-                </li>
-                <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li class="flex items-start gap-2.5">
-                  <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" alt="" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600">
-                  Preferred collection point or delivery suburb
-                </li>
-                <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li class="flex items-start gap-2.5">
-                  <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/check.svg" alt="" class="mt-0.5 h-4 w-4 shrink-0 text-emerald-600">
-                  When you need it by
-                </li>
-              </ul>
-            </div>
+							<!-- Input form; JavaScript provides client-side validation and submission handling. -->
+							<!-- ELEMENT DOCUMENTATION: Groups controls used to collect and submit visitor information. Attributes: class="w-full": CSS classes controlling appearance, spacing and layout. -->
+							<form id="newsletterBandForm" class="w-full">
+								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+								<div class="flex flex-col gap-3 sm:flex-row">
+									<!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="sr-only": CSS classes controlling appearance, spacing and layout. -->
+									<label for="newsletterBandEmail" class="sr-only"
+										>Email address</label
+									>
+									<!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="email": form field name used when its value is collected; type="text": declares the input, button or resource type; inputmode="email": suggests an appropriate on-screen keyboard; placeholder="you@example.com": hint displayed while an input is empty; class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none": CSS classes controlling appearance, spacing and layout. -->
+									<input
+										id="newsletterBandEmail"
+										name="email"
+										type="text"
+										inputmode="email"
+										placeholder="you@example.com"
+										class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none"
+									/>
+									<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]": CSS classes controlling appearance, spacing and layout. -->
+									<button
+										type="submit"
+										class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]"
+									>
+										Join the list
+									</button>
+								</div>
+								<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+								<p class="mt-3 text-xs text-slate-400">
+									No spam. Unsubscribe any time.
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-            <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="relative overflow-hidden rounded-[2.5rem] bg-[#0d1b3e] p-8 text-white shadow-xl">
-              <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
-<div aria-hidden="true" class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#ffd23f]/15 blur-3xl"></div>
-              <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="relative">
-                <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#ffd23f]">
-                  <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" alt="" class="h-6 w-6 text-[#0d1b3e]">
-                </span>
-                <!-- ELEMENT DOCUMENTATION: Subsection heading. -->
-<h3 class="mt-5 text-xl font-extrabold">Need a faster reply?</h3>
-                <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-2 text-sm text-slate-300">WhatsApp is usually quickest during registration season.</p>
-                <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-3 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="https://wa.me/27123456789" class="mt-6 inline-flex items-center gap-2 rounded-full bg-[#ffd23f] px-6 py-3 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]">
-                  WhatsApp us
-                  <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" alt="" class="h-4 w-4">
-                </a>
-              </div>
-            </div>
+		<!-- ===== Footer ===== -->
+		<!-- ELEMENT DOCUMENTATION: Footer region containing supporting links and site information. -->
+		<footer class="bg-[#09122e] text-slate-300">
+			<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+			<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div>
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white": CSS classes controlling appearance, spacing and layout. -->
+						<a
+							href="../index.html"
+							class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white"
+						>
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+							<span
+								class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]"
+								>C</span
+							>
+							<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+							<span
+								>Campus<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+								<span class="text-[#ffd23f]">-Cart</span></span
+							>
+						</a>
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+						<p class="mt-4 text-sm text-slate-400">
+							Affordable new and second-hand student essentials for South
+							African campuses.
+						</p>
+						<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+						<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
 
-            <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-sm">
-              <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="grid h-12 w-12 place-items-center rounded-2xl bg-[#0d1b3e]/5">
-                <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-6 w-6 text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/shopping-bag.svg" alt="" class="h-6 w-6 text-[#0d1b3e]">
-              </span>
-              <!-- ELEMENT DOCUMENTATION: Subsection heading. -->
-<h3 class="mt-5 text-xl font-extrabold text-[#0d1b3e]">Already picked items?</h3>
-              <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-2 text-sm text-slate-600">Your Order Summary lives in this browser session — review it before enquiring.</p>
-              <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]": CSS classes controlling appearance, spacing and layout. -->
-<a href="account.html#order" class="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#0d1b3e] hover:text-[#0d1b3e]">
-                View Order Summary
-                <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-right.svg" alt="" class="h-4 w-4">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+						<div class="mt-5 flex items-center gap-2">
+							<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="Email Campus-Cart": accessible name announced by assistive technology. -->
+							<a
+								href="mailto:hello@campus-cart.co.za"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="Email Campus-Cart"
+							>
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+							<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="WhatsApp Campus-Cart": accessible name announced by assistive technology. -->
+							<a
+								href="https://wa.me/27123456789"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="WhatsApp Campus-Cart"
+							>
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+							<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="Coverage map": accessible name announced by assistive technology. -->
+							<a
+								href="coverage.html"
+								class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]"
+								aria-label="Coverage map"
+							>
+								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
+								<img
+									src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg"
+									alt=""
+									class="h-4 w-4"
+								/>
+							</a>
+						</div>
+					</div>
 
-    <!-- ===== Newsletter band ===== -->
-    <!-- ELEMENT DOCUMENTATION: Thematic region grouping related content. -->
-<section class="bg-[#f7f5f1] pb-20">
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="relative overflow-hidden rounded-[3rem] bg-[#0d1b3e] p-10 text-white shadow-xl sm:p-14">
-          <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
-<div aria-hidden="true" class="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#ffd23f]/20 blur-3xl"></div>
-          <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl": CSS classes controlling appearance, spacing and layout. -->
-<div aria-hidden="true" class="absolute -bottom-20 -left-16 h-56 w-56 rounded-full bg-[#1e3a8a]/70 blur-3xl"></div>
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div>
+						<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+							Shop
+						</h3>
+						<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="products.html" class="transition hover:text-[#ffd23f]"
+									>Shop New</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="products.html#deals-gallery"
+									class="transition hover:text-[#ffd23f]"
+									>Deals &amp; Gallery</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="products.html#product-detail"
+									class="transition hover:text-[#ffd23f]"
+									>Product Detail</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="products.html#sell-with-us"
+									class="transition hover:text-[#ffd23f]"
+									>Sell With Us</a
+								>
+							</li>
+						</ul>
+					</div>
 
-          <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="relative grid items-center gap-8 lg:grid-cols-2">
-            <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-              <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-xs font-bold uppercase tracking-[0.2em] text-[#ffd23f]">Stay in the loop</span>
-              <!-- ELEMENT DOCUMENTATION: Major section heading. -->
-<h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Get first dibs on <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="italic [font-family:'Playfair_Display',Georgia,serif] text-[#ffd23f]">new season kit</span>
-              </h2>
-              <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-3 text-sm text-slate-300">
-                One short email a month: new bundles, second-hand drops and collection updates near your campus.
-              </p>
-            </div>
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div>
+						<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+							Company
+						</h3>
+						<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="about.html" class="transition hover:text-[#ffd23f]"
+									>About</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="products.html#parent-hub"
+									class="transition hover:text-[#ffd23f]"
+									>Parent Hub</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="enquiry.html" class="transition hover:text-[#ffd23f]"
+									>Enquiry</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="coverage.html" class="transition hover:text-[#ffd23f]"
+									>Coverage</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="contact.html" class="transition hover:text-[#ffd23f]"
+									>Contact</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a href="account.html" class="transition hover:text-[#ffd23f]"
+									>Account</a
+								>
+							</li>
+						</ul>
+					</div>
 
-            <!-- Input form; JavaScript provides client-side validation and submission handling. -->
-            <!-- ELEMENT DOCUMENTATION: Groups controls used to collect and submit visitor information. Attributes: class="w-full": CSS classes controlling appearance, spacing and layout. -->
-<form id="newsletterBandForm" class="w-full">
-              <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="flex flex-col gap-3 sm:flex-row">
-                <!-- ELEMENT DOCUMENTATION: Accessible text label associated with a form control. Attributes: class="sr-only": CSS classes controlling appearance, spacing and layout. -->
-<label for="newsletterBandEmail" class="sr-only">Email address</label>
-                <!-- ELEMENT DOCUMENTATION: Form input control; type defines the expected input format. Attributes: name="email": form field name used when its value is collected; type="text": declares the input, button or resource type; inputmode="email": suggests an appropriate on-screen keyboard; placeholder="you@example.com": hint displayed while an input is empty; class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none": CSS classes controlling appearance, spacing and layout. -->
-<input id="newsletterBandEmail" name="email" type="text" inputmode="email" placeholder="you@example.com" class="w-full rounded-full border border-white/15 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-slate-400 focus:border-[#ffd23f] focus:outline-none">
-                <!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]": CSS classes controlling appearance, spacing and layout. -->
-<button type="submit" class="shrink-0 rounded-full bg-[#ffd23f] px-7 py-3.5 text-sm font-bold text-[#0d1b3e] transition hover:bg-[#ffdf5e]">
-                  Join the list
-                </button>
-              </div>
-              <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-3 text-xs text-slate-400">No spam. Unsubscribe any time.</p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+					<div>
+						<!-- ELEMENT DOCUMENTATION: Subsection heading. -->
+						<h3 class="text-sm font-bold uppercase tracking-wider text-white">
+							Reach us
+						</h3>
+						<!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
+						<ul class="mt-4 space-y-2.5 text-sm">
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="mailto:hello@campus-cart.co.za"
+									class="transition hover:text-[#ffd23f]"
+									>hello@campus-cart.co.za</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li>
+								<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+								<a
+									href="https://wa.me/27123456789"
+									class="transition hover:text-[#ffd23f]"
+									>WhatsApp: 012 345 6789</a
+								>
+							</li>
+							<!-- ELEMENT DOCUMENTATION: Individual list item. -->
+							<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
+						</ul>
+					</div>
+				</div>
 
-  <!-- ===== Footer ===== -->
-  <!-- ELEMENT DOCUMENTATION: Footer region containing supporting links and site information. -->
-<footer class="bg-[#09122e] text-slate-300">
-    <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white": CSS classes controlling appearance, spacing and layout. -->
-<a href="../index.html" class="flex items-center gap-2.5 text-xl font-extrabold tracking-tight text-white">
-            <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="grid h-9 w-9 place-items-center rounded-xl bg-[#ffd23f] text-lg text-[#0d1b3e]">C</span>
-            <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span>Campus<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-[#ffd23f]">-Cart</span></span>
-          </a>
-          <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-4 text-sm text-slate-400">Affordable new and second-hand student essentials for South African campuses.</p>
-          <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-4 text-sm text-slate-400">Mon–Fri, 09:00–17:00 SAST</p>
+				<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
+				<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+					<p class="text-sm text-slate-400">
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="privacy.html" class="transition hover:text-[#ffd23f]"
+							>Privacy Policy</a
+						>
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="terms.html" class="transition hover:text-[#ffd23f]"
+							>Terms &amp; Conditions</a
+						>
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
+							>Cookie Policy</a
+						>
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="returns.html" class="transition hover:text-[#ffd23f]"
+							>Returns &amp; Delivery</a
+						>
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="cookies.html" class="transition hover:text-[#ffd23f]"
+							>Cookie settings</a
+						>
+					</p>
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+					<p class="mt-3 text-sm text-slate-400">
+						Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria,
+						0083.
+					</p>
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+					<p class="mt-3 text-sm text-slate-400">
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="about.html#licence" class="transition hover:text-[#ffd23f]"
+							>Licence and credits</a
+						>
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span class="text-slate-600"> | </span>
+						<!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
+						<a href="../sitemap.xml" class="transition hover:text-[#ffd23f]"
+							>Sitemap.xml</a
+						>
+					</p>
+					<!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
+					<p class="mt-3 text-sm text-slate-400">
+						&copy;
+						<!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
+						<span id="copyright-year">2026</span> Campus-Cart. Static demo site
+						— no payments are processed and no personal data is stored.
+					</p>
+				</div>
+			</div>
+		</footer>
 
-          <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="mt-5 flex items-center gap-2">
-            <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="Email Campus-Cart": accessible name announced by assistive technology. -->
-<a href="mailto:hello@campus-cart.co.za" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" aria-label="Email Campus-Cart">
-              <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/mail.svg" alt="" class="h-4 w-4">
-            </a>
-            <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="WhatsApp Campus-Cart": accessible name announced by assistive technology. -->
-<a href="https://wa.me/27123456789" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" aria-label="WhatsApp Campus-Cart">
-              <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/message-circle.svg" alt="" class="h-4 w-4">
-            </a>
-            <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout; aria-label="Coverage map": accessible name announced by assistive technology. -->
-<a href="coverage.html" class="grid h-9 w-9 place-items-center rounded-full border border-white/15 transition hover:border-[#ffd23f] hover:text-[#ffd23f]" aria-label="Coverage map">
-              <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-4 w-4": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/globe.svg" alt="" class="h-4 w-4">
-            </a>
-          </div>
-        </div>
+		<!-- Back to top -->
+		<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout; aria-label="Back to top": accessible name announced by assistive technology. -->
+		<button
+			id="toTop"
+			type="button"
+			class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]"
+			aria-label="Back to top"
+		>
+			<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
+			<img
+				src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg"
+				alt=""
+				class="h-5 w-5"
+			/>
+		</button>
 
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-          <!-- ELEMENT DOCUMENTATION: Subsection heading. -->
-<h3 class="text-sm font-bold uppercase tracking-wider text-white">Shop</h3>
-          <!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
-<ul class="mt-4 space-y-2.5 text-sm">
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html" class="transition hover:text-[#ffd23f]">Shop New</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html#deals-gallery" class="transition hover:text-[#ffd23f]">Deals &amp; Gallery</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html#product-detail" class="transition hover:text-[#ffd23f]">Product Detail</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html#sell-with-us" class="transition hover:text-[#ffd23f]">Sell With Us</a></li>
-          </ul>
-        </div>
-
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-          <!-- ELEMENT DOCUMENTATION: Subsection heading. -->
-<h3 class="text-sm font-bold uppercase tracking-wider text-white">Company</h3>
-          <!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
-<ul class="mt-4 space-y-2.5 text-sm">
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="about.html" class="transition hover:text-[#ffd23f]">About</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="products.html#parent-hub" class="transition hover:text-[#ffd23f]">Parent Hub</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="enquiry.html" class="transition hover:text-[#ffd23f]">Enquiry</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="coverage.html" class="transition hover:text-[#ffd23f]">Coverage</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="contact.html" class="transition hover:text-[#ffd23f]">Contact</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="account.html" class="transition hover:text-[#ffd23f]">Account</a></li>
-          </ul>
-        </div>
-
-        <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div>
-          <!-- ELEMENT DOCUMENTATION: Subsection heading. -->
-<h3 class="text-sm font-bold uppercase tracking-wider text-white">Reach us</h3>
-          <!-- ELEMENT DOCUMENTATION: Unordered list of related items. -->
-<ul class="mt-4 space-y-2.5 text-sm">
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="mailto:hello@campus-cart.co.za" class="transition hover:text-[#ffd23f]">hello@campus-cart.co.za</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li><!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="https://wa.me/27123456789" class="transition hover:text-[#ffd23f]">WhatsApp: 012 345 6789</a></li>
-            <!-- ELEMENT DOCUMENTATION: Individual list item. -->
-<li class="text-slate-400">Mon–Fri, 09:00–17:00 SAST</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
-<div class="cc-footer-legal mt-12 border-t border-white/10 pt-8">
-        <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="text-sm text-slate-400">
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="privacy.html" class="transition hover:text-[#ffd23f]">Privacy Policy</a>
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600"> | </span>
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="terms.html" class="transition hover:text-[#ffd23f]">Terms &amp; Conditions</a>
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600"> | </span>
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="cookies.html" class="transition hover:text-[#ffd23f]">Cookie Policy</a>
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600"> | </span>
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="returns.html" class="transition hover:text-[#ffd23f]">Returns &amp; Delivery</a>
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600"> | </span>
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="cookies.html" class="transition hover:text-[#ffd23f]">Cookie settings</a>
-        </p>
-        <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-3 text-sm text-slate-400">Campus-Cart head office: 128 Lynnwood Road, Hatfield, Pretoria, 0083.</p>
-        <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-3 text-sm text-slate-400">
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="about.html#licence" class="transition hover:text-[#ffd23f]">Licence and credits</a>
-          <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span class="text-slate-600"> | </span>
-          <!-- ELEMENT DOCUMENTATION: Hyperlink; href defines its destination or in-page target. Attributes: class="transition hover:text-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-<a href="../sitemap.xml" class="transition hover:text-[#ffd23f]">Sitemap.xml</a>
-        </p>
-        <!-- ELEMENT DOCUMENTATION: Paragraph of explanatory or supporting text. -->
-<p class="mt-3 text-sm text-slate-400">
-          &copy; <!-- ELEMENT DOCUMENTATION: Inline container for styling or identifying text. -->
-<span id="copyright-year">2026</span> Campus-Cart. Static demo site — no payments are processed and no
-          personal data is stored.
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Back to top -->
-  <!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: type="button": declares the input, button or resource type; class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]": CSS classes controlling appearance, spacing and layout; aria-label="Back to top": accessible name announced by assistive technology. -->
-<button id="toTop" type="button" class="fixed bottom-5 right-5 z-40 hidden h-11 w-11 place-items-center rounded-full bg-[#0d1b3e] text-white shadow-lg transition hover:bg-[#1c3268]" aria-label="Back to top">
-    <!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="": alternative text for an image; empty text marks a decorative image; class="h-5 w-5": CSS classes controlling appearance, spacing and layout. -->
-<img src="https://unpkg.com/lucide-static@1.44.0/icons/arrow-up.svg" alt="" class="h-5 w-5">
-  </button>
-
-  <!-- ===== Site script ===== -->
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/data.js" defer></script>
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/ui.js" defer></script>
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/consent.js" defer></script>
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/interactions.js" defer></script>
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/forms.js" defer></script>
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/features.js" defer></script>
-  <!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
-<script src="../assets/js/script.js" defer></script>
-</body>
+		<!-- ===== Site script ===== -->
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/data.js" defer></script>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/ui.js" defer></script>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/consent.js" defer></script>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/interactions.js" defer></script>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/forms.js" defer></script>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/features.js" defer></script>
+		<!-- ELEMENT DOCUMENTATION: JavaScript resource; defer delays execution until HTML parsing completes. Attributes: defer: runs an external script after document parsing. -->
+		<script src="../assets/js/script.js" defer></script>
+	</body>
 </html>
