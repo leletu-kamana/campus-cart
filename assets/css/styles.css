@@ -5420,3 +5420,655 @@ main img {
 	}
 	/* Closes the current CSS rule or responsive block. */
 }
+
+/* ==========================================================
+   CAMPUS-CART — CROSS-DEVICE RESPONSIVE HARDENING
+   Shared safeguards for narrow phones, large phones, tablets,
+   laptops, desktop monitors, touch screens and landscape views.
+   These rules refine layout only; existing feature behaviour
+   continues to be handled by the page markup and JavaScript.
+   ========================================================== */
+
+/* Include padding and borders in every element's measured size
+   so nested layouts do not unexpectedly exceed the viewport. */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Inherit predictable box sizing throughout the document. */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Prevent long words, URLs and unbroken labels from forcing
+   the document wider than the available screen. */
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+/* Keep the main layout and its direct content blocks shrinkable
+   when grid or flex children contain long text or wide controls. */
+main,
+main > *,
+main section,
+main article,
+main form,
+main fieldset,
+footer,
+#siteHeader,
+#siteHeader > div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Make media fluid while retaining the dimensions selected by
+   the existing component styles and aspect-ratio declarations. */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/* Avoid intrinsic image sizes expanding cards or columns. */
+main img,
+main video,
+main picture img {
+  height: auto;
+}
+
+/* Ensure grid and flex descendants can shrink below their
+   intrinsic content width instead of creating page overflow. */
+main .grid > *,
+main .flex > *,
+footer .grid > *,
+#siteHeader .flex > * {
+  min-width: 0;
+}
+
+/* Keep text readable and prevent headings or product names
+   from stretching cards beyond their containing column. */
+main h1,
+main h2,
+main h3,
+main h4,
+main p,
+main li,
+main a,
+main label,
+main button,
+footer a {
+  overflow-wrap: anywhere;
+}
+
+/* Long links and reference strings should wrap rather than
+   introduce a horizontal scrollbar on small screens. */
+main a,
+footer a {
+  word-break: normal;
+}
+
+/* Keep native form controls within their parent and avoid
+   automatic iOS zoom when a visitor focuses a form field. */
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select,
+textarea {
+  min-width: 0;
+}
+
+/* Preserve a practical touch target for interactive controls.
+   Existing larger button dimensions are not reduced. */
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  touch-action: manipulation;
+}
+
+/* Allow dense data tables to scroll inside their own region
+   instead of forcing the entire page to scroll horizontally. */
+main table {
+  max-width: 100%;
+}
+
+main :is(.table-responsive, .table-wrap, [data-table-scroll]) {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Keep embedded maps and Leaflet panes constrained to the
+   available column while retaining usable map interaction. */
+.hub-map,
+#hub-map,
+.leaflet-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.leaflet-container {
+  isolation: isolate;
+  touch-action: pan-x pan-y;
+}
+
+/* Keep embedded frames, maps and media from overflowing cards. */
+iframe,
+embed,
+object {
+  max-width: 100%;
+}
+
+/* Prevent fixed overlays and popovers from exceeding the
+   visible screen area on devices with browser UI insets. */
+[role="dialog"],
+.modal,
+.modal-backdrop,
+.lightbox,
+.cookie-banner,
+.toast,
+.cart-drawer,
+.cart-popover,
+.search-panel,
+.wishlist-panel {
+  max-width: min(100vw, 100%);
+}
+
+/* Respect notches and rounded screen corners when fixed
+   controls are positioned close to the viewport edges. */
+.cookie-banner,
+.toast,
+.lightbox,
+.modal-backdrop {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
+/* Use dynamic viewport units where supported so overlays
+   fit when mobile browser toolbars expand or collapse. */
+@supports (height: 100dvh) {
+  .modal,
+  .lightbox,
+  .cookie-banner,
+  [role="dialog"] {
+    max-height: 90dvh;
+  }
+}
+
+/* Tablet and compact laptop layouts: preserve comfortable
+   side gutters and avoid columns becoming too narrow. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  main {
+    padding-inline: clamp(1rem, 3vw, 2rem);
+  }
+
+  main > section,
+  main > .max-w-7xl,
+  main > .max-w-6xl,
+  main > .max-w-5xl,
+  main > .max-w-4xl {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hub-map,
+  #hub-map {
+    height: clamp(320px, 42vw, 420px);
+    min-height: 300px;
+  }
+}
+
+/* Phones and small tablets: stack wide content, keep controls
+   reachable and make every main content column shrink safely. */
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  main {
+    padding-inline: 0;
+  }
+
+  main > section,
+  main > .max-w-7xl,
+  main > .max-w-6xl,
+  main > .max-w-5xl,
+  main > .max-w-4xl {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Keep the existing JavaScript-controlled mobile menu
+     visible only when its hidden state has been removed. */
+  #siteHeader #mobileMenu:not(.hidden) {
+    display: block;
+  }
+
+  #siteHeader #navToggle,
+  #siteHeader button[aria-controls="mobileMenu"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Give page sections consistent gutters without overriding
+     the spacing and backgrounds of nested content cards. */
+  main > section {
+    scroll-margin-top: 5.5rem;
+  }
+
+  /* Make product, bundle and information cards fit a single
+     narrow column without forcing fixed intrinsic widths. */
+  #shop article,
+  #deals-gallery article,
+  main .grid > article {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Make image content scale inside cards and gallery frames. */
+  main article img,
+  main figure img {
+    max-width: 100%;
+  }
+
+  /* Keep action rows usable when several controls share a card. */
+  main article button,
+  main article a[role="button"] {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  /* Form fields use the full available width and a readable
+     16px font size to avoid focus zoom on mobile Safari. */
+  main input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  main select,
+  main textarea {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  main textarea {
+    min-height: 8rem;
+    resize: vertical;
+  }
+
+  /* Prevent action buttons from becoming too small to tap. */
+  main button,
+  main [role="button"],
+  main input[type="submit"],
+  main input[type="button"] {
+    min-height: 44px;
+  }
+
+  /* Keep the map visible and tall enough for touch navigation. */
+  .hub-map,
+  #hub-map {
+    height: clamp(280px, 72vw, 380px);
+    min-height: 260px;
+  }
+
+  /* Keep sticky or fixed overlays clear of the home indicator. */
+  .cookie-banner,
+  .toast {
+    left: max(10px, env(safe-area-inset-left));
+    right: max(10px, env(safe-area-inset-right));
+  }
+}
+
+/* Very narrow phones: reduce gutters and avoid cramped
+   multi-column button groups and oversized headings. */
+@media (max-width: 380px) {
+  main h1 {
+    font-size: clamp(1.55rem, 8vw, 2rem);
+    line-height: 1.12;
+  }
+
+  main h2 {
+    font-size: clamp(1.25rem, 6.5vw, 1.6rem);
+    line-height: 1.2;
+  }
+
+  main > section {
+    scroll-margin-top: 4.75rem;
+  }
+
+  .cookie-banner {
+    padding: 12px;
+  }
+
+  .cookie-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cookie-actions > * {
+    width: 100%;
+  }
+}
+
+/* Landscape phones have limited vertical space. Keep map and
+   modal content scrollable without hiding their close controls. */
+@media (max-width: 900px) and (orientation: landscape) {
+  .modal,
+  .cookie-banner,
+  [role="dialog"] {
+    max-height: 82dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .hub-map,
+  #hub-map {
+    height: min(62dvh, 340px);
+    min-height: 220px;
+  }
+}
+
+/* Touch devices do not have reliable hover. Keep actions visible
+   and avoid making important controls depend on hover alone. */
+@media (hover: none), (pointer: coarse) {
+  button,
+  a,
+  [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+}
+
+/* Keyboard users receive a clear focus indicator on controls
+   across desktop, tablet and mobile input methods. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #d69e00;
+  outline-offset: 3px;
+}
+
+/* Do not animate layout or scrolling when the visitor has asked
+   the operating system to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* Back-to-top control: keeps the shared scroll button visible, reachable and usable on every page. */
+#toTop:not(.hidden) {
+  display: grid;
+}
+
+#toTop {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Gives keyboard users a clear focus indicator when they reach the floating control. */
+#toTop:focus-visible {
+  outline: 3px solid #ffd23f;
+  outline-offset: 4px;
+}
+
+/* Smooth anchor movement across the site, while respecting reduced-motion preferences. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  #toTop {
+    transition: none !important;
+  }
+}
+
+
+/* ==========================================================
+   PRODUCTS PAGE RESPONSIVE REFINEMENTS
+   ========================================================== */
+
+/* Centre the scroll-to-top arrow within its circular button. */
+#toTop {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+#toTop > img,
+#toTop > svg,
+#toTop > i {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+/* Keep the products hero image and its overlay content inside the banner frame. */
+body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden {
+  isolation: isolate;
+  min-height: clamp(15rem, 32vw, 30rem);
+}
+
+body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > img {
+  display: block;
+  width: 100%;
+  height: clamp(15rem, 32vw, 30rem);
+  object-fit: cover;
+  object-position: center;
+}
+
+body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > .absolute.inset-0.flex {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Allow the Shop New / Second-Hand category switch to wrap and remain touch-friendly. */
+#shop .cc-shop-tabs-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+#shop .cc-shop-tabs-layout [role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.35rem;
+  border-radius: 1.25rem;
+}
+
+#shop .cc-shop-tabs-layout [role="tablist"] > [role="tab"] {
+  min-height: 2.75rem;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+#shop .cc-shop-tabs-layout .tab-panel {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Checklist content should shrink naturally without pushing the page sideways. */
+#parent-checklist-print {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+#parent-checklist-print ul {
+  min-width: 0;
+  padding-left: 0;
+}
+
+#parent-checklist-print .cc-checklist-item {
+  min-width: 0;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+#parent-checklist-print .cc-checklist-item > * {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#parent-checklist-print input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+#parent-checklist-print #print-checklist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* FAQ tabs remain usable on narrow screens and the panels use the available width. */
+#sell-with-us [aria-label="FAQ tabs"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.35rem;
+}
+
+#sell-with-us [aria-label="FAQ tabs"] > button {
+  min-height: 2.75rem;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+#sell-with-us #faq-student,
+#sell-with-us #faq-parent {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  body:has(#shop) section[aria-label="Shop student essentials"] {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden {
+    min-height: 18rem;
+    border-radius: 1.5rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > img {
+    height: 18rem;
+    object-position: 60% center;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > .absolute.inset-0.flex {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > .absolute.inset-0.flex > p {
+    max-width: 18rem;
+  }
+
+  #shop .cc-shop-tabs-layout [role="tablist"],
+  #sell-with-us [aria-label="FAQ tabs"] {
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  #shop .cc-shop-tabs-layout [role="tablist"] > [role="tab"],
+  #sell-with-us [aria-label="FAQ tabs"] > button {
+    flex: 1 1 9rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  #parent-checklist-print {
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+  }
+
+  #parent-checklist-print #print-checklist {
+    width: 100%;
+  }
+
+  #parent-checklist-print .cc-checklist-item {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 360px) {
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden {
+    min-height: 16rem;
+  }
+
+  body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow-hidden > img {
+    height: 16rem;
+  }
+
+  #shop .cc-shop-tabs-layout [role="tablist"] > [role="tab"],
+  #sell-with-us [aria-label="FAQ tabs"] > button {
+    flex-basis: 100%;
+  }
+}
+
+/* Normal browser printing stays normal; checklist-only print mode is enabled by its button. */
+@media print {
+  body:not(.cc-print-checklist) * {
+    visibility: visible !important;
+  }
+
+  body:not(.cc-print-checklist) #parent-checklist-print {
+    position: static !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: initial !important;
+    border: initial !important;
+    border-radius: initial !important;
+    box-shadow: initial !important;
+  }
+}
