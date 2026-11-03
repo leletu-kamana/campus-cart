@@ -378,7 +378,7 @@
     // undefined
     const seeLess = $('#deals-see-less');
     // undefined
-    const STEP = 4;
+    const STEP = 9;
     // undefined
     let visibleCount = STEP;
 
