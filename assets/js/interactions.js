@@ -378,7 +378,7 @@
     // undefined
     const seeLess = $('#deals-see-less');
     // undefined
-    const STEP = 6;
+    const STEP = window.matchMedia('(max-width: 767px)').matches ? 9 : 4;
     // undefined
     let visibleCount = STEP;
 
@@ -518,6 +518,9 @@
       categorySelect.value = categories.includes(selectedCategory) ? selectedCategory : 'all';
     }
 
+    // Tracks the number of products matching the current filters for automatic loading.
+    let matchingDealsCount = DEALS.length;
+
     // undefined
     const renderDeals = () => {
       // undefined
@@ -545,6 +548,8 @@
       // undefined
       else if (sort === 'name') items.sort((a, b) => a.name.localeCompare(b.name));
 
+      // Updates the total matching count before rendering the visible product batch.
+      matchingDealsCount = items.length;
       // undefined
       if (dealsCount) dealsCount.textContent = items.length + (items.length === 1 ? ' product found' : ' products found');
       // undefined
@@ -558,7 +563,27 @@
       if (seeMore) seeMore.hidden = items.length <= visibleCount;
       // undefined
       if (seeLess) seeLess.hidden = visibleCount <= STEP || items.length <= STEP;
+      // Keeps the automatic-load trigger available only while more matching products remain.
+      if (loadMoreSentinel) loadMoreSentinel.hidden = visibleCount >= matchingDealsCount;
     };
+
+    // Adds an invisible scroll trigger after the product grid so the next batch loads near the bottom.
+    const loadMoreSentinel = document.createElement('div');
+    loadMoreSentinel.id = 'deals-load-more-sentinel';
+    loadMoreSentinel.setAttribute('aria-hidden', 'true');
+    loadMoreSentinel.style.cssText = 'height: 1px; width: 100%;';
+    dealsResults.insertAdjacentElement('afterend', loadMoreSentinel);
+
+    // Uses IntersectionObserver to load four more products as the visitor approaches the end of the grid.
+    if ('IntersectionObserver' in window) {
+      const dealsLoader = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting) && visibleCount < matchingDealsCount) {
+          visibleCount = Math.min(visibleCount + STEP, matchingDealsCount);
+          renderDeals();
+        }
+      }, { rootMargin: '350px 0px' });
+      dealsLoader.observe(loadMoreSentinel);
+    }
 
     // undefined
     if (searchInput) searchInput.addEventListener('input', () => { visibleCount = STEP; renderDeals(); });

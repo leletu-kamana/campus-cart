@@ -6072,3 +6072,325 @@ body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow
     box-shadow: initial !important;
   }
 }
+
+
+/* Deals and gallery: compact three-column product browsing on phones and small tablets. */
+@media (max-width: 767px) {
+  #deals-gallery #deals-results {
+    /* Three compact product columns are limited to phone-sized screens. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.75rem;
+  }
+
+  #deals-gallery #deals-results > article {
+    padding: 0.75rem;
+    border-radius: 1.1rem;
+  }
+
+  #deals-gallery #deals-results > article > div:first-child {
+    border-radius: 0.8rem;
+  }
+
+  #deals-gallery #deals-results > article > div:last-child > div:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  #deals-gallery #deals-results > article > div:last-child > div:last-child {
+    gap: 0.4rem;
+  }
+
+  #deals-gallery #deals-results [data-add] {
+    flex-basis: 100%;
+    width: 100%;
+    padding-inline: 0.65rem;
+    font-size: 0.7rem;
+  }
+
+  #deals-gallery #deals-results [data-add-to-wishlist],
+  #deals-gallery #deals-results [data-quickview] {
+    flex: 1 1 0;
+    width: auto;
+    min-width: 0;
+    padding-inline: 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  #deals-gallery > div > div[role="tablist"] {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 1rem;
+  }
+
+  #deals-gallery figure[data-gallery-item] {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+    min-height: 150px;
+  }
+
+  #deals-gallery .grid.auto-rows-\[180px\] {
+    /* Keep the Products gallery in three columns on phone screens only. */
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-rows: 150px;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  #deals-gallery #deals-results > article {
+    padding: 0.55rem;
+  }
+
+  #deals-gallery #deals-results h3 {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ==========================================================
+   SITE-WIDE RESPONSIVE COMPONENT REFINEMENTS
+   Applies consistent behaviour to cards, accordions, quick
+   links, action groups and content blocks on every page.
+   ========================================================== */
+
+/* Keep reusable content cards and their descendants shrinkable
+   so long labels, images and controls cannot widen the viewport. */
+main article,
+main .grid > *,
+main [class*="rounded-2xl"],
+main [class*="rounded-3xl"],
+footer .grid > * {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Keep card media fluid and contained within its own frame. */
+main article img,
+main article picture,
+main article video,
+main figure img,
+main figure picture img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Let card headings and descriptions wrap cleanly at every size. */
+main article :is(h2, h3, h4, p, li, span),
+main [class*="rounded-2xl"] :is(h2, h3, h4, p, li),
+main [class*="rounded-3xl"] :is(h2, h3, h4, p, li) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Native disclosure accordions remain easy to open and read. */
+main details {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+main details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-width: 0;
+  min-height: 44px;
+  cursor: pointer;
+  list-style: none;
+  overflow-wrap: anywhere;
+}
+
+main details > summary::-webkit-details-marker {
+  display: none;
+}
+
+main details > summary > :is(img, svg, i) {
+  flex: 0 0 auto;
+}
+
+main details > :not(summary) {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Quick-link and action anchors behave like touch-friendly buttons
+   without forcing ordinary text links into button styling. */
+main a[role="button"],
+main button[role="button"],
+main a.inline-flex,
+main button.inline-flex,
+footer a[role="button"] {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Let grouped action buttons and quick links wrap instead of
+   shrinking into narrow, difficult-to-tap controls. */
+main .flex.flex-wrap > a[role="button"],
+main .flex.flex-wrap > button[role="button"],
+main .flex.flex-wrap > a.inline-flex,
+main .flex.flex-wrap > button.inline-flex {
+  flex: 1 1 auto;
+  min-width: min(100%, 9rem);
+}
+
+/* Tabs and shortcut groups may wrap or scroll within their own
+   component, never across the full page width. */
+main [role="tablist"],
+main nav[aria-label*="quick" i],
+main [data-quick-links] {
+  min-width: 0;
+  max-width: 100%;
+}
+
+main [role="tablist"] {
+  flex-wrap: wrap;
+}
+
+main [role="tablist"] > * {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Keep content panels, forms and their controls inside their cards. */
+main form,
+main fieldset,
+main [role="tabpanel"],
+main .tab-panel {
+  min-width: 0;
+  max-width: 100%;
+}
+
+main form :is(input, select, textarea),
+main fieldset :is(input, select, textarea) {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Tablet and compact laptop widths: preserve two-column layouts
+   while preventing card content from forcing oversized columns. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  main .grid > *,
+  footer .grid > * {
+    min-width: 0;
+  }
+
+  main article,
+  main details {
+    height: auto;
+  }
+
+  main .flex.flex-wrap {
+    row-gap: 0.75rem;
+  }
+}
+
+/* Mobile: cards, accordion panels and shortcut controls use the
+   available width, with consistent gutters and tap-sized actions. */
+@media (max-width: 767px) {
+  main > section,
+  main > .container,
+  main > [class*="max-w-"] {
+    padding-inline: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  main article,
+  main details,
+  main [role="tabpanel"],
+  main .tab-panel {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  main details {
+    padding: clamp(1rem, 4vw, 1.25rem);
+    border-radius: 1.25rem;
+  }
+
+  main details > summary {
+    gap: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  main details > :not(summary) {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  main article .flex:not(.flex-col) {
+    flex-wrap: wrap;
+  }
+
+  main article button,
+  main article a[role="button"],
+  main article a.inline-flex,
+  main .flex.flex-wrap > a[role="button"],
+  main .flex.flex-wrap > button[role="button"],
+  main .flex.flex-wrap > a.inline-flex,
+  main .flex.flex-wrap > button.inline-flex {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  main [role="tablist"] {
+    gap: 0.4rem;
+  }
+
+  main [role="tablist"] > * {
+    flex: 1 1 8.5rem;
+    min-height: 44px;
+  }
+
+  main .grid > * {
+    min-width: 0;
+  }
+
+  footer .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  footer a,
+  footer button {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Narrow phones: tighten card spacing without reducing tap targets. */
+@media (max-width: 380px) {
+  main details {
+    padding: 0.9rem;
+    border-radius: 1rem;
+  }
+
+  main details > summary {
+    font-size: 0.85rem;
+  }
+
+  main article {
+    border-radius: 1rem;
+  }
+
+  main article button,
+  main article a[role="button"],
+  main article a.inline-flex {
+    padding-inline: 0.75rem;
+    font-size: 0.82rem;
+  }
+}
