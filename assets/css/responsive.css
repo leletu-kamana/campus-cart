@@ -156,6 +156,13 @@ h4 {
 	}
 }
 
+/* Hide the Deals & Gallery order-summary action on mobile and tablet only. */
+@media (max-width: 1279px) {
+	#deals-gallery #deals-results [data-add] {
+		display: none !important;
+	}
+}
+
 /* ==========================================================
    Product catalogue responsive layout
    Mirrors the supplied desktop / tablet / mobile reference:
