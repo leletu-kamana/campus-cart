@@ -477,7 +477,13 @@
     // Checks the condition before executing the following branch.
     if (siteHeader) siteHeader.classList.toggle('shadow-md', window.scrollY > 8);
     // Checks the condition before executing the following branch.
-    if (toTop) toTop.classList.toggle('hidden', window.scrollY <= 400);
+    if (toTop) {
+      // Reveals the control only after the visitor has moved down the page.
+      const isVisible = window.scrollY > 400;
+      toTop.classList.toggle('hidden', !isVisible);
+      toTop.setAttribute('aria-hidden', String(!isVisible));
+      toTop.tabIndex = isVisible ? 0 : -1;
+    }
   }
   // Registers a handler for the specified browser or user interaction event.
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -485,7 +491,13 @@
 
   /* ----- Back to top ----- */
   // Checks the condition before executing the following branch.
-  if (toTop) toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  if (toTop) {
+    // Scrolls to the document start and respects the visitor's reduced-motion setting.
+    toTop.addEventListener('click', () => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
 
   /* ----- Cart badge (shared localStorage, also follows other open tabs) ----- */
   updateBadge();
