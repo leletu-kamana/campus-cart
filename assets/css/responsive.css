@@ -155,3 +155,130 @@ h4 {
 		font-size: 0.65rem;
 	}
 }
+
+/* ==========================================================
+   Product catalogue responsive layout
+   Mirrors the supplied desktop / tablet / mobile reference:
+   four product columns on wide screens and three on compact
+   screens, with usable search and filter controls at every size.
+   ========================================================== */
+
+#deals-results {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	align-items: stretch;
+}
+
+#deals-results > * {
+	min-width: 0;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+#deals-results img {
+	max-width: 100%;
+}
+
+#deals-results h3,
+#deals-results p {
+	overflow-wrap: anywhere;
+}
+
+#deals-gallery .grid.gap-4[role="tablist"],
+#deals-gallery [role="tablist"] {
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+	#deals-results {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	#deals-gallery .mt-8.grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	#deals-gallery .mt-8.grid > div:first-child {
+		grid-column: span 2;
+	}
+}
+
+@media (max-width: 767px) {
+	#deals-results {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.7rem;
+	}
+
+	#deals-gallery .mt-8.grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.75rem;
+		padding: 1rem;
+	}
+
+	#deals-gallery .mt-8.grid > div:first-child {
+		grid-column: 1 / -1;
+	}
+
+	#deals-results > * {
+		border-radius: 0.9rem;
+	}
+
+	#deals-results img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	#deals-results h3 {
+		font-size: clamp(0.68rem, 2.5vw, 0.82rem);
+		line-height: 1.25;
+	}
+
+	#deals-results p {
+		font-size: clamp(0.62rem, 2.2vw, 0.75rem);
+		line-height: 1.35;
+	}
+
+	#deals-gallery [role="tablist"] {
+		width: 100%;
+		justify-content: flex-start;
+		border-radius: 1rem;
+	}
+
+	#deals-gallery [role="tablist"] button {
+		flex: 0 0 auto;
+		white-space: nowrap;
+		padding-inline: 0.85rem;
+		font-size: 0.75rem;
+	}
+}
+
+@media (max-width: 380px) {
+	#deals-results {
+		gap: 0.45rem;
+	}
+
+	#deals-gallery .mt-8.grid {
+		gap: 0.55rem;
+		padding: 0.75rem;
+	}
+
+	#deals-results h3 {
+		font-size: 0.65rem;
+	}
+
+	#deals-results p {
+		font-size: 0.6rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	#deals-results {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+}
+
