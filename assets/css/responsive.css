@@ -289,3 +289,265 @@ h4 {
 	}
 }
 
+/* ==========================================================
+   Site-wide page responsiveness
+   Shared layout safeguards for every Campus-Cart HTML page.
+   This block is intentionally loaded after the main stylesheet.
+   ========================================================== */
+
+/* Keep every layout child shrinkable inside CSS Grid and Flexbox. */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+main,
+main section,
+main article,
+main aside,
+header,
+footer,
+nav,
+form,
+fieldset {
+	min-width: 0;
+	max-width: 100%;
+}
+
+img,
+picture,
+video,
+iframe,
+canvas {
+	max-width: 100%;
+}
+
+img,
+video {
+	height: auto;
+}
+
+/* Prevent fixed-width content and long controls from widening a page. */
+input,
+select,
+textarea,
+button {
+	max-width: 100%;
+	font: inherit;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select,
+textarea {
+	min-width: 0;
+}
+
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+
+pre,
+code {
+	max-width: 100%;
+	overflow-wrap: anywhere;
+	white-space: pre-wrap;
+}
+
+table {
+	max-width: 100%;
+}
+
+/* Keep keyboard focus visible and avoid controls touching screen edges. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+	scroll-margin-block: 6rem;
+}
+
+/* Tablet and compact laptop layouts. */
+@media (max-width: 1023px) {
+	main section {
+		scroll-margin-top: 5rem;
+	}
+
+	main section > .mx-auto,
+	main > .mx-auto {
+		max-width: 100%;
+	}
+
+	/* Long navigation/filter rows scroll within their own region. */
+	main nav[aria-label],
+	main [role="tablist"] {
+		max-width: 100%;
+	}
+
+	/* Avoid fixed-height cards clipping content after text wraps. */
+	main article,
+	main [class*="rounded-"][class*="shadow"] {
+		min-height: 0;
+	}
+}
+
+/* Phones and small tablets. */
+@media (max-width: 767px) {
+	/* Consistent page gutters on all content pages. */
+	main section > .mx-auto,
+	main > .mx-auto {
+		padding-left: clamp(0.875rem, 4vw, 1.25rem);
+		padding-right: clamp(0.875rem, 4vw, 1.25rem);
+	}
+
+	/* Convert fixed multi-column utility grids into fluid columns.
+	   Product grids with dedicated IDs retain their tailored layouts. */
+	main [class*="grid-cols-"]:not(#home-recent-products-grid):not(#deals-results) {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr));
+	}
+
+	/* Reduce oversized section spacing while preserving hierarchy. */
+	main section {
+		padding-top: clamp(2rem, 7vw, 3.5rem);
+		padding-bottom: clamp(2rem, 7vw, 3.5rem);
+	}
+
+	main h1 {
+		font-size: clamp(1.85rem, 7vw, 2.75rem);
+		line-height: 1.12;
+		text-wrap: balance;
+	}
+
+	main h2 {
+		font-size: clamp(1.45rem, 5.5vw, 2.15rem);
+		line-height: 1.2;
+		text-wrap: balance;
+	}
+
+	main h3 {
+		text-wrap: balance;
+	}
+
+	/* Stack form fields and action groups when horizontal space is limited. */
+	main form [class*="grid-cols-"] {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	main form button,
+	main form input[type="submit"],
+	main form input[type="reset"] {
+		max-width: 100%;
+	}
+
+	/* Keep legal-page contents and information panels within the viewport. */
+	main [class*="p-8"],
+	main [class*="p-10"] {
+		padding: clamp(1rem, 4vw, 1.5rem);
+	}
+
+	/* Horizontal sub-navigation remains usable without stretching the page. */
+	main nav[aria-label="Province navigation"],
+	main nav[aria-label="Section navigation"],
+	main [role="tablist"] {
+		overflow-x: auto;
+		overflow-y: hidden;
+		overscroll-behavior-inline: contain;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: thin;
+	}
+
+	main nav[aria-label="Province navigation"] a,
+	main nav[aria-label="Section navigation"] a,
+	main [role="tablist"] button {
+		flex: 0 0 auto;
+		white-space: nowrap;
+	}
+
+	/* Footer columns become readable, full-width blocks. */
+	footer [class*="grid-cols-"] {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+	}
+
+	/* Tables scroll horizontally instead of forcing page-level overflow. */
+	main table {
+		min-width: 34rem;
+	}
+
+	main table:where(:not(.table-scroll table)) {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* Media, maps and dialogs scale to the available viewport. */
+	.leaflet-container {
+		height: clamp(250px, 58vh, 420px);
+	}
+
+	.modal,
+	.lightbox,
+	[role="dialog"] {
+		max-width: calc(100vw - 1.5rem);
+		max-height: calc(100dvh - 1.5rem);
+		overflow: auto;
+	}
+
+	/* Keep header controls compact and prevent logo/action collisions. */
+	#siteHeader > div {
+		gap: 0.5rem;
+	}
+
+	#siteHeader a[aria-label],
+	#siteHeader button {
+		flex-shrink: 0;
+	}
+}
+
+/* Narrow phones, including 360–390px Android screens. */
+@media (max-width: 390px) {
+	#siteHeader > div {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	#siteHeader > div > a:first-child {
+		gap: 0.4rem;
+		font-size: 1rem;
+	}
+
+	#siteHeader > div > div {
+		gap: 0.35rem;
+	}
+
+	main section > .mx-auto,
+	main > .mx-auto {
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	main [class*="grid-cols-"]:not(#home-recent-products-grid):not(#deals-results) {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	main button,
+	main a[class*="button"],
+	main a[class*="rounded-full"] {
+		max-width: 100%;
+		white-space: normal;
+	}
+}
+
+/* Landscape phones: use available height without clipping page content. */
+@media (max-height: 500px) and (orientation: landscape) {
+	#siteHeader {
+		position: relative;
+	}
+
+	.leaflet-container {
+		height: 65vh;
+	}
+
+	.modal,
+	.lightbox,
+	[role="dialog"] {
+		max-height: 90dvh;
+	}
+}
+
