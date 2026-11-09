@@ -863,7 +863,7 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 
 ## Changelog: external CSS and JavaScript
 
-- Every page's inline `<style type="text/tailwindcss">` block moved to `assets/css/style.css` (plain CSS, same `animate-*` class names).
-- Every page's inline `<script>` moved into `assets/js/`: `data.js`, `ui.js`, `consent.js`, `interactions.js`, `forms.js`, `features.js`, `game.js` (404 only), `script.js`. Load order matters (see any page's end of `<body>`).
-- Added from the earlier code, with matching styles in `assets/css/style.css`: cookie consent banner, page loader and transitions, Leaflet hub map (contact page), lightbox, product quick view, scroll reveal, step-by-step form gate, professional email format, stock.json availability, real product catalogue and photos.
-- Leaflet CSS and JS are linked on `pages/contact.html` only. The old `assets/css/styles.css` is no longer linked.
+- The current shared stylesheet references are `assets/css/tailwind.css`, `assets/css/styles.css` and `assets/css/responsive.css`. The HTML pages load the local Tailwind utility stylesheet first, the shared custom stylesheet next, and the responsive stylesheet last. Confirm each page's current `<head>` before changing this order.
+- Page scripts are maintained in `assets/js/`, including `data.js`, `ui.js`, `consent.js`, `interactions.js`, `forms.js`, `features.js`, `game.js` (404 only) and `script.js`. Their load order matters; check the script references at the end of each page's `<body>`.
+- Shared styling and interactive features include the cookie consent banner, page loader and transitions, Leaflet hub map (Contact page), lightbox, product quick view, scroll reveal, enquiry form flow, stock availability and product catalogue.
+- Leaflet CSS and JavaScript are page-specific dependencies of `pages/contact.html`. Do not refer to `assets/css/style.css` (singular): that file is not present in the current repository.
