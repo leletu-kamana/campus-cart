@@ -2290,8 +2290,6 @@ footer .cc-footer-legal > p {
 	/* Selects the matching HTML element or component so the declarations in this block control its presentation. */
 	#deals-gallery .mt-8.grid,
   /* Selects the matching HTML element or component so the declarations in this block control its presentation. */
-  #deals-gallery #deals-results,
-  /* Selects the matching HTML element or component so the declarations in this block control its presentation. */
   #panel-new > .grid,
   /* Begins the rule block for the selector or at-rule shown above. */
   #panel-used .mt-8.grid {
@@ -2368,9 +2366,7 @@ footer .cc-footer-legal > p {
 /* Large phones and tablets: two product columns and compact filter grid. */
 @media (min-width: 480px) and (max-width: 1023px) {
 	/* Selects the matching HTML element or component so the declarations in this block control its presentation. */
-	#deals-gallery #deals-results,
-  /* Selects the matching HTML element or component so the declarations in this block control its presentation. */
-  #panel-new > .grid,
+	#panel-new > .grid,
   /* Begins the rule block for the selector or at-rule shown above. */
   #panel-used .mt-8.grid {
 		/* Defines the number and sizing of columns in the CSS grid. */
@@ -2404,10 +2400,8 @@ footer .cc-footer-legal > p {
 
 /* Desktop: restore wider catalogue grids and keep the toolbar aligned. */
 @media (min-width: 1024px) {
-	/* Selects the matching HTML element or component so the declarations in this block control its presentation. */
-	#deals-gallery #deals-results,
-  /* Begins the rule block for the selector or at-rule shown above. */
-  #panel-used .mt-8.grid {
+	/* Begins the rule block for the selector or at-rule shown above. */
+	#panel-used .mt-8.grid {
 		/* Defines the number and sizing of columns in the CSS grid. */
 		grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 		/* Closes the current CSS rule or responsive block. */
@@ -6074,11 +6068,9 @@ body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow
 }
 
 
-/* Deals and gallery: compact three-column product browsing on phones and small tablets. */
+/* Deals and gallery: compact card spacing on phones; responsive.css owns the 2/3/4-column layout. */
 @media (max-width: 767px) {
   #deals-gallery #deals-results {
-    /* Three compact product columns are limited to phone-sized screens. */
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 0.75rem;
   }
 
