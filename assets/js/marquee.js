@@ -63,10 +63,16 @@
                     track.style.willChange = "auto";
                     viewport.style.overflowX = "auto";
                     viewport.style.overflowY = "hidden";
+                    viewport.setAttribute("tabindex", "0");
+                    viewport.setAttribute("role", "group");
+                    viewport.setAttribute("aria-label", (marquee.getAttribute("aria-label") || "Scrolling content") + " (scrollable)");
                 } else {
                     track.style.removeProperty("will-change");
                     viewport.style.removeProperty("overflow-x");
                     viewport.style.removeProperty("overflow-y");
+                    viewport.removeAttribute("tabindex");
+                    viewport.removeAttribute("role");
+                    viewport.removeAttribute("aria-label");
                 }
             };
 
