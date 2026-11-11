@@ -51,6 +51,25 @@
                without creating another observer or animation frame loop. */
             track.dataset.marqueeInitialised = "true";
 
+            /* Read the visitor's motion preference so the automatic marquee
+               can become manually scrollable when reduced motion is requested. */
+            const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            /* Switch between automatic movement and manual horizontal scrolling
+               without hiding the marquee content from visitors who reduce motion. */
+            const setReducedMotionLayout = (reduced) => {
+                if (reduced) {
+                    track.style.removeProperty("transform");
+                    track.style.willChange = "auto";
+                    viewport.style.overflowX = "auto";
+                    viewport.style.overflowY = "hidden";
+                } else {
+                    track.style.removeProperty("will-change");
+                    viewport.style.removeProperty("overflow-x");
+                    viewport.style.removeProperty("overflow-y");
+                }
+            };
+
             /* Read the configured speed from the track first, then its parent;
                use 0.75 pixels per 60Hz frame when no valid value is provided. */
             const speed = Math.max(
@@ -86,6 +105,13 @@
             /* Measure the original content group and its CSS gap to calculate
                the distance required for one seamless marquee movement cycle. */
             const measure = () => {
+                /* Do not apply a transform when reduced motion is enabled;
+                   the visitor can scroll the complete track manually instead. */
+                if (motionPreference.matches) {
+                    setReducedMotionLayout(true);
+                    return;
+                }
+
                 /* Read the rendered width of the original group, including
                    current responsive sizing applied by the stylesheet. */
                 const groupWidth = originalGroup.getBoundingClientRect().width;
@@ -118,6 +144,14 @@
             /* Advance the marquee using the browser timestamp supplied by
                requestAnimationFrame so movement remains consistent over time. */
             const animate = (timestamp) => {
+                /* Stop the frame loop immediately if the visitor enables reduced
+                   motion while the marquee is already moving. */
+                if (motionPreference.matches) {
+                    animationFrame = null;
+                    setReducedMotionLayout(true);
+                    return;
+                }
+
                 /* Initialise the timestamp on the first frame to avoid a large
                    movement calculation before the animation has begun. */
                 if (!previousTimestamp) previousTimestamp = timestamp;
@@ -171,10 +205,37 @@
             /* Start the animation only when no frame loop is already active;
                reset the timestamp so the first new frame starts smoothly. */
             const start = () => {
+                if (motionPreference.matches) {
+                    setReducedMotionLayout(true);
+                    return;
+                }
                 if (animationFrame !== null) return;
                 previousTimestamp = 0;
                 animationFrame = window.requestAnimationFrame(animate);
             };
+
+            /* Apply preference changes immediately, including changes made
+               while the page remains open in the browser. */
+            const handleMotionPreferenceChange = (event) => {
+                if (event.matches) {
+                    if (animationFrame !== null) {
+                        window.cancelAnimationFrame(animationFrame);
+                    }
+                    animationFrame = null;
+                    setReducedMotionLayout(true);
+                    return;
+                }
+
+                setReducedMotionLayout(false);
+                measure();
+                start();
+            };
+
+            if (typeof motionPreference.addEventListener === "function") {
+                motionPreference.addEventListener("change", handleMotionPreferenceChange);
+            } else if (typeof motionPreference.addListener === "function") {
+                motionPreference.addListener(handleMotionPreferenceChange);
+            }
 
             /* Prefer ResizeObserver so changes to the viewport or original
                content group trigger a fresh cycle measurement automatically. */
