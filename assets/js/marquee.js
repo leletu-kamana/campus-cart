@@ -30,7 +30,7 @@
             /* Locate the visible clipping viewport that defines the area
                through which the moving track is displayed. */
             const viewport = marquee.querySelector(
-                ".cc-marquee-viewport"
+                ".cc-marquee-viewport, .cc-brand-marquee-viewport"
             );
 
             /* Find the original content group used to calculate one complete
