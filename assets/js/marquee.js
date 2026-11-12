@@ -92,6 +92,11 @@
                data attributes cannot create an undefined movement behaviour. */
             const direction = directionValue === "right" ? "right" : "left";
 
+            /* Read the opt-in hover-pause setting from the track or marquee. */
+            const pauseOnHover =
+                track.dataset.pauseHover === "true" ||
+                marquee.dataset.pauseHover === "true";
+
             /* Store the measured width of one complete content cycle; this
                value determines when the animation can safely wrap around. */
             let cycleDistance = 0;
@@ -107,6 +112,7 @@
             /* Keep the active animation-frame identifier so the start routine
                can avoid scheduling duplicate animation loops. */
             let animationFrame = null;
+            let isPaused = false;
 
             /* Measure the original content group and its CSS gap to calculate
                the distance required for one seamless marquee movement cycle. */
@@ -155,6 +161,13 @@
                 if (motionPreference.matches) {
                     animationFrame = null;
                     setReducedMotionLayout(true);
+                    return;
+                }
+
+                /* Stop scheduling frames while a mouse or pen pointer is over
+                   this marquee; the current translation remains in place. */
+                if (isPaused) {
+                    animationFrame = null;
                     return;
                 }
 
@@ -215,10 +228,35 @@
                     setReducedMotionLayout(true);
                     return;
                 }
-                if (animationFrame !== null) return;
+                if (isPaused || animationFrame !== null) return;
                 previousTimestamp = 0;
                 animationFrame = window.requestAnimationFrame(animate);
             };
+
+            /* Pause only for hovering mouse/pen pointers. Touch pointers do not
+               hover, so tapping or swiping never leaves the marquee paused. */
+            const isHoverPointer = (event) =>
+                event.pointerType === "mouse" || event.pointerType === "pen";
+
+            const pauseOnPointerEnter = (event) => {
+                if (!pauseOnHover || !isHoverPointer(event)) return;
+                isPaused = true;
+                if (animationFrame !== null) {
+                    window.cancelAnimationFrame(animationFrame);
+                }
+                animationFrame = null;
+            };
+
+            const resumeOnPointerLeave = (event) => {
+                if (!pauseOnHover || !isHoverPointer(event)) return;
+                isPaused = false;
+                start();
+            };
+
+            if (pauseOnHover) {
+                marquee.addEventListener("pointerenter", pauseOnPointerEnter);
+                marquee.addEventListener("pointerleave", resumeOnPointerLeave);
+            }
 
             /* Apply preference changes immediately, including changes made
                while the page remains open in the browser. */
