@@ -887,13 +887,14 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 				-->
 				<div
 					class="cc-brand-marquee relative border-t border-white/10 bg-white/5 backdrop-blur"
+					role="region"
 					aria-label="Campus-Cart product categories"
 				>
 					<!--
 						Viewport clips the overflowing track. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 					-->
 					<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-brand-marquee-viewport overflow-hidden py-4" applies styling, layout, responsive and state classes. -->
-					<div class="cc-brand-marquee-viewport overflow-hidden py-4">
+					<div class="cc-brand-marquee-viewport overflow-hidden py-4" id="cc-brand-marquee-viewport">
 						<!--
 							Track: data attributes control speed, direction and hover-pause behaviour. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 						-->
@@ -1064,6 +1065,8 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 							</div>
 						</div>
 					</div>
+				
+					<button type="button" class="cc-marquee-control" aria-controls="cc-brand-marquee-viewport" aria-label="Pause automatic scrolling">Pause</button>
 				</div>
 			</section>
 
@@ -1081,7 +1084,7 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 					Clipping viewport for the trust ticker. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 				-->
 				<!-- div element: Groups related elements for layout and styling. Attributes: class="cc-marquee-viewport" applies styling, layout, responsive and state classes. -->
-				<div class="cc-marquee-viewport">
+				<div class="cc-marquee-viewport" id="cc-trust-marquee-viewport">
 					<!--
 						Animated track; speed/direction/pause configured via data attributes. The related styling or script controls the visual movement and presentation while keeping the underlying content available.
 					-->
@@ -1197,6 +1200,8 @@ This document is the Campus-Cart homepage. It structures the shared navigation, 
 						</div>
 					</div>
 				</div>
+			
+				<button type="button" class="cc-marquee-control" aria-controls="cc-trust-marquee-viewport" aria-label="Pause automatic scrolling">Pause</button>
 			</section>
 
 			<!--

@@ -33,6 +33,9 @@
                 ".cc-marquee-viewport, .cc-brand-marquee-viewport"
             );
 
+            /* Find the visible pause/resume control associated with this marquee. */
+            const control = marquee.querySelector(".cc-marquee-control");
+
             /* Find the original content group used to calculate one complete
                movement cycle before any duplicated groups are traversed. */
             const originalGroup = track?.querySelector(
@@ -54,6 +57,19 @@
             /* Read the visitor's motion preference so the automatic marquee
                can become manually scrollable when reduced motion is requested. */
             const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+            let userPaused = false;
+            let hoverPaused = false;
+
+            /* Keep the visible action and accessible name in sync with the current state. */
+            const syncControl = () => {
+                if (!control) return;
+                control.hidden = motionPreference.matches;
+                control.textContent = userPaused ? "Resume" : "Pause";
+                control.setAttribute(
+                    "aria-label",
+                    userPaused ? "Resume automatic scrolling" : "Pause automatic scrolling"
+                );
+            };
 
             /* Switch between automatic movement and manual horizontal scrolling
                without hiding the marquee content from visitors who reduce motion. */
@@ -74,6 +90,7 @@
                     viewport.removeAttribute("role");
                     viewport.removeAttribute("aria-label");
                 }
+                syncControl();
             };
 
             /* Read the configured speed from the track first, then its parent;
@@ -112,7 +129,14 @@
             /* Keep the active animation-frame identifier so the start routine
                can avoid scheduling duplicate animation loops. */
             let animationFrame = null;
-            let isPaused = false;
+
+            /* Cancel the active frame without changing the user's pause preference. */
+            const cancelAnimation = () => {
+                if (animationFrame !== null) {
+                    window.cancelAnimationFrame(animationFrame);
+                }
+                animationFrame = null;
+            };
 
             /* Measure the original content group and its CSS gap to calculate
                the distance required for one seamless marquee movement cycle. */
@@ -166,7 +190,7 @@
 
                 /* Stop scheduling frames while a mouse or pen pointer is over
                    this marquee; the current translation remains in place. */
-                if (isPaused) {
+                if (userPaused || hoverPaused) {
                     animationFrame = null;
                     return;
                 }
@@ -228,10 +252,24 @@
                     setReducedMotionLayout(true);
                     return;
                 }
-                if (isPaused || animationFrame !== null) return;
+                if (userPaused || hoverPaused || animationFrame !== null) return;
                 previousTimestamp = 0;
                 animationFrame = window.requestAnimationFrame(animate);
             };
+
+            /* Let keyboard and touch users pause automatic movement explicitly. */
+            if (control) {
+                control.addEventListener("click", () => {
+                    userPaused = !userPaused;
+                    syncControl();
+                    if (userPaused) {
+                        cancelAnimation();
+                    } else {
+                        start();
+                    }
+                });
+                syncControl();
+            }
 
             /* Pause only for hovering mouse/pen pointers. Touch pointers do not
                hover, so tapping or swiping never leaves the marquee paused. */
@@ -240,32 +278,26 @@
 
             const pauseOnPointerEnter = (event) => {
                 if (!pauseOnHover || !isHoverPointer(event)) return;
-                isPaused = true;
-                if (animationFrame !== null) {
-                    window.cancelAnimationFrame(animationFrame);
-                }
-                animationFrame = null;
+                hoverPaused = true;
+                cancelAnimation();
             };
 
             const resumeOnPointerLeave = (event) => {
                 if (!pauseOnHover || !isHoverPointer(event)) return;
-                isPaused = false;
+                hoverPaused = false;
                 start();
             };
 
             if (pauseOnHover) {
-                marquee.addEventListener("pointerenter", pauseOnPointerEnter);
-                marquee.addEventListener("pointerleave", resumeOnPointerLeave);
+                viewport.addEventListener("pointerenter", pauseOnPointerEnter);
+                viewport.addEventListener("pointerleave", resumeOnPointerLeave);
             }
 
             /* Apply preference changes immediately, including changes made
                while the page remains open in the browser. */
             const handleMotionPreferenceChange = (event) => {
                 if (event.matches) {
-                    if (animationFrame !== null) {
-                        window.cancelAnimationFrame(animationFrame);
-                    }
-                    animationFrame = null;
+                    cancelAnimation();
                     setReducedMotionLayout(true);
                     return;
                 }
