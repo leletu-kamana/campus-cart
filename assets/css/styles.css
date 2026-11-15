@@ -447,7 +447,7 @@
 	/* Sets the inset value that controls this element's visual style, sizing or layout behaviour. */
 	inset: 0;
 	/* Sets the element's horizontal size. */
-	width: 100vw;
+	width: 100%;
 	/* Sets the element's vertical size. */
 	height: 100vh;
 	/* Sets the element's vertical size. */
@@ -2462,7 +2462,7 @@ html {
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
 	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
-	overflow-x: clip;
+
 	/* Sets the scroll padding top value that controls this element's visual style, sizing or layout behaviour. */
 	scroll-padding-top: 5rem;
 	/* Closes the current CSS rule or responsive block. */
@@ -2478,7 +2478,7 @@ body {
 	/* Sets the outer spacing around the element. */
 	margin: 0;
 	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
-	overflow-x: clip;
+
 	/* Closes the current CSS rule or responsive block. */
 }
 /* Selects the matching HTML element or component so the declarations in this block control its presentation. */
@@ -3093,7 +3093,7 @@ html,
 /* Begins the rule block for the selector or at-rule shown above. */
 body {
 	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
-	overflow-x: clip;
+
 	/* Closes the current CSS rule or responsive block. */
 }
 
@@ -4439,7 +4439,7 @@ html {
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
 	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
-	overflow-x: clip;
+
 	/* Sets the  webkit text size adjust value that controls this element's visual style, sizing or layout behaviour. */
 	-webkit-text-size-adjust: 100%;
 	/* Sets the text size adjust value that controls this element's visual style, sizing or layout behaviour. */
@@ -4458,7 +4458,7 @@ body {
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
 	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
-	overflow-x: clip;
+
 	/* Closes the current CSS rule or responsive block. */
 }
 
@@ -5442,7 +5442,6 @@ body {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  overflow-x: clip;
 }
 
 /* Keep the main layout and its direct content blocks shrinkable
