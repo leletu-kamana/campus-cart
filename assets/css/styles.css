@@ -2461,7 +2461,6 @@ html {
 	width: 100%;
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
-	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
 
 	/* Sets the scroll padding top value that controls this element's visual style, sizing or layout behaviour. */
 	scroll-padding-top: 5rem;
@@ -2477,7 +2476,6 @@ body {
 	max-width: 100%;
 	/* Sets the outer spacing around the element. */
 	margin: 0;
-	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
 
 	/* Closes the current CSS rule or responsive block. */
 }
@@ -3085,15 +3083,6 @@ main .flex > a[class*="rounded-full"] {
 	min-width: 0;
 	/* Sets the flex shrink value that controls this element's visual style, sizing or layout behaviour. */
 	flex-shrink: 1;
-	/* Closes the current CSS rule or responsive block. */
-}
-
-/* Clip horizontal overflow without disabling sticky positioning. */
-html,
-/* Begins the rule block for the selector or at-rule shown above. */
-body {
-	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
-
 	/* Closes the current CSS rule or responsive block. */
 }
 
@@ -4440,7 +4429,6 @@ html {
 	width: 100%;
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
-	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
 
 	/* Sets the  webkit text size adjust value that controls this element's visual style, sizing or layout behaviour. */
 	-webkit-text-size-adjust: 100%;
@@ -4459,7 +4447,6 @@ body {
 	min-width: 320px;
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
-	/* Sets the overflow x value that controls this element's visual style, sizing or layout behaviour. */
 
 	/* Closes the current CSS rule or responsive block. */
 }
