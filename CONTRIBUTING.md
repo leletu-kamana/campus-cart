@@ -94,4 +94,4 @@ Update relevant files in `docs/` when a contribution changes project structure, 
 
 ## Licence
 
-By submitting a contribution, you agree that your contribution may be distributed under the repository's [GNU General Public License v3.0](../LICENSE), subject to your rights to the contribution and any applicable third-party licences. Do not submit material that you do not have the right to contribute.
+By submitting a contribution, you agree that your contribution may be distributed under the repository's [GNU General Public License v3.0](LICENSE), subject to your rights to the contribution and any applicable third-party licences. Do not submit material that you do not have the right to contribute.
