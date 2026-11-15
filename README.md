@@ -511,7 +511,7 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 
 **Testing.** See [docs/TESTING.md](docs/TESTING.md). In short: 65 of 65 browser checks passed, axe-core found 0 accessibility violations across 22 page and size combinations, and the HTML, CSS and JavaScript checks reported no errors.
 
-# Changelog
+## Changelog
 
 ## Version 1 Changes:
 
