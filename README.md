@@ -76,7 +76,7 @@ The repository reserves the following folder for the screenshots:
 
 `assets/images/screenshots/`
 
-A minimum of **5 desktop screenshots and 5 mobile screenshots** can be added. Additional screenshots may also be included if they provide useful evidence of different pages, sections or responsive states.
+The repository currently includes **5 desktop screenshots and 5 mobile screenshots** in the folders shown below. Additional genuine browser screenshots may be added when they provide useful evidence of other pages, sections or responsive states.
 
 ### Desktop Website Screenshots
 
@@ -142,6 +142,11 @@ Campus-Cart is a fictional South African student-essentials store. The website i
 | Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
 | Contact | `pages/contact.html` | Provides general contact and collection/office information. |
 | Account | `pages/account.html` | Provides Student/Parent paths and the HTML structure for an Order Summary. |
+| Coverage | `pages/coverage.html` | Shows the collection-hub coverage information and map. |
+| Privacy | `pages/privacy.html` | Explains the website's privacy information and data practices. |
+| Terms | `pages/terms.html` | Sets out the website's terms and conditions. |
+| Cookies | `pages/cookies.html` | Explains cookie use and visitor preferences. |
+| Returns | `pages/returns.html` | Explains the returns and refund information for the fictional store. |
 
 ### Page Content, Purpose and Target Users
 
@@ -153,6 +158,11 @@ Campus-Cart is a fictional South African student-essentials store. The website i
 | Enquiry (`pages/enquiry.html`) | Pre-purchase enquiry form and enquiry details | Give visitors a way to ask about stock, products and arrangements | Prospective buyers |
 | Contact (`pages/contact.html`) | Contact methods, business information and collection information | Make it clear how visitors can contact the fictional business | All visitors |
 | Account (`pages/account.html`) | Student and parent/guardian paths, order-summary layout and hand-off information | Provide a place to review the planned order process; it is not real account authentication | Students and parents/guardians |
+| Coverage (`pages/coverage.html`) | Collection-hub coverage information and map | Help visitors understand collection coverage | Students and parents/guardians |
+| Privacy (`pages/privacy.html`) | Privacy information and data practices | Explain how the demonstration website describes visitor data | All visitors |
+| Terms (`pages/terms.html`) | Terms and conditions | Present the fictional store's website terms | All visitors |
+| Cookies (`pages/cookies.html`) | Cookie information and preference controls | Explain cookie use and visitor choices | All visitors |
+| Returns (`pages/returns.html`) | Returns and refund information | Explain the fictional store's returns information | Customers and visitors |
 
 ### Low-Fidelity Wireframes
 
