@@ -4025,6 +4025,8 @@ body {
             #deals-gallery #deals-results article h3 {
 	/* Sets the minimum horizontal size needed by the element. */
 	min-width: 0;
+	/* Keep multi-line titles aligned across product cards. */
+	min-height: 2.7em;
 	/* Sets the size of the text. */
 	font-size: 0.9rem;
 	/* Sets the visual weight of the text. */
