@@ -15,6 +15,11 @@ html {
 	text-size-adjust: 100%;
 }
 
+/* Keep Coverage breadcrumbs clear of the sticky header and province navigation. */
+nav[aria-label="Breadcrumb"] {
+	scroll-margin-top: 7rem;
+}
+
 /* Keep each checkout step number in a fixed column beside its text. */
 #order ol[aria-label="Order steps"] > li {
 	display: grid;
