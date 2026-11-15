@@ -15,6 +15,26 @@ html {
 	text-size-adjust: 100%;
 }
 
+/* Keep each checkout step number in a fixed column beside its text. */
+#order ol[aria-label="Order steps"] > li {
+	display: grid;
+	grid-template-columns: 2.25rem minmax(0, 1fr);
+	column-gap: 0.75rem;
+	row-gap: 0.25rem;
+	align-items: start;
+}
+
+#order ol[aria-label="Order steps"] > li > span:first-child {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	flex: 0 0 2.25rem;
+}
+
+#order ol[aria-label="Order steps"] > li > p {
+	grid-column: 2;
+	margin: 0;
+}
+
 /* Keep the homepage second-hand badge compact at every viewport. */
 .cc-used-badge {
 	white-space: nowrap;
