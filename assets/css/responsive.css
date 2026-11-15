@@ -15,6 +15,13 @@ html {
 	text-size-adjust: 100%;
 }
 
+/* Keep the homepage second-hand badge compact at every viewport. */
+.cc-used-badge {
+	white-space: nowrap;
+	padding-inline: 0.5rem;
+	font-size: 0.625rem;
+}
+
 /* Embedded media never exceeds its container */
 video,
 iframe,
