@@ -251,15 +251,15 @@ Part 3 turns Campus-Cart from a styled set of pages into a working, searchable a
 |---|---|---|---|
 | Interactive map | `contact.html` | Shows every collection hub as a pin on a Leaflet map. Clicking a pin shows the address and opening hours. A dropdown jumps to a hub for keyboard users. The map resizes for phones and the scroll wheel only zooms after the map is clicked. | `features.js`, `data.js`, `vendor/leaflet/` |
 | Image lightbox | Every page with photos (`index.html`, `about.html`, `products.html`) | Clicking or pressing Enter on any content photo opens a larger image with caption, previous, next and close controls. Arrow keys, Esc, the dark background and swipe gestures also work. Product cards that JavaScript adds later are included. Logos, icons, linked images and map tiles are left out. | `features.js` |
-| Quick-view modal | `products.html` | Opens a deal in a dialog with a larger photo, description and an Add to Order Summary button. Focus stays inside the dialog and returns to the button when it closes. | `features.js`, `script.js` |
+| Quick-view modal | `products.html` | Opens a deal in a dialog with a larger photo, description and an Add to Order Summary button. Focus stays inside the dialog and returns to the button when it closes. | `interactions.js`, `features.js` |
 | Accordion | `products.html` (Student and Parent FAQ) | Questions open and close with a click. Only one answer in a group stays open. Built on the native `<details>` element so it still works without JavaScript. | `features.js` |
-| Dynamic content | `products.html` | The deal cards are generated from a JavaScript array rather than typed into the HTML. | `script.js` |
-| Search, filter and sort | `products.html` | Keyword search across name, category and description, plus category and condition filters and sorting by price or name. A counter shows how many deals match. | `script.js` |
-| Tabs | `products.html` | Shop New and Second-Hand tabs, Student and Parent FAQ tabs and gallery category buttons. | `script.js` |
-| DOM manipulation | All pages | Cards, the Order Summary table, toast messages, the map pins and the lightbox are created, shown, hidden and updated by JavaScript. | `script.js`, `features.js` |
-| Animation | All pages | Cards fade in as they scroll into view, the lightbox and modal fade in, accordion answers slide open and the page loader plays between pages. Animations are shortened or removed for visitors who ask their device to reduce motion. | `styles.css`, `features.js` |
-| Printable checklist | `products.html` (Parent Hub) | The Print this checklist button prints only the First Year Checklist, as a clean one-page sheet with an empty box beside each item. The rest of the page is hidden while printing. | `script.js`, `styles.css` |
-| Coverage search | `coverage.html` | Filters the list of institutions as the visitor types. | `forms.js` |
+| Dynamic content | `products.html` | `data.js` supplies the shared `DEALS` catalogue and `interactions.js` builds the Shop and Deals cards from it. | `data.js`, `interactions.js` |
+| Search, filter and sort | `products.html` | Searches product names, categories and descriptions, applies category and condition filters, sorts by price or name and updates the matching-product count. | `data.js`, `interactions.js` |
+| Tabs | `products.html` | Shop New and Second-Hand tabs, Student and Parent FAQ tabs and gallery category buttons. | `interactions.js` |
+| DOM updates | Shared UI and page-specific features | Product cards, the Order Summary, cart and wishlist UI, map pins, the lightbox and form feedback are built or updated by the modules responsible for those features. | `ui.js`, `interactions.js`, `features.js`, `forms.js`, `consent.js` |
+| Animation | All pages | Cards fade in as they scroll into view, the lightbox and modal fade in, accordion answers slide open and the page loader plays between pages. Animations are shortened or removed for visitors who ask their device to reduce motion. | `styles.css`, `features.js`, `script.js` |
+| Printable checklist | `products.html` (Parent Hub) | The Print this checklist button prints only the First Year Checklist, as a clean one-page sheet with an empty box beside each item. The rest of the page is hidden while printing. | `interactions.js`, `styles.css` |
+| Coverage search | `coverage.html` | Filters the list of institutions as the visitor types. | `interactions.js` |
 
 ### Forms
 | Form | Purpose | Behaviour |
