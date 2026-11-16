@@ -58,7 +58,8 @@ Parents and guardians who help students prepare for registration and the start o
 | Technology | Use in the Project |
 |---|---|
 | HTML5 | Page structure, semantic elements, forms, navigation, tables and content. |
-| CSS3 | Layout, colours, typography, cards, buttons and responsive design. |
+| CSS3 | Custom layout, typography, components and responsive design. |
+| Tailwind CSS 4.3.4 | Utility classes for common layout and styling; the generated stylesheet is committed as `assets/css/tailwind.css`. |
 | JavaScript | Client-side interaction: tabs, search, filtering and sorting, order summary, form validation, lightbox, quick-view modal, accordion, hub map and scroll animation. |
 | Leaflet 1.9.4 | Open-source JavaScript map library (BSD-2-Clause licence). Stored locally in `assets/vendor/leaflet/` so no third-party script is loaded from another site. |
 | OpenStreetMap | Map tiles and data for the collection-hub map, credited on the map. |
@@ -66,7 +67,7 @@ Parents and guardians who help students prepare for registration and the start o
 | Git | Version control. |
 | GitHub | Repository and version management. |
 
-No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
+No JavaScript application framework is used. The site is a static multi-page HTML/CSS project with vanilla JavaScript for interactions and Tailwind CSS utility classes alongside the custom stylesheets.
 
 ## Website Screenshots
 

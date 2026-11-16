@@ -13,7 +13,7 @@ Campus-Cart is a multi-page student website project built with:
 - Vanilla JavaScript for browser-side interactions.
 - Relative paths for local project assets and page navigation.
 
-The project is intentionally kept lightweight. Do not introduce a frontend framework, build system or dependency unless the maintainer has discussed and approved the change.
+The project is intentionally kept lightweight. It already uses Tailwind CSS for utility styling and vanilla JavaScript for interactions. Do not introduce an additional JavaScript application framework, bundler or dependency unless the maintainer has discussed and approved the change.
 
 ## Before You Start
 
