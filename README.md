@@ -510,7 +510,7 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 **Works in the browser only:** navigation, search, filters, sorting, order summary (kept in `sessionStorage` for one tab), form validation, building an email in the visitor's own email app, cookie choices, the 404 game.
 **Needs a backend or outside service (not provided):** real accounts, taking payments, a shared product or order database, live stock, sending emails automatically. The site does not pretend to do any of these.
 
-**Testing.** See [docs/TESTING.md](docs/TESTING.md). In short: 65 of 65 browser checks passed, axe-core found 0 accessibility violations across 22 page and size combinations, and the HTML, CSS and JavaScript checks reported no errors.
+**Historical testing.** The results recorded on 13 October 2026 were 65 of 65 browser checks passed, 0 axe-core accessibility violations across 22 page-and-size combinations, and no errors in the HTML, CSS or JavaScript checks. These are historical results, not a verification of the current branch head; see [docs/TESTING.md](docs/TESTING.md) for the test scope and current limitations.
 
 ## Changelog
 
