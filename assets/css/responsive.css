@@ -404,7 +404,8 @@ table {
 	}
 
 	/* Reduce oversized section spacing while preserving hierarchy. */
-	main section {
+	main section,
+	main section[class*="py-"] {
 		padding-top: clamp(2rem, 7vw, 3.5rem);
 		padding-bottom: clamp(2rem, 7vw, 3.5rem);
 	}
