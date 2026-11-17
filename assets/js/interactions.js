@@ -92,6 +92,17 @@
     document.addEventListener('cc-cart-change', renderCart);
     // undefined
     renderCart();
+  } else if (cartButton) {
+    // Pages without the drawer use the Account order summary as their cart view.
+    cartButton.removeAttribute('aria-controls');
+    cartButton.removeAttribute('aria-expanded');
+    cartButton.setAttribute('aria-label', 'View order summary');
+    cartButton.addEventListener('click', () => {
+      const accountPath = window.location.pathname.includes('/pages/')
+        ? 'account.html#order'
+        : 'pages/account.html#order';
+      window.location.href = accountPath;
+    });
   }
 
   /* ===== Add-to-cart buttons (event delegation, works for cards drawn later too) ===== */
