@@ -2,6 +2,8 @@
 
 This document records every supplied image, what it shows, where it is used, and how it was prepared. It also lists images that were deliberately not used and why.
 
+The browser image-load, responsive and accessibility figures below are historical checks from 13 October 2026; they do not verify the current branch head.
+
 ## 1. Summary
 
 - 24 files were supplied (23 in `campus-cart-images.zip` plus the shop banner). 18 are used directly, and 4 of those also appear inside the bundle pictures. Four more appear only inside the bundle pictures, and 2 are not used at all (section 4).
