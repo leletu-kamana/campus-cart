@@ -1,6 +1,6 @@
 # Campus-Cart Design System (v2)
 
-This document describes the UI/UX upgrade. All of it is plain HTML5, CSS3 and vanilla JavaScript.
+This document describes the UI/UX upgrade. The pages use semantic HTML5, custom CSS3, Tailwind CSS utility classes and vanilla JavaScript.
 
 ## 1. Inspiration and how it was used
 

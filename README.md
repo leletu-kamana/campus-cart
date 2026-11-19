@@ -491,7 +491,7 @@ Real photographs now appear on the home page, shop, bundles, account page and th
 - **Details:** every supplied image, where it is used, and which were deliberately not used are in [docs/IMAGE-USAGE.md](docs/IMAGE-USAGE.md).
 
 ## UI/UX Upgrade (Design System v2)
-The whole site was redesigned for a modern, consistent, responsive look while keeping the Campus-Cart navy, yellow, light grey and white palette. It is built only with HTML5, CSS3 and vanilla JavaScript.
+The whole site was redesigned for a modern, consistent, responsive look while keeping the Campus-Cart navy, yellow, light grey and white palette. It uses semantic HTML5, custom CSS3, Tailwind CSS utility classes and vanilla JavaScript.
 
 **What changed**
 - A shared design system at the end of `assets/css/styles.css`: refined colour, type, spacing, radius and shadow tokens, used by every page.
