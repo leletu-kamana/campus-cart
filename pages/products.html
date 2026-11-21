@@ -520,7 +520,7 @@
 							<button
 								type="button"
 								class="tab-btn rounded-full bg-[#0d1b3e] px-6 py-2.5 text-sm font-bold text-white"
-								role="tab"
+								role="tab" id="shop-new-tab" aria-controls="panel-new" tabindex="0"
 								aria-selected="true"
 								data-panel="panel-new"
 							>
@@ -530,7 +530,7 @@
 							<button
 								type="button"
 								class="tab-btn rounded-full px-6 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
-								role="tab"
+								role="tab" id="shop-used-tab" aria-controls="panel-used" tabindex="-1"
 								aria-selected="false"
 								data-panel="panel-used"
 							>
@@ -540,7 +540,7 @@
 
 						<!-- Panel: New -->
 						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: id="panel-new": unique identifier used by CSS, JavaScript or in-page links; role="tabpanel": accessibility role assigned to the element. -->
-						<div class="tab-panel mt-8" id="panel-new" role="tabpanel">
+						<div class="tab-panel mt-8" id="panel-new" role="tabpanel" aria-labelledby="shop-new-tab" aria-hidden="false">
 							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 							<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 								<!-- ELEMENT DOCUMENTATION: Self-contained composition such as a product card or article. -->
@@ -743,7 +743,7 @@
 
 						<!-- Panel: Used -->
 						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: id="panel-used": unique identifier used by CSS, JavaScript or in-page links; role="tabpanel": accessibility role assigned to the element. -->
-						<div class="tab-panel mt-8 hidden" id="panel-used" role="tabpanel">
+						<div class="tab-panel mt-8 hidden" id="panel-used" role="tabpanel" aria-labelledby="shop-used-tab" aria-hidden="true">
 							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 							<div
 								class="rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7"
