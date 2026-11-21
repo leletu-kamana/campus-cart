@@ -1256,29 +1256,13 @@
 							<div class="flex flex-col items-center gap-6 sm:flex-row">
 								<!-- Stacked on mobile, row at sm -->
 								<!-- Author portrait with a gold ring -->
-								<!-- LinkedIn-hosted portrait -->
-								<!-- Descriptive alt -->
-								<!-- Deferred since the section is below the fold -->
-								<!-- Intrinsic width -->
-								<!-- Intrinsic height -->
-								<!-- Fallback image if the primary portrait fails to load -->
-								<!-- 112px circular portrait with a gold ring -->
-								<!-- ELEMENT DOCUMENTATION: Image resource; src identifies the file and alt provides alternative text. Attributes: alt="Leletu Kamana, the author of Campus-Cart": alternative text for an image; empty text marks a decorative image; loading="lazy": controls resource loading behaviour; width="180": resource width; height="180": resource height; onerror="
-										this.onerror = null;
-										this.src = 'https://i.pravatar.cc/300?u=leletu-kamana';
-									": HTML attribute used by the browser, CSS, JavaScript or assistive technology; class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]": CSS classes controlling appearance, spacing and layout. -->
-								<img
-									src="https://media.licdn.com/dms/image/v2/D4D35AQHDiZjqIjth8w/profile-framedphoto-shrink_400_400/B4DZ.psKQ.J4AY-/0/1785258354110?e=1792270800&v=beta&t=Wg7vJli-6x9YSGnBg3N_AEXnzOdP8eskuil-V7Oq4SA"
-									alt="Leletu Kamana, the author of Campus-Cart"
-									loading="lazy"
-									width="180"
-									height="180"
-									onerror="
-										this.onerror = null;
-										this.src = 'https://i.pravatar.cc/300?u=leletu-kamana';
-									"
-									class="h-28 w-28 shrink-0 rounded-full object-cover ring-4 ring-[#ffd23f]"
-								/>
+								<!-- Stable initials fallback; avoids an expiring third-party portrait URL. -->
+								<div
+									aria-hidden="true"
+									class="grid h-28 w-28 shrink-0 place-items-center rounded-full bg-[#0d1b3e] text-3xl font-extrabold text-[#ffd23f] ring-4 ring-[#ffd23f]"
+								>
+									LK
+								</div>
 								<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 								<div class="text-center sm:text-left">
 									<!-- Centred on mobile, left-aligned at sm -->
