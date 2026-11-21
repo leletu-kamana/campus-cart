@@ -2,7 +2,7 @@
 
 17 of the 48 deals products now have their own photograph (see `IMAGE-USAGE.md`). The 31 products below still show the shared generic photo for their condition, because no matching photograph was supplied.
 
-To add one: save a square JPG of about 800 x 800 px in `assets/images/products/`, then in `assets/js/script.js` set the product's `img` to that path and add an `alt` description, and add the file name to the `PHOTOS` list under the `DEALS` list.
+To add one: save a square JPG of about 800 x 800 px in `assets/images/products/`. In `assets/js/data.js`, find the product in the `DEALS` array and set `img` to `images/products/<file-name>.jpg` and `alt` to a concise description. Then add the file name (without the folder path) to the `PHOTOS` array in the same file so the catalogue uses the new image instead of the generic fallback.
 
 Use photographs you own or that have a licence allowing reuse, and note the source of each one.
 

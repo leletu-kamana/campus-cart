@@ -1,6 +1,6 @@
 # Campus-Cart Design System (v2)
 
-This document describes the UI/UX upgrade. All of it is plain HTML5, CSS3 and vanilla JavaScript.
+This document describes the UI/UX upgrade. The pages use semantic HTML5, custom CSS3, Tailwind CSS utility classes and vanilla JavaScript.
 
 ## 1. Inspiration and how it was used
 
@@ -52,4 +52,4 @@ Yellow is never used as text on white. Where it used to be (labels, prices, link
 
 ## 5. Responsive behaviour
 
-Breakpoints are the existing 1000px, 850px, 620px and 380px. The upgrade adds: two-column trust strip and checkout steps on tablets, one column on phones, stacked filter fields, full-width add buttons, a sideways-scrolling sub-navigation, and a smaller back-to-top button.
+At the time of the v2 upgrade, the principal breakpoints were 1000px, 850px, 620px and 380px. The current custom stylesheets also contain component-specific pixel breakpoints; see [issue #6](https://github.com/leletu-kamana/campus-cart/issues/6) for the current inventory. The upgrade adds: two-column trust strip and checkout steps on tablets, one column on phones, stacked filter fields, full-width add buttons, a sideways-scrolling sub-navigation, and a smaller back-to-top button.

@@ -58,7 +58,8 @@ Parents and guardians who help students prepare for registration and the start o
 | Technology | Use in the Project |
 |---|---|
 | HTML5 | Page structure, semantic elements, forms, navigation, tables and content. |
-| CSS3 | Layout, colours, typography, cards, buttons and responsive design. |
+| CSS3 | Custom layout, typography, components and responsive design. |
+| Tailwind CSS 4.3.4 | Utility classes for common layout and styling; the generated stylesheet is committed as `assets/css/tailwind.css`. |
 | JavaScript | Client-side interaction: tabs, search, filtering and sorting, order summary, form validation, lightbox, quick-view modal, accordion, hub map and scroll animation. |
 | Leaflet 1.9.4 | Open-source JavaScript map library (BSD-2-Clause licence). Stored locally in `assets/vendor/leaflet/` so no third-party script is loaded from another site. |
 | OpenStreetMap | Map tiles and data for the collection-hub map, credited on the map. |
@@ -66,7 +67,7 @@ Parents and guardians who help students prepare for registration and the start o
 | Git | Version control. |
 | GitHub | Repository and version management. |
 
-No frontend framework is used. The project is built with standard HTML, CSS and JavaScript so the underlying web-development concepts remain clear.
+No JavaScript application framework is used. The site is a static multi-page HTML/CSS project with vanilla JavaScript for interactions and Tailwind CSS utility classes alongside the custom stylesheets.
 
 ## Website Screenshots
 
@@ -142,6 +143,11 @@ Campus-Cart is a fictional South African student-essentials store. The website i
 | Enquiry | `pages/enquiry.html` | Provides a pre-purchase enquiry form. |
 | Contact | `pages/contact.html` | Provides general contact and collection/office information. |
 | Account | `pages/account.html` | Provides Student/Parent paths and the HTML structure for an Order Summary. |
+| Coverage | `pages/coverage.html` | Lists provinces, universities, TVET colleges and other institutions with searchable coverage information. |
+| Privacy | `pages/privacy.html` | Explains the demonstration site's privacy information and POPIA-related policy. |
+| Terms | `pages/terms.html` | Sets out the demonstration site's terms and conditions. |
+| Cookies | `pages/cookies.html` | Explains cookie categories, consent choices and browser storage. |
+| Returns | `pages/returns.html` | Explains the demonstration site's returns, refunds and delivery information. |
 
 ### Page Content, Purpose and Target Users
 
@@ -153,6 +159,11 @@ Campus-Cart is a fictional South African student-essentials store. The website i
 | Enquiry (`pages/enquiry.html`) | Pre-purchase enquiry form and enquiry details | Give visitors a way to ask about stock, products and arrangements | Prospective buyers |
 | Contact (`pages/contact.html`) | Contact methods, business information and collection information | Make it clear how visitors can contact the fictional business | All visitors |
 | Account (`pages/account.html`) | Student and parent/guardian paths, order-summary layout and hand-off information | Provide a place to review the planned order process; it is not real account authentication | Students and parents/guardians |
+| Coverage (`pages/coverage.html`) | Province, public university, TVET college and institution search | Help visitors check the areas and institutions covered by the demonstration | Students and parents/guardians |
+| Privacy (`pages/privacy.html`) | Privacy and personal-information notice | Explain how the demonstration handles browser-side information and describe the intended privacy approach | All visitors |
+| Terms (`pages/terms.html`) | Terms and Conditions | Explain the demonstration's fictional trading terms and limitations | All visitors |
+| Cookies (`pages/cookies.html`) | Cookie policy and consent controls | Explain available cookie choices and how consent is stored | All visitors |
+| Returns (`pages/returns.html`) | Returns, refunds and delivery policy | Explain the demonstration's proposed returns and delivery approach | Buyers and sellers |
 
 ### Low-Fidelity Wireframes
 
@@ -241,15 +252,15 @@ Part 3 turns Campus-Cart from a styled set of pages into a working, searchable a
 |---|---|---|---|
 | Interactive map | `contact.html` | Shows every collection hub as a pin on a Leaflet map. Clicking a pin shows the address and opening hours. A dropdown jumps to a hub for keyboard users. The map resizes for phones and the scroll wheel only zooms after the map is clicked. | `features.js`, `data.js`, `vendor/leaflet/` |
 | Image lightbox | Every page with photos (`index.html`, `about.html`, `products.html`) | Clicking or pressing Enter on any content photo opens a larger image with caption, previous, next and close controls. Arrow keys, Esc, the dark background and swipe gestures also work. Product cards that JavaScript adds later are included. Logos, icons, linked images and map tiles are left out. | `features.js` |
-| Quick-view modal | `products.html` | Opens a deal in a dialog with a larger photo, description and an Add to Order Summary button. Focus stays inside the dialog and returns to the button when it closes. | `features.js`, `script.js` |
+| Quick-view modal | `products.html` | Opens a deal in a dialog with a larger photo, description and an Add to Order Summary button. Focus stays inside the dialog and returns to the button when it closes. | `interactions.js`, `features.js` |
 | Accordion | `products.html` (Student and Parent FAQ) | Questions open and close with a click. Only one answer in a group stays open. Built on the native `<details>` element so it still works without JavaScript. | `features.js` |
-| Dynamic content | `products.html` | The deal cards are generated from a JavaScript array rather than typed into the HTML. | `script.js` |
-| Search, filter and sort | `products.html` | Keyword search across name, category and description, plus category and condition filters and sorting by price or name. A counter shows how many deals match. | `script.js` |
-| Tabs | `products.html` | Shop New and Second-Hand tabs, Student and Parent FAQ tabs and gallery category buttons. | `script.js` |
-| DOM manipulation | All pages | Cards, the Order Summary table, toast messages, the map pins and the lightbox are created, shown, hidden and updated by JavaScript. | `script.js`, `features.js` |
-| Animation | All pages | Cards fade in as they scroll into view, the lightbox and modal fade in, accordion answers slide open and the page loader plays between pages. Animations are shortened or removed for visitors who ask their device to reduce motion. | `styles.css`, `features.js` |
-| Printable checklist | `products.html` (Parent Hub) | The Print this checklist button prints only the First Year Checklist, as a clean one-page sheet with an empty box beside each item. The rest of the page is hidden while printing. | `script.js`, `styles.css` |
-| Coverage search | `coverage.html` | Filters the list of institutions as the visitor types. | `forms.js` |
+| Dynamic content | `products.html` | `data.js` supplies the shared `DEALS` catalogue and `interactions.js` builds the Shop and Deals cards from it. | `data.js`, `interactions.js` |
+| Search, filter and sort | `products.html` | Searches product names, categories and descriptions, applies category and condition filters, sorts by price or name and updates the matching-product count. | `data.js`, `interactions.js` |
+| Tabs | `products.html` | Shop New and Second-Hand tabs, Student and Parent FAQ tabs and gallery category buttons. | `interactions.js` |
+| DOM updates | Shared UI and page-specific features | Product cards, the Order Summary, cart and wishlist UI, map pins, the lightbox and form feedback are built or updated by the modules responsible for those features. | `ui.js`, `interactions.js`, `features.js`, `forms.js`, `consent.js` |
+| Animation | All pages | Cards fade in as they scroll into view, the lightbox and modal fade in, accordion answers slide open and the page loader plays between pages. Animations are shortened or removed for visitors who ask their device to reduce motion. | `styles.css`, `features.js`, `script.js` |
+| Printable checklist | `products.html` (Parent Hub) | The Print this checklist button prints only the First Year Checklist, as a clean one-page sheet with an empty box beside each item. The rest of the page is hidden while printing. | `interactions.js`, `styles.css` |
+| Coverage search | `coverage.html` | Filters the list of institutions as the visitor types. | `interactions.js` |
 
 ### Forms
 | Form | Purpose | Behaviour |
@@ -270,7 +281,7 @@ Both `<form>` elements have an `action` attribute (a `mailto:` address) and `met
 - **Sharing and indexing:** each page has a canonical address, Open Graph and Twitter card tags for link previews, a theme colour and a favicon. The home page includes `Organization` structured data.
 - **Images:** descriptive file names, meaningful `alt` text, and width and height attributes. The largest photographs were compressed without changing their names or dimensions (see the changelog).
 - **URLs and links:** short readable page names such as `pages/coverage.html`, and internal links with descriptive anchor text.
-- **Crawling:** `sitemap.xml` lists the seven public pages and `robots.txt` points to it. A custom `404.html` helps visitors who follow an old link.
+- **Crawling:** `sitemap.xml` lists the 11 indexable public HTML pages and `robots.txt` points to it. The no-index `404.html` helps visitors who follow an old link.
 - **Off-page and local SEO:** the Google Search Console ownership tag is on every page. Collection hub addresses are written the same way on the Contact page and on the map. No backlinks have been created, so none are claimed here.
 - **Mobile and speed:** the layout is responsive, the map and lightbox are sized for phones, and the page-transition delay was shortened.
 
@@ -278,7 +289,7 @@ Both `<form>` elements have an `action` attribute (a `mailto:` address) and `met
 - Form input is validated for format and length, and text is escaped before it is placed in the page.
 - Map popups, the lightbox and the modal are built with `textContent`, so text can never be read as HTML.
 - No API keys, passwords or credentials are used or stored in the repository.
-- Leaflet is stored in the repository instead of being loaded from another website. The only outside requests are OpenStreetMap map tiles and the external links on the Products page, which use `rel="noopener"`.
+- Leaflet is stored in the repository. The site still uses external services for Google Fonts, Lucide SVG icons from `unpkg.com`, OpenStreetMap map tiles and Web3Forms form submission; visitor-facing links can also open WhatsApp and other external sites. These integrations depend on those third-party services being available.
 - GitHub Pages serves the site over HTTPS.
 
 ### Testing Matrix
@@ -311,37 +322,37 @@ The use of clear product information, visible prices and structured sections is 
 ```text
 campus-cart/
 ├── .gitattributes
+├── .gitignore
 ├── 404.html
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
 ├── README.md
 ├── index.html
+├── package.json
+├── package-lock.json
 ├── robots.txt
 ├── sitemap.xml
 ├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── data/
-│   │   └── stock.json
+│   ├── css/              responsive.css, styles.css, tailwind.css
+│   ├── data/             stock.json
+│   ├── icons/            14 self-hosted SVG icons
 │   ├── images/
-│   │   ├── bundles/        existing bundle and hero photos (optimised) plus the new hero, shop banner,
-│   │   │                   student photo and three bundle pictures
-│   │   ├── icons/          static-map.jpg and the new 404 illustration
-│   │   ├── products/       study-essentials.jpg and 14 new product photographs
-│   │   ├── screenshots/    desktop/ and mobile/ (README screenshots)
-│   │   └── second-hand/    marketplace.jpg
-│   ├── js/
-│   │   ├── consent.js
-│   │   ├── data.js
-│   │   ├── features.js
-│   │   ├── forms.js
-│   │   ├── game.js
-│   │   ├── script.js
-│   │   └── ui.js
-│   └── vendor/
-│       └── leaflet/
+│   │   ├── bundles/
+│   │   ├── icons/
+│   │   ├── products/
+│   │   ├── screenshots/desktop/
+│   │   ├── screenshots/mobile/
+│   │   └── second-hand/
+│   ├── js/               consent.js, data.js, features.js, forms.js,
+│   │                     game.js, interactions.js, marquee.js,
+│   │                     script.js, ui.js
+│   └── vendor/leaflet/   Leaflet JavaScript, CSS, licence and marker images
 ├── docs/
 │   ├── DESIGN-SYSTEM.md
 │   ├── IMAGE-USAGE.md
 │   ├── PROJECT-STRUCTURE.md
+│   ├── TERMS_AND_CONDITIONS.md
 │   ├── TESTING.md
 │   └── images-needed.md
 └── pages/
@@ -357,7 +368,7 @@ campus-cart/
     └── terms.html
 ```
 
-The purpose of every file is explained in [docs/PROJECT-STRUCTURE.md](docs/PROJECT-STRUCTURE.md).
+> The repository also currently tracks 643 generated files under `node_modules/`. They are not listed individually or edited. The root `.gitignore` excludes new untracked dependency files; removing already tracked dependencies remains open in [issue #2](https://github.com/leletu-kamana/campus-cart/issues/2).
 
 ### Structure Note
 The repository currently uses a nested `assets/` and `pages/` structure. This differs from the original flat structure described in Section 4.2 of the assignment brief. This README documents the **actual repository structure**.
@@ -402,7 +413,7 @@ Home (index.html)
 
 ### XML Sitemap
 
-The root-level `sitemap.xml` contains the seven public HTML pages currently published on the Campus-Cart GitHub Pages website. It uses the XML Sitemap protocol and the live GitHub Pages URLs rather than local repository paths.
+The root-level `sitemap.xml` contains the 11 indexable public HTML pages in the Campus-Cart repository. The no-index 404 page is intentionally excluded. Each URL includes a `lastmod` date based on the latest verified commit that changed that page. It uses the XML Sitemap protocol and the live GitHub Pages URLs rather than local repository paths.
 
 | Sitemap URL | Repository Page |
 |---|---|
@@ -413,8 +424,12 @@ The root-level `sitemap.xml` contains the seven public HTML pages currently publ
 | `https://leletu-kamana.github.io/campus-cart/pages/coverage.html` | `pages/coverage.html` |
 | `https://leletu-kamana.github.io/campus-cart/pages/contact.html` | `pages/contact.html` |
 | `https://leletu-kamana.github.io/campus-cart/pages/account.html` | `pages/account.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/privacy.html` | `pages/privacy.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/terms.html` | `pages/terms.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/cookies.html` | `pages/cookies.html` |
+| `https://leletu-kamana.github.io/campus-cart/pages/returns.html` | `pages/returns.html` |
 
-The XML sitemap is intentionally limited to the public HTML pages. Assets such as CSS, JavaScript, images and screenshots are not listed as individual sitemap URLs because they are supporting resources rather than standalone pages intended for search-engine indexing.
+The XML sitemap is intentionally limited to the indexable public HTML pages. Assets such as CSS, JavaScript, images and screenshots are not listed as individual sitemap URLs because they are supporting resources rather than standalone pages intended for search-engine indexing.
 
 After deployment, the sitemap can be submitted to **Google Search Console** using the sitemap path:
 
@@ -450,7 +465,7 @@ Before final submission, the project should be checked for:
 - [x] The HTML pages load the shared JavaScript file with paths appropriate to their folder locations.
 - [x] The README page list and sitemap use the actual nested `pages/` structure and correct page filenames.
 - [x] The README includes a Page–Content–Purpose–Target User table and low-fidelity structural wireframes.
-- [x] The root-level `sitemap.xml` lists all seven public Campus-Cart pages using their live GitHub Pages URLs.
+- [x] The root-level `sitemap.xml` lists all 11 indexable public Campus-Cart pages using their live GitHub Pages URLs.
 - [x] In-text citations are included for the design and usability principles discussed in the README.
 - [x] Capture and add at least five genuine desktop screenshots and five genuine mobile screenshots of the rendered website for Part 2 visual evidence.
 
@@ -476,7 +491,7 @@ Real photographs now appear on the home page, shop, bundles, account page and th
 - **Details:** every supplied image, where it is used, and which were deliberately not used are in [docs/IMAGE-USAGE.md](docs/IMAGE-USAGE.md).
 
 ## UI/UX Upgrade (Design System v2)
-The whole site was redesigned for a modern, consistent, responsive look while keeping the Campus-Cart navy, yellow, light grey and white palette. It is built only with HTML5, CSS3 and vanilla JavaScript.
+The whole site was redesigned for a modern, consistent, responsive look while keeping the Campus-Cart navy, yellow, light grey and white palette. It uses semantic HTML5, custom CSS3, Tailwind CSS utility classes and vanilla JavaScript.
 
 **What changed**
 - A shared design system at the end of `assets/css/styles.css`: refined colour, type, spacing, radius and shadow tokens, used by every page.
@@ -495,9 +510,9 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 **Works in the browser only:** navigation, search, filters, sorting, order summary (kept in `sessionStorage` for one tab), form validation, building an email in the visitor's own email app, cookie choices, the 404 game.
 **Needs a backend or outside service (not provided):** real accounts, taking payments, a shared product or order database, live stock, sending emails automatically. The site does not pretend to do any of these.
 
-**Testing.** See [docs/TESTING.md](docs/TESTING.md). In short: 65 of 65 browser checks passed, axe-core found 0 accessibility violations across 22 page and size combinations, and the HTML, CSS and JavaScript checks reported no errors.
+**Historical testing.** The results recorded on 13 October 2026 were 65 of 65 browser checks passed, 0 axe-core accessibility violations across 22 page-and-size combinations, and no errors in the HTML, CSS or JavaScript checks. These are historical results, not a verification of the current branch head; see [docs/TESTING.md](docs/TESTING.md) for the test scope and current limitations.
 
-# Changelog
+## Changelog
 
 ## Version 1 Changes:
 
@@ -864,6 +879,6 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 ## Changelog: external CSS and JavaScript
 
 - The current shared stylesheet references are `assets/css/tailwind.css`, `assets/css/styles.css` and `assets/css/responsive.css`. The HTML pages load the local Tailwind utility stylesheet first, the shared custom stylesheet next, and the responsive stylesheet last. Confirm each page's current `<head>` before changing this order.
-- Page scripts are maintained in `assets/js/`, including `data.js`, `ui.js`, `consent.js`, `interactions.js`, `forms.js`, `features.js`, `game.js` (404 only) and `script.js`. Their load order matters; check the script references at the end of each page's `<body>`.
+- The nine first-party page scripts are maintained in `assets/js/`: `consent.js`, `data.js`, `features.js`, `forms.js`, `game.js` (404 only), `interactions.js`, `marquee.js`, `script.js` and `ui.js`. Their load order matters; check the script references at the end of each page's `<body>`.
 - Shared styling and interactive features include the cookie consent banner, page loader and transitions, Leaflet hub map (Contact page), lightbox, product quick view, scroll reveal, enquiry form flow, stock availability and product catalogue.
 - Leaflet CSS and JavaScript are page-specific dependencies of `pages/contact.html`. Do not refer to `assets/css/style.css` (singular): that file is not present in the current repository.

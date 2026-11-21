@@ -7,13 +7,44 @@
 html,
 body {
 	max-width: 100%;
-	overflow-x: clip;
 }
 
 /* Stop iOS from resizing text on rotation */
 html {
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
+}
+
+/* Keep Coverage breadcrumbs clear of the sticky header and province navigation. */
+nav[aria-label="Breadcrumb"] {
+	scroll-margin-top: 7rem;
+}
+
+/* Keep each checkout step number in a fixed column beside its text. */
+#order ol[aria-label="Order steps"] > li {
+	display: grid;
+	grid-template-columns: 2.25rem minmax(0, 1fr);
+	column-gap: 0.75rem;
+	row-gap: 0.25rem;
+	align-items: start;
+}
+
+#order ol[aria-label="Order steps"] > li > span:first-child {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+	flex: 0 0 2.25rem;
+}
+
+#order ol[aria-label="Order steps"] > li > p {
+	grid-column: 2;
+	margin: 0;
+}
+
+/* Keep the homepage second-hand badge compact at every viewport. */
+.cc-used-badge {
+	white-space: nowrap;
+	padding-inline: 0.5rem;
+	font-size: 0.625rem;
 }
 
 /* Embedded media never exceeds its container */
@@ -118,10 +149,28 @@ h4 {
 		border-radius: 0.75rem;
 	}
 
+	/* Keep image labels on one line and inside narrow product thumbnails. */
+	#home-recent-products-grid > article > div:first-child > span {
+		white-space: nowrap;
+		padding-inline: 0.5rem;
+		font-size: 0.625rem;
+	}
+
+	/* Reserve equal title space so prices and descriptions line up across cards. */
+	#home-recent-products-grid > article > div:nth-child(2) > div:first-child {
+		align-items: flex-start;
+	}
+
 	#home-recent-products-grid h3 {
+		min-height: 3.5rem;
 		font-size: 0.7rem;
 		line-height: 1.25;
 		overflow-wrap: anywhere;
+	}
+
+	#home-recent-products-grid > article > div:nth-child(2) > div:first-child > span {
+		flex: 0 0 auto;
+		white-space: nowrap;
 	}
 
 	#home-recent-products-grid p {
