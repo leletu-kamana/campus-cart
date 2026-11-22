@@ -259,7 +259,7 @@ function loadStockFromFile() { // Begin this block of code.
     // Checks the stated condition before running this validation or form branch.
     if (typeof fetch !== "function") { return; } // Keep the built-in stock table if fetch is unavailable.
 
-    fetch("../assets/data/stock.json", { cache: "no-cache" }) // Request fresh stock data instead of a cached copy.
+    fetch(new URL("../data/stock.json", document.currentScript.src), { cache: "no-cache" }) // Request fresh stock data instead of a cached copy.
         .then(function (response) { // Begin this block of code.
             // Checks the stated condition before running this validation or form branch.
             if (!response.ok) { throw new Error("Stock file not found"); } // Run this block only when the condition is true.
