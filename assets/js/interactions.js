@@ -740,6 +740,7 @@
         b.className = active
           ? 'gallery-filter rounded-full bg-[#0d1b3e] px-5 py-2 text-sm font-bold text-white'
           : 'gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100';
+        b.setAttribute('aria-pressed', String(active));
       });
       // undefined
       $$('[data-gallery-item]').forEach((fig) => {
