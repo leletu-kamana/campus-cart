@@ -2,6 +2,8 @@
 
 This document records every supplied image, what it shows, where it is used, and how it was prepared. It also lists images that were deliberately not used and why.
 
+The browser image-load, responsive and accessibility figures below are historical checks from 13 October 2026; they do not verify the current branch head.
+
 ## 1. Summary
 
 - 24 files were supplied (23 in `campus-cart-images.zip` plus the shop banner). 18 are used directly, and 4 of those also appear inside the bundle pictures. Four more appear only inside the bundle pictures, and 2 are not used at all (section 4).
@@ -16,7 +18,7 @@ Optimised copies are in `assets/images/`. File names are the supplied names.
 | Supplied file               | What it shows                                                    | Where it is used                                                                       | Shipped as                                                                                    |
 | --------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | `hero-banner.jpg`           | A student desk with a navy lamp, laptop, notebooks and backpack  | Home page hero                                                                         | `bundles/hero-banner.jpg` (1200 px) and `bundles/hero-banner-640.jpg` for phones              |
-| `e-commence-banner.jpg`     | Navy and yellow banner with a cart icon, a laptop and a backpack | Top of the Shop page, with real links and text placed over it                          | `bundles/shop-banner.jpg` (1600 px) and `bundles/shop-banner-800.jpg`                         |
+| `e-commence-banner.jpg`     | Navy and yellow banner with a cart icon, a laptop and a backpack | Top of the Shop page, with real links and text placed over it                          | `bundles/shop-banner.jpg` (1600 px)                         |
 | `404-Page-Not-Found.jpg`    | A cart full of study supplies on a path to a house               | Custom 404 page                                                                        | `icons/404-page-not-found.jpg`                                                                |
 | `student-lifestyle.jpg`     | A student studying on a bed with a laptop                        | Account page, student path                                                             | `bundles/student-lifestyle.jpg`                                                               |
 | `essential-bundle.jpg`      | Flat lay of notebooks, pens, a pencil case and a navy bag        | Study Starter Bundle                                                                   | `products/essential-bundle.jpg`                                                               |

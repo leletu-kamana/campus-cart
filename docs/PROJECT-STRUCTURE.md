@@ -1,117 +1,207 @@
-# Campus-Cart: Final File Structure and Purpose of Every File
+# Campus-Cart project structure
 
-This is the structure of the upgraded project. It follows the real GitHub repository (`leletu-kamana/campus-cart`, branch `main`, commit `1edfa55`). No existing file was renamed, moved or deleted. Files marked **new** were added by this upgrade.
+This inventory reflects the actual first-party files tracked on the `automation-workflows` branch at the PM maintenance review on 15 November 2026. It lists the project files by their repository paths; no path has been renamed or moved during this update.
+
+The tree below contains 102 first-party files. The repository also tracks 643 generated dependency files inside `node_modules/`. Those files are not expanded in this source inventory and must never be edited. The root `.gitignore` excludes future untracked `node_modules/` contents, but it does not remove files already tracked by Git; see [issue #2](https://github.com/leletu-kamana/campus-cart/issues/2).
+
+## Tracked project file tree
 
 ```text
 campus-cart/
-├── .gitattributes
-├── 404.html
-├── README.md
-├── index.html
-├── robots.txt
-├── sitemap.xml
 ├── assets/
-│   ├── css/styles.css
-│   ├── data/stock.json
+│   ├── css/
+│   │   ├── responsive.css
+│   │   ├── styles.css
+│   │   └── tailwind.css
+│   ├── data/
+│   │   └── stock.json
+│   ├── icons/
+│   │   ├── arrow-down.svg
+│   │   ├── arrow-right.svg
+│   │   ├── arrow-up.svg
+│   │   ├── globe.svg
+│   │   ├── info.svg
+│   │   ├── mail.svg
+│   │   ├── menu.svg
+│   │   ├── message-circle.svg
+│   │   ├── search.svg
+│   │   ├── shield-check.svg
+│   │   ├── shopping-bag.svg
+│   │   ├── sparkles.svg
+│   │   ├── wallet.svg
+│   │   └── x.svg
 │   ├── images/
-│   │   ├── bundles/        hero-campus.jpg, start-bundle-2.jpg, starter-bundle.jpg, starter-bundle-3.jpg (existing, optimised in place);
-│   │   │                   hero-banner.jpg, hero-banner-640.jpg, shop-banner.jpg, shop-banner-800.jpg, student-lifestyle.jpg,
-│   │   │                   bundle-basic.jpg, bundle-standard.jpg, bundle-premium.jpg (new)
-│   │   ├── icons/          static-map.jpg (existing, now unused); 404-page-not-found.jpg (new)
-│   │   ├── products/       study-essentials.jpg (existing, now unused); 14 new product photographs
-│   │   ├── screenshots/    desktop/ (5 PNG), mobile/ (5 PNG)
-│   │   └── second-hand/    marketplace.jpg
+│   │   ├── bundles/
+│   │   │   ├── bundle-basic.jpg
+│   │   │   ├── bundle-premium.jpg
+│   │   │   ├── bundle-standard.jpg
+│   │   │   ├── hero-banner-640.jpg
+│   │   │   ├── hero-banner.jpg
+│   │   │   ├── hero-campus.jpg
+│   │   │   ├── shop-banner.jpg
+│   │   │   ├── start-bundle-2.jpg
+│   │   │   ├── starter-bundle-3.jpg
+│   │   │   ├── starter-bundle.jpg
+│   │   │   └── student-lifestyle.jpg
+│   │   ├── icons/
+│   │   │   ├── 404-page-not-found.jpg
+│   │   │   └── static-map.jpg
+│   │   ├── products/
+│   │   │   ├── bagpack.jpg
+│   │   │   ├── bedding-duvets.jpg
+│   │   │   ├── duvet.jpg
+│   │   │   ├── essential-bundle.jpg
+│   │   │   ├── highlighters.jpg
+│   │   │   ├── kettle.jpg
+│   │   │   ├── laptop-bag.jpg
+│   │   │   ├── scientific-calculator.jpg
+│   │   │   ├── stationery.jpg
+│   │   │   ├── study-essentials.jpg
+│   │   │   ├── study-funiture.jpg
+│   │   │   ├── table-chair.jpg
+│   │   │   ├── table-fan.jpg
+│   │   │   ├── table-lap.jpg
+│   │   │   └── textbook.jpg
+│   │   ├── screenshots/
+│   │   │   ├── desktop/
+│   │   │   │   ├── desktop-1.png
+│   │   │   │   ├── desktop-2.png
+│   │   │   │   ├── desktop-3.png
+│   │   │   │   ├── desktop-4.png
+│   │   │   │   └── desktop-5.png
+│   │   │   └── mobile/
+│   │   │       ├── mobile-10.png
+│   │   │       ├── mobile-6.png
+│   │   │       ├── mobile-7.png
+│   │   │       ├── mobile-8.png
+│   │   │       └── mobile-9.png
+│   │   └── second-hand/
+│   │       └── marketplace.jpg
 │   ├── js/
 │   │   ├── consent.js
 │   │   ├── data.js
 │   │   ├── features.js
 │   │   ├── forms.js
 │   │   ├── game.js
+│   │   ├── interactions.js
+│   │   ├── marquee.js
 │   │   ├── script.js
-│   │   └── ui.js           (new)
-│   └── vendor/leaflet/     leaflet.js, leaflet.css, images/ (5 PNG)
-├── docs/                   (new)
+│   │   └── ui.js
+│   └── vendor/
+│       └── leaflet/
+│           ├── images/
+│           │   ├── layers-2x.png
+│           │   ├── layers.png
+│           │   ├── marker-icon-2x.png
+│           │   ├── marker-icon.png
+│           │   └── marker-shadow.png
+│           ├── leaflet.css
+│           ├── leaflet.js
+│           └── LICENSE
+├── docs/
 │   ├── DESIGN-SYSTEM.md
-│   ├── IMAGE-USAGE.md          (new)
+│   ├── IMAGE-USAGE.md
+│   ├── images-needed.md
 │   ├── PROJECT-STRUCTURE.md
-│   ├── TESTING.md
-│   └── images-needed.md
-└── pages/
-    ├── about.html
-    ├── account.html
-    ├── contact.html
-    ├── cookies.html
-    ├── coverage.html
-    ├── enquiry.html
-    ├── privacy.html
-    ├── products.html
-    ├── returns.html
-    └── terms.html
+│   ├── TERMS_AND_CONDITIONS.md
+│   └── TESTING.md
+├── pages/
+│   ├── about.html
+│   ├── account.html
+│   ├── contact.html
+│   ├── cookies.html
+│   ├── coverage.html
+│   ├── enquiry.html
+│   ├── privacy.html
+│   ├── products.html
+│   ├── returns.html
+│   └── terms.html
+├── .gitattributes
+├── .gitignore
+├── 404.html
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── index.html
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+├── robots.txt
+└── sitemap.xml
 ```
 
 ## Root files
 
-| File             | Purpose                                                                                                                                                                |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `index.html`     | Home page: hero with Student and Parent paths, trust strip, mission, featured starter bundles, about teaser and contact call to action.                                |
-| `404.html`       | Custom "page not found" page with links home and the Campus Runner mini-game. It loads its CSS and game script by absolute address because it can be shown at any URL. |
-| `README.md`      | Project documentation, changelog and references.                                                                                                                       |
-| `robots.txt`     | Search engine rules and the sitemap address.                                                                                                                           |
-| `sitemap.xml`    | XML sitemap of every public page.                                                                                                                                      |
-| `.gitattributes` | Line-ending normalisation for Git.                                                                                                                                     |
+| Path | Purpose |
+|---|---|
+| `.gitattributes` | Requests Git text-file line-ending normalisation. |
+| `.gitignore` | Ignores `node_modules/` and npm/Yarn debug logs for future untracked files. |
+| `404.html` | Custom not-found page with recovery navigation and the Campus Runner mini-game. |
+| `CODE_OF_CONDUCT.md` | Contributor Covenant-based conduct expectations. |
+| `CONTRIBUTING.md` | Contribution, issue reporting, testing and pull-request guidance. |
+| `LICENSE` | GNU General Public License version 3. |
+| `README.md` | Project description, page and feature inventory, development history, sources and sitemap information. |
+| `index.html` | Public homepage. |
+| `package.json`, `package-lock.json` | npm metadata and locked Tailwind CSS CLI/tooling dependencies. The current `test` script is a placeholder that exits with status 1; see [issue #4](https://github.com/leletu-kamana/campus-cart/issues/4). |
+| `robots.txt` | Crawler access rules and the canonical XML sitemap URL. |
+| `sitemap.xml` | XML sitemap for the 11 indexable public HTML pages. |
 
-## `pages/`
+## HTML pages
 
-| File                                                         | Purpose                                                                                                                                                                                 |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `about.html`                                                 | Story, team, author profile, licence and credits.                                                                                                                                       |
-| `account.html`                                               | Student and parent paths, the four-step checkout guide and the Order Summary (items, quantities, totals, hand-off by WhatsApp, email or EFT details).                                   |
-| `contact.html`                                               | Contact form, collection hub cards and the interactive hub map.                                                                                                                         |
-| `coverage.html`                                              | Searchable list of all provinces and institutions served.                                                                                                                               |
-| `enquiry.html`                                               | Pre-purchase enquiry form with step-by-step validation and a stock availability table.                                                                                                  |
-| `products.html`                                              | Shop New and Second-Hand tabs, the searchable and sortable deals list with See more and See less, the gallery with lightbox, Parent Hub and checklist, product detail and Sell With Us. |
-| `privacy.html`, `terms.html`, `cookies.html`, `returns.html` | Legal pages: Privacy Policy (POPIA), Terms and Conditions, Cookie Policy, Returns, Refunds and Delivery.                                                                                |
+| Path | Purpose |
+|---|---|
+| `index.html` | Homepage and entry point. |
+| `404.html` | Custom error page; marked `noindex` and excluded from the sitemap. |
+| `pages/about.html` | About, mission, audience, project and author information. |
+| `pages/account.html` | Student/parent path selection and order-summary workflow. |
+| `pages/contact.html` | Contact information, form and collection-hub map. |
+| `pages/cookies.html` | Cookie policy and consent information. |
+| `pages/coverage.html` | Searchable list of provinces and education institutions. |
+| `pages/enquiry.html` | Product and stock enquiry form. |
+| `pages/privacy.html` | Privacy policy and personal-information notice. |
+| `pages/products.html` | Product catalogue, deals, second-hand marketplace, Parent Hub, product detail and seller enquiry content. |
+| `pages/returns.html` | Returns, refunds and delivery information. |
+| `pages/terms.html` | Terms and Conditions for the fictional demonstration business. |
 
-## `assets/css/`
+## Stylesheets
 
-| File         | Purpose                                                                                                                                                                                                                                                                           |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `styles.css` | The only stylesheet. Parts 1 to 32 are the original system (variables, reset, layout, components, responsive rules, print, loader, interactive features). The final sections add the legal pages and cookie banner, and the **Design System v2** layer that carries this upgrade. |
+| Path | Purpose |
+|---|---|
+| `assets/css/tailwind.css` | Locally stored Tailwind utility stylesheet used by the HTML pages. |
+| `assets/css/styles.css` | Shared Campus-Cart design tokens, components, layouts, page styling and interaction states. |
+| `assets/css/responsive.css` | Responsive overrides loaded after the shared styles. |
+| `assets/vendor/leaflet/leaflet.css` | Third-party Leaflet map styles. |
 
-## `assets/js/`
+## First-party JavaScript
 
-| File          | Purpose                                                                                                                                                                                                               |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `script.js`   | Core behaviour: mobile menu, tabs, product data and deals list (search, filter, sort, See more and See less), cart (order summary in `sessionStorage`), toast messages, product detail, print checklist, page loader. |
-| `features.js` | Interactive hub map (Leaflet, only after the visitor allows maps), gallery lightbox, product quick view, FAQ accordion and scroll reveal.                                                                             |
-| `forms.js`    | Enquiry and contact form validation, step-by-step field unlocking, and composing the email (`mailto:`).                                                                                                               |
-| `data.js`     | Province, institution and collection hub data for the coverage page and map.                                                                                                                                          |
-| `consent.js`  | Cookie banner and settings. Keeps embedded maps off until allowed.                                                                                                                                                    |
-| `game.js`     | Campus Runner mini-game on the 404 page.                                                                                                                                                                              |
-| `ui.js`       | **New.** Sticky header measurements, header shadow, back-to-top button, cart count animation, Escape to close the mobile menu, and a fallback badge if the About page photo cannot load.                              |
+| Path | Purpose |
+|---|---|
+| `assets/js/consent.js` | Cookie consent preferences and related storage controls. |
+| `assets/js/data.js` | Shared product catalogue, stock-related records, provinces, institutions and collection-hub data. |
+| `assets/js/features.js` | Optional map, lightbox, product quick view, accordion and reveal features. |
+| `assets/js/forms.js` | Contact and enquiry form validation, stock lookup and message-submission flow. |
+| `assets/js/game.js` | Campus Runner mini-game used on the 404 page. |
+| `assets/js/interactions.js` | Cart/wishlist actions and product browsing interactions. |
+| `assets/js/marquee.js` | Homepage marquee animation. |
+| `assets/js/script.js` | Page-transition and shared page bootstrap behaviour. |
+| `assets/js/ui.js` | Shared UI helpers, browser storage, cart state and navigation updates. |
 
-## `assets/data/`, `assets/vendor/`, `assets/images/`, `docs/`
+## Data, icons, images and vendor assets
 
-| Path                        | Purpose                                                                                                                             |
-| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `assets/data/stock.json`    | Static stock levels used by the enquiry page.                                                                                       |
-| `assets/vendor/leaflet/`    | Leaflet 1.9.4 map library (JavaScript, CSS and marker images), stored locally. This is the only third-party library in the project. |
-| `assets/images/`            | Photographs, banners, the 404 illustration and README screenshots. See `docs/IMAGE-USAGE.md`.                                       |
-| `docs/DESIGN-SYSTEM.md`     | Design tokens, components and inspiration notes.                                                                                    |
-| `docs/PROJECT-STRUCTURE.md` | This file.                                                                                                                          |
-| `docs/TESTING.md`           | What was tested, how, and the results.                                                                                              |
-| `docs/IMAGE-USAGE.md`       | Every supplied image, where it is used, how it was optimised, and which were not used.                                              |
-| `docs/images-needed.md`     | The 31 deals products that still use a shared photo, and how to add a photo.                                                        |
+- `assets/data/stock.json` contains the static stock-level data used by the enquiry workflow.
+- `assets/icons/` contains 14 first-party SVG icons.
+- `assets/images/` contains bundle, product, second-hand, 404, map and README screenshot images. The exact filenames and their use are listed above in the tree and described in [IMAGE-USAGE.md](IMAGE-USAGE.md).
+- `assets/vendor/leaflet/` contains the locally stored Leaflet 1.9.4 JavaScript and CSS, marker images, and its BSD 2-Clause licence.
 
-## Browser-only features and features that need a backend
+## Documentation files
 
-| Works entirely in the browser                                                           | Needs a separately hosted backend or an outside service                                       |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Multi-page navigation, mobile menu, tabs, accordion                                     | Real accounts, sign-in or saved profiles (the site has none by design)                        |
-| Product list, search, filter, sort, See more and See less, quick view, gallery lightbox | Taking payments (EFT details are shown, nothing is charged)                                   |
-| Order summary and quantities (kept in `sessionStorage` for the current tab only)        | A shared order or product database, live stock levels                                         |
-| Form validation and building an email in the visitor's own email app                    | Sending the form to the business automatically (`mailto:` only opens the visitor's email app) |
-| Cookie choices (`localStorage`), 404 game best score (`localStorage`)                   | Sending WhatsApp or email on the visitor's behalf                                             |
-| Print checklist, live clock                                                             | Map tiles and Google Maps (need internet and the visitor's permission)                        |
+- `docs/DESIGN-SYSTEM.md` documents brand tokens, components, accessibility and responsive design notes.
+- `docs/IMAGE-USAGE.md` records image sources, uses and optimisation notes.
+- `docs/PROJECT-STRUCTURE.md` is this repository inventory.
+- `docs/TERMS_AND_CONDITIONS.md` is the Markdown version of the website terms.
+- `docs/TESTING.md` records the historical UI/UX verification and current testing limitations.
+- `docs/images-needed.md` lists product photos that may be added in future.
 
-Browser storage is private to one visitor's browser. It is not a secure or shared database.
+## Runtime boundaries
+
+Campus-Cart is a static multi-page website. HTML, CSS and browser JavaScript provide the user interface and client-side interactions. The npm manifest supports local CSS tooling; it does not turn the site into a server-backed application. Real accounts, server-side order storage, payments and automated message delivery require independently hosted services.

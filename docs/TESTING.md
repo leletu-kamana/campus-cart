@@ -1,8 +1,12 @@
 # Campus-Cart Testing Documentation
 
-Testing of the UI/UX upgrade was carried out on 13 October 2026 against the built site, served from a local web server. Automated checks used a headless Chromium browser (Playwright) and the axe-core accessibility engine. These tools were used only to test. **None of them is part of the project**, and the project contains no Python, Node or other non-web code.
+Testing of the UI/UX upgrade was carried out on 13 October 2026 against the built site, served from a local web server. Automated checks used a headless Chromium browser (Playwright) and the axe-core accessibility engine. These tools were used only to test and are not bundled as website runtime dependencies. **This document is a historical test record, not proof that the current branch head has been re-tested.** The site remains a static HTML/CSS/browser-JavaScript project; Node.js and npm are used for local development tooling and dependency management.
 
-## 1. Automated checks and results
+## Current repository tooling note
+
+The current repository contains nine first-party JavaScript files under `assets/js/`, plus `package.json` and `package-lock.json` for Tailwind CSS tooling. The historical seven-file syntax/lint results below refer to the project state tested on 13 October 2026. The current `npm test` script is still a placeholder that exits with status 1 and does not run a test suite; see [issue #4](https://github.com/leletu-kamana/campus-cart/issues/4).
+
+## 1. Historical automated checks and results
 
 | Check                                                                                                            | Scope                                                                                         | Result                                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -62,7 +66,7 @@ Open the site (see the README for how) and check each item on a desktop browser,
 ## 5. Known limitations
 
 - Only three product photographs exist, so many of the 48 products share a picture. See `docs/images-needed.md`.
-- The `404.html` page needs the hosted site to load its styles and game, because it uses absolute addresses. Opened straight from a folder, it looks unstyled.
+- The `404.html` page references its local stylesheets and scripts with paths under `assets/`. Test it from the site root or a local web server rather than treating a direct `file://` open as a deployment check.
 - The About page photo is hosted by LinkedIn with a time-limited address (it expires around 17 October 2026). If it cannot load, an initials badge is shown. Save the photo inside the project to fix this permanently.
 - The Dribbble images could not be viewed while building the upgrade (see `docs/DESIGN-SYSTEM.md`).
 - The legal pages are drafts for a fictional business and should be reviewed by a legal professional before real trading.

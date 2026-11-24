@@ -1,4 +1,5 @@
 // FORM LAYER — Handles the enquiry and contact forms, including field validation, product and stock lookups, delivery estimates and the configured message-submission workflow. The page displays client-side results and any configured Web3Forms response; it does not independently process payments or confirm fulfilment.
+const STOCK_DATA_URL = new URL("../data/stock.json", document.currentScript.src); // Capture the script-relative stock URL while this classic script is executing.
 
 // Registers a handler for the specified form or browser event.
 document.addEventListener("DOMContentLoaded", function () { // Run setup after the HTML has been parsed.
@@ -259,7 +260,7 @@ function loadStockFromFile() { // Begin this block of code.
     // Checks the stated condition before running this validation or form branch.
     if (typeof fetch !== "function") { return; } // Keep the built-in stock table if fetch is unavailable.
 
-    fetch("../assets/data/stock.json", { cache: "no-cache" }) // Request fresh stock data instead of a cached copy.
+    fetch(STOCK_DATA_URL, { cache: "no-cache" }) // Request fresh stock data instead of a cached copy.
         .then(function (response) { // Begin this block of code.
             // Checks the stated condition before running this validation or form branch.
             if (!response.ok) { throw new Error("Stock file not found"); } // Run this block only when the condition is true.
