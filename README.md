@@ -507,7 +507,7 @@ The whole site was redesigned for a modern, consistent, responsive look while ke
 
 **Setup and use.** Download or clone the repository and open `index.html` in a browser, or serve the folder with any static web server. The site needs no build step. The hosted version is at https://leletu-kamana.github.io/campus-cart/. The 404 page only looks complete on the hosted site.
 
-**Works in the browser only:** navigation, search, filters, sorting, order summary (kept in `sessionStorage` for one tab), form validation, building an email in the visitor's own email app, cookie choices, the 404 game.
+**Works in the browser only:** navigation, search, filters, sorting, order summary (stored in `localStorage` and synchronised across open tabs; it falls back to in-memory state if browser storage is blocked), form validation, building an email in the visitor's own email app, cookie choices, the 404 game.
 **Needs a backend or outside service (not provided):** real accounts, taking payments, a shared product or order database, live stock, sending emails automatically. The site does not pretend to do any of these.
 
 **Historical testing.** The results recorded on 13 October 2026 were 65 of 65 browser checks passed, 0 axe-core accessibility violations across 22 page-and-size combinations, and no errors in the HTML, CSS or JavaScript checks. These are historical results, not a verification of the current branch head; see [docs/TESTING.md](docs/TESTING.md) for the test scope and current limitations.
