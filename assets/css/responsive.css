@@ -600,3 +600,128 @@ table {
 	}
 }
 
+
+
+/* ==========================================================
+   Mobile layout correction — fluid sizing and practical cards
+   Keep controls readable and content usable from 320px upward.
+   ========================================================== */
+
+html,
+body {
+	width: 100%;
+	min-width: 0;
+}
+
+body,
+main,
+main > *,
+main section > *,
+main article,
+main .grid > *,
+main .flex > * {
+	min-width: 0;
+}
+
+main img,
+main picture,
+main video,
+main iframe {
+	max-width: 100%;
+}
+
+/* Use consistent gutters that scale with the available viewport. */
+@media (max-width: 767px) {
+	main section > .mx-auto,
+	main > .mx-auto,
+	footer > .mx-auto {
+		width: 100%;
+		padding-inline: clamp(0.75rem, 3.8vw, 1.25rem);
+	}
+
+	/* Two columns keep homepage product cards usable on narrow phones. */
+	#home-recent-products-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: clamp(0.5rem, 2.5vw, 0.875rem);
+	}
+
+	#home-recent-products-grid > article {
+		min-width: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	#home-recent-products-grid h3 {
+		font-size: clamp(0.75rem, 2.8vw, 0.9rem);
+		line-height: 1.3;
+	}
+
+	#home-recent-products-grid p {
+		font-size: clamp(0.68rem, 2.4vw, 0.78rem);
+		line-height: 1.4;
+	}
+
+	/* Keep the brand and action buttons in separate, shrink-safe header groups. */
+	#siteHeader > div:first-child {
+		width: 100%;
+		min-width: 0;
+		gap: clamp(0.35rem, 2vw, 0.75rem);
+	}
+
+	#siteHeader > div:first-child > a:first-child {
+		flex: 1 1 auto;
+		min-width: 0;
+		white-space: nowrap;
+		font-size: clamp(0.95rem, 4vw, 1.2rem);
+	}
+
+	#siteHeader > div:first-child > div {
+		flex: 0 0 auto;
+		gap: clamp(0.25rem, 1.5vw, 0.5rem);
+	}
+
+	#siteHeader #cartButton,
+	#siteHeader #navToggle {
+		width: clamp(2.5rem, 10vw, 2.75rem);
+		height: clamp(2.5rem, 10vw, 2.75rem);
+		min-width: 2.5rem;
+		min-height: 2.5rem;
+	}
+
+	/* Prevent long product names and form values from widening their cards. */
+	main article h1,
+	main article h2,
+	main article h3,
+	main article p,
+	main label,
+	main button,
+	main a {
+		min-width: 0;
+		max-width: 100%;
+		overflow-wrap: anywhere;
+	}
+}
+
+/* Very narrow phones: retain two product columns without crushing content. */
+@media (max-width: 359px) {
+	#siteHeader > div:first-child {
+		padding-inline: 0.625rem;
+	}
+
+	#siteHeader > div:first-child > a:first-child {
+		gap: 0.35rem;
+		font-size: 0.9rem;
+	}
+
+	#home-recent-products-grid {
+		gap: 0.45rem;
+	}
+
+	#home-recent-products-grid > article {
+		padding: 0.4rem;
+	}
+
+	#home-recent-products-grid h3 {
+		font-size: 0.7rem;
+	}
+}
