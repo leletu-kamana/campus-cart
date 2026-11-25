@@ -404,18 +404,24 @@ table {
 	}
 
 	/* Reduce oversized section spacing while preserving hierarchy. */
-	main section {
+	main section,
+	main section[class*="py-"] {
 		padding-top: clamp(2rem, 7vw, 3.5rem);
 		padding-bottom: clamp(2rem, 7vw, 3.5rem);
 	}
 
-	main h1 {
+	main h1,
+	main h1[class~="text-3xl"],
+	main h1[class~="text-4xl"] {
 		font-size: clamp(1.85rem, 7vw, 2.75rem);
 		line-height: 1.12;
 		text-wrap: balance;
 	}
 
-	main h2 {
+	main h2,
+	main h2[class~="text-2xl"],
+	main h2[class~="text-3xl"],
+	main h2[class~="text-4xl"] {
 		font-size: clamp(1.45rem, 5.5vw, 2.15rem);
 		line-height: 1.2;
 		text-wrap: balance;
