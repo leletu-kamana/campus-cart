@@ -114,8 +114,8 @@ h4 {
 
 /* ==========================================================
    Homepage recent-product cards
-   Keep the existing desktop layout; use the requested 3-column
-   card layout on mobile without allowing card content to overflow.
+   Keep the desktop layout and apply compact mobile card styling.
+   The final two-column mobile grid is defined in the shared layout block below.
    ========================================================== */
 
 #home-recent-products-grid {
@@ -135,11 +135,6 @@ h4 {
 }
 
 @media (max-width: 767px) {
-	#home-recent-products-grid {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 0.75rem;
-	}
-
 	#home-recent-products-grid > article {
 		padding: 0.5rem;
 		border-radius: 1rem;
@@ -192,10 +187,6 @@ h4 {
 }
 
 @media (max-width: 380px) {
-	#home-recent-products-grid {
-		gap: 0.5rem;
-	}
-
 	#home-recent-products-grid > article {
 		padding: 0.4rem;
 	}

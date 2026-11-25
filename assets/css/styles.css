@@ -2470,8 +2470,6 @@ html {
 body {
 	/* Sets the element's horizontal size. */
 	width: 100%;
-	/* Sets the minimum horizontal size needed by the element. */
-	min-width: 320px;
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
 	/* Sets the outer spacing around the element. */
@@ -4443,8 +4441,6 @@ html {
 body {
 	/* Sets the element's horizontal size. */
 	width: 100%;
-	/* Sets the minimum horizontal size needed by the element. */
-	min-width: 320px;
 	/* Limits the element's maximum horizontal size. */
 	max-width: 100%;
 
@@ -4824,8 +4820,6 @@ main img {
 
 	/* Begins the rule block for the selector or at-rule shown above. */
 	body {
-		/* Sets the minimum horizontal size needed by the element. */
-		min-width: 320px;
 		/* Closes the current CSS rule or responsive block. */
 	}
 
@@ -5623,7 +5617,6 @@ object {
   }
 
   body {
-    min-width: 320px;
   }
 
   main {
