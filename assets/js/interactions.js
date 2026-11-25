@@ -64,9 +64,27 @@
   }
 
   // undefined
-  function openCart() { cartDrawer.classList.remove('hidden'); document.body.style.overflow = 'hidden'; if (cartButton) cartButton.setAttribute('aria-expanded', 'true'); }
+  let cartOpener = null;
   // undefined
-  function closeCart() { cartDrawer.classList.add('hidden'); document.body.style.overflow = ''; if (cartButton) cartButton.setAttribute('aria-expanded', 'false'); }
+  function openCart() {
+    if (!cartDrawer) return;
+    cartOpener = document.activeElement;
+    cartDrawer.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (cartButton) cartButton.setAttribute('aria-expanded', 'true');
+    const closeButton = cartDrawer.querySelector('button[data-cart-close]');
+    if (closeButton) closeButton.focus();
+  }
+  // undefined
+  function closeCart() {
+    if (!cartDrawer) return;
+    cartDrawer.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (cartButton) cartButton.setAttribute('aria-expanded', 'false');
+    const returnTarget = cartOpener && document.contains(cartOpener) ? cartOpener : cartButton;
+    if (returnTarget && typeof returnTarget.focus === 'function') returnTarget.focus();
+    cartOpener = null;
+  }
 
   // undefined
   if (cartDrawer) {
@@ -86,12 +104,45 @@
     $$('[data-cart-close]').forEach((el) => el.addEventListener('click', closeCart));
     // undefined
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !cartDrawer.classList.contains('hidden')) closeCart();
+      if (cartDrawer.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
+        closeCart();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const focusable = Array.from(cartDrawer.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter((element) => !element.hidden && element.getClientRects().length);
+      if (!focusable.length) {
+        e.preventDefault();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const focusIsOutside = !cartDrawer.contains(document.activeElement);
+      if (e.shiftKey && (document.activeElement === first || focusIsOutside)) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (document.activeElement === last || focusIsOutside)) {
+        e.preventDefault();
+        first.focus();
+      }
     });
     // undefined
     document.addEventListener('cc-cart-change', renderCart);
     // undefined
     renderCart();
+  } else if (cartButton) {
+    // Pages without the drawer use the Account order summary as their cart view.
+    cartButton.removeAttribute('aria-controls');
+    cartButton.removeAttribute('aria-expanded');
+    cartButton.setAttribute('aria-label', 'View order summary');
+    cartButton.addEventListener('click', () => {
+      const accountPath = window.location.pathname.includes('/pages/')
+        ? 'account.html#order'
+        : 'pages/account.html#order';
+      window.location.href = accountPath;
+    });
   }
 
   /* ===== Add-to-cart buttons (event delegation, works for cards drawn later too) ===== */
