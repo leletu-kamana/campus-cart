@@ -6085,7 +6085,8 @@ body:has(#shop) section[aria-label="Shop student essentials"] .relative.overflow
     font-size: 0.7rem;
   }
 
-  #deals-gallery > div > div[role="tablist"] {
+  #deals-gallery > div > div[role="tablist"],
+  #deals-gallery > div > div[aria-label="Gallery filters"] {
     width: 100%;
     overflow-x: auto;
     border-radius: 1rem;

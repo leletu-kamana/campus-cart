@@ -231,7 +231,8 @@ h4 {
 }
 
 #deals-gallery .grid.gap-4[role="tablist"],
-#deals-gallery [role="tablist"] {
+#deals-gallery [role="tablist"],
+#deals-gallery [aria-label="Gallery filters"] {
 	max-width: 100%;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -289,13 +290,15 @@ h4 {
 		line-height: 1.35;
 	}
 
-	#deals-gallery [role="tablist"] {
+	#deals-gallery [role="tablist"],
+	#deals-gallery [aria-label="Gallery filters"] {
 		width: 100%;
 		justify-content: flex-start;
 		border-radius: 1rem;
 	}
 
-	#deals-gallery [role="tablist"] button {
+	#deals-gallery [role="tablist"] button,
+	#deals-gallery [aria-label="Gallery filters"] button {
 		flex: 0 0 auto;
 		white-space: nowrap;
 		padding-inline: 0.85rem;
