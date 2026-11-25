@@ -4819,9 +4819,6 @@ main img {
 	}
 
 	/* Begins the rule block for the selector or at-rule shown above. */
-	body {
-		/* Closes the current CSS rule or responsive block. */
-	}
 
 	/* Begins the rule block for the selector or at-rule shown above. */
 	main {
@@ -5616,8 +5613,6 @@ object {
     scroll-padding-top: 5rem;
   }
 
-  body {
-  }
 
   main {
     padding-inline: 0;
