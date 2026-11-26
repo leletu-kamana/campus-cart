@@ -521,7 +521,7 @@
 							<button
 								type="button"
 								class="tab-btn rounded-full bg-[#0d1b3e] px-6 py-2.5 text-sm font-bold text-white"
-								role="tab"
+								role="tab" id="shop-new-tab" aria-controls="panel-new" tabindex="0"
 								aria-selected="true"
 								data-panel="panel-new"
 							>
@@ -531,7 +531,7 @@
 							<button
 								type="button"
 								class="tab-btn rounded-full px-6 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
-								role="tab"
+								role="tab" id="shop-used-tab" aria-controls="panel-used" tabindex="-1"
 								aria-selected="false"
 								data-panel="panel-used"
 							>
@@ -541,7 +541,7 @@
 
 						<!-- Panel: New -->
 						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: id="panel-new": unique identifier used by CSS, JavaScript or in-page links; role="tabpanel": accessibility role assigned to the element. -->
-						<div class="tab-panel mt-8" id="panel-new" role="tabpanel">
+						<div class="tab-panel mt-8" id="panel-new" role="tabpanel" aria-labelledby="shop-new-tab" aria-hidden="false">
 							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 							<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 								<!-- ELEMENT DOCUMENTATION: Self-contained composition such as a product card or article. -->
@@ -744,7 +744,7 @@
 
 						<!-- Panel: Used -->
 						<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: id="panel-used": unique identifier used by CSS, JavaScript or in-page links; role="tabpanel": accessibility role assigned to the element. -->
-						<div class="tab-panel mt-8 hidden" id="panel-used" role="tabpanel">
+						<div class="tab-panel mt-8 hidden" id="panel-used" role="tabpanel" aria-labelledby="shop-used-tab" aria-hidden="true">
 							<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. -->
 							<div
 								class="rounded-3xl border border-slate-200 bg-[#faf8f4] p-6 sm:p-7"
@@ -1120,15 +1120,15 @@
 						Visual gallery
 					</h3>
 
-					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: role="tablist": accessibility role assigned to the element; aria-label="Gallery filters": accessible name announced by assistive technology. -->
+					<!-- ELEMENT DOCUMENTATION: Generic block container used for layout and grouping. Attributes: role="group": groups related gallery filter controls; aria-label="Gallery filters": accessible name announced by assistive technology. -->
 					<div
 						class="mt-5 flex w-max gap-1 rounded-full border border-slate-200 bg-white p-1.5 shadow-sm"
-						role="tablist"
+						role="group"
 						aria-label="Gallery filters"
 					>
 						<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="gallery-filter rounded-full bg-[#0d1b3e] px-5 py-2 text-sm font-bold text-white": CSS classes controlling appearance, spacing and layout; data-gallery-filter="all": HTML attribute used by the browser, CSS, JavaScript or assistive technology. -->
 						<button
-							type="button"
+							type="button" aria-pressed="true"
 							class="gallery-filter rounded-full bg-[#0d1b3e] px-5 py-2 text-sm font-bold text-white"
 							data-gallery-filter="all"
 						>
@@ -1136,7 +1136,7 @@
 						</button>
 						<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100": CSS classes controlling appearance, spacing and layout; data-gallery-filter="bundles": HTML attribute used by the browser, CSS, JavaScript or assistive technology. -->
 						<button
-							type="button"
+							type="button" aria-pressed="false"
 							class="gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
 							data-gallery-filter="bundles"
 						>
@@ -1144,7 +1144,7 @@
 						</button>
 						<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100": CSS classes controlling appearance, spacing and layout; data-gallery-filter="res-life": HTML attribute used by the browser, CSS, JavaScript or assistive technology. -->
 						<button
-							type="button"
+							type="button" aria-pressed="false"
 							class="gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
 							data-gallery-filter="res-life"
 						>
@@ -1152,7 +1152,7 @@
 						</button>
 						<!-- ELEMENT DOCUMENTATION: Interactive control; type defines submission or action behaviour. Attributes: class="gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100": CSS classes controlling appearance, spacing and layout; data-gallery-filter="second-hand": HTML attribute used by the browser, CSS, JavaScript or assistive technology. -->
 						<button
-							type="button"
+							type="button" aria-pressed="false"
 							class="gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
 							data-gallery-filter="second-hand"
 						>
