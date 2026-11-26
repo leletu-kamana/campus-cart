@@ -64,9 +64,27 @@
   }
 
   // undefined
-  function openCart() { cartDrawer.classList.remove('hidden'); document.body.style.overflow = 'hidden'; if (cartButton) cartButton.setAttribute('aria-expanded', 'true'); }
+  let cartOpener = null;
   // undefined
-  function closeCart() { cartDrawer.classList.add('hidden'); document.body.style.overflow = ''; if (cartButton) cartButton.setAttribute('aria-expanded', 'false'); }
+  function openCart() {
+    if (!cartDrawer) return;
+    cartOpener = document.activeElement;
+    cartDrawer.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (cartButton) cartButton.setAttribute('aria-expanded', 'true');
+    const closeButton = cartDrawer.querySelector('button[data-cart-close]');
+    if (closeButton) closeButton.focus();
+  }
+  // undefined
+  function closeCart() {
+    if (!cartDrawer) return;
+    cartDrawer.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (cartButton) cartButton.setAttribute('aria-expanded', 'false');
+    const returnTarget = cartOpener && document.contains(cartOpener) ? cartOpener : cartButton;
+    if (returnTarget && typeof returnTarget.focus === 'function') returnTarget.focus();
+    cartOpener = null;
+  }
 
   // undefined
   if (cartDrawer) {
@@ -86,7 +104,29 @@
     $$('[data-cart-close]').forEach((el) => el.addEventListener('click', closeCart));
     // undefined
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !cartDrawer.classList.contains('hidden')) closeCart();
+      if (cartDrawer.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
+        closeCart();
+        return;
+      }
+      if (e.key !== 'Tab') return;
+      const focusable = Array.from(cartDrawer.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter((element) => !element.hidden && element.getClientRects().length);
+      if (!focusable.length) {
+        e.preventDefault();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const focusIsOutside = !cartDrawer.contains(document.activeElement);
+      if (e.shiftKey && (document.activeElement === first || focusIsOutside)) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && (document.activeElement === last || focusIsOutside)) {
+        e.preventDefault();
+        first.focus();
+      }
     });
     // undefined
     document.addEventListener('cc-cart-change', renderCart);
@@ -689,6 +729,7 @@
         b.className = active
           ? 'gallery-filter rounded-full bg-[#0d1b3e] px-5 py-2 text-sm font-bold text-white'
           : 'gallery-filter rounded-full px-5 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100';
+        b.setAttribute('aria-pressed', String(active));
       });
       // undefined
       $$('[data-gallery-item]').forEach((fig) => {
