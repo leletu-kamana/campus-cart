@@ -66,8 +66,8 @@ Open the site (see the README for how) and check each item on a desktop browser,
 ## 5. Known limitations
 
 - Only three product photographs exist, so many of the 48 products share a picture. See `docs/images-needed.md`.
-- The `404.html` page references its local stylesheets and scripts with paths under `assets/`. Test it from the site root or a local web server rather than treating a direct `file://` open as a deployment check.
-- The About page photo is hosted by LinkedIn with a time-limited address (it expires around 17 October 2026). If it cannot load, an initials badge is shown. Save the photo inside the project to fix this permanently.
+- The `404.html` page now uses `/campus-cart/assets/...` project-site-root paths so its stylesheets and scripts resolve from nested missing URLs. Recheck this behaviour on the hosted GitHub Pages site after deployment.
+- The About page now uses a stable `LK` initials badge instead of a time-limited third-party portrait URL.
 - The Dribbble images could not be viewed while building the upgrade (see `docs/DESIGN-SYSTEM.md`).
 - The legal pages are drafts for a fictional business and should be reviewed by a legal professional before real trading.
 - GitHub Pages cannot send custom security headers, so protections that need headers (for example a strict Content-Security-Policy or frame protection) are not in place.
