@@ -2026,7 +2026,7 @@
 		color: oklab(58.4961% 0.113017 0.0950583/.2);
 	}
 	.text-\[\#c99700\] {
-		color: #c99700;
+		color: #8f6800;
 	}
 	.text-\[\#ffd23f\] {
 		color: #ffd23f;
@@ -2514,7 +2514,7 @@
 			color: #0d1b3e;
 		}
 		.hover\:text-\[\#c99700\]:hover {
-			color: #c99700;
+			color: #8f6800;
 		}
 		.hover\:text-\[\#ffd23f\]:hover {
 			color: #ffd23f;
