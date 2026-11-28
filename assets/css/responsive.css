@@ -471,6 +471,10 @@ table {
 	main form input[type="reset"] {
 		max-width: 100%;
 	}
+	/* Keep text-entry controls at 16px on phones to prevent iOS focus zoom. */
+	:is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="hidden"]):not([type="file"]) {
+		font-size: 1rem;
+	}
 
 	/* Keep legal-page contents and information panels within the viewport. */
 	main [class*="p-8"],
